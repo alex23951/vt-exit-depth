@@ -246,3 +246,136 @@ Baseline model parameters for the VT exit-depth study. Change only with a new da
 - Stimulus (technical, not a model parameter): 200 uA/cm3 x 1 ms at 0.5 mm; 400 at 1 mm (800 for the 3.0 m/s layer).
 - Held out (not used for any parameter): Berruezo 2004 and all other ECG-criteria papers.
 - Known caveats carried forward: 1 mm and 0.5 mm fast layers differ in thickness; 1 mm tuneCV converged to ~1.5-2.5 %; calibration done in a 10 mm wall wedge, not yet in the biventricular mesh.
+
+### 2026-10-02 pilot draw from the Solis-Lemus 2026 cohort (no simulation)
+- Date/time: 2026-10-02 17:50
+- Git commit: a27f3a9 (uncommitted changes: this entry, sims/cohort/draw_pilot.py)
+- Alex chose "Pilot hearts" on the download card (relayed via the project thread).
+- Source: Zenodo concept DOI 10.5281/zenodo.17048090, version 10.5281/zenodo.19351401 (2026-03-31), CC-BY 4.0. Groups from the record's dataset_info.csv (26 control, 12 HF wide QRS, 12 HF narrow QRS).
+- Method: `python sims/cohort/draw_pilot.py`. IDs sorted within each group; one heart drawn per group in the order control, HF wide QRS, HF narrow QRS with numpy.random.default_rng(20261002).
+- Drawn: Y5HYEDL4 (control, M, paper case MC5, 0.36 GB zip, md5 a7e648775f75badcbfddb73df3e1d720); 6G8DD8S5 (HF wide QRS, F, FHF8, 0.38 GB, md5 8e8122eb09e0b1b0a65d13303159576b); 7D98EVAR (HF narrow QRS, F, FHF6, 0.33 GB, md5 48b4cc87b766d3fe6a70e481deb22f8a). Total 1.07 GB zipped.
+- These three hearts are the PILOT only; they are excluded from the study draw and from confirmatory analyses.
+- Download: NOT done. This session's permission check blocked the download; Alex needs to allow it or run it. md5 check therefore still pending (values above are from the Zenodo record).
+- Note: dataset_info.csv's Translation_case column repeats FC5 (98EK6960 and FC5) and FC7 (D16RF7C3 and FC7). Possible duplicate hearts or labelling quirk; to check before the study draw.
+- Update 2026-10-02 18:30: Alex downloaded the three heart zips (the extra torso "files-archive" link returned HTTP 400). md5 of all three matches the Zenodo record (Y5HYEDL4 a7e64877..., 6G8DD8S5 8e8122eb..., 7D98EVAR 48b4cc87...). Unzipped to data/cohort/<ID>/<ID>/ (0.69-0.81 GB each). data/ added to .gitignore. Torso set: torsoModels.zip (Zenodo 10.5281/zenodo.20086105, CC-BY 4.0), the 1.9 MB copy I fetched at 17:46 for inspection, md5 528b7c89d1a8ab86168a9d59a87a4ed1 matches the record; unzipped to data/torso/torsoModels/.
+- Pilot heart Y5HYEDL4 (inspection only): simulation mesh myocardium_AV_FEC_BB_lvrv (.pts/.elem/.lon text + binary), 521,183 nodes, 2,638,070 linear tets, coordinates in um. Edge length mean 1.05 mm (5th-95th pct 0.83-1.31 mm), i.e. ~1 mm, not the 0.5 mm in the paper. Fibre file: 6 columns = fibre + sheet, unit and orthogonal. 29 element tags (tags_lvrv.json): LV 1, RV 2, LA 3, RA 4, Ao 5, PArt 6, valve planes MV 7, TV 8, AV 9, PV 10, vein/appendage caps 11-17, rings 18-24, FEC_LV 25, BB 26, AV_plane 27, FEC_RV 28, FEC_SV 29. Bounding box 0-129 x 0-116 x 0-132 mm (translated so the box starts at the origin). Base-to-apex direction (+0.26, -0.76, -0.60): apex to +x, -y, -z, consistent with CT patient axes in LPS (x to patient left, y to posterior, z to superior) with the origin shifted; the record says nothing about the frame.
+- Torso T13 (mean shape per record): T_13_torso_coarse_surface.vtk (VTK polydata, outer skin only, 2,987 points / 5,970 triangles, mm) + T_13_electrodes.csv (x,y,z in mm; rows RA, LA, LL, V1-V6, RL). Electrode positions imply LPS axes too (+x patient left, -y anterior, +z superior). The zip also has meantorso_* files (4,355 points; electrodes differ from T13 by up to 11.6 mm), unexplained in the record; following the record, T13 is used.
+
+### 2026-10-02_biv_timing: 2 ms timing test of the pilot ventricular model (Y5HYEDL4)
+- Date/time: 2026-10-02 22:05
+- Git commit: a27f3a9 (uncommitted changes: sims/biv_model/, sims/cohort/, .gitignore, LABNOTES.md)
+- Status: running
+- Purpose: measure runtime per simulated ms before the full check run (step 6).
+- Command: `python sims/biv_model/06_check_run.py --tend 2 --np 6 --ID 2026-10-02_biv_timing`
+- Model: monodomain, Tomek, frozen 1 mm parameters (see PARAMETERS FROZEN), dt 10 us
+- Geometry: data/biv/Y5HYEDL4/bivF (375,190 nodes, 1,939,909 tets, ~1.05 mm edges), fibres from step 4, fast layer (tag 2) from step 5
+- Exit site: LV endocardium, free wall, mid-level (z ~ 0.5); depth 0 (endo)
+- Output folder: runs/2026-10-02_biv_timing
+- Status update 2026-10-02 22:10: ok. 2 ms simulated in 42 s wall time (6 cores, including ~15 s setup), i.e. ~13 s per simulated ms. Stimulus (400 uA/cm3, 19 nodes within 1.5 mm of an LV free-wall mid-level endocardial node, z 0.50, phi -179 deg) captured: 140 nodes active by 2 ms. No errors. A full activation (100-160 ms) would take ~25-35 min, so the step-6 check run waits for Alex's OK (CLAUDE.md: ask before runs > 10 min).
+
+#### Note 2026-10-02: first ventricular model from pilot heart Y5HYEDL4 (steps 1-5, no simulation)
+- Scripts: sims/biv_model/01_extract.py ... 05_fastlayer.py (+ common.py); outputs in data/biv/Y5HYEDL4/ (git-ignored); summaries summary_01..05.json.
+- Tools present: meshtool, openCARP, igbextract, numpy, scipy, pandas. Missing: gmsh, TetGen, meshio, pyvista, vtk (not needed so far; torso volume meshing later may need gmsh/TetGen or meshtool's own "generate mesh").
+- Step 1, ventricles (meshtool extract mesh, tags 1, 2, 25, 28, 29; outflow-tract muscle kept up to the valve planes): 375,190 nodes, 1,939,909 tets, one connected piece. Boundary faces classified by the neighbouring four-chamber element: LV endo 45,467 faces, RV endo 55,852, epi 92,365, MV rim 1,563, TV rim 1,720, AV rim 1,382, PV rim 1,132, AV-plane interface 5,609, aortic wall 2,787, pulmonary wall 1,630, RA 13. 29,744 epicardial faces were missing from the authors' epicardium_for_sim.surf (all on the epicardial side, none touching endocardium) and were added to epi. Four-chamber mesh kept unchanged for placement.
+- Step 2, Laplace solves (openCARP experiment 2, unit isotropic conductivity): zeta, basal, ot, w, phi_epi, phi_lv, phi_rv, v; ~15 s each. Apex = all nodes within 5 mm of the LV epicardial apex point (369 nodes): a single-node apex gave a degenerate field (~1 everywhere; first attempt, re-solved). w has 0.01 % of nodes slightly outside 0-1 (clipped).
+- Step 3, coordinates (Bayer 2018 UVC idea; outflow tracts handled by putting all four valve rims and the aortic/pulmonary interfaces in the base boundary, as in Doste 2019): z apex-to-base (Laplace, remapped monotonically to follow distance along the LV long axis: r = 0.989 vs 0.940 raw; raw field kept as z_laplace); rho transmural (0 endo, 1 epi; exactly 0/1 on the surfaces); sep (septal depth, LV endo 0 -> RV endo 1); v (LV 0 / RV 1; matches RV-only tags 99.95 %, puts 84 % of cohort-"LV" nodes on the LV side because the cohort LV label includes the whole septum); phi rotational (0 = septum direction, +90 deg anterior). Apex to MV/TV-rim centroid 100.8 mm.
+- Step 4, fibres: Bayer 2012 LDRB (with bislerp), frozen angles +60 -> -60, sheet angle 0 = sheets parallel to wall; Doste 2019 OT rule: longitudinal direction blended by w between apex->MV/TV and apex->AV/PV gradients; OT angles endo 90 deg, epi 0 deg, sheet 0. Sheet-normal within 0.7 deg (median) of transmural. Difference from the cohort's own fibres: median 9.5 deg overall (8.8 deg ventricle body, 27.1 deg in outflow tracts w < 0.5; 83 % of elements within 20 deg).
+- Step 5, fast layer: every element touching LV/RV endocardium with element z in 10-90 %: 222,581 elements (11.5 %), mean thickness 0.89 mm. Overlap with the cohort's own fast-layer tags (25, 28, 29): Jaccard 0.81; 96 % of the cohort layer is inside ours; the cohort layer spans z 0.15-0.82 (5th-95th pct).
+- Step 7 (no download): the torso record's LATs.zip holds ~130 atrial models (LAE###.vtk, g###.vtk, ~30-50 MB each), one per atrial shape, each paired with all 25 torsos in the results; whether they sit in torso coordinates is not stated and can't be confirmed without opening one file.
+- Note 2026-10-02 22:20 (coordinator relay): the 5 mm apex patch and the distance-scaled apex-to-base coordinate are accepted and kept. The 25-35 min full check run is skipped; a 36 ms run replaces it.
+
+### 2026-10-02_biv_check36: 36 ms check run of the pilot ventricular model (Y5HYEDL4)
+- Date/time: 2026-10-02 22:21
+- Git commit: a27f3a9 (uncommitted changes: sims/biv_model/, sims/cohort/, .gitignore, LABNOTES.md)
+- Status: running
+- Purpose: measure the fast layer's speed along the LV endocardium (target 2.0 m/s) and the LV free-wall endo -> epi time near the pacing site.
+- Command: `cd sims/biv_model && python 06_check_run.py --tend 36 --np 6 --ID 2026-10-02_biv_check36`
+- Model / geometry / exit site / stimulus: as 2026-10-02_biv_timing (LV free-wall endocardium, mid-level, z 0.50; depth 0 = endo)
+- Measurement: speed = slope of geodesic distance along the LV endocardium vs LAT, fast-layer nodes 10-40 mm from the site (2.5 mm bins, medians); transmural = epi LAT minus nearest LV-endo LAT, LV free wall, z 0.3-0.7, endo point within 20 mm of the site
+- Output folder: runs/2026-10-02_biv_check36
+
+#### Note 2026-10-02 22:15: atrial file for torso placement (Alex said yes to one 35 MB file)
+- Fetched LATs/g001.vtk only (36.7 MB, zip CRC verified) from Zenodo 10.5281/zenodo.20086105 LATs.zip via range requests -> data/torso/atria/g001.vtk. VTK unstructured grid (ASCII), 75,231 nodes, 358,520 elements, mm, ~90 fine regional tags (Nagel SSM), fibres, LATs.
+- The atria sit inside the T13 torso: 300/300 sampled atrial points inside the torso surface; atrial centroid (8.6, -30.1, 8.0) mm; same LPS-type axes as the torso and the cohort heart (LA to patient left and posterior of RA in both).
+- Rigid fit (ICP, 90 % trimmed) of the pilot heart's own LA + RA (cohort tags 3, 4) onto g001: rotation 13.4 deg, translation (-9.8, -122.0, -82.0) mm applied to heart coordinates in mm; residual our->theirs median 2.4 mm (90th pct 5.5 mm), theirs->ours median 3.5 mm (90th 11.4 mm). Transform saved: data/torso/atria/Y5HYEDL4_to_g001_rigid.txt. So placing the heart by matching its atria to these SSM atria is feasible. Caveat (not checked): that each atrial model uses the same placement for all 25 torsos.
+- Status update 2026-10-02 22:32 (2026-10-02_biv_check36): ok, no errors (petsc_err_log empty). Wall time 622 s (10.4 min, 6 cores), slightly over the 10-min guide. 44 % of nodes active by 36 ms; first epicardial breakthrough 18.2 ms.
+  - Fast-layer speed along the LV endocardium: 4.0 m/s measured (1,614 nodes, 10-40 mm from the site) vs 2.0 m/s target from the 1 mm wedge calibration. NOT retuned. Possible causes, unverified: (1) the wedge calibration used a one-element-thick quasi-2D slab with a structured mesh, which may not transfer to this unstructured 3D mesh; (2) here the layer is every element touching the endocardium, a different cross-section from the wedge's box-tagged row; (3) the edge-path (Dijkstra) distance overestimates true surface distance by a few %, which only explains a small part.
+  - LV free-wall endo -> epi time (z 0.3-0.7, within 20 mm of the site, 491 pairs): median 16.8 ms (p10-p90 16.0-17.7) over a median 11.0 mm wall = ~0.65 m/s effective, vs 12.6 ms over 6 mm (0.48 m/s) in the wedge. Not a like-for-like comparison: here activation enters the wall along a fast endocardium, so the wavefront is not planar.
+  - Next step suggested: calibrate the fast layer (and check transmural speed) on this 3D mesh itself, e.g. a patch of the pilot heart, instead of the quasi-2D wedge. Needs Alex's decision.
+
+### 2026-10-02_patch_*: implement the frozen measured targets on the heart mesh (LV free-wall patch of Y5HYEDL4)
+- Date/time: 2026-10-02 22:45
+- Git commit: a27f3a9 (uncommitted changes: sims/biv_model/, sims/cohort/, .gitignore, LABNOTES.md)
+- Status: running
+- Step A finding (setup check, heart run 2026-10-02_biv_check36 vs wedge run 2026-10-02_fastcal_1000um_S400_v2.0_it2): conductivities, isotropy, region mapping, dt, mass lumping, threshold and stimulus strength identical; only the parabolic PETSc option file differs (carputils ilu_cg vs openCARP default). The 4.0 m/s was a MEASUREMENT error: distance was taken along LV-endocardial surface edges, which on this rough CT endocardium is 2.1x the straight-line distance. With straight-line distance (as in the wedge), the same run gives 1.90 m/s (5-25 mm), 1.91 (5-20), 1.89 (10-25). Layer construction: fast elements touch the endocardium by 1 node (68k), 2 nodes (74k) or 3 nodes (81k); fast-layer nodes reach at most 1.6 mm deep (median 0, p90 1.07 mm), so the layer is ~one element thick but ragged.
+- Purpose: tune the fast-layer conductivity on the heart mesh to a measured 2.0 m/s (and 1.5 / 3.0 range ends), then check the outer-6 mm transit (target 12.6 ms) with whole-endocardium activation.
+- Command: `cd sims/biv_model && python 07_patch_tune.py --fast-scan 0.7,1.0,1.4 --fit` then confirmation / transit runs (see updates)
+- Model: monodomain, Tomek, dt 10 us, frozen 1 mm myocardial conductivities, stimulus 400 uA/cm3 x 1 ms
+- Geometry: LV free-wall patch of data/biv/Y5HYEDL4/bivF (v = 0, |phi| >= 120 deg, z 0.25-0.75, full thickness), same fibres and fast layer
+- Output folders: runs/2026-10-02_patch_*; all results in data/biv/Y5HYEDL4/patch_runs.json
+- Status update 2026-10-02 23:05: ok (11 patch runs, 43-90 s each, no errors; patch 68,121 nodes, 357,047 tets, 31,013 fast). Results in data/biv/Y5HYEDL4/patch_runs.json.
+  - Fast layer, measured speed vs gi (ge = 3.592 gi): 2.3103 -> 1.29 m/s; 4.6205 (frozen 1 mm value) -> 1.89; 9.2410 -> 2.73. Fit speed = 0.826 gi^0.538. Confirmed: gi 3.0283 -> 1.50 m/s; 5.1670 -> 2.01; 10.9717 -> 2.97.
+  - Outer-6 mm transit (whole patch endocardium, fast layer 5.1670): sheet-normal gi 0.3843 (frozen 1 mm value) -> 10.82 ms (14 % fast); 0.30 -> 12.54; 0.24 -> 14.22. Fit transit = 6.22 gn^-0.580. Confirmed: gn 0.2962 (ge 1.0642) -> 12.64 ms.
+
+### 2026-10-02_biv_check30_tuned: 30 ms whole-heart confirmation with the heart-mesh conductivities
+- Date/time: 2026-10-02 23:07
+- Git commit: a27f3a9 (uncommitted changes)
+- Status: running
+- Command: `cd sims/biv_model && python 06_check_run.py --tend 30 --np 6 --ID 2026-10-02_biv_check30_tuned --g-fast 5.1670 18.5601 --g-n 0.2962 1.0642`
+- Everything else as 2026-10-02_biv_check36 (same site, stimulus, mesh); speed now measured with straight-line distance, 5-25 mm
+- Output folder: runs/2026-10-02_biv_check30_tuned
+- Status update 2026-10-02 23:25 (2026-10-02_biv_check30_tuned): ok, 555 s wall, no errors (first background launch at 23:07 failed to start: wrong working folder, nothing ran). Fast-layer speed along the LV endocardium (straight-line, 5-25 mm): 2.04 m/s (target 2.0). LV free-wall endo -> epi near the site: median 19.8 ms (p10-p90 18.9-20.8) over 11.0 mm. First epicardial breakthrough 21.1 ms. 31 % of nodes active by 30 ms.
+
+#### Note 2026-10-02 23:25: frozen measured targets implemented on the heart mesh (not new targets)
+- The frozen targets are unchanged: fast layer measured 2.0 m/s (range 1.5 / 3.0), sheet-normal giving 12.6 ms over the outer 6 mm (Taggart 2000); fibre 0.6 and sheet 0.4 m/s settings unchanged.
+- The 1 mm conductivities calibrated in the quasi-2D wedge do not reproduce those targets on the cohort heart mesh (Y5HYEDL4, ~1.05 mm unstructured tets): fast layer 1.89-1.90 m/s, outer-6 mm transit 10.8 ms.
+- Heart-mesh implementation (gi / ge, S/m), from the LV free-wall patch, confirmed on the whole heart for 2.0 m/s:
+  | | wedge 1 mm (frozen entry) | heart mesh |
+  |---|---|---|
+  | fast layer 2.0 m/s (baseline) | 4.6205 / 16.5972 | 5.1670 / 18.5601 |
+  | fast layer 1.5 m/s | 2.8314 / 10.1705 | 3.0283 / 10.8778 |
+  | fast layer 3.0 m/s | 9.1370 / 32.8204 | 10.9717 / 39.4111 |
+  | sheet-normal (12.6 ms outer 6 mm) | 0.3843 / 1.3805 | 0.2962 / 1.0642 |
+  | fibre 0.6, sheet 0.4 | unchanged | unchanged |
+- Speed measured with straight-line distance; surface-edge paths on this CT endocardium are ~2x longer and gave a spurious 4.0 m/s in 2026-10-02_biv_check36.
+- Open question for Alex: whether each cohort heart needs its own patch calibration (likely, if element size varies), or one set per resolution.
+
+### 2026-10-02_lf_T13_Y5HYEDL4: heart in torso T13, torso mesh and lead fields (12-lead)
+- Date/time: 2026-10-02 23:45
+- Git commit: a27f3a9 (uncommitted changes)
+- Status: running (lead fields)
+- Placement: ventricles (bivF) moved by the rigid atrial fit (rotation 13.4 deg, translation (-9.8, -122.0, -82.0) mm), i.e. matched to ONE SSM atrial geometry (g001). Heart bbox in torso frame (-16.0, -111.3, -67.0) to (105.6, -4.5, 54.2) mm.
+- Torso mesh (sims/biv_model/08_torso.py mesh, 2 min 50 s): T13 skin resampled to ~8 mm edges, ventricular boundary kept exactly as an inner hole, meshtool generate mesh (mode 1, sizing from surface edges), merged with the ventricles. Result 1,983,222 nodes, 12,528,941 tets: heart 1,939,909 (tags 1, 2), torso 10,589,032 (tag 100); torso volume 34.6 L; torso edge length p5/p50/p95 0.72 / 1.03 / 6.91 mm (fine near the heart, so the mesh is large). Problems fixed: 19 tiny tag-0 elements (< 0.3 mm3) in a crevice of the heart surface removed; meshtool merge dropped the sheet directions, so full.lon was rebuilt with the heart's fibre + sheet vectors (heart elements first, same order, checked).
+- Torso conductor: uniform 0.2 S/m (blood, lungs, cavities all 0.2; simplification for now). Heart: heart-mesh conductivities (fast 5.1670 / 18.5601, sheet-normal 0.2962 / 1.0642, fibre and sheet as frozen 1 mm).
+- Electrodes: nearest skin node to each T13 electrode; snap distance RA 3.8, LA 3.4, LL 1.8, V1 4.2, V2 3.5, V3 5.1, V4 1.6, V5 4.3, V6 3.1, RL 2.1 mm.
+- Command: `cd sims/biv_model && python 08_torso.py leadfield` (carputils leadfield_setup 12-lead, experiment 4 with Vm from 2026-10-02_biv_check30_tuned, 4 processes)
+- Output folder: runs/2026-10-02_lf_T13_Y5HYEDL4
+- Status update 2026-10-02 23:55 (2026-10-02_lf_T13_Y5HYEDL4): ok, 423 s wall (4 processes), no errors, fit in memory (7.7 GB machine). 12 lead fields written (runs/2026-10-02_lf_T13_Y5HYEDL4/POSTPROC_DIR/LF_*.igb, 375,190 values each = heart nodes, reusable via --lf_dir for every exit site on this heart/torso). Test ECG from the 30 ms check-run Vm (5 ms frames only, first 30 ms of the QRS): plumbing check only, not interpretable. Values at 5-25 ms: lead I small negative (to -0.11 mV), II/III/aVF positive (to +0.40-0.45 mV), V5-V6 positive; all leads change sharply in the 30 ms frame (after epicardial breakthrough at 21 ms), which needs finer ECG sampling (1 ms) and a full-QRS run to judge.
+- Next: full-length run (whole QRS, ECG at 1 ms) for one site, after Alex OKs the runtime (~13 s per simulated ms -> ~25-35 min).
+
+### 2026-10-02_biv_fullqrs: full-QRS run of the pilot heart with 12-lead ECG (Alex said yes to the ~30 min run)
+- Date/time: 2026-10-03 00:05
+- Git commit: a27f3a9 (uncommitted changes)
+- Status: running
+- Purpose: first full paced beat and 12-lead ECG from the heart-in-torso model; check that an LV free-wall endocardial paced beat looks plausible.
+- Commands (one chained background job):
+  `python sims/biv_model/06_check_run.py --tend 140 --spacedt 1 --np 6 --ID 2026-10-02_biv_fullqrs --g-fast 5.1670 18.5601 --g-n 0.2962 1.0642`
+  `python sims/biv_model/08_torso.py leadfield --vm runs/2026-10-02_biv_fullqrs/vm.igb --lf-dir runs/2026-10-02_lf_T13_Y5HYEDL4/POSTPROC_DIR --run-id 2026-10-02_biv_fullqrs_ecg --ecg-dt 1 --tend 140`
+  `python sims/biv_model/09_plot_ecg.py runs/2026-10-02_biv_fullqrs_ecg/POSTPROC_DIR runs/2026-10-02_biv_fullqrs_ecg/ecg12.png`
+- Model: monodomain, Tomek, dt 10 us; heart-mesh conductivities (calibration.json); Vm saved every 1 ms
+- Exit site: LV free-wall endocardium, mid-level (z 0.50); depth 0 (endo)
+- Lead fields: reused from 2026-10-02_lf_T13_Y5HYEDL4 (T13 torso, uniform 0.2 S/m)
+- QRS rule (provisional): sum of |ECG| over 12 leads; onset/offset = first/last time above 2 % of its maximum
+- Output folders: runs/2026-10-02_biv_fullqrs, runs/2026-10-02_biv_fullqrs_ecg
+- Status update 2026-10-03 00:50 (2026-10-02_biv_fullqrs + _ecg): ok, no errors. Simulation 2,400 s wall (140 ms, 6 cores); ECG projection with reused lead fields 59 s. All nodes activated; total activation 118.6 ms after the stimulus; fast layer 2.04 m/s; first epicardial breakthrough 21.1 ms.
+  - 12-lead plot: runs/2026-10-02_biv_fullqrs_ecg/ecg12.png (+ ecg12.json).
+  - Morphology (from the plot): small, slow initial deflection for the first ~20 ms (until epicardial breakthrough), then the main QRS. Lead I biphasic, small r then S (net slightly negative, +0.53 / -0.61 mV); aVL positive (1.1 mV); II, III, aVF predominantly negative (to -1.8 mV, superior axis); aVR positive; V1 dominant R (+2.3 mV, small S); V2 R > S; V3 RS (transition); V4-V6 predominantly negative (to -2.1 to -2.3 mV, small initial r). Consistent with an LV free-wall origin (RBBB-like V1, negative lateral precordials, lead I not positive); the superior axis suggests the site sits on the inferolateral side, to be checked against its position in the torso.
+  - QRS duration: the provisional ECG rule (2 % of the 12-lead summed |ECG|) gave 133 ms (onset 7, offset 140 = end of run) because the signal settles to a small non-zero plateau-phase level (~0.1 mV) instead of zero after ~115 ms. By eye the QRS ends at ~115-120 ms, i.e. ~110 ms from onset, consistent with total activation 118.6 ms. The QRS-end rule needs revising (e.g. relative to the post-QRS level or a slope criterion) before criteria are measured; Alex to decide the rule.
+- Note 2026-10-03 00:55 (site position, 2026-10-02_biv_fullqrs): in torso coordinates the pacing site (node 313318) is at (62.2, -48.1, -44.1) mm, 23 mm inferior and 9 mm posterior to the LV cavity centroid. In the plane across the LV long axis it points mostly inferior (-0.87) and posterior (+0.45). So "LV free wall opposite the septum" (phi ~180 deg) lands on the INFERO-POSTERIOR LV wall in this heart, which explains the superior axis. Site labels must come from torso/anatomical directions, not from the UVC angle alone.
+
+#### Note 2026-10-03 01:10: criteria measured on 2026-10-02_biv_fullqrs with ecg_depth_criteria v0.1.0 (no simulation)
+- Package: Alex's ecg_depth_criteria.zip (placed in the project root) unpacked to code/ecg_depth_criteria/, used via PYTHONPATH (no install). Tests not run: pytest is not installed.
+- Script: sims/biv_model/10_measure_ecg.py (20 ms flat 0 mV prepended because the simulated ECG starts at the stimulus; times below are ms after the stimulus). Region not given: the site (mid-level inferoposterior LV) fits none of the package's basal/apical regions. Output: runs/2026-10-02_biv_fullqrs_ecg/criteria.json.
+- Detected mode: onset 29 ms, offset 103 (precordial) / 104 ms (any lead), QRS 74 ms. Pseudo-delta 3 ms (V3), IDT V2 15 ms, shortest RS 22 ms (V4), MDI 0.20 (V6) both definitions; q in I no; inferior q in all three leads; RBBB-like, superior axis. All interval criteria "not epi"; Vallès 4-step: not epi (step 1, inferior q); Piers Q-INF (superior-axis rule): epi (true).
+- True mode (onset = stimulus 0 ms, offset = last activation 118.6 ms): QRS 119 ms. Pseudo-delta 32 ms, IDT V2 44 ms, shortest RS 42 ms (V6), MDI 0.40 (V6); q in lead I yes; inferior leads start positive; q in V2. Interval criteria all "not epi"; Vallès q in lead I: epi; no inferior q: epi; Vallès 4-step: EPI at step 4 (q in lead I); Piers Q-INF: not epi.
+- Observations: the detector puts the onset at 29 ms, after the ~20-30 ms slow, low-amplitude start that comes from endocardial spread before epicardial breakthrough (21 ms), so every detected interval shrinks by ~29 ms and the morphology calls flip (the initial small deflections are what the true-mode q/r calls see). For this ENDOCARDIAL site, true mode gives a false "epicardial" call from the Vallès 4-step (q in lead I) and from Piers Q-INF in detected mode. The detected-vs-true gap is the measurement-error component the plan wants quantified.
