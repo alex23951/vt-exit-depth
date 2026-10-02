@@ -1,0 +1,3 @@
+runs/
+*.igb
+__pycache__/
