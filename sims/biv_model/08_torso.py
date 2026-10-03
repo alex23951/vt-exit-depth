@@ -3,7 +3,7 @@
 Step 8: place the pilot heart in the T13 torso, mesh the torso volume, compute lead fields.
 
   place     ventricles (bivF, with fibres and fast layer) moved into torso coordinates with
-            the rigid atrial fit (data/torso/atria/Y5HYEDL4_to_g001_rigid.txt: x_mm @ R.T + t),
+            the rigid atrial fit (data/torso/atria/<HEART>_to_g001_rigid.txt from 08a_atrial_fit.py: x_mm @ R.T + t),
             i.e. our LA + RA matched to ONE statistical-shape-model atrial geometry (g001)
             that sits inside the torsos (Bender et al. 2026, Zenodo 10.5281/zenodo.20086105).
   mesh      T13 skin surface (mm -> um) resampled to ~AVG_EDGE mm, ventricular boundary
@@ -24,15 +24,22 @@ import subprocess
 
 import numpy as np
 
-from common import OUT, REPO, boundary_faces, read_elem, read_lon, read_pts
+from common import HEART, OUT, REPO, boundary_faces, read_elem, read_lon, read_pts
 
 TOR = os.path.join(OUT, 'torso')
 T13 = os.path.join(REPO, 'data', 'torso', 'torsoModels', 'T_13')
-RIGID = os.path.join(REPO, 'data', 'torso', 'atria', 'Y5HYEDL4_to_g001_rigid.txt')
+RIGID = os.path.join(REPO, 'data', 'torso', 'atria', f'{HEART}_to_g001_rigid.txt')
 AVG_EDGE = 8.0          # mm, torso skin resampling
 G_TORSO = 0.2           # S/m
 TAG_TORSO = 100
 G = {'f': (0.5606, 2.0138), 's': (0.3368, 1.2096), 'n': (0.2962, 1.0642), 'fast': (5.1670, 18.5601)}
+_cal = os.path.join(OUT, 'calibration.json')
+if os.path.exists(_cal):                     # per-heart calibration (07_patch_tune.py --auto)
+    _c = json.load(open(_cal))
+    G['n'] = (_c['sheet_normal']['gi'], _c['sheet_normal']['ge'])
+    G['fast'] = (_c['fast_layer']['2.0']['gi'], _c['fast_layer']['2.0']['ge'])
+    G['f'] = (_c['fibre']['gi'], _c['fibre']['ge'])
+    G['s'] = (_c['sheet']['gi'], _c['sheet']['ge'])
 ELEC = ['RA', 'LA', 'LL', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'RL']
 
 
@@ -149,7 +156,36 @@ def electrodes():
     return out
 
 
-def leadfield(vm, np_=4, lf_dir=None, rid_name='2026-10-02_lf_T13_Y5HYEDL4', ecg_dt=None, tend=30):
+def variants():
+    """Full heart-torso meshes with modified heart tags (same nodes, fibres, element order):
+    full_lbbb  : fast-layer elements touching the LV endocardium -> myocardium (tag 1), as in
+                 bivF_lbbb (05b_lbbb_variant.py)
+    full_nofast: all fast-layer elements -> myocardium (no-fast-layer control)"""
+    P = os.path.join(TOR, 'full')
+    E, tag = read_elem(P)
+    out = {}
+    hv = os.path.join(OUT, 'bivF_lbbb.elem')
+    for name in ('full_lbbb', 'full_nofast'):
+        new = tag.copy()
+        if name == 'full_lbbb':
+            if not os.path.exists(hv):
+                continue
+            _, th = read_elem(os.path.join(OUT, 'bivF_lbbb'))
+            new[:len(th)] = th                       # heart elements are first, same order
+        else:
+            new[new == 2] = 1
+        with open(os.path.join(TOR, name + '.elem'), 'w') as f:
+            f.write(f'{len(E)}\n')
+            np.savetxt(f, np.hstack([E, new[:, None]]), fmt='Tt %d %d %d %d %d')
+        for ext in ('pts', 'lon'):
+            if not os.path.exists(os.path.join(TOR, f'{name}.{ext}')):
+                os.symlink(f'full.{ext}', os.path.join(TOR, f'{name}.{ext}'))
+        out[name] = {'fast_elements': int((new == 2).sum())}
+    return out
+
+
+def leadfield(vm, np_=4, lf_dir=None, rid_name=None, ecg_dt=None, tend=30, full='full'):
+    rid_name = rid_name or f'lf_T13_{HEART}'
     from carputils.leadfield import leadfield_setup
     d = os.path.join(TOR, 'electrodes')
     rid = os.path.join(REPO, 'runs', rid_name)
@@ -170,7 +206,7 @@ def leadfield(vm, np_=4, lf_dir=None, rid_name='2026-10-02_lf_T13_Y5HYEDL4', ecg
             '-phys_region[0].ptype', 0, '-phys_region[0].num_IDs', 2, '-phys_region[0].ID[0]', 1, '-phys_region[0].ID[1]', 2,
             '-phys_region[1].ptype', 1, '-phys_region[1].num_IDs', 3, '-phys_region[1].ID[0]', 1,
             '-phys_region[1].ID[1]', 2, '-phys_region[1].ID[2]', TAG_TORSO]
-    cmd = ['mpiexec', '-n', np_, 'openCARP', '-meshname', os.path.join(TOR, 'full'), '-simID', rid,
+    cmd = ['mpiexec', '-n', np_, 'openCARP', '-meshname', os.path.join(TOR, full), '-simID', rid,
            '-bidomain', 0, '-dt', 10, '-tend', tend,
            '-num_imp_regions', 1, '-imp_region[0].im', 'Tomek', '-imp_region[0].num_IDs', 2,
            '-imp_region[0].ID[0]', 1, '-imp_region[0].ID[1]', 2] + g + phys + stim + elec + opts
@@ -181,14 +217,16 @@ def leadfield(vm, np_=4, lf_dir=None, rid_name='2026-10-02_lf_T13_Y5HYEDL4', ecg
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('stage', choices=['place', 'mesh', 'electrodes', 'leadfield'])
-    p.add_argument('--vm', default=os.path.join(REPO, 'runs', '2026-10-02_biv_check30_tuned', 'vm.igb'))
+    p.add_argument('stage', choices=['place', 'mesh', 'electrodes', 'variants', 'leadfield'])
+    p.add_argument('--full', default='full', choices=['full', 'full_lbbb', 'full_nofast'])
+    p.add_argument('--vm', default=None, help='Vm file (intracellular heart nodes) for the test projection')
     p.add_argument('--lf-dir', default=None, help='reuse lead fields (POSTPROC_DIR of an earlier run)')
-    p.add_argument('--run-id', default='2026-10-02_lf_T13_Y5HYEDL4')
+    p.add_argument('--run-id', default=None)
     p.add_argument('--ecg-dt', type=float, default=None)
     p.add_argument('--tend', type=float, default=30.0, help='length of the Vm file [ms]')
     a = p.parse_args()
-    res = {'place': place, 'mesh': mesh, 'electrodes': electrodes}.get(a.stage, lambda: leadfield(a.vm, lf_dir=a.lf_dir, rid_name=a.run_id, ecg_dt=a.ecg_dt, tend=a.tend))()
+    res = {'place': place, 'mesh': mesh, 'electrodes': electrodes, 'variants': variants}.get(
+        a.stage, lambda: leadfield(a.vm, lf_dir=a.lf_dir, rid_name=a.run_id, ecg_dt=a.ecg_dt, tend=a.tend, full=a.full))()
     f = os.path.join(TOR, 'summary_08.json') if os.path.isdir(TOR) else None
     allr = json.load(open(f)) if f and os.path.exists(f) else {}
     allr[a.stage] = res

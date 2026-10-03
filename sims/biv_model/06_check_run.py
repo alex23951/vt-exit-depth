@@ -28,6 +28,13 @@ MESH = os.path.join(OUT, 'bivF')
 SURF = os.path.join(OUT, 'surfaces')
 UVC = os.path.join(OUT, 'uvc')
 G = {'f': (0.5606, 2.0138), 's': (0.3368, 1.2096), 'n': (0.3843, 1.3805), 'fast': (4.6205, 16.5972)}
+_cal = os.path.join(OUT, 'calibration.json')
+if os.path.exists(_cal):                     # per-heart calibration (07_patch_tune.py --auto) is the default
+    _c = json.load(open(_cal))
+    G['n'] = (_c['sheet_normal']['gi'], _c['sheet_normal']['ge'])
+    G['fast'] = (_c['fast_layer']['2.0']['gi'], _c['fast_layer']['2.0']['ge'])
+    G['f'] = (_c['fibre']['gi'], _c['fibre']['ge'])
+    G['s'] = (_c['sheet']['gi'], _c['sheet']['ge'])
 
 
 def main():
@@ -36,6 +43,8 @@ def main():
     p.add_argument('--np', type=int, default=6)
     p.add_argument('--ID', required=True)
     p.add_argument('--dt', type=float, default=10.)
+    p.add_argument('--site-node', type=int, default=None, help='stimulus site (default: LV free wall, z 0.5)')
+    p.add_argument('--mesh-variant', choices=['normal', 'lbbb'], default='normal')
     p.add_argument('--spacedt', type=float, default=5.0, help='Vm output interval [ms]')
     p.add_argument('--g-fast', type=float, nargs=2, default=None, help='override fast-layer gi ge')
     p.add_argument('--g-n', type=float, nargs=2, default=None, help='override sheet-normal gi ge')
@@ -44,6 +53,9 @@ def main():
         G['fast'] = tuple(a.g_fast)
     if a.g_n:
         G['n'] = tuple(a.g_n)
+    global MESH
+    if a.mesh_variant == 'lbbb':
+        MESH = os.path.join(OUT, 'bivF_lbbb')
     run = os.path.join(REPO, 'runs', a.ID)
     os.makedirs(run, exist_ok=True)
 
@@ -52,7 +64,7 @@ def main():
     lv = read_vtx(os.path.join(SURF, 'lv_endo.vtx'))
     # LV free wall, mid-level: z closest to 0.5 and phi closest to pi (opposite septum)
     score = np.abs(z[lv] - 0.5) * 10 + (np.pi - np.abs(phi[lv]))
-    site = int(lv[np.argmin(score)])
+    site = int(lv[np.argmin(score)]) if a.site_node is None else int(a.site_node)
     stim_nodes = np.where(np.linalg.norm(pts - pts[site], axis=1) < 1500)[0]
     write_vtx(os.path.join(run, 'stim.vtx'), stim_nodes)
 

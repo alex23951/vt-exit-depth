@@ -79,14 +79,19 @@ def build_patch():
     print(f'patch: {len(nodes)} nodes, {len(Ek)} elements, fast {int((tag[keep] == 2).sum())}')
 
 
-def run(label, gfast, gn, stim_nodes, tend, np_=6):
+CUR_F, CUR_S = G_F, G_S          # fibre / sheet (gi, ge) used by run(); set by myo calibration
+
+
+def run(label, gfast, gn, stim_nodes, tend, np_=6, gf=None, gs=None):
+    gf = gf or CUR_F
+    gs = gs or CUR_S
     rid = f'{RUN_PREFIX}_{label}'
     d = os.path.join(REPO, 'runs', rid)
     os.makedirs(d, exist_ok=True)
     write_vtx(os.path.join(d, 'stim.vtx'), stim_nodes)
     g = ['-num_gregions', 2, '-gregion[0].num_IDs', 1, '-gregion[0].ID[0]', 1,
-         '-gregion[0].g_il', G_F[0], '-gregion[0].g_el', G_F[1],
-         '-gregion[0].g_it', G_S[0], '-gregion[0].g_et', G_S[1],
+         '-gregion[0].g_il', gf[0], '-gregion[0].g_el', gf[1],
+         '-gregion[0].g_it', gs[0], '-gregion[0].g_et', gs[1],
          '-gregion[0].g_in', gn[0], '-gregion[0].g_en', gn[1],
          '-gregion[1].num_IDs', 1, '-gregion[1].ID[0]', 2]
     for k in ('l', 't', 'n'):
@@ -184,8 +189,125 @@ def auto():
     print(json.dumps(cal, indent=1))
 
 
+def myo_speed_run(gf, gs, gn):
+    """Fibre and in-wall cross-fibre (= sheet, sheets parallel to the wall) speeds:
+    mid-wall stimulus at the patch centre, fast layer given the sheet conductivity
+    isotropically (so it is not fast), nodes at the same depth (|rho - rho_site| < 0.04)
+    3-10 mm away whose direction from the site is within 20 deg of the local fibre or of
+    the local sheet axis; speed = 1 / slope of LAT vs distance (2 mm bins, medians)."""
+    pts = np.loadtxt(PATCH + '.pts', skiprows=1)
+    nodes = np.load(PATCH + '_nodes.npy')
+    rho = np.loadtxt(os.path.join(UVC, 'rho.dat'))[nodes]
+    c = pts.mean(0)
+    cand = np.where(np.abs(rho - 0.5) < 0.05)[0]
+    site = cand[np.argmin(np.linalg.norm(pts[cand] - c, axis=1))]
+    stim = np.where(np.linalg.norm(pts - pts[site], axis=1) < 1500)[0]
+    E = np.loadtxt(PATCH + '.elem', skiprows=1, usecols=(1, 2, 3, 4), dtype=np.int64)
+    lon = np.loadtxt(PATCH + '.lon', skiprows=1)
+    touch = np.where((E == site).any(1))[0]
+    f = lon[touch, :3].copy(); sv = lon[touch, 3:].copy()
+    f[(f @ f[0]) < 0] *= -1; sv[(sv @ sv[0]) < 0] *= -1
+    f = f.mean(0); f /= np.linalg.norm(f); sv = sv.mean(0); sv /= np.linalg.norm(sv)
+    rid, act = run(f'myo_f{gf[0]:.4f}_s{gs[0]:.4f}', (gs[0], gs[1]), gn, stim, 25.0, gf=gf, gs=gs)
+    d = pts - pts[site]
+    r = np.linalg.norm(d, axis=1) / 1e3
+    u = d / np.maximum(np.linalg.norm(d, axis=1, keepdims=True), 1e-9)
+    same = (np.abs(rho - rho[site]) < 0.04) & (r >= 3) & (r < 10) & (act >= 0)
+    out = {'run': rid, 'gi_f': gf[0], 'gi_s': gs[0]}
+    for name, ax in (('fibre', f), ('sheet', sv)):
+        sel = same & (np.abs(u @ ax) > np.cos(np.radians(20)))
+        bins = np.arange(3, 10.01, 2.0)
+        cen, tb = [], []
+        for b0 in bins[:-1]:
+            m = sel & (r >= b0) & (r < b0 + 2)
+            if m.sum() >= 3:
+                cen.append(b0 + 1); tb.append(np.median(act[m]))
+        out[f'v_{name}_m_s'] = float(1 / np.polyfit(cen, tb, 1)[0]) if len(cen) >= 2 else float('nan')
+        out[f'n_{name}'] = int(sel.sum())
+    return out
+
+
+def myo_calibrate():
+    """Fibre / sheet conductivities to measured 0.6 / 0.4 m/s on this heart's patch; then
+    re-check sheet-normal transit (12.6 ms) and fast-layer speed (2.0 m/s) and correct each
+    once if more than 3 % off. Updates calibration.json (old values kept under 'history')."""
+    global CUR_F, CUR_S
+    build_patch()
+    cal = json.load(open(os.path.join(OUT, 'calibration.json')))
+    gn = (cal['sheet_normal']['gi'], cal['sheet_normal']['ge'])
+    rf, rs = G_F[1] / G_F[0], G_S[1] / G_S[0]
+    scan = []
+    for k in (0.7, 0.85, 1.0):
+        e = myo_speed_run((G_F[0] * k, G_F[1] * k), (G_S[0] * k, G_S[1] * k), gn)
+        log(e); scan.append(e)
+    af, bf = powerfit([e['gi_f'] for e in scan], [e['v_fibre_m_s'] for e in scan])
+    as_, bs = powerfit([e['gi_s'] for e in scan], [e['v_sheet_m_s'] for e in scan])
+    gif = float(np.exp((np.log(0.6) - af) / bf)); gis = float(np.exp((np.log(0.4) - as_) / bs))
+    CUR_F, CUR_S = (gif, gif * rf), (gis, gis * rs)
+    conf = myo_speed_run(CUR_F, CUR_S, gn); log(conf)
+    g2 = cal['fast_layer']['2.0']['gi']
+    tr = transit_run(g2, gn[0]); log(tr)
+    if abs(tr['transit_ms'] / TRANSIT_TARGET - 1) > 0.03:
+        bt = cal.get('fits', {}).get('transit', {}).get('b', -0.58)
+        gnn = gn[0] * (TRANSIT_TARGET / tr['transit_ms']) ** (1 / bt)
+        gn = (gnn, gnn * R_N)
+        tr = transit_run(g2, gn[0]); log(tr)
+    sp = speed_run(g2); log(sp)
+    fast = cal['fast_layer']
+    if abs(sp['speed_m_s'] / 2.0 - 1) > 0.03:
+        b = cal.get('fits', {}).get('speed', {}).get('b', 0.538)
+        fac = (2.0 / sp['speed_m_s']) ** (1 / b)
+        fast = {k: {'gi': v['gi'] * fac, 'ge': v['ge'] * fac, 'measured_m_s': None} for k, v in fast.items()}
+        sp = speed_run(fast['2.0']['gi']); log(sp)
+        fast['2.0']['measured_m_s'] = sp['speed_m_s']
+    hist = cal.get('history', [])
+    hist.append({k: cal[k] for k in ('fibre', 'sheet', 'sheet_normal', 'fast_layer')})
+    cal.update({'fibre': {'gi': CUR_F[0], 'ge': CUR_F[1], 'measured_m_s': conf['v_fibre_m_s']},
+                'sheet': {'gi': CUR_S[0], 'ge': CUR_S[1], 'measured_m_s': conf['v_sheet_m_s']},
+                'sheet_normal': {'gi': gn[0], 'ge': gn[1], 'transit_ms': tr['transit_ms'], 'target_ms': TRANSIT_TARGET},
+                'fast_layer': fast, 'fast_check_m_s': sp['speed_m_s'], 'history': hist,
+                'myo_fits': {'fibre': {'a': af, 'b': bf}, 'sheet': {'a': as_, 'b': bs}},
+                'method_myo': '07_patch_tune.py --myo (2026-10-03)'})
+    json.dump(cal, open(os.path.join(OUT, 'calibration.json'), 'w'), indent=1)
+    print(json.dumps({k: cal[k] for k in ('fibre', 'sheet', 'sheet_normal')} | {'fast_check_m_s': sp['speed_m_s']}, indent=1))
+
+
+def myo_refine(rounds=2):
+    """Correct fibre / sheet separately from the last confirmation (speed ~ g^b, b from the
+    myo fits), confirm, until both are within 3 %; then re-check transit and fast layer."""
+    global CUR_F, CUR_S
+    build_patch()
+    cal = json.load(open(os.path.join(OUT, 'calibration.json')))
+    gn = (cal['sheet_normal']['gi'], cal['sheet_normal']['ge'])
+    CUR_F = (cal['fibre']['gi'], cal['fibre']['ge']); CUR_S = (cal['sheet']['gi'], cal['sheet']['ge'])
+    vf, vs = cal['fibre']['measured_m_s'], cal['sheet']['measured_m_s']
+    bf, bs = cal['myo_fits']['fibre']['b'], cal['myo_fits']['sheet']['b']
+    bf = bf if 0.2 < bf < 1.0 else 0.5
+    bs = bs if 0.2 < bs < 1.0 else 0.5
+    for _ in range(rounds):
+        if abs(vf / 0.6 - 1) < 0.03 and abs(vs / 0.4 - 1) < 0.03:
+            break
+        kf, ks = (0.6 / vf) ** (1 / bf), (0.4 / vs) ** (1 / bs)
+        CUR_F = (CUR_F[0] * kf, CUR_F[1] * kf); CUR_S = (CUR_S[0] * ks, CUR_S[1] * ks)
+        e = myo_speed_run(CUR_F, CUR_S, gn); log(e)
+        vf, vs = e['v_fibre_m_s'], e['v_sheet_m_s']
+    tr = transit_run(cal['fast_layer']['2.0']['gi'], gn[0]); log(tr)
+    sp = speed_run(cal['fast_layer']['2.0']['gi']); log(sp)
+    cal['history'].append({k: cal[k] for k in ('fibre', 'sheet')})
+    cal['fibre'] = {'gi': CUR_F[0], 'ge': CUR_F[1], 'measured_m_s': vf}
+    cal['sheet'] = {'gi': CUR_S[0], 'ge': CUR_S[1], 'measured_m_s': vs}
+    cal['sheet_normal']['transit_ms'] = tr['transit_ms']
+    cal['fast_check_m_s'] = sp['speed_m_s']
+    cal['myo_within_3pct'] = bool(abs(vf / 0.6 - 1) < 0.03 and abs(vs / 0.4 - 1) < 0.03)
+    json.dump(cal, open(os.path.join(OUT, 'calibration.json'), 'w'), indent=1)
+    print(json.dumps({'fibre': cal['fibre'], 'sheet': cal['sheet'], 'transit_ms': tr['transit_ms'],
+                      'fast_m_s': sp['speed_m_s'], 'within_3pct': cal['myo_within_3pct']}, indent=1))
+
+
 def main():
     p = argparse.ArgumentParser()
+    p.add_argument('--myo-refine', action='store_true')
+    p.add_argument('--myo', action='store_true', help='fibre/sheet calibration to measured 0.6/0.4 m/s')
     p.add_argument('--auto', action='store_true')
     p.add_argument('--fast-scan', default='')
     p.add_argument('--fit', action='store_true')
@@ -195,6 +317,12 @@ def main():
     a = p.parse_args()
     if a.auto:
         auto()
+        return
+    if a.myo:
+        myo_calibrate()
+        return
+    if a.myo_refine:
+        myo_refine()
         return
     build_patch()
     for f in [float(x) for x in a.fast_scan.split(',') if x]:

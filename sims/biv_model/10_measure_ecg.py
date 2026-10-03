@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.join(REPO, 'code', 'ecg_depth_criteria'))
 import ecg_depth_criteria as edc                                   # noqa: E402
 from ecg_depth_criteria import evaluate, from_leads, measure_beat  # noqa: E402
 
-PAD_MS = 20
+PAD_MS = 60          # flat 0 mV before the stimulus; the baseline window (40 ms ending 5 ms before onset) lies inside it
 
 
 def clean(v):
@@ -64,8 +64,14 @@ def main():
     ecg = from_leads(leads)
     out = {'package_version': edc.__version__, 'fs_hz': fs, 'pad_ms': PAD_MS,
            'time_note': 'all times in ms after the stimulus (padding removed)', 'region': a.region}
-    modes = {'detected': dict(),
-             'true': dict(onset_ms=a.stim_ms + shift, offset_ms=a.last_act_ms + shift)}
+    # without a stimulus the package otherwise uses the first 40 ms as baseline; with a
+    # 20 ms pad that window took in the start of the QRS (bug in this script, fixed 2026-10-03)
+    # plan's baseline window: 40 ms ending 5 ms before the true onset (the stimulus)
+    on = a.stim_ms + shift
+    bw = (on - 45.0, on - 5.0)
+    out['baseline_window_ms'] = [bw[0] - shift, bw[1] - shift]
+    modes = {'detected': dict(baseline_window_ms=bw),
+             'true': dict(onset_ms=a.stim_ms + shift, offset_ms=a.last_act_ms + shift, baseline_window_ms=bw)}
     for name, kw in modes.items():
         m = measure_beat(ecg, fs, **kw)
         c = evaluate(m, a.region)
