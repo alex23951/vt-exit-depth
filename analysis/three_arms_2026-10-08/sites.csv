@@ -1,0 +1,433 @@
+id,name,group,depth_target,arm,true_qrs_duration_ms,true_pseudo_delta_ms,true_idt_v2_ms,true_srs_ms,true_mdi_daniels,detected_qrs_duration_ms,detected_pseudo_delta_ms,detected_idt_v2_ms,detected_srs_ms,detected_mdi_daniels
+lv_septum_phi0_z0.25_d10,apical septal lv septum,LV septum,0.1,layer,118.0,20.0,11.0,42.0,0.3559322033898305,99.0,19.0,10.0,41.0,0.41
+lv_septum_phi0_z0.25_d10,apical septal lv septum,LV septum,0.1,network,130.0,33.0,32.0,60.0,0.46153846153846156,118.0,30.0,29.0,57.0,0.4830508474576271
+lv_septum_phi0_z0.25_d10,apical septal lv septum,LV septum,0.1,nolayer,221.0,31.0,219.0,92.0,0.416289592760181,213.0,28.0,213.0,89.0,0.41784037558685444
+lv_septum_phi0_z0.25_d50,apical septal lv septum,LV septum,0.5,layer,111.0,14.0,111.0,43.0,0.38738738738738737,95.0,11.0,,40.0,0.4166666666666667
+lv_septum_phi0_z0.25_d50,apical septal lv septum,LV septum,0.5,network,131.0,31.0,131.0,60.0,0.4580152671755725,113.0,26.0,113.0,55.0,0.48672566371681414
+lv_septum_phi0_z0.25_d50,apical septal lv septum,LV septum,0.5,nolayer,220.0,29.0,218.0,,0.41818181818181815,210.0,24.0,,,0.41232227488151657
+lv_septum_phi0_z0.25_d75,apical septal lv septum,LV septum,0.75,layer,110.0,12.0,110.0,22.0,0.4,97.0,11.0,,21.0,0.43434343434343436
+lv_septum_phi0_z0.25_d75,apical septal lv septum,LV septum,0.75,network,132.0,31.0,132.0,60.0,0.45454545454545453,114.0,27.0,114.0,56.0,0.49122807017543857
+lv_septum_phi0_z0.25_d75,apical septal lv septum,LV septum,0.75,nolayer,221.0,29.0,218.0,,0.416289592760181,211.0,25.0,,,0.41509433962264153
+lv_septum_phi0_z0.25_d90,apical septal lv septum,LV septum,0.9,layer,109.0,12.0,109.0,55.0,0.3944954128440367,100.0,11.0,,54.0,0.4158415841584158
+lv_septum_phi0_z0.25_d90,apical septal lv septum,LV septum,0.9,network,131.0,26.0,131.0,61.0,0.46564885496183206,115.0,23.0,115.0,58.0,0.5043478260869565
+lv_septum_phi0_z0.25_d90,apical septal lv septum,LV septum,0.9,nolayer,222.0,27.0,220.0,111.0,0.4189189189189189,214.0,24.0,,108.0,0.4186046511627907
+lv_free_wall_phi60_z0.25_d10,apical anteroseptal lv free wall,LV free wall,0.1,layer,115.0,19.0,16.0,43.0,0.3739130434782609,102.0,18.0,15.0,42.0,0.4077669902912621
+lv_free_wall_phi60_z0.25_d10,apical anteroseptal lv free wall,LV free wall,0.1,network,144.0,33.0,17.0,50.0,0.3611111111111111,135.0,30.0,14.0,47.0,0.362962962962963
+lv_free_wall_phi60_z0.25_d10,apical anteroseptal lv free wall,LV free wall,0.1,nolayer,221.0,20.0,15.0,93.0,0.42081447963800905,219.0,17.0,12.0,90.0,0.410958904109589
+lv_free_wall_phi60_z0.25_d50,apical anteroseptal lv free wall,LV free wall,0.5,layer,122.0,27.0,19.0,58.0,0.4098360655737705,100.0,17.0,9.0,48.0,0.39603960396039606
+lv_free_wall_phi60_z0.25_d50,apical anteroseptal lv free wall,LV free wall,0.5,network,150.0,44.0,150.0,51.0,0.46,134.0,36.0,,43.0,0.4552238805970149
+lv_free_wall_phi60_z0.25_d50,apical anteroseptal lv free wall,LV free wall,0.5,nolayer,218.0,20.0,218.0,,0.43119266055045874,211.0,12.0,211.0,,0.4075829383886256
+lv_free_wall_phi60_z0.25_d75,apical anteroseptal lv free wall,LV free wall,0.75,layer,126.0,33.0,126.0,74.0,0.4365079365079365,112.0,31.0,112.0,72.0,0.4732142857142857
+lv_free_wall_phi60_z0.25_d75,apical anteroseptal lv free wall,LV free wall,0.75,network,152.0,50.0,152.0,90.0,0.47368421052631576,140.0,48.0,,88.0,0.49645390070921985
+lv_free_wall_phi60_z0.25_d75,apical anteroseptal lv free wall,LV free wall,0.75,nolayer,218.0,22.0,218.0,,0.44036697247706424,216.0,20.0,216.0,,0.4351851851851852
+lv_free_wall_phi60_z0.25_d90,apical anteroseptal lv free wall,LV free wall,0.9,layer,126.0,37.0,126.0,74.0,0.4603174603174603,112.0,35.0,112.0,72.0,0.5
+lv_free_wall_phi60_z0.25_d90,apical anteroseptal lv free wall,LV free wall,0.9,network,152.0,54.0,152.0,92.0,0.4934210526315789,141.0,52.0,141.0,90.0,0.5177304964539007
+lv_free_wall_phi60_z0.25_d90,apical anteroseptal lv free wall,LV free wall,0.9,nolayer,219.0,15.0,219.0,,0.4383561643835616,216.0,13.0,216.0,,0.4351851851851852
+lv_free_wall_phi120_z0.25_d10,apical anterolateral lv free wall,LV free wall,0.1,layer,127.0,20.0,33.0,47.0,0.3700787401574803,115.0,18.0,31.0,45.0,0.3879310344827586
+lv_free_wall_phi120_z0.25_d10,apical anterolateral lv free wall,LV free wall,0.1,network,159.0,33.0,49.0,54.0,0.33962264150943394,151.0,30.0,46.0,51.0,0.33774834437086093
+lv_free_wall_phi120_z0.25_d10,apical anterolateral lv free wall,LV free wall,0.1,nolayer,281.0,23.0,69.0,122.0,0.37722419928825623,263.0,20.0,66.0,119.0,0.3886792452830189
+lv_free_wall_phi120_z0.25_d50,apical anterolateral lv free wall,LV free wall,0.5,layer,131.0,25.0,36.0,52.0,0.3893129770992366,116.0,20.0,31.0,47.0,0.39655172413793105
+lv_free_wall_phi120_z0.25_d50,apical anterolateral lv free wall,LV free wall,0.5,network,165.0,38.0,54.0,65.0,0.3575757575757576,151.0,30.0,46.0,57.0,0.3355263157894737
+lv_free_wall_phi120_z0.25_d50,apical anterolateral lv free wall,LV free wall,0.5,nolayer,279.0,26.0,68.0,123.0,0.37992831541218636,255.0,18.0,60.0,115.0,0.38132295719844356
+lv_free_wall_phi120_z0.25_d75,apical anterolateral lv free wall,LV free wall,0.75,layer,137.0,31.0,42.0,60.0,0.41605839416058393,124.0,28.0,39.0,57.0,0.43548387096774194
+lv_free_wall_phi120_z0.25_d75,apical anterolateral lv free wall,LV free wall,0.75,network,170.0,44.0,60.0,70.0,0.38235294117647056,163.0,41.0,57.0,67.0,0.3803680981595092
+lv_free_wall_phi120_z0.25_d75,apical anterolateral lv free wall,LV free wall,0.75,nolayer,280.0,29.0,69.0,126.0,0.38571428571428573,261.0,26.0,66.0,123.0,0.39923954372623577
+lv_free_wall_phi120_z0.25_d90,apical anterolateral lv free wall,LV free wall,0.9,layer,140.0,34.0,45.0,63.0,0.42857142857142855,128.0,32.0,43.0,61.0,0.453125
+lv_free_wall_phi120_z0.25_d90,apical anterolateral lv free wall,LV free wall,0.9,network,173.0,47.0,62.0,73.0,0.3930635838150289,166.0,45.0,60.0,71.0,0.39520958083832336
+lv_free_wall_phi120_z0.25_d90,apical anterolateral lv free wall,LV free wall,0.9,nolayer,281.0,31.0,71.0,128.0,0.39501779359430605,263.0,29.0,69.0,126.0,0.40977443609022557
+lv_free_wall_phi180_z0.25_d10,apical lateral lv free wall,LV free wall,0.1,layer,131.0,26.0,35.0,44.0,0.33587786259541985,107.0,24.0,33.0,42.0,0.3888888888888889
+lv_free_wall_phi180_z0.25_d10,apical lateral lv free wall,LV free wall,0.1,network,151.0,34.0,47.0,63.0,0.41721854304635764,143.0,30.0,43.0,59.0,0.4125874125874126
+lv_free_wall_phi180_z0.25_d10,apical lateral lv free wall,LV free wall,0.1,nolayer,256.0,36.0,86.0,121.0,0.36328125,249.0,32.0,82.0,117.0,0.357429718875502
+lv_free_wall_phi180_z0.25_d50,apical lateral lv free wall,LV free wall,0.5,layer,137.0,33.0,42.0,53.0,0.3722627737226277,108.0,25.0,34.0,45.0,0.39814814814814814
+lv_free_wall_phi180_z0.25_d50,apical lateral lv free wall,LV free wall,0.5,network,160.0,41.0,54.0,70.0,0.4375,147.0,33.0,46.0,62.0,0.4217687074829932
+lv_free_wall_phi180_z0.25_d50,apical lateral lv free wall,LV free wall,0.5,nolayer,259.0,36.0,86.0,123.0,0.36293436293436293,247.0,28.0,78.0,115.0,0.3481781376518219
+lv_free_wall_phi180_z0.25_d75,apical lateral lv free wall,LV free wall,0.75,layer,143.0,38.0,47.0,58.0,0.3986013986013986,118.0,35.0,44.0,55.0,0.453781512605042
+lv_free_wall_phi180_z0.25_d75,apical lateral lv free wall,LV free wall,0.75,network,165.0,46.0,58.0,80.0,0.46060606060606063,157.0,43.0,55.0,77.0,0.46496815286624205
+lv_free_wall_phi180_z0.25_d75,apical lateral lv free wall,LV free wall,0.75,nolayer,262.0,36.0,87.0,124.0,0.3702290076335878,256.0,33.0,84.0,121.0,0.3671875
+lv_free_wall_phi180_z0.25_d90,apical lateral lv free wall,LV free wall,0.9,layer,146.0,42.0,50.0,61.0,0.410958904109589,122.0,40.0,48.0,59.0,0.4715447154471545
+lv_free_wall_phi180_z0.25_d90,apical lateral lv free wall,LV free wall,0.9,network,168.0,50.0,62.0,84.0,0.4642857142857143,160.0,47.0,59.0,81.0,0.4658385093167702
+lv_free_wall_phi180_z0.25_d90,apical lateral lv free wall,LV free wall,0.9,nolayer,263.0,39.0,90.0,126.0,0.3840304182509506,257.0,36.0,87.0,123.0,0.38132295719844356
+lv_free_wall_phi-120_z0.25_d10,apical inferolateral lv free wall,LV free wall,0.1,layer,124.0,25.0,27.0,44.0,0.3548387096774194,101.0,23.0,25.0,42.0,0.4117647058823529
+lv_free_wall_phi-120_z0.25_d10,apical inferolateral lv free wall,LV free wall,0.1,network,142.0,36.0,46.0,66.0,0.4507042253521127,133.0,32.0,42.0,62.0,0.45112781954887216
+lv_free_wall_phi-120_z0.25_d10,apical inferolateral lv free wall,LV free wall,0.1,nolayer,232.0,44.0,60.0,107.0,0.45689655172413796,224.0,40.0,56.0,103.0,0.45535714285714285
+lv_free_wall_phi-120_z0.25_d50,apical inferolateral lv free wall,LV free wall,0.5,layer,127.0,27.0,30.0,47.0,0.3700787401574803,102.0,23.0,26.0,43.0,0.4174757281553398
+lv_free_wall_phi-120_z0.25_d50,apical inferolateral lv free wall,LV free wall,0.5,network,144.0,39.0,49.0,70.0,0.4652777777777778,129.0,32.0,42.0,63.0,0.46511627906976744
+lv_free_wall_phi-120_z0.25_d50,apical inferolateral lv free wall,LV free wall,0.5,nolayer,235.0,43.0,61.0,107.0,0.44680851063829785,224.0,36.0,54.0,100.0,0.4375
+lv_free_wall_phi-120_z0.25_d75,apical inferolateral lv free wall,LV free wall,0.75,layer,128.0,26.0,31.0,60.0,0.40625,106.0,22.0,27.0,56.0,0.4485981308411215
+lv_free_wall_phi-120_z0.25_d75,apical inferolateral lv free wall,LV free wall,0.75,network,144.0,42.0,49.0,71.0,0.4930555555555556,131.0,38.0,45.0,67.0,0.5114503816793893
+lv_free_wall_phi-120_z0.25_d75,apical inferolateral lv free wall,LV free wall,0.75,nolayer,239.0,43.0,63.0,160.0,0.4393305439330544,231.0,39.0,59.0,156.0,0.43722943722943725
+lv_free_wall_phi-120_z0.25_d90,apical inferolateral lv free wall,LV free wall,0.9,layer,129.0,26.0,32.0,61.0,0.4108527131782946,107.0,22.0,28.0,57.0,0.4537037037037037
+lv_free_wall_phi-120_z0.25_d90,apical inferolateral lv free wall,LV free wall,0.9,network,144.0,43.0,49.0,72.0,0.5,132.0,39.0,45.0,68.0,0.5151515151515151
+lv_free_wall_phi-120_z0.25_d90,apical inferolateral lv free wall,LV free wall,0.9,nolayer,241.0,43.0,65.0,163.0,0.43568464730290457,233.0,39.0,61.0,159.0,0.4334763948497854
+lv_septum_phi-60_z0.25_d10,apical inferoseptal lv septum,LV septum,0.1,layer,121.0,22.0,21.0,43.0,0.35537190082644626,101.0,20.0,19.0,41.0,0.39805825242718446
+lv_septum_phi-60_z0.25_d10,apical inferoseptal lv septum,LV septum,0.1,network,139.0,32.0,32.0,66.0,0.4748201438848921,126.0,28.0,28.0,62.0,0.4881889763779528
+lv_septum_phi-60_z0.25_d10,apical inferoseptal lv septum,LV septum,0.1,nolayer,221.0,36.0,44.0,100.0,0.45248868778280543,215.0,32.0,40.0,96.0,0.44651162790697674
+lv_septum_phi-60_z0.25_d50,apical inferoseptal lv septum,LV septum,0.5,layer,117.0,17.0,117.0,46.0,0.39316239316239315,99.0,13.0,,42.0,0.42424242424242425
+lv_septum_phi-60_z0.25_d50,apical inferoseptal lv septum,LV septum,0.5,network,137.0,39.0,40.0,66.0,0.48175182481751827,122.0,33.0,34.0,60.0,0.4918032786885246
+lv_septum_phi-60_z0.25_d50,apical inferoseptal lv septum,LV septum,0.5,nolayer,221.0,33.0,43.0,100.0,0.45248868778280543,213.0,27.0,37.0,94.0,0.4413145539906103
+lv_septum_phi-60_z0.25_d75,apical inferoseptal lv septum,LV septum,0.75,layer,114.0,14.0,114.0,48.0,0.42105263157894735,102.0,13.0,,47.0,0.4519230769230769
+lv_septum_phi-60_z0.25_d75,apical inferoseptal lv septum,LV septum,0.75,network,136.0,40.0,39.0,69.0,0.5073529411764706,126.0,37.0,36.0,66.0,0.5238095238095238
+lv_septum_phi-60_z0.25_d75,apical inferoseptal lv septum,LV septum,0.75,nolayer,222.0,32.0,222.0,100.0,0.45045045045045046,216.0,29.0,,97.0,0.4470046082949309
+lv_septum_phi-60_z0.25_d90,apical inferoseptal lv septum,LV septum,0.9,layer,114.0,14.0,114.0,48.0,0.42105263157894735,103.0,13.0,,47.0,0.4519230769230769
+lv_septum_phi-60_z0.25_d90,apical inferoseptal lv septum,LV septum,0.9,network,138.0,41.0,39.0,70.0,0.5072463768115942,127.0,38.0,36.0,67.0,0.5234375
+lv_septum_phi-60_z0.25_d90,apical inferoseptal lv septum,LV septum,0.9,nolayer,224.0,32.0,224.0,112.0,0.45089285714285715,219.0,29.0,219.0,109.0,0.4474885844748858
+lv_septum_phi0_z0.5_d10,mid septal lv septum,LV septum,0.1,layer,114.0,32.0,16.0,34.0,0.40350877192982454,101.0,30.0,14.0,32.0,0.43137254901960786
+lv_septum_phi0_z0.5_d10,mid septal lv septum,LV septum,0.1,network,140.0,41.0,30.0,53.0,0.4,131.0,37.0,26.0,49.0,0.3969465648854962
+lv_septum_phi0_z0.5_d10,mid septal lv septum,LV septum,0.1,nolayer,202.0,43.0,202.0,117.0,0.5792079207920792,197.0,39.0,197.0,113.0,0.5736040609137056
+lv_septum_phi0_z0.5_d50,mid septal lv septum,LV septum,0.5,layer,111.0,27.0,111.0,50.0,0.2072072072072072,97.0,23.0,,46.0,0.1958762886597938
+lv_septum_phi0_z0.5_d50,mid septal lv septum,LV septum,0.5,network,143.0,49.0,39.0,69.0,0.4195804195804196,132.0,43.0,33.0,63.0,0.4090909090909091
+lv_septum_phi0_z0.5_d50,mid septal lv septum,LV septum,0.5,nolayer,204.0,41.0,203.0,115.0,0.5637254901960784,197.0,35.0,197.0,109.0,0.5532994923857868
+lv_septum_phi0_z0.5_d75,mid septal lv septum,LV septum,0.75,layer,108.0,24.0,108.0,34.0,0.4722222222222222,97.0,23.0,97.0,33.0,0.5154639175257731
+lv_septum_phi0_z0.5_d75,mid septal lv septum,LV septum,0.75,network,144.0,54.0,144.0,73.0,0.4444444444444444,135.0,51.0,,70.0,0.45185185185185184
+lv_septum_phi0_z0.5_d75,mid septal lv septum,LV septum,0.75,nolayer,206.0,42.0,205.0,118.0,0.5728155339805825,202.0,39.0,202.0,115.0,0.5693069306930693
+lv_septum_phi0_z0.5_d90,mid septal lv septum,LV septum,0.9,layer,107.0,12.0,107.0,34.0,0.4392523364485981,97.0,11.0,97.0,33.0,0.4742268041237113
+lv_septum_phi0_z0.5_d90,mid septal lv septum,LV septum,0.9,network,145.0,56.0,145.0,75.0,0.46206896551724136,135.0,53.0,,72.0,0.4740740740740741
+lv_septum_phi0_z0.5_d90,mid septal lv septum,LV septum,0.9,nolayer,207.0,44.0,206.0,118.0,0.5700483091787439,203.0,41.0,203.0,115.0,0.5665024630541872
+lv_septum_phi60_z0.5_d10,mid anteroseptal lv septum,LV septum,0.1,layer,105.0,28.0,14.0,32.0,0.45714285714285713,96.0,26.0,12.0,30.0,0.4791666666666667
+lv_septum_phi60_z0.5_d10,mid anteroseptal lv septum,LV septum,0.1,network,125.0,49.0,15.0,68.0,0.504,120.0,46.0,12.0,65.0,0.5
+lv_septum_phi60_z0.5_d10,mid anteroseptal lv septum,LV septum,0.1,nolayer,222.0,24.0,15.0,103.0,0.44144144144144143,203.0,21.0,12.0,100.0,0.4634146341463415
+lv_septum_phi60_z0.5_d50,mid anteroseptal lv septum,LV septum,0.5,layer,97.0,21.0,97.0,56.0,0.4329896907216495,86.0,15.0,,50.0,0.41379310344827586
+lv_septum_phi60_z0.5_d50,mid anteroseptal lv septum,LV septum,0.5,network,124.0,44.0,124.0,75.0,0.5483870967741935,111.0,36.0,111.0,67.0,0.5405405405405406
+lv_septum_phi60_z0.5_d50,mid anteroseptal lv septum,LV septum,0.5,nolayer,217.0,24.0,215.0,152.0,0.46543778801843316,197.0,16.0,,144.0,0.46733668341708545
+lv_septum_phi60_z0.5_d75,mid anteroseptal lv septum,LV septum,0.75,layer,98.0,15.0,98.0,65.0,0.41836734693877553,87.0,14.0,87.0,64.0,0.45977011494252873
+lv_septum_phi60_z0.5_d75,mid anteroseptal lv septum,LV septum,0.75,network,122.0,40.0,122.0,80.0,0.5737704918032787,115.0,38.0,115.0,78.0,0.591304347826087
+lv_septum_phi60_z0.5_d75,mid anteroseptal lv septum,LV septum,0.75,nolayer,215.0,25.0,214.0,156.0,0.4604651162790698,205.0,23.0,,154.0,0.470873786407767
+lv_septum_phi60_z0.5_d90,mid anteroseptal lv septum,LV septum,0.9,layer,98.0,15.0,98.0,67.0,0.41836734693877553,87.0,14.0,87.0,66.0,0.45977011494252873
+lv_septum_phi60_z0.5_d90,mid anteroseptal lv septum,LV septum,0.9,network,124.0,38.0,124.0,83.0,0.5645161290322581,114.0,36.0,114.0,81.0,0.5964912280701754
+lv_septum_phi60_z0.5_d90,mid anteroseptal lv septum,LV septum,0.9,nolayer,215.0,25.0,213.0,157.0,0.4558139534883721,205.0,23.0,,155.0,0.46601941747572817
+lv_free_wall_phi120_z0.5_d10,mid anterolateral lv free wall,LV free wall,0.1,layer,123.0,27.0,49.0,43.0,0.34959349593495936,120.0,25.0,47.0,41.0,0.3416666666666667
+lv_free_wall_phi120_z0.5_d10,mid anterolateral lv free wall,LV free wall,0.1,network,171.0,55.0,71.0,71.0,0.39766081871345027,152.0,51.0,67.0,67.0,0.41830065359477125
+lv_free_wall_phi120_z0.5_d10,mid anterolateral lv free wall,LV free wall,0.1,nolayer,285.0,103.0,106.0,139.0,0.3719298245614035,268.0,99.0,102.0,135.0,0.37362637362637363
+lv_free_wall_phi120_z0.5_d50,mid anterolateral lv free wall,LV free wall,0.5,layer,130.0,33.0,53.0,50.0,0.38461538461538464,120.0,25.0,45.0,42.0,0.35
+lv_free_wall_phi120_z0.5_d50,mid anterolateral lv free wall,LV free wall,0.5,network,175.0,60.0,75.0,75.0,0.4114285714285714,152.0,51.0,66.0,66.0,0.4144736842105263
+lv_free_wall_phi120_z0.5_d50,mid anterolateral lv free wall,LV free wall,0.5,nolayer,282.0,106.0,106.0,138.0,0.3475177304964539,256.0,97.0,97.0,129.0,0.33840304182509506
+lv_free_wall_phi120_z0.5_d75,mid anterolateral lv free wall,LV free wall,0.75,layer,135.0,38.0,61.0,75.0,0.4074074074074074,130.0,35.0,58.0,72.0,0.4
+lv_free_wall_phi120_z0.5_d75,mid anterolateral lv free wall,LV free wall,0.75,network,177.0,64.0,77.0,78.0,0.423728813559322,160.0,61.0,74.0,75.0,0.4472049689440994
+lv_free_wall_phi120_z0.5_d75,mid anterolateral lv free wall,LV free wall,0.75,nolayer,281.0,108.0,108.0,138.0,0.35587188612099646,259.0,105.0,105.0,135.0,0.36329588014981273
+lv_free_wall_phi120_z0.5_d90,mid anterolateral lv free wall,LV free wall,0.9,layer,139.0,42.0,62.0,78.0,0.4172661870503597,134.0,39.0,59.0,75.0,0.41044776119402987
+lv_free_wall_phi120_z0.5_d90,mid anterolateral lv free wall,LV free wall,0.9,network,181.0,67.0,79.0,82.0,0.43646408839779005,165.0,64.0,76.0,79.0,0.46060606060606063
+lv_free_wall_phi120_z0.5_d90,mid anterolateral lv free wall,LV free wall,0.9,nolayer,282.0,111.0,111.0,139.0,0.35815602836879434,260.0,108.0,108.0,136.0,0.3643122676579926
+lv_free_wall_phi180_z0.5_d10,mid lateral lv free wall,LV free wall,0.1,layer,129.0,32.0,47.0,44.0,0.34108527131782945,111.0,30.0,45.0,42.0,0.375
+lv_free_wall_phi180_z0.5_d10,mid lateral lv free wall,LV free wall,0.1,network,166.0,45.0,62.0,69.0,0.35542168674698793,152.0,41.0,58.0,65.0,0.35947712418300654
+lv_free_wall_phi180_z0.5_d10,mid lateral lv free wall,LV free wall,0.1,nolayer,247.0,84.0,118.0,139.0,0.4331983805668016,237.0,80.0,114.0,135.0,0.4345991561181435
+lv_free_wall_phi180_z0.5_d50,mid lateral lv free wall,LV free wall,0.5,layer,137.0,39.0,55.0,52.0,0.3795620437956204,111.0,30.0,46.0,43.0,0.38392857142857145
+lv_free_wall_phi180_z0.5_d50,mid lateral lv free wall,LV free wall,0.5,network,173.0,54.0,69.0,77.0,0.3815028901734104,150.0,43.0,58.0,66.0,0.36423841059602646
+lv_free_wall_phi180_z0.5_d50,mid lateral lv free wall,LV free wall,0.5,nolayer,250.0,93.0,117.0,141.0,0.424,233.0,82.0,106.0,130.0,0.40772532188841204
+lv_free_wall_phi180_z0.5_d75,mid lateral lv free wall,LV free wall,0.75,layer,144.0,47.0,62.0,63.0,0.4097222222222222,123.0,43.0,58.0,59.0,0.4435483870967742
+lv_free_wall_phi180_z0.5_d75,mid lateral lv free wall,LV free wall,0.75,network,178.0,61.0,71.0,88.0,0.398876404494382,160.0,57.0,67.0,84.0,0.4161490683229814
+lv_free_wall_phi180_z0.5_d75,mid lateral lv free wall,LV free wall,0.75,nolayer,252.0,97.0,115.0,140.0,0.4166666666666667,244.0,93.0,111.0,136.0,0.4139344262295082
+lv_free_wall_phi180_z0.5_d90,mid lateral lv free wall,LV free wall,0.9,layer,148.0,51.0,66.0,66.0,0.42567567567567566,128.0,48.0,63.0,63.0,0.46511627906976744
+lv_free_wall_phi180_z0.5_d90,mid lateral lv free wall,LV free wall,0.9,network,181.0,65.0,75.0,92.0,0.4143646408839779,164.0,62.0,72.0,89.0,0.43373493975903615
+lv_free_wall_phi180_z0.5_d90,mid lateral lv free wall,LV free wall,0.9,nolayer,256.0,97.0,117.0,143.0,0.39453125,248.0,94.0,114.0,140.0,0.3951612903225806
+lv_free_wall_phi-150_z0.5_d10,mid inferolateral lv free wall,LV free wall,0.1,layer,123.0,31.0,19.0,28.0,0.37398373983739835,100.0,29.0,17.0,26.0,0.43137254901960786
+lv_free_wall_phi-150_z0.5_d10,mid inferolateral lv free wall,LV free wall,0.1,network,151.0,52.0,42.0,61.0,0.4900662251655629,137.0,46.0,36.0,55.0,0.49635036496350365
+lv_free_wall_phi-150_z0.5_d10,mid inferolateral lv free wall,LV free wall,0.1,nolayer,222.0,82.0,101.0,129.0,0.45495495495495497,209.0,76.0,95.0,123.0,0.45454545454545453
+lv_free_wall_phi-150_z0.5_d50,mid inferolateral lv free wall,LV free wall,0.5,layer,127.0,34.0,47.0,55.0,0.3700787401574803,98.0,26.0,39.0,47.0,0.3939393939393939
+lv_free_wall_phi-150_z0.5_d50,mid inferolateral lv free wall,LV free wall,0.5,network,157.0,59.0,49.0,67.0,0.5031847133757962,135.0,47.0,37.0,55.0,0.49264705882352944
+lv_free_wall_phi-150_z0.5_d50,mid inferolateral lv free wall,LV free wall,0.5,nolayer,225.0,81.0,99.0,131.0,0.44,207.0,69.0,87.0,119.0,0.4182692307692308
+lv_free_wall_phi-150_z0.5_d75,mid inferolateral lv free wall,LV free wall,0.75,layer,126.0,36.0,46.0,60.0,0.47619047619047616,100.0,30.0,40.0,54.0,0.5346534653465347
+lv_free_wall_phi-150_z0.5_d75,mid inferolateral lv free wall,LV free wall,0.75,network,155.0,65.0,63.0,83.0,0.535483870967742,145.0,60.0,58.0,78.0,0.5342465753424658
+lv_free_wall_phi-150_z0.5_d75,mid inferolateral lv free wall,LV free wall,0.75,nolayer,229.0,95.0,99.0,138.0,0.43231441048034935,220.0,90.0,94.0,133.0,0.42727272727272725
+lv_free_wall_phi-150_z0.5_d90,mid inferolateral lv free wall,LV free wall,0.9,layer,125.0,35.0,39.0,62.0,0.496,102.0,30.0,34.0,57.0,0.5533980582524272
+lv_free_wall_phi-150_z0.5_d90,mid inferolateral lv free wall,LV free wall,0.9,network,157.0,67.0,66.0,87.0,0.554140127388535,146.0,62.0,61.0,82.0,0.5616438356164384
+lv_free_wall_phi-150_z0.5_d90,mid inferolateral lv free wall,LV free wall,0.9,nolayer,231.0,84.0,100.0,135.0,0.4329004329004329,222.0,79.0,95.0,130.0,0.42792792792792794
+lv_septum_phi-60_z0.5_d10,mid inferoseptal lv septum,LV septum,0.1,layer,117.0,33.0,17.0,33.0,0.41025641025641024,98.0,31.0,15.0,31.0,0.46464646464646464
+lv_septum_phi-60_z0.5_d10,mid inferoseptal lv septum,LV septum,0.1,network,143.0,44.0,31.0,54.0,0.4125874125874126,132.0,39.0,26.0,49.0,0.40601503759398494
+lv_septum_phi-60_z0.5_d10,mid inferoseptal lv septum,LV septum,0.1,nolayer,203.0,69.0,,124.0,0.6108374384236454,197.0,64.0,,119.0,0.6040609137055838
+lv_septum_phi-60_z0.5_d50,mid inferoseptal lv septum,LV septum,0.5,layer,115.0,29.0,115.0,52.0,0.21739130434782608,96.0,24.0,,47.0,0.20618556701030927
+lv_septum_phi-60_z0.5_d50,mid inferoseptal lv septum,LV septum,0.5,network,143.0,52.0,41.0,70.0,0.43356643356643354,132.0,45.0,34.0,63.0,0.4166666666666667
+lv_septum_phi-60_z0.5_d50,mid inferoseptal lv septum,LV septum,0.5,nolayer,205.0,66.0,205.0,124.0,0.6048780487804878,196.0,59.0,,117.0,0.5969387755102041
+lv_septum_phi-60_z0.5_d75,mid inferoseptal lv septum,LV septum,0.75,layer,111.0,26.0,111.0,55.0,0.4774774774774775,98.0,25.0,,54.0,0.5252525252525253
+lv_septum_phi-60_z0.5_d75,mid inferoseptal lv septum,LV septum,0.75,network,143.0,56.0,44.0,74.0,0.45454545454545453,134.0,52.0,40.0,70.0,0.4552238805970149
+lv_septum_phi-60_z0.5_d75,mid inferoseptal lv septum,LV septum,0.75,nolayer,208.0,65.0,208.0,126.0,0.6057692307692307,202.0,61.0,,122.0,0.6039603960396039
+lv_septum_phi-60_z0.5_d90,mid inferoseptal lv septum,LV septum,0.9,layer,111.0,25.0,111.0,56.0,0.4774774774774775,98.0,24.0,,55.0,0.5306122448979592
+lv_septum_phi-60_z0.5_d90,mid inferoseptal lv septum,LV septum,0.9,network,145.0,57.0,145.0,76.0,0.5241379310344828,136.0,54.0,,73.0,0.5367647058823529
+lv_septum_phi-60_z0.5_d90,mid inferoseptal lv septum,LV septum,0.9,nolayer,209.0,66.0,209.0,126.0,0.6028708133971292,204.0,63.0,204.0,123.0,0.6029411764705882
+lv_septum_phi0_z0.75_d10,basal septal lv septum,LV septum,0.1,layer,114.0,38.0,20.0,35.0,0.3684210526315789,99.0,36.0,18.0,33.0,0.4
+lv_septum_phi0_z0.75_d10,basal septal lv septum,LV septum,0.1,network,145.0,47.0,38.0,59.0,0.41379310344827586,131.0,43.0,34.0,55.0,0.42748091603053434
+lv_septum_phi0_z0.75_d10,basal septal lv septum,LV septum,0.1,nolayer,200.0,46.0,142.0,159.0,0.46,193.0,42.0,138.0,155.0,0.45595854922279794
+lv_septum_phi0_z0.75_d50,basal septal lv septum,LV septum,0.5,layer,113.0,40.0,113.0,59.0,0.4336283185840708,96.0,34.0,,53.0,0.4479166666666667
+lv_septum_phi0_z0.75_d50,basal septal lv septum,LV septum,0.5,network,152.0,56.0,56.0,72.0,0.4342105263157895,132.0,48.0,48.0,64.0,0.4393939393939394
+lv_septum_phi0_z0.75_d50,basal septal lv septum,LV septum,0.5,nolayer,200.0,90.0,145.0,158.0,0.435,190.0,82.0,137.0,150.0,0.41578947368421054
+lv_septum_phi0_z0.75_d75,basal septal lv septum,LV septum,0.75,layer,108.0,35.0,108.0,61.0,0.24074074074074073,94.0,34.0,,60.0,0.2631578947368421
+lv_septum_phi0_z0.75_d75,basal septal lv septum,LV septum,0.75,network,158.0,60.0,60.0,77.0,0.4430379746835443,139.0,56.0,56.0,73.0,0.4748201438848921
+lv_septum_phi0_z0.75_d75,basal septal lv septum,LV septum,0.75,nolayer,201.0,89.0,148.0,154.0,0.43283582089552236,196.0,85.0,144.0,150.0,0.42346938775510207
+lv_septum_phi0_z0.75_d90,basal septal lv septum,LV septum,0.9,layer,108.0,30.0,108.0,62.0,0.5185185185185185,94.0,29.0,,61.0,0.5789473684210527
+lv_septum_phi0_z0.75_d90,basal septal lv septum,LV septum,0.9,network,161.0,63.0,103.0,89.0,0.453416149068323,142.0,60.0,100.0,86.0,0.49295774647887325
+lv_septum_phi0_z0.75_d90,basal septal lv septum,LV septum,0.9,nolayer,203.0,73.0,154.0,152.0,0.42857142857142855,199.0,70.0,151.0,149.0,0.4221105527638191
+lv_septum_phi60_z0.75_d10,basal anteroseptal lv septum,LV septum,0.1,layer,107.0,40.0,14.0,30.0,0.3925233644859813,95.0,38.0,12.0,28.0,0.4166666666666667
+lv_septum_phi60_z0.75_d10,basal anteroseptal lv septum,LV septum,0.1,network,142.0,63.0,142.0,76.0,0.44366197183098594,122.0,59.0,,72.0,0.4796747967479675
+lv_septum_phi60_z0.75_d10,basal anteroseptal lv septum,LV septum,0.1,nolayer,213.0,60.0,210.0,148.0,0.568075117370892,200.0,56.0,200.0,144.0,0.5879396984924623
+lv_septum_phi60_z0.75_d50,basal anteroseptal lv septum,LV septum,0.5,layer,102.0,33.0,102.0,58.0,0.2549019607843137,94.0,28.0,94.0,53.0,0.22340425531914893
+lv_septum_phi60_z0.75_d50,basal anteroseptal lv septum,LV septum,0.5,network,143.0,69.0,143.0,82.0,0.4825174825174825,115.0,62.0,,75.0,0.5344827586206896
+lv_septum_phi60_z0.75_d50,basal anteroseptal lv septum,LV septum,0.5,nolayer,211.0,65.0,208.0,153.0,0.27014218009478674,192.0,58.0,192.0,146.0,0.2604166666666667
+lv_septum_phi60_z0.75_d75,basal anteroseptal lv septum,LV septum,0.75,layer,97.0,30.0,97.0,59.0,0.5051546391752577,94.0,29.0,,58.0,0.5052631578947369
+lv_septum_phi60_z0.75_d75,basal anteroseptal lv septum,LV septum,0.75,network,143.0,71.0,143.0,85.0,0.5034965034965035,119.0,67.0,,81.0,0.5666666666666667
+lv_septum_phi60_z0.75_d75,basal anteroseptal lv septum,LV septum,0.75,nolayer,211.0,65.0,208.0,156.0,0.27488151658767773,194.0,61.0,194.0,152.0,0.27835051546391754
+lv_septum_phi60_z0.75_d90,basal anteroseptal lv septum,LV septum,0.9,layer,97.0,29.0,97.0,60.0,0.5154639175257731,94.0,28.0,94.0,59.0,0.5212765957446809
+lv_septum_phi60_z0.75_d90,basal anteroseptal lv septum,LV septum,0.9,network,145.0,73.0,145.0,88.0,0.5241379310344828,124.0,70.0,,85.0,0.584
+lv_septum_phi60_z0.75_d90,basal anteroseptal lv septum,LV septum,0.9,nolayer,212.0,66.0,208.0,156.0,0.29245283018867924,197.0,63.0,197.0,153.0,0.3010204081632653
+lv_free_wall_phi120_z0.75_d10,basal anterolateral lv free wall,LV free wall,0.1,layer,127.0,24.0,55.0,71.0,0.3543307086614173,115.0,22.0,53.0,69.0,0.3706896551724138
+lv_free_wall_phi120_z0.75_d10,basal anterolateral lv free wall,LV free wall,0.1,network,177.0,61.0,78.0,83.0,0.3785310734463277,160.0,56.0,73.0,78.0,0.3875
+lv_free_wall_phi120_z0.75_d10,basal anterolateral lv free wall,LV free wall,0.1,nolayer,288.0,44.0,127.0,153.0,0.4236111111111111,271.0,39.0,122.0,148.0,0.4317343173431734
+lv_free_wall_phi120_z0.75_d50,basal anterolateral lv free wall,LV free wall,0.5,layer,134.0,30.0,61.0,77.0,0.373134328358209,116.0,23.0,54.0,70.0,0.3644067796610169
+lv_free_wall_phi120_z0.75_d50,basal anterolateral lv free wall,LV free wall,0.5,network,182.0,66.0,82.0,87.0,0.3901098901098901,162.0,59.0,75.0,80.0,0.39263803680981596
+lv_free_wall_phi120_z0.75_d50,basal anterolateral lv free wall,LV free wall,0.5,nolayer,287.0,46.0,128.0,154.0,0.4250871080139373,268.0,39.0,121.0,147.0,0.4291044776119403
+lv_free_wall_phi120_z0.75_d75,basal anterolateral lv free wall,LV free wall,0.75,layer,138.0,36.0,66.0,82.0,0.39855072463768115,125.0,33.0,63.0,79.0,0.4126984126984127
+lv_free_wall_phi120_z0.75_d75,basal anterolateral lv free wall,LV free wall,0.75,network,186.0,72.0,88.0,92.0,0.40860215053763443,170.0,69.0,85.0,89.0,0.4269005847953216
+lv_free_wall_phi120_z0.75_d75,basal anterolateral lv free wall,LV free wall,0.75,nolayer,286.0,47.0,129.0,148.0,0.4370629370629371,272.0,44.0,126.0,145.0,0.4485294117647059
+lv_free_wall_phi120_z0.75_d90,basal anterolateral lv free wall,LV free wall,0.9,layer,141.0,40.0,69.0,85.0,0.41134751773049644,129.0,38.0,67.0,83.0,0.4307692307692308
+lv_free_wall_phi120_z0.75_d90,basal anterolateral lv free wall,LV free wall,0.9,network,188.0,74.0,90.0,94.0,0.42021276595744683,172.0,71.0,87.0,91.0,0.4393063583815029
+lv_free_wall_phi120_z0.75_d90,basal anterolateral lv free wall,LV free wall,0.9,nolayer,287.0,51.0,130.0,148.0,0.4355400696864111,273.0,48.0,127.0,145.0,0.4468864468864469
+lv_free_wall_phi180_z0.75_d10,basal lateral lv free wall,LV free wall,0.1,layer,135.0,42.0,58.0,55.0,0.34814814814814815,112.0,40.0,56.0,53.0,0.39823008849557523
+lv_free_wall_phi180_z0.75_d10,basal lateral lv free wall,LV free wall,0.1,network,175.0,60.0,71.0,80.0,0.4057142857142857,148.0,55.0,66.0,75.0,0.44594594594594594
+lv_free_wall_phi180_z0.75_d10,basal lateral lv free wall,LV free wall,0.1,nolayer,255.0,154.0,162.0,163.0,0.5098039215686274,246.0,149.0,157.0,158.0,0.508130081300813
+lv_free_wall_phi180_z0.75_d50,basal lateral lv free wall,LV free wall,0.5,layer,143.0,49.0,66.0,63.0,0.3776223776223776,112.0,39.0,56.0,53.0,0.3893805309734513
+lv_free_wall_phi180_z0.75_d50,basal lateral lv free wall,LV free wall,0.5,network,183.0,70.0,80.0,89.0,0.43169398907103823,148.0,60.0,70.0,79.0,0.46308724832214765
+lv_free_wall_phi180_z0.75_d50,basal lateral lv free wall,LV free wall,0.5,nolayer,254.0,157.0,162.0,174.0,0.5275590551181102,240.0,147.0,152.0,164.0,0.5166666666666667
+lv_free_wall_phi180_z0.75_d75,basal lateral lv free wall,LV free wall,0.75,layer,150.0,56.0,73.0,69.0,0.4066666666666667,126.0,53.0,70.0,66.0,0.4566929133858268
+lv_free_wall_phi180_z0.75_d75,basal lateral lv free wall,LV free wall,0.75,network,187.0,75.0,80.0,96.0,0.42780748663101603,157.0,71.0,76.0,92.0,0.4810126582278481
+lv_free_wall_phi180_z0.75_d75,basal lateral lv free wall,LV free wall,0.75,nolayer,257.0,155.0,162.0,175.0,0.5252918287937743,248.0,151.0,158.0,171.0,0.5282258064516129
+lv_free_wall_phi180_z0.75_d90,basal lateral lv free wall,LV free wall,0.9,layer,154.0,60.0,77.0,73.0,0.42207792207792205,130.0,57.0,74.0,70.0,0.4732824427480916
+lv_free_wall_phi180_z0.75_d90,basal lateral lv free wall,LV free wall,0.9,network,190.0,77.0,84.0,99.0,0.4421052631578947,162.0,74.0,81.0,96.0,0.49693251533742333
+lv_free_wall_phi180_z0.75_d90,basal lateral lv free wall,LV free wall,0.9,nolayer,258.0,156.0,163.0,176.0,0.5310077519379846,252.0,153.0,160.0,173.0,0.5317460317460317
+lv_free_wall_phi-150_z0.75_d10,basal inferolateral lv free wall,LV free wall,0.1,layer,126.0,39.0,54.0,38.0,0.36507936507936506,83.0,37.0,52.0,36.0,0.42718446601941745
+lv_free_wall_phi-150_z0.75_d10,basal inferolateral lv free wall,LV free wall,0.1,network,157.0,58.0,96.0,65.0,0.3630573248407643,122.0,52.0,90.0,59.0,0.4146341463414634
+lv_free_wall_phi-150_z0.75_d10,basal inferolateral lv free wall,LV free wall,0.1,nolayer,222.0,127.0,167.0,147.0,0.42792792792792794,209.0,121.0,161.0,141.0,0.4258373205741627
+lv_free_wall_phi-150_z0.75_d50,basal inferolateral lv free wall,LV free wall,0.5,layer,131.0,37.0,57.0,61.0,0.3435114503816794,96.0,28.0,48.0,52.0,0.375
+lv_free_wall_phi-150_z0.75_d50,basal inferolateral lv free wall,LV free wall,0.5,network,165.0,67.0,91.0,72.0,0.3939393939393939,119.0,59.0,83.0,64.0,0.475
+lv_free_wall_phi-150_z0.75_d50,basal inferolateral lv free wall,LV free wall,0.5,nolayer,222.0,45.0,167.0,150.0,0.45045045045045046,208.0,37.0,159.0,142.0,0.4423076923076923
+lv_free_wall_phi-150_z0.75_d75,basal inferolateral lv free wall,LV free wall,0.75,layer,130.0,38.0,55.0,65.0,0.36153846153846153,99.0,33.0,50.0,60.0,0.42424242424242425
+lv_free_wall_phi-150_z0.75_d75,basal inferolateral lv free wall,LV free wall,0.75,network,164.0,69.0,91.0,97.0,0.42073170731707316,126.0,65.0,87.0,93.0,0.5158730158730159
+lv_free_wall_phi-150_z0.75_d75,basal inferolateral lv free wall,LV free wall,0.75,nolayer,224.0,50.0,169.0,152.0,0.45535714285714285,214.0,46.0,165.0,148.0,0.45794392523364486
+lv_free_wall_phi-150_z0.75_d90,basal inferolateral lv free wall,LV free wall,0.9,layer,132.0,38.0,57.0,69.0,0.36363636363636365,103.0,34.0,53.0,65.0,0.42718446601941745
+lv_free_wall_phi-150_z0.75_d90,basal inferolateral lv free wall,LV free wall,0.9,network,165.0,73.0,83.0,88.0,0.43636363636363634,129.0,69.0,79.0,84.0,0.5271317829457365
+lv_free_wall_phi-150_z0.75_d90,basal inferolateral lv free wall,LV free wall,0.9,nolayer,228.0,53.0,170.0,154.0,0.45614035087719296,218.0,49.0,166.0,150.0,0.45871559633027525
+lv_septum_phi-60_z0.75_d10,basal inferoseptal lv septum,LV septum,0.1,layer,115.0,37.0,21.0,35.0,0.3565217391304348,98.0,35.0,19.0,33.0,0.39
+lv_septum_phi-60_z0.75_d10,basal inferoseptal lv septum,LV septum,0.1,network,146.0,53.0,44.0,60.0,0.410958904109589,127.0,49.0,40.0,56.0,0.4375
+lv_septum_phi-60_z0.75_d10,basal inferoseptal lv septum,LV septum,0.1,nolayer,201.0,93.0,146.0,154.0,0.43781094527363185,195.0,89.0,142.0,150.0,0.4307692307692308
+lv_septum_phi-60_z0.75_d50,basal inferoseptal lv septum,LV septum,0.5,layer,114.0,35.0,44.0,58.0,0.41228070175438597,96.0,30.0,39.0,53.0,0.4375
+lv_septum_phi-60_z0.75_d50,basal inferoseptal lv septum,LV septum,0.5,network,154.0,59.0,55.0,72.0,0.42207792207792205,128.0,51.0,47.0,64.0,0.4453125
+lv_septum_phi-60_z0.75_d50,basal inferoseptal lv septum,LV septum,0.5,nolayer,201.0,92.0,147.0,157.0,0.4427860696517413,191.0,84.0,139.0,149.0,0.42408376963350786
+lv_septum_phi-60_z0.75_d75,basal inferoseptal lv septum,LV septum,0.75,layer,110.0,35.0,39.0,59.0,0.4818181818181818,94.0,34.0,38.0,58.0,0.5473684210526316
+lv_septum_phi-60_z0.75_d75,basal inferoseptal lv septum,LV septum,0.75,network,159.0,62.0,61.0,77.0,0.44654088050314467,135.0,58.0,57.0,73.0,0.49264705882352944
+lv_septum_phi-60_z0.75_d75,basal inferoseptal lv septum,LV septum,0.75,nolayer,203.0,86.0,151.0,155.0,0.45320197044334976,198.0,82.0,147.0,151.0,0.4444444444444444
+lv_septum_phi-60_z0.75_d90,basal inferoseptal lv septum,LV septum,0.9,layer,109.0,34.0,109.0,62.0,0.5045871559633027,94.0,33.0,,61.0,0.5684210526315789
+lv_septum_phi-60_z0.75_d90,basal inferoseptal lv septum,LV septum,0.9,network,162.0,68.0,63.0,80.0,0.4567901234567901,139.0,65.0,60.0,77.0,0.5107913669064749
+lv_septum_phi-60_z0.75_d90,basal inferoseptal lv septum,LV septum,0.9,nolayer,204.0,60.0,155.0,152.0,0.4411764705882353,200.0,57.0,152.0,149.0,0.435
+rv_free_wall_q25_z0.25_d10,apical inferior rv free wall,RV free wall,0.1,layer,117.0,11.0,17.0,52.0,0.4444444444444444,104.0,9.0,15.0,50.0,0.4716981132075472
+rv_free_wall_q25_z0.25_d10,apical inferior rv free wall,RV free wall,0.1,network,143.0,35.0,20.0,83.0,0.4965034965034965,127.0,31.0,16.0,79.0,0.5275590551181102
+rv_free_wall_q25_z0.25_d10,apical inferior rv free wall,RV free wall,0.1,nolayer,239.0,30.0,62.0,145.0,0.4560669456066946,233.0,26.0,58.0,141.0,0.45064377682403434
+rv_free_wall_q25_z0.25_d50,apical inferior rv free wall,RV free wall,0.5,layer,119.0,14.0,19.0,54.0,0.453781512605042,103.0,9.0,14.0,49.0,0.4666666666666667
+rv_free_wall_q25_z0.25_d50,apical inferior rv free wall,RV free wall,0.5,network,146.0,38.0,23.0,86.0,0.5,129.0,34.0,19.0,82.0,0.5348837209302325
+rv_free_wall_q25_z0.25_d50,apical inferior rv free wall,RV free wall,0.5,nolayer,240.0,28.0,62.0,147.0,0.45416666666666666,233.0,24.0,58.0,143.0,0.45064377682403434
+rv_free_wall_q25_z0.25_d75,apical inferior rv free wall,RV free wall,0.75,layer,122.0,17.0,22.0,57.0,0.45901639344262296,109.0,15.0,20.0,55.0,0.4864864864864865
+rv_free_wall_q25_z0.25_d75,apical inferior rv free wall,RV free wall,0.75,network,148.0,39.0,25.0,88.0,0.5067567567567568,133.0,37.0,23.0,86.0,0.5488721804511278
+rv_free_wall_q25_z0.25_d75,apical inferior rv free wall,RV free wall,0.75,nolayer,241.0,28.0,62.0,148.0,0.44813278008298757,236.0,26.0,60.0,146.0,0.4491525423728814
+rv_free_wall_q25_z0.25_d90,apical inferior rv free wall,RV free wall,0.9,layer,124.0,18.0,23.0,58.0,0.46774193548387094,111.0,16.0,21.0,56.0,0.5
+rv_free_wall_q25_z0.25_d90,apical inferior rv free wall,RV free wall,0.9,network,150.0,40.0,27.0,90.0,0.5133333333333333,135.0,38.0,25.0,88.0,0.5514705882352942
+rv_free_wall_q25_z0.25_d90,apical inferior rv free wall,RV free wall,0.9,nolayer,241.0,29.0,63.0,148.0,0.45643153526970953,237.0,27.0,61.0,146.0,0.45569620253164556
+rv_free_wall_q50_z0.25_d10,apical inferior rv free wall,RV free wall,0.1,layer,116.0,8.0,114.0,51.0,0.3879310344827586,101.0,7.0,101.0,50.0,0.43564356435643564
+rv_free_wall_q50_z0.25_d10,apical inferior rv free wall,RV free wall,0.1,network,144.0,33.0,142.0,98.0,0.4652777777777778,130.0,31.0,130.0,96.0,0.5
+rv_free_wall_q50_z0.25_d10,apical inferior rv free wall,RV free wall,0.1,nolayer,248.0,9.0,241.0,,0.3951612903225806,236.0,7.0,236.0,,0.4067796610169492
+rv_free_wall_q50_z0.25_d50,apical inferior rv free wall,RV free wall,0.5,layer,118.0,11.0,116.0,70.0,0.3983050847457627,102.0,9.0,102.0,68.0,0.4411764705882353
+rv_free_wall_q50_z0.25_d50,apical inferior rv free wall,RV free wall,0.5,network,148.0,36.0,146.0,101.0,0.4797297297297297,133.0,34.0,133.0,99.0,0.518796992481203
+rv_free_wall_q50_z0.25_d50,apical inferior rv free wall,RV free wall,0.5,nolayer,247.0,9.0,241.0,,0.38866396761133604,235.0,7.0,,,0.3983050847457627
+rv_free_wall_q50_z0.25_d75,apical inferior rv free wall,RV free wall,0.75,layer,119.0,11.0,117.0,70.0,0.3949579831932773,102.0,9.0,,68.0,0.4368932038834951
+rv_free_wall_q50_z0.25_d75,apical inferior rv free wall,RV free wall,0.75,network,148.0,36.0,146.0,101.0,0.4797297297297297,133.0,34.0,133.0,99.0,0.518796992481203
+rv_free_wall_q50_z0.25_d75,apical inferior rv free wall,RV free wall,0.75,nolayer,247.0,10.0,241.0,,0.38866396761133604,235.0,8.0,,,0.3983050847457627
+rv_free_wall_q50_z0.25_d90,apical inferior rv free wall,RV free wall,0.9,layer,121.0,14.0,119.0,72.0,0.4132231404958678,106.0,13.0,106.0,71.0,0.46226415094339623
+rv_free_wall_q50_z0.25_d90,apical inferior rv free wall,RV free wall,0.9,network,151.0,39.0,148.0,102.0,0.4900662251655629,135.0,37.0,135.0,100.0,0.5333333333333333
+rv_free_wall_q50_z0.25_d90,apical inferior rv free wall,RV free wall,0.9,nolayer,248.0,11.0,242.0,,0.3911290322580645,236.0,9.0,,,0.4008438818565401
+rv_free_wall_q75_z0.25_d10,apical lateral rv free wall,RV free wall,0.1,layer,110.0,8.0,109.0,46.0,0.37272727272727274,96.0,7.0,,45.0,0.41237113402061853
+rv_free_wall_q75_z0.25_d10,apical lateral rv free wall,RV free wall,0.1,network,136.0,23.0,134.0,94.0,0.4485294117647059,121.0,21.0,121.0,92.0,0.48760330578512395
+rv_free_wall_q75_z0.25_d10,apical lateral rv free wall,RV free wall,0.1,nolayer,234.0,9.0,229.0,,0.3547008547008547,221.0,7.0,,,0.36486486486486486
+rv_free_wall_q75_z0.25_d50,apical lateral rv free wall,RV free wall,0.5,layer,111.0,9.0,109.0,66.0,0.3783783783783784,95.0,7.0,,64.0,0.4166666666666667
+rv_free_wall_q75_z0.25_d50,apical lateral rv free wall,RV free wall,0.5,network,139.0,26.0,137.0,97.0,0.460431654676259,124.0,24.0,124.0,95.0,0.5
+rv_free_wall_q75_z0.25_d50,apical lateral rv free wall,RV free wall,0.5,nolayer,235.0,11.0,229.0,,0.35319148936170214,222.0,9.0,,,0.3632286995515695
+rv_free_wall_q75_z0.25_d75,apical lateral rv free wall,RV free wall,0.75,layer,114.0,13.0,112.0,69.0,0.38596491228070173,99.0,12.0,,68.0,0.43
+rv_free_wall_q75_z0.25_d75,apical lateral rv free wall,RV free wall,0.75,network,140.0,28.0,138.0,98.0,0.4642857142857143,125.0,26.0,,96.0,0.5
+rv_free_wall_q75_z0.25_d75,apical lateral rv free wall,RV free wall,0.75,nolayer,235.0,12.0,230.0,,0.3574468085106383,223.0,10.0,,,0.36607142857142855
+rv_free_wall_q75_z0.25_d90,apical lateral rv free wall,RV free wall,0.9,layer,114.0,13.0,113.0,70.0,0.39473684210526316,100.0,12.0,,69.0,0.43564356435643564
+rv_free_wall_q75_z0.25_d90,apical lateral rv free wall,RV free wall,0.9,network,142.0,29.0,140.0,97.0,0.47183098591549294,126.0,27.0,126.0,95.0,0.5158730158730159
+rv_free_wall_q75_z0.25_d90,apical lateral rv free wall,RV free wall,0.9,nolayer,235.0,12.0,230.0,,0.35319148936170214,224.0,10.0,224.0,,0.36160714285714285
+rv_free_wall_q25_z0.5_d10,mid inferior rv free wall,RV free wall,0.1,layer,121.0,18.0,25.0,26.0,0.47107438016528924,106.0,16.0,23.0,24.0,0.514018691588785
+rv_free_wall_q25_z0.5_d10,mid inferior rv free wall,RV free wall,0.1,network,171.0,62.0,59.0,96.0,0.543859649122807,154.0,58.0,55.0,92.0,0.5705128205128205
+rv_free_wall_q25_z0.5_d10,mid inferior rv free wall,RV free wall,0.1,nolayer,257.0,94.0,92.0,146.0,0.5680933852140078,250.0,90.0,88.0,142.0,0.568
+rv_free_wall_q25_z0.5_d50,mid inferior rv free wall,RV free wall,0.5,layer,123.0,21.0,27.0,28.0,0.4878048780487805,107.0,17.0,23.0,24.0,0.5233644859813084
+rv_free_wall_q25_z0.5_d50,mid inferior rv free wall,RV free wall,0.5,network,171.0,64.0,61.0,98.0,0.5555555555555556,154.0,58.0,55.0,92.0,0.5741935483870968
+rv_free_wall_q25_z0.5_d50,mid inferior rv free wall,RV free wall,0.5,nolayer,256.0,96.0,91.0,149.0,0.58203125,247.0,90.0,85.0,143.0,0.5789473684210527
+rv_free_wall_q25_z0.5_d75,mid inferior rv free wall,RV free wall,0.75,layer,127.0,24.0,31.0,32.0,0.49606299212598426,112.0,21.0,28.0,29.0,0.5357142857142857
+rv_free_wall_q25_z0.5_d75,mid inferior rv free wall,RV free wall,0.75,network,171.0,65.0,62.0,99.0,0.5614035087719298,158.0,62.0,59.0,96.0,0.5849056603773585
+rv_free_wall_q25_z0.5_d75,mid inferior rv free wall,RV free wall,0.75,nolayer,256.0,100.0,91.0,150.0,0.5859375,250.0,97.0,88.0,147.0,0.588
+rv_free_wall_q25_z0.5_d90,mid inferior rv free wall,RV free wall,0.9,layer,128.0,26.0,32.0,34.0,0.5078125,114.0,24.0,30.0,32.0,0.5526315789473685
+rv_free_wall_q25_z0.5_d90,mid inferior rv free wall,RV free wall,0.9,network,172.0,66.0,63.0,100.0,0.563953488372093,160.0,63.0,60.0,97.0,0.5875
+rv_free_wall_q25_z0.5_d90,mid inferior rv free wall,RV free wall,0.9,nolayer,258.0,74.0,90.0,149.0,0.5775193798449613,251.0,71.0,87.0,146.0,0.5816733067729084
+rv_free_wall_q50_z0.5_d10,mid inferior rv free wall,RV free wall,0.1,layer,123.0,14.0,9.0,47.0,0.3821138211382114,101.0,13.0,8.0,46.0,0.45098039215686275
+rv_free_wall_q50_z0.5_d10,mid inferior rv free wall,RV free wall,0.1,network,158.0,33.0,24.0,71.0,0.44936708860759494,140.0,30.0,21.0,68.0,0.48226950354609927
+rv_free_wall_q50_z0.5_d10,mid inferior rv free wall,RV free wall,0.1,nolayer,273.0,40.0,273.0,177.0,0.4358974358974359,267.0,37.0,267.0,174.0,0.4344569288389513
+rv_free_wall_q50_z0.5_d50,mid inferior rv free wall,RV free wall,0.5,layer,125.0,16.0,11.0,49.0,0.392,100.0,12.0,7.0,45.0,0.44554455445544555
+rv_free_wall_q50_z0.5_d50,mid inferior rv free wall,RV free wall,0.5,network,161.0,36.0,159.0,117.0,0.4658385093167702,144.0,33.0,144.0,114.0,0.5
+rv_free_wall_q50_z0.5_d50,mid inferior rv free wall,RV free wall,0.5,nolayer,271.0,40.0,270.0,175.0,0.4354243542435424,265.0,37.0,265.0,172.0,0.4339622641509434
+rv_free_wall_q50_z0.5_d75,mid inferior rv free wall,RV free wall,0.75,layer,127.0,17.0,13.0,50.0,0.3937007874015748,104.0,15.0,11.0,48.0,0.45714285714285713
+rv_free_wall_q50_z0.5_d75,mid inferior rv free wall,RV free wall,0.75,network,162.0,38.0,159.0,119.0,0.47530864197530864,145.0,35.0,145.0,116.0,0.5103448275862069
+rv_free_wall_q50_z0.5_d75,mid inferior rv free wall,RV free wall,0.75,nolayer,271.0,40.0,270.0,175.0,0.4354243542435424,265.0,37.0,265.0,172.0,0.4339622641509434
+rv_free_wall_q50_z0.5_d90,mid inferior rv free wall,RV free wall,0.9,layer,128.0,18.0,14.0,51.0,0.3984375,105.0,16.0,12.0,49.0,0.46226415094339623
+rv_free_wall_q50_z0.5_d90,mid inferior rv free wall,RV free wall,0.9,network,163.0,39.0,160.0,120.0,0.4723926380368098,147.0,37.0,147.0,118.0,0.5102040816326531
+rv_free_wall_q50_z0.5_d90,mid inferior rv free wall,RV free wall,0.9,nolayer,272.0,41.0,271.0,177.0,0.4338235294117647,266.0,39.0,,175.0,0.4344569288389513
+rv_free_wall_q75_z0.5_d10,mid lateral rv free wall,RV free wall,0.1,layer,110.0,8.0,6.0,32.0,0.2909090909090909,92.0,7.0,5.0,31.0,0.33695652173913043
+rv_free_wall_q75_z0.5_d10,mid lateral rv free wall,RV free wall,0.1,network,140.0,26.0,139.0,67.0,0.4,134.0,24.0,134.0,65.0,0.40298507462686567
+rv_free_wall_q75_z0.5_d10,mid lateral rv free wall,RV free wall,0.1,nolayer,250.0,11.0,,178.0,0.372,243.0,9.0,,176.0,0.3729508196721312
+rv_free_wall_q75_z0.5_d50,mid lateral rv free wall,RV free wall,0.5,layer,111.0,9.0,6.0,32.0,0.2882882882882883,93.0,8.0,5.0,31.0,0.3333333333333333
+rv_free_wall_q75_z0.5_d50,mid lateral rv free wall,RV free wall,0.5,network,141.0,28.0,141.0,69.0,0.41134751773049644,135.0,26.0,135.0,67.0,0.4148148148148148
+rv_free_wall_q75_z0.5_d50,mid lateral rv free wall,RV free wall,0.5,nolayer,249.0,10.0,248.0,177.0,0.37349397590361444,241.0,8.0,,175.0,0.3760330578512397
+rv_free_wall_q75_z0.5_d75,mid lateral rv free wall,RV free wall,0.75,layer,113.0,12.0,9.0,35.0,0.30973451327433627,95.0,11.0,8.0,34.0,0.35789473684210527
+rv_free_wall_q75_z0.5_d75,mid lateral rv free wall,RV free wall,0.75,network,143.0,30.0,142.0,70.0,0.4125874125874126,137.0,29.0,137.0,69.0,0.4233576642335766
+rv_free_wall_q75_z0.5_d75,mid lateral rv free wall,RV free wall,0.75,nolayer,249.0,10.0,248.0,175.0,0.37349397590361444,242.0,9.0,,174.0,0.3786008230452675
+rv_free_wall_q75_z0.5_d90,mid lateral rv free wall,RV free wall,0.9,layer,115.0,14.0,109.0,51.0,0.3130434782608696,97.0,13.0,97.0,50.0,0.36082474226804123
+rv_free_wall_q75_z0.5_d90,mid lateral rv free wall,RV free wall,0.9,network,143.0,30.0,142.0,71.0,0.4125874125874126,137.0,29.0,137.0,70.0,0.4233576642335766
+rv_free_wall_q75_z0.5_d90,mid lateral rv free wall,RV free wall,0.9,nolayer,249.0,10.0,248.0,175.0,0.37751004016064255,242.0,9.0,,174.0,0.38271604938271603
+rv_free_wall_q25_z0.75_d10,basal inferior rv free wall,RV free wall,0.1,layer,127.0,22.0,26.0,57.0,0.44881889763779526,108.0,20.0,24.0,55.0,0.5092592592592593
+rv_free_wall_q25_z0.75_d10,basal inferior rv free wall,RV free wall,0.1,network,167.0,40.0,44.0,87.0,0.5209580838323353,139.0,29.0,33.0,76.0,0.5467625899280576
+rv_free_wall_q25_z0.75_d10,basal inferior rv free wall,RV free wall,0.1,nolayer,284.0,51.0,74.0,176.0,0.5352112676056338,269.0,40.0,63.0,165.0,0.5222222222222223
+rv_free_wall_q25_z0.75_d50,basal inferior rv free wall,RV free wall,0.5,layer,129.0,24.0,27.0,58.0,0.4496124031007752,108.0,20.0,23.0,54.0,0.5
+rv_free_wall_q25_z0.75_d50,basal inferior rv free wall,RV free wall,0.5,network,171.0,44.0,47.0,90.0,0.5263157894736842,148.0,38.0,41.0,84.0,0.5675675675675675
+rv_free_wall_q25_z0.75_d50,basal inferior rv free wall,RV free wall,0.5,nolayer,282.0,53.0,73.0,173.0,0.5390070921985816,274.0,47.0,67.0,167.0,0.5328467153284672
+rv_free_wall_q25_z0.75_d75,basal inferior rv free wall,RV free wall,0.75,layer,131.0,26.0,29.0,60.0,0.4580152671755725,111.0,23.0,26.0,57.0,0.5135135135135135
+rv_free_wall_q25_z0.75_d75,basal inferior rv free wall,RV free wall,0.75,network,173.0,46.0,49.0,93.0,0.5375722543352601,152.0,42.0,45.0,89.0,0.5855263157894737
+rv_free_wall_q25_z0.75_d75,basal inferior rv free wall,RV free wall,0.75,nolayer,282.0,54.0,72.0,173.0,0.5390070921985816,275.0,50.0,68.0,169.0,0.5362318840579711
+rv_free_wall_q25_z0.75_d90,basal inferior rv free wall,RV free wall,0.9,layer,133.0,28.0,31.0,62.0,0.46616541353383456,112.0,25.0,28.0,59.0,0.5221238938053098
+rv_free_wall_q25_z0.75_d90,basal inferior rv free wall,RV free wall,0.9,network,174.0,47.0,51.0,95.0,0.5459770114942529,153.0,43.0,47.0,91.0,0.5947712418300654
+rv_free_wall_q25_z0.75_d90,basal inferior rv free wall,RV free wall,0.9,nolayer,282.0,53.0,74.0,174.0,0.5390070921985816,276.0,49.0,70.0,170.0,0.5362318840579711
+rv_free_wall_q50_z0.75_d10,basal lateral rv free wall,RV free wall,0.1,layer,125.0,10.0,8.0,40.0,0.32,107.0,9.0,7.0,39.0,0.3644859813084112
+rv_free_wall_q50_z0.75_d10,basal lateral rv free wall,RV free wall,0.1,network,160.0,30.0,160.0,106.0,0.3875,155.0,28.0,155.0,104.0,0.3870967741935484
+rv_free_wall_q50_z0.75_d10,basal lateral rv free wall,RV free wall,0.1,nolayer,286.0,11.0,285.0,201.0,0.2727272727272727,279.0,9.0,,199.0,0.2724014336917563
+rv_free_wall_q50_z0.75_d50,basal lateral rv free wall,RV free wall,0.5,layer,125.0,10.0,8.0,40.0,0.32,107.0,9.0,7.0,39.0,0.3644859813084112
+rv_free_wall_q50_z0.75_d50,basal lateral rv free wall,RV free wall,0.5,network,160.0,32.0,160.0,106.0,0.3875,154.0,28.0,154.0,102.0,0.37662337662337664
+rv_free_wall_q50_z0.75_d50,basal lateral rv free wall,RV free wall,0.5,nolayer,285.0,10.0,284.0,202.0,0.27017543859649124,276.0,6.0,,198.0,0.2644927536231884
+rv_free_wall_q50_z0.75_d75,basal lateral rv free wall,RV free wall,0.75,layer,127.0,13.0,11.0,42.0,0.33070866141732286,108.0,11.0,9.0,40.0,0.37037037037037035
+rv_free_wall_q50_z0.75_d75,basal lateral rv free wall,RV free wall,0.75,network,162.0,33.0,162.0,108.0,0.3950617283950617,158.0,31.0,158.0,106.0,0.3924050632911392
+rv_free_wall_q50_z0.75_d75,basal lateral rv free wall,RV free wall,0.75,nolayer,285.0,10.0,284.0,202.0,0.2736842105263158,278.0,8.0,,200.0,0.2733812949640288
+rv_free_wall_q50_z0.75_d90,basal lateral rv free wall,RV free wall,0.9,layer,128.0,15.0,13.0,44.0,0.34375,110.0,13.0,11.0,42.0,0.38181818181818183
+rv_free_wall_q50_z0.75_d90,basal lateral rv free wall,RV free wall,0.9,network,164.0,36.0,164.0,110.0,0.4024390243902439,160.0,34.0,160.0,108.0,0.4
+rv_free_wall_q50_z0.75_d90,basal lateral rv free wall,RV free wall,0.9,nolayer,285.0,11.0,284.0,202.0,0.2736842105263158,279.0,9.0,279.0,200.0,0.2724014336917563
+rv_free_wall_q75_z0.75_d10,basal anterior rv free wall,RV free wall,0.1,layer,107.0,12.0,8.0,40.0,0.37383177570093457,96.0,11.0,7.0,39.0,0.40625
+rv_free_wall_q75_z0.75_d10,basal anterior rv free wall,RV free wall,0.1,network,145.0,26.0,145.0,114.0,0.4482758620689655,140.0,24.0,140.0,112.0,0.45
+rv_free_wall_q75_z0.75_d10,basal anterior rv free wall,RV free wall,0.1,nolayer,257.0,14.0,256.0,190.0,0.45136186770428016,251.0,12.0,251.0,188.0,0.4541832669322709
+rv_free_wall_q75_z0.75_d50,basal anterior rv free wall,RV free wall,0.5,layer,109.0,14.0,11.0,42.0,0.3853211009174312,95.0,10.0,7.0,38.0,0.4
+rv_free_wall_q75_z0.75_d50,basal anterior rv free wall,RV free wall,0.5,network,149.0,30.0,148.0,118.0,0.4563758389261745,144.0,28.0,144.0,116.0,0.4583333333333333
+rv_free_wall_q75_z0.75_d50,basal anterior rv free wall,RV free wall,0.5,nolayer,257.0,13.0,256.0,192.0,0.45136186770428016,251.0,11.0,251.0,190.0,0.4541832669322709
+rv_free_wall_q75_z0.75_d75,basal anterior rv free wall,RV free wall,0.75,layer,111.0,16.0,13.0,44.0,0.3963963963963964,99.0,14.0,11.0,42.0,0.42
+rv_free_wall_q75_z0.75_d75,basal anterior rv free wall,RV free wall,0.75,network,151.0,32.0,150.0,120.0,0.46357615894039733,145.0,30.0,145.0,118.0,0.4689655172413793
+rv_free_wall_q75_z0.75_d75,basal anterior rv free wall,RV free wall,0.75,nolayer,257.0,12.0,256.0,193.0,0.45136186770428016,251.0,10.0,251.0,191.0,0.4541832669322709
+rv_free_wall_q75_z0.75_d90,basal anterior rv free wall,RV free wall,0.9,layer,112.0,17.0,14.0,44.0,0.39285714285714285,100.0,15.0,12.0,42.0,0.42
+rv_free_wall_q75_z0.75_d90,basal anterior rv free wall,RV free wall,0.9,network,151.0,34.0,151.0,120.0,0.47019867549668876,147.0,32.0,147.0,118.0,0.46938775510204084
+rv_free_wall_q75_z0.75_d90,basal anterior rv free wall,RV free wall,0.9,nolayer,257.0,14.0,256.0,193.0,0.45525291828793774,251.0,12.0,251.0,191.0,0.4581673306772908
+rvot_septal_z_d10,septal rvot,RVOT,0.1,layer,122.0,66.0,61.0,82.0,0.5081967213114754,107.0,60.0,55.0,76.0,0.5233644859813084
+rvot_septal_z_d10,septal rvot,RVOT,0.1,network,149.0,94.0,84.0,108.0,0.6845637583892618,134.0,89.0,79.0,103.0,0.7185185185185186
+rvot_septal_z_d10,septal rvot,RVOT,0.1,nolayer,220.0,110.0,100.0,148.0,0.6727272727272727,217.0,105.0,95.0,143.0,0.6589861751152074
+rvot_septal_z_d50,septal rvot,RVOT,0.5,layer,123.0,67.0,63.0,83.0,0.5121951219512195,109.0,62.0,58.0,78.0,0.5321100917431193
+rvot_septal_z_d50,septal rvot,RVOT,0.5,network,150.0,95.0,86.0,109.0,0.6866666666666666,135.0,90.0,81.0,104.0,0.7205882352941176
+rvot_septal_z_d50,septal rvot,RVOT,0.5,nolayer,222.0,111.0,101.0,148.0,0.6666666666666666,218.0,106.0,96.0,143.0,0.6559633027522935
+rvot_septal_z_d75,septal rvot,RVOT,0.75,layer,124.0,67.0,62.0,83.0,0.5,110.0,63.0,58.0,79.0,0.5321100917431193
+rvot_septal_z_d75,septal rvot,RVOT,0.75,network,150.0,94.0,87.0,108.0,0.68,136.0,91.0,84.0,105.0,0.7226277372262774
+rvot_septal_z_d75,septal rvot,RVOT,0.75,nolayer,221.0,111.0,100.0,149.0,0.6742081447963801,220.0,108.0,97.0,146.0,0.6636363636363637
+rvot_septal_z_d90,septal rvot,RVOT,0.9,layer,123.0,67.0,62.0,83.0,0.5121951219512195,110.0,63.0,58.0,79.0,0.5363636363636364
+rvot_septal_z_d90,septal rvot,RVOT,0.9,network,149.0,94.0,85.0,108.0,0.6845637583892618,135.0,91.0,82.0,105.0,0.7226277372262774
+rvot_septal_z_d90,septal rvot,RVOT,0.9,nolayer,221.0,111.0,100.0,148.0,0.669683257918552,219.0,107.0,96.0,144.0,0.6575342465753424
+rvot_free_wall_z_d10,free wall rvot,RVOT,0.1,layer,97.0,22.0,16.0,51.0,0.5257731958762887,91.0,20.0,14.0,49.0,0.5384615384615384
+rvot_free_wall_z_d10,free wall rvot,RVOT,0.1,network,139.0,44.0,39.0,77.0,0.5539568345323741,133.0,39.0,34.0,72.0,0.5413533834586466
+rvot_free_wall_z_d10,free wall rvot,RVOT,0.1,nolayer,249.0,57.0,46.0,139.0,0.5582329317269076,241.0,52.0,41.0,134.0,0.5560165975103735
+rvot_free_wall_z_d50,free wall rvot,RVOT,0.5,layer,99.0,24.0,18.0,53.0,0.5353535353535354,92.0,21.0,15.0,50.0,0.5434782608695652
+rvot_free_wall_z_d50,free wall rvot,RVOT,0.5,network,142.0,47.0,40.0,80.0,0.5633802816901409,136.0,42.0,35.0,75.0,0.5514705882352942
+rvot_free_wall_z_d50,free wall rvot,RVOT,0.5,nolayer,248.0,59.0,46.0,137.0,0.5524193548387096,240.0,54.0,41.0,132.0,0.55
+rvot_free_wall_z_d75,free wall rvot,RVOT,0.75,layer,101.0,26.0,20.0,55.0,0.5445544554455446,94.0,23.0,17.0,52.0,0.5531914893617021
+rvot_free_wall_z_d75,free wall rvot,RVOT,0.75,network,144.0,49.0,42.0,82.0,0.5694444444444444,138.0,45.0,38.0,78.0,0.5652173913043478
+rvot_free_wall_z_d75,free wall rvot,RVOT,0.75,nolayer,248.0,66.0,46.0,137.0,0.5524193548387096,241.0,62.0,42.0,133.0,0.5518672199170125
+rvot_free_wall_z_d90,free wall rvot,RVOT,0.9,layer,103.0,27.0,21.0,56.0,0.5436893203883495,95.0,24.0,18.0,53.0,0.5578947368421052
+rvot_free_wall_z_d90,free wall rvot,RVOT,0.9,network,144.0,51.0,44.0,85.0,0.5902777777777778,138.0,47.0,40.0,81.0,0.5869565217391305
+rvot_free_wall_z_d90,free wall rvot,RVOT,0.9,nolayer,247.0,66.0,46.0,137.0,0.5546558704453441,240.0,62.0,42.0,133.0,0.5541666666666667
+aortic_cusp_rcc_z_d10,rcc aortic cusp,Aortic cusp,0.1,layer,122.0,76.0,41.0,60.0,0.5819672131147541,106.0,74.0,39.0,58.0,0.6509433962264151
+aortic_cusp_rcc_z_d10,rcc aortic cusp,Aortic cusp,0.1,network,148.0,95.0,116.0,102.0,0.7094594594594594,141.0,93.0,114.0,100.0,0.7253521126760564
+aortic_cusp_rcc_z_d10,rcc aortic cusp,Aortic cusp,0.1,nolayer,216.0,104.0,134.0,178.0,0.6203703703703703,216.0,102.0,132.0,176.0,0.6111111111111112
+aortic_cusp_rcc_z_d50,rcc aortic cusp,Aortic cusp,0.5,layer,122.0,77.0,42.0,61.0,0.5901639344262295,107.0,75.0,40.0,59.0,0.6542056074766355
+aortic_cusp_rcc_z_d50,rcc aortic cusp,Aortic cusp,0.5,network,149.0,96.0,116.0,103.0,0.7046979865771812,142.0,94.0,114.0,101.0,0.7253521126760564
+aortic_cusp_rcc_z_d50,rcc aortic cusp,Aortic cusp,0.5,nolayer,217.0,104.0,133.0,179.0,0.6129032258064516,217.0,102.0,131.0,177.0,0.6036866359447005
+aortic_cusp_rcc_z_d75,rcc aortic cusp,Aortic cusp,0.75,layer,122.0,76.0,40.0,59.0,0.5737704918032787,106.0,74.0,38.0,57.0,0.6415094339622641
+aortic_cusp_rcc_z_d75,rcc aortic cusp,Aortic cusp,0.75,network,149.0,95.0,116.0,102.0,0.7046979865771812,142.0,93.0,114.0,100.0,0.7253521126760564
+aortic_cusp_rcc_z_d75,rcc aortic cusp,Aortic cusp,0.75,nolayer,216.0,103.0,133.0,178.0,0.6157407407407407,216.0,101.0,131.0,176.0,0.6064814814814815
+aortic_cusp_rcc_z_d90,rcc aortic cusp,Aortic cusp,0.9,layer,122.0,76.0,41.0,60.0,0.5819672131147541,106.0,73.0,38.0,57.0,0.6415094339622641
+aortic_cusp_rcc_z_d90,rcc aortic cusp,Aortic cusp,0.9,network,153.0,95.0,117.0,103.0,0.6862745098039216,141.0,92.0,114.0,100.0,0.7183098591549296
+aortic_cusp_rcc_z_d90,rcc aortic cusp,Aortic cusp,0.9,nolayer,217.0,106.0,133.0,179.0,0.6129032258064516,216.0,103.0,130.0,176.0,0.6018518518518519
+aortic_cusp_lcc_z_d10,lcc aortic cusp,Aortic cusp,0.1,layer,140.0,58.0,68.0,93.0,0.5142857142857142,109.0,51.0,61.0,86.0,0.5909090909090909
+aortic_cusp_lcc_z_d10,lcc aortic cusp,Aortic cusp,0.1,network,176.0,105.0,78.0,129.0,0.4431818181818182,147.0,101.0,74.0,125.0,0.5034013605442177
+aortic_cusp_lcc_z_d10,lcc aortic cusp,Aortic cusp,0.1,nolayer,250.0,67.0,122.0,194.0,0.476,228.0,63.0,118.0,190.0,0.4956896551724138
+aortic_cusp_lcc_z_d50,lcc aortic cusp,Aortic cusp,0.5,layer,141.0,59.0,70.0,94.0,0.524822695035461,115.0,56.0,67.0,91.0,0.6120689655172413
+aortic_cusp_lcc_z_d50,lcc aortic cusp,Aortic cusp,0.5,network,178.0,106.0,80.0,127.0,0.449438202247191,149.0,102.0,76.0,123.0,0.5100671140939598
+aortic_cusp_lcc_z_d50,lcc aortic cusp,Aortic cusp,0.5,nolayer,250.0,67.0,124.0,197.0,0.484,227.0,63.0,120.0,193.0,0.5064935064935064
+aortic_cusp_lcc_z_d75,lcc aortic cusp,Aortic cusp,0.75,layer,138.0,56.0,67.0,91.0,0.5144927536231884,108.0,49.0,60.0,84.0,0.5871559633027523
+aortic_cusp_lcc_z_d75,lcc aortic cusp,Aortic cusp,0.75,network,175.0,104.0,77.0,127.0,0.44,142.0,97.0,70.0,120.0,0.48951048951048953
+aortic_cusp_lcc_z_d75,lcc aortic cusp,Aortic cusp,0.75,nolayer,250.0,68.0,120.0,193.0,0.468,226.0,61.0,113.0,186.0,0.48034934497816595
+aortic_cusp_lcc_z_d90,lcc aortic cusp,Aortic cusp,0.9,layer,141.0,60.0,70.0,95.0,0.524822695035461,109.0,51.0,61.0,86.0,0.5909090909090909
+aortic_cusp_lcc_z_d90,lcc aortic cusp,Aortic cusp,0.9,network,178.0,107.0,80.0,131.0,0.449438202247191,149.0,103.0,76.0,127.0,0.5100671140939598
+aortic_cusp_lcc_z_d90,lcc aortic cusp,Aortic cusp,0.9,nolayer,250.0,67.0,123.0,196.0,0.484,226.0,63.0,119.0,192.0,0.5064935064935064
+lv_summit_superior_z_d10,superior lv summit,LV summit,0.1,layer,124.0,33.0,51.0,77.0,0.3951612903225806,100.0,28.0,46.0,72.0,0.43564356435643564
+lv_summit_superior_z_d10,superior lv summit,LV summit,0.1,network,162.0,83.0,57.0,104.0,0.35185185185185186,128.0,79.0,53.0,100.0,0.4108527131782946
+lv_summit_superior_z_d10,superior lv summit,LV summit,0.1,nolayer,250.0,46.0,105.0,178.0,0.42,235.0,42.0,101.0,174.0,0.4297872340425532
+lv_summit_superior_z_d50,superior lv summit,LV summit,0.5,layer,120.0,37.0,49.0,73.0,0.44166666666666665,94.0,28.0,40.0,64.0,0.4631578947368421
+lv_summit_superior_z_d50,superior lv summit,LV summit,0.5,network,160.0,87.0,60.0,107.0,0.375,124.0,78.0,51.0,98.0,0.4112903225806452
+lv_summit_superior_z_d50,superior lv summit,LV summit,0.5,nolayer,250.0,42.0,108.0,179.0,0.432,231.0,33.0,99.0,170.0,0.43043478260869567
+lv_summit_superior_z_d75,superior lv summit,LV summit,0.75,layer,119.0,44.0,50.0,75.0,0.48739495798319327,114.0,41.0,47.0,72.0,0.4824561403508772
+lv_summit_superior_z_d75,superior lv summit,LV summit,0.75,network,160.0,90.0,65.0,110.0,0.40625,133.0,87.0,62.0,107.0,0.46616541353383456
+lv_summit_superior_z_d75,superior lv summit,LV summit,0.75,nolayer,251.0,36.0,108.0,179.0,0.4302788844621514,239.0,33.0,105.0,176.0,0.4393305439330544
+lv_summit_superior_z_d90,superior lv summit,LV summit,0.9,layer,120.0,48.0,52.0,76.0,0.5,117.0,46.0,50.0,74.0,0.49572649572649574
+lv_summit_superior_z_d90,superior lv summit,LV summit,0.9,network,160.0,91.0,68.0,112.0,0.425,134.0,88.0,65.0,109.0,0.48507462686567165
+lv_summit_superior_z_d90,superior lv summit,LV summit,0.9,nolayer,252.0,88.0,110.0,182.0,0.4365079365079365,240.0,85.0,107.0,179.0,0.4476987447698745
+lv_summit_inferior_lateral_z_d10,inferior lateral lv summit,LV summit,0.1,layer,122.0,29.0,51.0,75.0,0.3442622950819672,100.0,26.0,48.0,72.0,0.38235294117647056
+lv_summit_inferior_lateral_z_d10,inferior lateral lv summit,LV summit,0.1,network,163.0,79.0,87.0,101.0,0.4049079754601227,133.0,75.0,83.0,97.0,0.4626865671641791
+lv_summit_inferior_lateral_z_d10,inferior lateral lv summit,LV summit,0.1,nolayer,269.0,60.0,109.0,190.0,0.4052044609665427,252.0,56.0,105.0,186.0,0.4166666666666667
+lv_summit_inferior_lateral_z_d50,inferior lateral lv summit,LV summit,0.5,layer,127.0,35.0,56.0,80.0,0.3700787401574803,102.0,28.0,49.0,73.0,0.3883495145631068
+lv_summit_inferior_lateral_z_d50,inferior lateral lv summit,LV summit,0.5,network,168.0,84.0,92.0,107.0,0.4226190476190476,131.0,75.0,83.0,98.0,0.4732824427480916
+lv_summit_inferior_lateral_z_d50,inferior lateral lv summit,LV summit,0.5,nolayer,268.0,57.0,109.0,190.0,0.40671641791044777,247.0,48.0,100.0,181.0,0.4048582995951417
+lv_summit_inferior_lateral_z_d75,inferior lateral lv summit,LV summit,0.75,layer,132.0,41.0,60.0,85.0,0.4015151515151515,108.0,37.0,56.0,81.0,0.44545454545454544
+lv_summit_inferior_lateral_z_d75,inferior lateral lv summit,LV summit,0.75,network,171.0,90.0,65.0,111.0,0.38011695906432746,138.0,86.0,61.0,107.0,0.43884892086330934
+lv_summit_inferior_lateral_z_d75,inferior lateral lv summit,LV summit,0.75,nolayer,267.0,55.0,113.0,192.0,0.4232209737827715,252.0,51.0,109.0,188.0,0.43253968253968256
+lv_summit_inferior_lateral_z_d90,inferior lateral lv summit,LV summit,0.9,layer,132.0,43.0,60.0,87.0,0.4090909090909091,111.0,41.0,58.0,85.0,0.46017699115044247
+lv_summit_inferior_lateral_z_d90,inferior lateral lv summit,LV summit,0.9,network,171.0,92.0,67.0,112.0,0.391812865497076,140.0,89.0,64.0,109.0,0.45714285714285713
+lv_summit_inferior_lateral_z_d90,inferior lateral lv summit,LV summit,0.9,nolayer,268.0,55.0,117.0,192.0,0.43656716417910446,253.0,52.0,114.0,189.0,0.4505928853754941
+lv_vein_course_proximal_aiv_z_d10,proximal aiv lv vein course,LV vein course,0.1,layer,110.0,28.0,36.0,58.0,0.36363636363636365,94.0,26.0,34.0,56.0,0.4
+lv_vein_course_proximal_aiv_z_d10,proximal aiv lv vein course,LV vein course,0.1,network,138.0,66.0,54.0,81.0,0.5144927536231884,131.0,62.0,50.0,77.0,0.5114503816793893
+lv_vein_course_proximal_aiv_z_d10,proximal aiv lv vein course,LV vein course,0.1,nolayer,241.0,49.0,68.0,146.0,0.46473029045643155,224.0,45.0,64.0,142.0,0.48214285714285715
+lv_vein_course_proximal_aiv_z_d50,proximal aiv lv vein course,LV vein course,0.5,layer,103.0,39.0,33.0,58.0,0.42718446601941745,96.0,32.0,26.0,51.0,0.3854166666666667
+lv_vein_course_proximal_aiv_z_d50,proximal aiv lv vein course,LV vein course,0.5,network,134.0,63.0,57.0,82.0,0.582089552238806,121.0,52.0,46.0,71.0,0.5537190082644629
+lv_vein_course_proximal_aiv_z_d50,proximal aiv lv vein course,LV vein course,0.5,nolayer,241.0,54.0,68.0,147.0,0.37344398340248963,218.0,43.0,57.0,136.0,0.3623853211009174
+lv_vein_course_proximal_aiv_z_d75,proximal aiv lv vein course,LV vein course,0.75,layer,100.0,34.0,25.0,57.0,0.5,95.0,29.0,20.0,52.0,0.4787234042553192
+lv_vein_course_proximal_aiv_z_d75,proximal aiv lv vein course,LV vein course,0.75,network,136.0,62.0,56.0,85.0,0.5882352941176471,125.0,57.0,51.0,80.0,0.6
+lv_vein_course_proximal_aiv_z_d75,proximal aiv lv vein course,LV vein course,0.75,nolayer,242.0,56.0,69.0,148.0,0.371900826446281,225.0,51.0,64.0,143.0,0.37777777777777777
+lv_vein_course_proximal_aiv_z_d90,proximal aiv lv vein course,LV vein course,0.9,layer,99.0,32.0,23.0,57.0,0.5252525252525253,96.0,29.0,20.0,54.0,0.5104166666666666
+lv_vein_course_proximal_aiv_z_d90,proximal aiv lv vein course,LV vein course,0.9,network,136.0,60.0,53.0,85.0,0.5882352941176471,125.0,56.0,49.0,81.0,0.608
+lv_vein_course_proximal_aiv_z_d90,proximal aiv lv vein course,LV vein course,0.9,nolayer,244.0,57.0,70.0,149.0,0.36885245901639346,228.0,53.0,66.0,145.0,0.37719298245614036
+lv_vein_course_basal_ring_anterolateral_z_d10,basal ring anterolateral lv vein course,LV vein course,0.1,layer,133.0,33.0,59.0,82.0,0.41353383458646614,113.0,29.0,55.0,78.0,0.4434782608695652
+lv_vein_course_basal_ring_anterolateral_z_d10,basal ring anterolateral lv vein course,LV vein course,0.1,network,174.0,57.0,73.0,95.0,0.41954022988505746,156.0,53.0,69.0,91.0,0.4394904458598726
+lv_vein_course_basal_ring_anterolateral_z_d10,basal ring anterolateral lv vein course,LV vein course,0.1,nolayer,279.0,95.0,141.0,212.0,0.26881720430107525,264.0,91.0,137.0,208.0,0.2689393939393939
+lv_vein_course_basal_ring_anterolateral_z_d50,basal ring anterolateral lv vein course,LV vein course,0.5,layer,138.0,38.0,63.0,86.0,0.427536231884058,116.0,31.0,56.0,79.0,0.4444444444444444
+lv_vein_course_basal_ring_anterolateral_z_d50,basal ring anterolateral lv vein course,LV vein course,0.5,network,179.0,66.0,77.0,120.0,0.37988826815642457,158.0,60.0,71.0,114.0,0.389937106918239
+lv_vein_course_basal_ring_anterolateral_z_d50,basal ring anterolateral lv vein course,LV vein course,0.5,nolayer,279.0,91.0,144.0,218.0,0.26523297491039427,262.0,85.0,138.0,212.0,0.2595419847328244
+lv_vein_course_basal_ring_anterolateral_z_d75,basal ring anterolateral lv vein course,LV vein course,0.75,layer,142.0,43.0,68.0,91.0,0.4507042253521127,124.0,40.0,65.0,88.0,0.488
+lv_vein_course_basal_ring_anterolateral_z_d75,basal ring anterolateral lv vein course,LV vein course,0.75,network,183.0,72.0,81.0,124.0,0.3879781420765027,163.0,69.0,78.0,121.0,0.4121212121212121
+lv_vein_course_basal_ring_anterolateral_z_d75,basal ring anterolateral lv vein course,LV vein course,0.75,nolayer,278.0,87.0,148.0,223.0,0.34172661870503596,265.0,84.0,145.0,220.0,0.3471698113207547
+lv_vein_course_basal_ring_anterolateral_z_d90,basal ring anterolateral lv vein course,LV vein course,0.9,layer,143.0,44.0,69.0,92.0,0.45454545454545453,126.0,42.0,67.0,90.0,0.4921875
+lv_vein_course_basal_ring_anterolateral_z_d90,basal ring anterolateral lv vein course,LV vein course,0.9,network,184.0,72.0,82.0,125.0,0.391304347826087,165.0,69.0,79.0,122.0,0.41566265060240964
+lv_vein_course_basal_ring_anterolateral_z_d90,basal ring anterolateral lv vein course,LV vein course,0.9,nolayer,279.0,89.0,149.0,224.0,0.34408602150537637,266.0,86.0,146.0,221.0,0.34962406015037595
+lv_vein_course_basal_ring_lateral_z_d10,basal ring lateral lv vein course,LV vein course,0.1,layer,138.0,51.0,65.0,67.0,0.4057971014492754,92.0,47.0,61.0,63.0,0.5591397849462365
+lv_vein_course_basal_ring_lateral_z_d10,basal ring lateral lv vein course,LV vein course,0.1,network,171.0,72.0,73.0,93.0,0.4269005847953216,141.0,67.0,68.0,88.0,0.4788732394366197
+lv_vein_course_basal_ring_lateral_z_d10,basal ring lateral lv vein course,LV vein course,0.1,nolayer,250.0,180.0,188.0,167.0,0.22,244.0,175.0,183.0,162.0,0.20491803278688525
+lv_vein_course_basal_ring_lateral_z_d50,basal ring lateral lv vein course,LV vein course,0.5,layer,141.0,54.0,68.0,71.0,0.41843971631205673,94.0,48.0,62.0,65.0,0.4690265486725664
+lv_vein_course_basal_ring_lateral_z_d50,basal ring lateral lv vein course,LV vein course,0.5,network,175.0,76.0,77.0,97.0,0.44,143.0,70.0,71.0,91.0,0.4896551724137931
+lv_vein_course_basal_ring_lateral_z_d50,basal ring lateral lv vein course,LV vein course,0.5,nolayer,248.0,178.0,187.0,186.0,0.2620967741935484,241.0,172.0,181.0,180.0,0.24481327800829875
+lv_vein_course_basal_ring_lateral_z_d75,basal ring lateral lv vein course,LV vein course,0.75,layer,145.0,58.0,72.0,75.0,0.42758620689655175,100.0,55.0,69.0,72.0,0.5841584158415841
+lv_vein_course_basal_ring_lateral_z_d75,basal ring lateral lv vein course,LV vein course,0.75,network,178.0,78.0,81.0,100.0,0.4550561797752809,150.0,75.0,78.0,97.0,0.5165562913907285
+lv_vein_course_basal_ring_lateral_z_d75,basal ring lateral lv vein course,LV vein course,0.75,nolayer,249.0,179.0,187.0,187.0,0.26907630522088355,245.0,176.0,184.0,184.0,0.2612244897959184
+lv_vein_course_basal_ring_lateral_z_d90,basal ring lateral lv vein course,LV vein course,0.9,layer,146.0,59.0,73.0,76.0,0.4383561643835616,102.0,56.0,70.0,73.0,0.5980392156862745
+lv_vein_course_basal_ring_lateral_z_d90,basal ring lateral lv vein course,LV vein course,0.9,network,180.0,80.0,82.0,101.0,0.45555555555555555,151.0,77.0,79.0,98.0,0.5197368421052632
+lv_vein_course_basal_ring_lateral_z_d90,basal ring lateral lv vein course,LV vein course,0.9,nolayer,248.0,178.0,186.0,187.0,0.27419354838709675,244.0,175.0,183.0,184.0,0.26639344262295084

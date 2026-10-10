@@ -5,6 +5,7 @@ import numpy as np
 
 LEADS = ("I", "II", "III", "aVR", "aVL", "aVF", "V1", "V2", "V3", "V4", "V5", "V6")
 PRECORDIAL = ("V1", "V2", "V3", "V4", "V5", "V6")
+LIMB = ("I", "II", "III", "aVR", "aVL", "aVF")
 INFERIOR = ("II", "III", "aVF")
 # The 8 independent leads. III, aVR, aVL and aVF are combinations of I and II,
 # so "the earliest/latest deflection in any of the 12 leads" is found in these.

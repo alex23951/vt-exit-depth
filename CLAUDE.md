@@ -16,7 +16,7 @@ hypotheses to test, not ground truth):
 | Intrinsicoid deflection time (IDT) | QRS onset → peak of R in V2 | ≥ 85 ms | Berruezo 2004 |
 | Shortest RS | QRS onset → nadir of first S, shortest across precordial leads | ≥ 121 ms | Berruezo 2004 |
 | Maximum deflection index (MDI) | (QRS onset → earliest max deflection in precordial leads) ÷ QRS duration | ≥ 0.55 | Daniels 2006 |
-| q wave in lead I | Initial negative deflection in lead I | present | Vallès 2010 (basal/apical superior LV) |
+| q wave in lead I | Initial negative deflection in lead I | present | Vallès 2010 (basal superior/lateral LV) |
 
 Exit depth categories: **endocardial**, **intramural**, **epicardial**. Define depth
 with a continuous transmural coordinate (0 = endo, 1 = epi, e.g. from a Laplace solve;

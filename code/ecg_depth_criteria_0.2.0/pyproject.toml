@@ -1,0 +1,20 @@
+[project]
+name = "ecg-depth-criteria"
+version = "0.2.0"
+description = "Published 12-lead ECG criteria for an epicardial origin of PVCs and VT, measured as each paper defines them"
+requires-python = ">=3.9"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["ecg_depth_criteria"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

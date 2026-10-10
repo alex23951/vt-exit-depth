@@ -38,9 +38,10 @@ REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 B = os.path.join(REPO, 'sims', 'biv_model')
 RUNS = os.path.join(REPO, 'runs')
 BD = os.path.join(RUNS, 'batch_2026-10-03')
-HEARTS = ['Y5HYEDL4', '6G8DD8S5', '7D98EVAR']
+HEARTS = os.environ.get('BATCH_HEARTS', 'Y5HYEDL4,6G8DD8S5,7D98EVAR').split(',')
 LBBB = {'6G8DD8S5'}
-P = '2026-10-03b'
+P = os.environ.get('BATCH_PREFIX', '2026-10-03b')      # run-folder prefix (v2 grid: 2026-10-03c)
+P_LF = '2026-10-03b'                                    # lead fields / weights built on 2026-10-03
 NPAR, EIK_THREADS = 3, 2
 # 2026-10-03 session: Alex needs the PC back; no new site after this time (UTC, epoch s),
 # S3 (monodomain check) and S4 (no-fast-layer control) deferred to the new PC.
@@ -83,7 +84,7 @@ def template_run(h):
 
 
 def lf_dir(h, variant):
-    return os.path.join(RUNS, f'{P}_LF_{h}_{variant}', 'POSTPROC_DIR')
+    return os.path.join(RUNS, f'{P_LF}_LF_{h}_{variant}', 'POSTPROC_DIR')
 
 
 def wfile(h, variant):
@@ -145,7 +146,7 @@ def mono_item(h, site, variant):
 
 
 def lf_item(h, variant):
-    rid = f'{P}_LF_{h}_{variant}'
+    rid = f'{P_LF}_LF_{h}_{variant}'
     if os.path.exists(os.path.join(RUNS, rid, 'POSTPROC_DIR', 'LF_V6.igb')):
         return 'skip'
     full = {'normal': 'full', 'lbbb': 'full_lbbb', 'nofast': 'full_nofast'}[variant]

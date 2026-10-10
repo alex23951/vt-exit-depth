@@ -96,6 +96,8 @@ def test_r_peak_choice_in_v2():
     x = beat(V2=v2)
     got = {c: measure_beat(x, FS, onset_ms=o, settings=Settings(r_peak=c))["idt_v2_ms"] for c in ("first", "largest", "last")}
     assert got == pytest.approx({"first": 20, "largest": 88, "last": 135}, abs=0.5)
+    # The default is the first positive wave (the R wave); later ones are R'.
+    assert measure_beat(x, FS, onset_ms=o)["idt_v2_ms"] == pytest.approx(20, abs=0.5)
     with pytest.raises(ValueError):
         Settings(r_peak="tallest")
 

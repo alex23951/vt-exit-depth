@@ -1,0 +1,49 @@
+sites in all three arms: 144
+
+## true onset, medians layer / network / no layer, by group
+group | n | QRS | pseudo-delta | IDT V2 | shortest RS | MDI
+LV free wall | 40 | 131.0 / 165.0 / 254.5 | 34.5 / 56.5 / 48.5 | 51.5 / 71.0 / 109.5 | 60.5 / 77.5 / 139.0 | 0.39 / 0.42 / 0.43
+LV septum | 32 | 110.5 / 143.0 / 210.0 | 27.5 / 50.5 / 45.0 | 104.5 / 60.5 / 206.0 | 51.0 / 72.0 / 137.0 | 0.42 / 0.46 / 0.45
+RV free wall | 36 | 121.0 / 151.0 / 256.5 | 14.0 / 35.5 / 13.5 | 22.5 / 140.5 / 241.0 | 49.5 / 98.0 / 175.0 | 0.39 / 0.47 / 0.44
+RVOT | 8 | 112.5 / 146.5 / 234.5 | 46.5 / 72.5 / 88.0 | 41.0 / 64.0 / 73.0 | 69.0 / 96.5 / 143.5 | 0.52 / 0.64 / 0.61
+Aortic cusp | 8 | 130.0 / 164.0 / 233.5 | 68.0 / 100.0 / 85.5 | 54.5 / 98.0 / 128.5 | 76.0 / 115.0 / 186.0 | 0.55 / 0.57 / 0.55
+LV summit | 8 | 123.0 / 162.5 / 259.5 | 39.0 / 88.5 / 55.0 | 51.5 / 66.0 / 109.0 | 76.5 / 108.5 / 186.0 | 0.41 / 0.4 / 0.43
+LV vein course | 12 | 138.0 / 174.5 / 248.5 | 41.0 / 69.0 / 90.0 | 64.0 / 75.0 / 146.0 | 73.0 / 96.0 / 186.5 | 0.43 / 0.45 / 0.31
+
+## detected onset, medians layer / network / no layer, by group
+group | n | QRS | pseudo-delta | IDT V2 | shortest RS | MDI
+LV free wall | 40 | 112.0 / 149.0 / 245.0 | 30.0 / 51.0 / 45.0 | 46.5 / 63.5 / 105.5 | 55.5 / 73.0 / 135.0 | 0.42 / 0.45 / 0.43
+LV septum | 32 | 96.5 / 127.0 / 200.0 | 24.5 / 45.5 / 41.5 | 28.5 / 40.0 / 172.0 | 47.0 / 66.5 / 133.5 | 0.44 / 0.49 / 0.45
+RV free wall | 36 | 103.5 / 140.0 / 250.0 | 12.5 / 31.5 / 11.5 | 14.0 / 133.0 / 88.0 | 47.0 / 95.5 / 173.0 | 0.44 / 0.51 / 0.43
+RVOT | 8 | 101.0 / 135.5 / 230.0 | 42.0 / 68.0 / 83.5 | 36.5 / 59.5 / 68.5 | 64.5 / 92.0 / 138.5 | 0.54 / 0.65 / 0.61
+Aortic cusp | 8 | 107.5 / 142.0 / 221.5 | 64.5 / 95.5 / 82.0 | 50.0 / 95.0 / 125.0 | 71.5 / 110.5 / 181.5 | 0.63 / 0.61 / 0.55
+LV summit | 8 | 105.0 / 133.0 / 243.5 | 32.5 / 82.5 / 49.5 | 48.5 / 63.0 / 105.0 | 72.5 / 103.5 / 180.0 | 0.45 / 0.46 / 0.43
+LV vein course | 12 | 98.0 / 146.5 / 244.0 | 36.0 / 64.5 / 85.5 | 58.5 / 70.0 / 141.5 | 68.5 / 91.0 / 182.0 | 0.48 / 0.5 / 0.31
+
+## LV free wall, same position 10 % -> 90 % (true onset): median change (n up / n), AUC 90 vs 10
+layer: qrs_duration_ms 13.5 (10/10, AUC 0.85); pseudo_delta_ms 15.5 (9/10, AUC 0.84); idt_v2_ms 14.5 (10/10, AUC 0.79); srs_ms 20.0 (10/10, AUC 0.94); mdi_daniels 0.071 (9/10, AUC 0.96); QRS 126.5 -> 139.5 (10.3 %)
+network: qrs_duration_ms 10.5 (10/10, AUC 0.71); pseudo_delta_ms 15.0 (10/10, AUC 0.8); idt_v2_ms 13.0 (9/10, AUC 0.76); srs_ms 20.0 (10/10, AUC 0.95); mdi_daniels 0.051 (10/10, AUC 0.83); QRS 158.0 -> 170.5 (7.9 %)
+nolayer: qrs_duration_ms 4.5 (6/10, AUC 0.55); pseudo_delta_ms 2.5 (7/10, AUC 0.49); idt_v2_ms 3.0 (8/10, AUC 0.62); srs_ms 6.0 (7/9, AUC 0.69); mdi_daniels 0.015 (6/10, AUC 0.54); QRS 251.0 -> 257.0 (2.4 %)
+
+## All sites with a depth truth (cusps out): AUC 90 % vs 10 %, true / detected onset
+layer: qrs_duration_ms 0.58 / 0.63; pseudo_delta_ms 0.59 / 0.59; idt_v2_ms 0.77 / 0.75; srs_ms 0.78 / 0.79; mdi_daniels 0.79 / 0.77
+network: qrs_duration_ms 0.62 / 0.64; pseudo_delta_ms 0.65 / 0.67; idt_v2_ms 0.71 / 0.71; srs_ms 0.72 / 0.74; mdi_daniels 0.69 / 0.73
+nolayer: qrs_duration_ms 0.52 / 0.54; pseudo_delta_ms 0.51 / 0.52; idt_v2_ms 0.6 / 0.6; srs_ms 0.58 / 0.6; mdi_daniels 0.47 / 0.48
+
+## Daniels order, precordial MDI medians (Daniels 2006: LV epicardial perivascular 0.61 > ASOV 0.46 > RVOT 0.40 > LV endo 0.34)
+true layer: summit 90 % 0.45, vein course 90 % 0.45, cusp 0.55, RVOT 0.52, LV endo 10 % 0.36
+true network: summit 90 % 0.41, vein course 90 % 0.46, cusp 0.57, RVOT 0.64, LV endo 10 % 0.41
+true nolayer: summit 90 % 0.44, vein course 90 % 0.34, cusp 0.55, RVOT 0.61, LV endo 10 % 0.44
+detected layer: summit 90 % 0.48, vein course 90 % 0.51, cusp 0.63, RVOT 0.54, LV endo 10 % 0.4
+detected network: summit 90 % 0.47, vein course 90 % 0.52, cusp 0.61, RVOT 0.65, LV endo 10 % 0.42
+detected nolayer: summit 90 % 0.45, vein course 90 % 0.35, cusp 0.55, RVOT 0.61, LV endo 10 % 0.44
+
+## Absolute QRS (decision 7: median at LV summit + aortic cusp within 132-193 ms; idiopathic VAs 147-175 ms)
+true: layer 123.0; network 162.5; nolayer 250.0
+detected: layer 107.5; network 140.5; nolayer 229.5
+
+## Epicardial calls, true / detected onset, sites with a depth truth, by target depth
+10 % (n 34; layer | network | no layer): berruezo_pdw_ge_34 7/7 | 24/20 | 24/22; berruezo_idt_ge_85 2/1 | 8/6 | 23/20; berruezo_srs_ge_121 0/0 | 0/0 | 26/23; daniels_mdi_ge_055 0/1 | 2/2 | 6/6
+50 % (n 34; layer | network | no layer): berruezo_pdw_ge_34 12/4 | 29/24 | 23/21; berruezo_idt_ge_85 9/2 | 13/8 | 27/19; berruezo_srs_ge_121 0/0 | 0/0 | 27/23; daniels_mdi_ge_055 0/0 | 4/5 | 5/5
+75 % (n 34; layer | network | no layer): berruezo_pdw_ge_34 15/11 | 29/29 | 23/21; berruezo_idt_ge_85 10/3 | 14/9 | 28/19; berruezo_srs_ge_121 0/0 | 1/1 | 28/28; daniels_mdi_ge_055 0/2 | 5/7 | 5/5
+90 % (n 34; layer | network | no layer): berruezo_pdw_ge_34 15/12 | 31/30 | 23/23; berruezo_idt_ge_85 12/6 | 15/11 | 28/23; berruezo_srs_ge_121 0/0 | 1/1 | 28/28; daniels_mdi_ge_055 0/6 | 6/9 | 5/5

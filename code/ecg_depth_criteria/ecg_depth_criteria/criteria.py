@@ -1,9 +1,10 @@
 """Published cut-offs and decision rules for an epicardial origin.
 
-Every criterion returns True when it points to an epicardial origin, False
-when it does not, and None when it cannot be scored (the measurement does
-not exist, such as IDT with a QS complex in V2, or the paper applied it only
-to another QRS axis).
+Every criterion except the LV summit criteria (SUMMIT) returns True when it
+points to an epicardial origin, False when it does not, and None when it
+cannot be scored (the measurement does not exist, such as IDT with a QS
+complex in V2, or the paper applied it only to another QRS axis). A SUMMIT
+criterion's True is its paper's own positive class.
 """
 from __future__ import annotations
 
@@ -18,6 +19,32 @@ CUTOFFS = {
     "daniels_mdi_ge_055": ("mdi_daniels", 0.55, "Daniels 2006, idiopathic VT: sensitivity 100%, specificity 98.7%, cut-off chosen in the same sample"),
     "valles_mdi_ge_045": ("mdi_valles", 0.45, "Valles 2010 revised, NICM pace maps: sensitivity 76%, specificity 75%; also used by Piers 2014"),
     "valles_idt_ge_90": ("idt_v2_ms", 90.0, "Valles 2010 revised, NICM pace maps: sensitivity 76%, specificity 79%"),
+}
+
+# name: (measurement key, cut-off, source). Positive (epicardial) when the measurement
+# is below the cut-off. Prisco prints no inequality sign; "below" follows the
+# Analysis plan's wording.
+CUTOFFS_BELOW = {
+    "prisco2024_initial_lt_4_5": ("prisco_initial_mv_s", 4.5, "Prisco 2024, NICM VT, mean of 12 leads: sensitivity 0.83, specificity 0.85; how the cut-off was chosen is not stated, reported only in the derivation sample"),
+    "prisco2024_average_lt_6_0": ("prisco_average_mv_s", 6.0, "Prisco 2024, NICM VT, mean of 12 leads: sensitivity 1.00, specificity 0.90; how the cut-off was chosen is not stated, reported only in the derivation sample"),
+}
+
+# LV summit criteria. True is each paper's positive class, which is a position in
+# the summit or a route to successful ablation, not an epicardial origin as for the
+# criteria above. All cut-offs are strict, as printed. None was validated in another
+# sample; only Jauregui states how its cut-offs were chosen (ROC analysis in the same
+# sample).
+SUMMIT = {
+    "yamada2010_avl_avr_gt_1_1": "Yamada 2010: Q-wave ratio aVL/aVR > 1.1; positive = ablatable from the GCV, AIV or the accessible area, negative = the inaccessible area (sensitivity 87%, specificity 100%)",
+    "yamada2010_iii_ii_gt_1_25": "Yamada 2010, Table 3: R-wave ratio III/II > 1.25; positive = the accessible area (pericardial approach), negative = the GCV or AIV, inaccessible-area VAs not compared (100%, 74%)",
+    "yamada2010_avl_avr_gt_1_75": "Yamada 2010, Table 3: Q-wave ratio aVL/aVR > 1.75; same classes (100%, 74%)",
+    "yamada2010_iii_ii_gt_1_25_and_avl_avr_gt_1_75": "Yamada 2010, Discussion: both of the two above; same classes; accuracy of the combination not reported",
+    "santangeli2015_avl_avr_gt_1_85": "Santangeli 2015: Q-wave ratio aVL/aVR > 1.85 (4/5 successful vs 2/18 unsuccessful)",
+    "santangeli2015_rs_v1_gt_2": "Santangeli 2015: R/S ratio in V1 > 2 (4/5 vs 5/18)",
+    "santangeli2015_no_q_v1": "Santangeli 2015: no initial q wave in V1 (5/5 vs 12/18)",
+    "santangeli2015_2_of_3": "Santangeli 2015: at least 2 of the 3 above; positive = successful percutaneous epicardial ablation (100%, 72%)",
+    "jauregui2012_avl_avr_lt_1_45": "Jauregui Abularach 2012: Q-wave ratio aVL/aVR < 1.45; positive = successful ablation from the left sinus of Valsalva or the LV endocardium below it (89%, 75%)",
+    "jauregui2012_iii_ii_lt_1_13": "Jauregui Abularach 2012: R-wave ratio III/II < 1.13; same positive class (78%, 75%)",
 }
 
 # Valles 2010 Fig 8, built for basal superior and lateral LV (Josephson 8, 10, 12) in NICM.
@@ -44,11 +71,62 @@ REGIONS = LV_REGIONS + RV_REGIONS
 
 
 def _missing(v) -> bool:
-    return v is None or (isinstance(v, float) and math.isnan(v))
+    """None or NaN of any numeric type (a float32 NaN from a table included)."""
+    if v is None:
+        return True
+    try:
+        return math.isnan(float(v))
+    except (TypeError, ValueError):
+        return False
 
 
+# float() also reads the "inf" strings the command line writes for infinite ratios.
 def _at_least(v, cut):
-    return None if _missing(v) else bool(v >= cut)
+    return None if _missing(v) else bool(float(v) >= cut)
+
+
+def _above(v, cut):
+    return None if _missing(v) else bool(float(v) > cut)
+
+
+def _below(v, cut):
+    return None if _missing(v) else bool(float(v) < cut)
+
+
+def _count_at_least(flags, k: int):
+    """True when at least k flags are True, False when that is out of reach, else None."""
+    met = sum(f is True for f in flags)
+    unknown = sum(f is None for f in flags)
+    if met >= k:
+        return True
+    return False if met + unknown < k else None
+
+
+def summit(m: dict) -> dict:
+    """LV summit criteria (see SUMMIT for each key's positive class).
+
+    Ratios come from measure_beat: q_ratio_avl_avr and r_ratio_iii_ii are wave
+    amplitude ratios, rs_ratio_v1 is R over S in V1. A ratio is infinite when only
+    its denominator wave is absent and missing (None here) when both are.
+    """
+    q_ratio, r_ratio, rs_v1 = m.get("q_ratio_avl_avr"), m.get("r_ratio_iii_ii"), m.get("rs_ratio_v1")
+    q_v1 = m.get("q_V1")
+    yamada_access = (_above(r_ratio, 1.25), _above(q_ratio, 1.75))
+    santangeli = (_above(q_ratio, 1.85), _above(rs_v1, 2.0), None if _missing(q_v1) else not q_v1)
+    return {
+        "yamada2010_avl_avr_gt_1_1": _above(q_ratio, 1.1),
+        "yamada2010_iii_ii_gt_1_25": yamada_access[0],
+        "yamada2010_avl_avr_gt_1_75": yamada_access[1],
+        "yamada2010_iii_ii_gt_1_25_and_avl_avr_gt_1_75": (
+            False if False in yamada_access else None if None in yamada_access else True
+        ),
+        "santangeli2015_avl_avr_gt_1_85": santangeli[0],
+        "santangeli2015_rs_v1_gt_2": santangeli[1],
+        "santangeli2015_no_q_v1": santangeli[2],
+        "santangeli2015_2_of_3": _count_at_least(santangeli, 2),
+        "jauregui2012_avl_avr_lt_1_45": _below(q_ratio, 1.45),
+        "jauregui2012_iii_ii_lt_1_13": _below(r_ratio, 1.13),
+    }
 
 
 def valles_4step(m: dict, inferior: str = "all") -> tuple:
@@ -126,9 +204,12 @@ def evaluate(m: dict, region: str | None = None, valles_inferior: str = "all") -
     Piers 2014 scored Q-I and the absence of inferior Q waves only in
     inferior-axis VTs, and Q waves in all inferior leads only in
     superior-axis VTs; the other axis gets None. Bazan criteria are added
-    when region is given (see REGIONS and JOSEPHSON_LV).
+    when region is given (see REGIONS and JOSEPHSON_LV). The LV summit
+    criteria (see SUMMIT) are always added; their True is each paper's own
+    positive class, not an epicardial origin.
     """
     out = {name: _at_least(m[key], cut) for name, (key, cut, _) in CUTOFFS.items()}
+    out.update({name: _below(m.get(key), cut) for name, (key, cut, _) in CUTOFFS_BELOW.items()})
     out["valles_q_lead_I"] = bool(m["q_lead_I"])
     out["valles_no_inferior_q"] = bool(m["inferior_r_any"])
     out["valles_4step"], out["valles_4step_step"] = valles_4step(m, valles_inferior)
@@ -136,6 +217,7 @@ def evaluate(m: dict, region: str | None = None, valles_inferior: str = "all") -
     out["piers_q_I"] = bool(m["q_lead_I"]) if inferior_axis else None
     out["piers_abs_q_inf"] = bool(m["inferior_r_any"]) if inferior_axis else None
     out["piers_q_inf"] = None if inferior_axis else bool(m["inferior_q_all"])
+    out.update(summit(m))
     if region is not None:
         out.update(bazan(m, region))
     return out

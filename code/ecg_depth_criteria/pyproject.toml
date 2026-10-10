@@ -1,6 +1,6 @@
 [project]
 name = "ecg-depth-criteria"
-version = "0.1.0"
+version = "0.3.0"
 description = "Published 12-lead ECG criteria for an epicardial origin of PVCs and VT, measured as each paper defines them"
 requires-python = ">=3.9"
 dependencies = ["numpy"]

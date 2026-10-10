@@ -26,7 +26,11 @@ import numpy as np
 
 from common import HEART, OUT, REPO, boundary_faces, read_elem, read_lon, read_pts
 
-TOR = os.path.join(OUT, 'torso')
+# Orientation sensitivity (9 Oct 2026): TORSO_ROT_FRONTAL_DEG rotates the placed heart about the torso's
+# antero-posterior axis through its centroid (+ = long axis turned from left towards inferior, i.e. more vertical);
+# outputs then go to data/biv/<HEART>/torso<TORSO_SUFFIX>/. Unset = the original placement and folder.
+TOR = os.path.join(OUT, 'torso' + os.environ.get('TORSO_SUFFIX', ''))
+ROT_FRONTAL_DEG = float(os.environ.get('TORSO_ROT_FRONTAL_DEG', '0'))
 T13 = os.path.join(REPO, 'data', 'torso', 'torsoModels', 'T_13')
 RIGID = os.path.join(REPO, 'data', 'torso', 'atria', f'{HEART}_to_g001_rigid.txt')
 AVG_EDGE = 8.0          # mm, torso skin resampling
@@ -80,6 +84,12 @@ def place():
     E, tag = read_elem(os.path.join(OUT, 'bivF'))
     lon = read_lon(os.path.join(OUT, 'bivF'))
     lon = np.hstack([lon[:, :3] @ R.T, lon[:, 3:] @ R.T])
+    if ROT_FRONTAL_DEG:                  # torso frame: +x left, -y anterior, +z superior (T13 electrodes)
+        a = np.radians(ROT_FRONTAL_DEG)
+        Q = np.array([[np.cos(a), 0, np.sin(a)], [0, 1, 0], [-np.sin(a), 0, np.cos(a)]])
+        c = P.mean(0)
+        P = (P - c) @ Q.T + c
+        lon = np.hstack([lon[:, :3] @ Q.T, lon[:, 3:] @ Q.T])
     write_mesh(os.path.join(TOR, 'heart'), P * 1e3, E, 'Tt', tag, lon)
     bf, _ = boundary_faces(E)
     nodes = np.unique(bf)
@@ -89,7 +99,7 @@ def place():
     write_mesh(os.path.join(TOR, 'torso_skin_raw'), T * 1e3, tri, 'Tr', np.ones(len(tri), int))
     return {'heart_bbox_mm_in_torso': [P.min(0).round(1).tolist(), P.max(0).round(1).tolist()],
             'torso_bbox_mm': [T.min(0).round(1).tolist(), T.max(0).round(1).tolist()],
-            'heart_boundary_faces': int(len(bf))}
+            'heart_boundary_faces': int(len(bf)), 'rot_frontal_deg': ROT_FRONTAL_DEG}
 
 
 def mt(*args):

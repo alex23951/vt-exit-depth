@@ -18,13 +18,15 @@ from .measure import measure_beat
 
 
 def _jsonable(v):
-    """NaN becomes null; numpy scalars become Python values."""
+    """NaN becomes null and infinity "inf"; numpy scalars become Python values."""
     if isinstance(v, dict):
         return {k: _jsonable(x) for k, x in v.items()}
     if isinstance(v, np.generic):
         v = v.item()
     if isinstance(v, float) and math.isnan(v):
         return None
+    if isinstance(v, float) and math.isinf(v):
+        return "inf" if v > 0 else "-inf"
     return v
 
 

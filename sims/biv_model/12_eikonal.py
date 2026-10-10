@@ -62,6 +62,9 @@ def main():
     p.add_argument('--weights', default=None, help='ECG weight file (13_fast_ecg.py); ECG computed in memory, no Vm file')
     p.add_argument('--ecg-dir', default=None, help='with --weights: where ECG_*.dat are written')
     p.add_argument('--no-fast-layer', action='store_true', help='fast layer gets myocardial speeds/conductivities')
+    p.add_argument('--stim-json', default=None,
+                   help='extra timed stimuli (14_purkinje.py): JSON list of {"vtx": file without .vtx, "start": ms}; eik mode only')
+    p.add_argument('--no-site-stim', action='store_true', help='no site stimulus (His-driven beat: --stim-json only)')
     a = p.parse_args()
     global MESH
     if a.mesh_variant == 'lbbb':
@@ -77,6 +80,12 @@ def main():
         a.site_node = json.load(open(os.path.join(a.template_run, 'summary_06.json')))['site_node']
     stim = np.where(np.linalg.norm(pts - pts[a.site_node], axis=1) < 1500)[0]
     write_vtx(os.path.join(run, 'stim.vtx'), stim)
+    stims = [] if a.no_site_stim else [(os.path.join(run, 'stim'), 0.0)]
+    if a.stim_json:                                     # 2026-10-07: Purkinje junction stimuli
+        stims += [(x['vtx'], float(x['start'])) for x in json.load(open(a.stim_json))]
+    stim_opts = ['-num_stim', len(stims)]
+    for i, (vf, t0s) in enumerate(stims):
+        stim_opts += [f'-stim[{i}].elec.vtx_file', vf, f'-stim[{i}].ptcl.start', t0s]
 
     gf = (cal['fibre']['gi'], cal['fibre']['ge']); gs = (cal['sheet']['gi'], cal['sheet']['ge'])
     gn = (cal['sheet_normal']['gi'], cal['sheet_normal']['ge'])
@@ -101,10 +110,10 @@ def main():
         # DREAM/eikonal physics do not support MPI: one process, OpenMP threads
         os.environ['OMP_NUM_THREADS'] = str(a.np)
         cmd = ['openCARP', '-meshname', MESH, '-simID', run,
-               '-dream.solve', 0, '-dream.fim.tol', 0.001, '-dream.fim.max_iter', 1000000000,
+               '-dream.solve', 0, '-dream.fim.tol', float(os.environ.get('EIK_FIM_TOL', '0.001')), '-dream.fim.max_iter', 1000000000,
                '-num_phys_regions', 1, '-phys_region[0].ptype', 2, '-phys_region[0].num_IDs', 2,
                '-phys_region[0].ID[0]', 1, '-phys_region[0].ID[1]', 2,
-               '-num_stim', 1, '-stim[0].elec.vtx_file', os.path.join(run, 'stim'), '-stim[0].ptcl.start', 0.0] + g
+               ] + (['-tend', 1000.0] if a.stim_json else []) + stim_opts + g
     else:
         cmd = ['mpiexec', '-n', a.np, 'openCARP', '-meshname', MESH, '-simID', run,
                '-bidomain', 0, '-dt', 10, '-parab_solve', 1, '-tend', a.tend, '-spacedt', 1.0, '-timedt', 5.0,
@@ -113,8 +122,9 @@ def main():
                '-num_stim', 1, '-stim[0].elec.vtx_file', os.path.join(run, 'stim'), '-stim[0].ptcl.start', 0.0,
                '-stim[0].crct.type', 0, '-stim[0].pulse.strength', 400.0, '-stim[0].ptcl.duration', 1.0] + g
     t0 = time.time()
-    with open(os.path.join(run, 'openCARP.log'), 'w') as log:
-        subprocess.run([str(c) for c in cmd], stdout=log, stderr=subprocess.STDOUT, check=True)
+    with open(os.path.join(run, 'openCARP.log'), 'w') as log:   # EIK_TIMEOUT_S: some timed-stimulus runs never converged (8 Oct)
+        subprocess.run([str(c) for c in cmd], stdout=log, stderr=subprocess.STDOUT, check=True,
+                       timeout=float(os.environ['EIK_TIMEOUT_S']) if os.environ.get('EIK_TIMEOUT_S') else None)
     t_sim = time.time() - t0
     res = {'heart': HEART, 'mode': a.mode, 'site_node': a.site_node, 'tend_ms': a.tend, 'mesh_variant': a.mesh_variant,
            'no_fast_layer': a.no_fast_layer, 'sim_wall_s': round(t_sim, 1), 'files': sorted(os.listdir(run))}

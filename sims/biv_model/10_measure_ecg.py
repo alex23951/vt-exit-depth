@@ -22,7 +22,9 @@ import sys
 import numpy as np
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-sys.path.insert(0, os.path.join(REPO, 'code', 'ecg_depth_criteria'))
+# package folder: code/ecg_depth_criteria (current, 0.2.0) or e.g. code/ecg_depth_criteria_0.1.0
+PKG = os.environ.get('ECG_PKG', os.path.join(REPO, 'code', 'ecg_depth_criteria'))
+sys.path.insert(0, PKG)
 import ecg_depth_criteria as edc                                   # noqa: E402
 from ecg_depth_criteria import evaluate, from_leads, measure_beat  # noqa: E402
 

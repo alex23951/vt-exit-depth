@@ -8,9 +8,22 @@ from dataclasses import asdict
 import numpy as np
 
 from .fiducials import Settings, qrs_offset, qrs_onset, slopes, spatial_velocity, waves
-from .leads import INDEPENDENT, INFERIOR, LEADS, PRECORDIAL, rows
+from .leads import INDEPENDENT, INFERIOR, LEADS, LIMB, PRECORDIAL, rows
 
 NAN = float("nan")
+
+
+def _ratio(a: float, b: float) -> float:
+    """a / b for amplitudes; infinite when only b is zero, NaN when both are."""
+    if b > 0:
+        return a / b
+    return math.inf if a > 0 else NAN
+
+
+def _mean(values) -> float:
+    """Mean over leads; NaN when any lead is undefined (Prisco 2024 required every lead)."""
+    v = list(values)
+    return NAN if any(math.isnan(x) for x in v) else float(np.mean(v))
 
 
 def measure_beat(
@@ -98,19 +111,33 @@ def measure_beat(
     pseudo_delta = ms(j)
     pseudo_delta_lead = PRECORDIAL[int(hits[hits[:, 1] == j][0, 0])]
 
-    # Intrinsicoid deflection time: onset to the peak of the R wave in V2.
+    # Intrinsicoid deflection time: onset to the peak of the R wave in V2, by default the first
+    # positive wave. A later positive wave counts as a new one (R') only after an S wave, so
+    # positive pieces split by a notch that never turns negative, such as noise on a slow
+    # upstroke, are one wave.
     v2 = LEADS.index("V2")
-    r_waves = [w for w in lead_waves["V2"] if w.sign > 0 and w.peak <= off_pre]
-    if not r_waves:
+    r_groups, cur = [], []
+    for w in lead_waves["V2"]:
+        if w.peak > off_pre:
+            break
+        if w.sign > 0:
+            cur.append(w.peak)
+        elif cur:
+            r_groups.append(cur)
+            cur = []
+    if cur:
+        r_groups.append(cur)
+    r_peaks = [max(g, key=lambda p: x[v2, p]) for g in r_groups]
+    if not r_peaks:
         idt = NAN
     else:
         if cfg.r_peak == "first":
-            r = r_waves[0]
+            r = r_peaks[0]
         elif cfg.r_peak == "last":
-            r = r_waves[-1]
+            r = r_peaks[-1]
         else:
-            r = max(r_waves, key=lambda w: x[v2, w.peak])
-        idt = ms(r.peak - on)
+            r = max(r_peaks, key=lambda p: x[v2, p])
+        idt = ms(r - on)
 
     # Shortest RS: onset to the nadir of the first S wave in any precordial lead.
     srs, srs_lead = NAN, None
@@ -148,6 +175,74 @@ def measure_beat(
 
     net_mv = {k: net(k) for k in LEADS}
 
+    # Q, R and S wave amplitudes in every lead, in mV from the isoelectric level, as
+    # positive numbers (Santangeli 2015 Fig 3 measures from the pre-QRS baseline to the
+    # nadir or peak). Pieces of one sign split by a notch that stays inside the wave
+    # threshold are one wave, as for IDT. Q: the opening wave when it is negative, a
+    # whole QS complex included (Santangeli Fig 3 and Jauregui 2012 Fig 5 measure QS
+    # complexes in aVL and aVR); 0 when the lead starts positive. R: the positive wave
+    # chosen by settings.r_peak, by default the first (a later one after an S is R');
+    # 0 when there is none. S: the first negative wave after the first R wave; 0 when
+    # there is none.
+    def amplitudes(k: str) -> tuple:
+        row = x[LEADS.index(k)]
+        groups = []
+        for w in lead_waves[k]:
+            if groups and groups[-1][0] == w.sign:
+                groups[-1][1].append(row[w.peak])
+            else:
+                groups.append((w.sign, [row[w.peak]]))
+        q = float(-min(groups[0][1])) if groups and groups[0][0] < 0 else 0.0
+        pos = [n for n, (sign, _) in enumerate(groups) if sign > 0]
+        if not pos:
+            return q, 0.0, 0.0
+        height = {n: float(max(groups[n][1])) for n in pos}
+        if cfg.r_peak == "first":
+            r = height[pos[0]]
+        elif cfg.r_peak == "last":
+            r = height[pos[-1]]
+        else:
+            r = max(height.values())
+        s_wave = next((g for g in groups[pos[0] + 1 :] if g[0] < 0), None)
+        return q, r, (float(-min(s_wave[1])) if s_wave else 0.0)
+
+    amp = {k: amplitudes(k) for k in LEADS}
+    q_mv = {k: a[0] for k, a in amp.items()}
+    r_mv = {k: a[1] for k, a in amp.items()}
+    s_mv = {k: a[2] for k, a in amp.items()}
+
+    # Prisco 2024 rates of change, mV/s: in each lead the absolute voltage change from
+    # the QRS onset to the sample nearest 30 ms later, divided by the time to that
+    # sample (initial), and from the onset to the lead's maximum deflection divided by
+    # the time to it (average); then the mean over leads. One onset serves every lead.
+    # The maximum deflection is the point between the onset and the latest offset
+    # furthest from the isoelectric level (the paper's Figure 2: "max deflection from
+    # baseline"). settings.prisco_reference="qrs_mean" instead takes the lead's wave
+    # peak furthest from its mean over that window, one reading of the Methods
+    # ("furthest point from the average of the signal"; the window is not stated).
+    # Only wave peaks qualify there, as Figure 3 marks the peak: otherwise a broad
+    # monophasic complex is furthest from its own mean at the QRS edges.
+    n30 = idx(30.0)
+    if on + n30 < x.shape[1]:
+        initial = np.abs(x[:, on + n30] - x[:, on]) * fs / n30
+    else:
+        initial = np.full(len(LEADS), NAN)
+    seg = x[:, on : end + 1]
+    if cfg.prisco_reference == "qrs_mean":
+        mean = seg.mean(axis=1)
+        t_max = [
+            max((w.peak - on for w in lead_waves[k]), key=lambda p, i=i: abs(seg[i, p] - mean[i]), default=0)
+            for i, k in enumerate(LEADS)
+        ]
+    else:
+        t_max = np.argmax(np.abs(seg), axis=1)
+    average = [
+        float(abs(seg[i, t] - seg[i, 0]) * fs / t) if t > 0 else NAN
+        for i, t in enumerate(t_max)
+    ]
+    initial_by_lead = {k: float(initial[i]) for i, k in enumerate(LEADS)}
+    average_by_lead = {k: average[i] for i, k in enumerate(LEADS)}
+
     qrsd = ms(off_pre - on)
     early = sv_any[on : on + max(idx(20.0), 1)]
     return {
@@ -173,6 +268,7 @@ def measure_beat(
         "inferior_r_any": any(polarity[k] > 0 for k in INFERIOR),
         "q_V2": polarity["V2"] < 0,
         "qs_V2": bool(lead_waves["V2"]) and all(w.sign < 0 for w in lead_waves["V2"]),
+        "q_V1": polarity["V1"] < 0,
         "avr_avl_ratio_lt_1": net_mv["aVR"] < net_mv["aVL"],
         "ii_iii_ratio_lt_1": net_mv["II"] < net_mv["III"],
         "inferior_axis": net_mv["aVF"] > 0,
@@ -181,7 +277,22 @@ def measure_beat(
         "idt_index": idt / qrsd,
         "srs_index": srs / qrsd,
         "initial_velocity_ratio_20ms": float(early.mean() / sv_any.max()),
+        "q_ratio_avl_avr": _ratio(q_mv["aVL"], q_mv["aVR"]),
+        "r_ratio_iii_ii": _ratio(r_mv["III"], r_mv["II"]),
+        # QS (no R): 0. No wave at all: missing.
+        "rs_ratio_v1": _ratio(r_mv["V1"], s_mv["V1"]) if r_mv["V1"] > 0 else (0.0 if q_mv["V1"] > 0 else NAN),
+        "prisco_initial_mv_s": _mean(initial_by_lead.values()),
+        "prisco_initial_limb_mv_s": _mean(initial_by_lead[k] for k in LIMB),
+        "prisco_initial_precordial_mv_s": _mean(initial_by_lead[k] for k in PRECORDIAL),
+        "prisco_average_mv_s": _mean(average_by_lead.values()),
+        "prisco_average_limb_mv_s": _mean(average_by_lead[k] for k in LIMB),
+        "prisco_average_precordial_mv_s": _mean(average_by_lead[k] for k in PRECORDIAL),
         "initial_polarity": polarity,
         "net_amplitude_mv": net_mv,
+        "q_amplitude_mv": q_mv,
+        "r_amplitude_mv": r_mv,
+        "s_amplitude_mv": s_mv,
+        "prisco_initial_by_lead_mv_s": initial_by_lead,
+        "prisco_average_by_lead_mv_s": average_by_lead,
         "settings": asdict(cfg),
     }

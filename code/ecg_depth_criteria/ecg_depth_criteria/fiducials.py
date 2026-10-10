@@ -24,11 +24,16 @@ class Settings:
     wave_mv: float = 0.05  # smallest deflection counted as a wave (0.5 mm at 10 mm/mV)
     fast_frac: float = 0.30  # pseudo-delta ends when a precordial slope first reaches this
     #                          fraction of the steepest precordial slope in the QRS
-    r_peak: str = "largest"  # IDT: peak of the "largest", "first" or "last" positive wave in V2
+    r_peak: str = "first"  # IDT and R-wave amplitudes: the "first" positive wave (the R wave;
+    #                        a later one after an S is R'), the "largest" or the "last"
+    prisco_reference: str = "baseline"  # Prisco 2024 maximum deflection: furthest point from the
+    #                                     "baseline" (isoelectric level) or from the "qrs_mean"
 
     def __post_init__(self):
         if self.r_peak not in ("largest", "first", "last"):
             raise ValueError("r_peak must be 'largest', 'first' or 'last'")
+        if self.prisco_reference not in ("baseline", "qrs_mean"):
+            raise ValueError("prisco_reference must be 'baseline' or 'qrs_mean'")
 
 
 @dataclass(frozen=True)

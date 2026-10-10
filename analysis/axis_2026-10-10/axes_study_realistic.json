@@ -1,0 +1,210 @@
+{
+ "normal beat (His, network v3)": {
+  "study": {
+   "net": -98,
+   "area": -102,
+   "limb_net_mV": {
+    "I": 0.02,
+    "II": -0.7,
+    "III": -0.4,
+    "aVR": 0.38,
+    "aVL": 0.25,
+    "aVF": -0.57
+   }
+  },
+  "realistic": {
+   "net": 64,
+   "area": -38,
+   "limb_net_mV": {
+    "I": 0.36,
+    "II": 0.56,
+    "III": 0.53,
+    "aVR": -0.8,
+    "aVL": -0.32,
+    "aVF": 0.11
+   }
+  }
+ },
+ "rvot_septal_z_d50": {
+  "study": {
+   "net": 85,
+   "area": 79,
+   "limb_net_mV": {
+    "I": 0.29,
+    "II": 1.63,
+    "III": 1.56,
+    "aVR": -0.89,
+    "aVL": -0.74,
+    "aVF": 1.59
+   }
+  },
+  "realistic": {
+   "net": 79,
+   "area": 77,
+   "limb_net_mV": {
+    "I": 0.67,
+    "II": 4.23,
+    "III": 3.26,
+    "aVR": -2.58,
+    "aVL": -1.16,
+    "aVF": 3.82
+   }
+  }
+ },
+ "rvot_free_wall_z_d50": {
+  "study": {
+   "net": 105,
+   "area": 111,
+   "limb_net_mV": {
+    "I": -0.43,
+    "II": 1.02,
+    "III": 1.32,
+    "aVR": -0.29,
+    "aVL": -0.81,
+    "aVF": 1.17
+   }
+  },
+  "realistic": {
+   "net": 95,
+   "area": 100,
+   "limb_net_mV": {
+    "I": -0.28,
+    "II": 3.6,
+    "III": 3.98,
+    "aVR": -1.49,
+    "aVL": -2.18,
+    "aVF": 3.79
+   }
+  }
+ },
+ "aortic_cusp_rcc_z_d50": {
+  "study": {
+   "net": 70,
+   "area": 65,
+   "limb_net_mV": {
+    "I": 0.53,
+    "II": 1.42,
+    "III": 1.04,
+    "aVR": -0.94,
+    "aVL": -0.1,
+    "aVF": 1.22
+   }
+  },
+  "realistic": {
+   "net": 62,
+   "area": 65,
+   "limb_net_mV": {
+    "I": 1.35,
+    "II": 3.55,
+    "III": 1.6,
+    "aVR": -2.58,
+    "aVL": -0.06,
+    "aVF": 2.73
+   }
+  }
+ },
+ "aortic_cusp_lcc_z_d50": {
+  "study": {
+   "net": 109,
+   "area": 111,
+   "limb_net_mV": {
+    "I": -0.7,
+    "II": 1.61,
+    "III": 2.47,
+    "aVR": -0.3,
+    "aVL": -1.62,
+    "aVF": 2.06
+   }
+  },
+  "realistic": {
+   "net": 95,
+   "area": 105,
+   "limb_net_mV": {
+    "I": -0.43,
+    "II": 4.65,
+    "III": 4.83,
+    "aVR": -1.69,
+    "aVL": -2.51,
+    "aVF": 4.75
+   }
+  }
+ },
+ "lv_summit_superior_z_d50": {
+  "study": {
+   "net": 114,
+   "area": 120,
+   "limb_net_mV": {
+    "I": -0.82,
+    "II": 1.38,
+    "III": 2.36,
+    "aVR": -0.06,
+    "aVL": -1.6,
+    "aVF": 1.89
+   }
+  },
+  "realistic": {
+   "net": 96,
+   "area": 113,
+   "limb_net_mV": {
+    "I": -0.64,
+    "II": 4.12,
+    "III": 4.36,
+    "aVR": -1.49,
+    "aVL": -2.29,
+    "aVF": 4.24
+   }
+  }
+ },
+ "lv_free_wall_phi180_z0.5_d50": {
+  "study": {
+   "net": -83,
+   "area": -97,
+   "limb_net_mV": {
+    "I": -0.0,
+    "II": -1.18,
+    "III": -1.6,
+    "aVR": 0.59,
+    "aVL": 0.99,
+    "aVF": -1.39
+   }
+  },
+  "realistic": {
+   "net": -67,
+   "area": -93,
+   "limb_net_mV": {
+    "I": 0.96,
+    "II": -1.12,
+    "III": -2.23,
+    "aVR": 0.64,
+    "aVL": 1.65,
+    "aVF": -1.68
+   }
+  }
+ },
+ "rv_free_wall_q50_z0.5_d50": {
+  "study": {
+   "net": -72,
+   "area": -74,
+   "limb_net_mV": {
+    "I": 0.38,
+    "II": -0.79,
+    "III": -1.14,
+    "aVR": 0.26,
+    "aVL": 0.77,
+    "aVF": -0.95
+   }
+  },
+  "realistic": {
+   "net": -49,
+   "area": -50,
+   "limb_net_mV": {
+    "I": 1.05,
+    "II": -0.56,
+    "III": -1.63,
+    "aVR": -0.34,
+    "aVL": 1.36,
+    "aVF": -1.1
+   }
+  }
+ }
+}

@@ -2,3 +2,4 @@ runs/
 *.igb
 __pycache__/
 data/
+.claude/handoff/

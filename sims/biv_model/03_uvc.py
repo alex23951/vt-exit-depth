@@ -70,8 +70,12 @@ def main():
         return x - np.outer(x @ axis, axis) if x.ndim > 1 else x - (x @ axis) * axis
     e1 = perp(rv_c - apex); e1 /= np.linalg.norm(e1)
     e2 = np.cross(axis, e1)
-    ant = np.array([0, -1.0, 0])                   # LPS frame: -y is anterior
-    if e2 @ ant < 0:
+    # +pi/2 = anterior. Fixed 2026-10-07: the old test (e2 . -y >= 0, LPS) was ill-conditioned
+    # because e1 (towards the RV) is itself mostly anterior (|e2 . y| was only 0.12-0.19), and it
+    # gave +pi/2 = inferior wall in 6G8DD8S5 and 7D98EVAR. Now the aortic annulus (anterior,
+    # next to the septum) must lie at positive phi; Y5HYEDL4 is unchanged.
+    ao_c = pts[np.concatenate([read_vtx(os.path.join(SURF, f)) for f in ('av_rim.vtx', 'ao_iface.vtx')])].mean(0)
+    if perp(ao_c - apex) @ e2 < 0:
         e2 = -e2
     r = perp(pts - apex)
     phi = np.arctan2(r @ e2, r @ e1)
