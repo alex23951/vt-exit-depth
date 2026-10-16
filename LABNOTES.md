@@ -1061,3 +1061,26 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Superseded by the v5.1 brief (cloud, 15 Oct 2026; Alex's decisions A-H 05:18-05:19 UTC and 4-9 05:23 UTC; restart approved 16 Oct 20:30:49 UTC). Step 0 orientation: analysis/v51_2026-10-15/00_orientation/README.md.
 - The two catch-up entries in that block (13/14 Oct deep audit; 14 Oct map regeneration) describe work that was done; the 6G8DD8S5 relative-QRS note matches the 14 Oct rescore (analysis/audit_addendum_2026-10-14/README.md).
 - Environment change (Alex 20:46 UTC "Yes, install pytest"): pytest 9.1.1 (with pluggy 1.7.0, iniconfig 2.3.1) installed into ~/venv_carputils for the package tests of Step 2.
+
+## 2026-10-16 22:52 PC time (UTC 20:52): v5.1 brief, Step 1 (decision G: backup, tag, manifest, guards, push; Alex's answers of 15 Oct 2026 05:18-05:19 UTC; "Go for Step 1", 16 Oct 20:46 UTC)
+- Commit ad63ed7 "v5 as adopted 13 Oct 2026 (work of 12-14 Oct, previously uncommitted)": 305 files staged by name (LABNOTES.md; scripts and CSV / JSON / MD / TXT / LOG of <= 1 MB from the 14 untracked 12-14 Oct analysis folders). Left out of git: arrays, meshes, fibre files, caches, ECG weights, 1 PNG, rescore/per_site.csv (2.3 MB), chain2.log, the 0.1.0 zip, and 12 openCARP.log files (their build line carries the openCARP repository access token; no tracked file or past commit contains it).
+- Commit b3bce5c: manifests/v5_data_sha256.tsv (sha256 342388ba...e0f6; 3,484 files, 22.73 GB, hashed in 40 s with 3 processes: all of data/, the runs v5 reads (v5 and cb lead fields, AP template runs, v3 His-beat runs, k-fit runs), every 12-14 Oct analysis file not in git, as Alex asked 20:46 UTC) and manifests/v5_symlinks.tsv (39 links); scripts analysis/v51_2026-10-15/01_backup/make_manifest.py, check_v5_files.py. Annotated tag v5 on b3bce5c.
+
+### 2026-10-16_v51_01_pre: v5 reference beats before the guards (Step 1.3)
+- Date/time: PC clock 2026-10-16 22:55; git b3bce5c (+ uncommitted LABNOTES.md); Status: running
+- Purpose: record v5 beats with the unchanged v5 code, to show the guards (next) change nothing.
+- Command: `HEART=<H> python -B analysis/v51_2026-10-15/01_backup/beats.py pre` for the 3 hearts, one at a time.
+- Model: v5 exactly as adopted: v5_grid.Heart('E', H) (graph-only combined graph, fibre / sheet / normal 0.60 / 0.48 / 0.48 m/s, HF 0.60 / 0.3504 / 0.336, graph scale k per heart, v5 fibres fibres_E), network v3, junction 4 ms antegrade (reset after construction, as v5_adopted.py:127) / 2 ms retrograde, pseudo-Vm template; graph cache read from analysis/v5_grid_2026-10-13/cache (entries exist, nothing written there).
+- Exit sites: His beat in all three hearts; Y5HYEDL4 first site of each family in sites.json: lv_septum_phi0_z0.25_d10, lv_free_wall_phi60_z0.25_d10, rv_free_wall_q25_z0.25_d10, rvot_septal_z_d10, aortic_cusp_rcc_z_d10, lv_summit_superior_z_d10, lv_vein_course_proximal_aiv_z_d10 (all 10 % depth, 1.5 mm stimulus ball).
+- Lead fields: reused, ECG weights analysis/v5_adopted_2026-10-13/ecgW_v5_<H>.npz (runs/2026-10-13_LF_<H>_v5).
+- Output: runs/v51_2026-10-15/01_backup/pre/<H>/ (<site>.T.npy, <site>.ecg.npy, scores.csv); expected ~2 min.
+- Status update (2026-10-16_v51_01_pre), PC clock 22:56: ok. 10 beats in 41 s (peak RSS 0.69 GB); nothing written to protected folders. Activation maps and ECGs bit-identical to the 14 Oct saved maps; His beats bit-identical to the 13 Oct arrays.
+
+### 2026-10-16_v51_01_post: the same beats with the guards on (Step 1.3)
+- Date/time: PC clock 2026-10-16 22:57-23:02; git b3bce5c + guard changes (uncommitted, committed next); Status: ok
+- Guards (decision G; audit F20): (a) graph cache key = sha256 of every input of the cached graph (heart, biv.elem / bivF.pts / fibre sha256, speeds, edge-rule version), new cache runs/v51_2026-10-15/cache/, fibre sha256 checked against manifests/v5_data_sha256.tsv, HEART env must equal the heart; in analysis/v51_2026-10-15/01_backup/v5_grid_guarded.py, a copy of the protected v5_grid.py (sha256 c290bd3b...9c96; diff beside it). (b) sims/biv_model/14_purkinje.py graph_scale() stops if the k file is missing (was a silent k = 1.0) and logs its sha256.
+- Implementation detail, needed for identical results (not a model change): a freshly built graph is rounded to float32 before use, exactly as every v5 beat that loaded the cache (13 Oct adopted grid, 14 Oct regen).
+- Command: `HEART=<H> python -B analysis/v51_2026-10-15/01_backup/beats.py post` (3 hearts), `... post_cached` (Y5HYEDL4), `python -B .../beats.py compare`; tests `PYTHONDONTWRITEBYTECODE=1 python -B -m pytest -p no:cacheprovider analysis/v51_2026-10-15/01_backup/test_guards.py`.
+- Model, sites, lead fields: as 2026-10-16_v51_01_pre.
+- Output: runs/v51_2026-10-15/01_backup/post/, post_cached/, cache/ (83 MB); analysis/v51_2026-10-15/01_backup/compare.json, README.md. Runtime 170 s (cache builds 30-43 s, peak RSS 1.26 GB).
+- Result: guard tests 7/7 pass; the new key misses all 8 old cache entries; post vs pre and the cache-hit rerun: every activation map, ECG and score bit-identical (differences 0.0); scores equal the 13 Oct purk_<H>_v5.csv in all 216 / 154 / 154 columns. v5 files unchanged (size and mtime of all 3,484 manifest files).

@@ -70,6 +70,7 @@ Usage (HEART=<id>, from sims/biv_model):
 """
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -539,9 +540,21 @@ def myo_graph(pts):
     return e, w
 
 
-def graph_scale():
-    f = os.path.join(PK, 'graph_scale.json')
-    return json.load(open(f))['k'] if os.path.exists(f) else 1.0
+_K_LOGGED = set()
+
+
+def graph_scale(path=None):
+    """k of graph_scale.json. Guard (16 Oct 2026, v5.1 brief Step 1, decision G): stops if the file is missing (it used to
+    return k = 1.0 silently) and logs the file's sha256 once per process (stderr)."""
+    f = path or os.path.join(PK, 'graph_scale.json')
+    if not os.path.exists(f):
+        raise FileNotFoundError(f'graph scale (k) file missing: {f}; run 14_purkinje.py calib, never fall back to k = 1.0')
+    raw = open(f, 'rb').read()
+    k = json.loads(raw)['k']
+    if f not in _K_LOGGED:
+        _K_LOGGED.add(f)
+        print(f'graph_scale: k = {k} from {f} (sha256 {hashlib.sha256(raw).hexdigest()})', file=sys.stderr, flush=True)
+    return k
 
 
 def solve_combined(net, pts, sources_myo, his=False):

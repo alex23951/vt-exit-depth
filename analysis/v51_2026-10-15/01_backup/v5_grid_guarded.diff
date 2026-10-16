@@ -1,0 +1,174 @@
+--- ../../v5_grid_2026-10-13/v5_grid.py	2026-10-13 18:52:21.210054346 +0200
++++ v5_grid_guarded.py	2026-10-16 22:55:42.985596683 +0200
+@@ -1,5 +1,19 @@
+ #!/usr/bin/env python
+ """
++GUARDED COPY (16 Oct 2026, v5.1 brief Step 1.3, decision G) of analysis/v5_grid_2026-10-13/v5_grid.py
++(sha256 c290bd3b613dbcf157b67c1512ef2891e479ef50122e938c43b9760c1d2a9c96, read-only; diff in this folder's README).
++Changes, nothing else:
++  paths   reads the protected folder (V5G: fibres_E, arm outputs); its own outputs go to runs/v51_2026-10-15/01_backup/;
++          graph cache in runs/v51_2026-10-15/cache/ (the old cache folder is never read or written)
++  guard a the graph cache key is the sha256 of every input of the cached object (heart, biv.elem, bivF.pts and fibre
++          file sha256, the three speeds, edge-rule version); the key and inputs are stored in the cache file and checked
++          on load; Heart(..., expect_fibre_sha256=...) stops if the fibre file's sha256 differs; HEART in the
++          environment must equal the heart argument (k, mesh and AP template are read from it)
++  same    a freshly built graph is rounded to float32 before use, as every v5 beat that loaded the cache (v5 adopted
++          13 Oct, regen 14 Oct); without this a first build in the same process gave float64 times (F20, 6e-8)
++  guard b k comes from sims/biv_model/14_purkinje.py graph_scale(), which now stops if the k file is missing
++Original docstring follows.
++
+ v5 realism test grid, 13 Oct 2026 (Alex "go" 16:48 UTC on the coordinator's card; brief 22:47 UTC 12 Oct + 16:48 UTC 13 Oct).
+ EXPLORATORY: frozen v3 files are only read; everything new is under analysis/v5_grid_2026-10-13/.
+ 
+@@ -26,6 +40,7 @@
+ """
+ 
+ import csv
++import hashlib
+ import importlib.util
+ import json
+ import math
+@@ -34,7 +49,11 @@
+ import time
+ 
+ HERE = os.path.dirname(os.path.abspath(__file__))
+-REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
++REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
++V5G = os.path.join(REPO, 'analysis', 'v5_grid_2026-10-13')          # protected: read only
++OUTR = os.path.join(REPO, 'runs', 'v51_2026-10-15', '01_backup')
++CACHE = os.path.join(REPO, 'runs', 'v51_2026-10-15', 'cache')
++EDGE_RULE = 'tet-edges-v5: unique tet edges, t = |(d.f/v_f, d.s/v_s, d.n/v_n)|, fastest element wins, float32'
+ B = os.path.join(REPO, 'sims', 'biv_model')
+ sys.path.insert(0, B)
+ sys.path.insert(0, os.path.join(REPO, 'code', 'ecg_depth_criteria'))
+@@ -66,6 +85,22 @@
+     return 0.60, s, n
+ 
+ 
++def sha256(path):
++    h = hashlib.sha256()
++    with open(path, 'rb') as fh:
++        while b := fh.read(8 << 20):
++            h.update(b)
++    return h.hexdigest()
++
++
++def cache_inputs(h, lonf, sp):
++    """Every input of the cached myocardial graph, and the key (sha256 of their JSON)."""
++    inp = {'heart': h, 'elem_sha256': sha256(hd(h, 'biv.elem')), 'pts_sha256': sha256(os.path.realpath(hd(h, 'bivF.pts'))),
++           'fibre_file': os.path.relpath(os.path.realpath(lonf), REPO), 'fibre_sha256': sha256(lonf),
++           'speeds_f_s_n_m_s': [repr(float(x)) for x in sp], 'edge_rule': EDGE_RULE}
++    return inp, hashlib.sha256(json.dumps(inp, sort_keys=True).encode()).hexdigest()
++
++
+ def mem_mb():
+     for l in open('/proc/meminfo'):
+         if l.startswith('MemAvailable'):
+@@ -76,7 +111,7 @@
+ # ------------------------------------------------------------------ arm-E fibres
+ def fibres():
+     h = os.environ['HEART']
+-    d = os.path.join(HERE, 'fibres_E', h); os.makedirs(d, exist_ok=True)
++    d = os.path.join(OUTR, 'fibres_E', h); os.makedirs(d, exist_ok=True)
+     fx = os.path.join(REPO, 'analysis', 'fibre_fix_2026-10-13')
+     L = module('lapfix', os.path.join(fx, 'laplace_fix.py'))
+     L.LAP = os.path.join(d, 'laplace')
+@@ -89,8 +124,14 @@
+ 
+ # ------------------------------------------------------------------ beats
+ class Heart:
+-    def __init__(self, arm, h):
++    def __init__(self, arm, h, expect_fibre_sha256=None):
++        if os.environ.get('HEART') != h:
++            raise ValueError(f"HEART in the environment ({os.environ.get('HEART')}) is not {h}: k, mesh and template would be another heart's")
+         self.h, self.arm = h, arm
++        lonf = os.path.join(V5G, 'fibres_E', h, 'bivF.lon') if arm == 'E' else hd(h, 'bivF.lon')
++        self.fibre_sha256 = sha256(lonf)
++        if expect_fibre_sha256 is not None and self.fibre_sha256 != expect_fibre_sha256:
++            raise ValueError(f'fibre file {lonf}: sha256 {self.fibre_sha256} is not the expected {expect_fibre_sha256}')
+         self.PK = module('pk', os.path.join(B, '14_purkinje.py'))
+         self.CD = module('cd', os.path.join(B, '15_conductor.py'))
+         self.JOBS = module('jobs', os.path.join(B, 'jobs_2026-10-07.py'))
+@@ -102,7 +143,6 @@
+         self.N = len(self.pts)
+         self.net = dict(np.load(hd(h, 'purkinje', 'network.npz')))
+         self.k = self.PK.graph_scale()
+-        lonf = os.path.join(HERE, 'fibres_E', h, 'bivF.lon') if arm == 'E' else hd(h, 'bivF.lon')
+         self.e, self.w = self.myo(lonf, speeds(arm, h))
+         self.W = np.load(hd(h, 'ecgW_nofast_cb.npz'))['W'].astype(float)
+         self.TM = self.CD.Template()
+@@ -117,10 +157,14 @@
+             self.d_ant = np.full(M, 4.0)
+ 
+     def myo(self, lonf, sp):
+-        tag = f"{'E' if 'fibres_E' in lonf else 'v3'}_{sp[1]:.4f}_{sp[2]:.4f}"
+-        f = os.path.join(HERE, 'cache', f'myo_{self.h}_{tag}.npz'); os.makedirs(os.path.dirname(f), exist_ok=True)
++        inp, key = cache_inputs(self.h, lonf, sp)
++        self.cache_key, self.cache_inputs = key, inp
++        f = os.path.join(CACHE, f'myo_{self.h}_{key[:16]}.npz'); os.makedirs(os.path.dirname(f), exist_ok=True)
+         if os.path.exists(f):
+-            d = np.load(f); return d['e'].astype(np.int64), d['w'].astype(float) / self.k
++            d = np.load(f)
++            if str(d['key']) != key:
++                raise ValueError(f'cache file {f} holds key {d["key"]}, not {key}')
++            return d['e'].astype(np.int64), d['w'].astype(float) / self.k
+         E = pd.read_csv(hd(self.h, 'biv.elem'), sep=r'\s+', skiprows=1, header=None, usecols=[1, 2, 3, 4]).to_numpy()
+         lon = pd.read_csv(lonf, sep=r'\s+', skiprows=1, header=None).to_numpy()
+         fb, sh = lon[:, :3], lon[:, 3:6]; nm = np.cross(fb, sh)
+@@ -134,8 +178,9 @@
+         key, inv = np.unique(np.concatenate(keys), return_inverse=True)
+         w = np.full(len(key), np.inf); np.minimum.at(w, inv.ravel(), np.concatenate(ws))
+         e = np.c_[key // N, key % N]
+-        np.savez(f, e=e.astype(np.int32), w=w.astype(np.float32))
+-        return e.astype(np.int64), w / self.k
++        np.savez(f, e=e.astype(np.int32), w=w.astype(np.float32), key=self.cache_key, inputs=json.dumps(self.cache_inputs))
++        json.dump(self.cache_inputs | {'key': self.cache_key}, open(f[:-4] + '.json', 'w'), indent=1)
++        return e.astype(np.int64), w.astype(np.float32).astype(float) / self.k
+ 
+     def solve(self, site_node=None, nonet=False):
+         from scipy.sparse import coo_matrix
+@@ -190,7 +235,7 @@
+ def run(arm, nonet=False):
+     h = os.environ['HEART']
+     H = Heart(arm, h)
+-    d = os.path.join(HERE, arm, h); os.makedirs(d, exist_ok=True)
++    d = os.path.join(OUTR, arm, h); os.makedirs(d, exist_ok=True)
+     json.dump({'arm': arm, 'heart': h, 'speeds_f_s_n': speeds(arm, h), 'graph_scale_k': H.k, 'd_ret_ms': 2.0,
+                'd_ant': 'N(4.85, 1.55) truncated 2-13, seed %d' % SEED if arm in ('C', 'E') else 4.0,
+                'fibres': 'fibres_E (outflow fix)' if arm == 'E' else 'frozen bivF.lon', 'lead_fields': 'cb, not rebuilt'},
+@@ -315,19 +360,19 @@
+                 df = df.merge(det[['id', 'd_mdi']].rename(columns={'d_mdi': 'det20_mdi'}), on='id', how='left')
+         else:
+             arm = 'A' if (name == 'B' and h not in HF) else name
+-            f = os.path.join(HERE, arm, h, 'beats.csv')
++            f = os.path.join(V5G, arm, h, 'beats.csv')
+             if not os.path.exists(f):
+                 continue
+             df = pd.read_csv(f)
+             df = df[df.family != 'his']
+-            T = np.load(os.path.join(HERE, arm, h, 'his_T.npy')).astype(float)
+-            ecg = np.load(os.path.join(HERE, arm, h, 'his_ecg.npy')).astype(float)
++            T = np.load(os.path.join(V5G, arm, h, 'his_T.npy')).astype(float)
++            ecg = np.load(os.path.join(V5G, arm, h, 'his_ecg.npy')).astype(float)
+         df = df.copy(); df['depth_target'] = df.depth_target.astype(float)
+         out[h] = (df, T, ecg)
+     if name == 'v3':
+         out['nonet'] = pd.read_csv(os.path.join(REPO, 'analysis', 'grids_2026-10-07', 'nofast_Y5HYEDL4.csv'))
+     else:
+-        f = os.path.join(HERE, 'E' if name == 'E' else 'A', 'Y5HYEDL4', 'beats_nonet.csv')
++        f = os.path.join(V5G, 'E' if name == 'E' else 'A', 'Y5HYEDL4', 'beats_nonet.csv')
+         out['nonet'] = pd.read_csv(f) if os.path.exists(f) else None
+     return out
+ 
+@@ -397,9 +442,9 @@
+         except Exception as ex:                                  # an arm not run yet
+             print(f'{name}: not available ({ex})', flush=True)
+     G = pd.DataFrame(cols)
+-    G.to_csv(os.path.join(HERE, 'gates.csv'))
++    G.to_csv(os.path.join(OUTR, 'gates.csv'))
+     txt = G.to_string()
+-    open(os.path.join(HERE, 'gates.txt'), 'w').write(txt + '\n')
++    open(os.path.join(OUTR, 'gates.txt'), 'w').write(txt + '\n')
+     print(txt)
+ 
+ 
