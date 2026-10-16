@@ -1,0 +1,13 @@
+beat,noise_uV,rule,draws,false_q,false_q_pct,false_initial_r,false_initial_r_pct,initial_r_called,initial_r_called_pct
+isoelectric lead I,10,0.3.0 rule,400,0,0.0,0.0,0.0,,
+isoelectric lead I,10,window only 40 ms,400,0,0.0,0.0,0.0,,
+isoelectric lead I,10,CSE primary 40 ms,400,0,0.0,0.0,0.0,,
+isoelectric lead I,20,0.3.0 rule,400,168,42.0,164.0,41.0,,
+isoelectric lead I,20,window only 40 ms,400,73,18.25,76.0,19.0,,
+isoelectric lead I,20,CSE primary 40 ms,400,8,2.0,6.0,1.5,,
+0.10 mV initial r in lead I,10,0.3.0 rule,400,0,0.0,,,400.0,100.0
+0.10 mV initial r in lead I,10,window only 40 ms,400,0,0.0,,,400.0,100.0
+0.10 mV initial r in lead I,10,CSE primary 40 ms,400,1,0.25,,,399.0,99.75
+0.10 mV initial r in lead I,20,0.3.0 rule,400,9,2.25,,,391.0,97.75
+0.10 mV initial r in lead I,20,window only 40 ms,400,9,2.25,,,391.0,97.75
+0.10 mV initial r in lead I,20,CSE primary 40 ms,400,57,14.25,,,343.0,85.75

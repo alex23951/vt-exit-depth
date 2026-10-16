@@ -1,0 +1,92 @@
+--- analysis/v5_adopted_2026-10-13/three_hearts_v5.py	2026-10-13 20:17:34.730683042 +0200
++++ analysis/v51_2026-10-15/02_measure_040/three_hearts_v5_nanfix.py	2026-10-16 23:15:01.169108886 +0200
+@@ -1,5 +1,10 @@
+ #!/usr/bin/env python
+ """
++NaN-FIX COPY (16 Oct 2026, v5.1 brief Step 2, decision H) of analysis/v5_adopted_2026-10-13/three_hearts_v5.py
++(sha256 b9517484dd29af896fdf916ae9fbf4ac887437b7de2cceb1365051e1855c26ec; diff beside this file).
++Changed: paths (REPO, OUT) and the aggregation only: f() / med() / auc() use nanstats.py (NaN left out and counted,
++never a loss), paired changes drop the whole pair, call counts print k / n scored (m unscorable).
++Original docstring follows.
+ COPY for model v5 (13 Oct 2026; analysis/v5_adopted_2026-10-13): reads purk_<HEART>_v5.csv (graph-only v5 grid),
+ writes to analysis/v5_adopted_2026-10-13/three_hearts/. Original docstring follows.
+ Network arm on the three pilot hearts (10 Oct 2026): the 144 v5 sites per heart with the His-Purkinje network v3
+@@ -13,12 +18,16 @@
+ """
+ 
+ import csv
++import math
+ import os
++import sys
+ import statistics as st
+ 
+-REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
++REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
++sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
++import nanstats as ns  # noqa: E402
+ G = os.path.join(REPO, 'analysis', 'v5_adopted_2026-10-13')
+-OUT = os.path.join(REPO, 'analysis', 'v5_adopted_2026-10-13', 'three_hearts')
++OUT = os.path.join(REPO, 'analysis', 'v51_2026-10-15', '02_measure_040', 'three_hearts_v5')
+ HEARTS = {'Y5HYEDL4': 'control', '6G8DD8S5': 'HF wide QRS (LBBB)', '7D98EVAR': 'HF narrow QRS'}
+ GROUP = {'lv_free_wall': 'LV free wall', 'lv_septum': 'LV septum', 'rv_free_wall': 'RV free wall', 'rvot': 'RVOT',
+          'aortic_cusp': 'Aortic cusp', 'lv_summit': 'LV summit', 'lv_vein_course': 'LV vein course'}
+@@ -27,22 +36,15 @@
+ 
+ 
+ def f(x):
+-    try:
+-        return float(x)
+-    except (TypeError, ValueError):
+-        return None
++    return ns.num(x)
+ 
+ 
+ def med(xs, nd=3):
+-    xs = [x for x in xs if x is not None]
+-    return round(st.median(xs), nd) if xs else None
++    return ns.fmt_median(xs, nd)
+ 
+ 
+ def auc(pos, neg):
+-    pos, neg = [x for x in pos if x is not None], [x for x in neg if x is not None]
+-    if not pos or not neg:
+-        return None
+-    return round(sum((p > q) + 0.5 * (p == q) for p in pos for q in neg) / (len(pos) * len(neg)), 2)
++    return ns.fmt_auc(pos, neg, 2)
+ 
+ 
+ def dep(r):
+@@ -77,15 +79,18 @@
+         pos = sorted({(r['level_z'], r['position']) for r in fw})
+         out = []
+         for k in MEAS:
+-            ch = []
++            ch, nd_ = [], 0
+             for p in pos:
+                 x = {dep(r): f(r[f'true_{k}']) for r in fw if (r['level_z'], r['position']) == p}
+-                if x.get(10) is not None and x.get(90) is not None:
+-                    ch.append(x[90] - x[10])
+-            out.append(f"{k} {med(ch, 3)} ({sum(c > 0 for c in ch)}/{len(ch)}, AUC "
++                if 10 in x and 90 in x:
++                    if math.isnan(x[10]) or math.isnan(x[90]):
++                        nd_ += 1
++                    else:
++                        ch.append(x[90] - x[10])
++            out.append(f"{k} {med(ch, 3)} ({sum(c > 0 for c in ch)}/{len(ch)}{f', {nd_} pairs unscorable' if nd_ else ''}, AUC "
+                        f"{auc([f(r[f'true_{k}']) for r in fw if dep(r) == 90], [f(r[f'true_{k}']) for r in fw if dep(r) == 10])})")
+-        q10 = med([f(r['true_qrs_duration_ms']) for r in fw if dep(r) == 10], 1)
+-        q90 = med([f(r['true_qrs_duration_ms']) for r in fw if dep(r) == 90], 1)
++        q10 = round(ns.scored_median([f(r['true_qrs_duration_ms']) for r in fw if dep(r) == 10])[0], 1)
++        q90 = round(ns.scored_median([f(r['true_qrs_duration_ms']) for r in fw if dep(r) == 90])[0], 1)
+         print(f'{h}: ' + '; '.join(out) + f'; QRS {q10} -> {q90} ({round(100 * (q90 - q10) / q10, 1)} %)')
+ 
+     print('\n## All sites with a depth truth (cusps out): AUC 90 % vs 10 % and 90 % vs 50 %, true / detected onset')
+@@ -112,7 +117,7 @@
+     print('\n## Epicardial calls (true onset), sites with a depth truth, by target depth: Y5HYEDL4 | 6G8DD8S5 | 7D98EVAR')
+     for d in (10, 50, 75, 90):
+         n = [sum(dep(r) == d and r['epi_endo_truth'] == 'True' for r in D[h]) for h in HEARTS]
+-        cells = [c + ' ' + ' | '.join(str(sum(r['true_' + c] == 'True' for r in D[h] if dep(r) == d and r['epi_endo_truth'] == 'True'))
++        cells = [c + ' ' + ' | '.join(ns.fmt_rate([r['true_' + c] for r in D[h] if dep(r) == d and r['epi_endo_truth'] == 'True'])
+                                       for h in HEARTS) for c in CALLS]
+         print(f"{d} % (n {' | '.join(map(str, n))}): " + '; '.join(cells))
+ 
