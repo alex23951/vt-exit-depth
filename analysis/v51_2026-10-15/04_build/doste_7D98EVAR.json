@@ -1,0 +1,213 @@
+{
+ "heart": "7D98EVAR",
+ "R_field": {
+  "definition": "d = phi_rv / (phi_lv + phi_rv) > 0.5 per element (fibres_fix.py main())",
+  "elements": 579450,
+  "sha256": "701a773ca045806d2a1e1afa16f90bbdee051020a384e3bbb7937f583d75771f",
+  "by_tag": {
+   "1": 121917,
+   "2": 381746,
+   "25": 0,
+   "28": 52625,
+   "29": 23162
+  },
+  "tag2_elements": 382325,
+  "tag2_outside_R_field": 579
+ },
+ "laplace": {
+  "overlap_lv_rv_endo": 0,
+  "problems": {
+   "u_lv": {
+    "bc0": 64093,
+    "bc1": 22135,
+    "min": -0.273324,
+    "max": 1.0,
+    "wall_s": 25.0
+   },
+   "u_rv": {
+    "bc0": 65307,
+    "bc1": 20921,
+    "min": -0.477204,
+    "max": 1.0,
+    "wall_s": 23.5
+   },
+   "psi_tv": {
+    "bc0": 27,
+    "bc1": 887,
+    "min": 0.0,
+    "max": 1.0,
+    "wall_s": 5.8
+   },
+   "psi_pv": {
+    "bc0": 27,
+    "bc1": 614,
+    "min": 0.0,
+    "max": 1.0,
+    "wall_s": 7.6
+   },
+   "w": {
+    "bc0": 614,
+    "bc1": 914,
+    "min": 0.0,
+    "max": 1.0,
+    "wall_s": 7.9
+   }
+  },
+  "apex_A": {
+   "seed_node": 20642,
+   "seed_uvc_z": 0.198291,
+   "nodes": 27,
+   "distance_to_LV_apex_mm": 28.9,
+   "distance_to_TV_ring_centroid_mm": 71.9
+  },
+  "rings_in_R_field": {
+   "TV": 887,
+   "TV_all": 908,
+   "PV": 614,
+   "PV_all": 614,
+   "A_in_R": 27,
+   "TV_PV_overlap": 0,
+   "A_ring_overlap": 0
+  }
+ },
+ "gates": {
+  "A1": {
+   "max_abs_dh_deg": 0.00047773803349571153,
+   "p99_abs_dh_deg": 0.00036326053919452764,
+   "max_out_of_plane_deg": 0.0004820791165944514,
+   "p99_out_of_plane_deg": 0.00036467851565820375,
+   "pass": true
+  },
+  "A3": {
+   "junction_nodes_anterior(phi>0)": 198,
+   "junction_nodes_inferior(phi<0)": 221,
+   "anterior": {
+    "RV_epi_elements": 2680,
+    "RV_epi_h_lt_0_fraction": 1.0,
+    "RV_epi_h_median": -19.452215823824922,
+    "LV_epi_elements": 4073,
+    "LV_epi_h_lt_0_fraction": 1.0,
+    "LV_epi_h_median": -33.08626656587804
+   },
+   "inferior": {
+    "RV_epi_elements": 15621,
+    "RV_epi_h_lt_0_fraction": 1.0,
+    "RV_epi_h_median": -21.524138855119475,
+    "LV_epi_elements": 5576,
+    "LV_epi_h_lt_0_fraction": 1.0,
+    "LV_epi_h_median": -48.97220301335334
+   },
+   "RV_body_mid_wall": {
+    "elements": 8078,
+    "h_gt_0_fraction": 1.0,
+    "h_median": 33.33568413942175
+   },
+   "pass": true
+  },
+  "A4": {
+   "elements_d_le_0.02": 138,
+   "max_deg": 2.1942843261441674,
+   "p99_deg": 2.184182432333235,
+   "elements_over_0.5deg": 18,
+   "pass": false,
+   "expected_by_rule_at_d_max": "the rule gives 90 - h = d (90 + 25 w), i.e. up to 2.3 deg at d = 0.02"
+  },
+  "A5": {
+   "elements_outside_R_new": 1176264,
+   "rows_identical_text": true,
+   "rows_changed": 0,
+   "max_change_deg": 0.0,
+   "pass": true
+  },
+  "A8": {
+   "R_field_components_face_sharing": 1,
+   "R_field_components_node_sharing": 1,
+   "R_new_components_face_sharing": 1,
+   "largest_component_elements": 579450,
+   "other_components_elements": 0,
+   "island_elements": [],
+   "orthonormal_from_file": {
+    "max_abs_norm_f_minus_1": 8.358215070281005e-06,
+    "max_abs_norm_s_minus_1": 8.333084720146822e-06,
+    "max_abs_f_dot_s": 1.4333200000021806e-05
+   },
+   "guards": {
+    "w_nodes_clipped": 0,
+    "g_below_1pct_median": 92,
+    "grad_phi_D_below_1pct_median": 410,
+    "transmural_degenerate_(grad_phi_D_parallel_to_l)": 98
+   },
+   "pass": true
+  }
+ },
+ "A2": {
+  "(a) RV body free wall (w>=0.9, UVC z 0.4-0.6, >=5 mm from Dirichlet sets)": {
+   "elements": 0,
+   "d 0-0.05": "none",
+   "d 0.45-0.55": "none",
+   "d 0.95-1.0": "none"
+  },
+  "(a2) RV body septal side (same, septal)": {
+   "elements": 0,
+   "d 0-0.05": "none",
+   "d 0.45-0.55": "none",
+   "d 0.95-1.0": "none"
+  },
+  "(b) septal infundibulum 9.6-15.1 mm below the PV plane (<8 mm from the aortic root)": {
+   "elements": 9248,
+   "d 0-0.05": "n 69: v5 +45.7, v5.1 +85.2, expected +85.2, w 0.51",
+   "d 0.45-0.55": "n 571: v5 +53.2, v5.1 +39.9, expected +39.9, w 0.43",
+   "d 0.95-1.0": "n 2019: v5 -3.4, v5.1 -12.9, expected -12.9, w 0.62"
+  },
+  "(c) free-wall infundibulum 14.2-16.6 mm below the PV plane (>20 mm from the aortic root)": {
+   "elements": 5410,
+   "d 0-0.05": "n 185: v5 -77.1, v5.1 +85.6, expected +85.6, w 0.25",
+   "d 0.45-0.55": "n 490: v5 +75.4, v5.1 +41.9, expected +41.9, w 0.26",
+   "d 0.95-1.0": "n 698: v5 +0.4, v5.1 -5.1, expected -5.1, w 0.27"
+  },
+  "(d) septal 2-4 mm below the PV plane": {
+   "elements": 2684,
+   "d 0-0.05": "none",
+   "d 0.45-0.55": "n 240: v5 +63.5, v5.1 +43.5, expected +43.5, w 0.09",
+   "d 0.95-1.0": "n 375: v5 +1.8, v5.1 -1.7, expected -1.7, w 0.08"
+  },
+  "(d) free wall 2-4 mm below the PV plane": {
+   "elements": 3535,
+   "d 0-0.05": "n 45: v5 -85.5, v5.1 +85.7, expected +85.6, w 0.07",
+   "d 0.45-0.55": "n 331: v5 +71.6, v5.1 +44.0, expected +44.0, w 0.08",
+   "d 0.95-1.0": "n 383: v5 +9.2, v5.1 +0.5, expected +0.5, w 0.11"
+  },
+  "w at RVOT sites": {
+   "rvot_septal_z_d10": 0.336,
+   "rvot_septal_z_d50": 0.332,
+   "rvot_septal_z_d75": 0.329,
+   "rvot_septal_z_d90": 0.314,
+   "rvot_free_wall_z_d10": 0.242,
+   "rvot_free_wall_z_d50": 0.254,
+   "rvot_free_wall_z_d75": 0.247,
+   "rvot_free_wall_z_d90": 0.24
+  }
+ },
+ "A7": {
+  "R_new border (= septal interface, WHOLE_RV)": {
+   "pairs": 16083,
+   "v5": "median 12.4, p95 71.9, max 90.0 deg",
+   "v5.1": "median 28.9, p95 79.0, max 90.0 deg"
+  },
+  "R_new border within 10 mm of the epicardial junctions": {
+   "pairs": 6260,
+   "v5": "median 11.1, p95 74.3, max 89.9 deg",
+   "v5.1": "median 44.1, p95 83.2, max 90.0 deg"
+  },
+  "inside R_new (reference)": {
+   "pairs": 1108742,
+   "v5": "median 3.7, p95 20.0, max 90.0 deg",
+   "v5.1": "median 5.5, p95 14.3, max 90.0 deg"
+  }
+ },
+ "candidate_file": {
+  "path": "runs/v51_2026-10-15/04_build/7D98EVAR/bivF_v51_candidate.lon",
+  "sha256": "e1252fcf69b11df3e6ab386d1e2897be31ab7b9f298acbac546d9635ae3a4562"
+ },
+ "wall_s": 52.5
+}
