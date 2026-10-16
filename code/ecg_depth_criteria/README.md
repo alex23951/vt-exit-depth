@@ -3,7 +3,33 @@
 Python code that measures the published 12-lead ECG criteria for an epicardial
 origin of a PVC or VT, each one the way its paper defines it. The same code
 scores simulated (openCARP) and real ECGs, so the two are measured identically.
-Version 0.3.0, 4 Oct 2026. It needs only numpy; the tests need pytest.
+Version 0.4.0, 16 Oct 2026. It needs only numpy; the tests need pytest.
+
+Changes in 0.4.0 (decision H of the 13-14 Oct 2026 audit, chosen 15 Oct 2026): q waves
+and initial r waves are read from each lead's first recognised deflection, inside an
+initial window. Alex set the window to 40 ms ("40 ms", 15 Oct 08:30:47 UTC) and made the
+noise-aware CSE recognition check the primary q rule ("Make primary", 08:31:22 UTC). The
+lead's first excursion beyond thr = min(0.05 mV, max(0.02 mV, 5 x the lead's baseline
+SD)) lasting at least 6 ms decides (20 uV and 6 ms are the CSE wave-recognition limits for
+measurement programs, Kligfield 2007 p1310; the 5 x SD floor and the reach step below are
+this study's). It is a q when it is negative, starts within 40 ms of the detected (visible)
+QRS onset, in every mode and never from the stimulus, and reaches -0.05 mV before the lead
+crosses +thr; with the signs reversed it is an initial r. Anything else is neither
+(`initial_polarity` 0): a later first deflection, or one that turns back before reaching
++-0.05 mV. The Q amplitude is the depth of that deflection. Why: 0.3.0 took the first
+0.05 mV wave anywhere in the QRS, so after a long slow onset a negative wave 40-60 ms after
+the stimulus counted as a "q" (audit F09). IEC 60601-2-25 leaves the initial isoelectric
+segment out of wave durations but sets no maximum for it, and no standard or VT-criteria
+paper gives one, so 40 ms is an inference: Vereckei's "initial 40 ms" (a VT-vs-SVT
+definition), inside epicardial initial slow phases of 33-56 ms, and over 6 x the 6.5 ms CSE
+onset tolerance. Every other measurement is unchanged, and
+`Settings(q_window_ms=None, recog_mv=None)` reproduces 0.3.0 exactly (both checked
+bit-exactly on every saved v5 beat). Sensitivity analyses, reported and never primary:
+`q_window_ms=20`; window only (`recog_mv=None`: the first 0.05 mV wave must start inside
+the window, with no recognition step); no window (0.3.0); `wave_mv=0.10`; and
+`q_anchor="onset"` (window from the stimulus or given onset). New outputs: `q_anchor_ms`,
+and per lead `initial_start_ms` (start of the first deflection after `q_anchor_ms`, NaN if
+none) and `initial_sign` (its sign before the window and reach checks).
 
 Changes in 0.3.0: adds the LV summit criteria of Yamada 2010, Santangeli 2015
 and Jauregui Abularach 2012, and Prisco 2024's two rates of change, with the
@@ -17,7 +43,7 @@ Alex chose the change, which is recorded in the Analysis plan.
 
 ```
 python3 -m pip install numpy pytest
-python3 -m pytest          # run inside this folder; 63 tests
+python3 -m pytest          # run inside this folder; 76 tests
 ```
 
 ## Use
@@ -116,12 +142,12 @@ every beat.
 | IDT | Onset to the peak of the R wave in V2 | Peak of the first positive wave in V2, since a later positive wave after an S wave is R′. Positive pieces split by a notch that never turns negative (noise on a slow upstroke) count as one wave. Version 0.1.0 used the largest positive wave; that is now the sensitivity analysis, `Settings(r_peak="largest")` (`"last"` also exists) |
 | Shortest RS | Onset to the nadir of the first S wave in any precordial lead | In each precordial lead, the nadir of the first negative wave after the first positive wave; the earliest across leads is kept |
 | MDI | Onset to the largest deflection in each precordial lead, shortest lead, divided by QRS duration | `mdi_valles` divides by the precordial QRS (Vallès, Piers). `mdi_daniels` divides by the QRS to the latest offset in any lead |
-| q wave | Initial negative deflection, sometimes after a short isoelectric segment (Vallès, Piers) | The first wave larger than 0.05 mV after the onset is negative |
+| q wave | Initial negative deflection, sometimes after a short isoelectric segment (Vallès, Piers) | 0.4.0: the lead's first recognised deflection (beyond max(0.02 mV, 5 x baseline SD), at most 0.05 mV, for at least 6 ms) is negative, starts within 40 ms of the detected QRS onset and reaches -0.05 mV before the lead turns positive (see Changes in 0.4.0). 0.3.0: the first wave larger than 0.05 mV after the onset is negative, at any time |
 | Inferior q | All of II, III and aVF (Piers Q-INF), or any of them (Bazan) | `inferior_q_all`, `inferior_q_any`. `inferior_r_any` is Piers's absence of inferior q |
 | QS in V2 | Entirely negative QRS in V2 (Bazan 2006) | Every wave in V2 is negative |
 | aVR/aVL < 1 | Bazan 2006 scores a ratio as > 1 when the QRS is more positive or less negative in the first lead | Net amplitude (height of the tallest positive peak minus depth of the deepest negative peak) is lower in aVR than in aVL |
 | Axis, RBBB pattern | Predominant R or S in aVF and in V1 (Piers) | Sign of the net amplitude |
-| Q-, R- and S-wave amplitude | Not defined in the text of Yamada 2010, Santangeli 2015 or Jauregui 2012. Santangeli's Figure 3 measures from the pre-QRS baseline to the nadir of the negative deflection (QS complexes in aVL and aVR) and to the R peak in II and III; Jauregui's Figure 5 labels whole QS complexes in aVL and aVR as "Q" | In mV from the isoelectric level, as positive numbers (`q_amplitude_mv`, `r_amplitude_mv`, `s_amplitude_mv`, every lead). Q: the opening wave when it is negative, a whole QS complex included; 0 when the lead starts positive. R: the first positive wave (as for IDT; `Settings.r_peak` also applies here); 0 when there is none. S: the first negative wave after the first R; 0 when there is none. Pieces of one sign split by a notch inside the wave threshold are one wave |
+| Q-, R- and S-wave amplitude | Not defined in the text of Yamada 2010, Santangeli 2015 or Jauregui 2012. Santangeli's Figure 3 measures from the pre-QRS baseline to the nadir of the negative deflection (QS complexes in aVL and aVR) and to the R peak in II and III; Jauregui's Figure 5 labels whole QS complexes in aVL and aVR as "Q" | In mV from the isoelectric level, as positive numbers (`q_amplitude_mv`, `r_amplitude_mv`, `s_amplitude_mv`, every lead). Q: the depth of the lead's initial deflection when it is a q (0.4.0 rule above), a whole QS complex included; 0 otherwise (0.3.0: the opening wave when it is negative). R: the first positive wave (as for IDT; `Settings.r_peak` also applies here); 0 when there is none. S: the first negative wave after the first R; 0 when there is none. Pieces of one sign split by a notch inside the wave threshold are one wave |
 | Q-wave ratio aVL/aVR, R-wave ratio III/II | aVL over aVR (all three papers); III over II (Yamada, Jauregui). Santangeli reports the R ratio as II/III and uses it in no criterion | `q_ratio_avl_avr`, `r_ratio_iii_ii`. Infinite when only the denominator's wave is absent; missing (NaN, so the criterion is None) when both are |
 | R/S in V1 | "R-wave to S-wave ratio in lead V1" (Santangeli) | `rs_ratio_v1`: R over S amplitude. Infinite with an R and no S (a monophasic R); 0 with no R (QS); missing when V1 has no wave at all |
 | Initial q in V1 | Not defined beyond "initial q wave" (Santangeli) | `q_V1`: the first wave in V1 is negative, as for the other q waves, so a QS complex counts as a q |
@@ -178,6 +204,10 @@ every beat.
   the stimulus latency in its first 30 ms. Its Tables 2 and 3 are not
   consistent with each other (sensitivity 1.00 at 6.0 mV/s with an epicardial
   mean of 6.3 mV/s), so its accuracy figures are uncertain.
+- **The q window** (40 ms) and the CSE recognition step are this study's
+  reading of "initial" (Changes in 0.4.0). The window opens at the detected QRS
+  onset even when intervals are timed from the stimulus, so a stimulus latency
+  does not by itself remove a q.
 - **"Fast deflection"** (30% of the steepest slope) and **"wave"** (0.05 mV,
   0.5 mm at standard gain) are operational choices, not taken from the papers.
   Change them in `Settings` only for sensitivity analyses, and use the same

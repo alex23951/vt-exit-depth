@@ -23,7 +23,7 @@ def measure(**override):
 
 
 def test_version():
-    assert __version__ == "0.3.0"
+    assert __version__ == "0.4.0"
 
 
 def test_q_wave_ratio_reproduces_jauregui_figure_5():

@@ -1,6 +1,7 @@
 """QRS boundaries, slopes and individual waves for one beat."""
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 
 import numpy as np
@@ -28,12 +29,31 @@ class Settings:
     #                        a later one after an S is R'), the "largest" or the "last"
     prisco_reference: str = "baseline"  # Prisco 2024 maximum deflection: furthest point from the
     #                                     "baseline" (isoelectric level) or from the "qrs_mean"
+    # Initial deflection (q wave, initial r), 0.4.0. q_window_ms=None and recog_mv=None give 0.3.0.
+    q_window_ms: float | None = 40.0  # Q_WINDOW_MS (Alex, 15 Oct 2026 08:30:47 UTC). A lead's first
+    #                                   deflection counts only if it starts within this many ms of
+    #                                   q_anchor; None: no window
+    q_anchor: str = "visible"  # the window opens at the "visible" (detected) QRS onset in every mode,
+    #                            or at the "onset" in use (stimulus or given onset; sensitivity only)
+    recog_mv: float | None = 0.02  # CSE recognition, primary (Alex "Make primary", 15 Oct 2026 08:31:22
+    #                                UTC): the first deflection is the first excursion beyond
+    #                                min(wave_mv, max(recog_mv, noise_sd x the lead's baseline SD))
+    #                                lasting recog_ms; None: the first wave beyond wave_mv (window only)
+    recog_ms: float = 6.0  # shortest excursion recognised as a deflection (CSE, Kligfield 2007)
 
     def __post_init__(self):
         if self.r_peak not in ("largest", "first", "last"):
             raise ValueError("r_peak must be 'largest', 'first' or 'last'")
         if self.prisco_reference not in ("baseline", "qrs_mean"):
             raise ValueError("prisco_reference must be 'baseline' or 'qrs_mean'")
+        if self.q_window_ms is not None and not (math.isfinite(self.q_window_ms) and self.q_window_ms > 0):
+            raise ValueError("q_window_ms must be None or a positive number of ms")
+        if self.q_anchor not in ("visible", "onset"):
+            raise ValueError("q_anchor must be 'visible' or 'onset'")
+        if self.recog_mv is not None and not (math.isfinite(self.recog_mv) and 0 < self.recog_mv < self.wave_mv):
+            raise ValueError("recog_mv must be None or between 0 and wave_mv")
+        if not (math.isfinite(self.recog_ms) and self.recog_ms > 0):
+            raise ValueError("recog_ms must be a positive number of ms")
 
 
 @dataclass(frozen=True)
@@ -147,3 +167,31 @@ def waves(x: np.ndarray, i0: int, i1: int, thr: float) -> list:
         p = a + int(np.argmax(part) if sign > 0 else np.argmin(part))
         out.append(Wave(sign, i0 + a, i0 + k - 1, i0 + p))
     return out
+
+
+def first_deflection(x: np.ndarray, i0: int, i1: int, thr: float, run: int):
+    """First excursion beyond +/- thr lasting at least run samples between i0 and i1:
+    (sign, start sample), or None. Shorter excursions (noise spikes) are skipped."""
+    seg = x[i0 : i1 + 1]
+    label = np.where(seg >= thr, 1, np.where(seg <= -thr, -1, 0))
+    k, n = 0, len(seg)
+    while k < n:
+        if label[k] == 0:
+            k += 1
+            continue
+        sign, a = int(label[k]), k
+        while k < n and label[k] == sign:
+            k += 1
+        if k - a >= run:
+            return sign, i0 + a
+    return None
+
+
+def follow(x: np.ndarray, start: int, i1: int, sign: int, reach: float, back: float) -> tuple:
+    """From start, follow a deflection of the given sign until the lead crosses back
+    beyond -sign * back or i1. Returns (reaches sign * reach first, its extreme sample)."""
+    seg = sign * x[start : i1 + 1]
+    turn = np.flatnonzero(seg <= -back)
+    stop = int(turn[0]) if turn.size else len(seg)
+    hit = np.flatnonzero(seg[:stop] >= reach)
+    return bool(hit.size), start + int(np.argmax(seg[:stop]))

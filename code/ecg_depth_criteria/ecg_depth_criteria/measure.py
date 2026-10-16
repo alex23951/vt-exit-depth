@@ -7,7 +7,7 @@ from dataclasses import asdict
 
 import numpy as np
 
-from .fiducials import Settings, qrs_offset, qrs_onset, slopes, spatial_velocity, waves
+from .fiducials import Settings, first_deflection, follow, qrs_offset, qrs_onset, slopes, spatial_velocity, waves
 from .leads import INDEPENDENT, INFERIOR, LEADS, LIMB, PRECORDIAL, rows
 
 NAN = float("nan")
@@ -102,7 +102,35 @@ def measure_beat(
     end = max(off_pre, off_any)
 
     lead_waves = {k: waves(x[i], on, end, cfg.wave_mv) for i, k in enumerate(LEADS)}
-    polarity = {k: (w[0].sign if w else 0) for k, w in lead_waves.items()}
+
+    # Initial deflection of each lead (q wave or initial r), 0.4.0. Window only (recog_mv None): the
+    # first wave beyond wave_mv counts if it starts within q_window_ms of the anchor. CSE recognition
+    # (recog_mv set): the first excursion beyond min(wave_mv, max(recog_mv, noise_sd x the lead's
+    # baseline SD)) lasting recog_ms, searched from the earlier of the onset and the anchor, counts if
+    # it starts within q_window_ms and reaches wave_mv before the lead crosses back beyond the opposite
+    # threshold. Otherwise the lead's polarity is 0 (neither q nor initial r). The anchor is the
+    # visible (detected) onset in every mode, never the stimulus, unless q_anchor="onset".
+    t0 = visible_onset if cfg.q_anchor == "visible" else on
+    win = None if cfg.q_window_ms is None else idx(cfg.q_window_ms)
+    polarity, initial_sign, initial_start, q_cse = {}, {}, {}, {}
+    for i, k in enumerate(LEADS):
+        if cfg.recog_mv is None:
+            w = lead_waves[k]
+            sign, start = (w[0].sign, w[0].start) if w else (0, None)
+            polarity[k] = sign if start is not None and (win is None or start - t0 <= win) else 0
+        else:
+            b = x[i, base]
+            thr = min(cfg.wave_mv, max(cfg.recog_mv, cfg.noise_sd * (float(b.std()) if b.size >= 3 else 0.0)))
+            first = first_deflection(x[i], min(on, t0), end, thr, max(1, idx(cfg.recog_ms)))
+            sign, start = first if first else (0, None)
+            polarity[k], q_cse[k] = 0, 0.0
+            if first:
+                reached, extreme = follow(x[i], start, end, sign, cfg.wave_mv, thr)
+                if reached and (win is None or start - t0 <= win):
+                    polarity[k] = sign
+                    q_cse[k] = float(-x[i, extreme]) if sign < 0 else 0.0
+        initial_sign[k] = sign
+        initial_start[k] = NAN if start is None else ms(start - t0)
 
     # Pseudo-delta: onset to the earliest fast deflection in any precordial lead.
     dp = np.abs(d[rows(PRECORDIAL), on : off_pre + 1])
@@ -192,7 +220,10 @@ def measure_beat(
                 groups[-1][1].append(row[w.peak])
             else:
                 groups.append((w.sign, [row[w.peak]]))
-        q = float(-min(groups[0][1])) if groups and groups[0][0] < 0 else 0.0
+        if cfg.recog_mv is not None:
+            q = q_cse[k]  # depth of the recognised initial deflection when it is a q
+        else:
+            q = float(-min(groups[0][1])) if groups and groups[0][0] < 0 and polarity[k] < 0 else 0.0
         pos = [n for n, (sign, _) in enumerate(groups) if sign > 0]
         if not pos:
             return q, 0.0, 0.0
@@ -249,6 +280,7 @@ def measure_beat(
         "onset_ms": ms(on),
         "onset_source": source,
         "visible_onset_ms": ms(visible_onset),
+        "q_anchor_ms": ms(t0),
         "offset_precordial_ms": ms(off_pre),
         "offset_any_lead_ms": ms(off_any),
         "qrs_duration_ms": qrsd,
@@ -267,7 +299,7 @@ def measure_beat(
         "inferior_q_any": any(polarity[k] < 0 for k in INFERIOR),
         "inferior_r_any": any(polarity[k] > 0 for k in INFERIOR),
         "q_V2": polarity["V2"] < 0,
-        "qs_V2": bool(lead_waves["V2"]) and all(w.sign < 0 for w in lead_waves["V2"]),
+        "qs_V2": polarity["V2"] < 0 and all(w.sign < 0 for w in lead_waves["V2"]),
         "q_V1": polarity["V1"] < 0,
         "avr_avl_ratio_lt_1": net_mv["aVR"] < net_mv["aVL"],
         "ii_iii_ratio_lt_1": net_mv["II"] < net_mv["III"],
@@ -288,6 +320,8 @@ def measure_beat(
         "prisco_average_limb_mv_s": _mean(average_by_lead[k] for k in LIMB),
         "prisco_average_precordial_mv_s": _mean(average_by_lead[k] for k in PRECORDIAL),
         "initial_polarity": polarity,
+        "initial_start_ms": initial_start,  # start of the lead's first deflection - q_anchor_ms; NaN if none
+        "initial_sign": initial_sign,  # its sign (+1, -1; 0 if none) before the window and reach checks
         "net_amplitude_mv": net_mv,
         "q_amplitude_mv": q_mv,
         "r_amplitude_mv": r_mv,

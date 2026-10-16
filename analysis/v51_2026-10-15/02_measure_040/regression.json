@@ -1,0 +1,59 @@
+{
+ "beats": 579,
+ "measurements_per_config": 7527,
+ "wall_s": 299.7,
+ "unscorable_030": [],
+ "configs": {
+  "legacy": {
+   "settings": {
+    "q_window_ms": null,
+    "recog_mv": null
+   },
+   "measurements": 7527,
+   "pass": true,
+   "unexpected_differences": {},
+   "allowed_keys_that_differed_count": 0
+  },
+  "N20_cse": {
+   "settings": {
+    "q_window_ms": 20.0,
+    "recog_mv": 0.02
+   },
+   "measurements": 7527,
+   "pass": true,
+   "unexpected_differences": {},
+   "allowed_keys_that_differed_count": 54
+  },
+  "N20_window_only": {
+   "settings": {
+    "q_window_ms": 20.0,
+    "recog_mv": null
+   },
+   "measurements": 7527,
+   "pass": true,
+   "unexpected_differences": {},
+   "allowed_keys_that_differed_count": 54
+  },
+  "N40_cse": {
+   "settings": {
+    "q_window_ms": 40.0,
+    "recog_mv": 0.02
+   },
+   "measurements": 7527,
+   "pass": true,
+   "unexpected_differences": {},
+   "allowed_keys_that_differed_count": 53
+  },
+  "N40_window_only": {
+   "settings": {
+    "q_window_ms": 40.0,
+    "recog_mv": null
+   },
+   "measurements": 7527,
+   "pass": true,
+   "unexpected_differences": {},
+   "allowed_keys_that_differed_count": 54
+  }
+ },
+ "all_pass": true
+}
