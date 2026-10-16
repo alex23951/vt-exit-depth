@@ -1,0 +1,231 @@
+V1: 8 beats in /home/alex/vt-exit-depth/analysis/rvot_tests_2026-10-12/V1/beats.csv, 29 s
+{
+ "heart": "Y5HYEDL4",
+ "network_version": "v3",
+ "lbbb_cut": false,
+ "distal_speed_m_s": null,
+ "nodes": 7776,
+ "edges": 11975,
+ "length_mm": {
+  "proximal": 394.4,
+  "distal_lv": 5302.4,
+  "distal_rv": 5799.6
+ },
+ "proximal_mm": {
+  "lbb": 11.5,
+  "division_anterior": 20.4,
+  "division_anterior_post": 112.5,
+  "division_septal": 30.5,
+  "division_septal_post": 40.5,
+  "division_posterior": 48.1,
+  "division_posterior_post": 33.9,
+  "rbb": 64.1,
+  "moderator_band": 14.7,
+  "rbb_apical": 18.2
+ },
+ "branches_lv_terminals": 560,
+ "branches_rv_terminals": 597,
+ "reconnections": {
+  "lv": 553,
+  "rv": 571
+ },
+ "proximal_speed_m_s": {
+  "lbb": 2.0,
+  "division_anterior": 2.0,
+  "division_anterior_post": 2.0,
+  "division_septal": 2.4,
+  "division_septal_post": 2.4,
+  "division_posterior": 3.16,
+  "division_posterior_post": 3.16,
+  "rbb": 3.36,
+  "moderator_band": 3.36,
+  "rbb_apical": 3.36
+ },
+ "his_to_lv_sites_ms": 15.9,
+ "pmj": 4835,
+ "pmj_spacing_mm": 0.89,
+ "pmj_lv": 2326,
+ "pmj_rv": 2509,
+ "allowed_area_cm2": {
+  "lv": 133.5,
+  "rv": 188.9
+ },
+ "pmj_per_cm2_of_allowed": {
+  "lv": 17.4,
+  "rv": 13.3
+ },
+ "gap_to_network_mm_median": {
+  "lv": 1.2,
+  "rv": 1.6
+ },
+ "gap_to_network_mm_max": {
+  "lv": 10.0,
+  "rv": 11.2
+ },
+ "landmarks": {
+  "his": 305272,
+  "his_z_phi": [
+   0.919,
+   43.2
+  ],
+  "lbb_branch": 46700,
+  "his_rv": 350727,
+  "rbb_low": 16331,
+  "mb_end": 311002,
+  "mb_length_mm": 14.7,
+  "fascicle_ends": {
+   "anterior": [
+    65973,
+    0.12,
+    118.9
+   ],
+   "septal": [
+    291535,
+    0.12,
+    1.0
+   ],
+   "posterior": [
+    4105,
+    0.12,
+    -117.4
+   ]
+  }
+ }
+}
+V3: 65 beats in /home/alex/vt-exit-depth/analysis/rvot_tests_2026-10-12/V3/beats.csv, 235 s
+{
+ "heart": "Y5HYEDL4",
+ "network_version": "v3",
+ "lbbb_cut": false,
+ "distal_speed_m_s": null,
+ "nodes": 6353,
+ "edges": 9761,
+ "length_mm": {
+  "proximal": 394.4,
+  "distal_lv": 5579.4,
+  "distal_rv": 3378.2
+ },
+ "proximal_mm": {
+  "lbb": 11.5,
+  "division_anterior": 20.4,
+  "division_anterior_post": 112.5,
+  "division_septal": 30.5,
+  "division_septal_post": 40.5,
+  "division_posterior": 48.1,
+  "division_posterior_post": 33.9,
+  "rbb": 64.1,
+  "moderator_band": 14.7,
+  "rbb_apical": 18.2
+ },
+ "branches_lv_terminals": 601,
+ "branches_rv_terminals": 359,
+ "reconnections": {
+  "lv": 596,
+  "rv": 336
+ },
+ "proximal_speed_m_s": {
+  "lbb": 2.0,
+  "division_anterior": 2.0,
+  "division_anterior_post": 2.0,
+  "division_septal": 2.4,
+  "division_septal_post": 2.4,
+  "division_posterior": 3.16,
+  "division_posterior_post": 3.16,
+  "rbb": 3.36,
+  "moderator_band": 3.36,
+  "rbb_apical": 3.36
+ },
+ "his_to_lv_sites_ms": 15.9,
+ "pmj": 3732,
+ "pmj_spacing_mm": 0.9,
+ "pmj_lv": 2323,
+ "pmj_rv": 1409,
+ "allowed_area_cm2": {
+  "lv": 138.1,
+  "rv": 110.8
+ },
+ "pmj_per_cm2_of_allowed": {
+  "lv": 16.8,
+  "rv": 12.7
+ },
+ "gap_to_network_mm_median": {
+  "lv": 1.2,
+  "rv": 1.7
+ },
+ "gap_to_network_mm_max": {
+  "lv": 12.8,
+  "rv": 10.2
+ },
+ "landmarks": {
+  "his": 305272,
+  "his_z_phi": [
+   0.919,
+   43.2
+  ],
+  "lbb_branch": 46700,
+  "his_rv": 350727,
+  "rbb_low": 16331,
+  "mb_end": 311002,
+  "mb_length_mm": 14.7,
+  "fascicle_ends": {
+   "anterior": [
+    65973,
+    0.12,
+    118.9
+   ],
+   "septal": [
+    291535,
+    0.12,
+    1.0
+   ],
+   "posterior": [
+    4105,
+    0.12,
+    -117.4
+   ]
+  }
+ }
+}
+V4: 65 beats in /home/alex/vt-exit-depth/analysis/rvot_tests_2026-10-12/V4/beats.csv, 229 s
+                 set  RVOT  cusp  summit_90  vein_90  LV_endo_10  LV_fw_10_only  summit_cusp_qrs  lvfw_qrs_90_10 lvfw_qrs_10_90  his_qrs  his_axis_net  his_axis_area  order_ok  qrs_ratio_ok  summit_cusp_ok
+v3 stored (openCARP) 0.667 0.571      0.476    0.451       0.338          0.349            162.5          1.0791    158.0/170.5    104.4          64.0          -37.0     False          True            True
+            V1 graph 0.671   NaN        NaN      NaN         NaN            NaN              NaN             NaN        nan/nan      NaN           NaN            NaN     False         False           False
+            V2 graph 0.718 0.557      0.444    0.476       0.361          0.355            159.0          1.0868    155.5/169.0    105.6          69.0          -55.0     False          True            True
+            V3 graph 0.622 0.698      0.539    0.539       0.453          0.432            134.0          1.1188    130.5/146.0     96.7          63.0           75.0     False          True            True
+            V4 graph 0.698 0.625      0.479    0.412       0.369          0.357            163.0          1.1016    152.5/168.0    102.6          59.0           66.0     False          True            True
+{'set': 'v3', 'his_qrs_true': 104.2, 'his_qrs_detected': 96.0, 'his_latest_after_lv_onset': 104.2, 'lv_endo_30ms_pct': 47.9, 'lv_endo_37.5ms_pct': 65.8, 'rv_epi_breakthrough_ms': 15.3, 'axis_net': 64, 'axis_area': -46, 'rvot_t10_ms': 59.4, 'rvot_t50_ms': 96.6, 'rvot_tmax_ms': 96.0}
+{'set': 'V1', 'rvot_t10_ms': 55.9, 'rvot_t50_ms': 91.1, 'rvot_tmax_ms': 96.0, 'fw_ratio_medians': nan, 'fw_ratio_means': nan, 'fw_pair_median_pct': nan}
+{'set': 'V2', 'his_qrs_true': 105.6, 'his_qrs_detected': 100.0, 'his_latest_after_lv_onset': 105.6, 'lv_endo_30ms_pct': 48.9, 'lv_endo_37.5ms_pct': 66.7, 'rv_epi_breakthrough_ms': 14.7, 'axis_net': 69, 'axis_area': -55, 'rvot_t10_ms': 56.8, 'rvot_t50_ms': 93.3, 'rvot_tmax_ms': 100.5, 'fw_ratio_medians': 1.0868, 'fw_ratio_means': 1.0716, 'fw_pair_median_pct': 7.6}
+{'set': 'V3', 'his_qrs_true': 96.7, 'his_qrs_detected': 81.0, 'his_latest_after_lv_onset': 96.7, 'lv_endo_30ms_pct': 47.9, 'lv_endo_37.5ms_pct': 65.9, 'rv_epi_breakthrough_ms': 14.7, 'axis_net': 63, 'axis_area': 75, 'rvot_t10_ms': 45.5, 'rvot_t50_ms': 85.4, 'rvot_tmax_ms': 84.5, 'fw_ratio_medians': 1.1188, 'fw_ratio_means': 1.0846, 'fw_pair_median_pct': 8.0}
+{'set': 'V4', 'his_qrs_true': 102.6, 'his_qrs_detected': 96.0, 'his_latest_after_lv_onset': 102.6, 'lv_endo_30ms_pct': 49.2, 'lv_endo_37.5ms_pct': 68.5, 'rv_epi_breakthrough_ms': 14.7, 'axis_net': 59, 'axis_area': 66, 'rvot_t10_ms': 57.8, 'rvot_t50_ms': 94.6, 'rvot_tmax_ms': 101.5, 'fw_ratio_medians': 1.1016, 'fw_ratio_means': 1.0764, 'fw_pair_median_pct': 8.7}
+                                 0            1            2            3      4                     5
+set                             V1           V2           V3           V4     v3  v3 stored (openCARP)
+RVOT                         0.671        0.718        0.622        0.698    NaN                 0.667
+cusp                           NaN        0.557        0.698        0.625    NaN                 0.571
+summit_90                      NaN        0.444        0.539        0.479    NaN                 0.476
+vein_90                        NaN        0.476        0.539        0.412    NaN                 0.451
+LV_endo_10                     NaN        0.361        0.453        0.369    NaN                 0.338
+LV_fw_10_only                  NaN        0.355        0.432        0.357    NaN                 0.349
+summit_cusp_qrs                NaN        159.0        134.0        163.0    NaN                 162.5
+lvfw_qrs_90_10                 NaN       1.0868       1.1188       1.1016    NaN                1.0791
+lvfw_qrs_10_90             nan/nan  155.5/169.0  130.5/146.0  152.5/168.0    NaN           158.0/170.5
+his_qrs                        NaN        105.6         96.7        102.6    NaN                 104.4
+his_axis_net                   NaN         69.0         63.0         59.0    NaN                  64.0
+his_axis_area                  NaN        -55.0         75.0         66.0    NaN                 -37.0
+order_ok                     False        False        False        False    NaN                 False
+qrs_ratio_ok                 False         True         True         True    NaN                  True
+summit_cusp_ok               False         True         True         True    NaN                  True
+his_qrs_true                   NaN        105.6         96.7        102.6  104.2                   NaN
+his_qrs_detected               NaN        100.0         81.0         96.0   96.0                   NaN
+his_latest_after_lv_onset      NaN        105.6         96.7        102.6  104.2                   NaN
+lv_endo_30ms_pct               NaN         48.9         47.9         49.2   47.9                   NaN
+lv_endo_37.5ms_pct             NaN         66.7         65.9         68.5   65.8                   NaN
+rv_epi_breakthrough_ms         NaN         14.7         14.7         14.7   15.3                   NaN
+axis_net                       NaN         69.0         63.0         59.0   64.0                   NaN
+axis_area                      NaN        -55.0         75.0         66.0  -46.0                   NaN
+rvot_t10_ms                   55.9         56.8         45.5         57.8   59.4                   NaN
+rvot_t50_ms                   91.1         93.3         85.4         94.6   96.6                   NaN
+rvot_tmax_ms                  96.0        100.5         84.5        101.5   96.0                   NaN
+fw_ratio_medians               NaN       1.0868       1.1188       1.1016    NaN                   NaN
+fw_ratio_means                 NaN       1.0716       1.0846       1.0764    NaN                   NaN
+fw_pair_median_pct             NaN          7.6          8.0          8.7    NaN                   NaN

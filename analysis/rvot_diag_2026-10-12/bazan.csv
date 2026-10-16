@@ -1,0 +1,19 @@
+heart,test,n_pairs,median_change_ms,median_change_pct,range_ms,d90,d10
+Y5HYEDL4,Bazan2006 RV free wall QRS 90 vs 10 % (true),9,6.0,4.137931034482759,1 to 7,,
+Y5HYEDL4,Bazan2006 RV free wall QRS 90 vs 10 % (detected),9,6.0,4.285714285714286,2 to 7,,
+Y5HYEDL4,Bazan2007 lv_basal_superior q in lead I (true),7,,,,2/7,2/7
+Y5HYEDL4,Bazan2007 lv_basal_superior q in lead I (detected),7,,,,2/7,2/7
+Y5HYEDL4,"Bazan2007 lv_basal_inferior Q in II, III or aVF (true)",2,,,,2/2,0/2
+Y5HYEDL4,"Bazan2007 lv_basal_inferior Q in II, III or aVF (detected)",2,,,,2/2,0/2
+6G8DD8S5,Bazan2006 RV free wall QRS 90 vs 10 % (true),9,4.0,2.5806451612903225,-10 to 7,,
+6G8DD8S5,Bazan2006 RV free wall QRS 90 vs 10 % (detected),9,5.0,3.289473684210526,-10 to 7,,
+6G8DD8S5,Bazan2007 lv_basal_superior q in lead I (true),7,,,,1/7,1/7
+6G8DD8S5,Bazan2007 lv_basal_superior q in lead I (detected),7,,,,1/7,1/7
+6G8DD8S5,"Bazan2007 lv_basal_inferior Q in II, III or aVF (true)",3,,,,3/3,0/3
+6G8DD8S5,"Bazan2007 lv_basal_inferior Q in II, III or aVF (detected)",3,,,,3/3,0/3
+7D98EVAR,Bazan2006 RV free wall QRS 90 vs 10 % (true),9,5.0,3.64963503649635,-4 to 8,,
+7D98EVAR,Bazan2006 RV free wall QRS 90 vs 10 % (detected),9,4.0,3.225806451612903,0 to 8,,
+7D98EVAR,Bazan2007 lv_basal_superior q in lead I (true),7,,,,1/7,0/7
+7D98EVAR,Bazan2007 lv_basal_superior q in lead I (detected),7,,,,1/7,0/7
+7D98EVAR,"Bazan2007 lv_basal_inferior Q in II, III or aVF (true)",3,,,,2/3,0/3
+7D98EVAR,"Bazan2007 lv_basal_inferior Q in II, III or aVF (detected)",3,,,,2/3,0/3

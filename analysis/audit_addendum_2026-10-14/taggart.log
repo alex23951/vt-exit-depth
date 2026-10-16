@@ -1,0 +1,306 @@
+Y5HYEDL4 {
+ "centre_uvc_z": 0.511,
+ "insertions_deg(ant,inf)": [
+  76,
+  -59
+ ],
+ "free_wall_middle_deg": -172,
+ "primary": {
+  "net longitudinal": {
+   "site": "rv_free_wall_q25_z0.5_d50",
+   "depth": 0.5,
+   "angle_deg": 14.2,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 1.509,
+   "1/|g|": 1.463,
+   "wavefront_dir_deg": 165.8,
+   "two_point_m_s": 1.599,
+   "fit_rms_ms": 0.922
+  },
+  "net transverse": {
+   "site": "rv_free_wall_q75_z0.5_d50",
+   "depth": 0.5,
+   "angle_deg": 1.9,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 2.27,
+   "1/|g|": 2.269,
+   "wavefront_dir_deg": 88.1,
+   "two_point_m_s": 2.317,
+   "fit_rms_ms": 1.007
+  },
+  "nonet longitudinal": {
+   "site": "rv_free_wall_q25_z0.25_d50",
+   "depth": 0.5,
+   "angle_deg": 0.2,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 0.612,
+   "1/|g|": 0.612,
+   "wavefront_dir_deg": -179.8,
+   "two_point_m_s": 0.611,
+   "fit_rms_ms": 0.17
+  },
+  "nonet transverse": {
+   "site": "rv_free_wall_q75_z0.5_d75",
+   "depth": 0.75,
+   "angle_deg": 8.8,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 0.636,
+   "1/|g|": 0.629,
+   "wavefront_dir_deg": 81.2,
+   "two_point_m_s": 0.652,
+   "fit_rms_ms": 0.161
+  }
+ },
+ "basal_1cm": {
+  "net longitudinal": {
+   "site": "rv_free_wall_q25_z0.5_d75",
+   "depth": 0.75,
+   "angle_deg": 36.5,
+   "accepted(<=20deg)": false,
+   "apparent_speed_m_s(primary)": 2.261,
+   "1/|g|": 1.817,
+   "wavefront_dir_deg": -143.5,
+   "two_point_m_s": 2.672,
+   "fit_rms_ms": 0.794
+  },
+  "net transverse": {
+   "site": "rv_free_wall_q75_z0.5_d10",
+   "depth": 0.1,
+   "angle_deg": 30.4,
+   "accepted(<=20deg)": false,
+   "apparent_speed_m_s(primary)": 2.172,
+   "1/|g|": 1.873,
+   "wavefront_dir_deg": -59.6,
+   "two_point_m_s": 2.175,
+   "fit_rms_ms": 0.75
+  },
+  "nonet longitudinal": {
+   "site": "rv_free_wall_q25_z0.25_d90",
+   "depth": 0.9,
+   "angle_deg": 3.4,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 0.567,
+   "1/|g|": 0.566,
+   "wavefront_dir_deg": -176.6,
+   "two_point_m_s": 0.652,
+   "fit_rms_ms": 0.202
+  },
+  "nonet transverse": {
+   "site": "rv_free_wall_q75_z0.5_d90",
+   "depth": 0.9,
+   "angle_deg": 8.1,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 0.633,
+   "1/|g|": 0.626,
+   "wavefront_dir_deg": -81.9,
+   "two_point_m_s": 0.647,
+   "fit_rms_ms": 0.284
+  }
+ },
+ "apical_1cm": {
+  "net longitudinal": {
+   "site": "rv_free_wall_q25_z0.5_d75",
+   "depth": 0.75,
+   "angle_deg": 28.6,
+   "accepted(<=20deg)": false,
+   "apparent_speed_m_s(primary)": 2.127,
+   "1/|g|": 1.868,
+   "wavefront_dir_deg": -151.4,
+   "two_point_m_s": 2.272,
+   "fit_rms_ms": 0.678
+  },
+  "net transverse": {
+   "site": "rv_free_wall_q50_z0.75_d90",
+   "depth": 0.9,
+   "angle_deg": 8.0,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 1.987,
+   "1/|g|": 1.968,
+   "wavefront_dir_deg": -98.0,
+   "two_point_m_s": 2.056,
+   "fit_rms_ms": 0.293
+  },
+  "nonet longitudinal": {
+   "site": "rv_free_wall_q25_z0.25_d75",
+   "depth": 0.75,
+   "angle_deg": 0.8,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 0.594,
+   "1/|g|": 0.594,
+   "wavefront_dir_deg": -179.2,
+   "two_point_m_s": 0.626,
+   "fit_rms_ms": 0.222
+  },
+  "nonet transverse": {
+   "site": "rv_free_wall_q75_z0.25_d50",
+   "depth": 0.5,
+   "angle_deg": 8.6,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 0.675,
+   "1/|g|": 0.668,
+   "wavefront_dir_deg": -98.6,
+   "two_point_m_s": 0.699,
+   "fit_rms_ms": 0.487
+  }
+ }
+}
+6G8DD8S5 {
+ "centre_uvc_z": 0.506,
+ "insertions_deg(ant,inf)": [
+  63,
+  -53
+ ],
+ "free_wall_middle_deg": -175,
+ "primary": {
+  "net longitudinal": {
+   "site": "rv_free_wall_q25_z0.25_d10",
+   "depth": 0.1,
+   "angle_deg": 6.5,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 0.787,
+   "1/|g|": 0.782,
+   "wavefront_dir_deg": 173.5,
+   "two_point_m_s": 0.959,
+   "fit_rms_ms": 1.32
+  },
+  "net transverse": {
+   "site": "rvot_septal_z_d90",
+   "depth": 0.9,
+   "angle_deg": 39.7,
+   "accepted(<=20deg)": false,
+   "apparent_speed_m_s(primary)": 1.194,
+   "1/|g|": 0.919,
+   "wavefront_dir_deg": -129.7,
+   "two_point_m_s": 1.23,
+   "fit_rms_ms": 0.687
+  }
+ },
+ "basal_1cm": {
+  "net longitudinal": {
+   "site": "rv_free_wall_q75_z0.5_d10",
+   "depth": 0.1,
+   "angle_deg": 1.4,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 1.911,
+   "1/|g|": 1.91,
+   "wavefront_dir_deg": 178.6,
+   "two_point_m_s": 2.127,
+   "fit_rms_ms": 2.458
+  },
+  "net transverse": {
+   "site": "rvot_free_wall_z_d10",
+   "depth": 0.1,
+   "angle_deg": 0.6,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 1.856,
+   "1/|g|": 1.856,
+   "wavefront_dir_deg": 89.4,
+   "two_point_m_s": 2.833,
+   "fit_rms_ms": 2.496
+  }
+ },
+ "apical_1cm": {
+  "net longitudinal": {
+   "site": "rv_free_wall_q50_z0.5_d90",
+   "depth": 0.9,
+   "angle_deg": 0.1,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 1.654,
+   "1/|g|": 1.654,
+   "wavefront_dir_deg": -179.9,
+   "two_point_m_s": 1.619,
+   "fit_rms_ms": 2.499
+  },
+  "net transverse": {
+   "site": "rvot_septal_z_d90",
+   "depth": 0.9,
+   "angle_deg": 21.2,
+   "accepted(<=20deg)": false,
+   "apparent_speed_m_s(primary)": 3.084,
+   "1/|g|": 2.876,
+   "wavefront_dir_deg": -111.2,
+   "two_point_m_s": 2.823,
+   "fit_rms_ms": 1.492
+  }
+ }
+}
+7D98EVAR {
+ "centre_uvc_z": 0.515,
+ "insertions_deg(ant,inf)": [
+  59,
+  -51
+ ],
+ "free_wall_middle_deg": -176,
+ "primary": {
+  "net longitudinal": {
+   "site": "rv_free_wall_q25_z0.75_d75",
+   "depth": 0.75,
+   "angle_deg": 2.2,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 6.483,
+   "1/|g|": 6.478,
+   "wavefront_dir_deg": 177.8,
+   "two_point_m_s": 6.37,
+   "fit_rms_ms": 0.62
+  },
+  "net transverse": {
+   "site": "rv_free_wall_q75_z0.75_d10",
+   "depth": 0.1,
+   "angle_deg": 8.4,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 1.256,
+   "1/|g|": 1.243,
+   "wavefront_dir_deg": -98.4,
+   "two_point_m_s": 1.285,
+   "fit_rms_ms": 1.053
+  }
+ },
+ "basal_1cm": {
+  "net longitudinal": {
+   "site": "rv_free_wall_q50_z0.25_d10",
+   "depth": 0.1,
+   "angle_deg": 2.9,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 2.527,
+   "1/|g|": 2.524,
+   "wavefront_dir_deg": 177.1,
+   "two_point_m_s": 2.614,
+   "fit_rms_ms": 0.547
+  },
+  "net transverse": {
+   "site": "rv_free_wall_q50_z0.5_d90",
+   "depth": 0.9,
+   "angle_deg": 5.6,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 4.701,
+   "1/|g|": 4.679,
+   "wavefront_dir_deg": -95.6,
+   "two_point_m_s": 3.184,
+   "fit_rms_ms": 1.887
+  }
+ },
+ "apical_1cm": {
+  "net longitudinal": {
+   "site": "rv_free_wall_q25_z0.25_d50",
+   "depth": 0.5,
+   "angle_deg": 5.1,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 1.898,
+   "1/|g|": 1.891,
+   "wavefront_dir_deg": 174.9,
+   "two_point_m_s": 2.103,
+   "fit_rms_ms": 1.401
+  },
+  "net transverse": {
+   "site": "rv_free_wall_q75_z0.25_d90",
+   "depth": 0.9,
+   "angle_deg": 14.9,
+   "accepted(<=20deg)": true,
+   "apparent_speed_m_s(primary)": 1.53,
+   "1/|g|": 1.478,
+   "wavefront_dir_deg": -104.9,
+   "two_point_m_s": 1.612,
+   "fit_rms_ms": 0.923
+  }
+ }
+}

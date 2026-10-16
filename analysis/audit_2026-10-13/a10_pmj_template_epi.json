@@ -1,0 +1,461 @@
+{
+ "Y5HYEDL4": {
+  "pmj_density_by_region(per cm2 of endocardium)": {
+   "LV septal apical z<0.33": {
+    "area_cm2": 5.3,
+    "pmj": 93,
+    "per_cm2": 17.5
+   },
+   "LV free apical z<0.33": {
+    "area_cm2": 30.5,
+    "pmj": 540,
+    "per_cm2": 17.7
+   },
+   "LV septal mid 0.33-0.67": {
+    "area_cm2": 18.9,
+    "pmj": 297,
+    "per_cm2": 15.7
+   },
+   "LV free mid 0.33-0.67": {
+    "area_cm2": 40.0,
+    "pmj": 603,
+    "per_cm2": 15.1
+   },
+   "LV septal basal 0.67-0.9": {
+    "area_cm2": 13.9,
+    "pmj": 202,
+    "per_cm2": 14.5
+   },
+   "LV free basal 0.67-0.9": {
+    "area_cm2": 25.7,
+    "pmj": 486,
+    "per_cm2": 18.9
+   },
+   "LV septal top z>0.9": {
+    "area_cm2": 4.5,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "LV free top z>0.9": {
+    "area_cm2": 14.5,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "RV septal apical z<0.33": {
+    "area_cm2": 3.9,
+    "pmj": 66,
+    "per_cm2": 16.9
+   },
+   "RV free apical z<0.33": {
+    "area_cm2": 9.1,
+    "pmj": 134,
+    "per_cm2": 14.8
+   },
+   "RV septal mid 0.33-0.67": {
+    "area_cm2": 18.3,
+    "pmj": 18,
+    "per_cm2": 1.0
+   },
+   "RV free mid 0.33-0.67": {
+    "area_cm2": 50.3,
+    "pmj": 547,
+    "per_cm2": 10.9
+   },
+   "RV septal basal 0.67-0.9": {
+    "area_cm2": 14.5,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "RV free basal 0.67-0.9": {
+    "area_cm2": 48.2,
+    "pmj": 679,
+    "per_cm2": 14.1
+   },
+   "RV septal top z>0.9": {
+    "area_cm2": 4.2,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "RV free top z>0.9": {
+    "area_cm2": 40.4,
+    "pmj": 0,
+    "per_cm2": 0.0
+   }
+  },
+  "landmarks": {
+   "his": 305272,
+   "his_z_phi": [
+    0.919,
+    43.2
+   ],
+   "lbb_branch": 46700,
+   "his_rv": 350727,
+   "rbb_low": 16331,
+   "mb_end": 311002,
+   "mb_length_mm": 14.7,
+   "fascicle_ends": {
+    "anterior": [
+     65973,
+     0.12,
+     118.9
+    ],
+    "septal": [
+     291535,
+     0.12,
+     1.0
+    ],
+    "posterior": [
+     4105,
+     0.12,
+     -117.4
+    ]
+   }
+  },
+  "proximal_mm": {
+   "lbb": 11.5,
+   "division_anterior": 20.4,
+   "division_anterior_post": 112.5,
+   "division_septal": 30.5,
+   "division_septal_post": 40.5,
+   "division_posterior": 48.1,
+   "division_posterior_post": 33.9,
+   "rbb": 64.1,
+   "moderator_band": 14.7,
+   "rbb_apical": 18.2
+  },
+  "proximal_speed_m_s": {
+   "lbb": 2.0,
+   "division_anterior": 2.0,
+   "division_anterior_post": 2.0,
+   "division_septal": 2.4,
+   "division_septal_post": 2.4,
+   "division_posterior": 3.16,
+   "division_posterior_post": 3.16,
+   "rbb": 3.36,
+   "moderator_band": 3.36,
+   "rbb_apical": 3.36
+  },
+  "pmj_on_endo_surface": true,
+  "his_to_lv_sites_ms": 15.9,
+  "epi_faces_all_nodes_on_endo": 0,
+  "epi_faces": 92365
+ },
+ "6G8DD8S5": {
+  "pmj_density_by_region(per cm2 of endocardium)": {
+   "LV septal apical z<0.33": {
+    "area_cm2": 5.7,
+    "pmj": 95,
+    "per_cm2": 16.6
+   },
+   "LV free apical z<0.33": {
+    "area_cm2": 23.9,
+    "pmj": 406,
+    "per_cm2": 17.0
+   },
+   "LV septal mid 0.33-0.67": {
+    "area_cm2": 13.8,
+    "pmj": 246,
+    "per_cm2": 17.8
+   },
+   "LV free mid 0.33-0.67": {
+    "area_cm2": 41.3,
+    "pmj": 526,
+    "per_cm2": 12.7
+   },
+   "LV septal basal 0.67-0.9": {
+    "area_cm2": 12.0,
+    "pmj": 234,
+    "per_cm2": 19.6
+   },
+   "LV free basal 0.67-0.9": {
+    "area_cm2": 33.6,
+    "pmj": 476,
+    "per_cm2": 14.1
+   },
+   "LV septal top z>0.9": {
+    "area_cm2": 0.8,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "LV free top z>0.9": {
+    "area_cm2": 7.9,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "RV septal apical z<0.33": {
+    "area_cm2": 4.4,
+    "pmj": 66,
+    "per_cm2": 15.1
+   },
+   "RV free apical z<0.33": {
+    "area_cm2": 10.4,
+    "pmj": 146,
+    "per_cm2": 14.0
+   },
+   "RV septal mid 0.33-0.67": {
+    "area_cm2": 14.6,
+    "pmj": 26,
+    "per_cm2": 1.8
+   },
+   "RV free mid 0.33-0.67": {
+    "area_cm2": 31.4,
+    "pmj": 372,
+    "per_cm2": 11.8
+   },
+   "RV septal basal 0.67-0.9": {
+    "area_cm2": 9.8,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "RV free basal 0.67-0.9": {
+    "area_cm2": 37.4,
+    "pmj": 599,
+    "per_cm2": 16.0
+   },
+   "RV septal top z>0.9": {
+    "area_cm2": 0.8,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "RV free top z>0.9": {
+    "area_cm2": 17.1,
+    "pmj": 0,
+    "per_cm2": 0.0
+   }
+  },
+  "landmarks": {
+   "his": 54486,
+   "his_z_phi": [
+    0.918,
+    -3.0
+   ],
+   "lbb_branch": 350492,
+   "his_rv": 36372,
+   "rbb_low": 46375,
+   "mb_end": 26386,
+   "mb_length_mm": 18.2,
+   "fascicle_ends": {
+    "anterior": [
+     289580,
+     0.12,
+     119.1
+    ],
+    "septal": [
+     17222,
+     0.13,
+     3.5
+    ],
+    "posterior": [
+     356159,
+     0.13,
+     -123.2
+    ]
+   }
+  },
+  "proximal_mm": {
+   "lbb": 13.5,
+   "division_anterior": 21.1,
+   "division_anterior_post": 111.7,
+   "division_septal": 22.8,
+   "division_septal_post": 37.8,
+   "division_posterior": 36.8,
+   "division_posterior_post": 43.7,
+   "rbb": 49.2,
+   "moderator_band": 18.2,
+   "rbb_apical": 14.1
+  },
+  "proximal_speed_m_s": {
+   "lbb": 2.0,
+   "division_anterior": 2.0,
+   "division_anterior_post": 2.0,
+   "division_septal": 1.75,
+   "division_septal_post": 1.75,
+   "division_posterior": 2.37,
+   "division_posterior_post": 2.37,
+   "rbb": 2.72,
+   "moderator_band": 2.72,
+   "rbb_apical": 2.72
+  },
+  "pmj_on_endo_surface": true,
+  "his_to_lv_sites_ms": 17.3,
+  "epi_faces_all_nodes_on_endo": 0,
+  "epi_faces": 79835
+ },
+ "7D98EVAR": {
+  "pmj_density_by_region(per cm2 of endocardium)": {
+   "LV septal apical z<0.33": {
+    "area_cm2": 4.4,
+    "pmj": 81,
+    "per_cm2": 18.6
+   },
+   "LV free apical z<0.33": {
+    "area_cm2": 34.4,
+    "pmj": 590,
+    "per_cm2": 17.1
+   },
+   "LV septal mid 0.33-0.67": {
+    "area_cm2": 13.4,
+    "pmj": 176,
+    "per_cm2": 13.1
+   },
+   "LV free mid 0.33-0.67": {
+    "area_cm2": 43.4,
+    "pmj": 542,
+    "per_cm2": 12.5
+   },
+   "LV septal basal 0.67-0.9": {
+    "area_cm2": 12.2,
+    "pmj": 204,
+    "per_cm2": 16.7
+   },
+   "LV free basal 0.67-0.9": {
+    "area_cm2": 28.0,
+    "pmj": 411,
+    "per_cm2": 14.7
+   },
+   "LV septal top z>0.9": {
+    "area_cm2": 2.6,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "LV free top z>0.9": {
+    "area_cm2": 10.7,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "RV septal apical z<0.33": {
+    "area_cm2": 2.9,
+    "pmj": 39,
+    "per_cm2": 13.3
+   },
+   "RV free apical z<0.33": {
+    "area_cm2": 7.2,
+    "pmj": 117,
+    "per_cm2": 16.3
+   },
+   "RV septal mid 0.33-0.67": {
+    "area_cm2": 14.2,
+    "pmj": 11,
+    "per_cm2": 0.8
+   },
+   "RV free mid 0.33-0.67": {
+    "area_cm2": 30.3,
+    "pmj": 446,
+    "per_cm2": 14.7
+   },
+   "RV septal basal 0.67-0.9": {
+    "area_cm2": 12.3,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "RV free basal 0.67-0.9": {
+    "area_cm2": 41.2,
+    "pmj": 624,
+    "per_cm2": 15.1
+   },
+   "RV septal top z>0.9": {
+    "area_cm2": 2.3,
+    "pmj": 0,
+    "per_cm2": 0.0
+   },
+   "RV free top z>0.9": {
+    "area_cm2": 30.2,
+    "pmj": 0,
+    "per_cm2": 0.0
+   }
+  },
+  "landmarks": {
+   "his": 30257,
+   "his_z_phi": [
+    0.917,
+    42.6
+   ],
+   "lbb_branch": 42802,
+   "his_rv": 26734,
+   "rbb_low": 14473,
+   "mb_end": 238030,
+   "mb_length_mm": 10.1,
+   "fascicle_ends": {
+    "anterior": [
+     29913,
+     0.12,
+     121.4
+    ],
+    "septal": [
+     230412,
+     0.12,
+     0.4
+    ],
+    "posterior": [
+     185906,
+     0.12,
+     -119.9
+    ]
+   }
+  },
+  "proximal_mm": {
+   "lbb": 12.1,
+   "division_anterior": 17.5,
+   "division_anterior_post": 101.0,
+   "division_septal": 25.3,
+   "division_septal_post": 35.8,
+   "division_posterior": 39.9,
+   "division_posterior_post": 43.2,
+   "rbb": 54.8,
+   "moderator_band": 10.1,
+   "rbb_apical": 13.7
+  },
+  "proximal_speed_m_s": {
+   "lbb": 2.0,
+   "division_anterior": 2.0,
+   "division_anterior_post": 2.0,
+   "division_septal": 2.25,
+   "division_septal_post": 2.25,
+   "division_posterior": 2.91,
+   "division_posterior_post": 2.91,
+   "rbb": 2.91,
+   "moderator_band": 2.91,
+   "rbb_apical": 2.91
+  },
+  "pmj_on_endo_surface": true,
+  "his_to_lv_sites_ms": 14.8,
+  "epi_faces_all_nodes_on_endo": 0,
+  "epi_faces": 82710
+ },
+ "Y5HYEDL4_template": {
+  "node": 87227,
+  "lat_ms": 59.999975,
+  "frames": 141,
+  "dt_ms": 1.0,
+  "rest_mV": -88.8,
+  "peak_mV": 21.2,
+  "max_dVdt_mV_per_ms(1ms frames)": 61.2,
+  "upstroke_10_90_ms": 3,
+  "V_at_lat+20ms": 20.9,
+  "V_last": 13.9
+ },
+ "6G8DD8S5_template": {
+  "node": 158949,
+  "lat_ms": 59.99973,
+  "frames": 141,
+  "dt_ms": 1.0,
+  "rest_mV": -88.8,
+  "peak_mV": 21.2,
+  "max_dVdt_mV_per_ms(1ms frames)": 56.7,
+  "upstroke_10_90_ms": 2,
+  "V_at_lat+20ms": 20.9,
+  "V_last": 13.7
+ },
+ "7D98EVAR_template": {
+  "node": 159389,
+  "lat_ms": 59.999148,
+  "frames": 141,
+  "dt_ms": 1.0,
+  "rest_mV": -88.8,
+  "peak_mV": 21.3,
+  "max_dVdt_mV_per_ms(1ms frames)": 58.7,
+  "upstroke_10_90_ms": 4,
+  "V_at_lat+20ms": 21.0,
+  "V_last": 13.9
+ }
+}

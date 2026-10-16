@@ -1,0 +1,774 @@
+{
+ "Y5HYEDL4": {
+  "n_positions": 24,
+  "bazan_superior_UVC_vs_body_superior_disagree": 4,
+  "disagreeing": [
+   {
+    "id": "lv_septum_phi0_z0.75_d50",
+    "uvc_phi": -28.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.27,
+    "AHA_like_label": "inferoseptal"
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d50",
+    "uvc_phi": -176.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.99,
+    "AHA_like_label": "inferior"
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d50",
+    "uvc_phi": 34.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.12,
+    "AHA_like_label": "inferoseptal"
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d50",
+    "uvc_phi": 178.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -1.0,
+    "AHA_like_label": "anterolateral"
+   }
+  ],
+  "name_vs_AHA": [
+   {
+    "id": "lv_septum_phi0_z0.25_d50",
+    "name": "apical septal lv septum",
+    "uvc_phi": -15.0,
+    "angle_from_septal_centre_deg(+ant)": 2.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.17
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d50",
+    "name": "apical anteroseptal lv free wall",
+    "uvc_phi": 57.0,
+    "angle_from_septal_centre_deg(+ant)": 88.0,
+    "AHA_like_label": "anterior",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.97
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d50",
+    "name": "apical anterolateral lv free wall",
+    "uvc_phi": 120.0,
+    "angle_from_septal_centre_deg(+ant)": -179.0,
+    "AHA_like_label": "anterolateral",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.16
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d50",
+    "name": "apical lateral lv free wall",
+    "uvc_phi": -172.0,
+    "angle_from_septal_centre_deg(+ant)": -93.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.98
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d50",
+    "name": "apical inferolateral lv free wall",
+    "uvc_phi": -116.0,
+    "angle_from_septal_centre_deg(+ant)": -49.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.88
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d50",
+    "name": "apical inferoseptal lv septum",
+    "uvc_phi": -61.0,
+    "angle_from_septal_centre_deg(+ant)": -22.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.56
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d50",
+    "name": "mid septal lv septum",
+    "uvc_phi": -19.0,
+    "angle_from_septal_centre_deg(+ant)": -17.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.3
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d50",
+    "name": "mid anteroseptal lv septum",
+    "uvc_phi": 55.0,
+    "angle_from_septal_centre_deg(+ant)": 62.0,
+    "AHA_like_label": "anteroseptal",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.88
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d50",
+    "name": "mid anterolateral lv free wall",
+    "uvc_phi": 120.0,
+    "angle_from_septal_centre_deg(+ant)": 164.0,
+    "AHA_like_label": "anterolateral",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.26
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d50",
+    "name": "mid lateral lv free wall",
+    "uvc_phi": -171.0,
+    "angle_from_septal_centre_deg(+ant)": -93.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -1.0
+   },
+   {
+    "id": "lv_free_wall_phi-150_z0.5_d50",
+    "name": "mid inferolateral lv free wall",
+    "uvc_phi": -139.0,
+    "angle_from_septal_centre_deg(+ant)": -64.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.9
+   },
+   {
+    "id": "lv_septum_phi-60_z0.5_d50",
+    "name": "mid inferoseptal lv septum",
+    "uvc_phi": -64.0,
+    "angle_from_septal_centre_deg(+ant)": -32.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.55
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d50",
+    "name": "basal septal lv septum",
+    "uvc_phi": -28.0,
+    "angle_from_septal_centre_deg(+ant)": -24.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.27
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d50",
+    "name": "basal anteroseptal lv septum",
+    "uvc_phi": 54.0,
+    "angle_from_septal_centre_deg(+ant)": 42.0,
+    "AHA_like_label": "anteroseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.77
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d50",
+    "name": "basal anterolateral lv free wall",
+    "uvc_phi": 121.0,
+    "angle_from_septal_centre_deg(+ant)": 130.0,
+    "AHA_like_label": "anterolateral",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.33
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d50",
+    "name": "basal lateral lv free wall",
+    "uvc_phi": -176.0,
+    "angle_from_septal_centre_deg(+ant)": -123.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.99
+   },
+   {
+    "id": "lv_free_wall_phi-150_z0.75_d50",
+    "name": "basal inferolateral lv free wall",
+    "uvc_phi": -140.0,
+    "angle_from_septal_centre_deg(+ant)": -72.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.87
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d50",
+    "name": "basal inferoseptal lv septum",
+    "uvc_phi": -59.0,
+    "angle_from_septal_centre_deg(+ant)": -32.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.41
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d50",
+    "name": "rcc aortic cusp",
+    "uvc_phi": 34.0,
+    "angle_from_septal_centre_deg(+ant)": -43.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.12
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d50",
+    "name": "lcc aortic cusp",
+    "uvc_phi": 85.0,
+    "angle_from_septal_centre_deg(+ant)": 22.0,
+    "AHA_like_label": "anterior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.84
+   },
+   {
+    "id": "lv_summit_superior_z_d50",
+    "name": "superior lv summit",
+    "uvc_phi": 84.0,
+    "angle_from_septal_centre_deg(+ant)": -43.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.99
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d50",
+    "name": "inferior lateral lv summit",
+    "uvc_phi": 95.0,
+    "angle_from_septal_centre_deg(+ant)": -71.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.94
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d50",
+    "name": "proximal aiv lv vein course",
+    "uvc_phi": 77.0,
+    "angle_from_septal_centre_deg(+ant)": 79.0,
+    "AHA_like_label": "anterior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 1.0
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d50",
+    "name": "basal ring lateral lv vein course",
+    "uvc_phi": 178.0,
+    "angle_from_septal_centre_deg(+ant)": 124.0,
+    "AHA_like_label": "anterolateral",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -1.0
+   }
+  ]
+ },
+ "6G8DD8S5": {
+  "n_positions": 24,
+  "bazan_superior_UVC_vs_body_superior_disagree": 5,
+  "disagreeing": [
+   {
+    "id": "lv_septum_phi0_z0.25_d50",
+    "uvc_phi": -6.0,
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": -0.25,
+    "AHA_like_label": "inferoseptal"
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d50",
+    "uvc_phi": -14.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.3,
+    "AHA_like_label": "inferoseptal"
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d50",
+    "uvc_phi": -26.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.31,
+    "AHA_like_label": "inferoseptal"
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d50",
+    "uvc_phi": -176.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.84,
+    "AHA_like_label": "inferolateral"
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d50",
+    "uvc_phi": -2.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.06,
+    "AHA_like_label": "n/a (no insertion at this level)"
+   }
+  ],
+  "name_vs_AHA": [
+   {
+    "id": "lv_septum_phi0_z0.25_d50",
+    "name": "apical septal lv septum",
+    "uvc_phi": -6.0,
+    "angle_from_septal_centre_deg(+ant)": -5.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": -0.25
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d50",
+    "name": "apical anteroseptal lv free wall",
+    "uvc_phi": 52.0,
+    "angle_from_septal_centre_deg(+ant)": 57.0,
+    "AHA_like_label": "anteroseptal",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.77
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d50",
+    "name": "apical anterolateral lv free wall",
+    "uvc_phi": 121.0,
+    "angle_from_septal_centre_deg(+ant)": 156.0,
+    "AHA_like_label": "anterolateral",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.54
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d50",
+    "name": "apical lateral lv free wall",
+    "uvc_phi": -175.0,
+    "angle_from_septal_centre_deg(+ant)": -121.0,
+    "AHA_like_label": "inferolateral",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.76
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d50",
+    "name": "apical inferolateral lv free wall",
+    "uvc_phi": -111.0,
+    "angle_from_septal_centre_deg(+ant)": -63.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.95
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d50",
+    "name": "apical inferoseptal lv septum",
+    "uvc_phi": -55.0,
+    "angle_from_septal_centre_deg(+ant)": -29.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.62
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d50",
+    "name": "mid septal lv septum",
+    "uvc_phi": -14.0,
+    "angle_from_septal_centre_deg(+ant)": -19.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.3
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d50",
+    "name": "mid anteroseptal lv septum",
+    "uvc_phi": 55.0,
+    "angle_from_septal_centre_deg(+ant)": 48.0,
+    "AHA_like_label": "anteroseptal",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.72
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d50",
+    "name": "mid anterolateral lv free wall",
+    "uvc_phi": 119.0,
+    "angle_from_septal_centre_deg(+ant)": 129.0,
+    "AHA_like_label": "anterolateral",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.71
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d50",
+    "name": "mid lateral lv free wall",
+    "uvc_phi": -176.0,
+    "angle_from_septal_centre_deg(+ant)": -130.0,
+    "AHA_like_label": "inferolateral",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.83
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.5_d50",
+    "name": "mid inferolateral lv free wall",
+    "uvc_phi": -113.0,
+    "angle_from_septal_centre_deg(+ant)": -63.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.87
+   },
+   {
+    "id": "lv_septum_phi-60_z0.5_d50",
+    "name": "mid inferoseptal lv septum",
+    "uvc_phi": -48.0,
+    "angle_from_septal_centre_deg(+ant)": -31.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.47
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d50",
+    "name": "basal septal lv septum",
+    "uvc_phi": -26.0,
+    "angle_from_septal_centre_deg(+ant)": -17.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.31
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d50",
+    "name": "basal anteroseptal lv septum",
+    "uvc_phi": 53.0,
+    "angle_from_septal_centre_deg(+ant)": 25.0,
+    "AHA_like_label": "anteroseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.51
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d50",
+    "name": "basal anterolateral lv free wall",
+    "uvc_phi": 118.0,
+    "angle_from_septal_centre_deg(+ant)": 109.0,
+    "AHA_like_label": "anterolateral",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.85
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d50",
+    "name": "basal lateral lv free wall",
+    "uvc_phi": -176.0,
+    "angle_from_septal_centre_deg(+ant)": -133.0,
+    "AHA_like_label": "inferolateral",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.84
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.75_d50",
+    "name": "basal inferolateral lv free wall",
+    "uvc_phi": -114.0,
+    "angle_from_septal_centre_deg(+ant)": -48.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.77
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d50",
+    "name": "basal inferoseptal lv septum",
+    "uvc_phi": -40.0,
+    "angle_from_septal_centre_deg(+ant)": -21.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.35
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d50",
+    "name": "rcc aortic cusp",
+    "uvc_phi": -2.0,
+    "angle_from_septal_centre_deg(+ant)": -12.0,
+    "AHA_like_label": "n/a (no insertion at this level)",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.06
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d50",
+    "name": "lcc aortic cusp",
+    "uvc_phi": 92.0,
+    "angle_from_septal_centre_deg(+ant)": 40.0,
+    "AHA_like_label": "n/a (no insertion at this level)",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.78
+   },
+   {
+    "id": "lv_summit_superior_z_d50",
+    "name": "superior lv summit",
+    "uvc_phi": 79.0,
+    "angle_from_septal_centre_deg(+ant)": 41.0,
+    "AHA_like_label": "anterior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.78
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d50",
+    "name": "inferior lateral lv summit",
+    "uvc_phi": 96.0,
+    "angle_from_septal_centre_deg(+ant)": 72.0,
+    "AHA_like_label": "anterior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.96
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d50",
+    "name": "proximal aiv lv vein course",
+    "uvc_phi": 76.0,
+    "angle_from_septal_centre_deg(+ant)": 65.0,
+    "AHA_like_label": "anterior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.94
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d50",
+    "name": "basal ring anterolateral lv vein course",
+    "uvc_phi": 122.0,
+    "angle_from_septal_centre_deg(+ant)": 71.0,
+    "AHA_like_label": "n/a (no insertion at this level)",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.99
+   }
+  ]
+ },
+ "7D98EVAR": {
+  "n_positions": 25,
+  "bazan_superior_UVC_vs_body_superior_disagree": 4,
+  "disagreeing": [
+   {
+    "id": "lv_septum_phi0_z0.5_d50",
+    "uvc_phi": -6.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.1,
+    "AHA_like_label": "inferoseptal"
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d50",
+    "uvc_phi": -175.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.86,
+    "AHA_like_label": "inferolateral"
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d50",
+    "uvc_phi": -20.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.21,
+    "AHA_like_label": "inferoseptal"
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d50",
+    "uvc_phi": 178.0,
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.96,
+    "AHA_like_label": "n/a (no insertion at this level)"
+   }
+  ],
+  "name_vs_AHA": [
+   {
+    "id": "lv_septum_phi0_z0.25_d50",
+    "name": "apical septal lv septum",
+    "uvc_phi": -5.0,
+    "angle_from_septal_centre_deg(+ant)": 12.0,
+    "AHA_like_label": "anteroseptal",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.04
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d50",
+    "name": "apical anteroseptal lv free wall",
+    "uvc_phi": 55.0,
+    "angle_from_septal_centre_deg(+ant)": 65.0,
+    "AHA_like_label": "anterior",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.82
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d50",
+    "name": "apical anterolateral lv free wall",
+    "uvc_phi": 116.0,
+    "angle_from_septal_centre_deg(+ant)": 145.0,
+    "AHA_like_label": "anterolateral",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.69
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d50",
+    "name": "apical lateral lv free wall",
+    "uvc_phi": -175.0,
+    "angle_from_septal_centre_deg(+ant)": -121.0,
+    "AHA_like_label": "inferolateral",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.75
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d50",
+    "name": "apical inferolateral lv free wall",
+    "uvc_phi": -116.0,
+    "angle_from_septal_centre_deg(+ant)": -57.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.92
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d50",
+    "name": "apical inferoseptal lv septum",
+    "uvc_phi": -60.0,
+    "angle_from_septal_centre_deg(+ant)": -20.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_apical_inferior",
+    "cos_to_body_superior": -0.49
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d50",
+    "name": "mid septal lv septum",
+    "uvc_phi": -6.0,
+    "angle_from_septal_centre_deg(+ant)": -5.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.1
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d50",
+    "name": "mid anteroseptal lv septum",
+    "uvc_phi": 52.0,
+    "angle_from_septal_centre_deg(+ant)": 52.0,
+    "AHA_like_label": "anteroseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.77
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d50",
+    "name": "mid anterolateral lv free wall",
+    "uvc_phi": 120.0,
+    "angle_from_septal_centre_deg(+ant)": 138.0,
+    "AHA_like_label": "anterolateral",
+    "bazan_region(UVC)": "lv_apical_superior",
+    "cos_to_body_superior": 0.64
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d50",
+    "name": "mid lateral lv free wall",
+    "uvc_phi": -175.0,
+    "angle_from_septal_centre_deg(+ant)": -123.0,
+    "AHA_like_label": "inferolateral",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.86
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.5_d50",
+    "name": "mid inferolateral lv free wall",
+    "uvc_phi": -128.0,
+    "angle_from_septal_centre_deg(+ant)": -68.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.92
+   },
+   {
+    "id": "lv_septum_phi-60_z0.5_d50",
+    "name": "mid inferoseptal lv septum",
+    "uvc_phi": -60.0,
+    "angle_from_septal_centre_deg(+ant)": -29.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.48
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d50",
+    "name": "basal septal lv septum",
+    "uvc_phi": -20.0,
+    "angle_from_septal_centre_deg(+ant)": -19.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.21
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d50",
+    "name": "basal anteroseptal lv septum",
+    "uvc_phi": 54.0,
+    "angle_from_septal_centre_deg(+ant)": 32.0,
+    "AHA_like_label": "anteroseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.61
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d50",
+    "name": "basal anterolateral lv free wall",
+    "uvc_phi": 119.0,
+    "angle_from_septal_centre_deg(+ant)": 116.0,
+    "AHA_like_label": "anterior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.78
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d50",
+    "name": "basal lateral lv free wall",
+    "uvc_phi": -176.0,
+    "angle_from_septal_centre_deg(+ant)": -127.0,
+    "AHA_like_label": "inferolateral",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.91
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.75_d50",
+    "name": "basal inferolateral lv free wall",
+    "uvc_phi": -123.0,
+    "angle_from_septal_centre_deg(+ant)": -61.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.78
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d50",
+    "name": "basal inferoseptal lv septum",
+    "uvc_phi": -50.0,
+    "angle_from_septal_centre_deg(+ant)": -27.0,
+    "AHA_like_label": "inferoseptal",
+    "bazan_region(UVC)": "lv_basal_inferior",
+    "cos_to_body_superior": -0.33
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d50",
+    "name": "rcc aortic cusp",
+    "uvc_phi": 33.0,
+    "angle_from_septal_centre_deg(+ant)": -6.0,
+    "AHA_like_label": "inferior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.02
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d50",
+    "name": "lcc aortic cusp",
+    "uvc_phi": 100.0,
+    "angle_from_septal_centre_deg(+ant)": 30.0,
+    "AHA_like_label": "n/a (no insertion at this level)",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.6
+   },
+   {
+    "id": "lv_summit_superior_z_d50",
+    "name": "superior lv summit",
+    "uvc_phi": 90.0,
+    "angle_from_septal_centre_deg(+ant)": 36.0,
+    "AHA_like_label": "anterior",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.9
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d50",
+    "name": "inferior lateral lv summit",
+    "uvc_phi": 104.0,
+    "angle_from_septal_centre_deg(+ant)": 55.0,
+    "AHA_like_label": "n/a (no insertion at this level)",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 1.0
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d50",
+    "name": "proximal aiv lv vein course",
+    "uvc_phi": 78.0,
+    "angle_from_septal_centre_deg(+ant)": 67.0,
+    "AHA_like_label": "anteroseptal",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.96
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d50",
+    "name": "basal ring anterolateral lv vein course",
+    "uvc_phi": 121.0,
+    "angle_from_septal_centre_deg(+ant)": 74.0,
+    "AHA_like_label": "n/a (no insertion at this level)",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": 0.98
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d50",
+    "name": "basal ring lateral lv vein course",
+    "uvc_phi": 178.0,
+    "angle_from_septal_centre_deg(+ant)": -74.0,
+    "AHA_like_label": "n/a (no insertion at this level)",
+    "bazan_region(UVC)": "lv_basal_superior",
+    "cos_to_body_superior": -0.96
+   }
+  ]
+ }
+}

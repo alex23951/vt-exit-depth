@@ -1,0 +1,81 @@
+,v3,v5
+His Y5 qrs_true_span_ms,104.4,100.8
+His Y5 his_to_first_myocardium_ms,20.0,19.9
+His Y5 T_latest_after_lv_onset_ms,104.4,100.8
+His Y5 b_lv30_pct,47.9,48.7
+His Y5 b_lv37_pct,65.8,66.8
+His Y5 c_rv_epi_breakthrough_ms,15.3,15.1
+His Y5 a_onset_ant_ms,0.0,0.0
+His Y5 a_onset_sep_ms,2.8,2.7
+His Y5 a_onset_post_ms,5.0,5.0
+His Y5 d_last5_in_durrer_areas_pct,80.4,79.6
+His Y5 e_qrs_detected_ms,96.0,94.0
+His Y5 axis_net_deg,64,64
+His Y5 axis_area_deg,-37,-17
+Bazan2006 Y5 RV / LV rel QRS %,4.1 / 6.0,4.2 / 8.0
+"Bazan2006 Y5 pass (-1.9..6.6, < LV)",True,True
+LV fw QRS 90/10 Y5 medians / means,1.0791 / 1.0665,1.0957 / 1.0712
+summit+cusp QRS Y5,162.5,159.0
+Daniels true RVOT/cusp/summit90/vein90/LVendo10,0.667 / 0.571 / 0.476 / 0.451 / 0.338,0.679 / 0.587 / 0.542 / 0.458 / 0.348
+Daniels true pass,False,False
+Daniels det20 RVOT/cusp/summit90/vein90/LVendo10,0.642 / 0.586 / 0.548 / 0.471 / 0.338,0.667 / 0.588 / 0.609 / 0.482 / 0.368
+Daniels det20 pass,False,False
+No-network summit+cusp QRS / wider all families,250.0 / True,240.0 / True
+No-network pass,True,True
+His 6G qrs_true_span_ms,124.6,142.0
+His 6G his_to_first_myocardium_ms,26.2,26.4
+His 6G T_latest_after_lv_onset_ms,105.8,117.9
+His 6G b_lv30_pct,27.4,26.8
+His 6G b_lv37_pct,41.2,40.6
+His 6G c_rv_epi_breakthrough_ms,-8.2,-12.4
+His 6G a_onset_ant_ms,21.2,22.4
+His 6G a_onset_sep_ms,9.9,10.7
+His 6G a_onset_post_ms,0.0,0.0
+His 6G d_last5_in_durrer_areas_pct,26.8,28.3
+His 6G e_qrs_detected_ms,124.0,141.0
+His 6G axis_net_deg,-42,-36
+His 6G axis_area_deg,-37,-29
+His 6G lbbb_lv_minus_rv_onset_ms,18.8,24.2
+His 6G lbbb_first_lv_septal_breakthrough_ms,18.8,24.2
+Bazan2006 6G RV / LV rel QRS %,2.6 / 11.3,4.1 / 14.7
+"Bazan2006 6G pass (-1.9..6.6, < LV)",True,True
+LV fw QRS 90/10 6G medians / means,1.1209 / 1.0964,1.1552 / 1.1371
+summit+cusp QRS 6G,134.0,145.0
+Berruezo 6G QRS / PdW / IDT / RS %,11.3 / 55.3 / 26.7 / 19.1,14.7 / 60.6 / 31.6 / 7.6
+Berruezo 6G pass,False,False
+His 7D qrs_true_span_ms,95.4,100.2
+His 7D his_to_first_myocardium_ms,18.8,18.8
+His 7D T_latest_after_lv_onset_ms,95.4,100.2
+His 7D b_lv30_pct,44.8,44.4
+His 7D b_lv37_pct,61.5,61.0
+His 7D c_rv_epi_breakthrough_ms,15.4,16.4
+His 7D a_onset_ant_ms,0.0,0.0
+His 7D a_onset_sep_ms,2.5,2.5
+His 7D a_onset_post_ms,5.5,5.4
+His 7D d_last5_in_durrer_areas_pct,80.0,73.0
+His 7D e_qrs_detected_ms,80.0,86.0
+His 7D axis_net_deg,63,67
+His 7D axis_area_deg,57,64
+Bazan2006 7D RV / LV rel QRS %,3.6 / 7.7,4.0 / 10.3
+"Bazan2006 7D pass (-1.9..6.6, < LV)",True,True
+LV fw QRS 90/10 7D medians / means,1.0819 / 1.0743,1.1188 / 1.0930
+summit+cusp QRS 7D,144.0,149.5
+Bazan2007 apical_superior qI 90 vs 10 (n pos),3/9 vs 1/9 (9),4/9 vs 2/9 (9)
+Bazan2007 apical_superior qI direction / Bazan in CI,True / False,True / False
+Bazan2007 basal_superior qI 90 vs 10 (n pos),4/21 vs 3/21 (21),4/21 vs 3/21 (21)
+Bazan2007 basal_superior qI direction / Bazan in CI,True / False,True / False
+Bazan2007 basal_inferior qinf 90 vs 10 (n pos),7/8 vs 0/8 (8),8/8 vs 0/8 (8)
+Bazan2007 basal_inferior qinf direction / Bazan in CI,True / False,True / False
+Bazan2007 apical_inferior qinf 90 vs 10 (n pos),6/7 vs 0/7 (7),6/7 vs 0/7 (7)
+Bazan2007 apical_inferior qinf direction / Bazan in CI,True / True,True / True
+Bazan2007 basal_superior qinf (less at epi) 90 vs 10 (n pos),11/21 vs 15/21 (21),9/21 vs 15/21 (21)
+Bazan2007 basal_superior qinf (less at epi) direction / Bazan in CI,True / None,True / None
+Durrer Y5 T 62-100 ms pass,False,False
+Durrer Y5 RV breakthrough 20-31 ms pass,False,False
+Durrer Y5 detected QRS 63-88 ms pass,False,False
+Durrer 6G T 62-100 ms pass,False,False
+Durrer 6G RV breakthrough 20-31 ms pass,False,False
+Durrer 6G detected QRS 63-88 ms pass,False,False
+Durrer 7D T 62-100 ms pass,True,False
+Durrer 7D RV breakthrough 20-31 ms pass,False,False
+Durrer 7D detected QRS 63-88 ms pass,True,True

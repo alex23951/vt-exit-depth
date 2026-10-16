@@ -1,0 +1,67 @@
+ot_rv {'n_bc0': 369, 'n_bc1': 1583, 'min': 0.0, 'max': 1.0}
+ot_lv {'n_bc0': 369, 'n_bc1': 2372, 'min': 0.0, 'max': 1.0}
+phi_epi_fix {'n_bc0': 51043, 'n_bc1': 47983, 'min': 0.0, 'max': 1.00018}
+{
+ "elements": 1939909,
+ "nan_fraction": 0.0,
+ "ot_elements_w_lt_0.5": 248844,
+ "fibre_angle_vs_cohort_deg": {
+  "all_median": 9.74857311688885,
+  "all_mean": 14.514999694936126,
+  "body_median": 8.779082686970419,
+  "ot_median": 27.24522564002785,
+  "frac_lt_20deg": 0.8249897288996546
+ },
+ "sheet_normal_vs_transmural_median_deg": 0.755124155127459
+}
+                                    alpha_deg       e1_vs_pv_axis_deg       out_of_plane_deg      phi_epi     
+set                                       fix    v3               fix    v3              fix   v3     fix   v3
+family       pos              depth                                                                           
+rv_free_wall rv_free_wall_q25 0.1        59.6  59.6              64.3  64.1              0.0  0.0     0.2  0.2
+                              0.5        26.2  26.2              64.0  63.9              0.0  0.0     0.6  0.6
+                              0.9       -49.7 -49.7              63.5  63.4              0.0  0.0     0.9  0.9
+             rv_free_wall_q50 0.1        65.2  65.2              66.1  66.5              0.0  0.0     0.1  0.1
+                              0.5        25.2  25.2              66.3  66.7              0.0  0.0     0.6  0.6
+                              0.9       -45.7 -45.7              66.0  66.4              0.0  0.0     0.9  0.9
+             rv_free_wall_q75 0.1        69.5  69.5              63.8  64.3              0.0  0.0     0.1  0.1
+                              0.5        33.9  33.9              62.0  62.5              0.0  0.0     0.6  0.6
+                              0.9       -37.6 -37.6              62.3  62.8              0.0  0.0     0.9  0.9
+rvot         rvot_free_wall   0.1        81.3  81.3              29.0  27.5              0.0  0.0     0.1  0.1
+                              0.5        47.9  47.9              29.5  28.1              0.0  0.0     0.6  0.6
+                              0.8        11.7  11.7              29.6  28.2              0.0  0.0     0.8  0.8
+                              0.9       -15.7 -15.7              30.1  28.6              0.0  0.0     0.9  0.9
+             rvot_septal      0.1        89.3  89.9              23.6  18.4              0.0  0.0     0.1  0.0
+                              0.5        41.1  89.8              30.7  45.5              5.4  0.0     0.7  0.0
+                              0.8        19.9  89.8              32.4  55.6              3.9  0.0     0.9  0.0
+                              0.9        13.3  89.8              33.1  56.3              4.0  0.0     0.9  0.0
+55 beats
+set                               v3           fix
+true_RVOT                      0.667         0.688
+true_cusp                      0.579         0.582
+true_summit90                  0.476         0.478
+true_vein90                    0.454         0.454
+true_LVendo10                  0.338         0.342
+true_order_pass                False         False
+det20_RVOT                     0.642         0.676
+det20_cusp                     0.586         0.588
+det20_summit90                 0.548         0.547
+det20_vein90                   0.471         0.475
+det20_LVendo10                 0.338         0.355
+det20_order_pass               False         False
+RVOT_pdw_true                   65.5          71.5
+RVOT_pdw_det20                  46.0         50.25
+RVOT_tmax_true                  96.0         100.0
+RVOT_tmax_det20_from_onset     74.75         80.25
+RVOT_qrs_true                  146.0         148.5
+RVOT_qrs_det20                115.75        117.75
+RVOT_t10                        59.4         58.85
+RVOT_t50                        96.6          96.2
+summit_cusp_qrs_true           161.5         161.5
+his_hv_ms                       19.9          19.9
+his_qrs_true                   104.2         102.3
+his_latest_after_lv_onset      104.2         102.3
+his_lv30_pct                    47.9          47.9
+his_lv37_pct                    65.8          65.8
+his_rv_breakthrough             15.3          15.3
+his_qrs_detected                96.0          95.0
+his_axis_net_area           64 / -46  63.0 / -12.0

@@ -1,0 +1,14 @@
+{
+ "arm": "E",
+ "heart": "6G8DD8S5",
+ "speeds_f_s_n": [
+  0.6,
+  0.3504,
+  0.33599999999999997
+ ],
+ "graph_scale_k": 1.0658,
+ "d_ret_ms": 2.0,
+ "d_ant": "N(4.85, 1.55) truncated 2-13, seed 20261013",
+ "fibres": "fibres_E (outflow fix)",
+ "lead_fields": "cb, not rebuilt"
+}

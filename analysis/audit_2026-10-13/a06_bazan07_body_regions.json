@@ -1,0 +1,18 @@
+{
+ "basal_superior_UVC": {
+  "q_lead_I 90 vs 10": "4/19 vs 3/19",
+  "inferior_Q 90 vs 10": "8/19 vs 14/19"
+ },
+ "basal_superior_BODY": {
+  "q_lead_I 90 vs 10": "4/14 vs 1/14",
+  "inferior_Q 90 vs 10": "5/14 vs 14/14"
+ },
+ "basal_inferior_UVC": {
+  "q_lead_I 90 vs 10": "2/8 vs 6/8",
+  "inferior_Q 90 vs 10": "8/8 vs 0/8"
+ },
+ "basal_inferior_BODY": {
+  "q_lead_I 90 vs 10": "2/13 vs 8/13",
+  "inferior_Q 90 vs 10": "11/13 vs 0/13"
+ }
+}

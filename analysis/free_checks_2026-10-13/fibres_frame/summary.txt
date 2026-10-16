@@ -1,0 +1,41 @@
+                               w  phi_epi    d  reproduced_deg  alpha_deg  alpha_intended_deg  alpha_minus_intended  out_of_plane_deg  e1_vs_pv_axis_deg  endo_vs_epi_transmural_deg  grad_ot_vs_basal_deg
+heart    family       depth                                                                                                                                                                               
+6G8DD8S5 rv_free_wall 0.1    0.7      0.1  1.0             0.0       66.4                57.2                  10.5               0.0               55.2                       180.0                  31.3
+                      0.5    0.7      0.6  1.0             0.0       25.5                 1.1                  25.9               0.0               55.4                       180.0                  29.5
+                      0.9    0.7      1.0  1.0             0.0      -42.5               -38.1                  -3.6               0.0               55.1                       180.0                  28.6
+         rvot         0.1    0.2      0.0  1.0             0.0       85.3                82.4                   3.0               0.0               50.5                       180.0                  26.2
+                      0.5    0.2      0.2  1.0             0.0       73.2                60.4                  12.3               0.0               45.2                       179.6                  36.3
+                      0.8    0.2      0.4  1.0             0.0       50.4                43.4                   7.0               0.0               34.4                       179.6                  54.3
+                      0.9    0.2      0.4  1.0             0.0       36.6                38.8                  -1.1               0.0               34.1                       179.6                  54.9
+7D98EVAR rv_free_wall 0.1    0.8      0.1  1.0             0.0       64.5                55.5                  12.5               0.0               68.9                       180.0                  24.9
+                      0.5    0.8      0.6  1.0             0.0       29.3                 1.0                  25.9               0.0               69.6                       180.0                  23.7
+                      0.9    0.8      0.9  1.0             0.0      -43.2               -36.7                  -4.1               0.0               68.8                       180.0                  23.8
+         rvot         0.1    0.2      0.0  1.0             0.0       85.1                81.4                   3.7               0.0               47.4                       180.0                  31.4
+                      0.5    0.2      0.3  1.0             0.0       65.1                53.6                  11.5               0.0               48.4                       178.4                  41.8
+                      0.8    0.2      0.4  1.0             0.0       50.6                43.7                   6.8               0.0               52.8                       178.2                  52.5
+                      0.9    0.2      0.4  1.0             0.0       36.4                39.7                  -1.7               0.0               50.6                       177.8                  52.7
+Y5HYEDL4 rv_free_wall 0.1    0.8      0.1  1.0             0.0       64.7                56.9                   8.7               0.0               63.4                       180.0                  18.4
+                      0.5    0.8      0.6  1.0             0.0       26.0                -1.4                  27.4               0.0               63.8                       180.0                  17.6
+                      0.9    0.8      0.9  1.0             0.0      -46.5               -42.8                  -4.3               0.0               63.3                       180.0                  17.4
+         rvot         0.1    0.2      0.0  1.0             0.0       85.6                82.9                   2.8               0.0               23.0                       180.0                  27.9
+                      0.5    0.2      0.3  1.0             0.0       68.8                56.4                  12.5               0.0               36.8                       178.5                  43.4
+                      0.8    0.2      0.4  1.0             0.0       50.8                43.9                   6.8               0.0               41.9                       176.5                  48.9
+                      0.9    0.2      0.4  1.0             0.0       37.0                38.4                  -1.2               0.0               42.4                       177.8                  48.6
+
+Findings (13 Oct 2026):
+- Stored bivF.lon reproduces 04_fibres.py exactly (0.0 deg) and lies in the rule's wall plane (out-of-plane 0.0 deg): the
+  37-42 deg out-of-plane of the first (geometric-axis) check was a measurement artefact.
+- RV free wall: endo 64-66 vs linear 55-57, epi -42..-46 vs -37..-43 deg; mid-wall +26 deg vs a linear profile, which is
+  Bayer 2012's own double weighting (alpha_w(phi_epi) in the epi frame, then bislerp by phi_epi), not a coding error.
+- RVOT, real differences from Doste 2019's targets:
+  (a) septal RVOT: phi_epi = 0.0 through the whole wall (its outer side is not an epicardial boundary of the phi_epi
+      Laplace problem) and w = 0, d = 1 -> every depth gets the endocardial OT angle (~90 deg, longitudinal); no
+      circumferential outer layer. Its longitudinal e1 = grad psi_OT points 18-69 deg away from the pulmonary-rim normal
+      (grad psi_OT vs grad psi_basal 27-89 deg): psi_OT has AV, PV, Ao and PArt rims all at 1 (02_laplace.py), so between
+      the two outflow tracts it points partly towards the aortic root.
+  (b) RVOT free wall: w = 0.3 at the sites (10-17 mm below the valve), so the OT angles are only 70 % applied: endo 81
+      (Doste 90), epi -16 (Doste 0) deg; e1 28-37 deg from the pulmonary-rim normal.
+- Fix (not applied; frozen): separate apico-outflow fields per outflow tract (apex -> PV rim / PArt for the RV, apex -> AV
+  rim / Ao for the LV), chosen by the septal split d; give the infundibular outer surface (towards the aortic root /
+  great vessels) an epicardial boundary value in phi_epi (or treat it as septum); and decide how fast the OT blend in w
+  should take over (Doste 2019's own transition to be checked before choosing).

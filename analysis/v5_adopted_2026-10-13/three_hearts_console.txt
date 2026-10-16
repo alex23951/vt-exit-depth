@@ -1,0 +1,54 @@
+Y5HYEDL4 (control): 144 sites, criteria file graph_v5 in-memory scoring
+6G8DD8S5 (HF wide QRS (LBBB)): 144 sites, criteria file graph_v5 in-memory scoring
+7D98EVAR (HF narrow QRS): 144 sites, criteria file graph_v5 in-memory scoring
+
+## true onset, medians Y5HYEDL4 / 6G8DD8S5 / 7D98EVAR, by group
+group | n per heart | QRS | pseudo-delta | IDT V2 | shortest RS | MDI
+LV free wall | 40 | 161.0 / 154.0 / 161.0 | 51.5 / 52.5 / 50.5 | 61.0 / 67.5 / 64.5 | 69.5 / 82.5 / 80.5 | 0.39 / 0.46 / 0.43
+LV septum | 32 | 139.0 / 135.0 / 136.0 | 41.0 / 49.0 / 39.5 | 48.5 / nan / 52.0 | 70.0 / 77.0 / 74.0 | 0.4 / 0.53 / 0.47
+RV free wall | 36 | 147.5 / 173.0 / 151.0 | 41.5 / 36.5 / 36.0 | 42.0 / 43.0 / 53.0 | 84.5 / 73.0 / 69.0 | 0.45 / 0.43 / 0.59
+RVOT | 8 | 145.0 / 154.0 / 151.0 | 70.5 / 69.0 / 73.0 | 69.5 / 83.5 / 72.5 | 93.5 / 71.5 / 79.5 | 0.68 / 0.57 / 0.69
+Aortic cusp | 8 | 157.5 / 150.0 / 152.5 | 90.5 / 74.5 / 76.5 | 97.5 / 78.0 / 78.0 | 72.0 / 74.0 / 88.5 | 0.59 / 0.6 / 0.51
+LV summit | 8 | 159.0 / 143.5 / 149.5 | 76.0 / 51.0 / 50.5 | 90.5 / 63.5 / 58.5 | 65.5 / 82.5 / 65.5 | 0.5 / 0.5 / 0.39
+LV vein course | 12 | 167.5 / 165.5 / 155.5 | 61.0 / 59.5 / 58.5 | 79.0 / 58.0 / 66.0 | 76.5 / 77.5 / 86.0 | 0.44 / 0.47 / 0.42
+
+## detected onset, medians Y5HYEDL4 / 6G8DD8S5 / 7D98EVAR, by group
+group | n per heart | QRS | pseudo-delta | IDT V2 | shortest RS | MDI
+LV free wall | 40 | 131.0 / 137.0 / 137.5 | 46.5 / 47.0 / 42.5 | 57.0 / 58.5 / 59.0 | 66.0 / 77.0 / 75.0 | 0.44 / 0.48 / 0.45
+LV septum | 32 | 118.5 / 123.5 / 115.0 | 38.0 / 44.0 / 36.0 | 44.0 / nan / 47.0 | 64.0 / 70.0 / 68.5 | 0.43 / 0.52 / 0.52
+RV free wall | 36 | 140.5 / 168.5 / 145.0 | 38.0 / 32.5 / 32.5 | 40.0 / 40.0 / 50.0 | 82.5 / 71.0 / 67.0 | 0.48 / 0.42 / 0.59
+RVOT | 8 | 133.0 / 148.5 / 142.5 | 67.5 / 61.0 / 68.5 | 66.5 / 80.5 / 68.0 | 87.5 / 69.0 / 75.0 | 0.7 / 0.55 / 0.71
+Aortic cusp | 8 | 139.0 / 136.5 / 136.0 | 85.5 / 71.0 / 73.5 | 94.0 / 73.5 / 74.5 | 68.5 / 69.5 / 84.5 | 0.62 / 0.62 / 0.54
+LV summit | 8 | 130.5 / 126.5 / 122.5 | 70.5 / 41.5 / 47.0 | 87.5 / 53.5 / 53.0 | 62.5 / 74.5 / 62.5 | 0.58 / 0.53 / 0.43
+LV vein course | 12 | 143.0 / 146.5 / 140.0 | 58.5 / 54.5 / 54.5 | 75.0 / 51.0 / 62.0 | 73.0 / 72.5 / 82.0 | 0.48 / 0.49 / 0.44
+
+## LV free wall, same position 10 % -> 90 % (true onset): median change (n up / n), AUC 90 vs 10; QRS 10 -> 90 %
+Y5HYEDL4: qrs_duration_ms 12.0 (10/10, AUC 0.74); pseudo_delta_ms 14.0 (10/10, AUC 0.78); idt_v2_ms 12.5 (6/10, AUC 0.47); srs_ms 0.0 (5/10, AUC 0.4); mdi_daniels 0.065 (9/10, AUC 0.87); QRS 151.5 -> 166.0 (9.6 %)
+6G8DD8S5: qrs_duration_ms 22.0 (10/10, AUC 0.77); pseudo_delta_ms 25.0 (9/10, AUC 0.9); idt_v2_ms 17.0 (6/10, AUC 0.55); srs_ms 6.0 (5/10, AUC 0.59); mdi_daniels 0.104 (10/10, AUC 0.87); QRS 145.0 -> 167.5 (15.5 %)
+7D98EVAR: qrs_duration_ms 16.0 (10/10, AUC 0.76); pseudo_delta_ms 19.5 (10/10, AUC 0.89); idt_v2_ms 17.0 (7/10, AUC 0.51); srs_ms -10.5 (4/10, AUC 0.45); mdi_daniels 0.099 (10/10, AUC 0.94); QRS 151.5 -> 169.5 (11.9 %)
+
+## All sites with a depth truth (cusps out): AUC 90 % vs 10 % and 90 % vs 50 %, true / detected onset
+Y5HYEDL4 90 vs 10: qrs_duration_ms 0.64 / 0.65; pseudo_delta_ms 0.65 / 0.65; idt_v2_ms 0.58 / 0.58; srs_ms 0.45 / 0.45; mdi_daniels 0.68 / 0.68
+Y5HYEDL4 90 vs 50: qrs_duration_ms 0.57 / 0.67; pseudo_delta_ms 0.59 / 0.67; idt_v2_ms 0.5 / 0.55; srs_ms 0.39 / 0.45; mdi_daniels 0.6 / 0.63
+6G8DD8S5 90 vs 10: qrs_duration_ms 0.67 / 0.71; pseudo_delta_ms 0.74 / 0.74; idt_v2_ms 0.53 / 0.53; srs_ms 0.48 / 0.48; mdi_daniels 0.74 / 0.7
+6G8DD8S5 90 vs 50: qrs_duration_ms 0.64 / 0.72; pseudo_delta_ms 0.63 / 0.75; idt_v2_ms 0.41 / 0.5; srs_ms 0.41 / 0.49; mdi_daniels 0.63 / 0.71
+7D98EVAR 90 vs 10: qrs_duration_ms 0.67 / 0.68; pseudo_delta_ms 0.76 / 0.76; idt_v2_ms 0.64 / 0.64; srs_ms 0.54 / 0.54; mdi_daniels 0.71 / 0.7
+7D98EVAR 90 vs 50: qrs_duration_ms 0.59 / 0.67; pseudo_delta_ms 0.65 / 0.74; idt_v2_ms 0.52 / 0.6; srs_ms 0.42 / 0.5; mdi_daniels 0.65 / 0.66
+
+## Daniels order, precordial MDI medians (Daniels 2006: LV epicardial perivascular 0.61 > ASOV 0.46 > RVOT 0.40 > LV endo 0.34)
+true Y5HYEDL4: summit 90 % 0.54, vein course 90 % 0.46, cusp 0.59, RVOT 0.68, LV endo 10 % 0.35
+true 6G8DD8S5: summit 90 % 0.55, vein course 90 % 0.53, cusp 0.6, RVOT 0.57, LV endo 10 % 0.42
+true 7D98EVAR: summit 90 % 0.41, vein course 90 % 0.44, cusp 0.51, RVOT 0.69, LV endo 10 % 0.38
+detected Y5HYEDL4: summit 90 % 0.63, vein course 90 % 0.5, cusp 0.62, RVOT 0.7, LV endo 10 % 0.36
+detected 6G8DD8S5: summit 90 % 0.57, vein course 90 % 0.55, cusp 0.62, RVOT 0.55, LV endo 10 % 0.43
+detected 7D98EVAR: summit 90 % 0.46, vein course 90 % 0.46, cusp 0.54, RVOT 0.71, LV endo 10 % 0.41
+
+## Absolute QRS (decision 7: median at LV summit + aortic cusp within 132-193 ms in control hearts; idiopathic VAs 147-175 ms)
+true: Y5HYEDL4 159.0; 6G8DD8S5 145.0; 7D98EVAR 149.5
+detected: Y5HYEDL4 138.0; 6G8DD8S5 135.0; 7D98EVAR 131.0
+
+## Epicardial calls (true onset), sites with a depth truth, by target depth: Y5HYEDL4 | 6G8DD8S5 | 7D98EVAR
+10 % (n 34 | 34 | 34): berruezo_pdw_ge_34 24 | 26 | 20; berruezo_idt_ge_85 4 | 3 | 4; berruezo_srs_ge_121 2 | 0 | 0; daniels_mdi_ge_055 3 | 7 | 8; valles_q_lead_I 18 | 19 | 18
+50 % (n 34 | 34 | 34): berruezo_pdw_ge_34 24 | 29 | 26; berruezo_idt_ge_85 7 | 4 | 6; berruezo_srs_ge_121 2 | 3 | 0; daniels_mdi_ge_055 3 | 10 | 9; valles_q_lead_I 16 | 18 | 16
+75 % (n 34 | 34 | 34): berruezo_pdw_ge_34 26 | 29 | 28; berruezo_idt_ge_85 5 | 3 | 2; berruezo_srs_ge_121 1 | 2 | 1; daniels_mdi_ge_055 6 | 13 | 9; valles_q_lead_I 13 | 14 | 16
+90 % (n 34 | 34 | 34): berruezo_pdw_ge_34 27 | 29 | 30; berruezo_idt_ge_85 6 | 4 | 3; berruezo_srs_ge_121 1 | 2 | 2; daniels_mdi_ge_055 6 | 15 | 10; valles_q_lead_I 12 | 9 | 12

@@ -1,0 +1,41 @@
+{
+ "run": "/home/alex/vt-exit-depth/runs/2026-10-13_LF_Y5HYEDL4_v5",
+ "scale": 4.083524207693219,
+ "g_blood": 0.7,
+ "np": 2,
+ "parts": {
+  "limb": {
+   "wall_s": 178,
+   "peak_used_mb": 6817,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "v13": {
+   "wall_s": 180,
+   "peak_used_mb": 6819,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "v46": {
+   "wall_s": 180,
+   "peak_used_mb": 6734,
+   "watchdog_killed": false,
+   "returncode": 0
+  }
+ },
+ "lf_files": [
+  "LF_I.igb",
+  "LF_II.igb",
+  "LF_III.igb",
+  "LF_V1.igb",
+  "LF_V2.igb",
+  "LF_V3.igb",
+  "LF_V4.igb",
+  "LF_V5.igb",
+  "LF_V6.igb",
+  "LF_aVF.igb",
+  "LF_aVL.igb",
+  "LF_aVR.igb"
+ ],
+ "wall_s_total": 539
+}

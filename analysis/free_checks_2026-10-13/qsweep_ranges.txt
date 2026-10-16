@@ -1,0 +1,10 @@
+apical_superior q_I [LV wall] n 9: 90% 2-8, 10% 0-2
+apical_superior q_I [free wall] n 9: 90% 2-8, 10% 0-2
+basal_superior q_I [LV wall] n 21: 90% 2-10, 10% 0-8
+basal_superior q_I [free wall] n 6: 90% 1-4, 10% 0-3
+basal_inferior q_inf [LV wall] n 8: 90% 3-8, 10% 0-0
+basal_inferior q_inf [free wall] n 8: 90% 3-8, 10% 0-0
+apical_inferior q_inf [LV wall] n 7: 90% 4-7, 10% 0-0
+apical_inferior q_inf [free wall] n 7: 90% 4-7, 10% 0-0
+basal_superior q_inf [LV wall] n 21: 90% 3-14, 10% 14-16
+basal_superior q_inf [free wall] n 6: 90% 2-3, 10% 2-3

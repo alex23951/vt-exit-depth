@@ -1,0 +1,989 @@
+{
+ "3.1_daniels_auc (AUC, n_pos, n_neg)": {
+  "Y5HYEDL4 true": {
+   "A_epi_perivascular90 vs cusp+RVOT+LVendo10 (positives summit90+vein90)": [
+    0.553,
+    5,
+    34
+   ],
+   "B_cusps_out (vs RVOT+LVendo10)": [
+    0.6,
+    5,
+    26
+   ],
+   "C_vs_RVOT_10pct_only": [
+    0.0,
+    5,
+    2
+   ],
+   "D_vs_LVendo10_only": [
+    0.867,
+    5,
+    18
+   ],
+   "E_positives_incl_cusps (summit90+vein90+cusp) vs RVOT+LVendo10": [
+    0.683,
+    13,
+    26
+   ],
+   "out_of_domain_90v10_LVfw+septum+RVfw": [
+    0.716,
+    27,
+    27
+   ]
+  },
+  "Y5HYEDL4 detected": {
+   "A_epi_perivascular90 vs cusp+RVOT+LVendo10 (positives summit90+vein90)": [
+    0.541,
+    5,
+    34
+   ],
+   "B_cusps_out (vs RVOT+LVendo10)": [
+    0.608,
+    5,
+    26
+   ],
+   "C_vs_RVOT_10pct_only": [
+    0.0,
+    5,
+    2
+   ],
+   "D_vs_LVendo10_only": [
+    0.878,
+    5,
+    18
+   ],
+   "E_positives_incl_cusps (summit90+vein90+cusp) vs RVOT+LVendo10": [
+    0.68,
+    13,
+    26
+   ],
+   "out_of_domain_90v10_LVfw+septum+RVfw": [
+    0.723,
+    27,
+    27
+   ]
+  },
+  "Y5HYEDL4 summit_dist_left_sinus_mm": {
+   "lv_summit_superior_z_d10": 13.0,
+   "lv_summit_superior_z_d50": 12.8,
+   "lv_summit_superior_z_d75": 14.0,
+   "lv_summit_superior_z_d90": 13.6,
+   "lv_summit_inferior_lateral_z_d10": 18.4,
+   "lv_summit_inferior_lateral_z_d50": 18.6,
+   "lv_summit_inferior_lateral_z_d75": 18.4,
+   "lv_summit_inferior_lateral_z_d90": 18.9
+  },
+  "6G8DD8S5 true": {
+   "A_epi_perivascular90 vs cusp+RVOT+LVendo10 (positives summit90+vein90)": [
+    0.6,
+    5,
+    34
+   ],
+   "B_cusps_out (vs RVOT+LVendo10)": [
+    0.692,
+    5,
+    26
+   ],
+   "C_vs_RVOT_10pct_only": [
+    0.5,
+    5,
+    2
+   ],
+   "D_vs_LVendo10_only": [
+    0.811,
+    5,
+    18
+   ],
+   "E_positives_incl_cusps (summit90+vein90+cusp) vs RVOT+LVendo10": [
+    0.774,
+    13,
+    26
+   ],
+   "out_of_domain_90v10_LVfw+septum+RVfw": [
+    0.728,
+    27,
+    27
+   ]
+  },
+  "6G8DD8S5 detected": {
+   "A_epi_perivascular90 vs cusp+RVOT+LVendo10 (positives summit90+vein90)": [
+    0.612,
+    5,
+    34
+   ],
+   "B_cusps_out (vs RVOT+LVendo10)": [
+    0.7,
+    5,
+    26
+   ],
+   "C_vs_RVOT_10pct_only": [
+    0.5,
+    5,
+    2
+   ],
+   "D_vs_LVendo10_only": [
+    0.778,
+    5,
+    18
+   ],
+   "E_positives_incl_cusps (summit90+vein90+cusp) vs RVOT+LVendo10": [
+    0.781,
+    13,
+    26
+   ],
+   "out_of_domain_90v10_LVfw+septum+RVfw": [
+    0.676,
+    27,
+    27
+   ]
+  },
+  "6G8DD8S5 summit_dist_left_sinus_mm": {
+   "lv_summit_superior_z_d10": 20.2,
+   "lv_summit_superior_z_d50": 17.6,
+   "lv_summit_superior_z_d75": 15.6,
+   "lv_summit_superior_z_d90": 15.6,
+   "lv_summit_inferior_lateral_z_d10": 22.8,
+   "lv_summit_inferior_lateral_z_d50": 21.5,
+   "lv_summit_inferior_lateral_z_d75": 21.2,
+   "lv_summit_inferior_lateral_z_d90": 22.1
+  },
+  "7D98EVAR true": {
+   "A_epi_perivascular90 vs cusp+RVOT+LVendo10 (positives summit90+vein90)": [
+    0.418,
+    5,
+    34
+   ],
+   "B_cusps_out (vs RVOT+LVendo10)": [
+    0.515,
+    5,
+    26
+   ],
+   "C_vs_RVOT_10pct_only": [
+    0.0,
+    5,
+    2
+   ],
+   "D_vs_LVendo10_only": [
+    0.744,
+    5,
+    18
+   ],
+   "E_positives_incl_cusps (summit90+vein90+cusp) vs RVOT+LVendo10": [
+    0.589,
+    13,
+    26
+   ],
+   "out_of_domain_90v10_LVfw+septum+RVfw": [
+    0.724,
+    27,
+    27
+   ]
+  },
+  "7D98EVAR detected": {
+   "A_epi_perivascular90 vs cusp+RVOT+LVendo10 (positives summit90+vein90)": [
+    0.406,
+    5,
+    34
+   ],
+   "B_cusps_out (vs RVOT+LVendo10)": [
+    0.492,
+    5,
+    26
+   ],
+   "C_vs_RVOT_10pct_only": [
+    0.0,
+    5,
+    2
+   ],
+   "D_vs_LVendo10_only": [
+    0.711,
+    5,
+    18
+   ],
+   "E_positives_incl_cusps (summit90+vein90+cusp) vs RVOT+LVendo10": [
+    0.565,
+    13,
+    26
+   ],
+   "out_of_domain_90v10_LVfw+septum+RVfw": [
+    0.711,
+    27,
+    27
+   ]
+  },
+  "7D98EVAR summit_dist_left_sinus_mm": {
+   "lv_summit_superior_z_d10": 13.2,
+   "lv_summit_superior_z_d50": 12.0,
+   "lv_summit_superior_z_d75": 11.7,
+   "lv_summit_superior_z_d90": 11.9,
+   "lv_summit_inferior_lateral_z_d10": 17.7,
+   "lv_summit_inferior_lateral_z_d50": 16.9,
+   "lv_summit_inferior_lateral_z_d75": 16.8,
+   "lv_summit_inferior_lateral_z_d90": 17.6
+  }
+ },
+ "3.2_his_beats": {
+  "Y5HYEDL4": {
+   "detected_qrs_ms(precordial / any lead)": [
+    94.0,
+    94.0
+   ],
+   "detected_onset_after_His_ms": 22.0,
+   "axis_net_area_deg": {
+    "net": 64,
+    "area": -17
+   },
+   "R_S_mV_by_lead": {
+    "I": [
+     0.36,
+     0.28
+    ],
+    "II": [
+     0.4,
+     0.26
+    ],
+    "III": [
+     0.3,
+     0.17
+    ],
+    "aVR": [
+     0.18,
+     0.38
+    ],
+    "aVL": [
+     0.18,
+     0.26
+    ],
+    "aVF": [
+     0.23,
+     0.21
+    ],
+    "V1": [
+     0.77,
+     0.51
+    ],
+    "V2": [
+     1.35,
+     1.57
+    ],
+    "V3": [
+     0.9,
+     1.43
+    ],
+    "V4": [
+     1.04,
+     0.8
+    ],
+    "V5": [
+     0.99,
+     0.47
+    ],
+    "V6": [
+     0.73,
+     0.42
+    ]
+   },
+   "transition_lead(R>S)": "V1",
+   "initial_polarity": {
+    "I": -1,
+    "II": -1,
+    "III": 1,
+    "aVR": 1,
+    "aVL": -1,
+    "aVF": 1,
+    "V1": 1,
+    "V2": 1,
+    "V3": 1,
+    "V4": -1,
+    "V5": -1,
+    "V6": -1
+   },
+   "q_in_I_aVL_V5_V6": {
+    "I": true,
+    "aVL": true,
+    "V5": true,
+    "V6": true
+   },
+   "R_peak_time_ms_from_onset": {
+    "V1": 18,
+    "V2": 19,
+    "V5": 41,
+    "V6": 43,
+    "I": 37,
+    "aVL": 43
+   },
+   "notch_count_and_slur_flag(heuristic)": {
+    "V1": [
+     0,
+     1
+    ],
+    "V2": [
+     0,
+     1
+    ],
+    "V5": [
+     0,
+     0
+    ],
+    "V6": [
+     0,
+     0
+    ],
+    "I": [
+     0,
+     1
+    ],
+    "aVL": [
+     0,
+     1
+    ]
+   },
+   "QRS_peak_to_peak_limb_precordial_mV": [
+    0.66,
+    2.92
+   ]
+  },
+  "6G8DD8S5": {
+   "detected_qrs_ms(precordial / any lead)": [
+    141.0,
+    141.0
+   ],
+   "detected_onset_after_His_ms": 28.0,
+   "axis_net_area_deg": {
+    "net": -36,
+    "area": -29
+   },
+   "R_S_mV_by_lead": {
+    "I": [
+     0.74,
+     0.06
+    ],
+    "II": [
+     0.26,
+     0.32
+    ],
+    "III": [
+     0.24,
+     1.04
+    ],
+    "aVR": [
+     0.02,
+     0.32
+    ],
+    "aVL": [
+     0.89,
+     0.14
+    ],
+    "aVF": [
+     0.23,
+     0.68
+    ],
+    "V1": [
+     0.15,
+     1.1
+    ],
+    "V2": [
+     0.43,
+     1.7
+    ],
+    "V3": [
+     0.48,
+     1.41
+    ],
+    "V4": [
+     0.62,
+     0.95
+    ],
+    "V5": [
+     0.97,
+     0.16
+    ],
+    "V6": [
+     0.81,
+     0.05
+    ]
+   },
+   "transition_lead(R>S)": "V5",
+   "initial_polarity": {
+    "I": 1,
+    "II": 1,
+    "III": -1,
+    "aVR": -1,
+    "aVL": 1,
+    "aVF": -1,
+    "V1": -1,
+    "V2": 1,
+    "V3": 1,
+    "V4": 1,
+    "V5": 1,
+    "V6": 1
+   },
+   "q_in_I_aVL_V5_V6": {
+    "I": false,
+    "aVL": false,
+    "V5": false,
+    "V6": false
+   },
+   "R_peak_time_ms_from_onset": {
+    "V1": 43,
+    "V2": 15,
+    "V5": 71,
+    "V6": 73,
+    "I": 106,
+    "aVL": 108
+   },
+   "notch_count_and_slur_flag(heuristic)": {
+    "V1": [
+     0,
+     1
+    ],
+    "V2": [
+     0,
+     1
+    ],
+    "V5": [
+     1,
+     0
+    ],
+    "V6": [
+     1,
+     1
+    ],
+    "I": [
+     1,
+     1
+    ],
+    "aVL": [
+     1,
+     0
+    ]
+   },
+   "QRS_peak_to_peak_limb_precordial_mV": [
+    1.29,
+    2.14
+   ],
+   "Strauss_2011 (women: QRS>=130; QS/rS V1-V2; mid-QRS notch/slur in >=2 of V1,V2,V5,V6,I,aVL)": {
+    "QRS>=130": true,
+    "QS_or_rS_V1_V2": false,
+    "leads_with_notch_or_slur": 6,
+    "all_met": false
+   },
+   "AHA_ACCF_HRS_2009 (QRS>=120; notched/slurred R in I,aVL,V5,V6; no q in I,V5,V6; R peak time V5-V6 > 60 ms)": {
+    "QRS>=120": true,
+    "broad_notched_slurred_R_I_aVL_V5_V6": {
+     "I": true,
+     "aVL": true,
+     "V5": true,
+     "V6": true
+    },
+    "absent_q_I_V5_V6": true,
+    "R_peak_time_V5_V6_gt_60": {
+     "V5": true,
+     "V6": true
+    },
+    "ST_T": "not assessable (template has no repolarisation)"
+   }
+  },
+  "7D98EVAR": {
+   "detected_qrs_ms(precordial / any lead)": [
+    86.0,
+    87.0
+   ],
+   "detected_onset_after_His_ms": 21.0,
+   "axis_net_area_deg": {
+    "net": 67,
+    "area": 64
+   },
+   "R_S_mV_by_lead": {
+    "I": [
+     0.35,
+     0.42
+    ],
+    "II": [
+     0.68,
+     0.24
+    ],
+    "III": [
+     0.48,
+     0.45
+    ],
+    "aVR": [
+     0.22,
+     0.49
+    ],
+    "aVL": [
+     0.35,
+     0.41
+    ],
+    "aVF": [
+     0.56,
+     0.34
+    ],
+    "V1": [
+     1.05,
+     0.89
+    ],
+    "V2": [
+     1.39,
+     1.43
+    ],
+    "V3": [
+     0.98,
+     1.46
+    ],
+    "V4": [
+     0.95,
+     0.8
+    ],
+    "V5": [
+     1.12,
+     0.65
+    ],
+    "V6": [
+     1.06,
+     0.63
+    ]
+   },
+   "transition_lead(R>S)": "V1",
+   "initial_polarity": {
+    "I": -1,
+    "II": -1,
+    "III": 1,
+    "aVR": 1,
+    "aVL": -1,
+    "aVF": 1,
+    "V1": 1,
+    "V2": 1,
+    "V3": 1,
+    "V4": -1,
+    "V5": -1,
+    "V6": -1
+   },
+   "q_in_I_aVL_V5_V6": {
+    "I": true,
+    "aVL": true,
+    "V5": true,
+    "V6": true
+   },
+   "R_peak_time_ms_from_onset": {
+    "V1": 21,
+    "V2": 22,
+    "V5": 47,
+    "V6": 51,
+    "I": 43,
+    "aVL": 64
+   },
+   "notch_count_and_slur_flag(heuristic)": {
+    "V1": [
+     0,
+     0
+    ],
+    "V2": [
+     0,
+     0
+    ],
+    "V5": [
+     0,
+     0
+    ],
+    "V6": [
+     0,
+     0
+    ],
+    "I": [
+     0,
+     1
+    ],
+    "aVL": [
+     0,
+     0
+    ]
+   },
+   "QRS_peak_to_peak_limb_precordial_mV": [
+    0.93,
+    2.81
+   ]
+  }
+ },
+ "3.3_durrer_time_zero": {
+  "Y5HYEDL4": {
+   "His_stimulus_ms": 0.0,
+   "first_muscle_ms": 19.9,
+   "first_LV_endo_ms": 19.9,
+   "first_RV_endo_ms": 26.5,
+   "RV_epi_breakthrough_ms": 35.0,
+   "latest_ms": 120.8,
+   "network_His_to_first_LV_site_ms (built, shortest path at 2.0 m/s)": 15.9,
+   "calibration_targets": "LV Durrer sites anterior 0 / septal +2.5 / posterior +5 ms after the first (14_purkinje.py:95, 331-346); RV moderator-band end +7.5 ms after the first LV site; absolute His->first-LV-site time set by the shortest path at 2.0 m/s + 4 ms exit delay; no target for latest activation, RV breakthrough or total QRS"
+  },
+  "6G8DD8S5": {
+   "His_stimulus_ms": 0.0,
+   "first_muscle_ms": 26.4,
+   "first_LV_endo_ms": 50.5,
+   "first_RV_endo_ms": 26.4,
+   "RV_epi_breakthrough_ms": 38.1,
+   "latest_ms": 168.4,
+   "network_His_to_first_LV_site_ms (built, shortest path at 2.0 m/s)": 17.3,
+   "calibration_targets": "LV Durrer sites anterior 0 / septal +2.5 / posterior +5 ms after the first (14_purkinje.py:95, 331-346); RV moderator-band end +7.5 ms after the first LV site; absolute His->first-LV-site time set by the shortest path at 2.0 m/s + 4 ms exit delay; no target for latest activation, RV breakthrough or total QRS"
+  },
+  "7D98EVAR": {
+   "His_stimulus_ms": 0.0,
+   "first_muscle_ms": 18.8,
+   "first_LV_endo_ms": 18.8,
+   "first_RV_endo_ms": 27.0,
+   "RV_epi_breakthrough_ms": 35.2,
+   "latest_ms": 119.0,
+   "network_His_to_first_LV_site_ms (built, shortest path at 2.0 m/s)": 14.8,
+   "calibration_targets": "LV Durrer sites anterior 0 / septal +2.5 / posterior +5 ms after the first (14_purkinje.py:95, 331-346); RV moderator-band end +7.5 ms after the first LV site; absolute His->first-LV-site time set by the shortest path at 2.0 m/s + 4 ms exit delay; no target for latest activation, RV breakthrough or total QRS"
+  }
+ },
+ "3.4_network": {
+  "Y5HYEDL4": {
+   "distal_speed": "per edge: edge length (straight segment between adjacent endocardial surface nodes, ~1 mm) / 2.0 mm/ms; the path follows the grown tree, not a straight line",
+   "junction_depth_mm": 0.0,
+   "junctions_on_endocardial_surface": true,
+   "His_to_junction_network_path / straight_line (median, p10-p90)": [
+    2.22,
+    [
+     1.34,
+     3.92
+    ]
+   ],
+   "root_to_junction_distal_path / straight_line (median, p10-p90) [junctions > 5 mm from root]": [
+    1.79,
+    [
+     1.18,
+     2.38
+    ]
+   ],
+   "effective_straight_line_distal_speed_m_s (2.0 / tortuosity, median)": 1.12,
+   "junctions_reachable_from_His": "3665/3665"
+  },
+  "6G8DD8S5": {
+   "distal_speed": "per edge: edge length (straight segment between adjacent endocardial surface nodes, ~1 mm) / 2.0 mm/ms; the path follows the grown tree, not a straight line",
+   "junction_depth_mm": 0.0,
+   "junctions_on_endocardial_surface": true,
+   "His_to_junction_network_path / straight_line (median, p10-p90)": [
+    3.15,
+    [
+     1.48,
+     5.51
+    ]
+   ],
+   "root_to_junction_distal_path / straight_line (median, p10-p90) [junctions > 5 mm from root]": [
+    1.94,
+    [
+     1.28,
+     2.72
+    ]
+   ],
+   "effective_straight_line_distal_speed_m_s (2.0 / tortuosity, median)": 1.03,
+   "junctions_reachable_from_His": "1209/3192"
+  },
+  "7D98EVAR": {
+   "distal_speed": "per edge: edge length (straight segment between adjacent endocardial surface nodes, ~1 mm) / 2.0 mm/ms; the path follows the grown tree, not a straight line",
+   "junction_depth_mm": 0.0,
+   "junctions_on_endocardial_surface": true,
+   "His_to_junction_network_path / straight_line (median, p10-p90)": [
+    2.05,
+    [
+     1.29,
+     4.05
+    ]
+   ],
+   "root_to_junction_distal_path / straight_line (median, p10-p90) [junctions > 5 mm from root]": [
+    1.8,
+    [
+     1.19,
+     2.61
+    ]
+   ],
+   "effective_straight_line_distal_speed_m_s (2.0 / tortuosity, median)": 1.11,
+   "junctions_reachable_from_His": "3241/3241"
+  }
+ },
+ "3.4_parameters_14_purkinje": {
+  "v_mm_per_ms 2.0": "distal (and LBB, anterior division) speed; cited Sahli Costabal 2016, Berg 2023, Choi 2023 (Choi: rabbit insulated fibres > 2 m/s)",
+  "d_ant_ms 4.0": "Purkinje->muscle; cited Berg 2023 (3-5 ms), Choi 2023 (3.4 +- 0.8 / 7.8 +- 2.4 ms, rabbit)",
+  "d_ret_ms 2.0": "muscle->Purkinje; ASSUMPTION, not sourced (docstring)",
+  "pmj_per_cm2 15.0": "cited Bayer 2025 (not in its abstract)",
+  "branch_mm 8.0, branch_sd_mm sqrt(0.4), angle_rad 0.15, repulsion 0.1, seg_mm 1.0": "cited Sahli Costabal 2016 fractal-tree parameters (not in its abstract)",
+  "z_max 0.90": "v3 rule, \"like the frozen fast layer\" (frozen layer 10-90 % apex-base); not sourced",
+  "rv_septum_z_max 0.35, mb_z 0.35": "RBB unbranched to the apex (Sahli Costabal 2016), Bayer 2025 (no junctions on the mid-upper RV septum); level 0.35 not sourced",
+  "lbb_drop_z 0.10": "LBB ~10 mm before branching (Elizari 2017 for the origin); 0.10 of z not sourced",
+  "max_gen 40, seed 20261007, bud_mm 10.0, rv_apex_z 0.12": "implementation choices",
+  "divisions (phi, z) waypoints": "Durrer 1970 three earliest LV areas (60, 0.80), (0, 0.50), (-60, 0.33) then onward to papillary / apex: UVC translation is an assumption",
+  "durrer_offset_ms 0 / 2.5 / 5; rv_after_lv_ms 7.5": "Durrer 1970 (0-5 ms between the three sites; RV 5-10 ms after LV); the values within the ranges are choices -> proximal speeds tuned",
+  "stim_bin_ms 0.25, bridge_mm 6.0, v_bridge 0.4, couple_tol_ms 1.0, max_pass 4": "openCARP coupling / unused bridges (v3 only)",
+  "lbbb_cut_hearts [6G8DD8S5]": "Upadhyay 2019 (proximal LBB block in 64 % of LBBB-pattern patients); Alex 9 Oct",
+  "network_version v3; durrer_lv_endo_pct 95, durrer_window_ms 30, v_distal_max 12": "v4 only (rejected)",
+  "graph scale k 1.0685 / 1.0658 / 1.0682": "fitted (graph vs openCARP no-layer fields, v3 speeds)",
+  "stimulus ball 1.5 mm": "choice (12_eikonal.py:81 / v5_grid.py:157)"
+ },
+ "3.5_rvot": {
+  "Y5HYEDL4": {
+   "sites": [
+    {
+     "id": "rvot_septal_z_d10",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 90.0,
+     "stim_to_largest_deflection_ms": 90.0,
+     "stim_to_QRS_end_true(last activation)_ms": 148.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 137.0,
+     "height_vs_PV_plane_mm(- = below)": -10.9,
+     "dist_PV_rim_mm": 8.3
+    },
+    {
+     "id": "rvot_septal_z_d50",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 89.0,
+     "stim_to_largest_deflection_ms": 91.0,
+     "stim_to_QRS_end_true(last activation)_ms": 149.0,
+     "stim_to_detected_onset_ms(clean)": 4.0,
+     "stim_to_detected_QRS_end_ms(clean)": 138.0,
+     "height_vs_PV_plane_mm(- = below)": -10.2,
+     "dist_PV_rim_mm": 8.4
+    },
+    {
+     "id": "rvot_septal_z_d75",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 88.0,
+     "stim_to_largest_deflection_ms": 92.0,
+     "stim_to_QRS_end_true(last activation)_ms": 150.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 138.0,
+     "height_vs_PV_plane_mm(- = below)": -9.6,
+     "dist_PV_rim_mm": 8.3
+    },
+    {
+     "id": "rvot_septal_z_d90",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 88.0,
+     "stim_to_largest_deflection_ms": 91.0,
+     "stim_to_QRS_end_true(last activation)_ms": 149.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 137.0,
+     "height_vs_PV_plane_mm(- = below)": -10.0,
+     "dist_PV_rim_mm": 8.8
+    },
+    {
+     "id": "rvot_free_wall_z_d10",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 46.0,
+     "stim_to_largest_deflection_ms": 102.0,
+     "stim_to_QRS_end_true(last activation)_ms": 137.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 136.0,
+     "height_vs_PV_plane_mm(- = below)": -15.8,
+     "dist_PV_rim_mm": 14.9
+    },
+    {
+     "id": "rvot_free_wall_z_d50",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 48.0,
+     "stim_to_largest_deflection_ms": 106.0,
+     "stim_to_QRS_end_true(last activation)_ms": 141.0,
+     "stim_to_detected_onset_ms(clean)": 13.0,
+     "stim_to_detected_QRS_end_ms(clean)": 139.0,
+     "height_vs_PV_plane_mm(- = below)": -15.8,
+     "dist_PV_rim_mm": 15.6
+    },
+    {
+     "id": "rvot_free_wall_z_d75",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 50.0,
+     "stim_to_largest_deflection_ms": 107.0,
+     "stim_to_QRS_end_true(last activation)_ms": 142.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 140.0,
+     "height_vs_PV_plane_mm(- = below)": -15.2,
+     "dist_PV_rim_mm": 15.4
+    },
+    {
+     "id": "rvot_free_wall_z_d90",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 53.0,
+     "stim_to_largest_deflection_ms": 109.0,
+     "stim_to_QRS_end_true(last activation)_ms": 142.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 140.0,
+     "height_vs_PV_plane_mm(- = below)": -15.4,
+     "dist_PV_rim_mm": 16.0
+    }
+   ],
+   "septal_10pct_first_His_ms (audit a03b)": 62.5,
+   "septal_10pct_first_network_entry_ms": 40.6,
+   "path_to_LV": "rvot_anatomy_2026-10-12: outflow sleeve continuous with LV myocardium in all three meshes (no cavity or aortic-root gap); septal RVOT myocardium-only time to LV endocardium 34-35 / 20-21 / 25-27 ms, path 1.05-1.1 x straight line"
+  },
+  "6G8DD8S5": {
+   "sites": [
+    {
+     "id": "rvot_septal_z_d10",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 78.0,
+     "stim_to_largest_deflection_ms": 92.0,
+     "stim_to_QRS_end_true(last activation)_ms": 140.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 138.0,
+     "height_vs_PV_plane_mm(- = below)": -15.1,
+     "dist_PV_rim_mm": 14.9
+    },
+    {
+     "id": "rvot_septal_z_d50",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 78.0,
+     "stim_to_largest_deflection_ms": 92.0,
+     "stim_to_QRS_end_true(last activation)_ms": 140.0,
+     "stim_to_detected_onset_ms(clean)": 14.0,
+     "stim_to_detected_QRS_end_ms(clean)": 138.0,
+     "height_vs_PV_plane_mm(- = below)": -13.9,
+     "dist_PV_rim_mm": 14.0
+    },
+    {
+     "id": "rvot_septal_z_d75",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 79.0,
+     "stim_to_largest_deflection_ms": 93.0,
+     "stim_to_QRS_end_true(last activation)_ms": 140.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 138.0,
+     "height_vs_PV_plane_mm(- = below)": -13.2,
+     "dist_PV_rim_mm": 14.0
+    },
+    {
+     "id": "rvot_septal_z_d90",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 78.0,
+     "stim_to_largest_deflection_ms": 92.0,
+     "stim_to_QRS_end_true(last activation)_ms": 139.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 137.0,
+     "height_vs_PV_plane_mm(- = below)": -13.3,
+     "dist_PV_rim_mm": 14.1
+    },
+    {
+     "id": "rvot_free_wall_z_d10",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 41.0,
+     "stim_to_largest_deflection_ms": 75.0,
+     "stim_to_QRS_end_true(last activation)_ms": 170.0,
+     "stim_to_detected_onset_ms(clean)": 2.0,
+     "stim_to_detected_QRS_end_ms(clean)": 169.0,
+     "height_vs_PV_plane_mm(- = below)": -16.4,
+     "dist_PV_rim_mm": 14.8
+    },
+    {
+     "id": "rvot_free_wall_z_d50",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 42.0,
+     "stim_to_largest_deflection_ms": 77.0,
+     "stim_to_QRS_end_true(last activation)_ms": 170.0,
+     "stim_to_detected_onset_ms(clean)": 7.0,
+     "stim_to_detected_QRS_end_ms(clean)": 169.0,
+     "height_vs_PV_plane_mm(- = below)": -16.5,
+     "dist_PV_rim_mm": 15.3
+    },
+    {
+     "id": "rvot_free_wall_z_d75",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 58.0,
+     "stim_to_largest_deflection_ms": 78.0,
+     "stim_to_QRS_end_true(last activation)_ms": 168.0,
+     "stim_to_detected_onset_ms(clean)": 2.0,
+     "stim_to_detected_QRS_end_ms(clean)": 168.0,
+     "height_vs_PV_plane_mm(- = below)": -16.3,
+     "dist_PV_rim_mm": 15.6
+    },
+    {
+     "id": "rvot_free_wall_z_d90",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 60.0,
+     "stim_to_largest_deflection_ms": 80.0,
+     "stim_to_QRS_end_true(last activation)_ms": 169.0,
+     "stim_to_detected_onset_ms(clean)": 2.0,
+     "stim_to_detected_QRS_end_ms(clean)": 169.0,
+     "height_vs_PV_plane_mm(- = below)": -16.6,
+     "dist_PV_rim_mm": 16.0
+    }
+   ],
+   "septal_10pct_first_His_ms (audit a03b)": 99.8,
+   "septal_10pct_first_network_entry_ms": 17.3,
+   "path_to_LV": "rvot_anatomy_2026-10-12: outflow sleeve continuous with LV myocardium in all three meshes (no cavity or aortic-root gap); septal RVOT myocardium-only time to LV endocardium 34-35 / 20-21 / 25-27 ms, path 1.05-1.1 x straight line"
+  },
+  "7D98EVAR": {
+   "sites": [
+    {
+     "id": "rvot_septal_z_d10",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 86.0,
+     "stim_to_largest_deflection_ms": 100.0,
+     "stim_to_QRS_end_true(last activation)_ms": 147.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 143.0,
+     "height_vs_PV_plane_mm(- = below)": -10.6,
+     "dist_PV_rim_mm": 8.0
+    },
+    {
+     "id": "rvot_septal_z_d50",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 85.0,
+     "stim_to_largest_deflection_ms": 100.0,
+     "stim_to_QRS_end_true(last activation)_ms": 145.0,
+     "stim_to_detected_onset_ms(clean)": 6.0,
+     "stim_to_detected_QRS_end_ms(clean)": 142.0,
+     "height_vs_PV_plane_mm(- = below)": -10.0,
+     "dist_PV_rim_mm": 7.9
+    },
+    {
+     "id": "rvot_septal_z_d75",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 85.0,
+     "stim_to_largest_deflection_ms": 100.0,
+     "stim_to_QRS_end_true(last activation)_ms": 146.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 142.0,
+     "height_vs_PV_plane_mm(- = below)": -9.6,
+     "dist_PV_rim_mm": 7.9
+    },
+    {
+     "id": "rvot_septal_z_d90",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 86.0,
+     "stim_to_largest_deflection_ms": 101.0,
+     "stim_to_QRS_end_true(last activation)_ms": 146.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 143.0,
+     "height_vs_PV_plane_mm(- = below)": -9.8,
+     "dist_PV_rim_mm": 8.0
+    },
+    {
+     "id": "rvot_free_wall_z_d10",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 55.0,
+     "stim_to_largest_deflection_ms": 108.0,
+     "stim_to_QRS_end_true(last activation)_ms": 155.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 149.0,
+     "height_vs_PV_plane_mm(- = below)": -15.2,
+     "dist_PV_rim_mm": 13.9
+    },
+    {
+     "id": "rvot_free_wall_z_d50",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 59.0,
+     "stim_to_largest_deflection_ms": 108.0,
+     "stim_to_QRS_end_true(last activation)_ms": 156.0,
+     "stim_to_detected_onset_ms(clean)": 4.0,
+     "stim_to_detected_QRS_end_ms(clean)": 149.0,
+     "height_vs_PV_plane_mm(- = below)": -14.8,
+     "dist_PV_rim_mm": 14.6
+    },
+    {
+     "id": "rvot_free_wall_z_d75",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 61.0,
+     "stim_to_largest_deflection_ms": 108.0,
+     "stim_to_QRS_end_true(last activation)_ms": 157.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 149.0,
+     "height_vs_PV_plane_mm(- = below)": -14.2,
+     "dist_PV_rim_mm": 14.5
+    },
+    {
+     "id": "rvot_free_wall_z_d90",
+     "stim_to_pseudo_delta_end(rapid onset)_ms": 61.0,
+     "stim_to_largest_deflection_ms": 108.0,
+     "stim_to_QRS_end_true(last activation)_ms": 157.0,
+     "stim_to_detected_onset_ms(clean)": 3.0,
+     "stim_to_detected_QRS_end_ms(clean)": 149.0,
+     "height_vs_PV_plane_mm(- = below)": -14.2,
+     "dist_PV_rim_mm": 15.0
+    }
+   ],
+   "septal_10pct_first_His_ms (audit a03b)": 62.8,
+   "septal_10pct_first_network_entry_ms": 44.8,
+   "path_to_LV": "rvot_anatomy_2026-10-12: outflow sleeve continuous with LV myocardium in all three meshes (no cavity or aortic-root gap); septal RVOT myocardium-only time to LV endocardium 34-35 / 20-21 / 25-27 ms, path 1.05-1.1 x straight line"
+  }
+ },
+ "3.6_conductivities": "see analysis/audit_2026-10-13/a08_ecg_conductivity.txt (per heart gi/ge x 3 directions, calibration and cb); blood 0.7 S/m = tag 101 (voxel enclosure; 258.5 / 148.5 / 208.0 mL = 70 / 56 / 70 % of the cavities), cited Geddes & Baker 1967 and Keller 2010 (15_conductor.py:15); graph vs openCARP on v5 sites: impossible (no openCARP v5 runs); v3 comparison and the direction-dependent speed error in audit F01 / a03",
+ "3.7_v5_commit": "none: v5 code and outputs are uncommitted; no git remote exists (nothing pushed). Last commit 47808c6 (10 Oct 12:20)."
+}

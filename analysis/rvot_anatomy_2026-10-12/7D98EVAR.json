@@ -1,0 +1,170 @@
+{
+ "heart": "7D98EVAR",
+ "septal": [
+  {
+   "site_node": 49594,
+   "z": 0.7,
+   "phi_deg": 8.3,
+   "septal_thickness_mm": 7.7,
+   "lv_septum_first_ms_network": 13.6,
+   "lv_septum_first_ms_myocardium_only": 13.6,
+   "lv_opposite_ms_network": 13.8,
+   "lv_opposite_ms_myocardium_only": 13.8,
+   "his_ms": 39.1,
+   "first_lv_junction_ms": null,
+   "first_lv_network_node_ms": 17.8,
+   "route": "myocardium"
+  },
+  {
+   "site_node": 16476,
+   "z": 0.778,
+   "phi_deg": 16.4,
+   "septal_thickness_mm": 8.1,
+   "lv_septum_first_ms_network": 14.9,
+   "lv_septum_first_ms_myocardium_only": 14.9,
+   "lv_opposite_ms_network": 15.0,
+   "lv_opposite_ms_myocardium_only": 15.0,
+   "his_ms": 39.0,
+   "first_lv_junction_ms": null,
+   "first_lv_network_node_ms": 17.1,
+   "route": "myocardium"
+  },
+  {
+   "site_node": 165764,
+   "z": 0.854,
+   "phi_deg": 23.7,
+   "septal_thickness_mm": 6.3,
+   "lv_septum_first_ms_network": 10.2,
+   "lv_septum_first_ms_myocardium_only": 10.2,
+   "lv_opposite_ms_network": 10.6,
+   "lv_opposite_ms_myocardium_only": 10.6,
+   "his_ms": 37.0,
+   "first_lv_junction_ms": null,
+   "first_lv_network_node_ms": 12.5,
+   "route": "myocardium"
+  }
+ ],
+ "rvot": [
+  {
+   "id": "rvot_septal_z_d10",
+   "z": 0.99,
+   "to_lv_endo_ms": 27.2,
+   "to_lv_endo_path_mm": 14.9,
+   "to_lv_endo_straight_mm": 13.4,
+   "to_v0_ms": 21.8,
+   "to_v0_path_mm": 12.1,
+   "to_v0_straight_mm": 11.2
+  },
+  {
+   "id": "rvot_septal_z_d50",
+   "z": 0.991,
+   "to_lv_endo_ms": 26.1,
+   "to_lv_endo_path_mm": 13.8,
+   "to_lv_endo_straight_mm": 12.4,
+   "to_v0_ms": 20.5,
+   "to_v0_path_mm": 11.2,
+   "to_v0_straight_mm": 10.3
+  },
+  {
+   "id": "rvot_septal_z_d75",
+   "z": 1.0,
+   "to_lv_endo_ms": 25.0,
+   "to_lv_endo_path_mm": 13.1,
+   "to_lv_endo_straight_mm": 12.0,
+   "to_v0_ms": 20.2,
+   "to_v0_path_mm": 10.5,
+   "to_v0_straight_mm": 9.9
+  },
+  {
+   "id": "rvot_septal_z_d90",
+   "z": 1.0,
+   "to_lv_endo_ms": 26.2,
+   "to_lv_endo_path_mm": 13.7,
+   "to_lv_endo_straight_mm": 12.8,
+   "to_v0_ms": 21.5,
+   "to_v0_path_mm": 11.1,
+   "to_v0_straight_mm": 10.6
+  },
+  {
+   "id": "rvot_free_wall_z_d10",
+   "z": 0.825,
+   "to_lv_endo_ms": 40.6,
+   "to_lv_endo_path_mm": 20.6,
+   "to_lv_endo_straight_mm": 17.2,
+   "to_v0_ms": 32.5,
+   "to_v0_path_mm": 15.7,
+   "to_v0_straight_mm": 14.0
+  },
+  {
+   "id": "rvot_free_wall_z_d50",
+   "z": 0.824,
+   "to_lv_endo_ms": 43.1,
+   "to_lv_endo_path_mm": 21.6,
+   "to_lv_endo_straight_mm": 19.0,
+   "to_v0_ms": 30.2,
+   "to_v0_path_mm": 16.2,
+   "to_v0_straight_mm": 15.0
+  },
+  {
+   "id": "rvot_free_wall_z_d75",
+   "z": 0.828,
+   "to_lv_endo_ms": 43.9,
+   "to_lv_endo_path_mm": 22.0,
+   "to_lv_endo_straight_mm": 19.7,
+   "to_v0_ms": 29.8,
+   "to_v0_path_mm": 16.6,
+   "to_v0_straight_mm": 15.2
+  },
+  {
+   "id": "rvot_free_wall_z_d90",
+   "z": 0.828,
+   "to_lv_endo_ms": 43.4,
+   "to_lv_endo_path_mm": 22.9,
+   "to_lv_endo_straight_mm": 20.5,
+   "to_v0_ms": 29.3,
+   "to_v0_path_mm": 17.0,
+   "to_v0_straight_mm": 15.7
+  }
+ ],
+ "anatomy": [
+  {
+   "id": "rvot_septal_z_d10",
+   "behind_front_epi_mm": 35.7,
+   "behind_skin_mm": 80.1,
+   "dz_V1_mm": 7.4,
+   "dz_V2_mm": 3.8,
+   "below_pv_plane_mm": 10.6
+  },
+  {
+   "id": "rvot_septal_z_d90",
+   "behind_front_epi_mm": 37.7,
+   "behind_skin_mm": 82.0,
+   "dz_V1_mm": 7.5,
+   "dz_V2_mm": 3.9,
+   "below_pv_plane_mm": 9.8
+  },
+  {
+   "id": "rvot_free_wall_z_d10",
+   "behind_front_epi_mm": 18.8,
+   "behind_skin_mm": 67.1,
+   "dz_V1_mm": 5.9,
+   "dz_V2_mm": 2.3,
+   "below_pv_plane_mm": 15.2
+  },
+  {
+   "id": "rvot_free_wall_z_d90",
+   "behind_front_epi_mm": 15.7,
+   "behind_skin_mm": 63.9,
+   "dz_V1_mm": 8.0,
+   "dz_V2_mm": 4.4,
+   "below_pv_plane_mm": 14.2
+  }
+ ],
+ "heart_front": {
+  "y_mm": -98.0,
+  "z_mm": -14.2
+ },
+ "skin_ahead_of_front_mm": null,
+ "rv_muscle_beyond_pv_plane_mm_max": 7.3,
+ "pv_rim_planarity_mm_rms": 1.39
+}

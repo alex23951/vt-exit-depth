@@ -1,0 +1,19 @@
+{
+ "lv_distal_nodes": 2965,
+ "lv_distal_reachable_from_his": 0,
+ "lv_tree_connected_nodes_from_one_lv_node": 2965,
+ "lbbb_cut_flag": true,
+ "first_myocardium_after_his_ms": 26.2,
+ "lv_minus_rv_endo_onset_ms": 18.8,
+ "first_lv_septal_breakthrough_after_qrs_onset_ms": 18.8,
+ "lv_endo_span_ms": 92.5,
+ "rv_endo_span_ms": 99.0,
+ "qrs_true_span_ms": 124.6,
+ "qrs_detected_cb_ms": 124.0,
+ "frontal_axis_cb_net_area_deg": [
+  -42,
+  -37
+ ],
+ "cohort_group_qrs_ms": "144.7 +- 13.3 (Solis-Lemus 2026, Table 1, as relayed)",
+ "derval_2017_lv_septal_breakthrough_ms": "38 +- 15"
+}

@@ -1,0 +1,138 @@
+## 1 Durrer (control heart, His-driven beat)
+{
+ "reference": "times after the first LV endocardial activation (LV onset)",
+ "lv_onset_ms_after_his": 20.0,
+ "T_latest_after_lv_onset_ms": 104.4,
+ "T_window": "62-80 ms (Durrer, as in LABNOTES 9 Oct)",
+ "a_first5ms": {
+  "n_nodes": 123,
+  "area_cm2": 0.86,
+  "pct_area_within_15mm_of_a_Durrer_area": 100.0,
+  "per_area": {
+   "high anterior paraseptal": {
+    "onset_after_lv_onset_ms": 0.0,
+    "pct_of_first5ms_area_nearest": 82.9
+   },
+   "central left septum": {
+    "onset_after_lv_onset_ms": 2.8,
+    "pct_of_first5ms_area_nearest": 16.4
+   },
+   "posterior paraseptal 1/3": {
+    "onset_after_lv_onset_ms": 5.0,
+    "pct_of_first5ms_area_nearest": 0.7
+   }
+  },
+  "outside_15mm_z_phi_examples": []
+ },
+ "b_lv_endo_outside_posterobasal_pct": {
+  "30ms": 47.9,
+  "37.5ms": 65.8
+ },
+ "b_definition": "posterobasal LV = UVC z >= 2/3 and phi -150..-30 deg; area-weighted LV endocardial nodes",
+ "c_rv_epi_breakthrough": {
+  "after_lv_onset_ms": 15.3,
+  "z": 0.36,
+  "phi_deg": 0.0,
+  "dist_to_moderator_band_insertion_mm": 3.5,
+  "window": "20-31 ms, anterior RV pretrabecular area"
+ },
+ "d_last5pct_volume": {
+  "starts_after_lv_onset_ms": 72.5,
+  "pct_by_region": {
+   "pulmonary conus": 38.0,
+   "other": 19.6,
+   "LV posterolateral": 6.1,
+   "RV A-V sulcus": 35.8,
+   "RV posterobasal": 0.5
+  },
+  "other_median_z_phi_v": [
+   0.97,
+   82.0
+  ]
+ },
+ "e_detected_qrs_ms": {
+  "cb": 96.0,
+  "study": 98.0
+ },
+ "e_window": "63-88 ms"
+}
+
+## 2 Bazan 2007 (check: my 0.05 mV cb calls equal the package calls at 100 % (q I) / 100 % (inferior) of 90 beats)
+       region_feature                    scope conductor  thr_mV  positions_pooled pooled_90      ci90 pooled_10      ci10           bazan_90_10 bazan_in_ci
+  apical_superior q_I LV wall (fw+vein+summit)        cb    0.05                 9       3/9  (12, 65)       1/9   (2, 44)                 88/26       False
+  apical_superior q_I LV wall (fw+vein+summit)        cb    0.10                 9       2/9   (6, 55)       1/9   (2, 44)                 88/26       False
+  apical_superior q_I LV wall (fw+vein+summit)     study    0.05                 9       8/9  (56, 98)       7/9  (45, 94)                 88/26       False
+  apical_superior q_I LV wall (fw+vein+summit)     study    0.10                 9       8/9  (56, 98)       9/9 (70, 100)                 88/26       False
+  apical_superior q_I        LV free wall only        cb    0.05                 9       3/9  (12, 65)       1/9   (2, 44)                 88/26       False
+  apical_superior q_I        LV free wall only        cb    0.10                 9       2/9   (6, 55)       1/9   (2, 44)                 88/26       False
+  apical_superior q_I        LV free wall only     study    0.05                 9       8/9  (56, 98)       7/9  (45, 94)                 88/26       False
+  apical_superior q_I        LV free wall only     study    0.10                 9       8/9  (56, 98)       9/9 (70, 100)                 88/26       False
+   basal_superior q_I LV wall (fw+vein+summit)        cb    0.05                21      4/21   (8, 40)      3/21   (5, 35)                 90/16       False
+   basal_superior q_I LV wall (fw+vein+summit)        cb    0.10                21      2/21   (3, 29)      0/21   (0, 15)                 90/16       False
+   basal_superior q_I LV wall (fw+vein+summit)     study    0.05                21     14/21  (45, 83)      8/21  (21, 59)                 90/16       False
+   basal_superior q_I LV wall (fw+vein+summit)     study    0.10                21     14/21  (45, 83)     13/21  (41, 79)                 90/16       False
+   basal_superior q_I        LV free wall only        cb    0.05                 6       3/6  (19, 81)       1/6   (3, 56)                 90/16       False
+   basal_superior q_I        LV free wall only        cb    0.10                 6       1/6   (3, 56)       0/6   (0, 39)                 90/16       False
+   basal_superior q_I        LV free wall only     study    0.05                 6       3/6  (19, 81)       2/6  (10, 70)                 90/16       False
+   basal_superior q_I        LV free wall only     study    0.10                 6       3/6  (19, 81)       3/6  (19, 81)                 90/16       False
+ basal_inferior q_inf LV wall (fw+vein+summit)        cb    0.05                 8       7/8  (53, 98)       0/8   (0, 32)                 81/37       False
+ basal_inferior q_inf LV wall (fw+vein+summit)        cb    0.10                 8       4/8  (22, 78)       0/8   (0, 32)                 81/37       False
+ basal_inferior q_inf LV wall (fw+vein+summit)     study    0.05                 8       8/8 (68, 100)       0/8   (0, 32)                 81/37       False
+ basal_inferior q_inf LV wall (fw+vein+summit)     study    0.10                 8       8/8 (68, 100)       4/8  (22, 78)                 81/37        True
+ basal_inferior q_inf        LV free wall only        cb    0.05                 8       7/8  (53, 98)       0/8   (0, 32)                 81/37       False
+ basal_inferior q_inf        LV free wall only        cb    0.10                 8       4/8  (22, 78)       0/8   (0, 32)                 81/37       False
+ basal_inferior q_inf        LV free wall only     study    0.05                 8       8/8 (68, 100)       0/8   (0, 32)                 81/37       False
+ basal_inferior q_inf        LV free wall only     study    0.10                 8       8/8 (68, 100)       4/8  (22, 78)                 81/37        True
+apical_inferior q_inf LV wall (fw+vein+summit)        cb    0.05                 7       6/7  (49, 97)       0/7   (0, 35)                 92/33        True
+apical_inferior q_inf LV wall (fw+vein+summit)        cb    0.10                 7       5/7  (36, 92)       0/7   (0, 35)                 92/33        True
+apical_inferior q_inf LV wall (fw+vein+summit)     study    0.05                 7       7/7 (65, 100)       5/7  (36, 92)                 92/33       False
+apical_inferior q_inf LV wall (fw+vein+summit)     study    0.10                 7       7/7 (65, 100)       7/7 (65, 100)                 92/33       False
+apical_inferior q_inf        LV free wall only        cb    0.05                 7       6/7  (49, 97)       0/7   (0, 35)                 92/33        True
+apical_inferior q_inf        LV free wall only        cb    0.10                 7       5/7  (36, 92)       0/7   (0, 35)                 92/33        True
+apical_inferior q_inf        LV free wall only     study    0.05                 7       7/7 (65, 100)       5/7  (36, 92)                 92/33       False
+apical_inferior q_inf        LV free wall only     study    0.10                 7       7/7 (65, 100)       7/7 (65, 100)                 92/33       False
+ basal_superior q_inf LV wall (fw+vein+summit)        cb    0.05                21     11/21  (32, 72)     15/21  (50, 86) absence at epi (no %)        None
+ basal_superior q_inf LV wall (fw+vein+summit)        cb    0.10                21     14/21  (45, 83)     15/21  (50, 86) absence at epi (no %)        None
+ basal_superior q_inf LV wall (fw+vein+summit)     study    0.05                21      3/21   (5, 35)      8/21  (21, 59) absence at epi (no %)        None
+ basal_superior q_inf LV wall (fw+vein+summit)     study    0.10                21      3/21   (5, 35)      3/21   (5, 35) absence at epi (no %)        None
+ basal_superior q_inf        LV free wall only        cb    0.05                 6       3/6  (19, 81)       3/6  (19, 81) absence at epi (no %)        None
+ basal_superior q_inf        LV free wall only        cb    0.10                 6       3/6  (19, 81)       3/6  (19, 81) absence at epi (no %)        None
+ basal_superior q_inf        LV free wall only     study    0.05                 6       3/6  (19, 81)       2/6  (10, 70) absence at epi (no %)        None
+ basal_superior q_inf        LV free wall only     study    0.10                 6       3/6  (19, 81)       3/6  (19, 81) absence at epi (no %)        None
+  positions apical_superior q_I [LV wall (fw+vein+summit)]: 6G phi120_z0.25; 6G phi120_z0.5; 6G phi60_z0.25; 7D phi120_z0.25; 7D phi120_z0.5; 7D phi60_z0.25; Y5 phi120_z0.25; Y5 phi120_z0.5; Y5 phi60_z0.25
+  positions apical_superior q_I [LV free wall only]: 6G phi120_z0.25; 6G phi120_z0.5; 6G phi60_z0.25; 7D phi120_z0.25; 7D phi120_z0.5; 7D phi60_z0.25; Y5 phi120_z0.25; Y5 phi120_z0.5; Y5 phi60_z0.25
+  positions basal_superior q_I [LV wall (fw+vein+summit)]: 6G basal_ring_anterolateral; 6G basal_ring_lateral; 6G inferior_lateral; 6G phi120_z0.75; 6G phi180_z0.75; 6G proximal_aiv; 6G superior; 7D basal_ring_anterolateral; 7D basal_ring_lateral; 7D inferior_lateral; 7D phi120_z0.75; 7D phi180_z0.5; 7D proximal_aiv; 7D superior; Y5 basal_ring_anterolateral; Y5 basal_ring_lateral; Y5 inferior_lateral; Y5 phi120_z0.75; Y5 phi180_z0.75; Y5 proximal_aiv; Y5 superior
+  positions basal_superior q_I [LV free wall only]: 6G phi120_z0.75; 6G phi180_z0.75; 7D phi120_z0.75; 7D phi180_z0.5; Y5 phi120_z0.75; Y5 phi180_z0.75
+  positions basal_inferior q_inf [LV wall (fw+vein+summit)]: 6G phi-120_z0.5; 6G phi-120_z0.75; 6G phi180_z0.5; 7D phi-135_z0.5; 7D phi-135_z0.75; 7D phi180_z0.75; Y5 phi-150_z0.5; Y5 phi-150_z0.75
+  positions basal_inferior q_inf [LV free wall only]: 6G phi-120_z0.5; 6G phi-120_z0.75; 6G phi180_z0.5; 7D phi-135_z0.5; 7D phi-135_z0.75; 7D phi180_z0.75; Y5 phi-150_z0.5; Y5 phi-150_z0.75
+  positions apical_inferior q_inf [LV wall (fw+vein+summit)]: 6G phi-120_z0.25; 6G phi180_z0.25; 7D phi-120_z0.25; 7D phi180_z0.25; Y5 phi-120_z0.25; Y5 phi180_z0.25; Y5 phi180_z0.5
+  positions apical_inferior q_inf [LV free wall only]: 6G phi-120_z0.25; 6G phi180_z0.25; 7D phi-120_z0.25; 7D phi180_z0.25; Y5 phi-120_z0.25; Y5 phi180_z0.25; Y5 phi180_z0.5
+  positions basal_superior q_inf [LV wall (fw+vein+summit)]: 6G basal_ring_anterolateral; 6G basal_ring_lateral; 6G inferior_lateral; 6G phi120_z0.75; 6G phi180_z0.75; 6G proximal_aiv; 6G superior; 7D basal_ring_anterolateral; 7D basal_ring_lateral; 7D inferior_lateral; 7D phi120_z0.75; 7D phi180_z0.5; 7D proximal_aiv; 7D superior; Y5 basal_ring_anterolateral; Y5 basal_ring_lateral; Y5 inferior_lateral; Y5 phi120_z0.75; Y5 phi180_z0.75; Y5 proximal_aiv; Y5 superior
+  positions basal_superior q_inf [LV free wall only]: 6G phi120_z0.75; 6G phi180_z0.75; 7D phi120_z0.75; 7D phi180_z0.5; Y5 phi120_z0.75; Y5 phi180_z0.75
+
+## 3 Berruezo (true onset): median over matched pairs of (90-10)/10 %
+   heart         family  n_pairs  qrs_rel_median_pct qrs_pos_pairs  qrs_90_median  qrs_10_median  pdw_rel_median_pct pdw_pos_pairs  pdw_90_median  pdw_10_median  idt_rel_median_pct idt_pos_pairs  idt_90_median  idt_10_median  srs_rel_median_pct srs_pos_pairs  srs_90_median  srs_10_median  wall_mm_median wall_mm_range
+Y5HYEDL4   lv_free_wall       10                 6.0         10/10          170.5          158.0                42.6         10/10           57.5           40.5                21.7          6/10           56.5           55.5                16.1          6/10           69.0           69.0             9.9      8.4-11.8
+Y5HYEDL4 lv_vein_course        3                 5.3           2/3          180.0          171.0                13.3           2/3           65.0           60.0                12.2           3/3           83.0           74.0               -30.6           1/3           56.0           72.0             7.4      6.4-11.6
+6G8DD8S5   lv_free_wall       10                11.3         10/10          153.0          136.5                55.3         10/10           58.0           40.5                26.7          7/10           63.0           53.5                19.1          7/10           82.5           71.0            12.3     10.2-15.8
+6G8DD8S5 lv_vein_course        3                10.8           2/3          164.0          148.0                38.9           3/3           63.0           45.0               -36.7           1/3           38.0           60.0               -30.1           1/3           58.0           83.0            11.2     10.6-13.2
+7D98EVAR   lv_free_wall       10                 7.7         10/10          158.5          146.5                31.7         10/10           53.5           38.5                15.5          6/10           52.5           60.0                 5.4          5/10           66.0           73.0            10.6      8.2-12.6
+7D98EVAR lv_vein_course        3                 5.7           3/3          154.0          148.0                12.2           2/3           46.0           41.0                11.1           3/3           61.0           55.0                 9.0           3/3           89.0           78.0             7.4       6.0-9.6
+
+## 4 Bazan 2006 RV free wall (true onset)
+   heart  n_pairs  rv_qrs_rel_median_pct rv_range_pct  lv_fw_qrs_rel_median_pct  gate_-1.9_to_6.6  below_lv  rv_wall_mm_median rv_wall_mm_range dist_to_rv_network_mm_median_max dist_to_rv_junction_mm_median_max       positions_z
+Y5HYEDL4        9                    4.1   0.6 to 4.9                       6.0              True      True                4.8          4.4-6.2                        0.9 / 7.9                         1.1 / 8.5 [0.25, 0.5, 0.75]
+6G8DD8S5        9                    2.6  -7.8 to 4.7                      11.3              True      True                4.8         4.4-10.4                       1.5 / 10.1                        1.5 / 10.1 [0.25, 0.5, 0.75]
+7D98EVAR        9                    3.6  -3.0 to 5.9                       7.7              True      True                4.8         4.4-12.4                        1.6 / 1.9                         1.6 / 1.9 [0.25, 0.5, 0.75]
+
+## 5 No-network control (control heart, job 1, true onset; QRS = activation, lead-field independent)
+        family  n  qrs_no_network_median  qrs_network_median  wider_without_network  mdi_no_network_old  mdi_no_network_cb  mdi_network_cb
+  lv_free_wall 40                  254.5               165.0                   True                 NaN                NaN             NaN
+     lv_septum 32                  210.0               143.0                   True                 NaN                NaN             NaN
+  rv_free_wall 36                  256.5               151.0                   True                 NaN                NaN             NaN
+          rvot  8                  234.5               146.5                   True               0.612              0.500           0.667
+   aortic_cusp  8                  233.5               164.0                   True               0.548              0.566           0.571
+     lv_summit  8                  259.5               162.5                   True               0.427              0.405           0.480
+lv_vein_course 12                  248.5               174.5                   True                 NaN                NaN             NaN
+   summit+cusp 16                  250.0               162.5                   True                 NaN                NaN             NaN
+  cb rescore check: QRS equal to the job-1 CSV at 24/24 sites

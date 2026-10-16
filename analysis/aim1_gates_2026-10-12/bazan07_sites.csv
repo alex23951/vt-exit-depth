@@ -1,0 +1,91 @@
+heart,id,family,position,name,region,depth,uvc_z,phi_deg,qI_cb_05,qinf_cb_05,qI_cb_10,qinf_cb_10,qI_study_05,qinf_study_05,qI_study_10,qinf_study_10,pkg_qI_cb,pkg_qinf_cb
+Y5HYEDL4,lv_free_wall_phi60_z0.25_d10,lv_free_wall,phi60_z0.25,apical anteroseptal lv free wall,lv_apical_superior,0.1,0.25,58,True,True,True,False,True,False,True,True,True,True
+Y5HYEDL4,lv_free_wall_phi60_z0.25_d90,lv_free_wall,phi60_z0.25,apical anteroseptal lv free wall,lv_apical_superior,0.9,0.25,55,False,False,False,False,True,False,True,True,False,False
+Y5HYEDL4,lv_free_wall_phi120_z0.25_d10,lv_free_wall,phi120_z0.25,apical anterolateral lv free wall,lv_apical_superior,0.1,0.25,120,False,False,False,False,True,False,True,False,False,False
+Y5HYEDL4,lv_free_wall_phi120_z0.25_d90,lv_free_wall,phi120_z0.25,apical anterolateral lv free wall,lv_apical_superior,0.9,0.25,121,False,False,False,False,True,True,True,True,False,False
+Y5HYEDL4,lv_free_wall_phi180_z0.25_d10,lv_free_wall,phi180_z0.25,apical lateral lv free wall,lv_apical_inferior,0.1,0.25,-178,True,False,True,False,True,False,True,True,True,False
+Y5HYEDL4,lv_free_wall_phi180_z0.25_d90,lv_free_wall,phi180_z0.25,apical lateral lv free wall,lv_apical_inferior,0.9,0.26,-168,True,True,False,True,True,True,True,True,True,True
+Y5HYEDL4,lv_free_wall_phi-120_z0.25_d10,lv_free_wall,phi-120_z0.25,apical inferolateral lv free wall,lv_apical_inferior,0.1,0.25,-120,True,False,True,False,False,True,False,True,True,False
+Y5HYEDL4,lv_free_wall_phi-120_z0.25_d90,lv_free_wall,phi-120_z0.25,apical inferolateral lv free wall,lv_apical_inferior,0.9,0.24,-115,False,False,False,False,False,True,False,True,False,False
+Y5HYEDL4,lv_free_wall_phi120_z0.5_d10,lv_free_wall,phi120_z0.5,mid anterolateral lv free wall,lv_apical_superior,0.1,0.5,120,False,True,False,True,True,False,True,False,False,True
+Y5HYEDL4,lv_free_wall_phi120_z0.5_d90,lv_free_wall,phi120_z0.5,mid anterolateral lv free wall,lv_apical_superior,0.9,0.49,120,True,True,False,True,True,False,True,False,True,True
+Y5HYEDL4,lv_free_wall_phi180_z0.5_d10,lv_free_wall,phi180_z0.5,mid lateral lv free wall,lv_apical_inferior,0.1,0.5,-177,True,False,True,False,True,False,False,True,True,False
+Y5HYEDL4,lv_free_wall_phi180_z0.5_d90,lv_free_wall,phi180_z0.5,mid lateral lv free wall,lv_apical_inferior,0.9,0.5,-166,True,True,True,True,False,True,False,True,True,True
+Y5HYEDL4,lv_free_wall_phi-150_z0.5_d10,lv_free_wall,phi-150_z0.5,mid inferolateral lv free wall,lv_basal_inferior,0.1,0.5,-147,True,False,True,False,True,False,True,True,True,False
+Y5HYEDL4,lv_free_wall_phi-150_z0.5_d90,lv_free_wall,phi-150_z0.5,mid inferolateral lv free wall,lv_basal_inferior,0.9,0.51,-132,True,True,True,False,False,True,False,True,True,True
+Y5HYEDL4,lv_free_wall_phi120_z0.75_d10,lv_free_wall,phi120_z0.75,basal anterolateral lv free wall,lv_basal_superior,0.1,0.76,120,False,True,False,True,True,False,True,False,False,True
+Y5HYEDL4,lv_free_wall_phi120_z0.75_d90,lv_free_wall,phi120_z0.75,basal anterolateral lv free wall,lv_basal_superior,0.9,0.75,121,True,False,False,False,True,False,True,False,True,False
+Y5HYEDL4,lv_free_wall_phi180_z0.75_d10,lv_free_wall,phi180_z0.75,basal lateral lv free wall,lv_basal_superior,0.1,0.76,-179,True,False,False,False,False,False,False,True,True,False
+Y5HYEDL4,lv_free_wall_phi180_z0.75_d90,lv_free_wall,phi180_z0.75,basal lateral lv free wall,lv_basal_superior,0.9,0.75,-172,False,True,False,True,False,True,False,True,False,True
+Y5HYEDL4,lv_free_wall_phi-150_z0.75_d10,lv_free_wall,phi-150_z0.75,basal inferolateral lv free wall,lv_basal_inferior,0.1,0.76,-149,True,False,True,False,False,False,False,True,True,False
+Y5HYEDL4,lv_free_wall_phi-150_z0.75_d90,lv_free_wall,phi-150_z0.75,basal inferolateral lv free wall,lv_basal_inferior,0.9,0.75,-134,True,True,True,False,False,True,False,True,True,True
+Y5HYEDL4,lv_summit_superior_z_d10,lv_summit,superior,superior lv summit,lv_basal_superior,0.1,0.93,86,False,True,False,True,False,False,True,False,False,True
+Y5HYEDL4,lv_summit_superior_z_d90,lv_summit,superior,superior lv summit,lv_basal_superior,0.9,0.94,82,False,False,False,True,True,False,True,False,False,False
+Y5HYEDL4,lv_summit_inferior_lateral_z_d10,lv_summit,inferior_lateral,inferior lateral lv summit,lv_basal_superior,0.1,0.91,96,False,True,False,True,True,True,True,False,False,True
+Y5HYEDL4,lv_summit_inferior_lateral_z_d90,lv_summit,inferior_lateral,inferior lateral lv summit,lv_basal_superior,0.9,0.92,94,False,False,False,True,True,False,True,False,False,False
+Y5HYEDL4,lv_vein_course_proximal_aiv_z_d10,lv_vein_course,proximal_aiv,proximal aiv lv vein course,lv_basal_superior,0.1,0.76,79,False,True,False,True,True,True,True,False,False,True
+Y5HYEDL4,lv_vein_course_proximal_aiv_z_d90,lv_vein_course,proximal_aiv,proximal aiv lv vein course,lv_basal_superior,0.9,0.76,76,True,True,True,True,True,False,True,False,True,True
+Y5HYEDL4,lv_vein_course_basal_ring_anterolateral_z_d10,lv_vein_course,basal_ring_anterolateral,basal ring anterolateral lv vein course,lv_basal_superior,0.1,0.94,119,False,True,False,True,False,False,True,False,False,True
+Y5HYEDL4,lv_vein_course_basal_ring_anterolateral_z_d90,lv_vein_course,basal_ring_anterolateral,basal ring anterolateral lv vein course,lv_basal_superior,0.9,0.97,120,False,True,False,True,True,False,True,False,False,True
+Y5HYEDL4,lv_vein_course_basal_ring_lateral_z_d10,lv_vein_course,basal_ring_lateral,basal ring lateral lv vein course,lv_basal_superior,0.1,0.93,176,True,False,False,False,False,False,False,False,True,False
+Y5HYEDL4,lv_vein_course_basal_ring_lateral_z_d90,lv_vein_course,basal_ring_lateral,basal ring lateral lv vein course,lv_basal_superior,0.9,0.96,180,False,False,False,False,False,False,False,False,False,False
+6G8DD8S5,lv_free_wall_phi60_z0.25_d10,lv_free_wall,phi60_z0.25,apical anteroseptal lv free wall,lv_apical_superior,0.1,0.25,58,False,False,False,False,True,True,True,True,False,False
+6G8DD8S5,lv_free_wall_phi60_z0.25_d90,lv_free_wall,phi60_z0.25,apical anteroseptal lv free wall,lv_apical_superior,0.9,0.24,48,False,True,False,True,False,True,False,True,False,True
+6G8DD8S5,lv_free_wall_phi120_z0.25_d10,lv_free_wall,phi120_z0.25,apical anterolateral lv free wall,lv_apical_superior,0.1,0.25,121,False,True,False,True,False,False,True,True,False,True
+6G8DD8S5,lv_free_wall_phi120_z0.25_d90,lv_free_wall,phi120_z0.25,apical anterolateral lv free wall,lv_apical_superior,0.9,0.26,122,False,False,False,False,True,True,True,True,False,False
+6G8DD8S5,lv_free_wall_phi180_z0.25_d10,lv_free_wall,phi180_z0.25,apical lateral lv free wall,lv_apical_inferior,0.1,0.25,-179,True,False,False,False,False,True,False,True,True,False
+6G8DD8S5,lv_free_wall_phi180_z0.25_d90,lv_free_wall,phi180_z0.25,apical lateral lv free wall,lv_apical_inferior,0.9,0.25,-173,True,True,False,True,True,True,True,True,True,True
+6G8DD8S5,lv_free_wall_phi-120_z0.25_d10,lv_free_wall,phi-120_z0.25,apical inferolateral lv free wall,lv_apical_inferior,0.1,0.25,-118,True,False,True,False,False,True,False,True,True,False
+6G8DD8S5,lv_free_wall_phi-120_z0.25_d90,lv_free_wall,phi-120_z0.25,apical inferolateral lv free wall,lv_apical_inferior,0.9,0.26,-108,True,True,False,True,False,True,False,True,True,True
+6G8DD8S5,lv_free_wall_phi120_z0.5_d10,lv_free_wall,phi120_z0.5,mid anterolateral lv free wall,lv_apical_superior,0.1,0.5,119,False,True,False,True,False,True,True,True,False,True
+6G8DD8S5,lv_free_wall_phi120_z0.5_d90,lv_free_wall,phi120_z0.5,mid anterolateral lv free wall,lv_apical_superior,0.9,0.51,119,True,False,True,False,True,False,True,False,True,False
+6G8DD8S5,lv_free_wall_phi180_z0.5_d10,lv_free_wall,phi180_z0.5,mid lateral lv free wall,lv_basal_inferior,0.1,0.5,-179,False,False,False,False,False,False,False,True,False,False
+6G8DD8S5,lv_free_wall_phi180_z0.5_d90,lv_free_wall,phi180_z0.5,mid lateral lv free wall,lv_basal_inferior,0.9,0.51,-173,False,True,False,True,False,True,False,True,False,True
+6G8DD8S5,lv_free_wall_phi-120_z0.5_d10,lv_free_wall,phi-120_z0.5,mid inferolateral lv free wall,lv_basal_inferior,0.1,0.5,-118,True,False,True,False,True,False,True,False,True,False
+6G8DD8S5,lv_free_wall_phi-120_z0.5_d90,lv_free_wall,phi-120_z0.5,mid inferolateral lv free wall,lv_basal_inferior,0.9,0.5,-111,False,True,True,True,False,True,False,True,False,True
+6G8DD8S5,lv_free_wall_phi120_z0.75_d10,lv_free_wall,phi120_z0.75,basal anterolateral lv free wall,lv_basal_superior,0.1,0.75,119,False,True,False,True,False,True,True,False,False,True
+6G8DD8S5,lv_free_wall_phi120_z0.75_d90,lv_free_wall,phi120_z0.75,basal anterolateral lv free wall,lv_basal_superior,0.9,0.75,117,True,False,True,False,True,False,True,False,True,False
+6G8DD8S5,lv_free_wall_phi180_z0.75_d10,lv_free_wall,phi180_z0.75,basal lateral lv free wall,lv_basal_superior,0.1,0.74,-179,False,False,False,False,False,False,False,True,False,False
+6G8DD8S5,lv_free_wall_phi180_z0.75_d90,lv_free_wall,phi180_z0.75,basal lateral lv free wall,lv_basal_superior,0.9,0.74,-173,False,True,False,True,False,True,False,True,False,True
+6G8DD8S5,lv_free_wall_phi-120_z0.75_d10,lv_free_wall,phi-120_z0.75,basal inferolateral lv free wall,lv_basal_inferior,0.1,0.75,-118,True,False,True,False,True,False,False,False,True,False
+6G8DD8S5,lv_free_wall_phi-120_z0.75_d90,lv_free_wall,phi-120_z0.75,basal inferolateral lv free wall,lv_basal_inferior,0.9,0.77,-111,False,True,True,True,False,True,False,True,False,True
+6G8DD8S5,lv_summit_superior_z_d10,lv_summit,superior,superior lv summit,lv_basal_superior,0.1,0.88,83,True,True,False,True,False,True,False,False,True,True
+6G8DD8S5,lv_summit_superior_z_d90,lv_summit,superior,superior lv summit,lv_basal_superior,0.9,0.91,77,False,False,False,True,False,False,False,False,False,False
+6G8DD8S5,lv_summit_inferior_lateral_z_d10,lv_summit,inferior_lateral,inferior lateral lv summit,lv_basal_superior,0.1,0.88,99,False,True,False,True,True,True,True,False,False,True
+6G8DD8S5,lv_summit_inferior_lateral_z_d90,lv_summit,inferior_lateral,inferior lateral lv summit,lv_basal_superior,0.9,0.88,93,False,False,False,False,True,False,True,False,False,False
+6G8DD8S5,lv_vein_course_proximal_aiv_z_d10,lv_vein_course,proximal_aiv,proximal aiv lv vein course,lv_basal_superior,0.1,0.78,77,False,True,False,True,True,False,True,False,False,True
+6G8DD8S5,lv_vein_course_proximal_aiv_z_d90,lv_vein_course,proximal_aiv,proximal aiv lv vein course,lv_basal_superior,0.9,0.77,75,False,True,False,True,True,False,True,False,False,True
+6G8DD8S5,lv_vein_course_basal_ring_anterolateral_z_d10,lv_vein_course,basal_ring_anterolateral,basal ring anterolateral lv vein course,lv_basal_superior,0.1,0.87,124,False,True,False,True,False,True,False,False,False,True
+6G8DD8S5,lv_vein_course_basal_ring_anterolateral_z_d90,lv_vein_course,basal_ring_anterolateral,basal ring anterolateral lv vein course,lv_basal_superior,0.9,0.89,120,False,True,False,True,True,False,True,False,False,True
+6G8DD8S5,lv_vein_course_basal_ring_lateral_z_d10,lv_vein_course,basal_ring_lateral,basal ring lateral lv vein course,lv_basal_superior,0.1,0.87,178,False,False,False,False,False,False,False,False,False,False
+6G8DD8S5,lv_vein_course_basal_ring_lateral_z_d90,lv_vein_course,basal_ring_lateral,basal ring lateral lv vein course,lv_basal_superior,0.9,0.89,180,False,False,False,False,False,False,False,False,False,False
+7D98EVAR,lv_free_wall_phi60_z0.25_d10,lv_free_wall,phi60_z0.25,apical anteroseptal lv free wall,lv_apical_superior,0.1,0.25,59,False,False,False,False,True,True,True,True,False,False
+7D98EVAR,lv_free_wall_phi60_z0.25_d90,lv_free_wall,phi60_z0.25,apical anteroseptal lv free wall,lv_apical_superior,0.9,0.25,51,False,False,True,False,True,True,True,True,False,False
+7D98EVAR,lv_free_wall_phi120_z0.25_d10,lv_free_wall,phi120_z0.25,apical anterolateral lv free wall,lv_apical_superior,0.1,0.25,119,False,False,False,False,True,True,True,True,False,False
+7D98EVAR,lv_free_wall_phi120_z0.25_d90,lv_free_wall,phi120_z0.25,apical anterolateral lv free wall,lv_apical_superior,0.9,0.25,116,False,False,False,False,True,True,True,True,False,False
+7D98EVAR,lv_free_wall_phi180_z0.25_d10,lv_free_wall,phi180_z0.25,apical lateral lv free wall,lv_apical_inferior,0.1,0.25,-179,False,False,False,False,True,True,True,True,False,False
+7D98EVAR,lv_free_wall_phi180_z0.25_d90,lv_free_wall,phi180_z0.25,apical lateral lv free wall,lv_apical_inferior,0.9,0.26,-171,False,True,False,True,True,True,True,True,False,True
+7D98EVAR,lv_free_wall_phi-120_z0.25_d10,lv_free_wall,phi-120_z0.25,apical inferolateral lv free wall,lv_apical_inferior,0.1,0.25,-120,True,False,True,False,False,True,False,True,True,False
+7D98EVAR,lv_free_wall_phi-120_z0.25_d90,lv_free_wall,phi-120_z0.25,apical inferolateral lv free wall,lv_apical_inferior,0.9,0.25,-110,True,True,True,False,False,True,False,True,True,True
+7D98EVAR,lv_free_wall_phi120_z0.5_d10,lv_free_wall,phi120_z0.5,mid anterolateral lv free wall,lv_apical_superior,0.1,0.5,120,False,True,False,True,True,False,True,False,False,True
+7D98EVAR,lv_free_wall_phi120_z0.5_d90,lv_free_wall,phi120_z0.5,mid anterolateral lv free wall,lv_apical_superior,0.9,0.5,119,True,True,False,True,True,False,True,False,True,True
+7D98EVAR,lv_free_wall_phi180_z0.5_d10,lv_free_wall,phi180_z0.5,mid lateral lv free wall,lv_basal_superior,0.1,0.5,-179,False,False,False,False,False,True,False,True,False,False
+7D98EVAR,lv_free_wall_phi180_z0.5_d90,lv_free_wall,phi180_z0.5,mid lateral lv free wall,lv_basal_superior,0.9,0.5,-171,False,True,False,False,False,True,False,True,False,True
+7D98EVAR,lv_free_wall_phi-135_z0.5_d10,lv_free_wall,phi-135_z0.5,mid inferolateral lv free wall,lv_basal_inferior,0.1,0.5,-135,True,False,True,False,True,False,False,True,True,False
+7D98EVAR,lv_free_wall_phi-135_z0.5_d90,lv_free_wall,phi-135_z0.5,mid inferolateral lv free wall,lv_basal_inferior,0.9,0.51,-122,True,True,True,False,False,True,False,True,True,True
+7D98EVAR,lv_free_wall_phi120_z0.75_d10,lv_free_wall,phi120_z0.75,basal anterolateral lv free wall,lv_basal_superior,0.1,0.75,120,False,True,False,True,True,False,True,False,False,True
+7D98EVAR,lv_free_wall_phi120_z0.75_d90,lv_free_wall,phi120_z0.75,basal anterolateral lv free wall,lv_basal_superior,0.9,0.74,118,True,False,False,True,True,False,True,False,True,False
+7D98EVAR,lv_free_wall_phi180_z0.75_d10,lv_free_wall,phi180_z0.75,basal lateral lv free wall,lv_basal_inferior,0.1,0.74,-179,False,False,False,False,False,False,False,False,False,False
+7D98EVAR,lv_free_wall_phi180_z0.75_d90,lv_free_wall,phi180_z0.75,basal lateral lv free wall,lv_basal_inferior,0.9,0.75,-173,False,True,False,True,False,True,False,True,False,True
+7D98EVAR,lv_free_wall_phi-135_z0.75_d10,lv_free_wall,phi-135_z0.75,basal inferolateral lv free wall,lv_basal_inferior,0.1,0.76,-131,True,False,True,False,False,False,False,False,True,False
+7D98EVAR,lv_free_wall_phi-135_z0.75_d90,lv_free_wall,phi-135_z0.75,basal inferolateral lv free wall,lv_basal_inferior,0.9,0.76,-116,True,False,False,False,False,True,False,True,True,False
+7D98EVAR,lv_summit_superior_z_d10,lv_summit,superior,superior lv summit,lv_basal_superior,0.1,0.93,92,False,True,False,True,False,False,True,False,False,True
+7D98EVAR,lv_summit_superior_z_d90,lv_summit,superior,superior lv summit,lv_basal_superior,0.9,0.95,88,False,True,False,True,True,False,True,False,False,True
+7D98EVAR,lv_summit_inferior_lateral_z_d10,lv_summit,inferior_lateral,inferior lateral lv summit,lv_basal_superior,0.1,0.88,104,False,True,False,True,True,False,True,False,False,True
+7D98EVAR,lv_summit_inferior_lateral_z_d90,lv_summit,inferior_lateral,inferior lateral lv summit,lv_basal_superior,0.9,0.89,103,False,True,False,True,True,False,True,False,False,True
+7D98EVAR,lv_vein_course_proximal_aiv_z_d10,lv_vein_course,proximal_aiv,proximal aiv lv vein course,lv_basal_superior,0.1,0.77,81,False,True,False,True,True,True,True,False,False,True
+7D98EVAR,lv_vein_course_proximal_aiv_z_d90,lv_vein_course,proximal_aiv,proximal aiv lv vein course,lv_basal_superior,0.9,0.76,77,False,True,False,True,True,False,True,False,False,True
+7D98EVAR,lv_vein_course_basal_ring_anterolateral_z_d10,lv_vein_course,basal_ring_anterolateral,basal ring anterolateral lv vein course,lv_basal_superior,0.1,0.87,122,False,True,False,True,False,False,True,False,False,True
+7D98EVAR,lv_vein_course_basal_ring_anterolateral_z_d90,lv_vein_course,basal_ring_anterolateral,basal ring anterolateral lv vein course,lv_basal_superior,0.9,0.89,120,False,True,False,True,True,False,True,False,False,True
+7D98EVAR,lv_vein_course_basal_ring_lateral_z_d10,lv_vein_course,basal_ring_lateral,basal ring lateral lv vein course,lv_basal_superior,0.1,0.9,177,False,False,False,False,False,False,False,False,False,False
+7D98EVAR,lv_vein_course_basal_ring_lateral_z_d90,lv_vein_course,basal_ring_lateral,basal ring lateral lv vein course,lv_basal_superior,0.9,0.91,179,False,False,False,False,False,False,False,False,False,False

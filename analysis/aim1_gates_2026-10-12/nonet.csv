@@ -1,0 +1,9 @@
+family,n,qrs_no_network_median,qrs_network_median,wider_without_network,mdi_no_network_old,mdi_no_network_cb,mdi_network_cb
+lv_free_wall,40,254.5,165.0,True,,,
+lv_septum,32,210.0,143.0,True,,,
+rv_free_wall,36,256.5,151.0,True,,,
+rvot,8,234.5,146.5,True,0.612,0.5,0.667
+aortic_cusp,8,233.5,164.0,True,0.548,0.566,0.571
+lv_summit,8,259.5,162.5,True,0.427,0.405,0.48
+lv_vein_course,12,248.5,174.5,True,,,
+summit+cusp,16,250.0,162.5,True,,,

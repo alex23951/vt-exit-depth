@@ -1,0 +1,109 @@
+{
+ "heart": "Y5HYEDL4",
+ "network_version": "v3",
+ "lbbb_cut": false,
+ "distal_speed_m_s": null,
+ "nodes": 6916,
+ "edges": 10667,
+ "length_mm": {
+  "proximal": 394.4,
+  "distal_lv": 5302.4,
+  "distal_rv": 4526.8
+ },
+ "proximal_mm": {
+  "lbb": 11.5,
+  "division_anterior": 20.4,
+  "division_anterior_post": 112.5,
+  "division_septal": 30.5,
+  "division_septal_post": 40.5,
+  "division_posterior": 48.1,
+  "division_posterior_post": 33.9,
+  "rbb": 64.1,
+  "moderator_band": 14.7,
+  "rbb_apical": 18.2
+ },
+ "branches_lv_terminals": 560,
+ "branches_rv_terminals": 463,
+ "reconnections": {
+  "lv": 553,
+  "rv": 446
+ },
+ "proximal_speed_m_s": {
+  "lbb": 2.0,
+  "division_anterior": 2.0,
+  "division_anterior_post": 2.0,
+  "division_septal": 2.4,
+  "division_septal_post": 2.4,
+  "division_posterior": 3.16,
+  "division_posterior_post": 3.16,
+  "rbb": 3.36,
+  "moderator_band": 3.36,
+  "rbb_apical": 3.36
+ },
+ "his_to_lv_sites_ms": 15.9,
+ "pmj": 4146,
+ "pmj_spacing_mm": 0.9,
+ "pmj_lv": 2278,
+ "pmj_rv": 1868,
+ "allowed_area_cm2": {
+  "lv": 133.5,
+  "rv": 143.1
+ },
+ "pmj_per_cm2_of_allowed": {
+  "lv": 17.1,
+  "rv": 13.1
+ },
+ "gap_to_network_mm_median": {
+  "lv": 1.2,
+  "rv": 1.6
+ },
+ "gap_to_network_mm_max": {
+  "lv": 10.0,
+  "rv": 11.8
+ },
+ "landmarks": {
+  "his": 305272,
+  "his_z_phi": [
+   0.919,
+   43.2
+  ],
+  "lbb_branch": 46700,
+  "his_rv": 350727,
+  "rbb_low": 16331,
+  "mb_end": 311002,
+  "mb_length_mm": 14.7,
+  "fascicle_ends": {
+   "anterior": [
+    65973,
+    0.12,
+    118.9
+   ],
+   "septal": [
+    291535,
+    0.12,
+    1.0
+   ],
+   "posterior": [
+    4105,
+    0.12,
+    -117.4
+   ]
+  }
+ }
+}
+V2: 65 beats in /home/alex/vt-exit-depth/analysis/rvot_tests_2026-10-12/V2/beats.csv, 231 s
+Traceback (most recent call last):
+  File "/home/alex/vt-exit-depth/analysis/rvot_tests_2026-10-12/rvot_tests.py", line 349, in <module>
+    run(sys.argv[2], float(sys.argv[3]) if len(sys.argv) > 3 else None)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/vt-exit-depth/analysis/rvot_tests_2026-10-12/rvot_tests.py", line 256, in run
+    S = moved_rvot() if variant == 'V1' else sites() + [None]
+        ~~~~~~~~~~^^
+  File "/home/alex/vt-exit-depth/analysis/rvot_tests_2026-10-12/rvot_tests.py", line 219, in moved_rvot
+    p = int(cand[np.argmax((PTS[cand] - c) @ n)])
+                 ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/venv_carputils/lib/python3.14/site-packages/numpy/_core/fromnumeric.py", line 1352, in argmax
+    return _wrapfunc(a, 'argmax', axis=axis, out=out, **kwds)
+  File "/home/alex/venv_carputils/lib/python3.14/site-packages/numpy/_core/fromnumeric.py", line 54, in _wrapfunc
+    return bound(*args, **kwds)
+ValueError: attempt to get argmax of an empty sequence

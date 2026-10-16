@@ -1,0 +1,13 @@
+{
+ "elements": 1755714,
+ "nan_fraction": 0.0,
+ "ot_elements_w_lt_0.5": 230693,
+ "fibre_angle_vs_cohort_deg": {
+  "all_median": 10.365666651229628,
+  "all_mean": 14.90517779058372,
+  "body_median": 9.624611789775296,
+  "ot_median": 25.78970791138771,
+  "frac_lt_20deg": 0.8308255216965861
+ },
+ "sheet_normal_vs_transmural_median_deg": 0.7797002305264683
+}

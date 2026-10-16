@@ -1,0 +1,14 @@
+{
+ "arm": "B",
+ "heart": "6G8DD8S5",
+ "speeds_f_s_n": [
+  0.6,
+  0.3504,
+  0.33599999999999997
+ ],
+ "graph_scale_k": 1.0658,
+ "d_ret_ms": 2.0,
+ "d_ant": 4.0,
+ "fibres": "frozen bivF.lon",
+ "lead_fields": "cb, not rebuilt"
+}

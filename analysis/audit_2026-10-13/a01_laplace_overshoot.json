@@ -1,0 +1,322 @@
+{
+ "Y5HYEDL4": {
+  "nodes": 375190,
+  "elements": 1939909,
+  "components": 1,
+  "component_sizes_top5": [
+   375190
+  ],
+  "neg_volume_elements": 0,
+  "pos_volume_elements": 1939909,
+  "zero_volume_elements(<1e-9 mm3)": 0,
+  "vol_mm3_min_median": [
+   0.010411513704718918,
+   0.1209724403364018
+  ],
+  "myocardial_volume_ml_all_tags": 233.63275530163733,
+  "fields": {
+   "zeta": {
+    "min": 0.0,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "basal": {
+    "min": 0.0,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "ot": {
+    "min": 0.0,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "w": {
+    "min": -0.797506,
+    "max": 2.81017,
+    "n_outside_[-0.01,1.01]": 43,
+    "bad_components": [
+     0
+    ],
+    "bad_in_main_component": 43,
+    "bad_z_range": [
+     1.0,
+     1.0
+    ],
+    "bad_nodes_first": [
+     1114,
+     1548,
+     7897,
+     9603,
+     11007
+    ]
+   },
+   "phi_epi": {
+    "min": 0.0,
+    "max": 1.00299,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "phi_lv": {
+    "min": -5.97737e-05,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "phi_rv": {
+    "min": -0.00293116,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "v": {
+    "min": 0.0,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   }
+  },
+  "edge_mm_min_p5_median_p95_max": [
+   0.3879195117878703,
+   0.8458642105222755,
+   1.037068580620096,
+   1.3064182221207912,
+   1.7485467238780819
+  ]
+ },
+ "6G8DD8S5": {
+  "nodes": 375672,
+  "elements": 1997928,
+  "components": 1,
+  "component_sizes_top5": [
+   375672
+  ],
+  "neg_volume_elements": 0,
+  "pos_volume_elements": 1997928,
+  "zero_volume_elements(<1e-9 mm3)": 0,
+  "vol_mm3_min_median": [
+   0.014599194976161604,
+   0.12135556848227658
+  ],
+  "myocardial_volume_ml_all_tags": 241.6876030708359,
+  "fields": {
+   "zeta": {
+    "min": 0.0,
+    "max": 1.00001,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "basal": {
+    "min": 0.0,
+    "max": 1.00003,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "ot": {
+    "min": 0.0,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "w": {
+    "min": -1.11602,
+    "max": 3.41101,
+    "n_outside_[-0.01,1.01]": 51,
+    "bad_components": [
+     0
+    ],
+    "bad_in_main_component": 51,
+    "bad_z_range": [
+     1.0,
+     1.0
+    ],
+    "bad_nodes_first": [
+     2820,
+     3307,
+     4413,
+     6687,
+     9080
+    ]
+   },
+   "phi_epi": {
+    "min": 0.0,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "phi_lv": {
+    "min": -0.927689,
+    "max": 2.41472,
+    "n_outside_[-0.01,1.01]": 29,
+    "bad_components": [
+     0
+    ],
+    "bad_in_main_component": 29,
+    "bad_z_range": [
+     0.889831,
+     1.0
+    ],
+    "bad_nodes_first": [
+     4553,
+     5382,
+     6570,
+     10107,
+     15473
+    ]
+   },
+   "phi_rv": {
+    "min": -0.386844,
+    "max": 2.06543,
+    "n_outside_[-0.01,1.01]": 30,
+    "bad_components": [
+     0
+    ],
+    "bad_in_main_component": 30,
+    "bad_z_range": [
+     0.896027,
+     1.0
+    ],
+    "bad_nodes_first": [
+     2393,
+     3085,
+     8320,
+     9489,
+     14633
+    ]
+   },
+   "v": {
+    "min": -0.386844,
+    "max": 2.06543,
+    "n_outside_[-0.01,1.01]": 30,
+    "bad_components": [
+     0
+    ],
+    "bad_in_main_component": 30,
+    "bad_z_range": [
+     0.896027,
+     1.0
+    ],
+    "bad_nodes_first": [
+     2393,
+     3085,
+     8320,
+     9489,
+     14633
+    ]
+   }
+  },
+  "edge_mm_min_p5_median_p95_max": [
+   0.4484390788059408,
+   0.8514730720483863,
+   1.0373081289706918,
+   1.3042351911637984,
+   1.7080557598623463
+  ]
+ },
+ "7D98EVAR": {
+  "nodes": 337505,
+  "elements": 1755714,
+  "components": 1,
+  "component_sizes_top5": [
+   337505
+  ],
+  "neg_volume_elements": 0,
+  "pos_volume_elements": 1755714,
+  "zero_volume_elements(<1e-9 mm3)": 0,
+  "vol_mm3_min_median": [
+   0.010690780434269456,
+   0.1211045957134218
+  ],
+  "myocardial_volume_ml_all_tags": 211.7365730809199,
+  "fields": {
+   "zeta": {
+    "min": 0.0,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "basal": {
+    "min": 0.0,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "ot": {
+    "min": 0.0,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "w": {
+    "min": -0.535742,
+    "max": 3.36284,
+    "n_outside_[-0.01,1.01]": 52,
+    "bad_components": [
+     0
+    ],
+    "bad_in_main_component": 52,
+    "bad_z_range": [
+     1.0,
+     1.0
+    ],
+    "bad_nodes_first": [
+     4886,
+     8088,
+     8384,
+     9537,
+     14599
+    ]
+   },
+   "phi_epi": {
+    "min": -0.000116649,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 0
+   },
+   "phi_lv": {
+    "min": -0.273324,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 3,
+    "bad_components": [
+     0
+    ],
+    "bad_in_main_component": 3,
+    "bad_z_range": [
+     0.968216,
+     0.975407
+    ],
+    "bad_nodes_first": [
+     1078,
+     219026,
+     314352
+    ]
+   },
+   "phi_rv": {
+    "min": -0.477204,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 1,
+    "bad_components": [
+     0
+    ],
+    "bad_in_main_component": 1,
+    "bad_z_range": [
+     1.0,
+     1.0
+    ],
+    "bad_nodes_first": [
+     254534
+    ]
+   },
+   "v": {
+    "min": -0.477204,
+    "max": 1.0,
+    "n_outside_[-0.01,1.01]": 1,
+    "bad_components": [
+     0
+    ],
+    "bad_in_main_component": 1,
+    "bad_z_range": [
+     1.0,
+     1.0
+    ],
+    "bad_nodes_first": [
+     254534
+    ]
+   }
+  },
+  "edge_mm_min_p5_median_p95_max": [
+   0.32598044142159793,
+   0.8474294652584999,
+   1.0371076415610103,
+   1.30601848154037,
+   1.6641538298667162
+  ]
+ }
+}

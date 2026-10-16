@@ -1,0 +1,6 @@
+                 set  RVOT  cusp  summit_90  vein_90  LV_endo_10  LV_fw_10_only  summit_cusp_qrs  lvfw_qrs_90_10 lvfw_qrs_10_90  his_qrs  his_axis_net  his_axis_area  order_ok  qrs_ratio_ok  summit_cusp_ok
+v3 stored (openCARP) 0.667 0.571      0.476    0.451       0.338          0.349            162.5          1.0791    158.0/170.5    104.4          64.0          -37.0     False          True            True
+            V1 graph 0.671   NaN        NaN      NaN         NaN            NaN              NaN             NaN        nan/nan      NaN           NaN            NaN     False         False           False
+            V2 graph 0.718 0.557      0.444    0.476       0.361          0.355            159.0          1.0868    155.5/169.0    105.6          69.0          -55.0     False          True            True
+            V3 graph 0.622 0.698      0.539    0.539       0.453          0.432            134.0          1.1188    130.5/146.0     96.7          63.0           75.0     False          True            True
+            V4 graph 0.698 0.625      0.479    0.412       0.369          0.357            163.0          1.1016    152.5/168.0    102.6          59.0           66.0     False          True            True

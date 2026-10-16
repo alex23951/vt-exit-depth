@@ -1,0 +1,25 @@
+id,name,uvc_phi,bazan_region(UVC),angle_from_septal_centre_deg(+ant),ant_insertion_deg,inf_insertion_deg,AHA_like_label,cos_to_body_superior,body_superior_half
+lv_septum_phi0_z0.25_d50,apical septal lv septum,-15.0,lv_apical_inferior,2.0,61.0,-53.0,inferoseptal,-0.17,False
+lv_free_wall_phi60_z0.25_d50,apical anteroseptal lv free wall,57.0,lv_apical_superior,88.0,60.0,-51.0,anterior,0.97,True
+lv_free_wall_phi120_z0.25_d50,apical anterolateral lv free wall,120.0,lv_apical_superior,-179.0,63.0,-56.0,anterolateral,0.16,True
+lv_free_wall_phi180_z0.25_d50,apical lateral lv free wall,-172.0,lv_apical_inferior,-93.0,63.0,-56.0,inferior,-0.98,False
+lv_free_wall_phi-120_z0.25_d50,apical inferolateral lv free wall,-116.0,lv_apical_inferior,-49.0,60.0,-51.0,inferoseptal,-0.88,False
+lv_septum_phi-60_z0.25_d50,apical inferoseptal lv septum,-61.0,lv_apical_inferior,-22.0,60.0,-53.0,inferoseptal,-0.56,False
+lv_septum_phi0_z0.5_d50,mid septal lv septum,-19.0,lv_apical_inferior,-17.0,78.0,-66.0,inferoseptal,-0.3,False
+lv_septum_phi60_z0.5_d50,mid anteroseptal lv septum,55.0,lv_apical_superior,62.0,78.0,-66.0,anteroseptal,0.88,True
+lv_free_wall_phi120_z0.5_d50,mid anterolateral lv free wall,120.0,lv_apical_superior,164.0,79.0,-66.0,anterolateral,0.26,True
+lv_free_wall_phi180_z0.5_d50,mid lateral lv free wall,-171.0,lv_apical_inferior,-93.0,79.0,-66.0,inferior,-1.0,False
+lv_free_wall_phi-150_z0.5_d50,mid inferolateral lv free wall,-139.0,lv_basal_inferior,-64.0,79.0,-66.0,inferoseptal,-0.9,False
+lv_septum_phi-60_z0.5_d50,mid inferoseptal lv septum,-64.0,lv_apical_inferior,-32.0,78.0,-66.0,inferoseptal,-0.55,False
+lv_septum_phi0_z0.75_d50,basal septal lv septum,-28.0,lv_basal_superior,-24.0,80.0,-68.0,inferoseptal,-0.27,False
+lv_septum_phi60_z0.75_d50,basal anteroseptal lv septum,54.0,lv_basal_superior,42.0,81.0,-68.0,anteroseptal,0.77,True
+lv_free_wall_phi120_z0.75_d50,basal anterolateral lv free wall,121.0,lv_basal_superior,130.0,62.0,-80.0,anterolateral,0.33,True
+lv_free_wall_phi180_z0.75_d50,basal lateral lv free wall,-176.0,lv_basal_superior,-123.0,67.0,-78.0,inferior,-0.99,False
+lv_free_wall_phi-150_z0.75_d50,basal inferolateral lv free wall,-140.0,lv_basal_inferior,-72.0,80.0,-69.0,inferior,-0.87,False
+lv_septum_phi-60_z0.75_d50,basal inferoseptal lv septum,-59.0,lv_basal_inferior,-32.0,81.0,-68.0,inferoseptal,-0.41,False
+aortic_cusp_rcc_z_d50,rcc aortic cusp,34.0,lv_basal_superior,-43.0,19.0,-43.0,inferoseptal,-0.12,False
+aortic_cusp_lcc_z_d50,lcc aortic cusp,85.0,lv_basal_superior,22.0,15.0,-44.0,anterior,0.84,True
+lv_summit_superior_z_d50,superior lv summit,84.0,lv_basal_superior,-43.0,37.0,-26.0,inferior,0.99,True
+lv_summit_inferior_lateral_z_d50,inferior lateral lv summit,95.0,lv_basal_superior,-71.0,40.0,-22.0,inferior,0.94,True
+lv_vein_course_proximal_aiv_z_d50,proximal aiv lv vein course,77.0,lv_basal_superior,79.0,79.0,-70.0,anterior,1.0,True
+lv_vein_course_basal_ring_lateral_z_d50,basal ring lateral lv vein course,178.0,lv_basal_superior,124.0,40.0,-23.0,anterolateral,-1.0,False

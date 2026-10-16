@@ -1,0 +1,9 @@
+id,family,position,depth_target,node,total_activation_ms,first_myocardial_ms,his_ms,qrs_ms,mdi_daniels,mdi_daniels_lead,pseudo_delta_ms,q_lead_I,inferior_q_any
+rvot_septal_z_d10_moved10,rvot,septal,0.1,199456,146.89,0.0,54.22,147.0,0.5986394557823129,V2,81.0,False,True
+rvot_septal_z_d50_moved10,rvot,septal,0.5,81683,147.72,0.0,54.8,148.0,0.6216216216216216,V2,82.0,False,True
+rvot_septal_z_d75_moved10,rvot,septal,0.75,2823,148.74,0.0,56.27,149.0,0.6174496644295302,V2,84.0,False,True
+rvot_septal_z_d90_moved10,rvot,septal,0.9,39625,148.98,0.0,57.45,149.0,0.6174496644295302,V2,85.0,False,True
+rvot_free_wall_z_d10_moved10,rvot,free_wall,0.1,211713,138.55,0.0,67.14,139.0,0.7194244604316546,V4,43.0,False,True
+rvot_free_wall_z_d50_moved10,rvot,free_wall,0.5,103686,142.45,0.0,71.03,142.0,0.7323943661971831,V4,47.0,False,True
+rvot_free_wall_z_d75_moved10,rvot,free_wall,0.75,272759,143.27,0.0,71.85,143.0,0.7342657342657343,V4,47.0,True,True
+rvot_free_wall_z_d90_moved10,rvot,free_wall,0.9,367977,145.32,0.0,74.48,145.0,0.7379310344827587,V4,50.0,True,True

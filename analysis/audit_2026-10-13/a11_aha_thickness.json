@@ -1,0 +1,611 @@
+{
+ "Y5HYEDL4": {
+  "basal": {
+   "insertions_deg(ant,inf)": [
+    79,
+    -70
+   ],
+   "septal_arc_deg": 149,
+   "anteroseptal": [
+    9.6,
+    867
+   ],
+   "inferoseptal": [
+    9.1,
+    886
+   ],
+   "anterior": [
+    8.7,
+    673
+   ],
+   "anterolateral": [
+    8.7,
+    599
+   ],
+   "inferolateral": [
+    9.9,
+    586
+   ],
+   "inferior": [
+    10.2,
+    688
+   ]
+  },
+  "mid": {
+   "insertions_deg(ant,inf)": [
+    77,
+    -65
+   ],
+   "septal_arc_deg": 142,
+   "anteroseptal": [
+    8.1,
+    718
+   ],
+   "inferoseptal": [
+    8.2,
+    719
+   ],
+   "anterior": [
+    8.3,
+    587
+   ],
+   "anterolateral": [
+    7.9,
+    530
+   ],
+   "inferolateral": [
+    9.7,
+    560
+   ],
+   "inferior": [
+    10.6,
+    565
+   ]
+  },
+  "apical": {
+   "insertions_deg(ant,inf)": [
+    53,
+    -47
+   ],
+   "septal_arc_deg": 100,
+   "septal": [
+    7.5,
+    722
+   ],
+   "anterior": [
+    8.6,
+    673
+   ],
+   "lateral": [
+    8.0,
+    670
+   ],
+   "inferior": [
+    8.2,
+    625
+   ]
+  },
+  "apex_cap(<0.08)": [
+   4.5,
+   316
+  ],
+  "cusp_summit_sites": {
+   "aortic_cusp_rcc_z_d10": {
+    "wall_mm(site grid)": 2.2,
+    "depth_achieved": 0.0,
+    "height_vs_AV_plane_mm(+ = aortic side)": 4.2,
+    "dist_AV_rim_mm": 2.1,
+    "tag": 1
+   },
+   "aortic_cusp_rcc_z_d50": {
+    "wall_mm(site grid)": 2.2,
+    "depth_achieved": 0.376,
+    "height_vs_AV_plane_mm(+ = aortic side)": 4.7,
+    "dist_AV_rim_mm": 1.8,
+    "tag": 1
+   },
+   "aortic_cusp_rcc_z_d75": {
+    "wall_mm(site grid)": 2.2,
+    "depth_achieved": 0.597,
+    "height_vs_AV_plane_mm(+ = aortic side)": 4.2,
+    "dist_AV_rim_mm": 1.0,
+    "tag": 1
+   },
+   "aortic_cusp_rcc_z_d90": {
+    "wall_mm(site grid)": 2.2,
+    "depth_achieved": 0.708,
+    "height_vs_AV_plane_mm(+ = aortic side)": 5.1,
+    "dist_AV_rim_mm": 1.9,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d10": {
+    "wall_mm(site grid)": 1.0,
+    "depth_achieved": 0.0,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.4,
+    "dist_AV_rim_mm": 0.0,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d50": {
+    "wall_mm(site grid)": 1.0,
+    "depth_achieved": 0.407,
+    "height_vs_AV_plane_mm(+ = aortic side)": -3.1,
+    "dist_AV_rim_mm": 0.8,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d75": {
+    "wall_mm(site grid)": 1.0,
+    "depth_achieved": 0.378,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.1,
+    "dist_AV_rim_mm": 0.0,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d90": {
+    "wall_mm(site grid)": 1.0,
+    "depth_achieved": 0.944,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.5,
+    "dist_AV_rim_mm": 0.0,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d10": {
+    "wall_mm(site grid)": 10.0,
+    "depth_achieved": 0.086,
+    "height_vs_AV_plane_mm(+ = aortic side)": -10.2,
+    "dist_AV_rim_mm": 10.8,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d50": {
+    "wall_mm(site grid)": 10.0,
+    "depth_achieved": 0.474,
+    "height_vs_AV_plane_mm(+ = aortic side)": -7.1,
+    "dist_AV_rim_mm": 10.6,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d75": {
+    "wall_mm(site grid)": 10.0,
+    "depth_achieved": 0.784,
+    "height_vs_AV_plane_mm(+ = aortic side)": -5.0,
+    "dist_AV_rim_mm": 12.0,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d90": {
+    "wall_mm(site grid)": 10.0,
+    "depth_achieved": 0.904,
+    "height_vs_AV_plane_mm(+ = aortic side)": -3.6,
+    "dist_AV_rim_mm": 11.7,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d10": {
+    "wall_mm(site grid)": 9.4,
+    "depth_achieved": 0.083,
+    "height_vs_AV_plane_mm(+ = aortic side)": -16.3,
+    "dist_AV_rim_mm": 17.8,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d50": {
+    "wall_mm(site grid)": 9.4,
+    "depth_achieved": 0.486,
+    "height_vs_AV_plane_mm(+ = aortic side)": -14.0,
+    "dist_AV_rim_mm": 18.1,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d75": {
+    "wall_mm(site grid)": 9.4,
+    "depth_achieved": 0.755,
+    "height_vs_AV_plane_mm(+ = aortic side)": -12.0,
+    "dist_AV_rim_mm": 18.0,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d90": {
+    "wall_mm(site grid)": 9.4,
+    "depth_achieved": 0.848,
+    "height_vs_AV_plane_mm(+ = aortic side)": -11.6,
+    "dist_AV_rim_mm": 18.4,
+    "tag": 1
+   }
+  }
+ },
+ "6G8DD8S5": {
+  "basal": {
+   "insertions_deg(ant,inf)": [
+    67,
+    -55
+   ],
+   "septal_arc_deg": 122,
+   "anteroseptal": [
+    11.7,
+    676
+   ],
+   "inferoseptal": [
+    8.8,
+    707
+   ],
+   "anterior": [
+    10.7,
+    774
+   ],
+   "anterolateral": [
+    15.5,
+    643
+   ],
+   "inferolateral": [
+    13.2,
+    661
+   ],
+   "inferior": [
+    13.2,
+    676
+   ]
+  },
+  "mid": {
+   "insertions_deg(ant,inf)": [
+    66,
+    -67
+   ],
+   "septal_arc_deg": 133,
+   "anteroseptal": [
+    7.8,
+    743
+   ],
+   "inferoseptal": [
+    8.9,
+    670
+   ],
+   "anterior": [
+    8.6,
+    649
+   ],
+   "anterolateral": [
+    13.0,
+    593
+   ],
+   "inferolateral": [
+    12.0,
+    667
+   ],
+   "inferior": [
+    11.3,
+    622
+   ]
+  },
+  "apical": {
+   "insertions_deg(ant,inf)": [
+    53,
+    -57
+   ],
+   "septal_arc_deg": 110,
+   "septal": [
+    10.3,
+    785
+   ],
+   "anterior": [
+    9.6,
+    683
+   ],
+   "lateral": [
+    8.8,
+    588
+   ],
+   "inferior": [
+    8.9,
+    665
+   ]
+  },
+  "apex_cap(<0.08)": null,
+  "cusp_summit_sites": {
+   "aortic_cusp_rcc_z_d10": {
+    "wall_mm(site grid)": 1.6,
+    "depth_achieved": 0.0,
+    "height_vs_AV_plane_mm(+ = aortic side)": 4.5,
+    "dist_AV_rim_mm": 1.8,
+    "tag": 1
+   },
+   "aortic_cusp_rcc_z_d50": {
+    "wall_mm(site grid)": 1.6,
+    "depth_achieved": 0.59,
+    "height_vs_AV_plane_mm(+ = aortic side)": 3.5,
+    "dist_AV_rim_mm": 2.0,
+    "tag": 1
+   },
+   "aortic_cusp_rcc_z_d75": {
+    "wall_mm(site grid)": 1.6,
+    "depth_achieved": 0.582,
+    "height_vs_AV_plane_mm(+ = aortic side)": 3.6,
+    "dist_AV_rim_mm": 1.9,
+    "tag": 1
+   },
+   "aortic_cusp_rcc_z_d90": {
+    "wall_mm(site grid)": 1.6,
+    "depth_achieved": 0.438,
+    "height_vs_AV_plane_mm(+ = aortic side)": 4.2,
+    "dist_AV_rim_mm": 2.3,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d10": {
+    "wall_mm(site grid)": 3.6,
+    "depth_achieved": 0.0,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.4,
+    "dist_AV_rim_mm": 0.0,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d50": {
+    "wall_mm(site grid)": 3.6,
+    "depth_achieved": 0.534,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.7,
+    "dist_AV_rim_mm": 1.9,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d75": {
+    "wall_mm(site grid)": 3.6,
+    "depth_achieved": 0.693,
+    "height_vs_AV_plane_mm(+ = aortic side)": -1.9,
+    "dist_AV_rim_mm": 2.1,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d90": {
+    "wall_mm(site grid)": 3.6,
+    "depth_achieved": 0.797,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.7,
+    "dist_AV_rim_mm": 2.7,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d10": {
+    "wall_mm(site grid)": 14.0,
+    "depth_achieved": 0.08,
+    "height_vs_AV_plane_mm(+ = aortic side)": -11.6,
+    "dist_AV_rim_mm": 14.3,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d50": {
+    "wall_mm(site grid)": 14.0,
+    "depth_achieved": 0.468,
+    "height_vs_AV_plane_mm(+ = aortic side)": -6.5,
+    "dist_AV_rim_mm": 11.2,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d75": {
+    "wall_mm(site grid)": 14.0,
+    "depth_achieved": 0.739,
+    "height_vs_AV_plane_mm(+ = aortic side)": -3.6,
+    "dist_AV_rim_mm": 9.6,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d90": {
+    "wall_mm(site grid)": 14.0,
+    "depth_achieved": 0.864,
+    "height_vs_AV_plane_mm(+ = aortic side)": -1.9,
+    "dist_AV_rim_mm": 9.6,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d10": {
+    "wall_mm(site grid)": 14.0,
+    "depth_achieved": 0.104,
+    "height_vs_AV_plane_mm(+ = aortic side)": -17.4,
+    "dist_AV_rim_mm": 20.6,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d50": {
+    "wall_mm(site grid)": 14.0,
+    "depth_achieved": 0.489,
+    "height_vs_AV_plane_mm(+ = aortic side)": -13.0,
+    "dist_AV_rim_mm": 19.4,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d75": {
+    "wall_mm(site grid)": 14.0,
+    "depth_achieved": 0.75,
+    "height_vs_AV_plane_mm(+ = aortic side)": -10.2,
+    "dist_AV_rim_mm": 19.2,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d90": {
+    "wall_mm(site grid)": 14.0,
+    "depth_achieved": 0.878,
+    "height_vs_AV_plane_mm(+ = aortic side)": -9.0,
+    "dist_AV_rim_mm": 20.1,
+    "tag": 1
+   }
+  }
+ },
+ "7D98EVAR": {
+  "basal": {
+   "insertions_deg(ant,inf)": [
+    66,
+    -62
+   ],
+   "septal_arc_deg": 128,
+   "anteroseptal": [
+    8.1,
+    717
+   ],
+   "inferoseptal": [
+    8.4,
+    669
+   ],
+   "anterior": [
+    8.4,
+    614
+   ],
+   "anterolateral": [
+    10.3,
+    603
+   ],
+   "inferolateral": [
+    10.4,
+    645
+   ],
+   "inferior": [
+    10.9,
+    637
+   ]
+  },
+  "mid": {
+   "insertions_deg(ant,inf)": [
+    63,
+    -62
+   ],
+   "septal_arc_deg": 125,
+   "anteroseptal": [
+    7.1,
+    657
+   ],
+   "inferoseptal": [
+    7.1,
+    636
+   ],
+   "anterior": [
+    7.6,
+    604
+   ],
+   "anterolateral": [
+    8.6,
+    598
+   ],
+   "inferolateral": [
+    10.1,
+    626
+   ],
+   "inferior": [
+    12.0,
+    576
+   ]
+  },
+  "apical": {
+   "insertions_deg(ant,inf)": [
+    38,
+    -36
+   ],
+   "septal_arc_deg": 74,
+   "septal": [
+    9.5,
+    580
+   ],
+   "anterior": [
+    8.3,
+    824
+   ],
+   "lateral": [
+    7.6,
+    778
+   ],
+   "inferior": [
+    7.6,
+    699
+   ]
+  },
+  "apex_cap(<0.08)": null,
+  "cusp_summit_sites": {
+   "aortic_cusp_rcc_z_d10": {
+    "wall_mm(site grid)": 4.0,
+    "depth_achieved": 0.0,
+    "height_vs_AV_plane_mm(+ = aortic side)": 4.2,
+    "dist_AV_rim_mm": 1.8,
+    "tag": 1
+   },
+   "aortic_cusp_rcc_z_d50": {
+    "wall_mm(site grid)": 4.0,
+    "depth_achieved": 0.516,
+    "height_vs_AV_plane_mm(+ = aortic side)": 2.8,
+    "dist_AV_rim_mm": 3.1,
+    "tag": 1
+   },
+   "aortic_cusp_rcc_z_d75": {
+    "wall_mm(site grid)": 4.0,
+    "depth_achieved": 0.699,
+    "height_vs_AV_plane_mm(+ = aortic side)": 2.1,
+    "dist_AV_rim_mm": 3.4,
+    "tag": 1
+   },
+   "aortic_cusp_rcc_z_d90": {
+    "wall_mm(site grid)": 4.0,
+    "depth_achieved": 0.85,
+    "height_vs_AV_plane_mm(+ = aortic side)": 1.5,
+    "dist_AV_rim_mm": 3.6,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d10": {
+    "wall_mm(site grid)": 4.6,
+    "depth_achieved": 0.0,
+    "height_vs_AV_plane_mm(+ = aortic side)": -3.4,
+    "dist_AV_rim_mm": 0.0,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d50": {
+    "wall_mm(site grid)": 4.6,
+    "depth_achieved": 0.517,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.9,
+    "dist_AV_rim_mm": 2.1,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d75": {
+    "wall_mm(site grid)": 4.6,
+    "depth_achieved": 0.709,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.7,
+    "dist_AV_rim_mm": 2.7,
+    "tag": 1
+   },
+   "aortic_cusp_lcc_z_d90": {
+    "wall_mm(site grid)": 4.6,
+    "depth_achieved": 0.876,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.7,
+    "dist_AV_rim_mm": 3.5,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d10": {
+    "wall_mm(site grid)": 8.4,
+    "depth_achieved": 0.079,
+    "height_vs_AV_plane_mm(+ = aortic side)": -8.0,
+    "dist_AV_rim_mm": 8.9,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d50": {
+    "wall_mm(site grid)": 8.4,
+    "depth_achieved": 0.46,
+    "height_vs_AV_plane_mm(+ = aortic side)": -4.9,
+    "dist_AV_rim_mm": 7.4,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d75": {
+    "wall_mm(site grid)": 8.4,
+    "depth_achieved": 0.746,
+    "height_vs_AV_plane_mm(+ = aortic side)": -2.9,
+    "dist_AV_rim_mm": 7.6,
+    "tag": 1
+   },
+   "lv_summit_superior_z_d90": {
+    "wall_mm(site grid)": 8.4,
+    "depth_achieved": 0.894,
+    "height_vs_AV_plane_mm(+ = aortic side)": -1.6,
+    "dist_AV_rim_mm": 7.9,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d10": {
+    "wall_mm(site grid)": 7.4,
+    "depth_achieved": 0.099,
+    "height_vs_AV_plane_mm(+ = aortic side)": -12.4,
+    "dist_AV_rim_mm": 16.6,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d50": {
+    "wall_mm(site grid)": 7.4,
+    "depth_achieved": 0.491,
+    "height_vs_AV_plane_mm(+ = aortic side)": -10.0,
+    "dist_AV_rim_mm": 16.0,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d75": {
+    "wall_mm(site grid)": 7.4,
+    "depth_achieved": 0.783,
+    "height_vs_AV_plane_mm(+ = aortic side)": -8.2,
+    "dist_AV_rim_mm": 15.9,
+    "tag": 1
+   },
+   "lv_summit_inferior_lateral_z_d90": {
+    "wall_mm(site grid)": 7.4,
+    "depth_achieved": 0.845,
+    "height_vs_AV_plane_mm(+ = aortic side)": -8.0,
+    "dist_AV_rim_mm": 16.6,
+    "tag": 1
+   }
+  }
+ }
+}

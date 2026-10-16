@@ -1,0 +1,18 @@
+{
+ "package_version": "0.3.0",
+ "settings": "default",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "noise_plan": "white Gaussian 10 uV RMS per independent lead before filtering (per-sample, 1 kHz), 2nd-order zero-phase Butterworth 0.05-100 Hz, notch off, no baseline wander (not in the project code)",
+ "noise_old": "white Gaussian 20 uV, 2nd-order zero-phase Butterworth 0.5-150 Hz + 50 Hz notch Q 30 (noise_onset.py)"
+}

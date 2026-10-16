@@ -1,0 +1,7 @@
+set,RVOT,cusp,summit_90,vein_90,LV_endo_10,LV_fw_10_only,summit_cusp_qrs,lvfw_qrs_90_10,lvfw_qrs_10_90,his_qrs,his_axis_net,his_axis_area,order_ok,qrs_ratio_ok,summit_cusp_ok,his_qrs_true,his_qrs_detected,his_latest_after_lv_onset,lv_endo_30ms_pct,lv_endo_37.5ms_pct,rv_epi_breakthrough_ms,axis_net,axis_area,rvot_t10_ms,rvot_t50_ms,rvot_tmax_ms,fw_ratio_medians,fw_ratio_means,fw_pair_median_pct
+V1,0.671,,,,,,,,nan/nan,,,,False,False,False,,,,,,,,,55.9,91.1,96.0,,,
+V2,0.718,0.557,0.444,0.476,0.361,0.355,159.0,1.0868,155.5/169.0,105.6,69.0,-55.0,False,True,True,105.6,100.0,105.6,48.9,66.7,14.7,69.0,-55.0,56.8,93.3,100.5,1.0868,1.0716,7.6
+V3,0.622,0.698,0.539,0.539,0.453,0.432,134.0,1.1188,130.5/146.0,96.7,63.0,75.0,False,True,True,96.7,81.0,96.7,47.9,65.9,14.7,63.0,75.0,45.5,85.4,84.5,1.1188,1.0846,8.0
+V4,0.698,0.625,0.479,0.412,0.369,0.357,163.0,1.1016,152.5/168.0,102.6,59.0,66.0,False,True,True,102.6,96.0,102.6,49.2,68.5,14.7,59.0,66.0,57.8,94.6,101.5,1.1016,1.0764,8.7
+v3,,,,,,,,,,,,,,,,104.2,96.0,104.2,47.9,65.8,15.3,64.0,-46.0,59.4,96.6,96.0,,,
+v3 stored (openCARP),0.667,0.571,0.476,0.451,0.338,0.349,162.5,1.0791,158.0/170.5,104.4,64.0,-37.0,False,True,True,,,,,,,,,,,,,,

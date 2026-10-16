@@ -1,0 +1,122 @@
+   heart  noise_uv      family  n  onset_ms  qrs_ms  pdw_ms   mdi  t_largest_from_onset_ms
+Y5HYEDL4         0        RVOT  8       4.5   132.0    58.5 0.685                     91.0
+Y5HYEDL4         0 aortic cusp  8       8.0   140.0    83.5 0.597                     84.0
+Y5HYEDL4         0   summit 90  2       2.5   137.0    77.0 0.561                     77.0
+Y5HYEDL4         0     vein 90  3       7.0   138.0    56.0 0.497                     63.0
+Y5HYEDL4         0  LV endo 10 18       4.0   121.0    35.0 0.351                     43.0
+Y5HYEDL4         0    LV fw 10 10       5.0   129.0    35.0 0.378                     48.0
+Y5HYEDL4         0    LV fw 90 10       4.5   137.5    52.0 0.480                     67.0
+Y5HYEDL4        10        RVOT  8      18.5   121.5    51.5 0.650                     80.0
+Y5HYEDL4        10 aortic cusp  8       9.5   138.8    82.2 0.598                     83.0
+Y5HYEDL4        10   summit 90  2       3.5   136.0    76.2 0.553                     75.8
+Y5HYEDL4        10     vein 90  3       8.0   137.5    55.0 0.494                     62.0
+Y5HYEDL4        10  LV endo 10 18       5.0   119.2    34.0 0.357                     42.8
+Y5HYEDL4        10    LV fw 10 10       6.0   128.0    34.0 0.371                     47.0
+Y5HYEDL4        10    LV fw 90 10       6.2   137.2    49.2 0.455                     65.5
+Y5HYEDL4        20        RVOT  8      22.0   116.2    45.8 0.642                     74.8
+Y5HYEDL4        20 aortic cusp  8      14.0   134.8    78.5 0.586                     78.0
+Y5HYEDL4        20   summit 90  2       6.2   133.8    73.2 0.549                     74.0
+Y5HYEDL4        20     vein 90  3      10.0   138.5    54.0 0.471                     59.0
+Y5HYEDL4        20  LV endo 10 18       6.5   120.2    31.5 0.351                     41.5
+Y5HYEDL4        20    LV fw 10 10       7.2   127.0    33.0 0.357                     45.5
+Y5HYEDL4        20    LV fw 90 10       8.5   136.0    47.5 0.438                     65.0
+Y5HYEDL4        40        RVOT  8      32.5   107.0    34.0 0.604                     66.0
+Y5HYEDL4        40 aortic cusp  8      20.5   128.2    70.5 0.567                     72.5
+Y5HYEDL4        40   summit 90  2      11.8   128.5    67.8 0.527                     67.5
+Y5HYEDL4        40     vein 90  3      17.0   137.0    47.5 0.335                     43.5
+Y5HYEDL4        40  LV endo 10 18       9.8   116.2    29.0 0.339                     38.5
+Y5HYEDL4        40    LV fw 10 10      10.2   122.5    31.0 0.348                     42.5
+Y5HYEDL4        40    LV fw 90 10      12.0   133.5    37.2 0.420                     56.5
+6G8DD8S5         0        RVOT  8      12.5   125.5    50.0 0.580                     73.5
+6G8DD8S5         0 aortic cusp  8       6.5   124.0    64.0 0.629                     78.5
+6G8DD8S5         0   summit 90  2       2.5   122.5    48.5 0.561                     68.5
+6G8DD8S5         0     vein 90  3       3.0   150.0    60.0 0.477                     72.0
+6G8DD8S5         0  LV endo 10 18       3.0   109.0    35.5 0.446                     49.5
+6G8DD8S5         0    LV fw 10 10       3.0   120.5    34.0 0.428                     49.0
+6G8DD8S5         0    LV fw 90 10       2.5   139.5    55.0 0.506                     69.5
+6G8DD8S5        10        RVOT  8      14.0   124.0    48.2 0.571                     71.2
+6G8DD8S5        10 aortic cusp  8       8.8   120.5    58.0 0.617                     73.0
+6G8DD8S5        10   summit 90  2       5.0   120.2    46.0 0.551                     65.5
+6G8DD8S5        10     vein 90  3       5.5   150.0    58.5 0.474                     68.0
+6G8DD8S5        10  LV endo 10 18       5.0   105.8    33.0 0.435                     48.5
+6G8DD8S5        10    LV fw 10 10       5.0   119.5    33.0 0.420                     48.5
+6G8DD8S5        10    LV fw 90 10       4.5   136.5    51.2 0.493                     66.2
+6G8DD8S5        20        RVOT  8      19.0   115.8    46.0 0.566                     69.5
+6G8DD8S5        20 aortic cusp  8      14.5   115.0    55.2 0.605                     70.0
+6G8DD8S5        20   summit 90  2       7.2   118.0    43.0 0.542                     63.8
+6G8DD8S5        20     vein 90  3       8.0   149.0    55.0 0.464                     63.0
+6G8DD8S5        20  LV endo 10 18       6.5   104.2    29.5 0.414                     47.5
+6G8DD8S5        20    LV fw 10 10       6.0   118.2    29.5 0.408                     47.5
+6G8DD8S5        20    LV fw 90 10       7.0   135.0    48.5 0.483                     64.5
+6G8DD8S5        40        RVOT  8      24.0   112.5    39.5 0.548                     64.8
+6G8DD8S5        40 aortic cusp  8      20.5   109.2    46.8 0.575                     62.5
+6G8DD8S5        40   summit 90  2      10.2   115.8    39.8 0.526                     60.0
+6G8DD8S5        40     vein 90  3      12.5   140.0    52.0 0.455                     57.5
+6G8DD8S5        40  LV endo 10 18       9.5   102.5    24.0 0.397                     45.8
+6G8DD8S5        40    LV fw 10 10      10.0   117.5    21.5 0.391                     45.8
+6G8DD8S5        40    LV fw 90 10      10.5   128.5    40.8 0.471                     60.8
+7D98EVAR         0        RVOT  8       0.5   133.0    64.5 0.721                     96.0
+7D98EVAR         0 aortic cusp  8       7.0   126.0    61.0 0.510                     63.0
+7D98EVAR         0   summit 90  2       2.0   120.5    55.5 0.423                     51.0
+7D98EVAR         0     vein 90  3       3.0   133.0    42.0 0.438                     67.0
+7D98EVAR         0  LV endo 10 18       3.0   114.0    34.0 0.445                     50.5
+7D98EVAR         0    LV fw 10 10       2.5   124.5    35.0 0.431                     54.0
+7D98EVAR         0    LV fw 90 10       2.5   140.0    50.0 0.478                     68.5
+7D98EVAR        10        RVOT  8      10.5   122.0    55.8 0.695                     84.8
+7D98EVAR        10 aortic cusp  8       8.2   121.5    55.5 0.502                     62.2
+7D98EVAR        10   summit 90  2       5.5   117.0    48.5 0.406                     47.2
+7D98EVAR        10     vein 90  3       5.0   131.0    40.0 0.434                     65.0
+7D98EVAR        10  LV endo 10 18       5.0   109.8    31.0 0.425                     47.0
+7D98EVAR        10    LV fw 10 10       6.0   127.8    32.0 0.417                     52.5
+7D98EVAR        10    LV fw 90 10       5.8   140.0    47.2 0.470                     65.0
+7D98EVAR        20        RVOT  8      15.5   114.5    52.8 0.672                     77.0
+7D98EVAR        20 aortic cusp  8      13.0   116.8    48.5 0.483                     58.0
+7D98EVAR        20   summit 90  2       7.8   115.2    40.0 0.394                     45.2
+7D98EVAR        20     vein 90  3       9.0   131.0    35.5 0.410                     60.0
+7D98EVAR        20  LV endo 10 18       7.0   107.8    25.5 0.413                     45.5
+7D98EVAR        20    LV fw 10 10       8.5   127.5    28.8 0.398                     50.2
+7D98EVAR        20    LV fw 90 10       8.2   139.0    42.8 0.458                     62.0
+7D98EVAR        40        RVOT  8      21.5   111.0    41.5 0.657                     73.2
+7D98EVAR        40 aortic cusp  8      19.5   112.2    41.0 0.434                     49.5
+7D98EVAR        40   summit 90  2      13.2   109.8    27.5 0.355                     39.5
+7D98EVAR        40     vein 90  3      17.0   120.0    28.0 0.376                     52.0
+7D98EVAR        40  LV endo 10 18      10.5    99.8    19.2 0.388                     42.8
+7D98EVAR        40    LV fw 10 10      11.8   121.0    21.2 0.398                     45.2
+7D98EVAR        40    LV fw 90 10      13.8   134.0    36.0 0.477                     56.5
+
+Y5HYEDL4  0 uV: Daniels order fail (summit 0.561, vein 0.497, cusp 0.597, RVOT 0.685, LV endo 0.351); LV fw QRS 90/10 ratio medians 1.0659, means 1.0636 (206/191 = 1.0785)
+Y5HYEDL4 10 uV: Daniels order fail (summit 0.553, vein 0.494, cusp 0.598, RVOT 0.650, LV endo 0.357); LV fw QRS 90/10 ratio medians 1.0723, means 1.0574 (206/191 = 1.0785)
+Y5HYEDL4 20 uV: Daniels order fail (summit 0.549, vein 0.471, cusp 0.586, RVOT 0.642, LV endo 0.351); LV fw QRS 90/10 ratio medians 1.0709, means 1.0563 (206/191 = 1.0785)
+Y5HYEDL4 40 uV: Daniels order fail (summit 0.527, vein 0.335, cusp 0.567, RVOT 0.604, LV endo 0.339); LV fw QRS 90/10 ratio medians 1.0898, means 1.0256 (206/191 = 1.0785)
+6G8DD8S5  0 uV: Daniels order fail (summit 0.561, vein 0.477, cusp 0.629, RVOT 0.580, LV endo 0.446); LV fw QRS 90/10 ratio medians 1.1577, means 1.1449 (206/191 = 1.0785)
+6G8DD8S5 10 uV: Daniels order fail (summit 0.551, vein 0.474, cusp 0.617, RVOT 0.571, LV endo 0.435); LV fw QRS 90/10 ratio medians 1.1423, means 1.1355 (206/191 = 1.0785)
+6G8DD8S5 20 uV: Daniels order fail (summit 0.542, vein 0.464, cusp 0.605, RVOT 0.566, LV endo 0.414); LV fw QRS 90/10 ratio medians 1.1416, means 1.1376 (206/191 = 1.0785)
+6G8DD8S5 40 uV: Daniels order fail (summit 0.526, vein 0.455, cusp 0.575, RVOT 0.548, LV endo 0.397); LV fw QRS 90/10 ratio medians 1.0936, means 1.0918 (206/191 = 1.0785)
+7D98EVAR  0 uV: Daniels order fail (summit 0.423, vein 0.438, cusp 0.510, RVOT 0.721, LV endo 0.445); LV fw QRS 90/10 ratio medians 1.1245, means 1.0649 (206/191 = 1.0785)
+7D98EVAR 10 uV: Daniels order fail (summit 0.406, vein 0.434, cusp 0.502, RVOT 0.695, LV endo 0.425); LV fw QRS 90/10 ratio medians 1.0959, means 1.0776 (206/191 = 1.0785)
+7D98EVAR 20 uV: Daniels order fail (summit 0.394, vein 0.410, cusp 0.483, RVOT 0.672, LV endo 0.413); LV fw QRS 90/10 ratio medians 1.0902, means 1.0711 (206/191 = 1.0785)
+7D98EVAR 40 uV: Daniels order fail (summit 0.355, vein 0.376, cusp 0.434, RVOT 0.657, LV endo 0.388); LV fw QRS 90/10 ratio medians 1.1074, means 1.0539 (206/191 = 1.0785)
+Zheng RVOT Y5HYEDL4  0 uV: MDI 0.685 above, PdW 58 above, QRS 132 below
+Zheng RVOT Y5HYEDL4 10 uV: MDI 0.650 above, PdW 52 in, QRS 122 below
+Zheng RVOT Y5HYEDL4 20 uV: MDI 0.642 above, PdW 46 in, QRS 116 below
+Zheng RVOT Y5HYEDL4 40 uV: MDI 0.604 above, PdW 34 in, QRS 107 below
+Zheng RVOT 6G8DD8S5  0 uV: MDI 0.580 above, PdW 50 in, QRS 126 below
+Zheng RVOT 6G8DD8S5 10 uV: MDI 0.571 above, PdW 48 in, QRS 124 below
+Zheng RVOT 6G8DD8S5 20 uV: MDI 0.566 above, PdW 46 in, QRS 116 below
+Zheng RVOT 6G8DD8S5 40 uV: MDI 0.548 above, PdW 40 in, QRS 112 below
+Zheng RVOT 7D98EVAR  0 uV: MDI 0.721 above, PdW 64 above, QRS 133 in
+Zheng RVOT 7D98EVAR 10 uV: MDI 0.695 above, PdW 56 above, QRS 122 below
+Zheng RVOT 7D98EVAR 20 uV: MDI 0.672 above, PdW 53 in, QRS 114 below
+Zheng RVOT 7D98EVAR 40 uV: MDI 0.657 above, PdW 42 in, QRS 111 below
+Zheng aortic cusp Y5HYEDL4  0 uV: MDI 0.597 in, PdW 84 above, QRS 140 in
+Zheng aortic cusp Y5HYEDL4 10 uV: MDI 0.598 in, PdW 82 above, QRS 139 in
+Zheng aortic cusp Y5HYEDL4 20 uV: MDI 0.586 in, PdW 78 above, QRS 135 in
+Zheng aortic cusp Y5HYEDL4 40 uV: MDI 0.567 in, PdW 70 in, QRS 128 in
+Zheng aortic cusp 6G8DD8S5  0 uV: MDI 0.629 above, PdW 64 in, QRS 124 below
+Zheng aortic cusp 6G8DD8S5 10 uV: MDI 0.617 above, PdW 58 in, QRS 120 below
+Zheng aortic cusp 6G8DD8S5 20 uV: MDI 0.605 above, PdW 55 in, QRS 115 below
+Zheng aortic cusp 6G8DD8S5 40 uV: MDI 0.575 in, PdW 47 in, QRS 109 below
+Zheng aortic cusp 7D98EVAR  0 uV: MDI 0.510 in, PdW 61 in, QRS 126 below
+Zheng aortic cusp 7D98EVAR 10 uV: MDI 0.502 in, PdW 56 in, QRS 122 below
+Zheng aortic cusp 7D98EVAR 20 uV: MDI 0.483 in, PdW 48 in, QRS 117 below
+Zheng aortic cusp 7D98EVAR 40 uV: MDI 0.434 below, PdW 41 below, QRS 112 below

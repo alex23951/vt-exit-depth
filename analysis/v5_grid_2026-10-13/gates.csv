@@ -1,0 +1,72 @@
+,v3,A,B,C,E
+His Y5 qrs_true_span_ms,104.4,101.9,101.9,102.5,101.3
+His Y5 his_to_first_myocardium_ms,20.0,19.9,19.9,19.9,19.9
+His Y5 T_latest_after_lv_onset_ms,104.4,101.9,101.9,102.5,101.3
+His Y5 b_lv30_pct,47.9,48.7,48.7,48.5,48.5
+His Y5 b_lv37_pct,65.8,66.8,66.8,66.7,66.7
+His Y5 c_rv_epi_breakthrough_ms,15.3,15.1,15.1,14.9,14.9
+His Y5 a_onset_ant_ms,0.0,0.0,0.0,0.0,0.0
+His Y5 a_onset_sep_ms,2.8,2.7,2.7,2.3,2.3
+His Y5 a_onset_post_ms,5.0,5.0,5.0,5.3,5.3
+His Y5 d_last5_in_durrer_areas_pct,80.4,80.1,80.1,79.9,79.3
+His Y5 e_qrs_detected_ms,96.0,94.0,94.0,94.0,94.0
+His Y5 axis_net_deg,64,64,64,60,59
+His Y5 axis_area_deg,-37,-19,-19,-43,-12
+Bazan2006 Y5 RV / LV rel QRS %,4.1 / 6.0,4.2 / 7.2,4.2 / 7.2,3.9 / 7.7,4.2 / 8.2
+"Bazan2006 Y5 pass (-1.9..6.6, < LV)",True,True,True,True,True
+LV fw QRS 90/10 Y5 medians / means,1.0791 / 1.0665,1.0879 / 1.0714,1.0879 / 1.0714,1.0912 / 1.0694,1.0921 / 1.0713
+summit+cusp QRS Y5,162.5,158.5,158.5,159.0,159.0
+Daniels true RVOT/cusp/summit90/vein90/LVendo10,0.667 / 0.571 / 0.476 / 0.451 / 0.338,0.666 / 0.653 / 0.539 / 0.458 / 0.345,0.666 / 0.653 / 0.539 / 0.458 / 0.345,0.669 / 0.582 / 0.478 / 0.461 / 0.350,0.686 / 0.584 / 0.478 / 0.461 / 0.347
+Daniels true pass,False,False,False,False,False
+Daniels det20 RVOT/cusp/summit90/vein90/LVendo10,0.642 / 0.586 / 0.548 / 0.471 / 0.338,0.643 / 0.672 / 0.604 / 0.479 / 0.366,0.643 / 0.672 / 0.604 / 0.479 / 0.366,0.647 / 0.583 / 0.543 / 0.474 / 0.362,0.659 / 0.590 / 0.542 / 0.474 / 0.344
+Daniels det20 pass,False,False,False,False,False
+No-network summit+cusp QRS / wider all families,250.0 / True,240.0 / True,240.0 / True,240.0 / True,240.0 / True
+No-network pass,True,True,True,True,True
+His 6G qrs_true_span_ms,124.6,123.5,142.0,140.6,140.6
+His 6G his_to_first_myocardium_ms,26.2,26.4,26.4,27.3,27.3
+His 6G T_latest_after_lv_onset_ms,105.8,105.5,117.9,117.0,117.0
+His 6G b_lv30_pct,27.4,27.4,26.8,26.0,26.1
+His 6G b_lv37_pct,41.2,41.4,40.5,39.6,39.6
+His 6G c_rv_epi_breakthrough_ms,-8.2,-8.0,-12.4,-14.4,-14.3
+His 6G a_onset_ant_ms,21.2,21.3,22.4,22.7,22.6
+His 6G a_onset_sep_ms,9.9,10.1,10.7,10.3,10.3
+His 6G a_onset_post_ms,0.0,0.0,0.0,0.0,0.0
+His 6G d_last5_in_durrer_areas_pct,26.8,26.3,28.3,30.0,29.9
+His 6G e_qrs_detected_ms,124.0,123.0,141.0,139.0,139.0
+His 6G axis_net_deg,-42,-43,-35,-37,-37
+His 6G axis_area_deg,-37,-38,-29,-31,-31
+His 6G lbbb_lv_minus_rv_onset_ms,18.8,18.0,24.1,23.6,23.6
+His 6G lbbb_first_lv_septal_breakthrough_ms,18.8,18.0,24.1,23.6,23.6
+Bazan2006 6G RV / LV rel QRS %,2.6 / 11.3,2.6 / 10.7,4.1 / 14.5,2.9 / 14.6,3.5 / 14.8
+"Bazan2006 6G pass (-1.9..6.6, < LV)",True,True,True,True,True
+LV fw QRS 90/10 6G medians / means,1.1209 / 1.0964,1.1103 / 1.0917,1.1525 / 1.1303,1.1541 / 1.1319,1.1557 / 1.1365
+summit+cusp QRS 6G,134.0,130.5,145.5,146.5,145.0
+Berruezo 6G QRS / PdW / IDT / RS %,11.3 / 55.3 / 26.7 / 19.1,10.7 / 54.8 / 25.4 / 17.6,14.5 / 60.6 / 32.6 / 7.6,14.6 / 63.3 / 35.7 / 5.7,14.8 / 63.3 / 36.5 / 6.1
+Berruezo 6G pass,False,False,False,False,False
+His 7D qrs_true_span_ms,95.4,92.2,101.7,101.7,99.4
+His 7D his_to_first_myocardium_ms,18.8,18.8,18.8,19.2,19.2
+His 7D T_latest_after_lv_onset_ms,95.4,92.2,101.7,101.7,99.4
+His 7D b_lv30_pct,44.8,45.9,44.5,45.1,45.1
+His 7D b_lv37_pct,61.5,62.7,61.0,61.3,61.2
+His 7D c_rv_epi_breakthrough_ms,15.4,15.2,16.4,16.1,16.1
+His 7D a_onset_ant_ms,0.0,0.0,0.0,0.0,0.0
+His 7D a_onset_sep_ms,2.5,2.5,2.5,2.3,2.3
+His 7D a_onset_post_ms,5.5,5.4,5.4,4.3,4.3
+His 7D d_last5_in_durrer_areas_pct,80.0,80.2,74.5,75.3,73.4
+His 7D e_qrs_detected_ms,80.0,81.0,87.0,88.0,86.0
+His 7D axis_net_deg,63,63,68,68,68
+His 7D axis_area_deg,57,57,66,67,66
+Bazan2006 7D RV / LV rel QRS %,3.6 / 7.7,3.3 / 8.0,4.0 / 9.3,3.7 / 9.6,4.0 / 10.0
+"Bazan2006 7D pass (-1.9..6.6, < LV)",True,True,True,True,True
+LV fw QRS 90/10 7D medians / means,1.0819 / 1.0743,1.0836 / 1.0719,1.1118 / 1.0921,1.1111 / 1.0904,1.1151 / 1.0914
+summit+cusp QRS 7D,144.0,140.5,150.0,150.0,149.0
+Bazan2007 apical_superior qI 90 vs 10 (n pos),3/9 vs 1/9 (9),3/9 vs 1/9 (9),4/9 vs 2/9 (9),4/9 vs 1/9 (9),4/9 vs 1/9 (9)
+Bazan2007 apical_superior qI direction / Bazan in CI,True / False,True / False,True / False,True / False,True / False
+Bazan2007 basal_superior qI 90 vs 10 (n pos),4/21 vs 3/21 (21),4/21 vs 3/21 (21),6/21 vs 3/21 (21),6/21 vs 3/21 (21),6/21 vs 3/21 (21)
+Bazan2007 basal_superior qI direction / Bazan in CI,True / False,True / False,True / False,True / False,True / False
+Bazan2007 basal_inferior qinf 90 vs 10 (n pos),7/8 vs 0/8 (8),8/8 vs 0/8 (8),8/8 vs 0/8 (8),8/8 vs 0/8 (8),8/8 vs 0/8 (8)
+Bazan2007 basal_inferior qinf direction / Bazan in CI,True / False,True / False,True / False,True / False,True / False
+Bazan2007 apical_inferior qinf 90 vs 10 (n pos),6/7 vs 0/7 (7),6/7 vs 0/7 (7),6/7 vs 0/7 (7),6/7 vs 0/7 (7),6/7 vs 0/7 (7)
+Bazan2007 apical_inferior qinf direction / Bazan in CI,True / True,True / True,True / True,True / True,True / True
+Bazan2007 basal_superior qinf (less at epi) 90 vs 10 (n pos),11/21 vs 15/21 (21),11/21 vs 15/21 (21),8/21 vs 15/21 (21),8/21 vs 15/21 (21),9/21 vs 15/21 (21)
+Bazan2007 basal_superior qinf (less at epi) direction / Bazan in CI,True / None,True / None,True / None,True / None,True / None

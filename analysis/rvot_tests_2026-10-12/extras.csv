@@ -1,0 +1,6 @@
+set,his_qrs_true,his_qrs_detected,his_latest_after_lv_onset,lv_endo_30ms_pct,lv_endo_37.5ms_pct,rv_epi_breakthrough_ms,axis_net,axis_area,rvot_t10_ms,rvot_t50_ms,rvot_tmax_ms,fw_ratio_medians,fw_ratio_means,fw_pair_median_pct
+v3,104.2,96.0,104.2,47.9,65.8,15.3,64.0,-46.0,59.4,96.6,96.0,,,
+V1,,,,,,,,,55.9,91.1,96.0,,,
+V2,105.6,100.0,105.6,48.9,66.7,14.7,69.0,-55.0,56.8,93.3,100.5,1.0868,1.0716,7.6
+V3,96.7,81.0,96.7,47.9,65.9,14.7,63.0,75.0,45.5,85.4,84.5,1.1188,1.0846,8.0
+V4,102.6,96.0,102.6,49.2,68.5,14.7,59.0,66.0,57.8,94.6,101.5,1.1016,1.0764,8.7

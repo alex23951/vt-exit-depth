@@ -1,0 +1,454 @@
+{
+ "per_site": {
+  "Y5HYEDL4": {
+   "total_activation_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_qrs_duration_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_mdi_daniels": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_pseudo_delta_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_idt_v2_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_srs_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "detected_qrs_duration_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "detected_mdi_daniels": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_q_lead_I": {
+    "mismatches": 0
+   },
+   "true_inferior_q_any": {
+    "mismatches": 0
+   }
+  },
+  "6G8DD8S5": {
+   "total_activation_ms": {
+    "n": 145,
+    "max_abs_diff": 2.842170943040401e-14,
+    "n_nan_mismatch": 0
+   },
+   "true_qrs_duration_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_mdi_daniels": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_pseudo_delta_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_idt_v2_ms": {
+    "n": 142,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_srs_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "detected_qrs_duration_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "detected_mdi_daniels": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_q_lead_I": {
+    "mismatches": 0
+   },
+   "true_inferior_q_any": {
+    "mismatches": 0
+   }
+  },
+  "7D98EVAR": {
+   "total_activation_ms": {
+    "n": 145,
+    "max_abs_diff": 5.684341886080802e-14,
+    "n_nan_mismatch": 0
+   },
+   "true_qrs_duration_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_mdi_daniels": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_pseudo_delta_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_idt_v2_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_srs_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "detected_qrs_duration_ms": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "detected_mdi_daniels": {
+    "n": 145,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_q_lead_I": {
+    "mismatches": 0
+   },
+   "true_inferior_q_any": {
+    "mismatches": 0
+   }
+  },
+  "Y5HYEDL4_nonet": {
+   "total_activation_ms": {
+    "n": 144,
+    "max_abs_diff": 5.684341886080802e-14,
+    "n_nan_mismatch": 0
+   },
+   "true_qrs_duration_ms": {
+    "n": 144,
+    "max_abs_diff": 0.0,
+    "n_nan_mismatch": 0
+   },
+   "true_mdi_daniels": {
+    "n": 144,
+    "max_abs_diff": 0.1693548387096775,
+    "n_nan_mismatch": 0
+   },
+   "true_pseudo_delta_ms": {
+    "n": 144,
+    "max_abs_diff": 45.0,
+    "n_nan_mismatch": 0
+   },
+   "true_idt_v2_ms": {
+    "n": 103,
+    "max_abs_diff": 95.0,
+    "n_nan_mismatch": 2
+   },
+   "true_srs_ms": {
+    "n": 142,
+    "max_abs_diff": 61.0,
+    "n_nan_mismatch": 0
+   },
+   "detected_qrs_duration_ms": {
+    "n": 144,
+    "max_abs_diff": 2.0,
+    "n_nan_mismatch": 0
+   },
+   "detected_mdi_daniels": {
+    "n": 144,
+    "max_abs_diff": 0.17073170731707316,
+    "n_nan_mismatch": 0
+   },
+   "true_q_lead_I": {
+    "mismatches": 1
+   },
+   "true_inferior_q_any": {
+    "mismatches": 1
+   }
+  }
+ },
+ "gates": {
+  "Y5HYEDL4 Daniels rvot": {
+   "regenerated": 0.679,
+   "13oct": 0.679,
+   "match": true
+  },
+  "Y5HYEDL4 Daniels cusp": {
+   "regenerated": 0.587,
+   "13oct": 0.587,
+   "match": true
+  },
+  "Y5HYEDL4 Daniels summit90": {
+   "regenerated": 0.542,
+   "13oct": 0.542,
+   "match": true
+  },
+  "Y5HYEDL4 Daniels vein90": {
+   "regenerated": 0.458,
+   "13oct": 0.458,
+   "match": true
+  },
+  "Y5HYEDL4 Daniels lvendo10": {
+   "regenerated": 0.348,
+   "13oct": 0.348,
+   "match": true
+  },
+  "Y5HYEDL4 summit+cusp QRS": {
+   "regenerated": 159.0,
+   "13oct": 159.0,
+   "match": true
+  },
+  "Y5HYEDL4 relQRS ratio of means": {
+   "regenerated": 1.0712,
+   "13oct": 1.0712,
+   "match": true
+  },
+  "Y5HYEDL4 Berruezo QRS %": {
+   "regenerated": 8.0,
+   "13oct": 8.0,
+   "match": true
+  },
+  "Y5HYEDL4 Berruezo PdW %": {
+   "regenerated": 38.9,
+   "13oct": 38.9,
+   "match": true
+  },
+  "Y5HYEDL4 Berruezo IDT %": {
+   "regenerated": 19.9,
+   "13oct": 19.9,
+   "match": true
+  },
+  "Y5HYEDL4 Berruezo RS %": {
+   "regenerated": 0.4,
+   "13oct": 0.4,
+   "match": true
+  },
+  "Y5HYEDL4 Bazan06 RV %": {
+   "regenerated": 4.2,
+   "13oct": 4.2,
+   "match": true
+  },
+  "6G8DD8S5 Daniels rvot": {
+   "regenerated": 0.565,
+   "13oct": 0.565,
+   "match": true
+  },
+  "6G8DD8S5 Daniels cusp": {
+   "regenerated": 0.6,
+   "13oct": 0.6,
+   "match": true
+  },
+  "6G8DD8S5 Daniels summit90": {
+   "regenerated": 0.553,
+   "13oct": 0.553,
+   "match": true
+  },
+  "6G8DD8S5 Daniels vein90": {
+   "regenerated": 0.525,
+   "13oct": 0.525,
+   "match": true
+  },
+  "6G8DD8S5 Daniels lvendo10": {
+   "regenerated": 0.417,
+   "13oct": 0.417,
+   "match": true
+  },
+  "6G8DD8S5 summit+cusp QRS": {
+   "regenerated": 145.0,
+   "13oct": 145.0,
+   "match": true
+  },
+  "6G8DD8S5 relQRS ratio of means": {
+   "regenerated": 1.1371,
+   "13oct": 1.1371,
+   "match": true
+  },
+  "6G8DD8S5 Berruezo QRS %": {
+   "regenerated": 14.7,
+   "13oct": 14.7,
+   "match": true
+  },
+  "6G8DD8S5 Berruezo PdW %": {
+   "regenerated": 60.6,
+   "13oct": 60.6,
+   "match": true
+  },
+  "6G8DD8S5 Berruezo IDT %": {
+   "regenerated": 31.6,
+   "13oct": 31.6,
+   "match": true
+  },
+  "6G8DD8S5 Berruezo RS %": {
+   "regenerated": 7.6,
+   "13oct": 7.6,
+   "match": true
+  },
+  "6G8DD8S5 Bazan06 RV %": {
+   "regenerated": 4.1,
+   "13oct": 4.1,
+   "match": true
+  },
+  "7D98EVAR Daniels rvot": {
+   "regenerated": 0.689,
+   "13oct": 0.689,
+   "match": true
+  },
+  "7D98EVAR Daniels cusp": {
+   "regenerated": 0.507,
+   "13oct": 0.507,
+   "match": true
+  },
+  "7D98EVAR Daniels summit90": {
+   "regenerated": 0.408,
+   "13oct": 0.408,
+   "match": true
+  },
+  "7D98EVAR Daniels vein90": {
+   "regenerated": 0.435,
+   "13oct": 0.435,
+   "match": true
+  },
+  "7D98EVAR Daniels lvendo10": {
+   "regenerated": 0.383,
+   "13oct": 0.383,
+   "match": true
+  },
+  "7D98EVAR summit+cusp QRS": {
+   "regenerated": 149.5,
+   "13oct": 149.5,
+   "match": true
+  },
+  "7D98EVAR relQRS ratio of means": {
+   "regenerated": 1.093,
+   "13oct": 1.093,
+   "match": true
+  },
+  "7D98EVAR Berruezo QRS %": {
+   "regenerated": 10.3,
+   "13oct": 10.3,
+   "match": true
+  },
+  "7D98EVAR Berruezo PdW %": {
+   "regenerated": 50.1,
+   "13oct": 50.1,
+   "match": true
+  },
+  "7D98EVAR Berruezo IDT %": {
+   "regenerated": 26.4,
+   "13oct": 26.4,
+   "match": true
+  },
+  "7D98EVAR Berruezo RS %": {
+   "regenerated": -13.4,
+   "13oct": -13.4,
+   "match": true
+  },
+  "7D98EVAR Bazan06 RV %": {
+   "regenerated": 4.0,
+   "13oct": 4.0,
+   "match": true
+  },
+  "Bazan07 basal superior q I 90": {
+   "regenerated": 4,
+   "13oct": 4,
+   "match": true
+  },
+  "Bazan07 basal superior q I 10": {
+   "regenerated": 3,
+   "13oct": 3,
+   "match": true
+  },
+  "nonet summit+cusp QRS": {
+   "regenerated": 240.0,
+   "13oct": 240.0,
+   "match": true
+  },
+  "Y5HYEDL4 His activation max |diff| vs saved his_T": {
+   "regenerated": 0.0,
+   "13oct": 0.0,
+   "match": true
+  },
+  "Y5HYEDL4 His ECG max |diff| vs saved his_ecg (mV)": {
+   "regenerated": 0.0,
+   "13oct": 0.0,
+   "match": true
+  },
+  "Y5HYEDL4 His detected QRS": {
+   "regenerated": 94.0,
+   "13oct": 94.0,
+   "match": true
+  },
+  "Y5HYEDL4 His span": {
+   "regenerated": 100.8,
+   "13oct": 100.8,
+   "match": true
+  },
+  "6G8DD8S5 His activation max |diff| vs saved his_T": {
+   "regenerated": 0.0,
+   "13oct": 0.0,
+   "match": true
+  },
+  "6G8DD8S5 His ECG max |diff| vs saved his_ecg (mV)": {
+   "regenerated": 0.0,
+   "13oct": 0.0,
+   "match": true
+  },
+  "6G8DD8S5 His detected QRS": {
+   "regenerated": 141.0,
+   "13oct": 141.0,
+   "match": true
+  },
+  "6G8DD8S5 His span": {
+   "regenerated": 142.0,
+   "13oct": 142.0,
+   "match": true
+  },
+  "7D98EVAR His activation max |diff| vs saved his_T": {
+   "regenerated": 0.0,
+   "13oct": 0.0,
+   "match": true
+  },
+  "7D98EVAR His ECG max |diff| vs saved his_ecg (mV)": {
+   "regenerated": 0.0,
+   "13oct": 0.0,
+   "match": true
+  },
+  "7D98EVAR His detected QRS": {
+   "regenerated": 86.0,
+   "13oct": 86.0,
+   "match": true
+  },
+  "7D98EVAR His span": {
+   "regenerated": 100.2,
+   "13oct": 100.2,
+   "match": true
+  }
+ },
+ "all_gate_values_match": true
+}

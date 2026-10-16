@@ -1,0 +1,537 @@
+{
+ "Y5HYEDL4": {
+  "daniels_true_mdi_daniels": {
+   "rvot": 0.679,
+   "cusp": 0.587,
+   "summit90": 0.542,
+   "vein90": 0.458,
+   "lvendo10": 0.348,
+   "n": {
+    "rvot": 8,
+    "cusp": 8,
+    "summit90": 2,
+    "vein90": 3,
+    "lvendo10": 18
+   },
+   "order_pass": false
+  },
+  "daniels_detected_mdi_daniels": {
+   "rvot": 0.699,
+   "cusp": 0.621,
+   "summit90": 0.625,
+   "vein90": 0.503,
+   "lvendo10": 0.362,
+   "n": {
+    "rvot": 8,
+    "cusp": 8,
+    "summit90": 2,
+    "vein90": 3,
+    "lvendo10": 18
+   },
+   "order_pass": false
+  },
+  "daniels_det20_mdi": {
+   "rvot": 0.667,
+   "cusp": 0.588,
+   "summit90": 0.609,
+   "vein90": 0.482,
+   "lvendo10": 0.368,
+   "n": {
+    "rvot": 8,
+    "cusp": 8,
+    "summit90": 2,
+    "vein90": 3,
+    "lvendo10": 18
+   },
+   "order_pass": false
+  },
+  "summit_cusp_true_qrs_median": 159.0,
+  "summit_cusp_n": 16,
+  "lvfw_qrs_pairs_n": 10,
+  "lvfw_qrs_mean_90_10": [
+   165.4,
+   154.4
+  ],
+  "lvfw_qrs_ratio_of_means": 1.0712,
+  "lvfw_qrs_ratio_of_medians": 1.0957,
+  "lvfw_qrs_median_pair_ratio": 1.0796,
+  "lvfw_qrs_ratio_of_means_in_1.0785_1.1587": false,
+  "berruezo_lvfw_median_rel_pct": {
+   "QRS": 8.0,
+   "QRS_median_diff_ms": 12.0,
+   "PdW": 38.9,
+   "PdW_median_diff_ms": 14.0,
+   "IDT": 19.9,
+   "IDT_median_diff_ms": 12.5,
+   "RS": 0.4,
+   "RS_median_diff_ms": 0.0
+  },
+  "berruezo_pass_rule(QRS -1..25, IDT 12..86, RS 20..52, all>0)": false,
+  "bazan2006_rv_lv_rel_qrs_pct": [
+   4.2,
+   8.0
+  ],
+  "bazan2006_pairs_rv": 9,
+  "bazan2006_pass": true,
+  "auc_lvfw_90v10": {
+   "true_pseudo_delta_ms": 0.78,
+   "true_pseudo_delta_ms_paired_up": "10/10",
+   "true_mdi_daniels": 0.87,
+   "true_mdi_daniels_paired_up": "9/10",
+   "true_idt_v2_ms": 0.465,
+   "true_idt_v2_ms_paired_up": "6/10",
+   "true_srs_ms": 0.4,
+   "true_srs_ms_paired_up": "5/10",
+   "true_qrs_duration_ms": 0.74,
+   "true_qrs_duration_ms_paired_up": "10/10"
+  },
+  "pdw_ge34_calls_at_10pct": "24/34",
+  "pdw_ge34_recomputed_from_values": "24/34"
+ },
+ "6G8DD8S5": {
+  "daniels_true_mdi_daniels": {
+   "rvot": 0.565,
+   "cusp": 0.6,
+   "summit90": 0.553,
+   "vein90": 0.525,
+   "lvendo10": 0.417,
+   "n": {
+    "rvot": 8,
+    "cusp": 8,
+    "summit90": 2,
+    "vein90": 3,
+    "lvendo10": 18
+   },
+   "order_pass": false
+  },
+  "daniels_detected_mdi_daniels": {
+   "rvot": 0.548,
+   "cusp": 0.618,
+   "summit90": 0.575,
+   "vein90": 0.546,
+   "lvendo10": 0.431,
+   "n": {
+    "rvot": 8,
+    "cusp": 8,
+    "summit90": 2,
+    "vein90": 3,
+    "lvendo10": 18
+   },
+   "order_pass": false
+  },
+  "summit_cusp_true_qrs_median": 145.0,
+  "summit_cusp_n": 16,
+  "lvfw_qrs_pairs_n": 10,
+  "lvfw_qrs_mean_90_10": [
+   163.4,
+   143.7
+  ],
+  "lvfw_qrs_ratio_of_means": 1.1371,
+  "lvfw_qrs_ratio_of_medians": 1.1552,
+  "lvfw_qrs_median_pair_ratio": 1.1472,
+  "lvfw_qrs_ratio_of_means_in_1.0785_1.1587": true,
+  "berruezo_lvfw_median_rel_pct": {
+   "QRS": 14.7,
+   "QRS_median_diff_ms": 22.0,
+   "PdW": 60.6,
+   "PdW_median_diff_ms": 25.0,
+   "IDT": 31.6,
+   "IDT_median_diff_ms": 17.0,
+   "RS": 7.6,
+   "RS_median_diff_ms": 6.0
+  },
+  "berruezo_pass_rule(QRS -1..25, IDT 12..86, RS 20..52, all>0)": false,
+  "bazan2006_rv_lv_rel_qrs_pct": [
+   4.1,
+   14.7
+  ],
+  "bazan2006_pairs_rv": 9,
+  "bazan2006_pass": true,
+  "auc_lvfw_90v10": {
+   "true_pseudo_delta_ms": 0.9,
+   "true_pseudo_delta_ms_paired_up": "9/10",
+   "true_mdi_daniels": 0.87,
+   "true_mdi_daniels_paired_up": "10/10",
+   "true_idt_v2_ms": 0.545,
+   "true_idt_v2_ms_paired_up": "6/10",
+   "true_srs_ms": 0.59,
+   "true_srs_ms_paired_up": "5/10",
+   "true_qrs_duration_ms": 0.77,
+   "true_qrs_duration_ms_paired_up": "10/10"
+  },
+  "pdw_ge34_calls_at_10pct": "26/34",
+  "pdw_ge34_recomputed_from_values": "26/34"
+ },
+ "7D98EVAR": {
+  "daniels_true_mdi_daniels": {
+   "rvot": 0.689,
+   "cusp": 0.507,
+   "summit90": 0.408,
+   "vein90": 0.435,
+   "lvendo10": 0.383,
+   "n": {
+    "rvot": 8,
+    "cusp": 8,
+    "summit90": 2,
+    "vein90": 3,
+    "lvendo10": 18
+   },
+   "order_pass": false
+  },
+  "daniels_detected_mdi_daniels": {
+   "rvot": 0.709,
+   "cusp": 0.542,
+   "summit90": 0.457,
+   "vein90": 0.457,
+   "lvendo10": 0.407,
+   "n": {
+    "rvot": 8,
+    "cusp": 8,
+    "summit90": 2,
+    "vein90": 3,
+    "lvendo10": 18
+   },
+   "order_pass": false
+  },
+  "summit_cusp_true_qrs_median": 149.5,
+  "summit_cusp_n": 16,
+  "lvfw_qrs_pairs_n": 10,
+  "lvfw_qrs_mean_90_10": [
+   166.9,
+   152.7
+  ],
+  "lvfw_qrs_ratio_of_means": 1.093,
+  "lvfw_qrs_ratio_of_medians": 1.1188,
+  "lvfw_qrs_median_pair_ratio": 1.1028,
+  "lvfw_qrs_ratio_of_means_in_1.0785_1.1587": true,
+  "berruezo_lvfw_median_rel_pct": {
+   "QRS": 10.3,
+   "QRS_median_diff_ms": 16.0,
+   "PdW": 50.1,
+   "PdW_median_diff_ms": 19.5,
+   "IDT": 26.4,
+   "IDT_median_diff_ms": 17.0,
+   "RS": -13.4,
+   "RS_median_diff_ms": -10.5
+  },
+  "berruezo_pass_rule(QRS -1..25, IDT 12..86, RS 20..52, all>0)": false,
+  "bazan2006_rv_lv_rel_qrs_pct": [
+   4.0,
+   10.3
+  ],
+  "bazan2006_pairs_rv": 9,
+  "bazan2006_pass": true,
+  "auc_lvfw_90v10": {
+   "true_pseudo_delta_ms": 0.885,
+   "true_pseudo_delta_ms_paired_up": "10/10",
+   "true_mdi_daniels": 0.94,
+   "true_mdi_daniels_paired_up": "10/10",
+   "true_idt_v2_ms": 0.51,
+   "true_idt_v2_ms_paired_up": "7/10",
+   "true_srs_ms": 0.445,
+   "true_srs_ms_paired_up": "4/10",
+   "true_qrs_duration_ms": 0.755,
+   "true_qrs_duration_ms_paired_up": "10/10"
+  },
+  "pdw_ge34_calls_at_10pct": "20/34",
+  "pdw_ge34_recomputed_from_values": "20/34"
+ },
+ "bazan2007_pooled": {
+  "basal_superior_qI": {
+   "90": "4/21",
+   "10": "3/21",
+   "pp_diff": 4.8,
+   "ci90": [
+    7.7,
+    40.0
+   ],
+   "ci10": [
+    5.0,
+    34.6
+   ]
+  },
+  "apical_superior_qI": {
+   "90": "4/9",
+   "10": "2/9",
+   "pp_diff": 22.2,
+   "ci90": [
+    18.9,
+    73.3
+   ],
+   "ci10": [
+    6.3,
+    54.7
+   ]
+  },
+  "basal_inferior_infQ": {
+   "90": "8/8",
+   "10": "0/8",
+   "pp_diff": 100.0,
+   "ci90": [
+    67.6,
+    100.0
+   ],
+   "ci10": [
+    0.0,
+    32.4
+   ]
+  },
+  "apical_inferior_infQ": {
+   "90": "6/7",
+   "10": "0/7",
+   "pp_diff": 85.7,
+   "ci90": [
+    48.7,
+    97.4
+   ],
+   "ci10": [
+    0.0,
+    35.4
+   ]
+  },
+  "basal_superior_infQ": {
+   "90": "9/21",
+   "10": "15/21",
+   "pp_diff": -28.6,
+   "ci90": [
+    24.5,
+    63.5
+   ],
+   "ci10": [
+    50.0,
+    86.2
+   ]
+  }
+ },
+ "nonet": {
+  "summit_cusp_qrs": 240.0,
+  "by_family_nonet_vs_net": {
+   "lv_free_wall": [
+    242.5,
+    161.0
+   ],
+   "lv_septum": [
+    201.0,
+    139.0
+   ],
+   "rv_free_wall": [
+    250.0,
+    147.5
+   ],
+   "rvot": [
+    226.5,
+    145.0
+   ],
+   "aortic_cusp": [
+    226.5,
+    157.5
+   ],
+   "lv_summit": [
+    249.5,
+    159.0
+   ],
+   "lv_vein_course": [
+    242.0,
+    167.5
+   ]
+  },
+  "n_nonet": 144,
+  "pass": true
+ },
+ "his": {
+  "Y5HYEDL4": {
+   "unactivated_nodes": 0,
+   "T_first_myocardium_ms": 19.9,
+   "T_max_ms": 120.8,
+   "span_ms": 100.8,
+   "lv_endo_onset_ms": 19.9,
+   "rv_endo_onset_ms": 26.5,
+   "latest_after_lv_onset_ms": 100.8,
+   "lv_endo_excl_posterobasal_by30_nodes_pct": 48.5,
+   "lv_endo_all_by30_nodes_pct": 49.0,
+   "lv_endo_excl_posterobasal_by30_area_pct(tri)": 48.8,
+   "lv_endo_excl_posterobasal_by37.5_area_pct(tri)": 67.0,
+   "rv_epi_breakthrough_after_lv_onset_ms": 15.1,
+   "rv_epi_breakthrough_z_phi": [
+    0.38,
+    -0.0
+   ],
+   "rv_freewall_epi_breakthrough_(>5mm_from_LV_epi)_ms": 15.1,
+   "rv_fw_epi_bt_z_phi": [
+    0.38,
+    -0.0
+   ],
+   "lv_endo_first5ms_n_nodes": 131,
+   "onset_high_ant_paraseptal(phi60,z0.8)_ms_after_lv_onset": 0.0,
+   "onset_central_left_septum(phi0,z0.5)_ms_after_lv_onset": 2.7,
+   "onset_post_paraseptal(phi-60,z0.33)_ms_after_lv_onset": 5.0,
+   "first_lv_endo_node_z_phi": [
+    0.8,
+    60.0
+   ],
+   "first_rv_endo_node_z_phi": [
+    0.27,
+    -6.0
+   ],
+   "latest_node_z_phi_v": [
+    1.0,
+    41.0,
+    1
+   ],
+   "last5pct_nodes_RV_frac": 0.85,
+   "last5pct_median_z": 0.98,
+   "last5pct_median_phi": 27.0,
+   "detected_qrs_ms": 94.0,
+   "detected_qrs_any_lead_ms": 94.0,
+   "detected_onset_after_his_ms": 22.0,
+   "axis_net_deg": 64,
+   "axis_area_deg": -17,
+   "einthoven_max_abs_I+III-II_mV": 1.30385160446167e-07,
+   "goldberger_max_abs_aVR+aVL+aVF_mV": 5.21540641784668e-08,
+   "limb_pp_mV": {
+    "I": 0.63,
+    "II": 0.66,
+    "III": 0.46,
+    "aVR": 0.56,
+    "aVL": 0.44,
+    "aVF": 0.43,
+    "V1": 1.28,
+    "V2": 2.92,
+    "V3": 2.33,
+    "V4": 1.84,
+    "V5": 1.46,
+    "V6": 1.15
+   }
+  },
+  "6G8DD8S5": {
+   "unactivated_nodes": 0,
+   "T_first_myocardium_ms": 26.4,
+   "T_max_ms": 168.4,
+   "span_ms": 142.0,
+   "lv_endo_onset_ms": 50.5,
+   "rv_endo_onset_ms": 26.4,
+   "latest_after_lv_onset_ms": 117.9,
+   "lv_endo_excl_posterobasal_by30_nodes_pct": 26.4,
+   "lv_endo_all_by30_nodes_pct": 25.3,
+   "lv_endo_excl_posterobasal_by30_area_pct(tri)": 26.8,
+   "lv_endo_excl_posterobasal_by37.5_area_pct(tri)": 40.5,
+   "rv_epi_breakthrough_after_lv_onset_ms": -12.4,
+   "rv_epi_breakthrough_z_phi": [
+    0.19,
+    -6.0
+   ],
+   "rv_freewall_epi_breakthrough_(>5mm_from_LV_epi)_ms": -10.3,
+   "rv_fw_epi_bt_z_phi": [
+    0.36,
+    8.0
+   ],
+   "lv_endo_first5ms_n_nodes": 308,
+   "onset_high_ant_paraseptal(phi60,z0.8)_ms_after_lv_onset": 22.4,
+   "onset_central_left_septum(phi0,z0.5)_ms_after_lv_onset": 10.7,
+   "onset_post_paraseptal(phi-60,z0.33)_ms_after_lv_onset": 0.0,
+   "first_lv_endo_node_z_phi": [
+    0.25,
+    -53.0
+   ],
+   "first_rv_endo_node_z_phi": [
+    0.26,
+    -14.0
+   ],
+   "latest_node_z_phi_v": [
+    0.77,
+    138.0,
+    0
+   ],
+   "last5pct_nodes_RV_frac": 0.0,
+   "last5pct_median_z": 0.75,
+   "last5pct_median_phi": 145.0,
+   "detected_qrs_ms": 141.0,
+   "detected_qrs_any_lead_ms": 141.0,
+   "detected_onset_after_his_ms": 28.0,
+   "axis_net_deg": -36,
+   "axis_area_deg": -29,
+   "einthoven_max_abs_I+III-II_mV": 1.4901161193847656e-07,
+   "goldberger_max_abs_aVR+aVL+aVF_mV": 7.450580596923828e-08,
+   "limb_pp_mV": {
+    "I": 0.8,
+    "II": 0.58,
+    "III": 1.29,
+    "aVR": 0.34,
+    "aVL": 1.03,
+    "aVF": 0.91,
+    "V1": 1.25,
+    "V2": 2.14,
+    "V3": 1.89,
+    "V4": 1.57,
+    "V5": 1.12,
+    "V6": 0.86
+   },
+   "lbbb_lv_minus_rv_endo_onset_ms": 24.2,
+   "lbbb_first_lv_septal_bt_after_first_myocardium_ms": 24.2
+  },
+  "7D98EVAR": {
+   "unactivated_nodes": 0,
+   "T_first_myocardium_ms": 18.8,
+   "T_max_ms": 119.0,
+   "span_ms": 100.2,
+   "lv_endo_onset_ms": 18.8,
+   "rv_endo_onset_ms": 27.0,
+   "latest_after_lv_onset_ms": 100.2,
+   "lv_endo_excl_posterobasal_by30_nodes_pct": 44.2,
+   "lv_endo_all_by30_nodes_pct": 44.5,
+   "lv_endo_excl_posterobasal_by30_area_pct(tri)": 44.5,
+   "lv_endo_excl_posterobasal_by37.5_area_pct(tri)": 61.0,
+   "rv_epi_breakthrough_after_lv_onset_ms": 16.4,
+   "rv_epi_breakthrough_z_phi": [
+    0.24,
+    10.0
+   ],
+   "rv_freewall_epi_breakthrough_(>5mm_from_LV_epi)_ms": 19.2,
+   "rv_fw_epi_bt_z_phi": [
+    0.35,
+    -2.0
+   ],
+   "lv_endo_first5ms_n_nodes": 105,
+   "onset_high_ant_paraseptal(phi60,z0.8)_ms_after_lv_onset": 0.0,
+   "onset_central_left_septum(phi0,z0.5)_ms_after_lv_onset": 2.5,
+   "onset_post_paraseptal(phi-60,z0.33)_ms_after_lv_onset": 5.4,
+   "first_lv_endo_node_z_phi": [
+    0.8,
+    60.0
+   ],
+   "first_rv_endo_node_z_phi": [
+    0.24,
+    -10.0
+   ],
+   "latest_node_z_phi_v": [
+    0.99,
+    50.0,
+    1
+   ],
+   "last5pct_nodes_RV_frac": 0.52,
+   "last5pct_median_z": 0.95,
+   "last5pct_median_phi": 48.0,
+   "detected_qrs_ms": 86.0,
+   "detected_qrs_any_lead_ms": 87.0,
+   "detected_onset_after_his_ms": 21.0,
+   "axis_net_deg": 67,
+   "axis_area_deg": 64,
+   "einthoven_max_abs_I+III-II_mV": 9.313225746154785e-08,
+   "goldberger_max_abs_aVR+aVL+aVF_mV": 8.754432201385498e-08,
+   "limb_pp_mV": {
+    "I": 0.77,
+    "II": 0.92,
+    "III": 0.93,
+    "aVR": 0.72,
+    "aVL": 0.76,
+    "aVF": 0.9,
+    "V1": 1.95,
+    "V2": 2.81,
+    "V3": 2.44,
+    "V4": 1.76,
+    "V5": 1.77,
+    "V6": 1.69
+   }
+  }
+ }
+}

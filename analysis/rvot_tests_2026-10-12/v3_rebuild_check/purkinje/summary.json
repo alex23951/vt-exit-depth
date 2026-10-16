@@ -1,0 +1,171 @@
+{
+ "heart": "Y5HYEDL4",
+ "params": {
+  "v_mm_per_ms": 2.0,
+  "d_ant_ms": 4.0,
+  "d_ret_ms": 2.0,
+  "pmj_per_cm2": 15.0,
+  "branch_mm": 8.0,
+  "branch_sd_mm": 0.6324555320336759,
+  "angle_rad": 0.15,
+  "repulsion": 0.1,
+  "seg_mm": 1.0,
+  "z_max": 0.9,
+  "rv_septum_z_max": 0.35,
+  "lbb_drop_z": 0.1,
+  "mb_z": 0.35,
+  "max_gen": 40,
+  "seed": 20261007,
+  "divisions": {
+   "anterior": [
+    [
+     60.0,
+     0.8
+    ],
+    [
+     120.0,
+     0.45
+    ],
+    [
+     120.0,
+     0.12
+    ]
+   ],
+   "septal": [
+    [
+     0.0,
+     0.5
+    ],
+    [
+     0.0,
+     0.12
+    ]
+   ],
+   "posterior": [
+    [
+     -60.0,
+     0.33
+    ],
+    [
+     -120.0,
+     0.35
+    ],
+    [
+     -120.0,
+     0.12
+    ]
+   ]
+  },
+  "bud_mm": 10.0,
+  "rv_apex_z": 0.12,
+  "durrer_offset_ms": {
+   "anterior": 0.0,
+   "septal": 2.5,
+   "posterior": 5.0
+  },
+  "rv_after_lv_ms": 7.5,
+  "post_site_speed_mm_per_ms": null,
+  "stim_bin_ms": 0.25,
+  "bridge_mm": 6.0,
+  "v_bridge_mm_per_ms": 0.4,
+  "couple_tol_ms": 1.0,
+  "max_pass": 4,
+  "lbbb_cut_hearts": [
+   "6G8DD8S5"
+  ],
+  "network_version": "v3",
+  "durrer_lv_endo_pct": 95.0,
+  "durrer_window_ms": 30.0,
+  "v_distal_max_mm_per_ms": 12.0
+ },
+ "network_version": "v3",
+ "lbbb_cut": false,
+ "distal_speed_m_s": null,
+ "nodes": 6282,
+ "edges": 9664,
+ "length_mm": {
+  "proximal": 394.4,
+  "distal_lv": 5302.4,
+  "distal_rv": 3561.8
+ },
+ "proximal_mm": {
+  "lbb": 11.5,
+  "division_anterior": 20.4,
+  "division_anterior_post": 112.5,
+  "division_septal": 30.5,
+  "division_septal_post": 40.5,
+  "division_posterior": 48.1,
+  "division_posterior_post": 33.9,
+  "rbb": 64.1,
+  "moderator_band": 14.7,
+  "rbb_apical": 18.2
+ },
+ "branches_lv_terminals": 560,
+ "branches_rv_terminals": 373,
+ "reconnections": {
+  "lv": 553,
+  "rv": 353
+ },
+ "proximal_speed_m_s": {
+  "lbb": 2.0,
+  "division_anterior": 2.0,
+  "division_anterior_post": 2.0,
+  "division_septal": 2.4,
+  "division_septal_post": 2.4,
+  "division_posterior": 3.16,
+  "division_posterior_post": 3.16,
+  "rbb": 3.36,
+  "moderator_band": 3.36,
+  "rbb_apical": 3.36
+ },
+ "his_to_lv_sites_ms": 15.9,
+ "pmj": 3665,
+ "pmj_spacing_mm": 0.9,
+ "pmj_lv": 2221,
+ "pmj_rv": 1444,
+ "allowed_area_cm2": {
+  "lv": 133.5,
+  "rv": 110.8
+ },
+ "pmj_per_cm2_of_allowed": {
+  "lv": 16.6,
+  "rv": 13.0
+ },
+ "gap_to_network_mm_median": {
+  "lv": 1.2,
+  "rv": 1.6
+ },
+ "gap_to_network_mm_max": {
+  "lv": 10.0,
+  "rv": 12.8
+ },
+ "landmarks": {
+  "his": 305272,
+  "his_z_phi": [
+   0.919,
+   43.2
+  ],
+  "lbb_branch": 46700,
+  "his_rv": 350727,
+  "rbb_low": 16331,
+  "mb_end": 311002,
+  "mb_length_mm": 14.7,
+  "fascicle_ends": {
+   "anterior": [
+    65973,
+    0.12,
+    118.9
+   ],
+   "septal": [
+    291535,
+    0.12,
+    1.0
+   ],
+   "posterior": [
+    4105,
+    0.12,
+    -117.4
+   ]
+  }
+ }
+}

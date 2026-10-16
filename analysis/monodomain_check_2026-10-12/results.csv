@@ -1,0 +1,5 @@
+beat,model,activated_pct,total_activation_ms,t10_ms,t50_ms,t90_ms,qrs_ms,mdi,mdi_lead,t_largest_ms,pseudo_delta_ms,within_5ms_pct,median_diff_ms,junction_capture_lag_median_ms,junction_capture_lag_p95_ms
+rvot,eikonal,100.0,150.0,66.6,98.3,119.9,150.0,0.56,V1,84,81.0,,,,
+rvot,monodomain,100.0,143.2,60.9,95.7,117.1,143.0,0.615,V2,88,91.0,84.5,-2.38,0.03,0.19
+lvfw,eikonal,100.0,166.5,36.3,62.2,111.2,166.0,0.355,V4,59,44.0,,,,
+lvfw,monodomain,100.0,153.8,34.2,59.8,108.1,154.0,0.357,V4,55,44.0,86.9,-2.32,0.06,0.19

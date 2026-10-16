@@ -1,0 +1,92 @@
+{
+ "Y5HYEDL4_rvot_septal_z_d10": {
+  "site_to_nearest_junction_mm": 22.5,
+  "first_network_entry_ms": 40.6,
+  "his_ms": 62.5,
+  "n_junction_exits": 3143,
+  "first_exit_ms": 48.3,
+  "frac_nodes_earlier_than_myocardium_only_by_1ms": 0.814,
+  "total_with_net_ms": 147.8,
+  "total_myocardium_only_ms": 213.1
+ },
+ "Y5HYEDL4_lv_free_wall_phi180_z0.5_d10": {
+  "site_to_nearest_junction_mm": 1.7,
+  "first_network_entry_ms": 3.2,
+  "his_ms": 46.3,
+  "n_junction_exits": 2982,
+  "first_exit_ms": 10.6,
+  "frac_nodes_earlier_than_myocardium_only_by_1ms": 0.936,
+  "total_with_net_ms": 161.0,
+  "total_myocardium_only_ms": 233.8
+ },
+ "Y5HYEDL4_lv_summit_superior_z_d90": {
+  "site_to_nearest_junction_mm": 10.9,
+  "first_network_entry_ms": 21.0,
+  "his_ms": 55.3,
+  "n_junction_exits": 3233,
+  "first_exit_ms": 29.0,
+  "frac_nodes_earlier_than_myocardium_only_by_1ms": 0.857,
+  "total_with_net_ms": 157.2,
+  "total_myocardium_only_ms": 244.2
+ },
+ "6G8DD8S5_rvot_septal_z_d10": {
+  "site_to_nearest_junction_mm": 7.7,
+  "first_network_entry_ms": 17.3,
+  "his_ms": 99.8,
+  "n_junction_exits": 2830,
+  "first_exit_ms": 23.4,
+  "frac_nodes_earlier_than_myocardium_only_by_1ms": 0.901,
+  "total_with_net_ms": 140.0,
+  "total_myocardium_only_ms": 231.1
+ },
+ "6G8DD8S5_lv_free_wall_phi180_z0.5_d10": {
+  "site_to_nearest_junction_mm": 1.0,
+  "first_network_entry_ms": 2.0,
+  "his_ms": 87.4,
+  "n_junction_exits": 2638,
+  "first_exit_ms": 9.2,
+  "frac_nodes_earlier_than_myocardium_only_by_1ms": 0.95,
+  "total_with_net_ms": 158.4,
+  "total_myocardium_only_ms": 270.1
+ },
+ "6G8DD8S5_lv_summit_superior_z_d90": {
+  "site_to_nearest_junction_mm": 12.8,
+  "first_network_entry_ms": 32.6,
+  "his_ms": 100.3,
+  "n_junction_exits": 2825,
+  "first_exit_ms": 40.8,
+  "frac_nodes_earlier_than_myocardium_only_by_1ms": 0.849,
+  "total_with_net_ms": 142.6,
+  "total_myocardium_only_ms": 218.9
+ },
+ "7D98EVAR_rvot_septal_z_d10": {
+  "site_to_nearest_junction_mm": 20.5,
+  "first_network_entry_ms": 44.8,
+  "his_ms": 62.8,
+  "n_junction_exits": 2834,
+  "first_exit_ms": 52.0,
+  "frac_nodes_earlier_than_myocardium_only_by_1ms": 0.794,
+  "total_with_net_ms": 147.4,
+  "total_myocardium_only_ms": 226.4
+ },
+ "7D98EVAR_lv_free_wall_phi180_z0.5_d10": {
+  "site_to_nearest_junction_mm": 6.6,
+  "first_network_entry_ms": 14.7,
+  "his_ms": 58.4,
+  "n_junction_exits": 2730,
+  "first_exit_ms": 21.3,
+  "frac_nodes_earlier_than_myocardium_only_by_1ms": 0.875,
+  "total_with_net_ms": 168.7,
+  "total_myocardium_only_ms": 265.6
+ },
+ "7D98EVAR_lv_summit_superior_z_d90": {
+  "site_to_nearest_junction_mm": 9.3,
+  "first_network_entry_ms": 23.2,
+  "his_ms": 49.9,
+  "n_junction_exits": 2868,
+  "first_exit_ms": 32.1,
+  "frac_nodes_earlier_than_myocardium_only_by_1ms": 0.857,
+  "total_with_net_ms": 152.4,
+  "total_myocardium_only_ms": 227.7
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "arm": "A",
+ "heart": "7D98EVAR",
+ "speeds_f_s_n": [
+  0.6,
+  0.48,
+  0.48
+ ],
+ "graph_scale_k": 1.0682,
+ "d_ret_ms": 2.0,
+ "d_ant": 4.0,
+ "fibres": "frozen bivF.lon",
+ "lead_fields": "cb, not rebuilt"
+}

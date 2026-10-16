@@ -1,0 +1,44 @@
+{
+ "harness_vs_stored": [
+  {
+   "id": "rvot_septal_z_d75",
+   "max_abs_T_diff_ms": 0.0,
+   "qrs": [
+    150.0,
+    150.0
+   ],
+   "mdi": [
+    0.5867,
+    0.5867
+   ],
+   "pdw": [
+    90.0,
+    90.0
+   ]
+  },
+  {
+   "id": "rvot_septal_z_d90",
+   "max_abs_T_diff_ms": 0.0,
+   "qrs": [
+    149.0,
+    149.0
+   ],
+   "mdi": [
+    0.5638,
+    0.5638
+   ],
+   "pdw": [
+    89.0,
+    89.0
+   ]
+  }
+ ],
+ "rebuild_equals_frozen": {
+  "nodes": true,
+  "edges": true,
+  "edge_speed": true,
+  "pmj": true,
+  "his": true,
+  "kind": true
+ }
+}

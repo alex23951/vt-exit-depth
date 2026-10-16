@@ -1,0 +1,13 @@
+== conductivities actually used (S/m): calibration.json (eikonal-era monodomain tuning) and cb = /s
+Y5HYEDL4 s= 4.0835 calib (gi,ge): {'fibre': (0.7105, 2.5522), 'sheet': (0.2415, 0.8675), 'sheet_normal': (0.2962, 1.0642)} | cb (gi,ge): {'fibre': (0.174, 0.625), 'sheet': (0.0592, 0.2124), 'sheet_normal': (0.0725, 0.2606)} | cb monodomain-equiv (source term): {'fibre': 0.1361, 'sheet': 0.0463, 'sheet_normal': 0.0567}
+   gi/ge ratio by direction: {'fibre': 0.2784, 'sheet': 0.2784, 'sheet_normal': 0.2784} | calib keys: ['heart', 'method', 'fast_layer', 'sheet_normal', 'fibre', 'sheet', 'within_3pct', 'whole_heart_check', 'fast_check_m_s', 'history', 'myo_fits', 'method_myo', 'myo_within_3pct']
+   blood stage: None
+6G8DD8S5 s= 3.8647 calib (gi,ge): {'fibre': (0.6724, 2.4154), 'sheet': (0.2789, 1.0016), 'sheet_normal': (0.2938, 1.0555)} | cb (gi,ge): {'fibre': (0.174, 0.625), 'sheet': (0.0722, 0.2592), 'sheet_normal': (0.076, 0.2731)} | cb monodomain-equiv (source term): {'fibre': 0.1361, 'sheet': 0.0564, 'sheet_normal': 0.0595}
+   gi/ge ratio by direction: {'fibre': 0.2784, 'sheet': 0.2784, 'sheet_normal': 0.2784} | calib keys: ['heart', 'method', 'fast_layer', 'sheet_normal', 'fibre', 'sheet', 'fits', 'within_3pct', 'fast_check_m_s', 'history', 'myo_fits', 'method_myo', 'myo_within_3pct']
+   blood stage: {'blood_elements': 2392620, 'blood_ml': 148.5, 'voxels': [129, 117, 103]}
+7D98EVAR s= 4.1959 calib (gi,ge): {'fibre': (0.73, 2.6224), 'sheet': (0.2577, 0.9255), 'sheet_normal': (0.2987, 1.0732)} | cb (gi,ge): {'fibre': (0.174, 0.625), 'sheet': (0.0614, 0.2206), 'sheet_normal': (0.0712, 0.2558)} | cb monodomain-equiv (source term): {'fibre': 0.1361, 'sheet': 0.048, 'sheet_normal': 0.0557}
+   gi/ge ratio by direction: {'fibre': 0.2784, 'sheet': 0.2784, 'sheet_normal': 0.2784} | calib keys: ['heart', 'method', 'fast_layer', 'sheet_normal', 'fibre', 'sheet', 'fits', 'within_3pct', 'fast_check_m_s', 'history', 'myo_fits', 'method_myo', 'myo_within_3pct']
+   blood stage: {'blood_elements': 3250006, 'blood_ml': 208.0, 'voxels': [126, 111, 119]}
+== Einthoven / Goldberger on saved cb ECG files (runs/*_ecg_cb/POSTPROC_DIR)
+cb ECG folders: 437
+checked 63 folders: max |I+III-II| = 9.00e-06 mV, max |aVR+aVL+aVF| = 9.00e-06 mV (files written with 6 significant digits)

@@ -1,0 +1,164 @@
+== PACE primary: stim onset, clean, QRS any lead
+    relQRS Y5 ratio of means (1.0785-1.1587) 1.0586
+    relQRS Y5 pass False
+    relQRS Y5 bootstrap 95% CI [1.0, 1.1235]
+    Bazan2006 Y5 RV / LV median pair % 3.9 / 6.1
+    Bazan2006 Y5 pass True
+    relQRS 6G ratio of means (1.0785-1.1587) 1.184
+    relQRS 6G pass False
+    relQRS 6G bootstrap 95% CI [1.1672, 1.1985]
+    Bazan2006 6G RV / LV median pair % 3.5 / 18.7
+    Bazan2006 6G pass True
+    Berruezo 6G QRS/PdW/IDT/RS % {'QRS': 18.7, 'PdW': 60.6, 'IDT': 31.6, 'RS': 7.6}
+    Berruezo 6G pass False
+    relQRS 7D ratio of means (1.0785-1.1587) 1.1147
+    relQRS 7D pass True
+    relQRS 7D bootstrap 95% CI [1.0621, 1.16]
+    Bazan2006 7D RV / LV median pair % 4.3 / 12.9
+    Bazan2006 7D pass True
+    Bazan2007 basal superior q in I 90 vs 10 4/21 vs 3/21; CI90 [7.7, 40.0] CI10 [5.0, 34.6]; Bazan 90/16 in CI: False; evaluable (n>=20): True
+    Bazan2007 apical superior q in I 90 vs 10 4/9 vs 2/9; CI90 [18.9, 73.3] CI10 [6.3, 54.7]; Bazan 88/26 in CI: False; evaluable (n>=20): False
+    Bazan2007 basal inferior Q II/III/aVF 90 vs 10 8/8 vs 0/8; CI90 [67.6, 100.0] CI10 [0.0, 32.4]; Bazan 81/37 in CI: False; evaluable (n>=20): False
+    Bazan2007 apical inferior Q II/III/aVF 90 vs 10 6/7 vs 0/7; CI90 [48.7, 97.4] CI10 [0.0, 35.4]; Bazan 92/33 in CI: True; evaluable (n>=20): False
+== PACE A3 stim onset, plan noise 10uV
+    relQRS Y5 ratio of means (1.0785-1.1587) 1.0722
+    relQRS Y5 pass False
+    relQRS Y5 bootstrap 95% CI [1.0252, 1.1218]
+    Bazan2006 Y5 RV / LV median pair % 3.5 / 7.0
+    Bazan2006 Y5 pass True
+    relQRS 6G ratio of means (1.0785-1.1587) 1.1828
+    relQRS 6G pass False
+    relQRS 6G bootstrap 95% CI [1.1663, 1.1971]
+    Bazan2006 6G RV / LV median pair % 3.5 / 18.3
+    Bazan2006 6G pass True
+    Berruezo 6G QRS/PdW/IDT/RS % {'QRS': 18.3, 'PdW': 65.7, 'IDT': 31.9, 'RS': -6.6}
+    Berruezo 6G pass False
+    relQRS 7D ratio of means (1.0785-1.1587) 1.1179
+    relQRS 7D pass True
+    relQRS 7D bootstrap 95% CI [1.0656, 1.1623]
+    Bazan2006 7D RV / LV median pair % 4.1 / 13.0
+    Bazan2006 7D pass True
+    Bazan2007 basal superior q in I 90 vs 10 5/21 vs 3/21; CI90 [10.6, 45.1] CI10 [5.0, 34.6]; Bazan 90/16 in CI: False; evaluable (n>=20): True
+    Bazan2007 apical superior q in I 90 vs 10 5/9 vs 2/9; CI90 [26.7, 81.1] CI10 [6.3, 54.7]; Bazan 88/26 in CI: False; evaluable (n>=20): False
+    Bazan2007 basal inferior Q II/III/aVF 90 vs 10 8/8 vs 0/8; CI90 [67.6, 100.0] CI10 [0.0, 32.4]; Bazan 81/37 in CI: False; evaluable (n>=20): False
+    Bazan2007 apical inferior Q II/III/aVF 90 vs 10 7/7 vs 0/7; CI90 [64.6, 100.0] CI10 [0.0, 35.4]; Bazan 92/33 in CI: True; evaluable (n>=20): False
+== PACE A3 stim onset, clean, precordial offset
+    relQRS Y5 ratio of means (1.0785-1.1587) 1.0567
+    relQRS Y5 pass False
+    relQRS Y5 bootstrap 95% CI [1.0195, 1.0893]
+    Bazan2006 Y5 RV / LV median pair % 3.9 / 6.7
+    Bazan2006 Y5 pass True
+    relQRS 6G ratio of means (1.0785-1.1587) 1.1888
+    relQRS 6G pass False
+    relQRS 6G bootstrap 95% CI [1.1701, 1.2046]
+    Bazan2006 6G RV / LV median pair % 3.5 / 19.4
+    Bazan2006 6G pass True
+    Berruezo 6G QRS/PdW/IDT/RS % {'QRS': 19.4, 'PdW': 60.6, 'IDT': 31.6, 'RS': 7.6}
+    Berruezo 6G pass False
+    relQRS 7D ratio of means (1.0785-1.1587) 1.1275
+    relQRS 7D pass True
+    relQRS 7D bootstrap 95% CI [1.0697, 1.1807]
+    Bazan2006 7D RV / LV median pair % 4.3 / 14.6
+    Bazan2006 7D pass True
+    Bazan2007 basal superior q in I 90 vs 10 4/21 vs 3/21; CI90 [7.7, 40.0] CI10 [5.0, 34.6]; Bazan 90/16 in CI: False; evaluable (n>=20): True
+    Bazan2007 apical superior q in I 90 vs 10 4/9 vs 2/9; CI90 [18.9, 73.3] CI10 [6.3, 54.7]; Bazan 88/26 in CI: False; evaluable (n>=20): False
+    Bazan2007 basal inferior Q II/III/aVF 90 vs 10 8/8 vs 0/8; CI90 [67.6, 100.0] CI10 [0.0, 32.4]; Bazan 81/37 in CI: False; evaluable (n>=20): False
+    Bazan2007 apical inferior Q II/III/aVF 90 vs 10 6/7 vs 0/7; CI90 [48.7, 97.4] CI10 [0.0, 35.4]; Bazan 92/33 in CI: True; evaluable (n>=20): False
+== PACE A3 true (13 Oct)
+    relQRS Y5 ratio of means (1.0785-1.1587) 1.0712
+    relQRS Y5 pass False
+    relQRS Y5 bootstrap 95% CI [1.0501, 1.0881]
+    Bazan2006 Y5 RV / LV median pair % 4.2 / 8.0
+    Bazan2006 Y5 pass True
+    relQRS 6G ratio of means (1.0785-1.1587) 1.1371
+    relQRS 6G pass True
+    relQRS 6G bootstrap 95% CI [1.1083, 1.1607]
+    Bazan2006 6G RV / LV median pair % 4.1 / 14.7
+    Bazan2006 6G pass True
+    Berruezo 6G QRS/PdW/IDT/RS % {'QRS': 14.7, 'PdW': 60.6, 'IDT': 31.6, 'RS': 7.6}
+    Berruezo 6G pass False
+    relQRS 7D ratio of means (1.0785-1.1587) 1.093
+    relQRS 7D pass True
+    relQRS 7D bootstrap 95% CI [1.0656, 1.1187]
+    Bazan2006 7D RV / LV median pair % 4.0 / 10.3
+    Bazan2006 7D pass True
+    Bazan2007 basal superior q in I 90 vs 10 4/21 vs 3/21; CI90 [7.7, 40.0] CI10 [5.0, 34.6]; Bazan 90/16 in CI: False; evaluable (n>=20): True
+    Bazan2007 apical superior q in I 90 vs 10 4/9 vs 2/9; CI90 [18.9, 73.3] CI10 [6.3, 54.7]; Bazan 88/26 in CI: False; evaluable (n>=20): False
+    Bazan2007 basal inferior Q II/III/aVF 90 vs 10 8/8 vs 0/8; CI90 [67.6, 100.0] CI10 [0.0, 32.4]; Bazan 81/37 in CI: False; evaluable (n>=20): False
+    Bazan2007 apical inferior Q II/III/aVF 90 vs 10 6/7 vs 0/7; CI90 [48.7, 97.4] CI10 [0.0, 35.4]; Bazan 92/33 in CI: True; evaluable (n>=20): False
+== SPON primary: detected, plan noise 10uV, QRS any lead
+    abs QRS summit+cusp median (132-193) 137.0
+    abs QRS pass True
+    abs QRS summit / cusp medians 129.25 / 137.25
+    Daniels MDI summit90/vein90/cusp/RVOT/LVendo10 {'summit90': 0.621, 'vein90': 0.497, 'cusp': 0.616, 'RVOT': 0.689, 'LVendo10': 0.36}
+    Daniels pass False
+    No-network summit+cusp median (>193) 220.25
+    No-network wider by family [nonet, net] {'lv_free_wall': [224.5, 138.75], 'lv_septum': [193.25, 120.75], 'rv_free_wall': [246.25, 139.25], 'rvot': [215.75, 133.5], 'aortic_cusp': [212.0, 137.25], 'lv_summit': [239.25, 129.25], 'lv_vein_course': [237.5, 141.25]}
+    No-network pass True
+    Durrer (e) His QRS (63-88) 94.5
+    Durrer (e) pass False
+    His QRS 6G / 7D (info) [142.0, 86.5]
+== SPON A3 detected clean
+    abs QRS summit+cusp median (132-193) 138.0
+    abs QRS pass True
+    abs QRS summit / cusp medians 131.0 / 139.0
+    Daniels MDI summit90/vein90/cusp/RVOT/LVendo10 {'summit90': 0.625, 'vein90': 0.503, 'cusp': 0.621, 'RVOT': 0.699, 'LVendo10': 0.362}
+    Daniels pass False
+    No-network summit+cusp median (>193) 224.5
+    No-network wider by family [nonet, net] {'lv_free_wall': [222.5, 137.0], 'lv_septum': [193.0, 120.5], 'rv_free_wall': [246.5, 140.5], 'rvot': [219.0, 134.0], 'aortic_cusp': [211.5, 139.0], 'lv_summit': [237.5, 131.0], 'lv_vein_course': [239.5, 144.5]}
+    No-network pass True
+    Durrer (e) His QRS (63-88) 94.0
+    Durrer (e) pass False
+    His QRS 6G / 7D (info) [141.0, 87.0]
+== SPON A3 detected plan noise 20uV
+    abs QRS summit+cusp median (132-193) 134.0
+    abs QRS pass True
+    abs QRS summit / cusp medians 129.0 / 135.0
+    Daniels MDI summit90/vein90/cusp/RVOT/LVendo10 {'summit90': 0.616, 'vein90': 0.492, 'cusp': 0.592, 'RVOT': 0.667, 'LVendo10': 0.342}
+    Daniels pass False
+    No-network summit+cusp median (>193) 211.25
+    No-network wider by family [nonet, net] {'lv_free_wall': [208.5, 135.0], 'lv_septum': [191.5, 119.0], 'rv_free_wall': [237.25, 136.0], 'rvot': [206.5, 121.5], 'aortic_cusp': [208.5, 135.0], 'lv_summit': [216.25, 129.0], 'lv_vein_course': [233.75, 138.75]}
+    No-network pass True
+    Durrer (e) His QRS (63-88) 94.5
+    Durrer (e) pass False
+    His QRS 6G / 7D (info) [140.0, 86.0]
+== SPON A3 detected 20uV 0.5-150 + notch
+    abs QRS summit+cusp median (132-193) 128.75
+    abs QRS pass False
+    abs QRS summit / cusp medians 127.0 / 133.0
+    Daniels MDI summit90/vein90/cusp/RVOT/LVendo10 {'summit90': 0.61, 'vein90': 0.486, 'cusp': 0.586, 'RVOT': 0.663, 'LVendo10': 0.358}
+    Daniels pass False
+    No-network summit+cusp median (>193) 205.75
+    No-network wider by family [nonet, net] {'lv_free_wall': [197.75, 128.0], 'lv_septum': [189.75, 117.0], 'rv_free_wall': [226.75, 134.0], 'rvot': [199.25, 117.0], 'aortic_cusp': [205.75, 133.0], 'lv_summit': [205.0, 127.0], 'lv_vein_course': [224.5, 137.75]}
+    No-network pass True
+    Durrer (e) His QRS (63-88) 92.5
+    Durrer (e) pass False
+    His QRS 6G / 7D (info) [140.0, 85.5]
+== SPON A3 stim onset to ECG offset, clean
+    abs QRS summit+cusp median (132-193) 141.5
+    abs QRS pass True
+    abs QRS summit / cusp medians 135.0 / 144.5
+    Daniels MDI summit90/vein90/cusp/RVOT/LVendo10 {'summit90': 0.633, 'vein90': 0.512, 'cusp': 0.63, 'RVOT': 0.708, 'LVendo10': 0.38}
+    Daniels pass False
+    No-network summit+cusp median (>193) 228.5
+    No-network wider by family [nonet, net] {'lv_free_wall': [229.0, 139.5], 'lv_septum': [196.5, 126.0], 'rv_free_wall': [249.0, 142.5], 'rvot': [227.0, 138.0], 'aortic_cusp': [217.5, 144.5], 'lv_summit': [241.0, 135.0], 'lv_vein_course': [242.5, 148.0]}
+    No-network pass True
+    Durrer (e) His QRS (63-88) 116.0
+    Durrer (e) pass False
+    His QRS 6G / 7D (info) [169.0, 108.0]
+== SPON A3 true (13 Oct)
+    abs QRS summit+cusp median (132-193) 159.0
+    abs QRS pass True
+    abs QRS summit / cusp medians 159.0 / 157.5
+    Daniels MDI summit90/vein90/cusp/RVOT/LVendo10 {'summit90': 0.542, 'vein90': 0.458, 'cusp': 0.587, 'RVOT': 0.679, 'LVendo10': 0.348}
+    Daniels pass False
+    No-network summit+cusp median (>193) 240.0
+    No-network wider by family [nonet, net] {'lv_free_wall': [242.5, 161.0], 'lv_septum': [201.0, 139.0], 'rv_free_wall': [250.0, 147.5], 'rvot': [226.5, 145.0], 'aortic_cusp': [226.5, 157.5], 'lv_summit': [249.5, 159.0], 'lv_vein_course': [242.0, 167.5]}
+    No-network pass True
+    Durrer (e) His QRS (63-88) 121.0
+    Durrer (e) pass False
+    His QRS 6G / 7D (info) [168.0, 119.0]
+unscorable: 0
+Empty DataFrame
+Columns: [heart, network, site, mode, noise, seed, error]
+Index: []

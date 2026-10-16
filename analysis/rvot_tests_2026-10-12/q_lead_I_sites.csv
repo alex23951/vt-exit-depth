@@ -1,0 +1,43 @@
+heart,id,name,family,depth,uvc_z,phi_deg,study_first_sign,study_first_mV,study_first_ms,study_min40_mV,study_max40_mV,study_q_lead_I_call,cb_first_sign,cb_first_mV,cb_first_ms,cb_min40_mV,cb_max40_mV,cb_q_lead_I_call
+Y5HYEDL4,lv_free_wall_phi120_z0.75_d10,basal anterolateral lv free wall,lv_free_wall,0.1,0.76,120.0,-,-0.207,40.0,-0.207,0.02,True,+,0.169,40.0,0.0,0.169,False
+Y5HYEDL4,lv_free_wall_phi120_z0.75_d90,basal anterolateral lv free wall,lv_free_wall,0.9,0.75,121.0,-,-0.322,40.0,-0.322,0.0,True,-,-0.094,33.0,-0.094,0.0,True
+Y5HYEDL4,lv_free_wall_phi180_z0.75_d10,basal lateral lv free wall,lv_free_wall,0.1,0.76,-179.0,+,0.197,40.0,-0.009,0.197,False,-,-0.065,31.0,-0.065,0.0,True
+Y5HYEDL4,lv_free_wall_phi180_z0.75_d90,basal lateral lv free wall,lv_free_wall,0.9,0.75,-172.0,+,0.118,40.0,0.0,0.118,False,none,,,0.0,0.027,False
+Y5HYEDL4,lv_summit_superior_z_d10,superior lv summit,lv_summit,0.1,0.93,86.0,+,0.076,38.0,0.0,0.076,False,+,0.215,40.0,0.0,0.215,False
+Y5HYEDL4,lv_summit_superior_z_d90,superior lv summit,lv_summit,0.9,0.94,82.0,none,,,-0.045,0.0,True,none,,,-0.019,0.024,False
+Y5HYEDL4,lv_summit_inferior_lateral_z_d10,inferior lateral lv summit,lv_summit,0.1,0.91,96.0,-,-0.103,40.0,-0.103,0.047,True,+,0.255,36.0,0.0,0.255,False
+Y5HYEDL4,lv_summit_inferior_lateral_z_d90,inferior lateral lv summit,lv_summit,0.9,0.92,94.0,-,-0.101,38.0,-0.101,0.0,True,+,0.055,40.0,-0.032,0.055,False
+Y5HYEDL4,lv_vein_course_proximal_aiv_z_d10,proximal aiv lv vein course,lv_vein_course,0.1,0.76,79.0,-,-0.204,40.0,-0.204,0.021,True,+,0.119,38.0,0.0,0.119,False
+Y5HYEDL4,lv_vein_course_proximal_aiv_z_d90,proximal aiv lv vein course,lv_vein_course,0.9,0.76,76.0,-,-0.364,40.0,-0.364,0.0,True,none,,,-0.05,0.0,True
+Y5HYEDL4,lv_vein_course_basal_ring_anterolateral_z_d10,basal ring anterolateral lv vein course,lv_vein_course,0.1,0.94,119.0,+,0.082,35.0,0.0,0.082,False,+,0.292,40.0,0.0,0.292,False
+Y5HYEDL4,lv_vein_course_basal_ring_anterolateral_z_d90,basal ring anterolateral lv vein course,lv_vein_course,0.9,0.97,120.0,none,,,-0.001,0.026,True,+,0.117,40.0,-0.002,0.117,False
+Y5HYEDL4,lv_vein_course_basal_ring_lateral_z_d10,basal ring lateral lv vein course,lv_vein_course,0.1,0.93,176.0,+,0.173,40.0,-0.001,0.173,False,-,-0.07,35.0,-0.07,0.0,True
+Y5HYEDL4,lv_vein_course_basal_ring_lateral_z_d90,basal ring lateral lv vein course,lv_vein_course,0.9,0.96,180.0,+,0.162,40.0,0.0,0.162,False,none,,,-0.023,0.032,False
+6G8DD8S5,lv_free_wall_phi120_z0.75_d10,basal anterolateral lv free wall,lv_free_wall,0.1,0.75,119.0,+,0.051,19.0,-0.058,0.051,False,+,0.415,40.0,0.0,0.415,False
+6G8DD8S5,lv_free_wall_phi120_z0.75_d90,basal anterolateral lv free wall,lv_free_wall,0.9,0.75,117.0,-,-0.395,40.0,-0.395,0.0,True,-,-0.142,35.0,-0.142,0.0,True
+6G8DD8S5,lv_free_wall_phi180_z0.75_d10,basal lateral lv free wall,lv_free_wall,0.1,0.74,-179.0,+,0.091,40.0,-0.007,0.091,False,none,,,-0.026,0.025,False
+6G8DD8S5,lv_free_wall_phi180_z0.75_d90,basal lateral lv free wall,lv_free_wall,0.9,0.74,-173.0,none,,,0.0,0.05,False,none,,,0.0,0.016,False
+6G8DD8S5,lv_summit_superior_z_d10,superior lv summit,lv_summit,0.1,0.88,83.0,+,0.091,40.0,-0.022,0.091,False,-,-0.071,35.0,-0.071,0.0,True
+6G8DD8S5,lv_summit_superior_z_d90,superior lv summit,lv_summit,0.9,0.91,77.0,+,0.131,40.0,0.0,0.131,False,none,,,0.0,0.044,False
+6G8DD8S5,lv_summit_inferior_lateral_z_d10,inferior lateral lv summit,lv_summit,0.1,0.88,99.0,none,,,0.0,0.046,True,+,0.135,40.0,-0.0,0.135,False
+6G8DD8S5,lv_summit_inferior_lateral_z_d90,inferior lateral lv summit,lv_summit,0.9,0.88,93.0,none,,,-0.01,0.0,True,none,,,-0.013,0.003,False
+6G8DD8S5,lv_vein_course_proximal_aiv_z_d10,proximal aiv lv vein course,lv_vein_course,0.1,0.78,77.0,-,-0.056,33.0,-0.056,0.0,True,+,0.15,40.0,-0.008,0.15,False
+6G8DD8S5,lv_vein_course_proximal_aiv_z_d90,proximal aiv lv vein course,lv_vein_course,0.9,0.77,75.0,-,-0.144,40.0,-0.144,0.0,True,none,,,-0.042,0.038,False
+6G8DD8S5,lv_vein_course_basal_ring_anterolateral_z_d10,basal ring anterolateral lv vein course,lv_vein_course,0.1,0.87,124.0,+,0.14,38.0,0.0,0.14,False,+,0.419,40.0,0.0,0.419,False
+6G8DD8S5,lv_vein_course_basal_ring_anterolateral_z_d90,basal ring anterolateral lv vein course,lv_vein_course,0.9,0.89,120.0,none,,,0.0,0.041,True,+,0.084,40.0,0.0,0.084,False
+6G8DD8S5,lv_vein_course_basal_ring_lateral_z_d10,basal ring lateral lv vein course,lv_vein_course,0.1,0.87,178.0,+,0.232,40.0,-0.001,0.232,False,none,,,-0.013,0.027,False
+6G8DD8S5,lv_vein_course_basal_ring_lateral_z_d90,basal ring lateral lv vein course,lv_vein_course,0.9,0.89,180.0,+,0.188,40.0,0.0,0.188,False,+,0.082,40.0,0.0,0.082,False
+7D98EVAR,lv_free_wall_phi180_z0.5_d10,mid lateral lv free wall,lv_free_wall,0.1,0.5,-179.0,none,,,-0.015,0.0,False,none,,,-0.031,0.0,False
+7D98EVAR,lv_free_wall_phi180_z0.5_d90,mid lateral lv free wall,lv_free_wall,0.9,0.5,-171.0,none,,,0.0,0.014,False,none,,,-0.003,0.012,False
+7D98EVAR,lv_free_wall_phi120_z0.75_d10,basal anterolateral lv free wall,lv_free_wall,0.1,0.75,120.0,-,-0.272,40.0,-0.272,0.022,True,+,0.245,38.0,0.0,0.245,False
+7D98EVAR,lv_free_wall_phi120_z0.75_d90,basal anterolateral lv free wall,lv_free_wall,0.9,0.74,118.0,-,-0.333,40.0,-0.333,0.0,True,-,-0.089,29.0,-0.089,0.0,True
+7D98EVAR,lv_summit_superior_z_d10,superior lv summit,lv_summit,0.1,0.93,92.0,+,0.056,36.0,0.0,0.056,False,+,0.115,40.0,-0.0,0.115,False
+7D98EVAR,lv_summit_superior_z_d90,superior lv summit,lv_summit,0.9,0.95,88.0,none,,,0.0,0.029,True,none,,,-0.003,0.033,False
+7D98EVAR,lv_summit_inferior_lateral_z_d10,inferior lateral lv summit,lv_summit,0.1,0.88,104.0,none,,,-0.042,0.034,True,+,0.174,40.0,0.0,0.174,False
+7D98EVAR,lv_summit_inferior_lateral_z_d90,inferior lateral lv summit,lv_summit,0.9,0.89,103.0,none,,,-0.02,0.0,True,+,0.096,40.0,-0.006,0.096,False
+7D98EVAR,lv_vein_course_proximal_aiv_z_d10,proximal aiv lv vein course,lv_vein_course,0.1,0.77,81.0,-,-0.148,40.0,-0.148,0.008,True,+,0.107,33.0,0.0,0.107,False
+7D98EVAR,lv_vein_course_proximal_aiv_z_d90,proximal aiv lv vein course,lv_vein_course,0.9,0.76,77.0,-,-0.222,40.0,-0.222,0.0,True,none,,,-0.039,0.0,False
+7D98EVAR,lv_vein_course_basal_ring_anterolateral_z_d10,basal ring anterolateral lv vein course,lv_vein_course,0.1,0.87,122.0,+,0.086,32.0,0.0,0.086,False,+,0.276,39.0,0.0,0.276,False
+7D98EVAR,lv_vein_course_basal_ring_anterolateral_z_d90,basal ring anterolateral lv vein course,lv_vein_course,0.9,0.89,120.0,none,,,-0.002,0.022,True,+,0.173,40.0,-0.003,0.173,False
+7D98EVAR,lv_vein_course_basal_ring_lateral_z_d10,basal ring lateral lv vein course,lv_vein_course,0.1,0.9,177.0,+,0.197,40.0,-0.002,0.197,False,+,0.081,40.0,-0.012,0.081,False
+7D98EVAR,lv_vein_course_basal_ring_lateral_z_d90,basal ring lateral lv vein course,lv_vein_course,0.9,0.91,179.0,+,0.19,40.0,0.0,0.19,False,+,0.073,40.0,0.0,0.073,False

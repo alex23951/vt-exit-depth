@@ -1,0 +1,77 @@
+Y5HYEDL4: electrodes (torso frame mm, +z superior) V1 [-15.8, -143.5, -0.3], V2 [39.2, -140.8, 3.3]; PV-rim centre [33.9, -60.4, 38.1]
+6G8DD8S5: electrodes (torso frame mm, +z superior) V1 [-15.8, -143.5, -0.3], V2 [39.2, -140.8, 3.3]; PV-rim centre [34.4, -75.0, 18.8]
+7D98EVAR: electrodes (torso frame mm, +z superior) V1 [-15.8, -143.5, -0.3], V2 [39.2, -140.8, 3.3]; PV-rim centre [39.0, -66.3, 19.5]
+MDI check against the CSV: 78/78 sites agree to 0.006 (mismatches: [])
+
+Per lead, median time from the stimulus to the largest deflection (ms), sign count (+/n), median amplitude (mV):
+  Y5HYEDL4 RVOT              V1 109 3/8+ -0.82  V2 98 4/8+ -0.21  V3 109 4/8+ +0.51  V4 108 8/8+ +1.50  V5 110 8/8+ +1.44  V6 112 8/8+ +1.31
+  Y5HYEDL4 aortic cusp       V1 118 4/8+ +0.19  V2 99 8/8+ +1.01  V3 106 8/8+ +1.94  V4 108 8/8+ +2.05  V5 108 8/8+ +1.59  V6 108 8/8+ +1.36
+  Y5HYEDL4 LV free wall 10 % V1 93 9/10+ +0.94  V2 66 10/10+ +1.05  V3 66 7/10+ +1.27  V4 71 5/10+ +0.03  V5 72 3/10+ -0.71  V6 69 3/10+ -0.54
+  6G8DD8S5 RVOT              V1 105 0/8+ -1.00  V2 86 0/8+ -1.56  V3 104 4/8+ +0.00  V4 96 8/8+ +1.43  V5 104 8/8+ +1.54  V6 108 8/8+ +1.43
+  6G8DD8S5 aortic cusp       V1 99 0/8+ -0.68  V2 90 8/8+ +0.94  V3 99 8/8+ +1.55  V4 100 8/8+ +2.12  V5 101 8/8+ +2.02  V6 102 8/8+ +1.70
+  6G8DD8S5 LV free wall 10 % V1 93 6/10+ +0.68  V2 72 6/10+ +0.50  V3 67 5/10+ +0.09  V4 67 4/10+ -0.82  V5 66 5/10+ -0.10  V6 66 6/10+ +0.42
+  7D98EVAR RVOT              V1 103 0/8+ -0.91  V2 105 0/8+ -1.37  V3 102 4/8+ +0.08  V4 105 4/8+ +0.25  V5 101 8/8+ +1.16  V6 103 8/8+ +1.22
+  7D98EVAR aortic cusp       V1 105 4/8+ -0.01  V2 71 8/8+ +0.66  V3 86 8/8+ +0.80  V4 96 8/8+ +1.03  V5 102 8/8+ +1.23  V6 103 8/8+ +1.24
+  7D98EVAR LV free wall 10 % V1 87 8/10+ +0.59  V2 85 9/10+ +0.75  V3 64 7/10+ +0.76  V4 70 5/10+ -0.07  V5 72 4/10+ -0.66  V6 74 4/10+ -0.42
+
+Per group medians: true QRS, pseudo-delta true / detected, MDI true (lead counts), t largest precordial, first junction, first network exit, t10 / t50 volume, PV plane (+ below), V1 / V2 dz (+ site above):
+  Y5HYEDL4 RVOT               n 8: QRS 146, PdW 66/62, MDI 0.67 {'V4': 4, 'V1': 3, 'V2': 1}, tmax 96, junction 24.1, exit 33.8, t10/t50 60/97, PV +13.1, dz V1/V2 +28/+25, dist 99/78
+  Y5HYEDL4 aortic cusp        n 8: QRS 164, PdW 92/86, MDI 0.57 {'V3': 4, 'V2': 4}, tmax 93, junction 35.5, exit 44.1, t10/t50 66/99, PV +4.8, dz V1/V2 +13/+9, dist 113/102
+  Y5HYEDL4 LV free wall 10 %  n 10: QRS 158, PdW 40/38, MDI 0.35 {'V2': 3, 'V4': 3, 'V3': 2, 'V6': 2}, tmax 52, junction 0.6, exit 9.8, t10/t50 36/64, PV +56.9, dz V1/V2 -38/-42, dist 131/103
+  6G8DD8S5 RVOT               n 8: QRS 140, PdW 58/52, MDI 0.59 {'V3': 4, 'V2': 4}, tmax 81, junction 10.9, exit 21.2, t10/t50 57/93, PV +15.7, dz V1/V2 +4/+0, dist 86/64
+  6G8DD8S5 aortic cusp        n 8: QRS 140, PdW 70/66, MDI 0.60 {'V1': 4, 'V2': 4}, tmax 84, junction 27.2, exit 34.4, t10/t50 64/93, PV +3.8, dz V1/V2 -2/-6, dist 110/100
+  6G8DD8S5 LV free wall 10 %  n 10: QRS 136, PdW 40/38, MDI 0.40 {'V5': 3, 'V6': 2, 'V2': 2, 'V1': 1, 'V3': 1, 'V4': 1}, tmax 52, junction 1.8, exit 10.4, t10/t50 36/63, PV +39.6, dz V1/V2 -36/-40, dist 134/100
+  7D98EVAR RVOT               n 8: QRS 138, PdW 66/62, MDI 0.69 {'V3': 4, 'V5': 3, 'V1': 1}, tmax 96, junction 28.2, exit 37.5, t10/t50 59/93, PV +12.4, dz V1/V2 +7/+4, dist 95/71
+  7D98EVAR aortic cusp        n 8: QRS 147, PdW 67/64, MDI 0.48 {'V2': 8}, tmax 71, junction 29.6, exit 39.9, t10/t50 65/94, PV +6.2, dz V1/V2 +2/-2, dist 114/104
+  7D98EVAR LV free wall 10 %  n 10: QRS 146, PdW 38/35, MDI 0.38 {'V3': 3, 'V4': 2, 'V6': 2, 'V1': 1, 'V2': 1, 'V5': 1}, tmax 55, junction 3.1, exit 12.2, t10/t50 38/67, PV +37.5, dz V1/V2 -37/-40, dist 143/114
+
+RVOT sites one by one:
+  Y5HYEDL4 rvot_septal_z_d10      z 1.00 PV +10.9 (rim  8.3) junction  40.8 exit  50.0 t10/t50  66/ 97 QRS 149 PdW 78/74 MDI 0.56 V1 tmax 83 dzV1/V2 +24/+20 [openCARP]
+  Y5HYEDL4 rvot_septal_z_d50      z 1.00 PV +10.2 (rim  8.4) junction  42.0 exit  50.8 t10/t50  67/ 98 QRS 150 PdW 81/77 MDI 0.56 V1 tmax 84 dzV1/V2 +23/+19 [openCARP]
+  Y5HYEDL4 rvot_septal_z_d75      z 1.00 PV  +9.6 (rim  8.3) junction  40.8 exit  50.0 t10/t50  66/ 98 QRS 150 PdW 90/87 MDI 0.59 V2 tmax 88 dzV1/V2 +23/+19 [graph]
+  Y5HYEDL4 rvot_septal_z_d90      z 1.00 PV +10.0 (rim  8.8) junction  40.8 exit  50.0 t10/t50  66/ 97 QRS 149 PdW 89/86 MDI 0.56 V1 tmax 84 dzV1/V2 +22/+19 [graph]
+  Y5HYEDL4 rvot_free_wall_z_d10   z 0.87 PV +15.8 (rim 14.9) junction   0.0 exit   8.2 t10/t50  48/ 91 QRS 139 PdW 47/44 MDI 0.75 V4 tmax 104 dzV1/V2 +33/+29 [openCARP]
+  Y5HYEDL4 rvot_free_wall_z_d50   z 0.87 PV +15.8 (rim 15.6) junction   3.6 exit  13.0 t10/t50  51/ 94 QRS 142 PdW 49/36 MDI 0.76 V4 tmax 108 dzV1/V2 +34/+31 [openCARP]
+  Y5HYEDL4 rvot_free_wall_z_d75   z 0.87 PV +15.2 (rim 15.4) junction   5.6 exit  15.2 t10/t50  52/ 96 QRS 144 PdW 51/48 MDI 0.76 V4 tmax 110 dzV1/V2 +35/+32 [openCARP]
+  Y5HYEDL4 rvot_free_wall_z_d90   z 0.87 PV +15.4 (rim 16.0) junction   7.5 exit  17.5 t10/t50  53/ 96 QRS 144 PdW 53/50 MDI 0.77 V4 tmax 111 dzV1/V2 +35/+32 [openCARP]
+  6G8DD8S5 rvot_septal_z_d10      z 0.98 PV +15.1 (rim 14.9) junction  12.8 exit  24.0 t10/t50  58/ 88 QRS 128 PdW 76/68 MDI 0.70 V3 tmax 90 dzV1/V2 -5/-9 [openCARP]
+  6G8DD8S5 rvot_septal_z_d50      z 0.98 PV +13.9 (rim 14.0) junction  13.1 exit  24.0 t10/t50  58/ 88 QRS 128 PdW 76/66 MDI 0.70 V3 tmax 90 dzV1/V2 -4/-8 [openCARP]
+  6G8DD8S5 rvot_septal_z_d75      z 1.00 PV +13.2 (rim 14.0) junction  14.1 exit  25.2 t10/t50  58/ 88 QRS 129 PdW 76/65 MDI 0.70 V3 tmax 91 dzV1/V2 -4/-7 [openCARP]
+  6G8DD8S5 rvot_septal_z_d90      z 1.00 PV +13.3 (rim 14.1) junction  12.9 exit  24.0 t10/t50  57/ 87 QRS 127 PdW 75/64 MDI 0.70 V3 tmax 89 dzV1/V2 -4/-8 [openCARP]
+  6G8DD8S5 rvot_free_wall_z_d10   z 0.78 PV +16.4 (rim 14.8) junction   3.2 exit  12.0 t10/t50  55/ 97 QRS 152 PdW 38/36 MDI 0.47 V2 tmax 71 dzV1/V2 +11/+8 [openCARP]
+  6G8DD8S5 rvot_free_wall_z_d50   z 0.78 PV +16.5 (rim 15.3) junction   5.0 exit  13.5 t10/t50  56/ 97 QRS 152 PdW 39/32 MDI 0.47 V2 tmax 71 dzV1/V2 +12/+9 [openCARP]
+  6G8DD8S5 rvot_free_wall_z_d75   z 0.78 PV +16.3 (rim 15.6) junction   7.8 exit  17.2 t10/t50  56/ 97 QRS 151 PdW 40/38 MDI 0.47 V2 tmax 71 dzV1/V2 +13/+9 [openCARP]
+  6G8DD8S5 rvot_free_wall_z_d90   z 0.78 PV +16.6 (rim 16.0) junction   9.1 exit  18.5 t10/t50  57/ 98 QRS 153 PdW 42/40 MDI 0.48 V2 tmax 73 dzV1/V2 +13/+10 [openCARP]
+  7D98EVAR rvot_septal_z_d10      z 0.99 PV +10.6 (rim  8.0) junction  38.3 exit  49.5 t10/t50  63/ 95 QRS 137 PdW 75/71 MDI 0.67 V3 tmax 92 dzV1/V2 +7/+4 [openCARP]
+  7D98EVAR rvot_septal_z_d50      z 0.99 PV +10.0 (rim  7.9) junction  38.4 exit  48.8 t10/t50  63/ 95 QRS 137 PdW 79/72 MDI 0.67 V3 tmax 92 dzV1/V2 +7/+4 [openCARP]
+  7D98EVAR rvot_septal_z_d75      z 1.00 PV  +9.6 (rim  7.9) junction  38.6 exit  47.5 t10/t50  63/ 96 QRS 137 PdW 79/76 MDI 0.68 V3 tmax 93 dzV1/V2 +7/+4 [openCARP]
+  7D98EVAR rvot_septal_z_d90      z 1.00 PV  +9.8 (rim  8.0) junction  40.1 exit  49.2 t10/t50  63/ 96 QRS 136 PdW 75/71 MDI 0.69 V3 tmax 94 dzV1/V2 +8/+4 [graph]
+  7D98EVAR rvot_free_wall_z_d10   z 0.82 PV +15.2 (rim 13.9) junction  14.8 exit  23.0 t10/t50  53/ 89 QRS 140 PdW 54/51 MDI 0.71 V1 tmax 99 dzV1/V2 +6/+2 [openCARP]
+  7D98EVAR rvot_free_wall_z_d50   z 0.82 PV +14.8 (rim 14.6) junction  16.5 exit  25.2 t10/t50  53/ 90 QRS 142 PdW 55/52 MDI 0.70 V5 tmax 99 dzV1/V2 +7/+3 [openCARP]
+  7D98EVAR rvot_free_wall_z_d75   z 0.83 PV +14.2 (rim 14.5) junction  18.1 exit  27.5 t10/t50  54/ 91 QRS 142 PdW 56/53 MDI 0.70 V5 tmax 99 dzV1/V2 +8/+4 [openCARP]
+  7D98EVAR rvot_free_wall_z_d90   z 0.83 PV +14.2 (rim 15.0) junction  18.2 exit  27.5 t10/t50  55/ 91 QRS 142 PdW 56/53 MDI 0.70 V5 tmax 99 dzV1/V2 +8/+4 [openCARP]
+
+   heart                                                       test  n_pairs  median_change_ms  median_change_pct range_ms d90 d10
+Y5HYEDL4               Bazan2006 RV free wall QRS 90 vs 10 % (true)        9               6.0           4.137931   1 to 7 NaN NaN
+Y5HYEDL4           Bazan2006 RV free wall QRS 90 vs 10 % (detected)        9               6.0           4.285714   2 to 7 NaN NaN
+Y5HYEDL4             Bazan2007 lv_basal_superior q in lead I (true)        7               NaN                NaN      NaN 2/7 2/7
+Y5HYEDL4         Bazan2007 lv_basal_superior q in lead I (detected)        7               NaN                NaN      NaN 2/7 2/7
+Y5HYEDL4     Bazan2007 lv_basal_inferior Q in II, III or aVF (true)        2               NaN                NaN      NaN 2/2 0/2
+Y5HYEDL4 Bazan2007 lv_basal_inferior Q in II, III or aVF (detected)        2               NaN                NaN      NaN 2/2 0/2
+6G8DD8S5               Bazan2006 RV free wall QRS 90 vs 10 % (true)        9               4.0           2.580645 -10 to 7 NaN NaN
+6G8DD8S5           Bazan2006 RV free wall QRS 90 vs 10 % (detected)        9               5.0           3.289474 -10 to 7 NaN NaN
+6G8DD8S5             Bazan2007 lv_basal_superior q in lead I (true)        7               NaN                NaN      NaN 1/7 1/7
+6G8DD8S5         Bazan2007 lv_basal_superior q in lead I (detected)        7               NaN                NaN      NaN 1/7 1/7
+6G8DD8S5     Bazan2007 lv_basal_inferior Q in II, III or aVF (true)        3               NaN                NaN      NaN 3/3 0/3
+6G8DD8S5 Bazan2007 lv_basal_inferior Q in II, III or aVF (detected)        3               NaN                NaN      NaN 3/3 0/3
+7D98EVAR               Bazan2006 RV free wall QRS 90 vs 10 % (true)        9               5.0           3.649635  -4 to 8 NaN NaN
+7D98EVAR           Bazan2006 RV free wall QRS 90 vs 10 % (detected)        9               4.0           3.225806   0 to 8 NaN NaN
+7D98EVAR             Bazan2007 lv_basal_superior q in lead I (true)        7               NaN                NaN      NaN 1/7 0/7
+7D98EVAR         Bazan2007 lv_basal_superior q in lead I (detected)        7               NaN                NaN      NaN 1/7 0/7
+7D98EVAR     Bazan2007 lv_basal_inferior Q in II, III or aVF (true)        3               NaN                NaN      NaN 2/3 0/3
+7D98EVAR Bazan2007 lv_basal_inferior Q in II, III or aVF (detected)        3               NaN                NaN      NaN 2/3 0/3
+
+   heart  beats                             tend_ms  est_hours  nodes
+Y5HYEDL4      9 200/200/210/170/170/170/180/190/190        8.0 375190
+6G8DD8S5      9 190/180/200/160/160/160/180/190/190        7.7 375672
+7D98EVAR      9 190/190/200/160/160/160/160/170/170        6.7 337505

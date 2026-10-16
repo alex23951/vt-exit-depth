@@ -1,0 +1,70 @@
+## 1 His beat and junctions
+   heart  his_to_first_myocardium_ms  junctions_built  junctions_exiting_in_his_beat  per_cm2_allowed_endo  per_cm2_all_endo  per_cm3_myocardium  endo_area_cm2  myocardium_cm3
+Y5HYEDL4                        20.0             3665                           3445                  15.0              10.7                15.7          342.2           233.6
+6G8DD8S5                        26.2             3192                           2828                  15.0              12.0                13.2          264.9           241.7
+7D98EVAR                        18.8             3241                           3056                  15.0              11.2                15.3          289.6           211.7
+
+## 2 Bazan 2007 q sweep (cb, true onset; ref = 0.05 mV, no duration, unfiltered, no noise)
+apical_superior q_I [LV wall] n 9: ref 3/9 vs 1/9, direction ok in 40/40 configs, Bazan in CI in 10/40, flips vs ref median 5 (max 7) of 18
+apical_superior q_I [free wall] n 9: ref 3/9 vs 1/9, direction ok in 40/40 configs, Bazan in CI in 10/40, flips vs ref median 5 (max 7) of 18
+basal_superior q_I [LV wall] n 21: ref 4/21 vs 3/21, direction ok in 36/40 configs, Bazan in CI in 0/40, flips vs ref median 5 (max 14) of 42
+basal_superior q_I [free wall] n 6: ref 3/6 vs 1/6, direction ok in 31/40 configs, Bazan in CI in 0/40, flips vs ref median 2 (max 3) of 12
+basal_inferior q_inf [LV wall] n 8: ref 7/8 vs 0/8, direction ok in 40/40 configs, Bazan in CI in 0/40, flips vs ref median 1 (max 5) of 16
+basal_inferior q_inf [free wall] n 8: ref 7/8 vs 0/8, direction ok in 40/40 configs, Bazan in CI in 0/40, flips vs ref median 1 (max 5) of 16
+apical_inferior q_inf [LV wall] n 7: ref 6/7 vs 0/7, direction ok in 40/40 configs, Bazan in CI in 20/40, flips vs ref median 1 (max 2) of 14
+apical_inferior q_inf [free wall] n 7: ref 6/7 vs 0/7, direction ok in 40/40 configs, Bazan in CI in 20/40, flips vs ref median 1 (max 2) of 14
+basal_superior q_inf [LV wall] n 21: ref 11/21 vs 15/21, direction ok in 40/40 configs, Bazan in CI in 0/40, flips vs ref median 6 (max 10) of 42
+basal_superior q_inf [free wall] n 6: ref 3/6 vs 3/6, direction ok in 4/40 configs, Bazan in CI in 0/40, flips vs ref median 0 (max 4) of 12
+
+## 3 Fibres (angle in the wall plane from the outflow axis for RVOT, from the long axis for RV free wall; 0 = along, 90 = circumferential)
+                               w  angle_from_axis_deg  rule_angle_from_axis_deg  fibre_out_of_wall_deg
+heart    family       depth                                                                           
+6G8DD8S5 rv_free_wall 0.1    0.7                 43.5                      30.0                    5.7
+                      0.9    0.7                 64.5                      30.0                    2.3
+         rvot         0.1    0.1                 53.5                       4.4                   11.0
+                      0.9    0.1                 76.4                      81.2                   40.9
+7D98EVAR rv_free_wall 0.1    0.8                 28.9                      30.0                    2.4
+                      0.9    0.8                 71.4                      30.0                    3.6
+         rvot         0.1    0.2                 44.1                       4.5                   11.2
+                      0.9    0.2                 58.4                      81.2                   42.0
+Y5HYEDL4 rv_free_wall 0.1    0.8                 49.8                      30.0                    2.3
+                      0.9    0.8                 57.7                      30.0                    2.5
+         rvot         0.1    0.1                 19.2                       4.1                   10.0
+                      0.9    0.1                 36.2                      81.8                   37.2
+
+## 5 Stimulus latency (+17 ms < 75 % depth, +34 ms >= 75 %), true onset at the stimulus
+   heart         family  pairs  qrs_rel_pct_0  qrs_90_0  qrs_10_0  qrs_rel_pct_lat  qrs_90_lat  qrs_10_lat  pdw_rel_pct_0  pdw_90_0  pdw_10_0  pdw_rel_pct_lat  pdw_90_lat  pdw_10_lat  idt_rel_pct_0  idt_90_0  idt_10_0  idt_rel_pct_lat  idt_90_lat  idt_10_lat  srs_rel_pct_0  srs_90_0  srs_10_0  srs_rel_pct_lat  srs_90_lat  srs_10_lat  qrs_ratio_means_0  qrs_ratio_means_lat
+Y5HYEDL4   lv_free_wall     10            6.0     170.5     158.0             15.0       204.5       175.0           42.6      57.5      40.5             58.8        91.5        57.5           21.7      56.5      55.5             37.5        90.5        72.5           16.1      69.0      69.0             34.2       103.0        86.0             1.0665               1.1566
+Y5HYEDL4   rv_free_wall      9            4.1     151.0     145.0             13.0       185.0       162.0           16.3      45.0      38.0             41.1        79.0        55.0           16.1      45.0      32.0             45.8        79.0        49.0            7.5      87.0      66.0             27.5       121.0        83.0             1.0337               1.1312
+Y5HYEDL4 lv_vein_course      3            5.3     180.0     171.0             13.8       214.0       188.0           13.3      65.0      60.0             32.5        99.0        77.0           12.2      83.0      74.0             28.6       117.0        91.0          -30.6      56.0      72.0             -5.6        90.0        89.0             1.0352               1.1273
+Y5HYEDL4    summit+cusp     16            NaN       NaN     162.5              NaN         NaN       190.0            NaN       NaN       NaN              NaN         NaN         NaN            NaN       NaN       NaN              NaN         NaN         NaN            NaN       NaN       NaN              NaN         NaN         NaN                NaN                  NaN
+6G8DD8S5   lv_free_wall     10           11.3     153.0     136.5             20.8       187.0       153.5           55.3      58.0      40.5             66.7        92.0        57.5           26.7      63.0      53.5             44.0        97.0        70.5           19.1      82.5      71.0             33.5       116.5        88.0             1.0964               1.1976
+6G8DD8S5   rv_free_wall      9            2.6     156.0     149.0             12.3       190.0       166.0           18.6      42.0      40.0             41.7        76.0        57.0           16.3      43.0      34.0             44.9        77.0        51.0            5.6      68.0      61.0             25.0       102.0        78.0             1.0189               1.1205
+6G8DD8S5 lv_vein_course      3           10.8     164.0     148.0             20.0       198.0       165.0           38.9      63.0      45.0             53.5        97.0        62.0          -36.7      38.0      60.0             -6.5        72.0        77.0          -30.1      58.0      83.0             -8.0        92.0       100.0             1.0784               1.1780
+6G8DD8S5    summit+cusp     16            NaN       NaN     134.0              NaN         NaN       163.0            NaN       NaN       NaN              NaN         NaN         NaN            NaN       NaN       NaN              NaN         NaN         NaN            NaN       NaN       NaN              NaN         NaN         NaN                NaN                  NaN
+7D98EVAR   lv_free_wall     10            7.7     158.5     146.5             17.1       192.5       163.5           31.7      53.5      38.5             52.3        87.5        55.5           15.5      52.5      60.0             36.3        86.5        77.0            5.4      66.0      73.0             26.4       100.0        90.0             1.0743               1.1713
+7D98EVAR   rv_free_wall      9            3.6     142.0     137.0             14.3       176.0       154.0           11.1      42.0      38.0             38.2        76.0        55.0           10.5      50.0      48.0             33.8        84.0        65.0           11.9      75.0      59.0             32.9       109.0        76.0             1.0329               1.1410
+7D98EVAR lv_vein_course      3            5.7     154.0     148.0             14.8       188.0       165.0           12.2      46.0      41.0             31.3        80.0        58.0           11.1      61.0      55.0             31.9        95.0        72.0            9.0      89.0      78.0             23.2       123.0        95.0             1.0592               1.1571
+7D98EVAR    summit+cusp     16            NaN       NaN     144.0              NaN         NaN       172.5            NaN       NaN       NaN              NaN         NaN         NaN            NaN       NaN       NaN              NaN         NaN         NaN            NaN       NaN       NaN              NaN         NaN         NaN                NaN                  NaN
+
+## 6 6G8DD8S5 left-bundle cut and His beat
+{
+ "lv_distal_nodes": 2965,
+ "lv_distal_reachable_from_his": 0,
+ "lv_tree_connected_nodes_from_one_lv_node": 2965,
+ "lbbb_cut_flag": true,
+ "first_myocardium_after_his_ms": 26.2,
+ "lv_minus_rv_endo_onset_ms": 18.8,
+ "first_lv_septal_breakthrough_after_qrs_onset_ms": 18.8,
+ "lv_endo_span_ms": 92.5,
+ "rv_endo_span_ms": 99.0,
+ "qrs_true_span_ms": 124.6,
+ "qrs_detected_cb_ms": 124.0,
+ "frontal_axis_cb_net_area_deg": [
+  -42,
+  -37
+ ],
+ "cohort_group_qrs_ms": "144.7 +- 13.3 (Solis-Lemus 2026, Table 1, as relayed)",
+ "derval_2017_lv_septal_breakthrough_ms": "38 +- 15"
+}
+numeric ranges of the q sweep: qsweep_ranges.txt (the range text first printed in report.txt was sorted as text and has been removed)
