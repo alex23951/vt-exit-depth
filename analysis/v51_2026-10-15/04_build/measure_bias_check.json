@@ -1,0 +1,70 @@
+{
+ "control speeds | exact analytic front": {
+  "fibre": {
+   "median_m_s": 0.5956,
+   "target_m_s": 0.6,
+   "elements": 426
+  },
+  "sheet": {
+   "median_m_s": 0.3689,
+   "target_m_s": 0.36,
+   "elements": 6065
+  },
+  "normal": {
+   "median_m_s": 0.4817,
+   "target_m_s": 0.48,
+   "elements": 1418
+  }
+ },
+ "control speeds | graph field, factors 1": {
+  "fibre": {
+   "median_m_s": 0.563,
+   "target_m_s": 0.6,
+   "elements": 222
+  },
+  "sheet": {
+   "median_m_s": 0.3646,
+   "target_m_s": 0.36,
+   "elements": 5980
+  },
+  "normal": {
+   "median_m_s": 0.4663,
+   "target_m_s": 0.48,
+   "elements": 1127
+  }
+ },
+ "heart-failure speeds | exact analytic front": {
+  "fibre": {
+   "median_m_s": 0.573,
+   "target_m_s": 0.6,
+   "elements": 95
+  },
+  "sheet": {
+   "median_m_s": 0.2674,
+   "target_m_s": 0.26,
+   "elements": 7854
+  },
+  "normal": {
+   "median_m_s": 0.3405,
+   "target_m_s": 0.336,
+   "elements": 2465
+  }
+ },
+ "heart-failure speeds | graph field, factors 1": {
+  "fibre": {
+   "median_m_s": 0.3069,
+   "target_m_s": 0.6,
+   "elements": 40
+  },
+  "sheet": {
+   "median_m_s": 0.2652,
+   "target_m_s": 0.26,
+   "elements": 7725
+  },
+  "normal": {
+   "median_m_s": 0.3301,
+   "target_m_s": 0.336,
+   "elements": 1942
+  }
+ }
+}

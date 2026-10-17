@@ -1,0 +1,32 @@
+{
+ "heart": "7D98EVAR",
+ "topology": {
+  "nodes": 337505,
+  "elements": 1755714,
+  "E1": 2183827,
+  "E2_candidates_after_distance": 7921420,
+  "E2_rejected_distance_gt_3.5mm_triples": 0,
+  "E2_tested_surface_pairs": 578242,
+  "E2_rejected_midpoint_outside": 278226,
+  "E2": 7643194,
+  "E2_triples": 15745030,
+  "edges_per_node_E1": 12.94,
+  "edges_per_node_E1uE2": 58.23,
+  "interior_midpoint_validation_inside_fraction": 0.9999,
+  "surface_nodes": 90601,
+  "build_s": 67.0
+ },
+ "keys": {
+  "topology_key": "c23643932eca953be9361650e0467624fc4c153f318cf196ede5815e1ab3f107",
+  "fibre_sha256": "e1252fcf69b11df3e6ab386d1e2897be31ab7b9f298acbac546d9635ae3a4562",
+  "q_key": "b605fd50b1f8fd467a5295c1e81e0c3cdcd7571bfc6d15a918688df9205b5c6f"
+ },
+ "tissue_load_or_build_s": 92.9,
+ "graph_assembly_s": 2.2,
+ "one_beat_limit_90ms_s": 0.1,
+ "one_beat_full_s": 0.3,
+ "full_beat_total_activation_ms": 245.7,
+ "unactivated_nodes": 0,
+ "peak_rss_MB": 1753.0,
+ "site": "lv_free_wall_phi60_z0.25_d50"
+}

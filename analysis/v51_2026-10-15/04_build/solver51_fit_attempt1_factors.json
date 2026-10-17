@@ -1,0 +1,71 @@
+{
+ "version": "v51-factors-1",
+ "hearts": {
+  "Y5HYEDL4": {
+   "heart": "Y5HYEDL4",
+   "factors": {
+    "fibre": 1.1010700503358661,
+    "sheet": 0.9457912486998187,
+    "normal": 1.030518592231224
+   },
+   "converged_within_0.5pct": true,
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.36,
+    "normal": 0.48
+   },
+   "stencil": "v51-2ring-1",
+   "fibre_file": "data/biv/Y5HYEDL4/fibres_v51/bivF_v51.lon",
+   "fibre_sha256": "4c01ce43018bb8e86eed3d35e32e107cf7878d588c824809aba026521080b528",
+   "topology_key": "a51d9288106bcdc7d307e0fe1ade097052489c0f58634c6ce0abd5d5d667c0b5",
+   "fit_sites": "lv_free_wall 50 % depth, single-node stimulus, tissue only",
+   "measure": "a03 cv_by_dir (median of pooled elements, T 8-80 ms)",
+   "iterations": 4,
+   "written": "2026-10-17 03:55:42 CEST"
+  },
+  "6G8DD8S5": {
+   "heart": "6G8DD8S5",
+   "factors": {
+    "fibre": 1.5439393050637131,
+    "sheet": 0.7821111060889135,
+    "normal": 0.9827592620975014
+   },
+   "converged_within_0.5pct": false,
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "stencil": "v51-2ring-1",
+   "fibre_file": "data/biv/6G8DD8S5/fibres_v51/bivF_v51.lon",
+   "fibre_sha256": "29692d4b9f140b4dbc1c250f06bc5895a1bc4d62897a136c23fa559d3354fd3b",
+   "topology_key": "b2725012087c840cdf9063eeb99bc635a4a1e3bae2f2d7d527b585f58b719611",
+   "fit_sites": "lv_free_wall 50 % depth, single-node stimulus, tissue only",
+   "measure": "a03 cv_by_dir (median of pooled elements, T 8-80 ms)",
+   "iterations": 10,
+   "written": "2026-10-17 03:57:13 CEST"
+  },
+  "7D98EVAR": {
+   "heart": "7D98EVAR",
+   "factors": {
+    "fibre": 1.9507072666686684,
+    "sheet": 0.6390904041543314,
+    "normal": 0.9859184659347687
+   },
+   "converged_within_0.5pct": false,
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "stencil": "v51-2ring-1",
+   "fibre_file": "data/biv/7D98EVAR/fibres_v51/bivF_v51.lon",
+   "fibre_sha256": "e1252fcf69b11df3e6ab386d1e2897be31ab7b9f298acbac546d9635ae3a4562",
+   "topology_key": "c23643932eca953be9361650e0467624fc4c153f318cf196ede5815e1ab3f107",
+   "fit_sites": "lv_free_wall 50 % depth, single-node stimulus, tissue only",
+   "measure": "a03 cv_by_dir (median of pooled elements, T 8-80 ms)",
+   "iterations": 10,
+   "written": "2026-10-17 03:58:31 CEST"
+  }
+ }
+}

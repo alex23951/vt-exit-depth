@@ -1,0 +1,458 @@
+{
+ "Y5HYEDL4 speeds | factors 1 (stencil alone)": {
+  "mesh": {
+   "nodes": 44376,
+   "tets": 278666,
+   "edge_mean_mm": 1.03,
+   "edge_max_mm": 1.75
+  },
+  "graph": {
+   "E1": 329854,
+   "E2": 1304067
+  },
+  "principal": {
+   "fibre": {
+    "speed_m_s": 0.5802,
+    "ratio_to_target": 0.967,
+    "nodes": 82
+   },
+   "sheet": {
+    "speed_m_s": 0.3576,
+    "ratio_to_target": 0.9932,
+    "nodes": 78
+   },
+   "normal": {
+    "speed_m_s": 0.4662,
+    "ratio_to_target": 0.9712,
+    "nodes": 43
+   }
+  },
+  "principal_pass_1.5pct": false,
+  "ray_speed_ratio_graph_over_exact": {
+   "fibre-sheet (xy)": {
+    "0-15": 0.9616,
+    "15-30": 0.9736,
+    "30-45": 0.9814,
+    "45-60": 0.9901,
+    "60-75": 0.9885,
+    "75-90": 0.9913
+   },
+   "fibre-normal (xz)": {
+    "0-15": 0.9585,
+    "15-30": 0.9654,
+    "30-45": 0.9682,
+    "45-60": 0.9769,
+    "60-75": 0.9776,
+    "75-90": 0.9739
+   },
+   "sheet-normal (yz)": {
+    "0-15": 0.9912,
+    "15-30": 0.9899,
+    "30-45": 0.9902,
+    "45-60": 0.9873,
+    "60-75": 0.9852,
+    "75-90": 0.9734
+   }
+  },
+  "ray_worst_abs_dev": 0.0415,
+  "ray_pass_3pct": false,
+  "a03_local_cv_m_s": {
+   "fibre": 0.563,
+   "sheet": 0.3646,
+   "normal": 0.4663
+  },
+  "rotating_fibres_transmural_ratio_graph_over_z_over_vn": {
+   "z 2.5 mm": 0.9648,
+   "z 5.0 mm": 0.9796,
+   "z 7.5 mm": 0.988,
+   "z 10.0 mm": 0.992
+  },
+  "rotating_pass_2pct": false,
+  "factors": {
+   "fibre": 1.0,
+   "sheet": 1.0,
+   "normal": 1.0
+  },
+  "wall_s": 11.3
+ },
+ "Y5HYEDL4 speeds | fitted factors": {
+  "mesh": {
+   "nodes": 44376,
+   "tets": 278666,
+   "edge_mean_mm": 1.03,
+   "edge_max_mm": 1.75
+  },
+  "graph": {
+   "E1": 329854,
+   "E2": 1304067
+  },
+  "principal": {
+   "fibre": {
+    "speed_m_s": 0.6342,
+    "ratio_to_target": 1.057,
+    "nodes": 82
+   },
+   "sheet": {
+    "speed_m_s": 0.3386,
+    "ratio_to_target": 0.9405,
+    "nodes": 78
+   },
+   "normal": {
+    "speed_m_s": 0.4805,
+    "ratio_to_target": 1.001,
+    "nodes": 43
+   }
+  },
+  "principal_pass_1.5pct": false,
+  "ray_speed_ratio_graph_over_exact": {
+   "fibre-sheet (xy)": {
+    "0-15": 1.0374,
+    "15-30": 1.0124,
+    "30-45": 0.9797,
+    "45-60": 0.9585,
+    "60-75": 0.9442,
+    "75-90": 0.9409
+   },
+   "fibre-normal (xz)": {
+    "0-15": 1.0399,
+    "15-30": 1.0359,
+    "30-45": 1.0226,
+    "45-60": 1.0192,
+    "60-75": 1.0113,
+    "75-90": 0.9996
+   },
+   "sheet-normal (yz)": {
+    "0-15": 0.9405,
+    "15-30": 0.9459,
+    "30-45": 0.9563,
+    "45-60": 0.972,
+    "60-75": 0.9918,
+    "75-90": 0.9971
+   }
+  },
+  "ray_worst_abs_dev": 0.0595,
+  "ray_pass_3pct": false,
+  "a03_local_cv_m_s": {
+   "fibre": 0.5883,
+   "sheet": 0.3476,
+   "normal": 0.4791
+  },
+  "rotating_fibres_transmural_ratio_graph_over_z_over_vn": {
+   "z 2.5 mm": 0.9387,
+   "z 5.0 mm": 0.9512,
+   "z 7.5 mm": 0.959,
+   "z 10.0 mm": 0.9628
+  },
+  "rotating_pass_2pct": false,
+  "factors": {
+   "fibre": 1.1010700503358661,
+   "sheet": 0.9457912486998187,
+   "normal": 1.030518592231224
+  },
+  "wall_s": 12.5
+ },
+ "6G8DD8S5 speeds | factors 1 (stencil alone)": {
+  "mesh": {
+   "nodes": 44376,
+   "tets": 278666,
+   "edge_mean_mm": 1.03,
+   "edge_max_mm": 1.75
+  },
+  "graph": {
+   "E1": 329854,
+   "E2": 1304067
+  },
+  "principal": {
+   "fibre": {
+    "speed_m_s": 0.5638,
+    "ratio_to_target": 0.9396,
+    "nodes": 82
+   },
+   "sheet": {
+    "speed_m_s": 0.2586,
+    "ratio_to_target": 0.9947,
+    "nodes": 78
+   },
+   "normal": {
+    "speed_m_s": 0.3302,
+    "ratio_to_target": 0.9829,
+    "nodes": 43
+   }
+  },
+  "principal_pass_1.5pct": false,
+  "ray_speed_ratio_graph_over_exact": {
+   "fibre-sheet (xy)": {
+    "0-15": 0.935,
+    "15-30": 0.9642,
+    "30-45": 0.9809,
+    "45-60": 0.9901,
+    "60-75": 0.9906,
+    "75-90": 0.9933
+   },
+   "fibre-normal (xz)": {
+    "0-15": 0.9311,
+    "15-30": 0.9492,
+    "30-45": 0.9663,
+    "45-60": 0.9803,
+    "60-75": 0.9828,
+    "75-90": 0.9793
+   },
+   "sheet-normal (yz)": {
+    "0-15": 0.9927,
+    "15-30": 0.9922,
+    "30-45": 0.9923,
+    "45-60": 0.9905,
+    "60-75": 0.9887,
+    "75-90": 0.9783
+   }
+  },
+  "ray_worst_abs_dev": 0.0689,
+  "ray_pass_3pct": false,
+  "a03_local_cv_m_s": {
+   "fibre": 0.3069,
+   "sheet": 0.2652,
+   "normal": 0.3301
+  },
+  "rotating_fibres_transmural_ratio_graph_over_z_over_vn": {
+   "z 2.5 mm": 0.9514,
+   "z 5.0 mm": 0.9712,
+   "z 7.5 mm": 0.9818,
+   "z 10.0 mm": 0.9867
+  },
+  "rotating_pass_2pct": false,
+  "factors": {
+   "fibre": 1.0,
+   "sheet": 1.0,
+   "normal": 1.0
+  },
+  "wall_s": 11.8
+ },
+ "6G8DD8S5 speeds | fitted factors": {
+  "mesh": {
+   "nodes": 44376,
+   "tets": 278666,
+   "edge_mean_mm": 1.03,
+   "edge_max_mm": 1.75
+  },
+  "graph": {
+   "E1": 329854,
+   "E2": 1304067
+  },
+  "principal": {
+   "fibre": {
+    "speed_m_s": 0.7814,
+    "ratio_to_target": 1.3023,
+    "nodes": 82
+   },
+   "sheet": {
+    "speed_m_s": 0.2029,
+    "ratio_to_target": 0.7804,
+    "nodes": 78
+   },
+   "normal": {
+    "speed_m_s": 0.3251,
+    "ratio_to_target": 0.9677,
+    "nodes": 43
+   }
+  },
+  "principal_pass_1.5pct": false,
+  "ray_speed_ratio_graph_over_exact": {
+   "fibre-sheet (xy)": {
+    "0-15": 1.1566,
+    "15-30": 0.9566,
+    "30-45": 0.8523,
+    "45-60": 0.8087,
+    "60-75": 0.7886,
+    "75-90": 0.7814
+   },
+   "fibre-normal (xz)": {
+    "0-15": 1.1983,
+    "15-30": 1.1213,
+    "30-45": 1.0365,
+    "45-60": 0.9991,
+    "60-75": 0.9738,
+    "75-90": 0.956
+   },
+   "sheet-normal (yz)": {
+    "0-15": 0.7814,
+    "15-30": 0.794,
+    "30-45": 0.8183,
+    "45-60": 0.8603,
+    "60-75": 0.9185,
+    "75-90": 0.9496
+   }
+  },
+  "ray_worst_abs_dev": 0.2186,
+  "ray_pass_3pct": false,
+  "a03_local_cv_m_s": {
+   "fibre": 0.1208,
+   "sheet": 0.2095,
+   "normal": 0.3211
+  },
+  "rotating_fibres_transmural_ratio_graph_over_z_over_vn": {
+   "z 2.5 mm": 0.9649,
+   "z 5.0 mm": 0.9858,
+   "z 7.5 mm": 0.9981,
+   "z 10.0 mm": 1.0027
+  },
+  "rotating_pass_2pct": false,
+  "factors": {
+   "fibre": 1.5439393050637131,
+   "sheet": 0.7821111060889135,
+   "normal": 0.9827592620975014
+  },
+  "wall_s": 11.9
+ },
+ "7D98EVAR speeds | factors 1 (stencil alone)": {
+  "mesh": {
+   "nodes": 44376,
+   "tets": 278666,
+   "edge_mean_mm": 1.03,
+   "edge_max_mm": 1.75
+  },
+  "graph": {
+   "E1": 329854,
+   "E2": 1304067
+  },
+  "principal": {
+   "fibre": {
+    "speed_m_s": 0.5638,
+    "ratio_to_target": 0.9396,
+    "nodes": 82
+   },
+   "sheet": {
+    "speed_m_s": 0.2586,
+    "ratio_to_target": 0.9947,
+    "nodes": 78
+   },
+   "normal": {
+    "speed_m_s": 0.3302,
+    "ratio_to_target": 0.9829,
+    "nodes": 43
+   }
+  },
+  "principal_pass_1.5pct": false,
+  "ray_speed_ratio_graph_over_exact": {
+   "fibre-sheet (xy)": {
+    "0-15": 0.935,
+    "15-30": 0.9642,
+    "30-45": 0.9809,
+    "45-60": 0.9901,
+    "60-75": 0.9906,
+    "75-90": 0.9933
+   },
+   "fibre-normal (xz)": {
+    "0-15": 0.9311,
+    "15-30": 0.9492,
+    "30-45": 0.9663,
+    "45-60": 0.9803,
+    "60-75": 0.9828,
+    "75-90": 0.9793
+   },
+   "sheet-normal (yz)": {
+    "0-15": 0.9927,
+    "15-30": 0.9922,
+    "30-45": 0.9923,
+    "45-60": 0.9905,
+    "60-75": 0.9887,
+    "75-90": 0.9783
+   }
+  },
+  "ray_worst_abs_dev": 0.0689,
+  "ray_pass_3pct": false,
+  "a03_local_cv_m_s": {
+   "fibre": 0.3069,
+   "sheet": 0.2652,
+   "normal": 0.3301
+  },
+  "rotating_fibres_transmural_ratio_graph_over_z_over_vn": {
+   "z 2.5 mm": 0.9514,
+   "z 5.0 mm": 0.9712,
+   "z 7.5 mm": 0.9818,
+   "z 10.0 mm": 0.9867
+  },
+  "rotating_pass_2pct": false,
+  "factors": {
+   "fibre": 1.0,
+   "sheet": 1.0,
+   "normal": 1.0
+  },
+  "wall_s": 11.5
+ },
+ "7D98EVAR speeds | fitted factors": {
+  "mesh": {
+   "nodes": 44376,
+   "tets": 278666,
+   "edge_mean_mm": 1.03,
+   "edge_max_mm": 1.75
+  },
+  "graph": {
+   "E1": 329854,
+   "E2": 1304067
+  },
+  "principal": {
+   "fibre": {
+    "speed_m_s": 0.8733,
+    "ratio_to_target": 1.4555,
+    "nodes": 82
+   },
+   "sheet": {
+    "speed_m_s": 0.166,
+    "ratio_to_target": 0.6383,
+    "nodes": 78
+   },
+   "normal": {
+    "speed_m_s": 0.325,
+    "ratio_to_target": 0.9674,
+    "nodes": 43
+   }
+  },
+  "principal_pass_1.5pct": false,
+  "ray_speed_ratio_graph_over_exact": {
+   "fibre-sheet (xy)": {
+    "0-15": 1.1876,
+    "15-30": 0.8499,
+    "30-45": 0.7168,
+    "45-60": 0.6683,
+    "60-75": 0.648,
+    "75-90": 0.6399
+   },
+   "fibre-normal (xz)": {
+    "0-15": 1.2689,
+    "15-30": 1.1578,
+    "30-45": 1.057,
+    "45-60": 1.0001,
+    "60-75": 0.9695,
+    "75-90": 0.95
+   },
+   "sheet-normal (yz)": {
+    "0-15": 0.64,
+    "15-30": 0.6566,
+    "30-45": 0.6914,
+    "45-60": 0.7566,
+    "60-75": 0.8556,
+    "75-90": 0.9376
+   }
+  },
+  "ray_worst_abs_dev": 0.3601,
+  "ray_pass_3pct": false,
+  "a03_local_cv_m_s": {
+   "fibre": 0.0923,
+   "sheet": 0.172,
+   "normal": 0.318
+  },
+  "rotating_fibres_transmural_ratio_graph_over_z_over_vn": {
+   "z 2.5 mm": 0.9666,
+   "z 5.0 mm": 0.9849,
+   "z 7.5 mm": 0.9968,
+   "z 10.0 mm": 1.0017
+  },
+  "rotating_pass_2pct": false,
+  "factors": {
+   "fibre": 1.9507072666686684,
+   "sheet": 0.6390904041543314,
+   "normal": 0.9859184659347687
+  },
+  "wall_s": 11.8
+ }
+}
