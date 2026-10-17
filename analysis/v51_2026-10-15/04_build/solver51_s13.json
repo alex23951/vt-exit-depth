@@ -1,0 +1,89 @@
+{
+ "Y5HYEDL4": {
+  "v5_speeds_m_s": {
+   "fibre": 0.6,
+   "sheet": 0.48,
+   "normal": 0.48
+  },
+  "slab_factors_at_v5_speeds": {
+   "fibre": 1.0275776848691471,
+   "sheet": 1.0124581341170837,
+   "normal": 1.0203563842572732
+  },
+  "slab_converged": true,
+  "slab_iterations": 2,
+  "v5.1 stencil, factors 1": {
+   "fibre": 0.573,
+   "sheet": 0.478,
+   "normal": 0.481
+  },
+  "v5.1 stencil, slab factors": {
+   "fibre": 0.588,
+   "sheet": 0.484,
+   "normal": 0.491
+  },
+  "v5 solver (audit F01, k)": {
+   "fibre": 0.564,
+   "sheet": 0.489,
+   "normal": 0.485
+  }
+ },
+ "6G8DD8S5": {
+  "v5_speeds_m_s": {
+   "fibre": 0.6,
+   "sheet": 0.3504,
+   "normal": 0.33599999999999997
+  },
+  "slab_factors_at_v5_speeds": {
+   "fibre": 1.0516508719434106,
+   "sheet": 1.0092785828245223,
+   "normal": 1.013667618699938
+  },
+  "slab_converged": true,
+  "slab_iterations": 2,
+  "v5.1 stencil, factors 1": {
+   "fibre": 0.546,
+   "sheet": 0.355,
+   "normal": 0.341
+  },
+  "v5.1 stencil, slab factors": {
+   "fibre": 0.569,
+   "sheet": 0.36,
+   "normal": 0.349
+  },
+  "v5 solver (audit F01, k)": {
+   "fibre": 0.501,
+   "sheet": 0.364,
+   "normal": 0.35
+  }
+ },
+ "7D98EVAR": {
+  "v5_speeds_m_s": {
+   "fibre": 0.6,
+   "sheet": 0.3504,
+   "normal": 0.33599999999999997
+  },
+  "slab_factors_at_v5_speeds": {
+   "fibre": 1.0516508719434106,
+   "sheet": 1.0092785828245223,
+   "normal": 1.013667618699938
+  },
+  "slab_converged": true,
+  "slab_iterations": 2,
+  "v5.1 stencil, factors 1": {
+   "fibre": 0.545,
+   "sheet": 0.357,
+   "normal": 0.347
+  },
+  "v5.1 stencil, slab factors": {
+   "fibre": 0.568,
+   "sheet": 0.363,
+   "normal": 0.352
+  },
+  "v5 solver (audit F01, k)": {
+   "fibre": 0.503,
+   "sheet": 0.366,
+   "normal": 0.351
+  }
+ }
+}

@@ -413,5 +413,34 @@ def calib():
     json.dump(out, open(os.path.join(HERE, 'solver51_slab_calibration.json'), 'w'), indent=1)
 
 
+# ------------------------------------------------------------------ S13 (report): v5 speeds and fibres with the v5.1 stencil
+def s13():
+    """Slab-calibrated factors at the v5 speeds, the v5.1 2-ring solver on the v5 fibres, then the F01 measurement as the
+    audit's a03 (1.5 mm ball at lv_free_wall_phi180_z0.5_d50, tissue only, cv_by_dir T 8-80 ms) beside the audit's v5 values."""
+    f01 = json.load(open(os.path.join(HERE, 'f01_copy_v5.json')))['speeds']
+    out, cal = {}, {}
+    for h in HEARTS:
+        sp = V5_SPEEDS[h]; key = json.dumps(sp, sort_keys=True)
+        if key not in cal:
+            f, conv, hist, info = calibrate(sp)
+            cal[key] = (f, conv, len(hist))
+        f, conv, nit = cal[key]
+        tis = g.Tissue(h, lon5(h))
+        P, E = mesh(h)
+        lon = g.read_lon(lon5(h))
+        node = int([s for s in sites(h) if s['id'] == 'lv_free_wall_phi180_z0.5_d50'][0]['node'])
+        ball = np.where(np.linalg.norm(P - P[node], axis=1) < 1.5)[0]
+        res = {'v5_speeds_m_s': sp, 'slab_factors_at_v5_speeds': f, 'slab_converged': conv, 'slab_iterations': nit}
+        for lab, fac in (('v5.1 stencil, factors 1', {a: 1.0 for a in AXES}), ('v5.1 stencil, slab factors', f)):
+            T = g.Tissue.solve(tis.graph(sp, fac), ball)
+            smp = cv_samples(P, E, lon, T)
+            res[lab] = {a: round(float(np.median(smp[a])), 3) for a in AXES}
+        v5 = f01[f'{h}_v5_graph_nonet_lvfw_phi180_z0.5_d50']
+        res['v5 solver (audit F01, k)'] = {a: v5[a]['median_m_s'] for a in AXES}
+        out[h] = res
+        print(h, json.dumps(res), flush=True)
+    json.dump(out, open(os.path.join(HERE, 'solver51_s13.json'), 'w'), indent=1)
+
+
 if __name__ == '__main__':
-    {'build': build, 'fit': fit, 'slab': slab, 'calib': calib}[sys.argv[1]]()
+    {'build': build, 'fit': fit, 'slab': slab, 'calib': calib, 's13': s13}[sys.argv[1]]()
