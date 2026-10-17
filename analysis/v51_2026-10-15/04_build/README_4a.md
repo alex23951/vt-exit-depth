@@ -109,3 +109,11 @@ runs/v51_2026-10-15/04_build/ (593 MB).
 - A5 compared identical vectors through arccos (2e-6° noise); it now compares the values.
 - A7 compared whole 6-number rows instead of fibre vectors.
 - The degenerate-frame guard above.
+
+## Decisions at STOP 4a (Alex, 17 Oct 2026 01:39:48 UTC)
+
+- RV region (a), the septal split d > 0.5, as used above.
+- A4: recorded as failing by construction (the rule's own tilt near the endocardium). Nothing changed.
+- A8: corner-sharing counts as connected, so A8 passes in all three hearts.
+- The official v5.1 fibre files are the gated candidates, unchanged: data/biv/<H>/fibres_v51/bivF_v51.lon (sha256 in
+  manifests/v51_data_sha256.tsv).
