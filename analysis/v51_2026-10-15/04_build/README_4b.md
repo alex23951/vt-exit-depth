@@ -1,6 +1,6 @@
 # Step 4.3 (graph solver fix, F01): stopped at the factor fit (S5) and acceptance A
 
-PC clock 2026-10-17 03:44-04:12 CEST (UTC 01:44-02:12). Alex "Go for 4.3 up to the openCARP runs" (01:39:48 UTC).
+PC clock 2026-10-17 03:44-04:03 CEST (UTC 01:44-02:03). Alex "Go for 4.3 up to the openCARP runs" (01:39:48 UTC).
 No beat with the network has been run; no openCARP reference run.
 
 ## Done
@@ -35,7 +35,7 @@ The subset run came first: 10 % of rows, 13 s, 0.6 GB.
 - These factors are not adopted: saved as solver51_fit_attempt1_factors.json, and params/v51_graph_factors.json does not
   exist, so the solver stops.
 
-## Acceptance A (synthetic slab 36 × 36 × 20 mm, jittered grid Delaunay, edges mean 0.93 / max 1.73 mm; solver51_slab.json)
+## Acceptance A (synthetic slab 36 × 36 × 20 mm, jittered grid Delaunay, edges mean 1.03 / max 1.75 mm, 44,376 nodes, 278,666 tets; solver51_slab.json)
 
 Principal speed ratios (graph / target, fibre / sheet / normal):
 
