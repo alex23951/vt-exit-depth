@@ -162,7 +162,7 @@ def load_factors(h, lonf):
 def slab_mesh(Lx=36.0, Ly=36.0, Lz=20.0, h=0.85, jitter=0.25, seed=0, max_edge=1.75):
     from scipy.spatial import Delaunay
     rng = np.random.default_rng(seed)
-    gx, gy, gz = (np.arange(0, L + 1e-9, h) for L in (Lx, Ly, Lz))
+    gx, gy, gz = (np.linspace(0.0, L, int(round(L / h)) + 1) for L in (Lx, Ly, Lz))   # exact extents (arange stopped one step short)
     X = np.stack(np.meshgrid(gx, gy, gz, indexing='ij'), -1).reshape(-1, 3)
     inner = (X > 1e-9).all(1) & (X < np.array([Lx, Ly, Lz]) - 1e-9).all(1)
     X[inner] += rng.uniform(-jitter * h, jitter * h, (inner.sum(), 3))
@@ -273,5 +273,145 @@ def slab():
     json.dump(out, open(os.path.join(HERE, 'solver51_slab.json'), 'w'), indent=1)
 
 
+# ------------------------------------------------------------------ option 1 (Alex, 17 Oct 2026 04:06:56 UTC): slab calibration
+class SlabGraph:
+    """Slab stencil and edge q prepared once (graph51 rules); weights for any speeds and factors."""
+
+    def __init__(self, P, E, lon):
+        from scipy.spatial import cKDTree
+        N = len(P)
+        e1, A = g.adjacency(E, N)
+        surf = g.surface_nodes(E, N)
+        ti, tj, tk, _ = g.e2_triples(P, A)
+        first = np.r_[True, (ti[1:] != ti[:-1]) | (tj[1:] != tj[:-1])]
+        pi, pj = ti[first], tj[first]; pot = np.cumsum(first) - 1
+        test = surf[pi] & surf[pj]
+        a, Jinv = g.tets_inverse(P, E)
+        ins = g.inside_mesh(0.5 * (P[pi[test]] + P[pj[test]]), P, E, cKDTree(P[E].mean(1)), a, Jinv)
+        keep = np.ones(len(pi), bool); keep[np.where(test)[0][~ins]] = False
+        Mn = g.nodal_components(P, E, lon)
+        self.q1 = g.quad(P[e1[:, 1]] - P[e1[:, 0]], 0.5 * (Mn[e1[:, 0]] + Mn[e1[:, 1]]))
+        ok = keep[pot]
+        ii, jj, kk = ti[ok].astype(np.int64), tj[ok].astype(np.int64), tk[ok].astype(np.int64)
+        self.qt = g.quad(P[jj] - P[ii], (Mn[ii] + Mn[jj] + Mn[kk]) / 3.0)
+        newpair = (np.cumsum(keep) - 1)[pot[ok]]
+        self.starts = np.r_[0, np.flatnonzero(np.diff(newpair)) + 1]
+        self.e = np.r_[e1, np.c_[pi[keep], pj[keep]]].astype(np.int64)
+        self.N = N
+        self.counts = {'E1': int(len(e1)), 'E2': int(keep.sum()), 'E2_rejected_midpoint': int((~ins).sum())}
+
+    def graph(self, speeds, factors):
+        from scipy.sparse import csr_matrix
+        w = np.array([1.0 / (factors[x] * speeds[x]) ** 2 for x in ('fibre', 'sheet', 'normal')])
+        t = np.r_[np.sqrt(self.q1 @ w), np.minimum.reduceat(np.sqrt(self.qt @ w), self.starts)]
+        e = self.e
+        return csr_matrix((np.r_[t, t], (np.r_[e[:, 0], e[:, 1]], np.r_[e[:, 1], e[:, 0]])), shape=(self.N, self.N))
+
+
+AXES = ('fibre', 'sheet', 'normal')
+
+
+def principal_speeds(P, T, src, speeds):
+    """Arrival-time speeds along the three axes (fibre x, sheet y, normal z): nodes within 1 mm of the axis line,
+    6-14 mm (x, y) or 4-8 mm (z) from the source; median |x_a| / t."""
+    x = P - P[src]
+    out = {}
+    for ai, nm in enumerate(AXES):
+        others = [k for k in range(3) if k != ai]
+        lo, hi = (4.0, 8.0) if ai == 2 else (6.0, 14.0)
+        m = (np.linalg.norm(x[:, others], axis=1) < 1.0) & (np.abs(x[:, ai]) >= lo) & (np.abs(x[:, ai]) <= hi)
+        sp = float(np.median(np.abs(x[m, ai]) / T[m]))
+        out[nm] = {'speed_m_s': sp, 'ratio_to_target': sp / speeds[nm], 'nodes': int(m.sum())}
+    return out
+
+
+def calibrate(speeds, seed=0, tol=0.005, max_iter=12):
+    P, E, ed = slab_mesh(seed=seed)
+    lon = np.tile([1.0, 0, 0, 0, 1.0, 0], (len(E), 1))
+    SG = SlabGraph(P, E, lon)
+    src = int(np.argmin(np.linalg.norm(P - np.array([18.0, 18.0, 10.0]), axis=1)))
+    f = {a: 1.0 for a in AXES}
+    hist = []
+    for it in range(max_iter):
+        T = g.Tissue.solve(SG.graph(speeds, f), src)
+        pr = principal_speeds(P, T, src, speeds)
+        hist.append({'iteration': it, 'factors': dict(f), 'principal': pr})
+        if all(abs(pr[a]['ratio_to_target'] - 1) <= tol for a in AXES):
+            break
+        f = {a: f[a] / pr[a]['ratio_to_target'] for a in AXES}
+    conv = all(abs(hist[-1]['principal'][a]['ratio_to_target'] - 1) <= tol for a in AXES)
+    return hist[-1]['factors'], conv, hist, {'seed': seed, 'nodes': int(len(P)), 'tets': int(len(E)),
+                                              'edge_mean_mm': round(float(ed.mean()), 3), 'edge_max_mm': round(float(ed.max()), 3)} | SG.counts
+
+
+def acceptance_A(speeds, factors, seed=1):
+    """Acceptance A on a fresh slab mesh (seed differs from the calibration slab)."""
+    P, E, ed = slab_mesh(seed=seed)
+    lon = np.tile([1.0, 0, 0, 0, 1.0, 0], (len(E), 1))
+    SG = SlabGraph(P, E, lon)
+    src = int(np.argmin(np.linalg.norm(P - np.array([18.0, 18.0, 10.0]), axis=1)))
+    T = g.Tissue.solve(SG.graph(speeds, factors), src)
+    res = {'mesh': {'seed': seed, 'nodes': int(len(P)), 'tets': int(len(E)), 'edge_mean_mm': round(float(ed.mean()), 3),
+                    'edge_max_mm': round(float(ed.max()), 3)} | SG.counts}
+    pr = principal_speeds(P, T, src, speeds)
+    res['principal'] = {a: {k: (round(v, 4) if isinstance(v, float) else v) for k, v in d.items()} for a, d in pr.items()}
+    res['principal_pass_1.5pct'] = bool(all(abs(pr[a]['ratio_to_target'] - 1) <= 0.015 for a in AXES))
+    x = P - P[src]; r = np.linalg.norm(x, axis=1)
+    v = np.array([speeds[a] for a in AXES])
+    Tex = np.sqrt(np.sum((x / v) ** 2, 1))
+    rays, worst = {}, 0.0
+    for nm, (a1, a2, a3) in {'fibre-sheet (xy)': (0, 1, 2), 'fibre-normal (xz)': (0, 2, 1), 'sheet-normal (yz)': (1, 2, 0)}.items():
+        m = (np.abs(x[:, a3]) < 1.0) & (r >= 4.0) & (r <= 9.0)
+        ang = np.degrees(np.arctan2(np.abs(x[m, a2]), np.abs(x[m, a1])))
+        ratio = Tex[m] / T[m]                                           # (|x| / t) / (|x| / T) = T / t
+        cell = {}
+        for b0 in range(0, 90, 15):
+            mm = (ang >= b0) & (ang < b0 + 15)
+            if mm.any():
+                q = float(np.median(ratio[mm])); cell[f'{b0}-{b0 + 15} deg'] = {'ratio': round(q, 4), 'nodes': int(mm.sum())}
+                worst = max(worst, abs(q - 1))
+        rays[nm] = cell
+    res['rays_graph_speed_over_exact'] = rays
+    res['rays_worst_abs_dev'] = round(worst, 4); res['rays_pass_3pct'] = bool(worst <= 0.03)
+    # rotating fibres: a 36 x 36 x 10 mm wall, fibres +60 deg (z = 0) to -60 deg (z = 10) about z, endocardial face z = 0 fired
+    Pw, Ew, _ = slab_mesh(Lz=10.0, seed=seed)
+    zc = Pw[Ew].mean(1)[:, 2]
+    th = np.radians(60.0 - 120.0 * np.clip(zc / 10.0, 0, 1))
+    lonw = np.c_[np.cos(th), np.sin(th), np.zeros(len(Ew)), -np.sin(th), np.cos(th), np.zeros(len(Ew))]
+    SW = SlabGraph(Pw, Ew, lonw)
+    endo = np.where(Pw[:, 2] <= 1e-9)[0]
+    T2 = g.Tissue.solve(SW.graph(speeds, factors), endo)
+    trans = {}
+    for z in (2.5, 5.0, 7.5, 10.0):
+        m = (np.abs(Pw[:, 2] - z) < 0.4) & (np.abs(Pw[:, 0] - 18) < 10) & (np.abs(Pw[:, 1] - 18) < 10)
+        trans[f'z {z:.1f} mm'] = {'ratio': round(float(np.median(T2[m] * speeds['normal'] / Pw[m, 2])), 4), 'nodes': int(m.sum())}
+    res['rotating_wall_transmural_arrival_over_z_over_vn'] = trans
+    res['rotating_pass_2pct'] = bool(all(abs(c['ratio'] - 1) <= 0.02 for c in trans.values()))
+    res['pass'] = bool(res['principal_pass_1.5pct'] and res['rays_pass_3pct'] and res['rotating_pass_2pct'])
+    return res
+
+
+def calib():
+    out = {'method': 'factors calibrated on a synthetic slab (Alex 17 Oct 2026 04:06:56 UTC, option 1): 36 x 36 x 20 mm, jittered grid '
+                     '(h 0.85 mm, jitter 0.25 h, seed 0), Delaunay, tets with an edge > 1.75 mm dropped; uniform fibres (x), sheet (y), normal (z); '
+                     'point source at the centre; along-axis arrival speeds; f_a <- f_a target_a / measured_a until all within 0.5 %. '
+                     'Acceptance A on a fresh mesh (seed 1) and a fresh 10 mm rotating-fibre wall (seed 1).', 'hearts': {}}
+    done = {}
+    for h in HEARTS:
+        key = json.dumps(SPEEDS[h], sort_keys=True)
+        t0 = time.time()
+        if key not in done:
+            f, conv, hist, mesh_info = calibrate(SPEEDS[h])
+            acc = acceptance_A(SPEEDS[h], f)
+            done[key] = (f, conv, hist, mesh_info, acc)
+        f, conv, hist, mesh_info, acc = done[key]
+        out['hearts'][h] = {'speeds_m_s': SPEEDS[h], 'factors': f, 'converged_within_0.5pct': conv, 'iterations': len(hist),
+                            'calibration_slab': mesh_info, 'calibration_history': hist, 'acceptance_A_fresh_mesh': acc, 'wall_s': round(time.time() - t0, 1)}
+        print(h, 'factors', {a: round(v, 4) for a, v in f.items()}, 'converged', conv, 'iterations', len(hist),
+              '| A: principal', {a: acc['principal'][a]['ratio_to_target'] for a in AXES}, 'rays worst', acc['rays_worst_abs_dev'],
+              'rotating', {k: c['ratio'] for k, c in acc['rotating_wall_transmural_arrival_over_z_over_vn'].items()}, 'PASS' if acc['pass'] else 'FAIL', flush=True)
+    json.dump(out, open(os.path.join(HERE, 'solver51_slab_calibration.json'), 'w'), indent=1)
+
+
 if __name__ == '__main__':
-    {'build': build, 'fit': fit, 'slab': slab}[sys.argv[1]]()
+    {'build': build, 'fit': fit, 'slab': slab, 'calib': calib}[sys.argv[1]]()

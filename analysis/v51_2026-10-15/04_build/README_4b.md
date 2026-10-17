@@ -66,3 +66,28 @@ So the F01 numbers for v5 itself stay usable as reported, but the measure cannot
 
 Not run because of this: acceptance B (held-out regions; it uses the same measure), S13 (refit at v5 speeds), and
 acceptance C (openCARP; needs Alex's OK anyway).
+
+## Option 1, chosen by Alex (17 Oct 2026 04:06:56 UTC): factors calibrated on a synthetic slab
+
+The diagnostic slab above was 35.7 × 35.7 × 19.55 mm (np.arange stopped one step short); fixed to exact extents.
+
+**Calibration:**
+- Mesh: one slab, 36 × 36 × 20 mm, seed 0 (46,225 nodes, 287,615 tets; edges mean 1.029 / max 1.741 mm).
+- Fibres uniform; point source at the centre.
+- Measure: along-axis arrival speed (|x_a| / t).
+- Update: f_a ← f_a · target / measured until all within 0.5 %. Converged in 2 (control) / 3 (HF) iterations.
+
+| Speeds | Factors fibre / sheet / normal | Fresh slab (seed 1): principal ratios | Worst 15° ray bin | Rotating 10 mm wall, transmural ratio | Acceptance A |
+|---|---|---|---|---|---|
+| control (Y5HYEDL4) | 1.0369 / 1.0071 / 1.0269 | 0.9992 / 0.9997 / 0.9998 | 1.34 % | 0.982-0.983 | PASS |
+| HF (6G8DD8S5, 7D98EVAR) | 1.0784 / 1.0047 / 1.0176 | 1.0011 / 0.9988 / 1.0006 | 1.83 % | 0.989 | PASS |
+
+Gates: principal ±1.5 %, rays ±3 %, transmural ±2 %.
+
+The factor file is params/v51_graph_factors.json (version v51-factors-2). It records speeds, stencil and each heart's
+fibre sha256. Guards tested: the wrong fibre file, or a missing file, stops the solver. Full results:
+solver51_slab_calibration.json.
+
+**Next, needs Alex's OK:** acceptance C, the openCARP eikonal reference at 12 sites per heart, which also covers the
+held-out regions of B. 36 runs: about 26-51 min, up to 12 h if every run hits the 20 min cap. S13 (refit at v5 speeds,
+report only) is also still open.

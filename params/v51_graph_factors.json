@@ -1,0 +1,104 @@
+{
+ "version": "v51-factors-2 (slab calibration)",
+ "written": "2026-10-17 06:11:57 CEST",
+ "decision": "Alex 17 Oct 2026 04:06:56 UTC, option 1: factors calibrated on one synthetic slab, acceptance A on a fresh slab mesh (replaces the brief S5 heart fit with the F01 measure)",
+ "method": "factors calibrated on a synthetic slab (Alex 17 Oct 2026 04:06:56 UTC, option 1): 36 x 36 x 20 mm, jittered grid (h 0.85 mm, jitter 0.25 h, seed 0), Delaunay, tets with an edge > 1.75 mm dropped; uniform fibres (x), sheet (y), normal (z); point source at the centre; along-axis arrival speeds; f_a <- f_a target_a / measured_a until all within 0.5 %. Acceptance A on a fresh mesh (seed 1) and a fresh 10 mm rotating-fibre wall (seed 1).",
+ "hearts": {
+  "Y5HYEDL4": {
+   "factors": {
+    "fibre": 1.036892666600503,
+    "sheet": 1.0070666757303697,
+    "normal": 1.0268951869191494
+   },
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.36,
+    "normal": 0.48
+   },
+   "stencil": "v51-2ring-1",
+   "fibre_file": "data/biv/Y5HYEDL4/fibres_v51/bivF_v51.lon",
+   "fibre_sha256": "4c01ce43018bb8e86eed3d35e32e107cf7878d588c824809aba026521080b528",
+   "calibration_converged_within_0.5pct": true,
+   "calibration_iterations": 2,
+   "acceptance_A_pass": true,
+   "acceptance_A": {
+    "principal_ratio": {
+     "fibre": 0.9992,
+     "sheet": 0.9997,
+     "normal": 0.9998
+    },
+    "rays_worst_abs_dev": 0.0134,
+    "rotating_wall_ratio": {
+     "z 2.5 mm": 0.9832,
+     "z 5.0 mm": 0.982,
+     "z 7.5 mm": 0.9826,
+     "z 10.0 mm": 0.9816
+    }
+   }
+  },
+  "6G8DD8S5": {
+   "factors": {
+    "fibre": 1.0784438502874043,
+    "sheet": 1.0047498917235866,
+    "normal": 1.017560836219837
+   },
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "stencil": "v51-2ring-1",
+   "fibre_file": "data/biv/6G8DD8S5/fibres_v51/bivF_v51.lon",
+   "fibre_sha256": "29692d4b9f140b4dbc1c250f06bc5895a1bc4d62897a136c23fa559d3354fd3b",
+   "calibration_converged_within_0.5pct": true,
+   "calibration_iterations": 3,
+   "acceptance_A_pass": true,
+   "acceptance_A": {
+    "principal_ratio": {
+     "fibre": 1.0011,
+     "sheet": 0.9988,
+     "normal": 1.0006
+    },
+    "rays_worst_abs_dev": 0.0183,
+    "rotating_wall_ratio": {
+     "z 2.5 mm": 0.9896,
+     "z 5.0 mm": 0.9889,
+     "z 7.5 mm": 0.9893,
+     "z 10.0 mm": 0.9885
+    }
+   }
+  },
+  "7D98EVAR": {
+   "factors": {
+    "fibre": 1.0784438502874043,
+    "sheet": 1.0047498917235866,
+    "normal": 1.017560836219837
+   },
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "stencil": "v51-2ring-1",
+   "fibre_file": "data/biv/7D98EVAR/fibres_v51/bivF_v51.lon",
+   "fibre_sha256": "e1252fcf69b11df3e6ab386d1e2897be31ab7b9f298acbac546d9635ae3a4562",
+   "calibration_converged_within_0.5pct": true,
+   "calibration_iterations": 3,
+   "acceptance_A_pass": true,
+   "acceptance_A": {
+    "principal_ratio": {
+     "fibre": 1.0011,
+     "sheet": 0.9988,
+     "normal": 1.0006
+    },
+    "rays_worst_abs_dev": 0.0183,
+    "rotating_wall_ratio": {
+     "z 2.5 mm": 0.9896,
+     "z 5.0 mm": 0.9889,
+     "z 7.5 mm": 0.9893,
+     "z 10.0 mm": 0.9885
+    }
+   }
+  }
+ }
+}
