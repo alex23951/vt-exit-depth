@@ -8,8 +8,10 @@ of that last height, noted per site): LV cavity centre c = centroid of LV endoca
 endocardial nodes within 3 mm (septal centre); e2 = long axis x e1, signed towards the body's anterior (-y torso, R^T);
 angle 0 = septal centre, + = anterior. RV insertions: LV epicardial nodes within 2 mm of the RV epicardium, within 3 mm of
 that height, median angle of the + side (anterior insertion) and of the - side (inferior insertion).
-AHA segments (Cerqueira 2002): levels by f, thirds of the apex -> MV axis (apical < 1/3, mid < 2/3, basal >= 2/3) with an
-apex cap f < 0.08 (segment 17; the cap limit as a11); septum = arc between the insertions (basal / mid: anteroseptal /
+AHA segments (Cerqueira 2002): levels by f, thirds of the LV from the end of the cavity (the apex-cap limit below) to the
+mitral ring (18 Oct 2026, with the anchored cap; before: thirds of the whole apex -> MV axis), with an
+apex cap (segment 17) below the lowest LV endocardial node, at least f < 0.08 (anchored to the endocardial apex: Alex,
+18 Oct 2026 20:45:11 UTC; was f < 0.08 as a11); septum = arc between the insertions (basal / mid: anteroseptal /
 inferoseptal halves; apical: septal); free wall = the other arc, 4 equal parts at basal / mid (anterior, anterolateral,
 inferolateral, inferior) and 3 at apical (anterior, lateral, inferior). Thirds and the apex cap are my reading (inference).
 Body-defined Bazan region: superior if the site direction from c has a positive component along the body's superior (+z
@@ -53,6 +55,9 @@ class Frame:
         self.sup, self.ant = R.T @ np.array([0, 0, 1.0]), R.T @ np.array([0, -1.0, 0])
         lve, rve = self.epi[v[self.epi] == 0], self.epi[v[self.epi] == 1]
         self.groove = lve[cKDTree(self.P[rve]).query(self.P[lve])[0] <= 2.0]
+        # apex cap (segment 17) anchored to the endocardial apex (Alex, 18 Oct 2026 20:45:11 UTC, "Yes to all"): the cap is the
+        # myocardium below the lowest LV endocardial node (Cerqueira: the area beyond the end of the cavity), at least f 0.08
+        self.cap_f = max(0.08, float(self.f(self.P[self.lv]).min()))
 
     def proj(self, u):
         w = u - (u @ self.ax) * self.ax
@@ -84,10 +89,11 @@ class Frame:
         f = float(self.f(X))
         a_mm = f * self.Lax
         loc = self.local(a_mm)
-        if f < 0.08:
+        if f < self.cap_f:
             return {'f': f, 'level': 'apex', 'segment': 'apex', 'aha': 17, 'angle': np.nan, 'ins_ant': np.nan, 'ins_inf': np.nan,
                     'body_superior': self.body_sup(X, loc), 'note': ''}
-        level = 'apical' if f < 1 / 3 else ('mid' if f < 2 / 3 else 'basal')
+        c = self.cap_f                                        # thirds of the LV from the end of the cavity to the mitral ring
+        level = 'apical' if f < c + (1 - c) / 3 else ('mid' if f < c + 2 * (1 - c) / 3 else 'basal')
         note, a_use = '', a_mm
         while loc is None or np.isnan(loc[3]) or np.isnan(loc[4]):      # above the last height with an LV slab and both
             a_use -= 1.0                                                  # insertions (AV-ring sites): that height's frame
@@ -158,7 +164,8 @@ def main():
             if lev == 'apex':
                 fc, ang = 0.04, None
             else:
-                fc = {'apical': (0.08 + 1 / 3) / 2, 'mid': 0.5, 'basal': (2 / 3 + 0.9) / 2}[lev]
+                c_ = F.cap_f; t3 = (1 - c_) / 3                 # middle of each third; basal: middle of its lower 2/3 (as before)
+                fc = {'apical': c_ + 0.5 * t3, 'mid': c_ + 1.5 * t3, 'basal': (c_ + 2 * t3 + 0.9) / 2}[lev]
             if lev != 'apex':
                 loc = F.local(fc * F.Lax)
                 if loc is None:

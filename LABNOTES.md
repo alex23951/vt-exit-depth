@@ -1382,3 +1382,13 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
   - Also: solver tolerances; equal anisotropy; blood ending at the valve planes; the 10 mm minimum D_j; the Step 3 design and the Step 5 reading of F.
 - Report: analysis/v51_2026-10-15/07_report/REPORT.md.
 - Final STOP check, PC clock 22:43: check_v5_files.py --full: 3,484 files, size, mtime and sha256: v5 files unchanged: yes.
+
+## 2026-10-18 22:48 PC time (UTC 20:48): answers after the final STOP (Alex, 18 Oct 2026 20:45:11 UTC: "Yes to all")
+- Study-heart placement rule adopted:
+  - 17 AHA segments x 4 depths per study heart; Bazan regions from the body axes; other families as in the pilot.
+  - Apex cap anchored to the endocardial apex (cap limit = f of the lowest LV endocardial node, at least 0.08: 0.08 / 0.148 / 0.081).
+  - Follow-on change of mine, reported: the level thirds now run from the end of the cavity to the mitral ring (Cerqueira), not along the whole axis. Without it, 3 outer points of 6G8DD8S5's thick apex fell in the cap.
+  - Dry run 204 / 204 in their own segment. 18 pilot sites change level (report only; no gate uses AHA levels; body regions unchanged).
+  - Files: analysis/v51_2026-10-15/05_aha_labels/aha51.py, README.md (addendum), pilot_site_labels.csv, placement_dry_run.csv.
+- analysis/v51_2026-10-15/06_pilot_rerun/rescore/per_site.csv (2.3 MB, sha256 a49182ad...bb8b) committed (Alex's yes).
+- 27-site monodomain check: Alex said yes to planning it. Plan and time estimate are posted to Alex before any run (next entry).

@@ -76,3 +76,23 @@ PC clock 2026-10-18 17:10-17:25 CEST. Alex 15:06:23 UTC: "Yes" (tag v5.1 and Ste
 - The AHA / body-label version is printed beside it with its position count.
 - With 17 pooled basal-superior positions, below the 20 required, the body-label version is "not evaluable". On 14 Oct
   the audit's body regions gave 4 / 14 vs 1 / 14.
+
+## Addendum 18 Oct 2026 22:50 CEST: placement rule adopted (Alex, 20:45:11 UTC, "Yes to all")
+
+**The adopted rule for the study hearts:**
+- 17 AHA segments x 4 depths (10 / 50 / 75 / 90 %) = 68 LV sites per heart, at the segment centres, named by segment.
+- Bazan regions are taken from the body axes.
+- Other families (RV, RVOT, cusps, summit, vein course) stay as in the pilot grid.
+
+**The apex cap is anchored to the endocardial apex:**
+- Segment 17 is the myocardium below the lowest LV endocardial node (Cerqueira: beyond the end of the cavity), at least f < 0.08.
+- Cap limits: Y5HYEDL4 0.08, 6G8DD8S5 0.148, 7D98EVAR 0.081.
+
+**The level thirds now run from the end of the cavity to the mitral ring.** I made this follow-on change myself: Cerqueira divides the LV with myocardium all around, not the whole apex-to-base axis.
+- Why: with the anchored cap but thirds of the whole axis, 3 outer points of 6G8DD8S5's thick apex (segments 13 and 15 at 75-90 %) fell inside the cap.
+
+**Effect on the outputs:**
+- **Dry run:** 204 / 204 points land in their own segment, including segment 17 in all three hearts.
+- **Pilot labels:** 18 pilot sites move across a level boundary (Y5HYEDL4 4, 6G8DD8S5 12, 7D98EVAR 2; mostly basal -> mid septal sites near f 0.68-0.71).
+- **No change:** the body-defined Bazan regions (0 changes) and no gate.
+- **Undo:** if Alex prefers thirds of the whole axis, reverting is one line.
