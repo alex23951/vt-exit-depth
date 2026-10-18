@@ -1461,3 +1461,11 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Status update (2026-10-19_v51_08_monotest), PC clock 00:28: ok, 00:24:57-00:28:17. openCARP 190 s for 10 ms = 19.0 s per simulated ms with 4 processes (includes setup; an upper bound for full beats). Lowest available memory 5,085 MB (about 1.8 GB used). 26 stimuli (site + 25 junction groups from 3,271 junctions). Graph total activation of this site 143.0 ms, so its full beat is 180 ms (about 57 min).
   - Estimate for the 27 beats (4,780 simulated ms, PLAN.md): about 25 h at 19 s/ms; about 8 h per heart.
   - Next: Alex chooses the tuning (flat-tuned vs patch-tuned) and gives the go for the first heart. Nothing started.
+
+## 2026-10-19 00:33 PC time (UTC 22:33): monodomain tuning chosen (Alex, 18 Oct 2026 22:32:12 UTC: "Flat block. But dont start the heart. First how long will it take?")
+- The 27-site check uses the flat-tuned conductivities (params/v51_mono_conductivities.json as written by mono_slab51.py, 2026-10-18_v51_08_monoslab). The patch-tuned values are not used.
+- Nothing started. Estimate from the timing test (stepping 17-18 s per simulated ms after about 15 s of setup; the rate rose from 16.8 to 18.2 s/ms as activation spread) and each site's graph total activation + 30 ms:
+  - Y5HYEDL4: 9 beats, 1,620 simulated ms (150-200 ms each), about 8 h (7.7-8.6 h).
+  - 6G8DD8S5: 1,640 ms on a mesh with 3 % more tets, about 8.4 h. 7D98EVAR: 1,650 ms on a mesh with 10 % fewer tets, about 7.4 h.
+  - All 27: 4,910 ms, about 24 h (PLAN.md said 4,780 ms; its original-site lengths were estimates). Each beat 45-65 min.
+  - Note (PC clock 00:33): the reason given above for the 4,780 vs 4,910 ms difference is my inference; I did not check how PLAN.md's total was made.
