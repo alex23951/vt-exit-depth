@@ -1299,3 +1299,16 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
   - C10: frontal axis (net) +79 / -16 / +81 deg; R/S V1 1.01 / 0.37 / 1.18, V6 1.69 / 20.2 / 1.91; Sokolow-Lyon 4.02 / 3.30 / 3.09 mV; frontal net magnitude 0.57 / 0.97 / 1.21 mV. 6G8DD8S5: LV onset 23.4 ms after the RV.
   - Nothing changed because of these values. Gate verdicts are scored in Step 6 with the full convention.
 - STOP 4e check, PC clock 16:49: check_v5_files.py --full: 3,484 files, size, mtime and sha256: v5 files unchanged: yes (26 s).
+
+## 2026-10-18 17:08 PC time (UTC 15:08): model v5.1 tagged (brief 4.7; Alex, 18 Oct 2026 15:06:23 UTC: "Yes")
+- v5.1 = v5 with decisions A-H of 15 Oct 2026 as built in Steps 4.1-4.6:
+  - speeds 0.60 / 0.36 / 0.48 m/s (HF 0.60 / 0.26 / 0.336);
+  - Doste RV fibres (whole RV);
+  - nodal 2-ring graph solver with slab factors;
+  - class-speed conduction system with v_edge 3.00 / 2.88 / 2.84 m/s;
+  - conductivities from the speeds, full blood fill;
+  - sigma_i ECG source;
+  - ecg_depth_criteria 0.4.0 (q window 40 ms, CSE recognition).
+- The model is frozen from here (Alex, 17 Oct 2026 07:58 / 08:18 UTC).
+- All v5.1 data files are hashed in manifests/v51_data_sha256.tsv: fibres, network, torso meshes, lead fields, ECG weights, graph caches.
+- Annotated tag v5.1 on the commit that adds this entry. The push waits for Alex's GitHub sign-in on the PC: the credential cache was lost on a WSL restart, so commits since 55a8d66 are local.
