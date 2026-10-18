@@ -1203,3 +1203,45 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - To do (not started): check the QRS-offset detection of ecg_depth_criteria against the true last activation and against hand reading on these beats; then Alex decides whether a change is a dated measurement deviation applied to every beat before the Step 6 scoring, or a reported sensitivity analysis (the 17 Oct freeze covers the model; nothing is tuned to pass a check). Inference to test: hidden basal tails lower the control heart's relative-QRS ratio (Aim 1 gate 2a, 1.0586 vs Bazan 1.0785-1.1587).
 - Status update (2026-10-18_v51_04c_acceptC_rest), PC clock 14:43: STOPPED at a 20-minute cap (Alex's standing instruction). lv_septum_phi0_z0.5_d50 ok (64.6 s, total 218.0 ms) and lv_septum_phi0_z0.25_d50 ok (69.0 s, total 231.5 ms), no unactivated nodes; rv_free_wall_q50_z0.5_d10 hit the cap with the 17 Oct hang signature (one core busy, never left t = 0, empty act.igb / eik_stats.dat; a finished run needs ~106 FIM iterations, 57 s). The batch stopped; the retry of lv_free_wall_phi180_z0.5_d90 was not run (the script refuses retries after a new cap); 7 sites not run. Log runs/v51_2026-10-15/04_build/7D98EVAR/acceptance_c/batch_2026-10-18.log. Note: max_iter was 1e9 in every run (default 50), so a "raised" value can only be nominal (2147483647).
 - Acceptance C (graph vs openCARP), PC clock 14:44, `python -B analysis/v51_2026-10-15/04_build/acceptance_c.py compare element|nodal [hearts]` (43 s for two hearts, 2.5 GB): FAIL with both metrics. Sites passing, nodal / element-wise: Y5HYEDL4 4 / 12 vs 0 / 12; 6G8DD8S5 0 / 12 vs 0 / 12; 7D98EVAR 0 / 3 vs 0 / 3. Element-wise: local (F01) speeds now match openCARP (control fibre 0.583-0.586 vs 0.584-0.586 m/s; HF 0.559-0.566 vs 0.575-0.579; nodal HF 0.516-0.556), but arrival is systematically early (mean graph - openCARP -2.5 to -3.3 ms control, -4.8 to -6.2 ms HF; totals 2-5 % short); nodal scatters around zero in the control heart (-1.0 to +1.0 ms) and -1.9 to +6.6 ms in HF. Nothing fitted to openCARP; no region factors. Details analysis/v51_2026-10-15/04_build/README_4c_element.md. Which metric goes forward is Alex's decision (STOP 4b report). v5 files unchanged: yes.
+
+## 2026-10-18 15:00 PC time (UTC 13:00): STOP 4b answered (Alex, 18 Oct 2026 12:59:10 UTC: "Nodal is good. Drop any caps or limits")
+- Graph solver: the nodal metric (S3 as briefed; graph51.METRIC_NODAL, slab factors params/v51_graph_factors.json of 17 Oct) goes forward. The element-wise metric (deviation entry 14:24) is NOT adopted: it stays in the code and on record (params/v51_graph_factors_element.json, README_4c_element.md). Acceptance C fails; per Alex's rule of 17 Oct 07:58 UTC the graph solver is kept, its measured error against openCARP is reported, and the 27-site monodomain check judges accuracy.
+- openCARP: no time cap from now on (replaces the 20-minute cap of 17 Oct 06:20 UTC for these runs).
+
+### 2026-10-18_v51_04c_acceptC_nocap: the remaining 7D98EVAR openCARP reference sites without a time cap, then the two capped sites once more
+- Date/time: PC clock 2026-10-18 15:00; git ad0ae83 (+ uncommitted acceptance_c.py, LABNOTES.md); Status: running
+- Command: `HEART=7D98EVAR python -B analysis/v51_2026-10-15/04_build/acceptance_c.py run_nocap` (one openCARP at a time).
+- Model: as 2026-10-17_v51_04c_acceptC (openCARP v20 ffce195 pure eikonal, FIM tol 0.001, 6 OpenMP threads, v5.1 speeds 0.60 / 0.26 / 0.336 m/s without factors, v5.1 fibres, single-node stimulus, no network), no time cap. Unrun sites max_iter 1e9 (as all other runs): rv_free_wall_q50_z0.5_d90, rvot_septal_z_d50, rvot_free_wall_z_d50, aortic_cusp_rcc_z_d50, aortic_cusp_lcc_z_d50, lv_summit_superior_z_d50, lv_summit_inferior_lateral_z_d50. Then, max_iter 2147483647, into <site>/retry/: lv_free_wall_phi180_z0.5_d90 and rv_free_wall_q50_z0.5_d10 (both hung 20 min at t = 0 before).
+- Output: runs/v51_2026-10-15/04_build/7D98EVAR/acceptance_c/<site>/, status.json, log batch_nocap_2026-10-18.log. Expected ~8-10 min for the 7 sites if none hangs; the two reruns may not finish (with no cap they run until they finish or Alex stops them).
+
+### 2026-10-18_v51_04d_network: v5.1 conduction system, Step 4.4 (decisions E and B; no beat)
+- Date/time: PC clock 2026-10-18 15:01-15:07; git ad0ae83 (+ uncommitted network51.py, acceptance_c.py, LABNOTES.md); Status: ok
+- Purpose: replace v5's Durrer-tuned bundle speeds and 2.0 m/s per-edge distal speed with class constants and a straight-line distal speed (brief 4.4, E1-E9, P2-P8, F19).
+- Command: `HEART=<H> python -B analysis/v51_2026-10-15/04_build/network51.py build` (3 hearts; about 1 s each, < 0.1 GB). Two fixes in my own code before the final run, not model changes: summary.json rounds path speeds to 0.01 m/s, so 7D98EVAR's posterior division (2.9058) and RB (2.9101) are told apart by trying each stored speed; E4's 10 mm-chord arc is interpolated between the 0.5 mm points (it was quantised to 0.5 mm).
+- Model: v5 network v3 topology unchanged (data/biv/<H>/purkinje/network.npz, read only; 6G8DD8S5 classified on network_intact.npz, cut kept). Junction delays 4 / 2 ms unchanged. No tissue, no beat.
+- Output: data/biv/<H>/purkinje_v51/network_v51.npz (+ network_intact_v51.npz, 6G8DD8S5; sha256 in manifests/v51_data_sha256.tsv), params/params_network_<H>_v51.json, analysis/v51_2026-10-15/04_build/network51_<H>.json, predictions_E9.md (written before any v5.1 beat).
+
+## 2026-10-18 15:08 PC time (UTC 13:08): DEVIATION, model v5.1 conduction system (decisions E and B, Alex 15 Oct 2026 05:18-05:19 UTC; FASCICLE_SPEED = 2.0 m/s, Alex 15 Oct 2026 08:31:01 UTC)
+- E1: no speed from a timing target or per heart. The v5 Durrer-offset calibration (14_purkinje.py build 331-346: proximal 2.0-3.36 m/s per path) is not used by any v5.1 code (grep in README_4d.md).
+- E2-E3 classes and speeds, the same in all hearts:
+  - HIS: no edges, because the v5 root is the LB/RB split itself (a distal His).
+  - RB and LB_TRUNK: 1.5 m/s (Kupersmith 1973).
+  - FASCICLE (to Durrer's three sites): 2.0 m/s.
+  - DISTAL (RB apical branch, divisions beyond the Durrer sites, distal trees): v_edge.
+  - Edges per heart, RB / LB_TRUNK / FASCICLE / DISTAL: Y5HYEDL4 67 / 17 / 109 / 9471; 6G8DD8S5 54 / 27 (15 cut) / 75 / 7655; 7D98EVAR 59 / 13 / 91 / 7936.
+- E4: R10 1.036-1.068 in every segment, none above 1.10, so no speed is scaled.
+- E6: 6G8DD8S5 cut diff vs v5 empty. E8 guard pass (final network, all five classes).
+- P5 v_edge, replacing 2.0 m/s per edge:
+  - Y5HYEDL4 3.00, 6G8DD8S5 2.88, 7D98EVAR 2.84 m/s.
+  - Median straight-line speed at 2.0 m/s per edge: 1.33 / 1.39 / 1.41 m/s.
+  - The brief expected 3.6-3.9 m/s (inference); all are below 4.0 m/s.
+- P6 pass (de-duplicated graph gives the same v_edge). P7 pass (median A_j 1.9975 / 2.0032 / 1.9967 m/s).
+- P8 (report): median D / |dt| for LV septal junction pairs 15-25 mm apart in one subtree: 3.32 / 2.57 / 3.89 m/s.
+- F19:
+  - Exact duplicate node pairs: 2803 / 2227 / 2307.
+  - v5 shared division edges with different speeds: 2 / 6 / 0.
+  - Removing them changes the v5 times: 6G8DD8S5 septal Durrer site 18.94 -> 19.79 ms (reproduces the audit); Y5HYEDL4 septal 18.29 -> 18.45 ms.
+  - In v5.1 every duplicate has one speed, and de-duplication changes no time (max 0.0 ms). Duplicates are kept.
+- E9 (analytic, before any beat, predictions_E9.md): His -> first muscle 21.9 / 40.8 / 20.8 ms; Durrer spread 12.6 / n/a / 11.2 ms (1 / - / 2 of 3 sites within 5 ms).
+- Status update (2026-10-18_v51_04c_acceptC_nocap), PC clock 15:09: the 7 unrun 7D98EVAR sites all finished (65-79 s each, totals 224-264 ms, no unactivated nodes). The two reruns without a cap (lv_free_wall_phi180_z0.5_d90, then rv_free_wall_q50_z0.5_d10; max_iter 2147483647) are running; the first again shows no progress past t = 0 after the first minute.
+- Acceptance C, final with the adopted nodal solver (17 Oct factors), PC clock 15:09 (`acceptance_c.py compare nodal 7D98EVAR`): 7D98EVAR 0 / 10 sites pass (median |dt| 1.2-6.5 ms, p95 1.7-6.2 % of total, totals 0.995-1.030, mean graph - openCARP -1.3 to +7.1 ms; worst at the right coronary cusp, as in 6G8DD8S5). Measured error of the nodal graph solver against openCARP, all hearts: median |dt| 0.7-1.5 ms (Y5HYEDL4), 1.1-5.7 ms (6G8DD8S5), 1.2-6.5 ms (7D98EVAR); totals within -1.8 to +3.0 %. Reported as the solver's error (Alex, 17 Oct 07:58 UTC); the 27-site monodomain check judges accuracy. File analysis/v51_2026-10-15/04_build/acceptance_c_nodal_2026-10-18_7D98EVAR.json (replaces the 3-site version of 14:44).

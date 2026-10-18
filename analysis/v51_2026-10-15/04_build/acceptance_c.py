@@ -80,7 +80,7 @@ def run():
             sys.exit(3 if 'cap' in status[sid]['outcome'] else 4)
 
 
-def one_run(h, sid, d, mesh, greg, sites, max_iter):
+def one_run(h, sid, d, mesh, greg, sites, max_iter, cap_s=CAP_S):
     os.makedirs(d, exist_ok=True)
     with open(os.path.join(d, 'stim.vtx'), 'w') as fh:
         fh.write(f"1\nintra\n{int(sites[sid]['node'])}\n")
@@ -91,7 +91,7 @@ def one_run(h, sid, d, mesh, greg, sites, max_iter):
     t0 = time.time()
     try:
         with open(os.path.join(d, 'openCARP.log'), 'w') as log:
-            subprocess.run([str(c) for c in cmd], stdout=log, stderr=subprocess.STDOUT, check=True, timeout=CAP_S, env=env)
+            subprocess.run([str(c) for c in cmd], stdout=log, stderr=subprocess.STDOUT, check=True, timeout=cap_s, env=env)
     except subprocess.TimeoutExpired:
         return {'outcome': 'hit the 20-minute cap', 'wall_s': round(time.time() - t0, 1), 'max_iter': max_iter}
     except subprocess.CalledProcessError as ex:
@@ -134,6 +134,31 @@ def retry():
             st['outcome'], st['act_dir'] = 'ok (retry)', 'retry'
         elif 'cap' in r['outcome']:
             st['outcome'] = 'openCARP non-convergence (20-minute cap hit twice)'
+        status[sid] = st
+        json.dump(status, open(status_f, 'w'), indent=1)
+        print(f'{h} {sid} retry: {r}', flush=True)
+
+
+def run_nocap():
+    """Alex 18 Oct 2026 12:59:10 UTC: "Nodal is good. Drop any caps or limits." No time cap: the unrun sites first
+    (max_iter 1e9, as every other run), then each capped site once more (max_iter 2147483647, into <site>/retry/). A run
+    that fails is recorded and the batch goes on."""
+    h = os.environ['HEART']
+    mesh, greg, sites = setup(h)
+    status_f = os.path.join(rundir(h), 'status.json')
+    status = json.load(open(status_f)) if os.path.exists(status_f) else {}
+    unrun = [sid for sid in SITES if not status.get(sid, {}).get('outcome', '').startswith('ok') and 'cap' not in status.get(sid, {}).get('outcome', '')]
+    capped = [sid for sid in SITES if 'cap' in status.get(sid, {}).get('outcome', '') and 'retry' not in status[sid]]
+    for sid in unrun:
+        status[sid] = one_run(h, sid, rundir(h, sid), mesh, greg, sites, MAX_ITER, cap_s=None) | {'cap': 'none (Alex 18 Oct 12:59 UTC)'}
+        json.dump(status, open(status_f, 'w'), indent=1)
+        print(f"{h} {sid}: {status[sid]}", flush=True)
+    for sid in capped:
+        st = status[sid]
+        r = one_run(h, sid, os.path.join(rundir(h, sid), 'retry'), mesh, greg, sites, MAX_ITER_RETRY, cap_s=None) | {'cap': 'none (Alex 18 Oct 12:59 UTC)'}
+        st['retry'] = r
+        if r['outcome'] == 'ok':
+            st['outcome'], st['act_dir'] = 'ok (retry)', 'retry'
         status[sid] = st
         json.dump(status, open(status_f, 'w'), indent=1)
         print(f'{h} {sid} retry: {r}', flush=True)
@@ -194,4 +219,4 @@ def compare():
 
 
 if __name__ == '__main__':
-    {'run': run, 'retry': retry, 'compare': compare}[sys.argv[1]]()
+    {'run': run, 'retry': retry, 'run_nocap': run_nocap, 'compare': compare}[sys.argv[1]]()

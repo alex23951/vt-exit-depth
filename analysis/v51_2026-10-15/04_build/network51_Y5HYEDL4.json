@@ -1,0 +1,287 @@
+{
+ "heart": "Y5HYEDL4",
+ "version": "v51-network-1",
+ "network_v51": "data/biv/Y5HYEDL4/purkinje_v51/network_v51.npz",
+ "network_v51_sha256": "8d89e1d58fe9b74494761af18307666c432bd8be95843c2d357e16b94bde289e",
+ "E1": "no Durrer-offset calibration: speeds from CLASS_SPEED, R10 and P5 only (network51.py)",
+ "E2_segments": {
+  "RB": {
+   "class": "RB",
+   "edges": 67,
+   "arc_mm": 78.89,
+   "chord_mm": 63.05,
+   "R10": 1.0474,
+   "R10_method": "median over 138 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 1.5,
+   "speed_m_s": 1.5,
+   "transit_ms": 52.594
+  },
+  "LB_TRUNK": {
+   "class": "LB_TRUNK",
+   "edges": 13,
+   "arc_mm": 11.46,
+   "chord_mm": 10.92,
+   "R10": 1.044,
+   "R10_method": "median over 2 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 1.5,
+   "speed_m_s": 1.5,
+   "transit_ms": 7.638
+  },
+  "FASCICLE_anterior": {
+   "class": "FASCICLE",
+   "edges": 23,
+   "arc_mm": 20.44,
+   "chord_mm": 18.95,
+   "R10": 1.0682,
+   "R10_method": "median over 19 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 2.0,
+   "speed_m_s": 2.0,
+   "transit_ms": 10.219
+  },
+  "FASCICLE_septal": {
+   "class": "FASCICLE",
+   "edges": 36,
+   "arc_mm": 30.51,
+   "chord_mm": 28.85,
+   "R10": 1.0361,
+   "R10_method": "median over 41 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 2.0,
+   "speed_m_s": 2.0,
+   "transit_ms": 15.253
+  },
+  "FASCICLE_posterior": {
+   "class": "FASCICLE",
+   "edges": 54,
+   "arc_mm": 48.07,
+   "chord_mm": 45.66,
+   "R10": 1.042,
+   "R10_method": "median over 76 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 2.0,
+   "speed_m_s": 2.0,
+   "transit_ms": 24.036
+  },
+  "HIS": {
+   "class": "HIS",
+   "edges": 0,
+   "arc_mm": 0.0,
+   "note": "the v5 network root (His point on the LV septal endocardium below the aortic annulus at the right coronary cusp, under the membranous septum) is the LB/RB split itself"
+  }
+ },
+ "LB_shared_prefix_edges": 0,
+ "shared_division_edges_off_the_prefix": 2,
+ "durrer_sites": {
+  "anterior": {
+   "mesh_node": 65188,
+   "uvc_z_phi": [
+    0.798,
+    59.8
+   ]
+  },
+  "septal": {
+   "mesh_node": 369975,
+   "uvc_z_phi": [
+    0.499,
+    -0.2
+   ]
+  },
+  "posterior": {
+   "mesh_node": 1411,
+   "uvc_z_phi": [
+    0.335,
+    -59.3
+   ]
+  }
+ },
+ "E5_E7_delays_ms": {
+  "antegrade": 4.0,
+  "retrograde": 2.0
+ },
+ "E6": {
+  "cut": false,
+  "removed_edges": 0,
+  "removed_classes": [],
+  "diff_vs_v5_cut": "n/a"
+ },
+ "E8": {
+  "E8_pass": true,
+  "edges_per_class": {
+   "HIS": 0,
+   "RB": 67,
+   "LB_TRUNK": 17,
+   "FASCICLE": 109,
+   "DISTAL": 9471
+  },
+  "class_values_m_s": {
+   "HIS": 1.5,
+   "RB": 1.5,
+   "LB_TRUNK": 1.5,
+   "FASCICLE": 2.0,
+   "DISTAL": 3.0
+  },
+  "R10_factors": {
+   "RB": 1.0,
+   "LB_TRUNK": 1.0,
+   "FASCICLE_anterior": 1.0,
+   "FASCICLE_septal": 1.0,
+   "FASCICLE_posterior": 1.0
+  }
+ },
+ "F19": {
+  "duplicate_node_pairs": 2805,
+  "v5_duplicates_with_different_speeds (shared division edges)": 2,
+  "v5_exact_duplicates": 2803,
+  "v51_duplicates_with_different_speeds": 0,
+  "v51_max_abs_dt_ms_dedup_vs_raw (His beat, network)": 0.0,
+  "v5_intact_his_to_durrer_site_shared_edges_fastest_vs_own_copies": {
+   "anterior": {
+    "all_copies_ms": 15.95,
+    "own_copies_only_ms": 15.95
+   },
+   "septal": {
+    "all_copies_ms": 18.29,
+    "own_copies_only_ms": 18.45
+   },
+   "posterior": {
+    "all_copies_ms": 20.95,
+    "own_copies_only_ms": 20.95
+   }
+  }
+ },
+ "E9": {
+  "1.5 m/s (v5.1)": {
+   "his_to_durrer_site_ms": {
+    "anterior": 17.86,
+    "septal": 23.15,
+    "posterior": 30.43
+   },
+   "his_to_moderator_band_end_ms": 52.59,
+   "durrer_sites_within_5ms_of_earliest": 1,
+   "durrer_spread_ms": 12.57,
+   "his_to_first_junction_ms": 17.86,
+   "his_to_first_muscle_ms": 21.86,
+   "first_junction_side": "lv"
+  },
+  "1.27 m/s": {
+   "his_to_durrer_site_ms": {
+    "anterior": 19.24,
+    "septal": 24.72,
+    "posterior": 32.0
+   },
+   "his_to_moderator_band_end_ms": 62.12,
+   "durrer_sites_within_5ms_of_earliest": 1,
+   "durrer_spread_ms": 12.76,
+   "his_to_first_junction_ms": 19.24,
+   "his_to_first_muscle_ms": 23.24,
+   "first_junction_side": "lv"
+  },
+  "1.8 m/s": {
+   "his_to_durrer_site_ms": {
+    "anterior": 16.58,
+    "septal": 21.7,
+    "posterior": 28.98
+   },
+   "his_to_moderator_band_end_ms": 43.83,
+   "durrer_sites_within_5ms_of_earliest": 1,
+   "durrer_spread_ms": 12.4,
+   "his_to_first_junction_ms": 16.58,
+   "his_to_first_muscle_ms": 20.58,
+   "first_junction_side": "lv"
+  }
+ },
+ "P2_roots": [
+  {
+   "mesh_node": 65188,
+   "classes": [
+    "DISTAL",
+    "FASCICLE"
+   ],
+   "uvc_z_phi": [
+    0.798,
+    59.8
+   ]
+  },
+  {
+   "mesh_node": 369975,
+   "classes": [
+    "DISTAL",
+    "FASCICLE"
+   ],
+   "uvc_z_phi": [
+    0.499,
+    -0.2
+   ]
+  },
+  {
+   "mesh_node": 1411,
+   "classes": [
+    "DISTAL",
+    "FASCICLE"
+   ],
+   "uvc_z_phi": [
+    0.335,
+    -59.3
+   ]
+  },
+  {
+   "mesh_node": 16331,
+   "classes": [
+    "DISTAL",
+    "RB"
+   ],
+   "uvc_z_phi": [
+    0.351,
+    2.8
+   ]
+  },
+  {
+   "mesh_node": 311002,
+   "classes": [
+    "DISTAL",
+    "RB"
+   ],
+   "uvc_z_phi": [
+    0.361,
+    0.2
+   ]
+  }
+ ],
+ "P3_P5": {
+  "v0_m_s": 2.0,
+  "junctions_D_ge_10mm": 3499,
+  "median_A0_m_s": 1.3316,
+  "v_edge_unrounded_m_s": 3.0038,
+  "v_edge_m_s": 3.0,
+  "v_edge_gt_4.0_report": false
+ },
+ "P6": {
+  "v_edge_dedup_unrounded_m_s": 3.0038,
+  "pass_within_1pct": true
+ },
+ "P7": {
+  "median_A_m_s": 1.9975,
+  "IQR": [
+   1.7,
+   2.265
+  ],
+  "LV_only_median": 1.996,
+  "RV_only_median": 2.009,
+  "all_junction_median_no_D_filter": 2.009,
+  "mean": 1.999,
+  "ratio_of_sums": 1.919,
+  "junctions_used": 3499,
+  "junctions_total": 3665,
+  "junctions_unreached": 0,
+  "pass_2.00_pm_0.02": true
+ },
+ "P8": {
+  "pairs": 5618,
+  "median_D_over_abs_dt_m_s": 3.324,
+  "septal_rule": "LV junctions with |UVC phi| <= 45 deg (phi centred near the septum, audit F02)"
+ },
+ "wall_s": 0.5
+}

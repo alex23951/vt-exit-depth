@@ -1,7 +1,7 @@
 {
  "gates": "median |dt| <= 1 ms; p95 |dt| <= 2 % of openCARP total; total within +-2 %; no -1 in act",
  "metric": "nodal",
- "written": "2026-10-18 14:43:05 CEST",
+ "written": "2026-10-18 15:08:43 CEST",
  "hearts": {
   "7D98EVAR": {
    "sites": {
@@ -95,51 +95,212 @@
      "pass": null
     },
     "rv_free_wall_q50_z0.5_d90": {
-     "openCARP_outcome": "not run (batch stopped earlier)",
-     "pass": null
+     "median_abs_dt_ms": 1.451,
+     "p95_abs_dt_ms": 5.016,
+     "p95_pct_of_total": 1.9,
+     "total_openCARP_ms": 264.44,
+     "total_graph_ms": 264.54,
+     "total_ratio": 1.0004,
+     "mean_dt_graph_minus_openCARP_ms": 1.229,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 78.5,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.579,
+       "graph": 0.523
+      },
+      "sheet": {
+       "openCARP": 0.306,
+       "graph": 0.292
+      },
+      "normal": {
+       "openCARP": 0.342,
+       "graph": 0.346
+      }
+     }
     },
     "rvot_septal_z_d50": {
-     "openCARP_outcome": "not run (batch stopped earlier)",
-     "pass": null
+     "median_abs_dt_ms": 2.358,
+     "p95_abs_dt_ms": 11.734,
+     "p95_pct_of_total": 5.2,
+     "total_openCARP_ms": 225.85,
+     "total_graph_ms": 224.8,
+     "total_ratio": 0.9954,
+     "mean_dt_graph_minus_openCARP_ms": 3.145,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 69.4,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.578,
+       "graph": 0.518
+      },
+      "sheet": {
+       "openCARP": 0.302,
+       "graph": 0.288
+      },
+      "normal": {
+       "openCARP": 0.351,
+       "graph": 0.341
+      }
+     }
     },
     "rvot_free_wall_z_d50": {
-     "openCARP_outcome": "not run (batch stopped earlier)",
-     "pass": null
+     "median_abs_dt_ms": 1.209,
+     "p95_abs_dt_ms": 5.718,
+     "p95_pct_of_total": 2.45,
+     "total_openCARP_ms": 233.19,
+     "total_graph_ms": 233.89,
+     "total_ratio": 1.003,
+     "mean_dt_graph_minus_openCARP_ms": 1.083,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 65.1,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.579,
+       "graph": 0.531
+      },
+      "sheet": {
+       "openCARP": 0.309,
+       "graph": 0.293
+      },
+      "normal": {
+       "openCARP": 0.342,
+       "graph": 0.344
+      }
+     }
     },
     "aortic_cusp_rcc_z_d50": {
-     "openCARP_outcome": "not run (batch stopped earlier)",
-     "pass": null
+     "median_abs_dt_ms": 6.48,
+     "p95_abs_dt_ms": 14.063,
+     "p95_pct_of_total": 6.15,
+     "total_openCARP_ms": 228.51,
+     "total_graph_ms": 234.95,
+     "total_ratio": 1.0282,
+     "mean_dt_graph_minus_openCARP_ms": 7.071,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 70.6,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.576,
+       "graph": 0.502
+      },
+      "sheet": {
+       "openCARP": 0.308,
+       "graph": 0.294
+      },
+      "normal": {
+       "openCARP": 0.363,
+       "graph": 0.346
+      }
+     }
     },
     "aortic_cusp_lcc_z_d50": {
-     "openCARP_outcome": "not run (batch stopped earlier)",
-     "pass": null
+     "median_abs_dt_ms": 3.238,
+     "p95_abs_dt_ms": 10.635,
+     "p95_pct_of_total": 4.66,
+     "total_openCARP_ms": 228.17,
+     "total_graph_ms": 230.77,
+     "total_ratio": 1.0114,
+     "mean_dt_graph_minus_openCARP_ms": 3.121,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 72.8,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.58,
+       "graph": 0.524
+      },
+      "sheet": {
+       "openCARP": 0.309,
+       "graph": 0.289
+      },
+      "normal": {
+       "openCARP": 0.352,
+       "graph": 0.344
+      }
+     }
     },
     "lv_summit_superior_z_d50": {
-     "openCARP_outcome": "not run (batch stopped earlier)",
-     "pass": null
+     "median_abs_dt_ms": 2.253,
+     "p95_abs_dt_ms": 9.773,
+     "p95_pct_of_total": 4.36,
+     "total_openCARP_ms": 224.21,
+     "total_graph_ms": 228.75,
+     "total_ratio": 1.0203,
+     "mean_dt_graph_minus_openCARP_ms": 1.644,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 71.7,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.58,
+       "graph": 0.527
+      },
+      "sheet": {
+       "openCARP": 0.284,
+       "graph": 0.279
+      },
+      "normal": {
+       "openCARP": 0.344,
+       "graph": 0.345
+      }
+     }
     },
     "lv_summit_inferior_lateral_z_d50": {
-     "openCARP_outcome": "not run (batch stopped earlier)",
-     "pass": null
+     "median_abs_dt_ms": 2.772,
+     "p95_abs_dt_ms": 11.531,
+     "p95_pct_of_total": 4.83,
+     "total_openCARP_ms": 238.95,
+     "total_graph_ms": 245.99,
+     "total_ratio": 1.0295,
+     "mean_dt_graph_minus_openCARP_ms": 1.585,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 71.0,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.579,
+       "graph": 0.539
+      },
+      "sheet": {
+       "openCARP": 0.288,
+       "graph": 0.282
+      },
+      "normal": {
+       "openCARP": 0.345,
+       "graph": 0.344
+      }
+     }
     }
    },
-   "sites_passing": "0 / 3 compared (12 planned)",
+   "sites_passing": "0 / 10 compared (12 planned)",
    "range_over_sites": {
     "median_abs_dt_ms": [
-     1.796,
-     2.594
+     1.209,
+     6.48
     ],
     "p95_pct_of_total": [
      1.74,
-     3.55
+     6.15
     ],
     "total_ratio": [
-     1.0125,
-     1.0185
+     0.9954,
+     1.0295
     ],
     "mean_dt_graph_minus_openCARP_ms": [
      -1.286,
-     2.175
+     7.071
     ]
    },
    "factors": {
@@ -157,7 +318,7 @@
     "fibre_sha256": "e1252fcf69b11df3e6ab386d1e2897be31ab7b9f298acbac546d9635ae3a4562",
     "q_key": "b605fd50b1f8fd467a5295c1e81e0c3cdcd7571bfc6d15a918688df9205b5c6f"
    },
-   "wall_s": 9.2
+   "wall_s": 16.6
   }
  }
 }

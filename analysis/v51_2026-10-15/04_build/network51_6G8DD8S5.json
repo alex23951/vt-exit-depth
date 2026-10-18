@@ -1,0 +1,289 @@
+{
+ "heart": "6G8DD8S5",
+ "version": "v51-network-1",
+ "network_v51": "data/biv/6G8DD8S5/purkinje_v51/network_v51.npz",
+ "network_v51_sha256": "e3ac9ef842ea82fc3c9f28aaa0570a6bee2c6091f66397d28bef9bf68f14af5c",
+ "E1": "no Durrer-offset calibration: speeds from CLASS_SPEED, R10 and P5 only (network51.py)",
+ "E2_segments": {
+  "RB": {
+   "class": "RB",
+   "edges": 54,
+   "arc_mm": 67.44,
+   "chord_mm": 60.31,
+   "R10": 1.0491,
+   "R10_method": "median over 115 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 1.5,
+   "speed_m_s": 1.5,
+   "transit_ms": 44.958
+  },
+  "LB_TRUNK": {
+   "class": "LB_TRUNK",
+   "edges": 15,
+   "arc_mm": 13.48,
+   "chord_mm": 12.7,
+   "R10": 1.0506,
+   "R10_method": "median over 6 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 1.5,
+   "speed_m_s": 1.5,
+   "transit_ms": 8.988
+  },
+  "FASCICLE_anterior": {
+   "class": "FASCICLE",
+   "edges": 24,
+   "arc_mm": 21.1,
+   "chord_mm": 20.05,
+   "R10": 1.0359,
+   "R10_method": "median over 22 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 2.0,
+   "speed_m_s": 2.0,
+   "transit_ms": 10.549
+  },
+  "FASCICLE_septal": {
+   "class": "FASCICLE",
+   "edges": 25,
+   "arc_mm": 22.8,
+   "chord_mm": 21.55,
+   "R10": 1.0468,
+   "R10_method": "median over 25 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 2.0,
+   "speed_m_s": 2.0,
+   "transit_ms": 11.399
+  },
+  "FASCICLE_posterior": {
+   "class": "FASCICLE",
+   "edges": 38,
+   "arc_mm": 36.81,
+   "chord_mm": 35.31,
+   "R10": 1.0381,
+   "R10_method": "median over 53 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 2.0,
+   "speed_m_s": 2.0,
+   "transit_ms": 18.406
+  },
+  "HIS": {
+   "class": "HIS",
+   "edges": 0,
+   "arc_mm": 0.0,
+   "note": "the v5 network root (His point on the LV septal endocardium below the aortic annulus at the right coronary cusp, under the membranous septum) is the LB/RB split itself"
+  }
+ },
+ "LB_shared_prefix_edges": 0,
+ "shared_division_edges_off_the_prefix": 6,
+ "durrer_sites": {
+  "anterior": {
+   "mesh_node": 22502,
+   "uvc_z_phi": [
+    0.801,
+    59.0
+   ]
+  },
+  "septal": {
+   "mesh_node": 20374,
+   "uvc_z_phi": [
+    0.504,
+    1.9
+   ]
+  },
+  "posterior": {
+   "mesh_node": 30705,
+   "uvc_z_phi": [
+    0.326,
+    -58.7
+   ]
+  }
+ },
+ "E5_E7_delays_ms": {
+  "antegrade": 4.0,
+  "retrograde": 2.0
+ },
+ "E6": {
+  "cut": true,
+  "removed_edges": 15,
+  "removed_classes": [
+   "LB_TRUNK"
+  ],
+  "diff_vs_v5_cut": "empty: the kept edges equal v5 network.npz edge for edge (order and v5 speeds checked)"
+ },
+ "E8": {
+  "E8_pass": true,
+  "edges_per_class": {
+   "HIS": 0,
+   "RB": 54,
+   "LB_TRUNK": 27,
+   "FASCICLE": 75,
+   "DISTAL": 7655
+  },
+  "class_values_m_s": {
+   "HIS": 1.5,
+   "RB": 1.5,
+   "LB_TRUNK": 1.5,
+   "FASCICLE": 2.0,
+   "DISTAL": 2.88
+  },
+  "R10_factors": {
+   "RB": 1.0,
+   "LB_TRUNK": 1.0,
+   "FASCICLE_anterior": 1.0,
+   "FASCICLE_septal": 1.0,
+   "FASCICLE_posterior": 1.0
+  }
+ },
+ "F19": {
+  "duplicate_node_pairs": 2233,
+  "v5_duplicates_with_different_speeds (shared division edges)": 6,
+  "v5_exact_duplicates": 2227,
+  "v51_duplicates_with_different_speeds": 0,
+  "v51_max_abs_dt_ms_dedup_vs_raw (His beat, network)": 0.0,
+  "v5_intact_his_to_durrer_site_shared_edges_fastest_vs_own_copies": {
+   "anterior": {
+    "all_copies_ms": 17.29,
+    "own_copies_only_ms": 17.29
+   },
+   "septal": {
+    "all_copies_ms": 18.94,
+    "own_copies_only_ms": 19.79
+   },
+   "posterior": {
+    "all_copies_ms": 22.29,
+    "own_copies_only_ms": 22.29
+   }
+  }
+ },
+ "E9": {
+  "1.5 m/s (v5.1)": {
+   "his_to_durrer_site_ms": {
+    "anterior": "not reached through the network (left bundle cut)",
+    "septal": "not reached through the network (left bundle cut)",
+    "posterior": "not reached through the network (left bundle cut)"
+   },
+   "his_to_moderator_band_end_ms": 44.96,
+   "durrer_sites_within_5ms_of_earliest": 0,
+   "durrer_spread_ms": null,
+   "his_to_first_junction_ms": 36.77,
+   "his_to_first_muscle_ms": 40.77,
+   "first_junction_side": "rv"
+  },
+  "1.27 m/s": {
+   "his_to_durrer_site_ms": {
+    "anterior": "not reached through the network (left bundle cut)",
+    "septal": "not reached through the network (left bundle cut)",
+    "posterior": "not reached through the network (left bundle cut)"
+   },
+   "his_to_moderator_band_end_ms": 53.1,
+   "durrer_sites_within_5ms_of_earliest": 0,
+   "durrer_spread_ms": null,
+   "his_to_first_junction_ms": 42.71,
+   "his_to_first_muscle_ms": 46.71,
+   "first_junction_side": "rv"
+  },
+  "1.8 m/s": {
+   "his_to_durrer_site_ms": {
+    "anterior": "not reached through the network (left bundle cut)",
+    "septal": "not reached through the network (left bundle cut)",
+    "posterior": "not reached through the network (left bundle cut)"
+   },
+   "his_to_moderator_band_end_ms": 37.46,
+   "durrer_sites_within_5ms_of_earliest": 0,
+   "durrer_spread_ms": null,
+   "his_to_first_junction_ms": 31.3,
+   "his_to_first_muscle_ms": 35.3,
+   "first_junction_side": "rv"
+  }
+ },
+ "P2_roots": [
+  {
+   "mesh_node": 22502,
+   "classes": [
+    "DISTAL",
+    "FASCICLE"
+   ],
+   "uvc_z_phi": [
+    0.801,
+    59.0
+   ]
+  },
+  {
+   "mesh_node": 20374,
+   "classes": [
+    "DISTAL",
+    "FASCICLE"
+   ],
+   "uvc_z_phi": [
+    0.504,
+    1.9
+   ]
+  },
+  {
+   "mesh_node": 30705,
+   "classes": [
+    "DISTAL",
+    "FASCICLE"
+   ],
+   "uvc_z_phi": [
+    0.326,
+    -58.7
+   ]
+  },
+  {
+   "mesh_node": 46375,
+   "classes": [
+    "DISTAL",
+    "RB"
+   ],
+   "uvc_z_phi": [
+    0.349,
+    -4.2
+   ]
+  },
+  {
+   "mesh_node": 26386,
+   "classes": [
+    "DISTAL",
+    "RB"
+   ],
+   "uvc_z_phi": [
+    0.361,
+    11.1
+   ]
+  }
+ ],
+ "P3_P5": {
+  "v0_m_s": 2.0,
+  "junctions_D_ge_10mm": 2981,
+  "median_A0_m_s": 1.3911,
+  "v_edge_unrounded_m_s": 2.8753,
+  "v_edge_m_s": 2.88,
+  "v_edge_gt_4.0_report": false
+ },
+ "P6": {
+  "v_edge_dedup_unrounded_m_s": 2.8753,
+  "pass_within_1pct": true
+ },
+ "P7": {
+  "median_A_m_s": 2.0032,
+  "IQR": [
+   1.724,
+   2.263
+  ],
+  "LV_only_median": 2.03,
+  "RV_only_median": 1.946,
+  "all_junction_median_no_D_filter": 2.013,
+  "mean": 1.994,
+  "ratio_of_sums": 1.897,
+  "junctions_used": 2981,
+  "junctions_total": 3192,
+  "junctions_unreached": 0,
+  "pass_2.00_pm_0.02": true
+ },
+ "P8": {
+  "pairs": 1493,
+  "median_D_over_abs_dt_m_s": 2.569,
+  "septal_rule": "LV junctions with |UVC phi| <= 45 deg (phi centred near the septum, audit F02)"
+ },
+ "wall_s": 0.5
+}

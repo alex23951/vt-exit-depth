@@ -1,0 +1,84 @@
+{
+ "heart": "6G8DD8S5",
+ "version": "v51-network-1",
+ "network_v51_sha256": "e3ac9ef842ea82fc3c9f28aaa0570a6bee2c6091f66397d28bef9bf68f14af5c",
+ "root_position": "distal His: root at the LB/RB split (branching portion under the membranous septum, LV septal endocardium below the aortic annulus at the right coronary cusp)",
+ "segments": {
+  "RB": {
+   "class": "RB",
+   "edges": 54,
+   "arc_mm": 67.44,
+   "chord_mm": 60.31,
+   "R10": 1.0491,
+   "R10_method": "median over 115 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 1.5,
+   "speed_m_s": 1.5,
+   "transit_ms": 44.958
+  },
+  "LB_TRUNK": {
+   "class": "LB_TRUNK",
+   "edges": 15,
+   "arc_mm": 13.48,
+   "chord_mm": 12.7,
+   "R10": 1.0506,
+   "R10_method": "median over 6 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 1.5,
+   "speed_m_s": 1.5,
+   "transit_ms": 8.988
+  },
+  "FASCICLE_anterior": {
+   "class": "FASCICLE",
+   "edges": 24,
+   "arc_mm": 21.1,
+   "chord_mm": 20.05,
+   "R10": 1.0359,
+   "R10_method": "median over 22 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 2.0,
+   "speed_m_s": 2.0,
+   "transit_ms": 10.549
+  },
+  "FASCICLE_septal": {
+   "class": "FASCICLE",
+   "edges": 25,
+   "arc_mm": 22.8,
+   "chord_mm": 21.55,
+   "R10": 1.0468,
+   "R10_method": "median over 25 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 2.0,
+   "speed_m_s": 2.0,
+   "transit_ms": 11.399
+  },
+  "FASCICLE_posterior": {
+   "class": "FASCICLE",
+   "edges": 38,
+   "arc_mm": 36.81,
+   "chord_mm": 35.31,
+   "R10": 1.0381,
+   "R10_method": "median over 53 points",
+   "flagged_R10_gt_1.10": false,
+   "nominal_m_s": 2.0,
+   "speed_m_s": 2.0,
+   "transit_ms": 18.406
+  },
+  "HIS": {
+   "class": "HIS",
+   "edges": 0,
+   "arc_mm": 0.0,
+   "note": "the v5 network root (His point on the LV septal endocardium below the aortic annulus at the right coronary cusp, under the membranous septum) is the LB/RB split itself"
+  }
+ },
+ "distal": {
+  "class": "DISTAL",
+  "edges": 7655,
+  "v_edge_m_s": 2.88
+ },
+ "junction_delays_ms": {
+  "antegrade": 4.0,
+  "retrograde": 2.0
+ },
+ "lbbb_cut": true
+}
