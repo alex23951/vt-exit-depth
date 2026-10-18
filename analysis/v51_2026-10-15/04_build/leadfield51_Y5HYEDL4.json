@@ -1,0 +1,55 @@
+{
+ "run": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/04_build/Y5HYEDL4/leadfield_v51",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/Y5HYEDL4/torso/full_nofast_blood_v51",
+ "sigma_S_m": {
+  "fibre": {
+   "gi": 0.174,
+   "ge": 0.625
+  },
+  "sheet": {
+   "gi": 0.06263999999999999,
+   "ge": 0.22499999999999998
+  },
+  "normal": {
+   "gi": 0.11136000000000001,
+   "ge": 0.4000000000000001
+  }
+ },
+ "g_blood": 0.7,
+ "g_torso": 0.2,
+ "np": 2,
+ "parts": {
+  "limb": {
+   "wall_s": 160,
+   "peak_used_mb": 6155,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "v13": {
+   "wall_s": 162,
+   "peak_used_mb": 6451,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "v46": {
+   "wall_s": 162,
+   "peak_used_mb": 6444,
+   "watchdog_killed": false,
+   "returncode": 0
+  }
+ },
+ "lf_files": [
+  "LF_I.igb",
+  "LF_II.igb",
+  "LF_III.igb",
+  "LF_V1.igb",
+  "LF_V2.igb",
+  "LF_V3.igb",
+  "LF_V4.igb",
+  "LF_V5.igb",
+  "LF_V6.igb",
+  "LF_aVF.igb",
+  "LF_aVL.igb",
+  "LF_aVR.igb"
+ ]
+}

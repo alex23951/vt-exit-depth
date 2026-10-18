@@ -280,5 +280,137 @@ def lon():
     print(json.dumps({'heart': h, 'heart_elements': nh, 'written': out}))
 
 
+# ------------------------------------------------------------------ C9: lead fields and ECG weights
+OPTS = os.path.join(REPO, 'analysis', 'axis_2026-10-10', 'ellip_amg_light.opts')
+LEADS = ['I', 'II', 'III', 'aVR', 'aVL', 'aVF', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6']
+
+
+def biv_module(name, fname, h):
+    """sims/biv_model modules read HEART at import; sims/biv_model must be first on sys.path (site-packages 'common')."""
+    import importlib.util
+    os.environ['HEART'] = h
+    B = os.path.join(REPO, 'sims', 'biv_model')
+    if sys.path[0] != B:
+        sys.path.insert(0, B)
+    spec = importlib.util.spec_from_file_location(name, os.path.join(B, fname))
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+    return m
+
+
+def lf_dir(h):
+    return os.path.join(REPO, 'runs', 'v51_2026-10-15', '04_build', h, 'leadfield_v51')
+
+
+def leadfield(np_=2, min_mb=900):
+    """As 15_conductor.py leadfield() (three openCARP runs of <= 3 leads, light AMG options, memory watchdog, aVR / aVL /
+    aVF from I and II), with the v5.1 mesh (full_nofast_blood_v51) and v5.1 conductivities; heart tag 1, torso 100 at
+    0.2 S/m, blood 101 at 0.7 S/m."""
+    import signal
+    import subprocess
+    h = os.environ['HEART']
+    CD = biv_module('cd', '15_conductor.py', h)
+    from carputils.leadfield import leadfield_setup
+    sg = json.load(open(os.path.join(REPO, 'params', 'v51_conductivities.json')))['hearts'][h]['sigma_S_m']
+    rid = lf_dir(h)
+    os.makedirs(os.path.join(rid, 'POSTPROC_DIR'), exist_ok=True)
+    vm = CD.small_vm(rid)
+    g = ['-num_gregions', 3, '-gregion[0].num_IDs', 1, '-gregion[0].ID[0]', 1,
+         '-gregion[0].g_il', sg['fibre']['gi'], '-gregion[0].g_el', sg['fibre']['ge'],
+         '-gregion[0].g_it', sg['sheet']['gi'], '-gregion[0].g_et', sg['sheet']['ge'],
+         '-gregion[0].g_in', sg['normal']['gi'], '-gregion[0].g_en', sg['normal']['ge'],
+         '-gregion[1].num_IDs', 1, '-gregion[1].ID[0]', TAG_TORSO, '-gregion[2].num_IDs', 1, '-gregion[2].ID[0]', TAG_BLOOD]
+    for k in ('l', 't', 'n'):
+        g += [f'-gregion[1].g_i{k}', G_TORSO, f'-gregion[1].g_e{k}', G_TORSO, f'-gregion[2].g_i{k}', G_BLOOD, f'-gregion[2].g_e{k}', G_BLOOD]
+    phys = ['-num_phys_regions', 2, '-phys_region[0].ptype', 0, '-phys_region[0].num_IDs', 1, '-phys_region[0].ID[0]', 1,
+            '-phys_region[1].ptype', 1, '-phys_region[1].num_IDs', 3, '-phys_region[1].ID[0]', 1, '-phys_region[1].ID[1]', TAG_TORSO,
+            '-phys_region[1].ID[2]', TAG_BLOOD]
+    stim, elec, opts = leadfield_setup(12, hd(h, 'torso', 'electrodes'), lf_vmfile=vm, ecg_timedt=10)
+    env = dict(os.environ, PATH='/usr/local/lib/opencarp/lib/petsc/bin:' + os.environ.get('PATH', ''))
+    res = {'run': rid, 'mesh': hd(h, 'torso', 'full_nofast_blood_v51'), 'sigma_S_m': sg, 'g_blood': G_BLOOD, 'g_torso': G_TORSO, 'np': np_, 'parts': {}}
+    for part, names in (('limb', ['I', 'II', 'III']), ('v13', ['V1', 'V2', 'V3']), ('v46', ['V4', 'V5', 'V6'])):
+        sub = os.path.join(rid, part)
+        if all(os.path.exists(os.path.join(sub, 'POSTPROC_DIR', f'LF_{n}.igb')) for n in names):
+            res['parts'][part] = 'exists'
+            continue
+        os.makedirs(sub, exist_ok=True)
+        cmd = ['mpiexec', '-n', np_, 'openCARP', '-meshname', hd(h, 'torso', 'full_nofast_blood_v51'), '-simID', sub,
+               '-bidomain', 0, '-dt', 10, '-tend', 10, '-num_imp_regions', 1, '-imp_region[0].im', 'Tomek',
+               '-imp_region[0].num_IDs', 1, '-imp_region[0].ID[0]', 1] + g + phys \
+            + CD.lead_subset(stim, elec, names) + opts + ['-ellip_options_file', OPTS]
+        t0, peak, killed = time.time(), 0, False
+        with open(os.path.join(sub, 'openCARP.log'), 'w') as log:
+            p = subprocess.Popen([str(c) for c in cmd], stdout=log, stderr=subprocess.STDOUT, env=env, start_new_session=True)
+            while p.poll() is None:
+                mi = dict(l.split(':') for l in open('/proc/meminfo').read().splitlines() if ':' in l)
+                av = int(mi['MemAvailable'].split()[0]) // 1024; peak = max(peak, int(mi['MemTotal'].split()[0]) // 1024 - av)
+                if av < min_mb:
+                    os.killpg(p.pid, signal.SIGKILL); killed = True
+                    break
+                time.sleep(2)
+            p.wait()
+        r = {'wall_s': round(time.time() - t0), 'peak_used_mb': peak, 'watchdog_killed': killed, 'returncode': p.returncode}
+        res['parts'][part] = r
+        print(part, r, flush=True)
+        if killed or p.returncode or not all(os.path.exists(os.path.join(sub, 'POSTPROC_DIR', f'LF_{n}.igb')) for n in names):
+            json.dump(res, open(os.path.join(HERE, f'leadfield51_{h}.json'), 'w'), indent=1, default=str)
+            raise RuntimeError(json.dumps(res, default=str))
+    pp = os.path.join(rid, 'POSTPROC_DIR')
+    Z = {}
+    for part, names in (('limb', ['I', 'II', 'III']), ('v13', ['V1', 'V2', 'V3']), ('v46', ['V4', 'V5', 'V6'])):
+        for n in names:
+            b = open(os.path.join(rid, part, 'POSTPROC_DIR', f'LF_{n}.igb'), 'rb').read()
+            hdr, Z[n] = b[:1024], np.frombuffer(b[1024:], dtype='<f4').copy()
+            open(os.path.join(pp, f'LF_{n}.igb'), 'wb').write(b)
+            e = os.path.join(rid, part, 'POSTPROC_DIR', f'ECG_{n}.dat')
+            if os.path.exists(e):
+                open(os.path.join(pp, f'ECG_{n}.dat'), 'w').write(open(e).read())
+    for n, z in (('aVR', -(Z['I'] + Z['II']) / 2), ('aVL', Z['I'] - Z['II'] / 2), ('aVF', Z['II'] - Z['I'] / 2)):
+        open(os.path.join(pp, f'LF_{n}.igb'), 'wb').write(hdr + z.astype('<f4').tobytes())
+    res['lf_files'] = sorted(f for f in os.listdir(pp) if f.startswith('LF_'))
+    json.dump(res, open(os.path.join(HERE, f'leadfield51_{h}.json'), 'w'), indent=1, default=str)
+    print(json.dumps(res, default=str), flush=True)
+
+
+def weights():
+    """C9: weights with sigma_m (c = -1) must reproduce openCARP's own ECG of the lead-field runs (first 10 ms of the
+    heart's template beat) within 0.0002 mV in the 9 computed leads; then the v5.1 weights are written with sigma_i
+    (Alex 13:22:54 UTC) to data/biv/<H>/ecgW_v51.npz."""
+    h = os.environ['HEART']
+    FE = biv_module('fe', '13_fast_ecg.py', h)
+    sg = json.load(open(os.path.join(REPO, 'params', 'v51_conductivities.json')))['hearts'][h]['sigma_S_m']
+    pair = [(sg[a]['gi'], sg[a]['ge']) for a in ('fibre', 'sheet', 'normal')]
+    G = {'myo': pair, 'fast': pair}
+    mesh = os.path.join(REPO, 'runs', 'v51_2026-10-15', '04_build', h, 'acceptance_c', 'mesh', 'biv51')   # biv.pts, bivF.elem, v5.1 fibres
+    pp = os.path.join(lf_dir(h), 'POSTPROC_DIR')
+    vm = FE.igb(os.path.join(lf_dir(h), 'vm_first10ms.igb'))
+    out = {'heart': h, 'mesh': mesh, 'lf_dir': pp}
+    Wm = FE.weights(mesh, pp, G, 'm', -1.0, True)
+    mine = FE.project(Wm, vm)
+    comp = {}
+    for i, l in enumerate(LEADS):
+        f = os.path.join(pp, f'ECG_{l}.dat')
+        if os.path.exists(f):
+            d = np.loadtxt(f)                          # columns t (ms), ECG (mV); output every ecg_timedt = 10 ms
+            k = np.rint(d[:, 0] / 1.0).astype(int)     # Vm frames are 1 ms apart (inc_t 1), frame 0 at t = 0
+            ok = k < len(mine)
+            comp[l] = {'max_abs_err_mV': float(np.abs(mine[k[ok], i] - d[ok, 1]).max()), 'ref_peak_mV': float(np.abs(d[ok, 1]).max()),
+                       'times_ms': d[ok, 0].tolist()}
+    err = max(c['max_abs_err_mV'] for c in comp.values())
+    out['C9_sigma_m_vs_openCARP'] = comp
+    out['C9_max_abs_err_mV'] = err
+    out['C9_pass_0.0002mV'] = bool(err <= 0.0002)
+    Wi = FE.weights(mesh, pp, G, 'i', -1.0, True)
+    ratio = float(np.median(np.abs(Wi[np.abs(Wm) > 1e-12] / Wm[np.abs(Wm) > 1e-12])))
+    out['sigma_i_over_sigma_m_weight_ratio_median'] = ratio
+    wf = hd(h, 'ecgW_v51.npz')
+    np.savez(wf, W=Wi.astype(np.float32), sigma='i', c=-1.0, lf_dir=pp, mesh=mesh, nofast=True, conductor='v51 (C1-C8)',
+             ecg_source='sigma_i, Alex 18 Oct 2026 13:22:54 UTC')
+    out['written'] = wf
+    json.dump(out, open(os.path.join(HERE, f'weights51_{h}.json'), 'w'), indent=1)
+    print(json.dumps(out, indent=1))
+    if not out['C9_pass_0.0002mV']:
+        sys.exit('C9 failed')
+
+
 if __name__ == '__main__':
-    {'tensors': tensors, 'blood': blood, 'lon': lon}[sys.argv[1]]()
+    {'tensors': tensors, 'blood': blood, 'lon': lon, 'leadfield': leadfield, 'weights': weights}[sys.argv[1]]()
