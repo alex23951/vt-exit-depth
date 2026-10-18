@@ -1,0 +1,205 @@
+heart,aha_number,aha_level,aha_segment,depth_target,node,wall_mm,line_to,label_check_segment,body_bazan_region,dist_to_nearest_old_lv_site_mm
+Y5HYEDL4,1,basal,anterior,0.1,176146,8.7,epicardium,1.0,lv_basal_superior,17.5
+Y5HYEDL4,1,basal,anterior,0.5,22110,8.7,epicardium,1.0,lv_basal_superior,19.1
+Y5HYEDL4,1,basal,anterior,0.75,296566,8.7,epicardium,1.0,lv_basal_superior,20.3
+Y5HYEDL4,1,basal,anterior,0.9,186361,8.7,epicardium,1.0,lv_basal_superior,20.9
+Y5HYEDL4,2,basal,anteroseptal,0.1,309120,9.8,RV endocardium,2.0,lv_basal_superior,8.3
+Y5HYEDL4,2,basal,anteroseptal,0.5,111889,9.8,RV endocardium,2.0,lv_basal_superior,8.2
+Y5HYEDL4,2,basal,anteroseptal,0.75,236643,9.8,RV endocardium,2.0,lv_basal_superior,7.8
+Y5HYEDL4,2,basal,anteroseptal,0.9,308088,9.8,RV endocardium,2.0,lv_basal_superior,8.6
+Y5HYEDL4,3,basal,inferoseptal,0.1,144250,8.3,RV endocardium,3.0,lv_basal_inferior,8.0
+Y5HYEDL4,3,basal,inferoseptal,0.5,247904,8.3,RV endocardium,3.0,lv_basal_inferior,7.9
+Y5HYEDL4,3,basal,inferoseptal,0.75,230092,8.3,RV endocardium,3.0,lv_basal_inferior,7.8
+Y5HYEDL4,3,basal,inferoseptal,0.9,111707,8.3,RV endocardium,3.0,lv_basal_inferior,8.3
+Y5HYEDL4,4,basal,inferior,0.1,242264,10.3,epicardium,4.0,lv_basal_inferior,8.3
+Y5HYEDL4,4,basal,inferior,0.5,77869,10.3,epicardium,4.0,lv_basal_inferior,9.3
+Y5HYEDL4,4,basal,inferior,0.75,144927,10.3,epicardium,4.0,lv_basal_inferior,9.7
+Y5HYEDL4,4,basal,inferior,0.9,212438,10.3,epicardium,4.0,lv_basal_inferior,10.2
+Y5HYEDL4,5,basal,inferolateral,0.1,121752,11.5,epicardium,5.0,lv_basal_inferior,19.9
+Y5HYEDL4,5,basal,inferolateral,0.5,76397,11.5,epicardium,5.0,lv_basal_inferior,22.4
+Y5HYEDL4,5,basal,inferolateral,0.75,250931,11.5,epicardium,5.0,lv_basal_inferior,23.6
+Y5HYEDL4,5,basal,inferolateral,0.9,281022,11.5,epicardium,5.0,lv_basal_inferior,25.2
+Y5HYEDL4,6,basal,anterolateral,0.1,245835,8.9,epicardium,6.0,lv_basal_superior,10.0
+Y5HYEDL4,6,basal,anterolateral,0.5,204483,8.9,epicardium,6.0,lv_basal_superior,9.6
+Y5HYEDL4,6,basal,anterolateral,0.75,151460,8.9,epicardium,6.0,lv_basal_superior,10.0
+Y5HYEDL4,6,basal,anterolateral,0.9,345975,8.9,epicardium,6.0,lv_basal_superior,10.3
+Y5HYEDL4,7,mid,anterior,0.1,266594,8.1,epicardium,7.0,lv_basal_superior,19.9
+Y5HYEDL4,7,mid,anterior,0.5,88437,8.1,epicardium,7.0,lv_apical_superior,22.1
+Y5HYEDL4,7,mid,anterior,0.75,91352,8.1,epicardium,7.0,lv_apical_superior,23.4
+Y5HYEDL4,7,mid,anterior,0.9,212958,8.1,epicardium,7.0,lv_apical_superior,24.0
+Y5HYEDL4,8,mid,anteroseptal,0.1,370538,8.0,RV endocardium,8.0,lv_basal_superior,8.8
+Y5HYEDL4,8,mid,anteroseptal,0.5,204946,8.0,RV endocardium,8.0,lv_basal_superior,10.5
+Y5HYEDL4,8,mid,anteroseptal,0.75,132845,8.0,RV endocardium,8.0,lv_apical_superior,11.4
+Y5HYEDL4,8,mid,anteroseptal,0.9,139687,8.0,RV endocardium,8.0,lv_apical_superior,11.5
+Y5HYEDL4,9,mid,inferoseptal,0.1,75967,8.5,RV endocardium,9.0,lv_apical_inferior,1.9
+Y5HYEDL4,9,mid,inferoseptal,0.5,341148,8.5,RV endocardium,9.0,lv_apical_inferior,1.9
+Y5HYEDL4,9,mid,inferoseptal,0.75,256605,8.5,RV endocardium,9.0,lv_apical_inferior,2.6
+Y5HYEDL4,9,mid,inferoseptal,0.9,179965,8.5,RV endocardium,9.0,lv_apical_inferior,1.6
+Y5HYEDL4,10,mid,inferior,0.1,131084,11.1,epicardium,10.0,lv_apical_inferior,6.5
+Y5HYEDL4,10,mid,inferior,0.5,107901,11.1,epicardium,10.0,lv_apical_inferior,6.4
+Y5HYEDL4,10,mid,inferior,0.75,290986,11.1,epicardium,10.0,lv_apical_inferior,5.0
+Y5HYEDL4,10,mid,inferior,0.9,322204,11.1,epicardium,10.0,lv_apical_inferior,4.9
+Y5HYEDL4,11,mid,inferolateral,0.1,196169,10.5,epicardium,11.0,lv_apical_inferior,22.3
+Y5HYEDL4,11,mid,inferolateral,0.5,304923,10.5,epicardium,11.0,lv_apical_inferior,24.9
+Y5HYEDL4,11,mid,inferolateral,0.75,313426,10.5,epicardium,11.0,lv_apical_inferior,26.5
+Y5HYEDL4,11,mid,inferolateral,0.9,280893,10.5,epicardium,11.0,lv_apical_inferior,28.1
+Y5HYEDL4,12,mid,anterolateral,0.1,130948,8.3,epicardium,12.0,lv_apical_superior,9.8
+Y5HYEDL4,12,mid,anterolateral,0.5,161448,8.3,epicardium,12.0,lv_apical_superior,9.6
+Y5HYEDL4,12,mid,anterolateral,0.75,197499,8.3,epicardium,12.0,lv_apical_superior,9.5
+Y5HYEDL4,12,mid,anterolateral,0.9,372678,8.3,epicardium,12.0,lv_apical_superior,9.7
+Y5HYEDL4,13,apical,anterior,0.1,101933,8.3,epicardium,13.0,lv_apical_superior,9.2
+Y5HYEDL4,13,apical,anterior,0.5,82513,8.3,epicardium,13.0,lv_apical_superior,10.2
+Y5HYEDL4,13,apical,anterior,0.75,81997,8.3,epicardium,13.0,lv_apical_superior,10.2
+Y5HYEDL4,13,apical,anterior,0.9,207167,8.3,epicardium,13.0,lv_apical_superior,10.4
+Y5HYEDL4,14,apical,septal,0.1,160227,6.6,RV endocardium,14.0,lv_apical_inferior,5.7
+Y5HYEDL4,14,apical,septal,0.5,290081,6.6,RV endocardium,14.0,lv_apical_inferior,6.3
+Y5HYEDL4,14,apical,septal,0.75,355975,6.6,RV endocardium,14.0,lv_apical_inferior,6.7
+Y5HYEDL4,14,apical,septal,0.9,272653,6.6,RV endocardium,14.0,lv_apical_inferior,7.1
+Y5HYEDL4,15,apical,inferior,0.1,225058,8.2,epicardium,15.0,lv_apical_inferior,9.4
+Y5HYEDL4,15,apical,inferior,0.5,156792,8.2,epicardium,15.0,lv_apical_inferior,9.4
+Y5HYEDL4,15,apical,inferior,0.75,81297,8.2,epicardium,15.0,lv_apical_inferior,9.9
+Y5HYEDL4,15,apical,inferior,0.9,129122,8.2,epicardium,15.0,lv_apical_inferior,9.9
+Y5HYEDL4,16,apical,lateral,0.1,312322,7.6,epicardium,16.0,lv_apical_superior,11.5
+Y5HYEDL4,16,apical,lateral,0.5,167619,7.6,epicardium,16.0,lv_apical_superior,12.4
+Y5HYEDL4,16,apical,lateral,0.75,135056,7.6,epicardium,16.0,lv_apical_superior,12.9
+Y5HYEDL4,16,apical,lateral,0.9,294341,7.6,epicardium,16.0,lv_apical_superior,12.7
+Y5HYEDL4,17,apex,apex,0.1,45376,3.3,epicardium,17.0,lv_apical_inferior,25.5
+Y5HYEDL4,17,apex,apex,0.5,306918,3.3,epicardium,17.0,lv_apical_inferior,26.7
+Y5HYEDL4,17,apex,apex,0.75,177088,3.3,epicardium,17.0,lv_apical_inferior,27.4
+Y5HYEDL4,17,apex,apex,0.9,65346,3.3,epicardium,17.0,lv_apical_inferior,27.9
+6G8DD8S5,1,basal,anterior,0.1,279044,11.7,epicardium,1.0,lv_basal_superior,6.6
+6G8DD8S5,1,basal,anterior,0.5,284045,11.7,epicardium,1.0,lv_basal_superior,7.8
+6G8DD8S5,1,basal,anterior,0.75,168761,11.7,epicardium,1.0,lv_basal_superior,8.6
+6G8DD8S5,1,basal,anterior,0.9,137498,11.7,epicardium,1.0,lv_basal_superior,8.9
+6G8DD8S5,2,basal,anteroseptal,0.1,281964,11.1,RV endocardium,2.0,lv_basal_superior,10.0
+6G8DD8S5,2,basal,anteroseptal,0.5,369245,11.1,RV endocardium,2.0,lv_basal_superior,12.2
+6G8DD8S5,2,basal,anteroseptal,0.75,353572,11.1,RV endocardium,2.0,lv_basal_superior,13.3
+6G8DD8S5,2,basal,anteroseptal,0.9,373259,11.1,RV endocardium,2.0,lv_basal_superior,14.7
+6G8DD8S5,3,basal,inferoseptal,0.1,334886,5.6,RV endocardium,3.0,lv_basal_inferior,8.3
+6G8DD8S5,3,basal,inferoseptal,0.5,337130,5.6,RV endocardium,3.0,lv_basal_inferior,9.7
+6G8DD8S5,3,basal,inferoseptal,0.75,103870,5.6,RV endocardium,3.0,lv_basal_inferior,9.7
+6G8DD8S5,3,basal,inferoseptal,0.9,103870,5.6,RV endocardium,3.0,lv_basal_inferior,9.7
+6G8DD8S5,4,basal,inferior,0.1,373652,14.8,epicardium,4.0,lv_basal_inferior,19.4
+6G8DD8S5,4,basal,inferior,0.5,150210,14.8,epicardium,4.0,lv_basal_inferior,20.0
+6G8DD8S5,4,basal,inferior,0.75,190246,14.8,epicardium,4.0,lv_basal_inferior,20.0
+6G8DD8S5,4,basal,inferior,0.9,151924,14.8,epicardium,4.0,lv_basal_inferior,19.8
+6G8DD8S5,5,basal,inferolateral,0.1,356656,13.8,epicardium,5.0,lv_basal_inferior,12.6
+6G8DD8S5,5,basal,inferolateral,0.5,196390,13.8,epicardium,5.0,lv_basal_inferior,14.0
+6G8DD8S5,5,basal,inferolateral,0.75,61707,13.8,epicardium,5.0,lv_basal_inferior,15.1
+6G8DD8S5,5,basal,inferolateral,0.9,337403,13.8,epicardium,5.0,lv_basal_inferior,15.9
+6G8DD8S5,6,basal,anterolateral,0.1,249385,15.7,epicardium,6.0,lv_basal_superior,14.5
+6G8DD8S5,6,basal,anterolateral,0.5,141184,15.7,epicardium,6.0,lv_basal_superior,15.9
+6G8DD8S5,6,basal,anterolateral,0.75,312176,15.7,epicardium,6.0,lv_basal_superior,17.2
+6G8DD8S5,6,basal,anterolateral,0.9,72373,15.7,epicardium,6.0,lv_basal_superior,17.9
+6G8DD8S5,7,mid,anterior,0.1,131577,8.8,epicardium,7.0,lv_apical_superior,19.2
+6G8DD8S5,7,mid,anterior,0.5,207554,8.8,epicardium,7.0,lv_apical_superior,20.2
+6G8DD8S5,7,mid,anterior,0.75,189665,8.8,epicardium,7.0,lv_apical_superior,21.1
+6G8DD8S5,7,mid,anterior,0.9,178565,8.8,epicardium,7.0,lv_apical_superior,21.8
+6G8DD8S5,8,mid,anteroseptal,0.1,36245,7.0,RV endocardium,8.0,lv_apical_superior,7.4
+6G8DD8S5,8,mid,anteroseptal,0.5,308972,7.0,RV endocardium,8.0,lv_apical_superior,7.7
+6G8DD8S5,8,mid,anteroseptal,0.75,61965,7.0,RV endocardium,8.0,lv_apical_superior,8.5
+6G8DD8S5,8,mid,anteroseptal,0.9,232353,7.0,RV endocardium,8.0,lv_apical_superior,8.9
+6G8DD8S5,9,mid,inferoseptal,0.1,340588,9.3,RV endocardium,9.0,lv_basal_inferior,1.9
+6G8DD8S5,9,mid,inferoseptal,0.5,60326,9.3,RV endocardium,9.0,lv_apical_inferior,2.9
+6G8DD8S5,9,mid,inferoseptal,0.75,132936,9.3,RV endocardium,9.0,lv_apical_inferior,3.2
+6G8DD8S5,9,mid,inferoseptal,0.9,183200,9.3,RV endocardium,9.0,lv_apical_inferior,3.3
+6G8DD8S5,10,mid,inferior,0.1,60224,10.5,epicardium,10.0,lv_basal_inferior,19.6
+6G8DD8S5,10,mid,inferior,0.5,301348,10.5,epicardium,10.0,lv_apical_inferior,20.7
+6G8DD8S5,10,mid,inferior,0.75,341198,10.5,epicardium,10.0,lv_apical_inferior,21.4
+6G8DD8S5,10,mid,inferior,0.9,123038,10.5,epicardium,10.0,lv_apical_inferior,22.0
+6G8DD8S5,11,mid,inferolateral,0.1,303369,10.7,epicardium,11.0,lv_apical_inferior,17.2
+6G8DD8S5,11,mid,inferolateral,0.5,234391,10.7,epicardium,11.0,lv_apical_inferior,19.0
+6G8DD8S5,11,mid,inferolateral,0.75,141592,10.7,epicardium,11.0,lv_apical_inferior,20.2
+6G8DD8S5,11,mid,inferolateral,0.9,163861,10.7,epicardium,11.0,lv_apical_inferior,20.6
+6G8DD8S5,12,mid,anterolateral,0.1,169497,14.5,epicardium,12.0,lv_apical_superior,10.3
+6G8DD8S5,12,mid,anterolateral,0.5,84142,14.5,epicardium,12.0,lv_apical_superior,12.3
+6G8DD8S5,12,mid,anterolateral,0.75,325170,14.5,epicardium,12.0,lv_apical_superior,12.8
+6G8DD8S5,12,mid,anterolateral,0.9,254316,14.5,epicardium,12.0,lv_apical_superior,13.4
+6G8DD8S5,13,apical,anterior,0.1,27951,10.0,epicardium,13.0,lv_apical_superior,15.9
+6G8DD8S5,13,apical,anterior,0.5,169752,10.0,epicardium,13.0,lv_apical_superior,17.1
+6G8DD8S5,13,apical,anterior,0.75,351476,10.0,epicardium,13.0,lv_apical_superior,18.1
+6G8DD8S5,13,apical,anterior,0.9,128802,10.0,epicardium,13.0,lv_apical_superior,18.6
+6G8DD8S5,14,apical,septal,0.1,215820,12.4,RV endocardium,14.0,lv_apical_inferior,11.9
+6G8DD8S5,14,apical,septal,0.5,257242,12.4,RV endocardium,14.0,lv_apical_inferior,9.9
+6G8DD8S5,14,apical,septal,0.75,254265,12.4,RV endocardium,14.0,lv_apical_inferior,9.9
+6G8DD8S5,14,apical,septal,0.9,320753,12.4,RV endocardium,14.0,lv_apical_inferior,9.5
+6G8DD8S5,15,apical,inferior,0.1,61859,8.1,epicardium,15.0,lv_apical_inferior,13.2
+6G8DD8S5,15,apical,inferior,0.5,140094,8.1,epicardium,15.0,lv_apical_inferior,14.6
+6G8DD8S5,15,apical,inferior,0.75,120472,8.1,epicardium,15.0,lv_apical_inferior,15.5
+6G8DD8S5,15,apical,inferior,0.9,124172,8.1,epicardium,15.0,lv_apical_inferior,16.2
+6G8DD8S5,16,apical,lateral,0.1,233476,7.9,epicardium,16.0,lv_apical_superior,14.2
+6G8DD8S5,16,apical,lateral,0.5,306946,7.9,epicardium,16.0,lv_apical_superior,15.4
+6G8DD8S5,16,apical,lateral,0.75,192944,7.9,epicardium,16.0,lv_apical_superior,16.2
+6G8DD8S5,16,apical,lateral,0.9,190396,7.9,epicardium,16.0,lv_apical_superior,16.6
+6G8DD8S5,17,apex,apex,0.1,141020,8.1,epicardium,15.0,lv_apical_inferior,20.6
+6G8DD8S5,17,apex,apex,0.5,184695,8.1,epicardium,,lv_apical_inferior,20.6
+6G8DD8S5,17,apex,apex,0.75,287386,8.1,epicardium,,lv_apical_inferior,21.1
+6G8DD8S5,17,apex,apex,0.9,218620,8.1,epicardium,,lv_apical_inferior,21.6
+7D98EVAR,1,basal,anterior,0.1,179285,8.2,epicardium,1.0,lv_basal_superior,15.1
+7D98EVAR,1,basal,anterior,0.5,264024,8.2,epicardium,1.0,lv_basal_superior,16.1
+7D98EVAR,1,basal,anterior,0.75,164389,8.2,epicardium,1.0,lv_basal_superior,17.0
+7D98EVAR,1,basal,anterior,0.9,100096,8.2,epicardium,1.0,lv_basal_superior,16.9
+7D98EVAR,2,basal,anteroseptal,0.1,150133,8.6,RV endocardium,2.0,lv_basal_superior,12.8
+7D98EVAR,2,basal,anteroseptal,0.5,199074,8.6,RV endocardium,2.0,lv_basal_superior,13.3
+7D98EVAR,2,basal,anteroseptal,0.75,110737,8.6,RV endocardium,2.0,lv_basal_superior,13.3
+7D98EVAR,2,basal,anteroseptal,0.9,65952,8.6,RV endocardium,2.0,lv_basal_superior,13.5
+7D98EVAR,3,basal,inferoseptal,0.1,180970,7.0,RV endocardium,3.0,lv_basal_inferior,6.5
+7D98EVAR,3,basal,inferoseptal,0.5,145219,7.0,RV endocardium,3.0,lv_basal_inferior,6.2
+7D98EVAR,3,basal,inferoseptal,0.75,305238,7.0,RV endocardium,3.0,lv_basal_inferior,6.3
+7D98EVAR,3,basal,inferoseptal,0.9,220712,7.0,RV endocardium,3.0,lv_basal_inferior,7.0
+7D98EVAR,4,basal,inferior,0.1,138640,10.3,epicardium,4.0,lv_basal_inferior,16.7
+7D98EVAR,4,basal,inferior,0.5,232424,10.3,epicardium,4.0,lv_basal_inferior,18.4
+7D98EVAR,4,basal,inferior,0.75,42463,10.3,epicardium,4.0,lv_basal_inferior,19.3
+7D98EVAR,4,basal,inferior,0.9,142654,10.3,epicardium,4.0,lv_basal_inferior,20.0
+7D98EVAR,5,basal,inferolateral,0.1,139709,9.8,epicardium,5.0,lv_basal_inferior,15.3
+7D98EVAR,5,basal,inferolateral,0.5,97374,9.8,epicardium,5.0,lv_basal_inferior,16.1
+7D98EVAR,5,basal,inferolateral,0.75,128339,9.8,epicardium,5.0,lv_basal_inferior,17.1
+7D98EVAR,5,basal,inferolateral,0.9,259566,9.8,epicardium,5.0,lv_basal_inferior,18.5
+7D98EVAR,6,basal,anterolateral,0.1,12806,10.3,epicardium,6.0,lv_basal_superior,19.4
+7D98EVAR,6,basal,anterolateral,0.5,109408,10.3,epicardium,6.0,lv_basal_superior,21.2
+7D98EVAR,6,basal,anterolateral,0.75,278938,10.3,epicardium,6.0,lv_basal_superior,22.7
+7D98EVAR,6,basal,anterolateral,0.9,128381,10.3,epicardium,6.0,lv_basal_superior,23.6
+7D98EVAR,7,mid,anterior,0.1,194400,7.6,epicardium,7.0,lv_basal_superior,19.7
+7D98EVAR,7,mid,anterior,0.5,170545,7.6,epicardium,7.0,lv_apical_superior,20.7
+7D98EVAR,7,mid,anterior,0.75,87743,7.6,epicardium,7.0,lv_apical_superior,20.7
+7D98EVAR,7,mid,anterior,0.9,163900,7.6,epicardium,7.0,lv_apical_superior,21.7
+7D98EVAR,8,mid,anteroseptal,0.1,112598,7.3,RV endocardium,8.0,lv_apical_superior,9.4
+7D98EVAR,8,mid,anteroseptal,0.5,189594,7.3,RV endocardium,8.0,lv_apical_superior,10.6
+7D98EVAR,8,mid,anteroseptal,0.75,76163,7.3,RV endocardium,8.0,lv_apical_superior,11.5
+7D98EVAR,8,mid,anteroseptal,0.9,288757,7.3,RV endocardium,8.0,lv_apical_superior,11.4
+7D98EVAR,9,mid,inferoseptal,0.1,312935,7.3,RV endocardium,9.0,lv_basal_inferior,2.7
+7D98EVAR,9,mid,inferoseptal,0.5,240442,7.3,RV endocardium,9.0,lv_apical_inferior,2.6
+7D98EVAR,9,mid,inferoseptal,0.75,277612,7.3,RV endocardium,9.0,lv_apical_inferior,2.6
+7D98EVAR,9,mid,inferoseptal,0.9,207830,7.3,RV endocardium,9.0,lv_apical_inferior,2.6
+7D98EVAR,10,mid,inferior,0.1,101124,12.1,epicardium,10.0,lv_apical_inferior,13.0
+7D98EVAR,10,mid,inferior,0.5,142233,12.1,epicardium,10.0,lv_basal_inferior,14.0
+7D98EVAR,10,mid,inferior,0.75,269901,12.1,epicardium,10.0,lv_apical_inferior,15.5
+7D98EVAR,10,mid,inferior,0.9,115949,12.1,epicardium,10.0,lv_apical_inferior,16.5
+7D98EVAR,11,mid,inferolateral,0.1,99798,10.4,epicardium,11.0,lv_basal_inferior,18.5
+7D98EVAR,11,mid,inferolateral,0.5,92845,10.4,epicardium,11.0,lv_apical_inferior,20.4
+7D98EVAR,11,mid,inferolateral,0.75,69326,10.4,epicardium,11.0,lv_apical_inferior,22.4
+7D98EVAR,11,mid,inferolateral,0.9,317659,10.4,epicardium,11.0,lv_apical_inferior,23.8
+7D98EVAR,12,mid,anterolateral,0.1,240705,8.9,epicardium,12.0,lv_apical_superior,9.7
+7D98EVAR,12,mid,anterolateral,0.5,314540,8.9,epicardium,12.0,lv_apical_superior,10.7
+7D98EVAR,12,mid,anterolateral,0.75,319992,8.9,epicardium,12.0,lv_apical_superior,11.1
+7D98EVAR,12,mid,anterolateral,0.9,141517,8.9,epicardium,12.0,lv_apical_superior,11.5
+7D98EVAR,13,apical,anterior,0.1,68821,8.6,epicardium,13.0,lv_apical_superior,14.0
+7D98EVAR,13,apical,anterior,0.5,63299,8.6,epicardium,13.0,lv_apical_superior,14.8
+7D98EVAR,13,apical,anterior,0.75,274648,8.6,epicardium,13.0,lv_apical_superior,15.6
+7D98EVAR,13,apical,anterior,0.9,184809,8.6,epicardium,13.0,lv_apical_superior,16.4
+7D98EVAR,14,apical,septal,0.1,109057,10.1,RV endocardium,14.0,lv_apical_inferior,10.6
+7D98EVAR,14,apical,septal,0.5,170262,10.1,RV endocardium,14.0,lv_apical_inferior,9.5
+7D98EVAR,14,apical,septal,0.75,131037,10.1,RV endocardium,14.0,lv_apical_inferior,9.3
+7D98EVAR,14,apical,septal,0.9,201152,10.1,RV endocardium,14.0,lv_apical_inferior,9.0
+7D98EVAR,15,apical,inferior,0.1,257105,7.4,epicardium,15.0,lv_apical_inferior,13.4
+7D98EVAR,15,apical,inferior,0.5,162121,7.4,epicardium,15.0,lv_apical_inferior,14.6
+7D98EVAR,15,apical,inferior,0.75,183221,7.4,epicardium,15.0,lv_apical_inferior,14.7
+7D98EVAR,15,apical,inferior,0.9,189337,7.4,epicardium,15.0,lv_apical_inferior,15.6
+7D98EVAR,16,apical,lateral,0.1,163342,7.3,epicardium,16.0,lv_apical_superior,17.1
+7D98EVAR,16,apical,lateral,0.5,142037,7.3,epicardium,16.0,lv_apical_superior,18.7
+7D98EVAR,16,apical,lateral,0.75,129780,7.3,epicardium,16.0,lv_apical_superior,19.3
+7D98EVAR,16,apical,lateral,0.9,320113,7.3,epicardium,16.0,lv_apical_superior,18.9
+7D98EVAR,17,apex,apex,0.1,293482,5.6,epicardium,17.0,lv_apical_inferior,23.0
+7D98EVAR,17,apex,apex,0.5,167749,5.6,epicardium,17.0,lv_apical_inferior,24.0
+7D98EVAR,17,apex,apex,0.75,90144,5.6,epicardium,17.0,lv_apical_inferior,25.2
+7D98EVAR,17,apex,apex,0.9,93467,5.6,epicardium,17.0,lv_apical_inferior,26.2

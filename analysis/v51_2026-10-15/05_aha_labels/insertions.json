@@ -1,0 +1,197 @@
+{
+ "Y5HYEDL4": {
+  "basal": {
+   "f": 0.725,
+   "anterior_insertion_deg": 80.4,
+   "inferior_insertion_deg": -68.1,
+   "septal_arc_deg": 148.6,
+   "cavity_centre_mm": [
+    90.02,
+    62.07,
+    55.89
+   ],
+   "anterior_insertion_dir_20mm": [
+    97.02,
+    52.03,
+    71.71
+   ],
+   "inferior_insertion_dir_20mm": [
+    74.66,
+    66.29,
+    43.8
+   ]
+  },
+  "mid": {
+   "f": 0.475,
+   "anterior_insertion_deg": 77.3,
+   "inferior_insertion_deg": -66.0,
+   "septal_arc_deg": 143.3,
+   "cavity_centre_mm": [
+    98.35,
+    40.61,
+    42.86
+   ],
+   "anterior_insertion_dir_20mm": [
+    100.93,
+    28.9,
+    58.87
+   ],
+   "inferior_insertion_dir_20mm": [
+    84.85,
+    46.57,
+    29.37
+   ]
+  },
+  "apical": {
+   "f": 0.225,
+   "anterior_insertion_deg": 59.9,
+   "inferior_insertion_deg": -47.8,
+   "septal_arc_deg": 107.7,
+   "cavity_centre_mm": [
+    102.53,
+    21.29,
+    25.3
+   ],
+   "anterior_insertion_dir_20mm": [
+    95.0,
+    8.3,
+    38.51
+   ],
+   "inferior_insertion_dir_20mm": [
+    87.89,
+    26.23,
+    12.61
+   ]
+  }
+ },
+ "6G8DD8S5": {
+  "basal": {
+   "f": 0.725,
+   "anterior_insertion_deg": 69.6,
+   "inferior_insertion_deg": -51.4,
+   "septal_arc_deg": 121.0,
+   "cavity_centre_mm": [
+    95.84,
+    67.32,
+    44.2
+   ],
+   "anterior_insertion_dir_20mm": [
+    94.02,
+    59.07,
+    62.33
+   ],
+   "inferior_insertion_dir_20mm": [
+    84.33,
+    61.38,
+    28.97
+   ]
+  },
+  "mid": {
+   "f": 0.475,
+   "anterior_insertion_deg": 65.8,
+   "inferior_insertion_deg": -66.9,
+   "septal_arc_deg": 132.8,
+   "cavity_centre_mm": [
+    111.74,
+    50.25,
+    40.62
+   ],
+   "anterior_insertion_dir_20mm": [
+    109.79,
+    41.9,
+    58.69
+   ],
+   "inferior_insertion_dir_20mm": [
+    102.4,
+    47.24,
+    23.19
+   ]
+  },
+  "apical": {
+   "f": 0.225,
+   "anterior_insertion_deg": 59.7,
+   "inferior_insertion_deg": -61.5,
+   "septal_arc_deg": 121.2,
+   "cavity_centre_mm": [
+    125.23,
+    33.15,
+    30.83
+   ],
+   "anterior_insertion_dir_20mm": [
+    120.04,
+    22.33,
+    46.83
+   ],
+   "inferior_insertion_dir_20mm": [
+    116.19,
+    30.51,
+    13.18
+   ]
+  }
+ },
+ "7D98EVAR": {
+  "basal": {
+   "f": 0.725,
+   "anterior_insertion_deg": 65.9,
+   "inferior_insertion_deg": -63.0,
+   "septal_arc_deg": 128.9,
+   "cavity_centre_mm": [
+    93.83,
+    61.91,
+    47.83
+   ],
+   "anterior_insertion_dir_20mm": [
+    95.32,
+    53.12,
+    65.74
+   ],
+   "inferior_insertion_dir_20mm": [
+    80.79,
+    58.28,
+    33.11
+   ]
+  },
+  "mid": {
+   "f": 0.475,
+   "anterior_insertion_deg": 63.8,
+   "inferior_insertion_deg": -62.9,
+   "septal_arc_deg": 126.7,
+   "cavity_centre_mm": [
+    107.72,
+    44.81,
+    39.87
+   ],
+   "anterior_insertion_dir_20mm": [
+    105.89,
+    33.74,
+    56.43
+   ],
+   "inferior_insertion_dir_20mm": [
+    96.38,
+    43.71,
+    23.44
+   ]
+  },
+  "apical": {
+   "f": 0.225,
+   "anterior_insertion_deg": 42.4,
+   "inferior_insertion_deg": -39.7,
+   "septal_arc_deg": 82.1,
+   "cavity_centre_mm": [
+    120.6,
+    30.12,
+    26.14
+   ],
+   "anterior_insertion_dir_20mm": [
+    110.85,
+    15.64,
+    35.89
+   ],
+   "inferior_insertion_dir_20mm": [
+    107.16,
+    25.81,
+    11.97
+   ]
+  }
+ }
+}
