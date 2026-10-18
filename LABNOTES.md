@@ -1344,3 +1344,41 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Gate 2a (relative QRS, Y5HYEDL4): 13 Oct FAIL (1.0712) -> v5.1 PASS (1.0980, CI 1.051-1.141; true mode 1.0774 fails): convention-dependent. Gate 2b (6G8DD8S5): 13 Oct PASS (1.1371) -> v5.1 FAIL (1.2170, CI 1.190-1.239; true mode 1.1646 also fails). Gate 2c (7D98EVAR): PASS as before (1.1427). Gate 2 overall: FAIL as before.
 - Unchanged verdicts: 3 Daniels FAIL; 4 Bazan 2006 PASS; 5 Bazan 2007 FAIL (5/21 vs 3/21, under every rule and convention; AHA / body-label version 7/17 vs 1/17, not evaluable); 6 Berruezo FAIL (RS +14.2 %); 7 Durrer FAIL (T 113.3, (a) 1 of 3, (b) 85.2 %; (c) 27.5 and (e) 76 ms now pass); 8 no-network PASS (230.75); 9 monodomain not evaluable (not run).
 - Tally: v5.1 2 pass / 6 fail / 1 not evaluable (13 Oct v5: 3 / 5 / 1). Nothing was tuned; the model is frozen after this rescore (Alex, 17 Oct 2026 07:58 / 08:18 UTC).
+
+## 2026-10-18 22:41 PC time (UTC 20:41): v5.1 (15 Oct 2026; Alex's decisions A-H of 05:18-05:19 UTC and 4-9 of 05:23 UTC), deviation summary (brief Step 7; Alex 18 Oct 20:40:03 UTC "Yes")
+- Fork values, recorded before first use (LABNOTES 16 Oct 23:06):
+  - Q_WINDOW_MS = 40 ms ("40 ms", 15 Oct 2026 08:30:47 UTC).
+  - FASCICLE_SPEED = 2.0 m/s ("2.0 m/s", 08:31:01 UTC).
+  - DOSTE_SCOPE = WHOLE_RV ("Whole RV", 08:31:14 UTC).
+  - The CSE recognition check is the primary q rule ("Make primary", 08:31:22 UTC), kept as written after STOP 2 (16 Oct 21:36:04 UTC).
+- Changes in v5.1, each with value, source, reason and gates:
+  - (a) Myocardial speeds fibre / sheet / normal 0.60 / 0.36 / 0.48 m/s (control), 0.60 / 0.26 / 0.336 (HF).
+    Source: decision A (Taggart-implied cross-fibre 0.36 m/s; HF x 0.73 / x 0.70, Glukhov 2012). Reason: audit F01 and the Taggart check.
+  - (b) Doste 2019 RV fibres in the whole RV (DOSTE_SCOPE), beta = 0 and no Eq. 5 septal blend (both unpublished).
+    Gates: A1, A3, A5, A8 pass (A8 with corner-sharing, Alex 17 Oct 01:39:48 UTC); A4 fails by construction (Alex).
+  - (c) Graph solver: 2-ring stencil (E1 u E2) with the nodal metric of brief S3 and per-heart factors calibrated on a synthetic slab (Alex option 1, 17 Oct 04:06:56 UTC): fibre / sheet / normal 1.037 / 1.007 / 1.027 (control), 1.078 / 1.005 / 1.018 (HF).
+    Gates: acceptance A PASS. Acceptance C (vs openCARP) FAILS: 4 / 12, 0 / 12, 0 / 10 sites, median |dt| 0.7-1.5, 1.1-5.7 and 1.2-6.5 ms.
+    The element-wise metric was tested (18 Oct, Alex's 17 Oct decision) and is not adopted ("Nodal is good", 18 Oct 12:59:10 UTC): arrivals 2-6 % early. The graph is kept and its error reported (Alex, 17 Oct 07:58 UTC).
+    Two 7D98EVAR openCARP sites did not converge (no progress past t = 0).
+  - (d) Conduction system, no Durrer tuning (decisions E and B; Kupersmith 1973; FASCICLE_SPEED):
+    - HIS / RB / LB_TRUNK 1.5 m/s, FASCICLE 2.0 m/s; R10 1.036-1.068, never above 1.10.
+    - DISTAL v_edge 3.00 / 2.88 / 2.84 m/s, from straight-line 2.0 m/s.
+    - Gates E6, E8, F19, P6 and P7 PASS.
+    - The root (the v5 His point) is the LB/RB split, so HIS has no edges.
+  - (e) Conductor:
+    - sigma_x,d = sigma_x,fibre (v_d / 0.60)^2 with fibre sigma_i / sigma_e 0.174 / 0.625 S/m (Clerc 1976, equal anisotropy); blood 0.7, torso 0.2 S/m.
+    - Full blood fill (closed cavity surfaces, ray parity): 100 % of every cavity, against 70 / 56 / 70 % in v5.
+    - ECG source sigma_i (Alex "Intracellular", 18 Oct 13:22:54 UTC; x 1.28 vs v5's sigma_m).
+    - Gates C5, C6 (pinch edges counted as passing, Alex 14:12:20 UTC), C8 and C9 (<= 5.1e-7 mV) PASS.
+  - (f) ecg_depth_criteria 0.4.0: N = 40 ms window, CSE recognition primary (decision H); NaN handling (F17).
+- Unchanged from v5: 1.5 mm stimulus ball; junction delays 4 / 2 ms; the 6G8DD8S5 left-bundle cut; the z 0.9 distal cap (network v3); the Tomek pseudo-Vm template (140 ms, no T wave); the F19 duplicate edges (kept; they change no v5.1 time).
+- Step 3 (stimulus size and retrograde delay) was reported only; no verdict changed.
+- The 13 Oct verdicts stay on record. The v5.1 rescore (Step 6, Table A: 2 pass / 6 fail / 1 not evaluable) is a dated correction (entry above). The model is frozen from here (Alex 17 Oct 07:58 / 08:18 UTC).
+- Inference (brief section 8, chosen values only):
+  - N = 40 ms: Vereckei's "initial 40 ms"; within epicardial initial slow phases of 33-56 ms; > 6 x the 6.5 ms CSE onset tolerance.
+  - CSE recognition: 20 uV / 6 ms are CSE program limits; the 5 x SD floor and the "reach +-wave_mv" step are this study's.
+  - Fascicles 2.0 m/s: one pair of spikes in one heart (Durrer 1970); no human speed for the LB trunk or the RB beyond ~11 mm; His root position unknown.
+  - Doste: linear-in-w angles, d = 1 - Phi_D, apex rule, zero-flux rings, sign calibration, 0.5 deg and 1 % / 2 mm limits, beta and blend omitted.
+  - Also: solver tolerances; equal anisotropy; blood ending at the valve planes; the 10 mm minimum D_j; the Step 3 design and the Step 5 reading of F.
+- Report: analysis/v51_2026-10-15/07_report/REPORT.md.
+- Final STOP check, PC clock 22:43: check_v5_files.py --full: 3,484 files, size, mtime and sha256: v5 files unchanged: yes.
