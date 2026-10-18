@@ -7,6 +7,9 @@ Usage (repo root, venv):
   python -B analysis/v51_2026-10-15/04_build/solver51.py slab                 acceptance A
   HEART=<H> python -B analysis/v51_2026-10-15/04_build/solver51.py heldout   acceptance B
   HEART=<H> python -B analysis/v51_2026-10-15/04_build/solver51.py s13       S13 refit at v5 speeds (v5 fibres) + F01 copy
+  python -B analysis/v51_2026-10-15/04_build/solver51.py calib_element        18 Oct 2026: slab calibration + acceptance A with the
+                                                                               element-wise metric (graph51.METRIC_ELEMENT); writes
+                                                                               params/v51_graph_factors_element.json
 """
 import json
 import os
@@ -26,6 +29,7 @@ SPEEDS = json.load(open(os.path.join(REPO, 'params', 'v51_speeds.json')))['heart
 V5_SPEEDS = {'Y5HYEDL4': {'fibre': 0.60, 'sheet': 0.48, 'normal': 0.48}}
 V5_SPEEDS.update({h: {'fibre': 0.60, 'sheet': 0.48 * 0.73, 'normal': 0.48 * 0.70} for h in ('6G8DD8S5', '7D98EVAR')})
 FACTORS = os.path.join(REPO, 'params', 'v51_graph_factors.json')
+FACTORS_ELEMENT = os.path.join(REPO, 'params', 'v51_graph_factors_element.json')
 LIMIT_MS = 90.0                   # Dijkstra stops beyond this (CV measured on elements with mean T 8-80 ms, as a03)
 
 
@@ -146,15 +150,18 @@ def fit():
     print(json.dumps(entry, indent=1))
 
 
-def load_factors(h, lonf):
+def load_factors(h, lonf, metric='nodal'):
     """The solver stops if the factor file is missing or any hash / setting differs."""
-    if not os.path.exists(FACTORS):
-        raise FileNotFoundError(f'{FACTORS} missing: run solver51.py fit')
-    e = json.load(open(FACTORS))['hearts'].get(h)
+    ff = FACTORS if metric == 'nodal' else FACTORS_ELEMENT
+    want = g.METRIC_NODAL if metric == 'nodal' else g.METRIC_ELEMENT
+    if not os.path.exists(ff):
+        raise FileNotFoundError(f'{ff} missing')
+    e = json.load(open(ff))['hearts'].get(h)
     if e is None:
         raise KeyError(f'no factors for {h}')
-    if e['fibre_sha256'] != g.sha256_file(lonf) or e['stencil'] != g.STENCIL_VERSION or e['speeds_m_s'] != SPEEDS[h]:
-        raise ValueError(f'factors for {h} were fitted for other fibres, stencil or speeds')
+    if e['fibre_sha256'] != g.sha256_file(lonf) or e['stencil'] != g.STENCIL_VERSION or e['speeds_m_s'] != SPEEDS[h] \
+            or e.get('metric', g.METRIC_NODAL) != want:
+        raise ValueError(f'factors for {h} were fitted for other fibres, stencil, speeds or metric')
     return e['factors']
 
 
@@ -275,9 +282,9 @@ def slab():
 
 # ------------------------------------------------------------------ option 1 (Alex, 17 Oct 2026 04:06:56 UTC): slab calibration
 class SlabGraph:
-    """Slab stencil and edge q prepared once (graph51 rules); weights for any speeds and factors."""
+    """Slab stencil and edge q prepared once (graph51 rules); weights for any speeds and factors. metric 'nodal' or 'element'."""
 
-    def __init__(self, P, E, lon):
+    def __init__(self, P, E, lon, metric='nodal'):
         from scipy.spatial import cKDTree
         N = len(P)
         e1, A = g.adjacency(E, N)
@@ -289,6 +296,14 @@ class SlabGraph:
         a, Jinv = g.tets_inverse(P, E)
         ins = g.inside_mesh(0.5 * (P[pi[test]] + P[pj[test]]), P, E, cKDTree(P[E].mean(1)), a, Jinv)
         keep = np.ones(len(pi), bool); keep[np.where(test)[0][~ins]] = False
+        self.metric = metric
+        self.e = np.r_[e1, np.c_[pi[keep], pj[keep]]].astype(np.int64)
+        self.N = N
+        self.counts = {'E1': int(len(e1)), 'E2': int(keep.sum()), 'E2_rejected_midpoint': int((~ins).sum())}
+        if metric == 'element':
+            self.q1p, self.starts1, self.q2, einfo = g.element_edge_q(P, E, lon, e1, np.c_[pi[keep], pj[keep]])
+            self.counts |= einfo
+            return
         Mn = g.nodal_components(P, E, lon)
         self.q1 = g.quad(P[e1[:, 1]] - P[e1[:, 0]], 0.5 * (Mn[e1[:, 0]] + Mn[e1[:, 1]]))
         ok = keep[pot]
@@ -296,14 +311,14 @@ class SlabGraph:
         self.qt = g.quad(P[jj] - P[ii], (Mn[ii] + Mn[jj] + Mn[kk]) / 3.0)
         newpair = (np.cumsum(keep) - 1)[pot[ok]]
         self.starts = np.r_[0, np.flatnonzero(np.diff(newpair)) + 1]
-        self.e = np.r_[e1, np.c_[pi[keep], pj[keep]]].astype(np.int64)
-        self.N = N
-        self.counts = {'E1': int(len(e1)), 'E2': int(keep.sum()), 'E2_rejected_midpoint': int((~ins).sum())}
 
     def graph(self, speeds, factors):
         from scipy.sparse import csr_matrix
         w = np.array([1.0 / (factors[x] * speeds[x]) ** 2 for x in ('fibre', 'sheet', 'normal')])
-        t = np.r_[np.sqrt(self.q1 @ w), np.minimum.reduceat(np.sqrt(self.qt @ w), self.starts)]
+        if self.metric == 'element':
+            t = np.r_[g.element_weights(self.q1p, self.starts1, self.q2, w)]
+        else:
+            t = np.r_[np.sqrt(self.q1 @ w), np.minimum.reduceat(np.sqrt(self.qt @ w), self.starts)]
         e = self.e
         return csr_matrix((np.r_[t, t], (np.r_[e[:, 0], e[:, 1]], np.r_[e[:, 1], e[:, 0]])), shape=(self.N, self.N))
 
@@ -325,10 +340,10 @@ def principal_speeds(P, T, src, speeds):
     return out
 
 
-def calibrate(speeds, seed=0, tol=0.005, max_iter=12):
+def calibrate(speeds, seed=0, tol=0.005, max_iter=12, metric='nodal'):
     P, E, ed = slab_mesh(seed=seed)
     lon = np.tile([1.0, 0, 0, 0, 1.0, 0], (len(E), 1))
-    SG = SlabGraph(P, E, lon)
+    SG = SlabGraph(P, E, lon, metric)
     src = int(np.argmin(np.linalg.norm(P - np.array([18.0, 18.0, 10.0]), axis=1)))
     f = {a: 1.0 for a in AXES}
     hist = []
@@ -344,11 +359,11 @@ def calibrate(speeds, seed=0, tol=0.005, max_iter=12):
                                               'edge_mean_mm': round(float(ed.mean()), 3), 'edge_max_mm': round(float(ed.max()), 3)} | SG.counts
 
 
-def acceptance_A(speeds, factors, seed=1):
+def acceptance_A(speeds, factors, seed=1, metric='nodal'):
     """Acceptance A on a fresh slab mesh (seed differs from the calibration slab)."""
     P, E, ed = slab_mesh(seed=seed)
     lon = np.tile([1.0, 0, 0, 0, 1.0, 0], (len(E), 1))
-    SG = SlabGraph(P, E, lon)
+    SG = SlabGraph(P, E, lon, metric)
     src = int(np.argmin(np.linalg.norm(P - np.array([18.0, 18.0, 10.0]), axis=1)))
     T = g.Tissue.solve(SG.graph(speeds, factors), src)
     res = {'mesh': {'seed': seed, 'nodes': int(len(P)), 'tets': int(len(E)), 'edge_mean_mm': round(float(ed.mean()), 3),
@@ -378,7 +393,7 @@ def acceptance_A(speeds, factors, seed=1):
     zc = Pw[Ew].mean(1)[:, 2]
     th = np.radians(60.0 - 120.0 * np.clip(zc / 10.0, 0, 1))
     lonw = np.c_[np.cos(th), np.sin(th), np.zeros(len(Ew)), -np.sin(th), np.cos(th), np.zeros(len(Ew))]
-    SW = SlabGraph(Pw, Ew, lonw)
+    SW = SlabGraph(Pw, Ew, lonw, metric)
     endo = np.where(Pw[:, 2] <= 1e-9)[0]
     T2 = g.Tissue.solve(SW.graph(speeds, factors), endo)
     trans = {}
@@ -413,6 +428,41 @@ def calib():
     json.dump(out, open(os.path.join(HERE, 'solver51_slab_calibration.json'), 'w'), indent=1)
 
 
+def calib_element():
+    """18 Oct 2026 (Alex's decision of 17 Oct 07:58 UTC: test element-wise tensors, recalibrate on the slab, rerun
+    acceptance A): the calib() procedure with graph51.METRIC_ELEMENT; writes the factors to FACTORS_ELEMENT."""
+    t_all = time.time()
+    out = {'method': 'as solver51_slab_calibration.json, with the element-wise metric ' + g.METRIC_ELEMENT +
+                     ' (graph51.py docstring): element tensors, E1 min over the tets sharing the edge, E2 sum over three thirds',
+           'hearts': {}}
+    done = {}
+    for h in HEARTS:
+        key = json.dumps(SPEEDS[h], sort_keys=True)
+        t0 = time.time()
+        if key not in done:
+            f, conv, hist, mesh_info = calibrate(SPEEDS[h], metric='element')
+            acc = acceptance_A(SPEEDS[h], f, metric='element')
+            done[key] = (f, conv, hist, mesh_info, acc)
+        f, conv, hist, mesh_info, acc = done[key]
+        out['hearts'][h] = {'speeds_m_s': SPEEDS[h], 'factors': f, 'converged_within_0.5pct': conv, 'iterations': len(hist),
+                            'calibration_slab': mesh_info, 'calibration_history': hist, 'acceptance_A_fresh_mesh': acc, 'wall_s': round(time.time() - t0, 1)}
+        print(h, 'factors', {a: round(v, 4) for a, v in f.items()}, 'converged', conv, 'iterations', len(hist),
+              '| A: principal', {a: acc['principal'][a]['ratio_to_target'] for a in AXES}, 'rays worst', acc['rays_worst_abs_dev'],
+              'rotating', {k: c['ratio'] for k, c in acc['rotating_wall_transmural_arrival_over_z_over_vn'].items()}, 'PASS' if acc['pass'] else 'FAIL', flush=True)
+    out['wall_s'] = round(time.time() - t_all, 1); out['peak_rss_MB'] = rss_mb()
+    json.dump(out, open(os.path.join(HERE, 'solver51_slab_calibration_element.json'), 'w'), indent=1)
+    fac = {'version': 'v51-factors-3 (element-wise metric, slab calibration)', 'written': time.strftime('%Y-%m-%d %H:%M:%S %Z'),
+           'decision': "Alex 17 Oct 2026 07:58 UTC ('Adopt all': test element-wise tensors first, recalibrate on the slab, rerun acceptance A); "
+                       "go 18 Oct 2026 12:03:13 UTC", 'method': out['method'], 'hearts': {}}
+    for h in HEARTS:
+        r = out['hearts'][h]
+        fac['hearts'][h] = {'factors': r['factors'], 'speeds_m_s': SPEEDS[h], 'stencil': g.STENCIL_VERSION, 'metric': g.METRIC_ELEMENT,
+                            'fibre_file': os.path.relpath(lon51(h), REPO), 'fibre_sha256': g.sha256_file(lon51(h)),
+                            'calibration_converged_within_0.5pct': r['converged_within_0.5pct'], 'calibration_iterations': r['iterations'],
+                            'acceptance_A_pass': r['acceptance_A_fresh_mesh']['pass']}
+    json.dump(fac, open(FACTORS_ELEMENT, 'w'), indent=1)
+
+
 # ------------------------------------------------------------------ S13 (report): v5 speeds and fibres with the v5.1 stencil
 def s13():
     """Slab-calibrated factors at the v5 speeds, the v5.1 2-ring solver on the v5 fibres, then the F01 measurement as the
@@ -443,4 +493,4 @@ def s13():
 
 
 if __name__ == '__main__':
-    {'build': build, 'fit': fit, 'slab': slab, 'calib': calib, 's13': s13}[sys.argv[1]]()
+    {'build': build, 'fit': fit, 'slab': slab, 'calib': calib, 'calib_element': calib_element, 's13': s13}[sys.argv[1]]()

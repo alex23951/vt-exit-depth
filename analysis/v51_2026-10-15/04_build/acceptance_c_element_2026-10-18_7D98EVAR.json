@@ -1,0 +1,164 @@
+{
+ "gates": "median |dt| <= 1 ms; p95 |dt| <= 2 % of openCARP total; total within +-2 %; no -1 in act",
+ "metric": "element",
+ "written": "2026-10-18 14:43:15 CEST",
+ "hearts": {
+  "7D98EVAR": {
+   "sites": {
+    "lv_free_wall_phi180_z0.5_d10": {
+     "median_abs_dt_ms": 5.675,
+     "p95_abs_dt_ms": 10.003,
+     "p95_pct_of_total": 3.7,
+     "total_openCARP_ms": 270.43,
+     "total_graph_ms": 261.68,
+     "total_ratio": 0.9677,
+     "mean_dt_graph_minus_openCARP_ms": -5.804,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 72.6,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.576,
+       "graph": 0.56
+      },
+      "sheet": {
+       "openCARP": 0.271,
+       "graph": 0.271
+      },
+      "normal": {
+       "openCARP": 0.336,
+       "graph": 0.341
+      }
+     }
+    },
+    "lv_free_wall_phi180_z0.5_d90": {
+     "openCARP_outcome": "hit the 20-minute cap",
+     "pass": null
+    },
+    "lv_septum_phi0_z0.5_d50": {
+     "median_abs_dt_ms": 5.171,
+     "p95_abs_dt_ms": 9.357,
+     "p95_pct_of_total": 4.29,
+     "total_openCARP_ms": 218.0,
+     "total_graph_ms": 207.78,
+     "total_ratio": 0.9531,
+     "mean_dt_graph_minus_openCARP_ms": -5.353,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 64.6,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.576,
+       "graph": 0.563
+      },
+      "sheet": {
+       "openCARP": 0.313,
+       "graph": 0.309
+      },
+      "normal": {
+       "openCARP": 0.35,
+       "graph": 0.349
+      }
+     }
+    },
+    "lv_septum_phi0_z0.25_d50": {
+     "median_abs_dt_ms": 4.66,
+     "p95_abs_dt_ms": 8.752,
+     "p95_pct_of_total": 3.78,
+     "total_openCARP_ms": 231.52,
+     "total_graph_ms": 221.65,
+     "total_ratio": 0.9574,
+     "mean_dt_graph_minus_openCARP_ms": -4.778,
+     "unactivated_minus1": 0,
+     "openCARP_wall_s": 69.0,
+     "openCARP_run": "first try",
+     "pass": false,
+     "F01_measure_m_s": {
+      "fibre": {
+       "openCARP": 0.577,
+       "graph": 0.563
+      },
+      "sheet": {
+       "openCARP": 0.31,
+       "graph": 0.307
+      },
+      "normal": {
+       "openCARP": 0.349,
+       "graph": 0.346
+      }
+     }
+    },
+    "rv_free_wall_q50_z0.5_d10": {
+     "openCARP_outcome": "hit the 20-minute cap",
+     "pass": null
+    },
+    "rv_free_wall_q50_z0.5_d90": {
+     "openCARP_outcome": "not run (batch stopped earlier)",
+     "pass": null
+    },
+    "rvot_septal_z_d50": {
+     "openCARP_outcome": "not run (batch stopped earlier)",
+     "pass": null
+    },
+    "rvot_free_wall_z_d50": {
+     "openCARP_outcome": "not run (batch stopped earlier)",
+     "pass": null
+    },
+    "aortic_cusp_rcc_z_d50": {
+     "openCARP_outcome": "not run (batch stopped earlier)",
+     "pass": null
+    },
+    "aortic_cusp_lcc_z_d50": {
+     "openCARP_outcome": "not run (batch stopped earlier)",
+     "pass": null
+    },
+    "lv_summit_superior_z_d50": {
+     "openCARP_outcome": "not run (batch stopped earlier)",
+     "pass": null
+    },
+    "lv_summit_inferior_lateral_z_d50": {
+     "openCARP_outcome": "not run (batch stopped earlier)",
+     "pass": null
+    }
+   },
+   "sites_passing": "0 / 3 compared (12 planned)",
+   "range_over_sites": {
+    "median_abs_dt_ms": [
+     4.66,
+     5.675
+    ],
+    "p95_pct_of_total": [
+     3.7,
+     4.29
+    ],
+    "total_ratio": [
+     0.9531,
+     0.9677
+    ],
+    "mean_dt_graph_minus_openCARP_ms": [
+     -5.804,
+     -4.778
+    ]
+   },
+   "factors": {
+    "fibre": 1.0784438462995747,
+    "sheet": 1.0047498884896737,
+    "normal": 1.0175608301840269
+   },
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "solver_keys": {
+    "topology_key": "c23643932eca953be9361650e0467624fc4c153f318cf196ede5815e1ab3f107",
+    "fibre_sha256": "e1252fcf69b11df3e6ab386d1e2897be31ab7b9f298acbac546d9635ae3a4562",
+    "q_key": "e9c3146d53c91e636e1b5f5d8dc9ff152d0e31853d67a13f1a27e1ee993ad8be",
+    "metric": "element-1"
+   },
+   "wall_s": 9.6
+  }
+ }
+}

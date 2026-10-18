@@ -1,0 +1,65 @@
+{
+ "version": "v51-factors-3 (element-wise metric, slab calibration)",
+ "written": "2026-10-18 14:27:18 CEST",
+ "decision": "Alex 17 Oct 2026 07:58 UTC ('Adopt all': test element-wise tensors first, recalibrate on the slab, rerun acceptance A); go 18 Oct 2026 12:03:13 UTC",
+ "method": "as solver51_slab_calibration.json, with the element-wise metric element-1 (graph51.py docstring): element tensors, E1 min over the tets sharing the edge, E2 sum over three thirds",
+ "hearts": {
+  "Y5HYEDL4": {
+   "factors": {
+    "fibre": 1.036892667037725,
+    "sheet": 1.0070666781406297,
+    "normal": 1.0268951775062594
+   },
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.36,
+    "normal": 0.48
+   },
+   "stencil": "v51-2ring-1",
+   "metric": "element-1",
+   "fibre_file": "data/biv/Y5HYEDL4/fibres_v51/bivF_v51.lon",
+   "fibre_sha256": "4c01ce43018bb8e86eed3d35e32e107cf7878d588c824809aba026521080b528",
+   "calibration_converged_within_0.5pct": true,
+   "calibration_iterations": 2,
+   "acceptance_A_pass": true
+  },
+  "6G8DD8S5": {
+   "factors": {
+    "fibre": 1.0784438462995747,
+    "sheet": 1.0047498884896737,
+    "normal": 1.0175608301840269
+   },
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "stencil": "v51-2ring-1",
+   "metric": "element-1",
+   "fibre_file": "data/biv/6G8DD8S5/fibres_v51/bivF_v51.lon",
+   "fibre_sha256": "29692d4b9f140b4dbc1c250f06bc5895a1bc4d62897a136c23fa559d3354fd3b",
+   "calibration_converged_within_0.5pct": true,
+   "calibration_iterations": 3,
+   "acceptance_A_pass": true
+  },
+  "7D98EVAR": {
+   "factors": {
+    "fibre": 1.0784438462995747,
+    "sheet": 1.0047498884896737,
+    "normal": 1.0175608301840269
+   },
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "stencil": "v51-2ring-1",
+   "metric": "element-1",
+   "fibre_file": "data/biv/7D98EVAR/fibres_v51/bivF_v51.lon",
+   "fibre_sha256": "e1252fcf69b11df3e6ab386d1e2897be31ab7b9f298acbac546d9635ae3a4562",
+   "calibration_converged_within_0.5pct": true,
+   "calibration_iterations": 3,
+   "acceptance_A_pass": true
+  }
+ }
+}

@@ -10,6 +10,14 @@ S3 metric: M = sum_a (f_a v_a)^-2 a a^T over the fibre, sheet and normal (= f x 
    and t = sqrt(sum_a q_a / (f_a v_a)^2); the E2 minimum over k is taken for the speeds and factors in use.
 Caches (runs/v51_2026-10-15/cache51/): topology keyed by heart, mesh sha256, stencil version and filter settings; edge q
    keyed by the topology key + fibre-file sha256. Speeds and factors are never cached (applied at load).
+
+Element-wise metric (METRIC_ELEMENT, 18 Oct 2026; Alex's decision of 17 Oct 07:58 UTC, "test element-wise tensors first",
+an S3 change): no nodal averaging. Each element keeps its own M_e = sum_a (f_a v_a)^-2 a a^T. A tet edge (E1) lies on the
+boundary of the tets that share it: t_ij = min over those tets of sqrt(d^T M_e d), the fastest straight path between i and j
+inside one of its elements (as the eikonal local solvers, where a node takes the minimum over its elements). An E2 segment
+crosses the interior of several tets: t_ij = sum over its three equal thirds of sqrt(d_3^T M_e d_3), M_e of the tet holding
+the centre of each third (points at 1/6, 1/2, 5/6). So every edge weight is the travel time of a straight path in the
+element-wise model itself, and no tensor of one element is mixed with another's.
 """
 import hashlib
 import json
@@ -25,6 +33,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 CACHE = os.path.join(REPO, 'runs', 'v51_2026-10-15', 'cache51')
 STENCIL_VERSION = 'v51-2ring-1'
+METRIC_NODAL = 'nodal-1'          # S3 as briefed (nodal volume-weighted mean of element M)
+METRIC_ELEMENT = 'element-1'      # 18 Oct 2026: element tensors, E1 min over the edge's tets, E2 three-point sum
+E2_SAMPLES = (1.0 / 6.0, 0.5, 5.0 / 6.0)
 MAX_E2_MM = 3.5
 MID_KNN = 32                     # tets (nearest centroids) searched for an E2 midpoint
 BARY_EPS = 1e-9
@@ -225,22 +236,129 @@ def edge_q(h, lonf, log=print):
     return topo, info, q1, qt, {'topology_key': tkey, 'fibre_sha256': fsha, 'q_key': key}
 
 
-class Tissue:
-    """Tissue graph of one heart for one fibre file; weights for given speeds and factors."""
+# ------------------------------------------------------------------ element-wise metric (METRIC_ELEMENT)
+def element_components(lon):
+    """(Ne, 3, 6) components of a a^T per element (a = fibre, sheet, normal = f x s), as xx yy zz xy xz yz."""
+    f = lon[:, :3] / np.linalg.norm(lon[:, :3], axis=1, keepdims=True)
+    s = lon[:, 3:6] / np.linalg.norm(lon[:, 3:6], axis=1, keepdims=True)
+    n = np.cross(f, s); n /= np.linalg.norm(n, axis=1, keepdims=True)
+    return np.stack([np.stack([v[:, 0] ** 2, v[:, 1] ** 2, v[:, 2] ** 2, v[:, 0] * v[:, 1], v[:, 0] * v[:, 2], v[:, 1] * v[:, 2]], 1)
+                     for v in (f, s, n)], 1).astype(np.float32)
 
-    def __init__(self, h, lonf, log=print):
-        self.h, self.lonf = h, lonf
-        self.topo, self.info, self.q1, self.qt, self.keys = edge_q(h, lonf, log)
+
+def locate(p, tree, a, Jinv, chunk=100000):
+    """Index of a tet containing each point (nearest centroids first: 16, then 32 for the misses); a point in no tet takes the
+    tet of the nearest centroid. Returns (index, number of nearest-centroid fallbacks)."""
+    out = np.full(len(p), -1, np.int64)
+    for knn in (16, 32):
+        todo = np.where(out < 0)[0]
+        for c0 in range(0, len(todo), chunk):
+            ii = todo[c0:c0 + chunk]
+            q = p[ii]
+            _, nb = tree.query(q, k=knn, workers=2)
+            lam = np.einsum('nkij,nkj->nki', Jinv[nb], q[:, None, :] - a[nb])
+            ins = (lam >= -BARY_EPS).all(-1) & (lam.sum(-1) <= 1 + BARY_EPS)
+            hit = ins.any(1)
+            out[ii[hit]] = nb[hit, ins[hit].argmax(1)]
+    miss = np.where(out < 0)[0]
+    if len(miss):
+        out[miss] = tree.query(p[miss], k=1)[1]
+    return out, int(len(miss))
+
+
+def element_edge_q(pts, E, lon, e1, e2, log=print):
+    """E1: q for every (edge, tet) incidence, grouped by edge in the order of e1 (sorted unique pairs, as adjacency());
+    E2: q at the three sample points. Returns q1p (n_inc, 3), starts1 (len(e1)), q2 (len(e2), 3 samples, 3), info."""
+    N = len(pts)
+    Mc = element_components(lon)
+    pairs = np.concatenate([E[:, [a, b]] for a, b in ((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3))])
+    tet = np.tile(np.arange(len(E)), 6)
+    pairs.sort(axis=1)
+    key = pairs[:, 0].astype(np.int64) * N + pairs[:, 1]
+    o = np.argsort(key, kind='stable'); key, tet, pairs = key[o], tet[o], pairs[o]
+    ekey = e1[:, 0].astype(np.int64) * N + e1[:, 1]
+    starts1 = np.searchsorted(key, ekey)
+    assert np.array_equal(key[starts1], ekey) and len(np.unique(key)) == len(ekey), 'E1 / tet-edge incidence mismatch'
+    q1p = np.empty((len(key), 3), np.float32)
+    for c0 in range(0, len(key), 2_000_000):
+        sl = slice(c0, c0 + 2_000_000)
+        q1p[sl] = quad(pts[pairs[sl, 1]] - pts[pairs[sl, 0]], Mc[tet[sl]])
+    a, Jinv = tets_inverse(pts, E)
+    tree = cKDTree(pts[E].mean(1))
+    e2 = e2.astype(np.int64)
+    q2 = np.empty((len(e2), len(E2_SAMPLES), 3), np.float32)
+    nfb = 0
+    for si, sfrac in enumerate(E2_SAMPLES):
+        for c0 in range(0, len(e2), 1_000_000):
+            sl = slice(c0, c0 + 1_000_000)
+            d = pts[e2[sl, 1]] - pts[e2[sl, 0]]
+            idx, nf = locate(pts[e2[sl, 0]] + sfrac * d, tree, a, Jinv)
+            nfb += nf
+            q2[sl, si] = quad(d / len(E2_SAMPLES), Mc[idx])
+    inc = np.diff(np.r_[starts1, len(key)])
+    info = {'E1_tets_per_edge_median': float(np.median(inc)), 'E1_tets_per_edge_min': int(inc.min()),
+            'E2_sample_points': int(len(e2) * len(E2_SAMPLES)), 'E2_samples_in_no_tet_nearest_centroid_used': nfb}
+    return q1p, starts1, q2, info
+
+
+def edge_q_element(h, lonf, log=print):
+    """Cached element-wise q (METRIC_ELEMENT) for heart h and fibre file lonf."""
+    topo, info, tkey = topology(h, log)
+    fsha = sha256_file(lonf)
+    key = hashlib.sha256(json.dumps({'topology': tkey, 'fibre_sha256': fsha, 'metric': METRIC_ELEMENT, 'e2_samples': list(E2_SAMPLES),
+                                     'locate': 'knn 16 then 32, nearest centroid fallback', 'bary_eps': BARY_EPS}).encode()).hexdigest()
+    f = os.path.join(CACHE, f'qe_{h}_{key[:16]}.npz')
+    keys = {'topology_key': tkey, 'fibre_sha256': fsha, 'q_key': key, 'metric': METRIC_ELEMENT}
+    if os.path.exists(f):
+        d = np.load(f)
+        assert str(d['key']) == key
+        return topo, info | json.loads(str(d['info'])), d['q1p'], d['starts1'], d['q2'], keys
+    t0 = time.time()
+    B = os.path.join(REPO, 'data', 'biv', h)
+    pts, E = read_pts(os.path.join(B, 'biv.pts')), read_elem(os.path.join(B, 'biv.elem'))
+    q1p, starts1, q2, einfo = element_edge_q(pts, E, read_lon(lonf), topo['e1'], topo['e2'], log)
+    einfo['build_s'] = round(time.time() - t0, 1)
+    np.savez(f, key=key, q1p=q1p, starts1=starts1, q2=q2, info=json.dumps(einfo))
+    log(f'element edge q {h}: {einfo}')
+    return topo, info | einfo, q1p, starts1, q2, keys
+
+
+def element_weights(q1p, starts1, q2, w, chunk=2_000_000):
+    """E1: min over the edge's tets; E2: sum over the three thirds (float64, in chunks)."""
+    tp = np.empty(len(q1p))
+    for c0 in range(0, len(q1p), chunk):
+        tp[c0:c0 + chunk] = np.sqrt(q1p[c0:c0 + chunk].astype(np.float64) @ w)
+    t2 = np.empty(len(q2))
+    for c0 in range(0, len(q2), chunk):
+        t2[c0:c0 + chunk] = np.sqrt(q2[c0:c0 + chunk].astype(np.float64) @ w).sum(1)
+    return np.minimum.reduceat(tp, starts1), t2
+
+
+class Tissue:
+    """Tissue graph of one heart for one fibre file; weights for given speeds and factors. metric 'nodal' (S3 as briefed)
+    or 'element' (METRIC_ELEMENT)."""
+
+    def __init__(self, h, lonf, log=print, metric='nodal'):
+        self.h, self.lonf, self.metric = h, lonf, metric
+        if metric == 'nodal':
+            self.topo, self.info, self.q1, self.qt, self.keys = edge_q(h, lonf, log)
+            tp = self.topo['tri_pair']
+            self.starts = np.r_[0, np.flatnonzero(np.diff(tp)) + 1]
+            assert len(self.starts) == len(self.topo['e2'])
+        elif metric == 'element':
+            self.topo, self.info, self.q1p, self.starts1, self.q2, self.keys = edge_q_element(h, lonf, log)
+        else:
+            raise ValueError(metric)
         self.N = self.info['nodes']
-        tp = self.topo['tri_pair']
-        self.starts = np.r_[0, np.flatnonzero(np.diff(tp)) + 1]
-        assert len(self.starts) == len(self.topo['e2'])
 
     def weights(self, speeds, factors):
         w = np.array([1.0 / (factors[a] * speeds[a]) ** 2 for a in ('fibre', 'sheet', 'normal')])
-        t1 = np.sqrt(self.q1.astype(np.float64) @ w)
-        tt = np.sqrt(self.qt.astype(np.float64) @ w)
-        t2 = np.minimum.reduceat(tt, self.starts)
+        if self.metric == 'nodal':
+            t1 = np.sqrt(self.q1.astype(np.float64) @ w)
+            tt = np.sqrt(self.qt.astype(np.float64) @ w)
+            t2 = np.minimum.reduceat(tt, self.starts)
+        else:
+            t1, t2 = element_weights(self.q1p, self.starts1, self.q2, w)
         e = np.r_[self.topo['e1'], self.topo['e2']].astype(np.int64)
         return e, np.r_[t1, t2]
 
