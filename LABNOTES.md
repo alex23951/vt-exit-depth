@@ -1469,3 +1469,12 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
   - 6G8DD8S5: 1,640 ms on a mesh with 3 % more tets, about 8.4 h. 7D98EVAR: 1,650 ms on a mesh with 10 % fewer tets, about 7.4 h.
   - All 27: 4,910 ms, about 24 h (PLAN.md said 4,780 ms; its original-site lengths were estimates). Each beat 45-65 min.
   - Note (PC clock 00:33): the reason given above for the 4,780 vs 4,910 ms difference is my inference; I did not check how PLAN.md's total was made.
+
+### 2026-10-19_v51_08_mono_Y5HYEDL4: 27-site monodomain check, heart 1 of 3 (Y5HYEDL4, 9 beats), run offline
+- Date/time: started 2026-10-19 00:39:01 PC clock by Alex; git 34463c7; Status: running
+- Purpose: monodomain beats of the 9 Y5HYEDL4 check sites, to compare their ECG measures with the v5.1 graph beats (locked 27-site rule).
+- Command: `bash ~/vt-exit-depth/analysis/v51_2026-10-15/08_monodomain/run_offline.sh Y5HYEDL4` (detached; runs `HEART=Y5HYEDL4 python -B analysis/v51_2026-10-15/08_monodomain/mono51.py run`; stops at the first failing beat). Log: runs/v51_2026-10-15/08_monodomain/offline_20261019_0039.log
+- Model: monodomain, Tomek, dt 10 us, flat-tuned control conductivities (gi 0.4306 / 0.1921 / 0.3006 S/m, ge = gi x 3.592; tags 1 and 2 alike); v5.1 fibres; mesh biv51 (375,190 nodes); site stimulus 400 uA/cm3 x 1 ms within 1.5 mm; graph junction exit times replayed as stimuli (1.0 mm, 0.25 ms bins); LAT -10 mV; Vm every 1 ms; tend = graph total activation + 30 ms; 4 processes; memory guard 900 MB.
+- Sites and depth: lv_free_wall_original_d0 (node 313318), lv_free_wall_phi180_z0.5_d50 / d90, lv_septum_phi0_z0.5_d10 / d50 / d90, rv_free_wall_q50_z0.5_d10 / d50 / d90.
+- Lead fields: data/biv/Y5HYEDL4/ecgW_v51.npz (sigma_i), applied at analysis.
+- Output: runs/v51_2026-10-15/08_monodomain/beats/Y5HYEDL4/<site>/. Expected about 8 h (1,620 simulated ms).
