@@ -1,0 +1,73 @@
+{
+ "heart": "7D98EVAR",
+ "metrics": {
+  "qrs_true_span_ms": 110.2,
+  "his_to_first_myocardium_ms": 20.8,
+  "T_latest_after_lv_onset_ms": 110.2,
+  "b_lv30_pct": 55.3,
+  "b_lv37_pct": 77.4,
+  "c_rv_epi_breakthrough_ms": 30.5,
+  "a_onset_ant_ms": 0.0,
+  "a_onset_sep_ms": 3.9,
+  "a_onset_post_ms": 6.3,
+  "d_last5_in_durrer_areas_pct": 81.1,
+  "e_qrs_detected_ms": 72.0,
+  "axis_net_deg": 81,
+  "axis_area_deg": 88,
+  "his_to_detected_qrs_onset_ms": 22.0,
+  "qrs_detected_any_lead_ms": 72.0,
+  "C10_R_S": {
+   "V1": {
+    "R_mV": 1.442,
+    "S_mV": 1.223,
+    "R_over_S": 1.18
+   },
+   "V2": {
+    "R_mV": 1.957,
+    "S_mV": 1.144,
+    "R_over_S": 1.71
+   },
+   "V3": {
+    "R_mV": 1.673,
+    "S_mV": 1.284,
+    "R_over_S": 1.3
+   },
+   "V4": {
+    "R_mV": 1.831,
+    "S_mV": 0.884,
+    "R_over_S": 2.07
+   },
+   "V5": {
+    "R_mV": 1.871,
+    "S_mV": 0.893,
+    "R_over_S": 2.1
+   },
+   "V6": {
+    "R_mV": 1.807,
+    "S_mV": 0.948,
+    "R_over_S": 1.91
+   }
+  },
+  "C10_sokolow_lyon_mV": 3.094,
+  "C10_frontal_net_magnitude_mV": 1.213,
+  "first_rv_endo_after_lv_onset_ms": 21.3,
+  "a_areas_within_5ms_of_earliest": 2,
+  "a_spread_ms": 6.3
+ },
+ "keys": {
+  "tissue": {
+   "topology_key": "c23643932eca953be9361650e0467624fc4c153f318cf196ede5815e1ab3f107",
+   "fibre_sha256": "e1252fcf69b11df3e6ab386d1e2897be31ab7b9f298acbac546d9635ae3a4562",
+   "q_key": "b605fd50b1f8fd467a5295c1e81e0c3cdcd7571bfc6d15a918688df9205b5c6f"
+  },
+  "factors": {
+   "fibre": 1.0784438502874043,
+   "sheet": 1.0047498917235866,
+   "normal": 1.017560836219837
+  },
+  "network_sha256": "cb8660c65c732ee55df23a708d27791eb4311f77358ffb5cb8853ab5972f3e2a",
+  "weights_sha256": "a0f352cb29c45b7ecde0237833e1352b810554998b2650bd361c459d4765db78"
+ },
+ "unactivated_nodes": 0,
+ "wall_s": 8.9
+}
