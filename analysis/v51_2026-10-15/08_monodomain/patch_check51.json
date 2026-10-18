@@ -1,0 +1,40 @@
+{
+ "heart": "Y5HYEDL4",
+ "site_patch_node": 19039,
+ "site_heart_node": 118302,
+ "graph": {
+  "fibre": 0.5861429605557319,
+  "n_fibre": 73,
+  "sheet": 0.3687722131869877,
+  "n_sheet": 78,
+  "transit_ms": 12.545081019131622
+ },
+ "mono_wall_tuned": {
+  "conductivities_gi": {
+   "fibre": 0.7603520141353601,
+   "sheet": 0.11327041922874088,
+   "normal": 0.30380125875587594
+  },
+  "fibre": 0.5980528595000392,
+  "n_fibre": 73,
+  "sheet": 0.37776924334095496,
+  "n_sheet": 53,
+  "transit_ms": 12.522141272918159
+ },
+ "mono_flat_tuned": {
+  "conductivities_gi": {
+   "fibre": 0.43060399857704695,
+   "sheet": 0.192131838201808,
+   "normal": 0.30058625787500615
+  },
+  "speed_run_wall_s": 65.3,
+  "fibre": 0.42759723227001456,
+  "n_fibre": 73,
+  "sheet": 0.374099204188115,
+  "n_sheet": 56,
+  "transit_ms": 13.314548602836483,
+  "transit_run_wall_s": 104.1,
+  "unactivated": 0
+ },
+ "transit_target_ms": 12.5
+}

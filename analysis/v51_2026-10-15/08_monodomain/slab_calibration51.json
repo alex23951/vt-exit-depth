@@ -1,0 +1,374 @@
+{
+ "slab": {
+  "nodes": 46225,
+  "tets": 287615,
+  "edge_mean_mm": 1.029,
+  "edge_max_mm": 1.741,
+  "heart_patch_edge_mean_mm_Y5HYEDL4": 1.054
+ },
+ "start_control": "calibration_Y5HYEDL4.json round 4 (patch method)",
+ "sets": {
+  "control": {
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.36,
+    "normal": 0.48
+   },
+   "within_1pct": true,
+   "within_3pct": true,
+   "rounds": 5,
+   "gi": {
+    "fibre": 0.43060399857704695,
+    "sheet": 0.192131838201808,
+    "normal": 0.30058625787500615
+   },
+   "history": [
+    {
+     "round": 0,
+     "gi": {
+      "fibre": 0.7603520141353601,
+      "sheet": 0.11327041922874088,
+      "normal": 0.30380125875587594
+     },
+     "measured_m_s": {
+      "fibre": 0.8852214349356194,
+      "sheet": 0.2794915849489691,
+      "normal": 0.4999040936053612
+     },
+     "ratio": {
+      "fibre": 1.4753690582260324,
+      "sheet": 0.7763655137471364,
+      "normal": 1.041466861677836
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 305.9,
+       "tend_ms": 56.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 469.8,
+       "tend_ms": 90.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 249.0,
+       "tend_ms": 47.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 1,
+     "gi": {
+      "fibre": 0.3493118819228699,
+      "sheet": 0.187924773914775,
+      "normal": 0.2800906797133309
+     },
+     "measured_m_s": {
+      "fibre": 0.5159533916189712,
+      "sheet": 0.34776929996125133,
+      "normal": 0.45129771140738273
+     },
+     "ratio": {
+      "fibre": 0.8599223193649521,
+      "sheet": 0.9660258332256981,
+      "normal": 0.9402035654320474
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 258.8,
+       "tend_ms": 56.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 476.8,
+       "tend_ms": 90.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 149.8,
+       "tend_ms": 47.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 2,
+     "gi": {
+      "fibre": 0.43415976445101234,
+      "sheet": 0.20358903545656187,
+      "normal": 0.3168508451906937
+     },
+     "measured_m_s": {
+      "fibre": 0.6046779259949602,
+      "sheet": 0.37563806278340345,
+      "normal": 0.4985239538950835
+     },
+     "ratio": {
+      "fibre": 1.0077965433249336,
+      "sheet": 1.043439063287232,
+      "normal": 1.0385915706147575
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 90.1,
+       "tend_ms": 56.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 147.2,
+       "tend_ms": 90.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 77.7,
+       "tend_ms": 47.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 3,
+     "gi": {
+      "fibre": 0.42956367425364955,
+      "sheet": 0.1947935672868819,
+      "normal": 0.3023281693341768
+     },
+     "measured_m_s": {
+      "fibre": 0.5986309553792986,
+      "sheet": 0.36365463895266836,
+      "normal": 0.48199713798851407
+     },
+     "ratio": {
+      "fibre": 0.9977182589654976,
+      "sheet": 1.0101517748685234,
+      "normal": 1.0041607041427376
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 89.4,
+       "tend_ms": 56.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 147.6,
+       "tend_ms": 90.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 78.4,
+       "tend_ms": 47.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 4,
+     "gi": {
+      "fibre": 0.43060399857704695,
+      "sheet": 0.192131838201808,
+      "normal": 0.30058625787500615
+     },
+     "measured_m_s": {
+      "fibre": 0.5993460688011464,
+      "sheet": 0.360373987656433,
+      "normal": 0.4800024432834718
+     },
+     "ratio": {
+      "fibre": 0.9989101146685774,
+      "sheet": 1.0010388546012028,
+      "normal": 1.0000050901738997
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 89.4,
+       "tend_ms": 56.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 149.7,
+       "tend_ms": 90.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 78.5,
+       "tend_ms": 47.0,
+       "unactivated_in_range": 0
+      }
+     }
+    }
+   ]
+  },
+  "HF": {
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "within_1pct": true,
+   "within_3pct": true,
+   "rounds": 3,
+   "gi": {
+    "fibre": 0.44628998226557565,
+    "sheet": 0.12040179156497709,
+    "normal": 0.17957584342922545
+   },
+   "history": [
+    {
+     "round": 0,
+     "gi": {
+      "fibre": 0.43060399857704695,
+      "sheet": 0.10021691560526406,
+      "normal": 0.14728726635875306
+     },
+     "measured_m_s": {
+      "fibre": 0.5811896253234959,
+      "sheet": 0.22755597193552715,
+      "normal": 0.2913786495513868
+     },
+     "ratio": {
+      "fibre": 0.96864937553916,
+      "sheet": 0.8752152766751043,
+      "normal": 0.8671983617600798
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 88.9,
+       "tend_ms": 56.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 196.6,
+       "tend_ms": 121.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 108.0,
+       "tend_ms": 65.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 1,
+     "gi": {
+      "fibre": 0.45892831398781136,
+      "sheet": 0.130831178403417,
+      "normal": 0.1958521323203052
+     },
+     "measured_m_s": {
+      "fibre": 0.615102848341989,
+      "sheet": 0.27617173311798865,
+      "normal": 0.35762367346931334
+     },
+     "ratio": {
+      "fibre": 1.025171413903315,
+      "sheet": 1.0621989735307256,
+      "normal": 1.064356171039623
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 88.5,
+       "tend_ms": 56.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 198.4,
+       "tend_ms": 121.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 116.3,
+       "tend_ms": 65.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 2,
+     "gi": {
+      "fibre": 0.44628998226557565,
+      "sheet": 0.12040179156497709,
+      "normal": 0.17957584342922545
+     },
+     "measured_m_s": {
+      "fibre": 0.6007931839441797,
+      "sheet": 0.25974126948620135,
+      "normal": 0.3357386188157997
+     },
+     "ratio": {
+      "fibre": 1.0013219732402996,
+      "sheet": 0.9990048826392359,
+      "normal": 0.9992220798089276
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 111.4,
+       "tend_ms": 56.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 204.4,
+       "tend_ms": 121.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 109.4,
+       "tend_ms": 65.0,
+       "unactivated_in_range": 0
+      }
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,179 @@
+{
+ "method": "monodomain conductivities calibrated to the intrinsic v5.1 speeds on a synthetic slab (mono_slab51.py, slab_calibration51.json); planar waves, target within 1 %",
+ "written": "2026-10-19 00:20:31 CEST",
+ "slab": {
+  "nodes": 46225,
+  "tets": 287615,
+  "edge_mean_mm": 1.029,
+  "edge_max_mm": 1.741,
+  "heart_patch_edge_mean_mm_Y5HYEDL4": 1.054
+ },
+ "hearts": {
+  "Y5HYEDL4": {
+   "speed_set": "control",
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.36,
+    "normal": 0.48
+   },
+   "within_3pct": true,
+   "within_1pct": true,
+   "rounds": 5,
+   "conductivities_S_m": {
+    "fibre": {
+     "gi": 0.43060399857704695,
+     "ge": 1.5467097650037607
+    },
+    "sheet": {
+     "gi": 0.192131838201808,
+     "ge": 0.6901287291731609
+    },
+    "normal": {
+     "gi": 0.30058625787500615,
+     "ge": 1.079692018229189
+    }
+   },
+   "measured_m_s": {
+    "fibre": 0.5993460688011464,
+    "sheet": 0.360373987656433,
+    "normal": 0.4800024432834718
+   }
+  },
+  "6G8DD8S5": {
+   "speed_set": "HF",
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "within_3pct": true,
+   "within_1pct": true,
+   "rounds": 3,
+   "conductivities_S_m": {
+    "fibre": {
+     "gi": 0.44628998226557565,
+     "ge": 1.6030530972183035
+    },
+    "sheet": {
+     "gi": 0.12040179156497709,
+     "ge": 0.432477699586843
+    },
+    "normal": {
+     "gi": 0.17957584342922545,
+     "ge": 0.6450281732371604
+    }
+   },
+   "measured_m_s": {
+    "fibre": 0.6007931839441797,
+    "sheet": 0.25974126948620135,
+    "normal": 0.3357386188157997
+   }
+  },
+  "7D98EVAR": {
+   "speed_set": "HF",
+   "speeds_m_s": {
+    "fibre": 0.6,
+    "sheet": 0.26,
+    "normal": 0.336
+   },
+   "within_3pct": true,
+   "within_1pct": true,
+   "rounds": 3,
+   "conductivities_S_m": {
+    "fibre": {
+     "gi": 0.44628998226557565,
+     "ge": 1.6030530972183035
+    },
+    "sheet": {
+     "gi": 0.12040179156497709,
+     "ge": 0.432477699586843
+    },
+    "normal": {
+     "gi": 0.17957584342922545,
+     "ge": 0.6450281732371604
+    }
+   },
+   "measured_m_s": {
+    "fibre": 0.6007931839441797,
+    "sheet": 0.25974126948620135,
+    "normal": 0.3357386188157997
+   }
+  }
+ },
+ "superseded_patch_method": {
+  "note": "mono_cal51.py on the LV free-wall patch, Y5HYEDL4 only; the in-wall cross-fibre speed stayed at 0.373-0.378 m/s (target 0.36); not used",
+  "content": {
+   "method": "Monodomain conductivities for the v5.1 speeds (27-site monodomain check, step 1; Alex 18 Oct 2026 20:51:05 UTC \"Yes\").",
+   "hearts": {
+    "Y5HYEDL4": {
+     "targets": {
+      "fibre": 0.6,
+      "sheet": 0.36,
+      "transit_ms": 12.5
+     },
+     "within_3pct": false,
+     "rounds": 5,
+     "conductivities_S_m": {
+      "fibre": {
+       "gi": 0.7603520141353601,
+       "ge": 2.731353703292522
+      },
+      "sheet": {
+       "gi": 0.11327041922874088,
+       "ge": 0.4068049260661667
+      },
+      "normal": {
+       "gi": 0.30380125875587594,
+       "ge": 1.0913287476255187
+      }
+     },
+     "measured": {
+      "speed_run_wall_s": 51.9,
+      "fibre": 0.5980528595000392,
+      "n_fibre": 73,
+      "sheet": 0.37776924334095496,
+      "n_sheet": 53,
+      "transit_ms": 12.522141272918159,
+      "transit_run_wall_s": 80.2,
+      "unactivated": 0
+     },
+     "written": "2026-10-18 23:04:58 CEST"
+    },
+    "6G8DD8S5": {
+     "targets": {
+      "fibre": 0.6,
+      "sheet": 0.26,
+      "transit_ms": 17.857142857142858
+     },
+     "within_3pct": false,
+     "rounds": 5,
+     "conductivities_S_m": {
+      "fibre": {
+       "gi": 0.9077528620774209,
+       "ge": 3.260850363274189
+      },
+      "sheet": {
+       "gi": 0.06303710785065329,
+       "ge": 0.22639455361089728
+      },
+      "normal": {
+       "gi": 0.07442061841125243,
+       "ge": 0.26733714212004683
+      }
+     },
+     "measured": {
+      "speed_run_wall_s": 163.1,
+      "fibre": 0.6183876007102178,
+      "n_fibre": 63,
+      "sheet": 0.22349205441048176,
+      "n_sheet": 31,
+      "transit_ms": 16.216591162815618,
+      "transit_run_wall_s": 278.2,
+      "unactivated": 21553
+     },
+     "written": "2026-10-18 23:34:23 CEST"
+    }
+   }
+  }
+ }
+}

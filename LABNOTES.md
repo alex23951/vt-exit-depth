@@ -1395,3 +1395,69 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Plan written 2026-10-18 22:49 PC time: analysis/v51_2026-10-15/08_monodomain/PLAN.md. The locked rule was read from the Research Proposal (Analysis plan, 15 Oct 2026): 4 measures x 27 sites, 5 ms, >= 90 % of 108 pairs.
   - Estimate: conductivity re-calibration to the v5.1 speeds (about 1 h), a 10 ms timing test, then 27 beats of 4,780 simulated ms in all (about 21-27 h, one at a time, about 4.8 GB).
   - Nothing run; waiting for Alex's OK.
+
+### 2026-10-18_v51_08_monocal: monodomain conductivities for the v5.1 speeds on each heart's LV free-wall patch (27-site check, step 1; Alex 20:51:05 UTC "Yes")
+- Date/time: PC clock 2026-10-18 22:53; git 4ae6baa (+ uncommitted mono_cal51.py, LABNOTES.md); Status: running
+- Purpose: tune the monodomain conductivities so the monodomain beats conduct at the v5.1 speeds; without it, the graph and monodomain beats would differ by design.
+- Command: `HEART=<H> python -B analysis/v51_2026-10-15/08_monodomain/mono_cal51.py` (3 hearts, one at a time; 6 processes).
+- Method: as 07_patch_tune.py --myo / --myo-refine (3 Oct). Targets fibre 0.60, sheet 0.36 / 0.26 (HF), transit 7 -> 1 mm below the epicardium 12.5 / 17.857 ms (= 6 mm / 0.48 or 0.336 m/s). v5.1 fibres on the patch (patch fibres vs v5.1: median 0.3-1.1 deg). No fast layer. Start from calibration.json (read only), gi and ge scaled together, power-law corrections until within 3 %, at most 5 rounds.
+- Model: monodomain, Tomek, dt 10 us, 400 uA/cm3 x 1 ms, LAT -10 mV; LV free-wall patch (data/biv/<H>/patch_lvfw.*, read only).
+- Output: runs/v51_2026-10-15/08_monodomain/cal/<H>/, analysis/v51_2026-10-15/08_monodomain/calibration_<H>.json, params/v51_mono_conductivities.json. Expected about 10-15 min per heart.
+- Status update (2026-10-18_v51_08_monocal), PC clock 23:06: STOPPED after Y5HYEDL4 (22:53-23:05; the HF hearts not started). Fibre and transmural speeds converged (0.598 m/s; transit 12.52 ms vs 12.5), but the in-wall cross-fibre speed measured on the patch stays at 0.373-0.378 m/s while the sheet conductivity falls 42 % (gi 0.196 -> 0.113); target 0.36.
+  - Reading (inference): in a wall with rotating fibres, the patch measure (same depth, 3-10 mm from a mid-wall point) reads an apparent cross-fibre speed. The wave reaches those nodes through neighbouring layers whose fibres point that way, so the measure has a floor near 0.37 m/s. The HF target 0.26 m/s is far below it.
+  - The v5.1 graph solver was instead calibrated to intrinsic speeds on a synthetic slab with uniform fibres (Alex, 17 Oct, option 1).
+- Change of method (my decision, reported to Alex; reversible, minutes): the monodomain conductivities are calibrated to the intrinsic v5.1 speeds on the same kind of slab. Details:
+  - Slab: 36 x 36 x 20 mm jittered-grid Delaunay mesh with the hearts' edge lengths, as solver51.py slab_mesh(seed 0); uniform fibres (fibre x, sheet y, normal z).
+  - Measurement: planar waves, one slab face stimulated per direction; speed = slope of arrival vs distance over the slab's middle.
+  - The monodomain and the graph beats then share the same intrinsic tissue speeds, and the heart's rotating fibres act on both.
+  - The patch calibration's output for Y5HYEDL4 stays on record (calibration_Y5HYEDL4.json) and is not used.
+
+### 2026-10-18_v51_08_monoslab: monodomain conductivities for the intrinsic v5.1 speeds on a synthetic slab (27-site check, step 1, second method)
+- Date/time: PC clock 2026-10-18 23:16; git 4ae6baa (+ uncommitted mono_slab51.py, mono_cal51.py, mono51.py, LABNOTES.md); Status: running
+- Purpose: set the monodomain conductivities so that a flat wave in straight fibres travels at the v5.1 speeds, as the graph solver was calibrated.
+- Command: `python -B analysis/v51_2026-10-15/08_monodomain/mono_slab51.py` (6 processes; one openCARP run at a time).
+- Slab: solver51.py slab_mesh(seed 0): 36 x 36 x 20 mm, 46,225 nodes, 287,615 tets (orientation made positive), mean edge 1.029 mm; uniform fibres (fibre x, sheet y, normal z); one tag.
+- Model: monodomain, Tomek, dt 10 us, Crank-Nicolson (as the mono51.py beats); 400 uA/cm3 x 1 ms on the nodes within 1.2 mm of one face; LAT -10 mV.
+- Measure: speed = 1 / slope of arrival time vs distance (x, y 6-24 mm; z 5-15 mm; >= 4 mm from the side faces; 1 mm bins, medians).
+- Targets: control 0.60 / 0.36 / 0.48 m/s (Y5HYEDL4); HF 0.60 / 0.26 / 0.336 m/s (6G8DD8S5, 7D98EVAR). gi and ge scaled together (ge / gi = 0.625 / 0.174). Within 1 %, at most 6 rounds.
+- Start: control from the last patch round (Y5HYEDL4 round 4: gi 0.760 / 0.113 / 0.304 S/m), so round 0 also shows patch vs slab at equal conductivities; HF from the control result x (speed ratio)^2.
+- Output: runs/v51_2026-10-15/08_monodomain/slab/ (runs), analysis/v51_2026-10-15/08_monodomain/slab_calibration51.json, params/v51_mono_conductivities.json (the patch entry kept inside it as "superseded_patch_method").
+- Expected: about 5-6 min per round, 2-3 rounds per speed set, about 30-35 min in all.
+- Correction (PC clock 23:12): the run started at 23:13, not 23:16 as typed above (written before reading the clock).
+- Correction 2 (PC clock 23:12): the run's own clock print gives the start as 23:12:15; both earlier times (23:16, 23:13) were wrong.
+
+## 2026-10-18 23:44 PC time: correction to the 2026-10-18_v51_08_monocal status update (23:06)
+- That update said "STOPPED after Y5HYEDL4 (the HF hearts not started)". This was wrong. The shell loop I had started for the three hearts did not stop when Y5HYEDL4 failed, and went on:
+  - 6G8DD8S5: 5 rounds, 23:05-23:34, not within 3 %. In-wall cross-fibre speed swung between 0.22 and 0.33 m/s (target 0.26) without settling; transit 16.2-16.5 ms (target 17.86); in the 40 ms transit runs, 6,574 to 21,553 of the 68,121 patch nodes were not activated. It wrote calibration_6G8DD8S5.json and a 6G8DD8S5 entry (within_3pct false) into params/v51_mono_conductivities.json.
+  - 7D98EVAR: round 0 done (fibre 0.515, cross-fibre 0.219 m/s, transit 18.66 ms; all nodes activated); stopped by me at 23:43 during round 1 (calibration_7D98EVAR.json holds round 0 only).
+- I found it at 23:42: it ran alongside the slab calibration (2026-10-18_v51_08_monoslab) from 23:12 to 23:43, 12 openCARP processes on 8 cores. The slab runs' wall times in that window are slowed; their results are not affected (same inputs, same numerics).
+- None of these patch results are used. The slab script keeps the old params content inside the new file ("superseded_patch_method").
+- Status update (2026-10-18_v51_08_monoslab), PC clock 2026-10-19 00:21: ok. Finished 00:20:31 (68 min; the first 31 min shared the CPU with the stray patch loop, see the correction above). Every planar run activated all measured nodes.
+  - Control (Y5HYEDL4), 5 rounds: gi fibre 0.4306, sheet 0.1921, normal 0.3006 S/m (ge = gi x 3.592) -> 0.5993 / 0.3604 / 0.4800 m/s (targets 0.60 / 0.36 / 0.48).
+  - HF (6G8DD8S5, 7D98EVAR), 3 rounds: gi 0.4463 / 0.1204 / 0.1796 S/m -> 0.6008 / 0.2597 / 0.3357 m/s (targets 0.60 / 0.26 / 0.336). The 0.26 m/s cross-fibre wave conducts on the ~1 mm mesh without block.
+  - Round 0 (the patch-tuned Y5HYEDL4 conductivities, gi 0.760 / 0.113 / 0.304) on the slab: 0.885 / 0.280 / 0.500 m/s. Same conductivities on the patch (rotating fibres, mid-wall ball): 0.598 / 0.378 / transit 12.52 ms (= 0.479 m/s). So the two tuning methods give different conductivities: flat-tuned vs patch-tuned fibre -43 %, sheet +70 %, normal -1 %.
+  - Observation: on this mesh the speed of one direction also depends on the other directions' conductivities (e.g. normal 0.500 m/s at gi_n 0.304 in round 0 vs 0.499 at gi_n 0.317 in round 2, after gi_fibre fell 43 %). Inference: the ~1 mm elements are coarse for the monodomain wavefront (foot ~0.2-0.5 mm), so the coarse heart mesh's monodomain speeds depend on the mesh; this is why each direction was tuned on a mesh with the hearts' edge length (slab 1.029 mm, Y5HYEDL4 patch 1.054 mm).
+  - Written: params/v51_mono_conductivities.json (the earlier patch entries for Y5HYEDL4 and 6G8DD8S5 kept inside it under "superseded_patch_method"), analysis/v51_2026-10-15/08_monodomain/slab_calibration51.json.
+  - Which tuning the 27-site check uses is Alex's decision (to be asked with the timing result). Nothing is run on the hearts with either set yet.
+
+### 2026-10-19_v51_08_patchcheck: in-wall speeds of the graph model and both monodomain tunings, measured the same way on Y5HYEDL4's LV free-wall patch
+- Date/time: PC clock 2026-10-19 00:21; git 4ae6baa (+ uncommitted 08_monodomain scripts, LABNOTES.md); Status: running
+- Purpose: show what each monodomain tuning means inside the heart wall, next to the graph model, before Alex chooses; nothing is tuned.
+- Command: `python -B analysis/v51_2026-10-15/08_monodomain/patch_check51.py`
+- Measure: mono_cal51.py speeds() / transit() (the 3 Oct 07_patch_tune measure). Graph: heart51 tissue graph (no network) on the whole heart, read on the patch nodes. Monodomain flat-tuned: Tomek, dt 10 us, Y5HYEDL4 slab conductivities, 2 runs on the patch (25 and 40 ms; 6 processes). Monodomain patch-tuned: taken from calibration_Y5HYEDL4.json round 4 (not rerun).
+- Output: analysis/v51_2026-10-15/08_monodomain/patch_check51.json; runs/v51_2026-10-15/08_monodomain/patch_check/Y5HYEDL4/. Expected about 5 min.
+- Status update (2026-10-19_v51_08_patchcheck), PC clock 00:24: ok, 00:21:01-00:24:03 (3 min). In-wall speeds, same measure, Y5HYEDL4 patch (fibre / cross-fibre m/s; transit over 6 mm, target 12.5 ms):
+  - graph v5.1 (tissue only): 0.586 / 0.369 / 12.55 ms
+  - monodomain, patch-tuned (3 Oct method, round 4): 0.598 / 0.378 / 12.52 ms
+  - monodomain, flat-tuned (slab): 0.428 / 0.374 / 13.32 ms
+  - Reading (inference): the graph's in-wall speeds sit close to its flat-tissue speeds (no curvature or electrotonic slowing in an eikonal model). With the flat-tuned set the monodomain spreads about 27 % slower along the fibres within 3-10 mm of a mid-wall pacing site, and about 6 % slower across the wall, than the graph. With the patch-tuned set it matches the graph within 2-3 %.
+
+### 2026-10-19_v51_08_monotest: 10 ms monodomain timing test on Y5HYEDL4 (27-site check, step 2)
+- Date/time: PC clock 2026-10-19 00:24; git 4ae6baa (+ uncommitted 08_monodomain scripts, LABNOTES.md); Status: running
+- Purpose: measure the time per simulated ms and the memory of a v5.1 monodomain beat, for the overnight estimate.
+- Command: `HEART=Y5HYEDL4 python -B analysis/v51_2026-10-15/08_monodomain/mono51.py test` (4 processes)
+- Model: monodomain, Tomek, dt 10 us, flat-tuned Y5HYEDL4 conductivities (timing barely depends on them); mesh runs/v51_2026-10-15/04_build/Y5HYEDL4/acceptance_c/mesh/biv51 (375,190 nodes, 1,939,909 tets; v5.1 fibres); site 1 (LV mid-endocardial original site), junction stimuli squeezed into 2-8 ms; tend 10 ms.
+- Output: runs/v51_2026-10-15/08_monodomain/beats/Y5HYEDL4/lv_free_wall_original_d0_test/. Expected about 5 min.
+- Status update (2026-10-19_v51_08_monotest), PC clock 00:28: ok, 00:24:57-00:28:17. openCARP 190 s for 10 ms = 19.0 s per simulated ms with 4 processes (includes setup; an upper bound for full beats). Lowest available memory 5,085 MB (about 1.8 GB used). 26 stimuli (site + 25 junction groups from 3,271 junctions). Graph total activation of this site 143.0 ms, so its full beat is 180 ms (about 57 min).
+  - Estimate for the 27 beats (4,780 simulated ms, PLAN.md): about 25 h at 19 s/ms; about 8 h per heart.
+  - Next: Alex chooses the tuning (flat-tuned vs patch-tuned) and gives the go for the first heart. Nothing started.
