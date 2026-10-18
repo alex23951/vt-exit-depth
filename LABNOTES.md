@@ -1392,3 +1392,6 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
   - Files: analysis/v51_2026-10-15/05_aha_labels/aha51.py, README.md (addendum), pilot_site_labels.csv, placement_dry_run.csv.
 - analysis/v51_2026-10-15/06_pilot_rerun/rescore/per_site.csv (2.3 MB, sha256 a49182ad...bb8b) committed (Alex's yes).
 - 27-site monodomain check: Alex said yes to planning it. Plan and time estimate are posted to Alex before any run (next entry).
+- Plan written 2026-10-18 22:49 PC time: analysis/v51_2026-10-15/08_monodomain/PLAN.md. The locked rule was read from the Research Proposal (Analysis plan, 15 Oct 2026): 4 measures x 27 sites, 5 ms, >= 90 % of 108 pairs.
+  - Estimate: conductivity re-calibration to the v5.1 speeds (about 1 h), a 10 ms timing test, then 27 beats of 4,780 simulated ms in all (about 21-27 h, one at a time, about 4.8 GB).
+  - Nothing run; waiting for Alex's OK.
