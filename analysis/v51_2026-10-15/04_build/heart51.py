@@ -106,8 +106,12 @@ class Heart51:
         self.keys = {'tissue': tis.keys, 'factors': self.factors, 'network_sha256': par['network_v51_sha256'],
                      'weights_sha256': sha256(os.path.join(B, 'ecgW_v51.npz'))}
 
-    def solve(self, site_node=None):
-        return couple(self.N, self.e, self.w, self.net, self.pts_um, site_node, self.d_ant, self.d_ret)
+    def solve(self, site_node=None, nonet=False):
+        if not nonet:
+            return couple(self.N, self.e, self.w, self.net, self.pts_um, site_node, self.d_ant, self.d_ret)
+        s = np.where(np.linalg.norm(self.pts_um - self.pts_um[site_node], axis=1) < BALL_UM)[0]   # no-network arm: tissue only
+        G = coo_matrix((np.r_[self.w, self.w], (np.r_[self.e[:, 0], self.e[:, 1]], np.r_[self.e[:, 1], self.e[:, 0]])), shape=(self.N, self.N)).tocsr()
+        return dijkstra(G, directed=False, indices=s, min_only=True)
 
     def ecg(self, T):
         tend = float(min(990, max(140, np.ceil((T.max() + 20) / 10) * 10)))

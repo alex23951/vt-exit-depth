@@ -1,0 +1,36 @@
+{
+ "rows": 22002,
+ "unscorable_rows": 0,
+ "wall_s": 48.6,
+ "file": "runs/v51_2026-10-15/06_pilot_rerun/rules/per_measurement.csv",
+ "bytes": 10411816,
+ "sha256": "bd58cb980db5f27ee94885b173e8c5cfcca0960158022eacac706ca1c6fcc838",
+ "rules": {
+  "030": null,
+  "primary": {
+   "q_window_ms": 40.0,
+   "recog_mv": 0.02
+  },
+  "N20": {
+   "q_window_ms": 20.0,
+   "recog_mv": 0.02
+  },
+  "window_only": {
+   "q_window_ms": 40.0,
+   "recog_mv": null
+  },
+  "no_window": {
+   "q_window_ms": null,
+   "recog_mv": null
+  },
+  "wave010": {
+   "q_window_ms": 40.0,
+   "recog_mv": 0.02,
+   "wave_mv": 0.1
+  }
+ },
+ "packages": {
+  "030": "0.3.0",
+  "040": "0.4.0"
+ }
+}

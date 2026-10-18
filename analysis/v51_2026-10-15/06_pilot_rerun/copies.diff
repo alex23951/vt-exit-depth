@@ -1,0 +1,64 @@
+8c8,9
+< HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
+---
+> HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
+> MAPS = os.path.join(REPO, 'runs', 'v51_2026-10-15', '06_pilot_rerun', 'maps')   # Step 6 copy: path changes only
+51,52c52,53
+<     sets = [('net', os.path.join(HERE, 'maps', h), [{'id': 'his_driven', 'family': 'his', 'depth_target': None}] + S)]
+<     if h == 'Y5HYEDL4': sets.append(('nonet', os.path.join(HERE, 'maps', h + '_nonet'), S))
+---
+>     sets = [('net', os.path.join(MAPS, h), [{'id': 'his_driven', 'family': 'his', 'depth_target': None}] + S)]
+>     if h == 'Y5HYEDL4': sets.append(('nonet', os.path.join(MAPS, h + '_nonet'), S))
+30a31
+> sys.path.insert(0, os.path.join(os.path.dirname(HERE), '02_measure_040'))
+31a33
+> R.MAPS = os.path.join(R.REPO, 'runs', 'v51_2026-10-15', '06_pilot_rerun', 'maps')   # Step 6 copy: path changes only
+34c36
+< OUTR = os.path.join(REPO, 'runs', 'v51_2026-10-15', '02_measure_040')
+---
+> OUTR = os.path.join(REPO, 'runs', 'v51_2026-10-15', '06_pilot_rerun', 'rules')
+109c111
+<     json.dump(info, open(os.path.join(HERE, 'rescore_040.json'), 'w'), indent=1)
+---
+>     json.dump(info, open(os.path.join(HERE, 'rescore040_51.json'), 'w'), indent=1)
+21a22
+> sys.path.insert(0, os.path.join(os.path.dirname(HERE), '02_measure_040'))
+24c25
+< PM = os.path.join(REPO, 'runs', 'v51_2026-10-15', '02_measure_040', 'per_measurement.csv')
+---
+> PM = os.path.join(REPO, 'runs', 'v51_2026-10-15', '06_pilot_rerun', 'rules', 'per_measurement.csv')   # Step 6 copy: path changes only
+88c89
+<     assert sha == json.load(open(os.path.join(HERE, 'rescore_040.json')))['sha256'], 'per_measurement.csv changed'
+---
+>     assert sha == json.load(open(os.path.join(HERE, 'rescore040_51.json')))['sha256'], 'per_measurement.csv changed'
+120c121
+<     Q.to_csv(os.path.join(HERE, 'q_changes.csv'), index=False)
+---
+>     Q.to_csv(os.path.join(HERE, 'rules_q_changes.csv'), index=False)
+172,173c173,174
+<     PS.to_csv(os.path.join(HERE, 'per_site.csv'), index=False)
+<     G['per_site.csv'] = {'rows': len(PS), 'bytes': os.path.getsize(os.path.join(HERE, 'per_site.csv'))}
+---
+>     PS.to_csv(os.path.join(HERE, 'rules_per_site.csv'), index=False)
+>     G['per_site.csv'] = {'rows': len(PS), 'bytes': os.path.getsize(os.path.join(HERE, 'rules_per_site.csv'))}
+176c177
+<     json.dump(G, open(os.path.join(HERE, 'gates_040.json'), 'w'), indent=1, default=str)
+---
+>     json.dump(G, open(os.path.join(HERE, 'rules_gates.json'), 'w'), indent=1, default=str)
+202c203
+<     open(os.path.join(HERE, 'q_report.md'), 'w').write('\n'.join(L) + '\n')
+---
+>     open(os.path.join(HERE, 'rules_q_report.md'), 'w').write('\n'.join(L) + '\n')
+9c9,10
+< HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
+---
+> HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
+> MAPS = os.path.join(REPO, 'runs', 'v51_2026-10-15', '06_pilot_rerun', 'maps')   # Step 6 copy: paths only (v5.1 maps and fibres)
+21c22
+<     lon = pd.read_csv(os.path.join(REPO, 'analysis', 'v5_grid_2026-10-13', 'fibres_E', h, 'bivF.lon'), sep=r'\s+', skiprows=1, header=None).to_numpy()[:, :3]
+---
+>     lon = pd.read_csv(os.path.join(REPO, 'data', 'biv', h, 'fibres_v51', 'bivF_v51.lon'), sep=r'\s+', skiprows=1, header=None).to_numpy()[:, :3]
+62c63
+<         for net, dmap, cands in (('net', os.path.join(HERE, 'maps', h), cand), ('nonet', os.path.join(HERE, 'maps', h + '_nonet'), cand if h == 'Y5HYEDL4' else cand.iloc[:0])):
+---
+>         for net, dmap, cands in (('net', os.path.join(MAPS, h), cand), ('nonet', os.path.join(MAPS, h + '_nonet'), cand if h == 'Y5HYEDL4' else cand.iloc[:0])):
