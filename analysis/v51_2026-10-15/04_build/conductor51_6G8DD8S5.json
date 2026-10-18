@@ -1,0 +1,183 @@
+{
+ "heart": "6G8DD8S5",
+ "LV": {
+  "C6": {
+   "faces_endo": 41355,
+   "cap_triangles": 327,
+   "boundary_loops": 2,
+   "edges_in_2_triangles": 62523,
+   "edges_in_4_triangles": 0,
+   "edges_other_counts": 0,
+   "orientation_consistent": true,
+   "volume_ml": 157.7647355750261,
+   "loops": [
+    {
+     "nodes": 120,
+     "rim_overlap_nodes": {
+      "av_rim": 120
+     },
+     "centroid": [
+      31.61587314166666,
+      -47.11124397499998,
+      -5.028964874999997
+     ],
+     "normal": [
+      0.8168535522345504,
+      0.1740413210618839,
+      -0.549963537668481
+     ],
+     "radius_mm": 15.511356120518853,
+     "planarity_rms_mm": 0.570182402347089
+    },
+    {
+     "nodes": 207,
+     "rim_overlap_nodes": {
+      "mv_rim": 207
+     },
+     "centroid": [
+      48.20247776811596,
+      -25.494380159420277,
+      -10.694879304347827
+     ],
+     "normal": [
+      0.657247171975401,
+      -0.5511709824524237,
+      -0.514039592864954
+     ],
+     "radius_mm": 23.989490382722263,
+     "planarity_rms_mm": 1.1200448561350005
+    }
+   ],
+   "audit_volume_ml": 157.8,
+   "volume_within_1pct": true,
+   "C6_pass_as_written": true
+  },
+  "C7": {
+   "candidates_in_box": 3849467,
+   "blood_elements": 2519203,
+   "split_votes": 0
+  },
+  "C8": {
+   "blood_ml": 157.76,
+   "cavity_ml": 157.76,
+   "blood_over_cavity": 1.0,
+   "blood_within_2pct": true,
+   "torso_volume_inside_ml_sampled": 0.116,
+   "torso_inside_pct_of_cavity": 0.073,
+   "torso_inside_lt_1pct": true,
+   "blood_volume_outside_ml_sampled": 0.119,
+   "endocardial_faces_with_torso_neighbour": 41355,
+   "endocardial_faces": 41355,
+   "endocardial_faces_bordering_blood_frac": 1.0,
+   "endo_ge_95pct": true,
+   "valve_planes": [
+    {
+     "rims": {
+      "av_rim": 120
+     },
+     "blood_centroids_beyond_plane_within_ring": 204,
+     "ring_planarity_rms_mm": 0.57
+    },
+    {
+     "rims": {
+      "mv_rim": 207
+     },
+     "blood_centroids_beyond_plane_within_ring": 10540,
+     "ring_planarity_rms_mm": 1.12
+    }
+   ],
+   "element_edge_mm_median_in_blood": 0.92
+  }
+ },
+ "RV": {
+  "C6": {
+   "faces_endo": 37389,
+   "cap_triangles": 403,
+   "boundary_loops": 2,
+   "edges_in_2_triangles": 56658,
+   "edges_in_4_triangles": 15,
+   "edges_other_counts": 0,
+   "orientation_consistent": true,
+   "volume_ml": 107.1960465361101,
+   "loops": [
+    {
+     "nodes": 218,
+     "rim_overlap_nodes": {
+      "tv_rim": 218
+     },
+     "centroid": [
+      9.935985261467893,
+      -60.2880007201835,
+      -24.032333536697248
+     ],
+     "normal": [
+      0.6759010830129311,
+      -0.6982519467896561,
+      -0.2358006462807133
+     ],
+     "radius_mm": 26.511798663457345,
+     "planarity_rms_mm": 2.0795862220064576
+    },
+    {
+     "nodes": 185,
+     "rim_overlap_nodes": {
+      "pv_rim": 185
+     },
+     "centroid": [
+      33.995570286486476,
+      -76.30464682702703,
+      17.797806405405414
+     ],
+     "normal": [
+      0.05890588259880635,
+      -0.48085260288319254,
+      -0.8748204794674816
+     ],
+     "radius_mm": 20.437615816386735,
+     "planarity_rms_mm": 0.9838759300721137
+    }
+   ],
+   "audit_volume_ml": 107.2,
+   "volume_within_1pct": true,
+   "C6_pass_as_written": false
+  },
+  "C7": {
+   "candidates_in_box": 3247507,
+   "blood_elements": 1711544,
+   "split_votes": 0
+  },
+  "C8": {
+   "blood_ml": 107.2,
+   "cavity_ml": 107.2,
+   "blood_over_cavity": 1.0,
+   "blood_within_2pct": true,
+   "torso_volume_inside_ml_sampled": 0.143,
+   "torso_inside_pct_of_cavity": 0.134,
+   "torso_inside_lt_1pct": true,
+   "blood_volume_outside_ml_sampled": 0.142,
+   "endocardial_faces_with_torso_neighbour": 37389,
+   "endocardial_faces": 37389,
+   "endocardial_faces_bordering_blood_frac": 1.0,
+   "endo_ge_95pct": true,
+   "valve_planes": [
+    {
+     "rims": {
+      "tv_rim": 218
+     },
+     "blood_centroids_beyond_plane_within_ring": 7290,
+     "ring_planarity_rms_mm": 2.08
+    },
+    {
+     "rims": {
+      "pv_rim": 185
+     },
+     "blood_centroids_beyond_plane_within_ring": 1653,
+     "ring_planarity_rms_mm": 0.98
+    }
+   ],
+   "element_edge_mm_median_in_blood": 0.921
+  }
+ },
+ "written": "/home/alex/vt-exit-depth/data/biv/6G8DD8S5/torso/full_nofast_blood_v51.elem",
+ "wall_s": 173.6
+}
