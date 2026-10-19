@@ -1526,3 +1526,18 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Activation (reported only): median node difference -0.2 to -0.95 ms; 82.7-99.1 % of nodes within 5 ms; last activation -1.4 to +9.2 ms (monodomain minus graph). QRS (any lead) 0-7 ms shorter in monodomain.
 - Locked rule after a fail: no Aim 2 rerun in monodomain; a subsample (one site per region per heart) gives each onset measure's eikonal-minus-monodomain bias, and onset results are reported with that band. Not started; needs Alex's OK and a plan.
 - Files: analysis/v51_2026-10-15/08_monodomain/results51.csv, gate51.json.
+
+### 2026-10-19_v51_08_monotest_bias: 10 ms test of the first bias-subsample site (Y5HYEDL4 rvot_septal_z_d75)
+- Date/time: PC clock 2026-10-19 19:46; git 36faaf2 (+ uncommitted mono51.py bias modes, run_offline.sh, status_offline.sh, bias_sites51.json); Status: running
+- Purpose: check that the bias-subsample mode runs end to end before Alex starts the 12 beats offline (Alex 19 Oct 2026 17:44 UTC: "Yes but i want to start it offline later").
+- Subsample drawn (`python -B .../mono51.py draw`, default_rng(0); bias_sites51.json): Y5HYEDL4 rvot_septal_z_d75, aortic_cusp_rcc_z_d50, lv_summit_superior_z_d10, lv_vein_course_basal_ring_anterolateral_z_d90; 6G8DD8S5 rvot_free_wall_z_d10, aortic_cusp_lcc_z_d50, lv_summit_superior_z_d75, lv_vein_course_basal_ring_lateral_z_d90; 7D98EVAR rvot_septal_z_d90, aortic_cusp_rcc_z_d50, lv_summit_superior_z_d50, lv_vein_course_basal_ring_lateral_z_d75. Covered families' draws (beats already run): Y5HYEDL4 lv_free_wall_original_d0, lv_septum d10, rv_free_wall d10; 6G8DD8S5 lv_free_wall d90, septum d50, RV d50; 7D98EVAR in bias_sites51.json.
+- Command: `HEART=Y5HYEDL4 python -B analysis/v51_2026-10-15/08_monodomain/mono51.py test bias` (4 processes, 10 ms, as the 18 Oct timing test).
+- Output: runs/v51_2026-10-15/08_monodomain/beats/Y5HYEDL4/rvot_septal_z_d75_test/. Expected about 4 min.
+- Status update (2026-10-19_v51_08_monotest_bias), PC clock 19:49: ok, 19:46:48-19:49:41; 165 s for 10 ms (16.5 s per simulated ms with setup), lowest available memory 5,094 MB; tissue activated around the site within the 10 ms.
+
+### 2026-10-19_v51_08_mono_bias: bias subsample, 12 monodomain beats (prepared; Alex starts it offline)
+- Prepared PC clock 2026-10-19 19:49; Status: not started. Alex starts it offline later (19 Oct 2026 17:44 UTC). I fill in the start and end from the log when back online.
+- Purpose: the locked fallback after the gate 9 fail: one site per region per heart gives each onset measure's eikonal-minus-monodomain bias band.
+- Command (Alex): `bash ~/vt-exit-depth/analysis/v51_2026-10-15/08_monodomain/run_offline.sh bias` (all three hearts in turn; mono51.py bias; stops at the first failing heart; log runs/v51_2026-10-15/08_monodomain/offline_bias_<date>.log).
+- Sites: the 12 new draws above (bias_sites51.json). Model and settings as the 27-site beats (flat-tuned conductivities per heart, junction replay, 4 processes).
+- Expected: 2,180 simulated ms, about 8-9 h (33-49 min per beat). Then `python -B .../mono51.py analyze-bias` -> bias51.csv, bias51.json.

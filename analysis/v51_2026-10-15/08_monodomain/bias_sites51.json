@@ -1,0 +1,77 @@
+{
+ "rule": "numpy default_rng(0); hearts in HEARTS order; families in BIAS_FAMILIES + COVERED order; one id from the sorted candidates",
+ "hearts": {
+  "Y5HYEDL4": {
+   "check": [
+    "lv_free_wall_original_d0",
+    "lv_free_wall_phi180_z0.5_d50",
+    "lv_free_wall_phi180_z0.5_d90",
+    "lv_septum_phi0_z0.5_d10",
+    "lv_septum_phi0_z0.5_d50",
+    "lv_septum_phi0_z0.5_d90",
+    "rv_free_wall_q50_z0.5_d10",
+    "rv_free_wall_q50_z0.5_d50",
+    "rv_free_wall_q50_z0.5_d90"
+   ],
+   "new": {
+    "rvot": "rvot_septal_z_d75",
+    "aortic_cusp": "aortic_cusp_rcc_z_d50",
+    "lv_summit": "lv_summit_superior_z_d10",
+    "lv_vein_course": "lv_vein_course_basal_ring_anterolateral_z_d90"
+   },
+   "covered": {
+    "lv_free_wall": "lv_free_wall_original_d0",
+    "lv_septum": "lv_septum_phi0_z0.5_d10",
+    "rv_free_wall": "rv_free_wall_q50_z0.5_d10"
+   }
+  },
+  "6G8DD8S5": {
+   "check": [
+    "lv_free_wall_original_d0",
+    "lv_free_wall_phi180_z0.5_d50",
+    "lv_free_wall_phi180_z0.5_d90",
+    "lv_septum_phi0_z0.5_d10",
+    "lv_septum_phi0_z0.5_d50",
+    "lv_septum_phi0_z0.5_d90",
+    "rv_free_wall_q50_z0.5_d10",
+    "rv_free_wall_q50_z0.5_d50",
+    "rv_free_wall_q50_z0.5_d90"
+   ],
+   "new": {
+    "rvot": "rvot_free_wall_z_d10",
+    "aortic_cusp": "aortic_cusp_lcc_z_d50",
+    "lv_summit": "lv_summit_superior_z_d75",
+    "lv_vein_course": "lv_vein_course_basal_ring_lateral_z_d90"
+   },
+   "covered": {
+    "lv_free_wall": "lv_free_wall_phi180_z0.5_d90",
+    "lv_septum": "lv_septum_phi0_z0.5_d50",
+    "rv_free_wall": "rv_free_wall_q50_z0.5_d50"
+   }
+  },
+  "7D98EVAR": {
+   "check": [
+    "lv_free_wall_original_d0",
+    "lv_free_wall_phi180_z0.5_d50",
+    "lv_free_wall_phi180_z0.5_d90",
+    "lv_septum_phi0_z0.5_d10",
+    "lv_septum_phi0_z0.5_d50",
+    "lv_septum_phi0_z0.5_d90",
+    "rv_free_wall_q50_z0.5_d10",
+    "rv_free_wall_q50_z0.5_d50",
+    "rv_free_wall_q50_z0.5_d90"
+   ],
+   "new": {
+    "rvot": "rvot_septal_z_d90",
+    "aortic_cusp": "aortic_cusp_rcc_z_d50",
+    "lv_summit": "lv_summit_superior_z_d50",
+    "lv_vein_course": "lv_vein_course_basal_ring_lateral_z_d75"
+   },
+   "covered": {
+    "lv_free_wall": "lv_free_wall_phi180_z0.5_d50",
+    "lv_septum": "lv_septum_phi0_z0.5_d90",
+    "rv_free_wall": "rv_free_wall_q50_z0.5_d10"
+   }
+  }
+ }
+}

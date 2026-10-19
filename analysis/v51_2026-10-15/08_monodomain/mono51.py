@@ -16,10 +16,21 @@ pace-map convention (stimulus onset, clean ECG); measures pseudo_delta_ms, idt_v
 precordial deflection (= mdi_daniels x (offset_any_lead_ms - onset_ms), the Daniels MDI numerator); true mode beside.
 Gate: >= 90 % of the 108 site-measure pairs within 5 ms (>= 98); maximum difference reported; last activation reported.
 
+Bias subsample (locked fallback after a fail, 15 Oct 2026: "a subsample, one site per region per heart, gives each onset
+measure's eikonal-minus-monodomain bias, and onset results are reported with that bias band"; Alex 19 Oct 2026 17:44 UTC
+"Yes"): regions = the 7 pilot site families. Per heart, one site per family is drawn with numpy default_rng(0) (hearts in
+HEARTS order, families in BIAS_FAMILIES + COVERED order, from the sorted site ids): for the 4 families outside the 27-site
+set from all the family's pilot sites (12 new beats), for the 3 covered families from that family's check sites (beats
+already run). The band per onset measure (graph minus monodomain): median, IQR and range over the 21 drawn sites; the same
+over all finished sites (27 + 12) beside it.
+
 Usage (repo root, venv, PATH with openCARP's mpiexec; one beat at a time):
-  HEART=<H> python -B .../mono51.py test            10 ms of the first site, junction starts squeezed into 2-8 ms (timing)
+  HEART=<H> python -B .../mono51.py test [bias]     10 ms of the first (bias) site, junction starts squeezed into 2-8 ms
   HEART=<H> python -B .../mono51.py run [site ...]  full beats of the heart (skips finished ones)
-  python -B .../mono51.py analyze                    all finished beats -> results51.csv, gate51.json
+  python -B .../mono51.py analyze                    all finished check beats -> results51.csv, gate51.json
+  python -B .../mono51.py draw                       draws the bias subsample -> bias_sites51.json (once)
+  HEART=<H> python -B .../mono51.py bias             the heart's 4 new bias-subsample beats (skips finished ones)
+  python -B .../mono51.py analyze-bias               bias bands -> bias51.csv, bias51.json
 """
 import json
 import os
@@ -40,6 +51,9 @@ STIM_R_UM, PMJ_R_UM, BIN_MS = 1500.0, 1000.0, 0.25
 HEARTS = ['Y5HYEDL4', '6G8DD8S5', '7D98EVAR']
 LEADS = ['I', 'II', 'III', 'aVR', 'aVL', 'aVF', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6']
 MEASURES = ['pseudo_delta_ms', 'idt_v2_ms', 'srs_ms', 't_largest_precordial_ms']
+BIAS_FAMILIES = ['rvot', 'aortic_cusp', 'lv_summit', 'lv_vein_course']      # regions outside the 27-site set
+COVERED = ['lv_free_wall', 'lv_septum', 'rv_free_wall']                     # regions inside it
+BIAS_FILE = os.path.join(HERE, 'bias_sites51.json')
 
 
 def template_run(h):
@@ -55,6 +69,33 @@ def check_sites(h):
     out += [pick('lv_septum', 'phi0', d) for d in (10, 50, 90)]
     out += [pick('rv_free_wall', 'q50', d) for d in (10, 50, 90)]
     return out
+
+
+def draw_bias():
+    if os.path.exists(BIAS_FILE):
+        sys.exit(f'{BIAS_FILE} exists; the draw is made once')
+    rng = np.random.default_rng(0)
+    out = {'rule': 'numpy default_rng(0); hearts in HEARTS order; families in BIAS_FAMILIES + COVERED order; one id from the sorted candidates',
+           'hearts': {}}
+    for h in HEARTS:
+        S = json.load(open(os.path.join(REPO, 'data', 'biv', h, 'sites.json')))
+        chk = check_sites(h)
+        d = {'check': [c['id'] for c in chk], 'new': {}, 'covered': {}}
+        for fam in BIAS_FAMILIES:
+            ids = sorted(x['id'] for x in S if x['family'] == fam)
+            d['new'][fam] = ids[int(rng.integers(len(ids)))]
+        for fam in COVERED:
+            ids = sorted(x['id'] for x in chk if x['family'] == fam)
+            d['covered'][fam] = ids[int(rng.integers(len(ids)))]
+        out['hearts'][h] = d
+    json.dump(out, open(BIAS_FILE, 'w'), indent=1)
+    print(json.dumps(out, indent=1))
+
+
+def bias_sites(h):
+    new = json.load(open(BIAS_FILE))['hearts'][h]['new']
+    S = {x['id']: x for x in json.load(open(os.path.join(REPO, 'data', 'biv', h, 'sites.json')))}
+    return [S[new[fam]] for fam in BIAS_FAMILIES]
 
 
 def mem_avail_mb():
@@ -96,7 +137,7 @@ def beat_dir(h, sid, test=False):
     return os.path.join(OUTR, h, sid + ('_test' if test else ''))
 
 
-def run(test=False, only=None):
+def run(test=False, only=None, bias=False):
     import heart51 as H51
     h = os.environ['HEART']
     Hh = H51.Heart51(h)
@@ -107,7 +148,8 @@ def run(test=False, only=None):
     mesh = os.path.join(REPO, 'runs', 'v51_2026-10-15', '04_build', h, 'acceptance_c', 'mesh', 'biv51')
     from scipy.spatial import cKDTree
     tree = cKDTree(Hh.pts_um)
-    sites = check_sites(h)[:1] if test else [s for s in check_sites(h) if only is None or s['id'] in only]
+    pool = bias_sites(h) if bias else check_sites(h)
+    sites = pool[:1] if test else [s for s in pool if only is None or s['id'] in only]
     for s in sites:
         rd = beat_dir(h, s['id'], test)
         if not test and os.path.exists(os.path.join(rd, 'summary_mono.json')) and json.load(open(os.path.join(rd, 'summary_mono.json')))['status'] == 'ok':
@@ -188,33 +230,40 @@ def score(ecg, last):
     return out
 
 
+def score_site(h, s, W):
+    """Scores one finished beat (graph vs monodomain); None if the beat is not finished."""
+    rd = beat_dir(h, s['id'])
+    f = os.path.join(rd, 'summary_mono.json')
+    if not os.path.exists(f) or json.load(open(f))['status'] != 'ok':
+        return None
+    Tg = np.load(os.path.join(rd, 'graph_T.npy')).astype(float)
+    eg = np.load(os.path.join(rd, 'graph_ecg.npy')).astype(float)
+    Tm = np.loadtxt(os.path.join(rd, 'init_acts_LATs-thresh.dat'))
+    vm = igb(os.path.join(rd, 'vm.igb')).astype(float)
+    em = vm @ W.T
+    np.save(os.path.join(rd, 'mono_ecg.npy'), em.astype(np.float32))
+    ok = Tm >= 0
+    sg, sm = score(eg, float(Tg.max())), score(em, float(Tm[ok].max()))
+    base = {'heart': h, 'site': s['id'], 'activated_pct_mono': round(100 * float(ok.mean()), 2),
+            'total_graph_ms': round(float(Tg.max()), 1), 'total_mono_ms': round(float(Tm[ok].max()), 1),
+            'node_within_5ms_pct': round(100 * float((np.abs(Tm[ok] - Tg[ok]) <= 5).mean()), 1),
+            'node_median_diff_ms': round(float(np.median(Tm[ok] - Tg[ok])), 2)}
+    for mode in ('pace', 'true'):
+        for k in MEASURES + ['qrs_duration_any_lead_ms', 'mdi_daniels']:
+            base[f'{mode}_{k}_graph'] = sg[mode][k]; base[f'{mode}_{k}_mono'] = sm[mode][k]
+            base[f'{mode}_{k}_diff'] = sm[mode][k] - sg[mode][k]
+    return base
+
+
 def analyze():
     import pandas as pd
     rows = []
     for h in HEARTS:
         W = np.load(os.path.join(REPO, 'data', 'biv', h, 'ecgW_v51.npz'))['W'].astype(float)
         for s in check_sites(h):
-            rd = beat_dir(h, s['id'])
-            f = os.path.join(rd, 'summary_mono.json')
-            if not os.path.exists(f) or json.load(open(f))['status'] != 'ok':
-                continue
-            Tg = np.load(os.path.join(rd, 'graph_T.npy')).astype(float)
-            eg = np.load(os.path.join(rd, 'graph_ecg.npy')).astype(float)
-            Tm = np.loadtxt(os.path.join(rd, 'init_acts_LATs-thresh.dat'))
-            vm = igb(os.path.join(rd, 'vm.igb')).astype(float)
-            em = vm @ W.T
-            np.save(os.path.join(rd, 'mono_ecg.npy'), em.astype(np.float32))
-            ok = Tm >= 0
-            sg, sm = score(eg, float(Tg.max())), score(em, float(Tm[ok].max()))
-            base = {'heart': h, 'site': s['id'], 'activated_pct_mono': round(100 * float(ok.mean()), 2),
-                    'total_graph_ms': round(float(Tg.max()), 1), 'total_mono_ms': round(float(Tm[ok].max()), 1),
-                    'node_within_5ms_pct': round(100 * float((np.abs(Tm[ok] - Tg[ok]) <= 5).mean()), 1),
-                    'node_median_diff_ms': round(float(np.median(Tm[ok] - Tg[ok])), 2)}
-            for mode in ('pace', 'true'):
-                for k in MEASURES + ['qrs_duration_any_lead_ms', 'mdi_daniels']:
-                    base[f'{mode}_{k}_graph'] = sg[mode][k]; base[f'{mode}_{k}_mono'] = sm[mode][k]
-                    base[f'{mode}_{k}_diff'] = sm[mode][k] - sg[mode][k]
-            rows.append(base)
+            r = score_site(h, s, W)
+            if r is not None:
+                rows.append(r)
     R = pd.DataFrame(rows)
     R.to_csv(os.path.join(HERE, 'results51.csv'), index=False)
     d = np.concatenate([R[f'pace_{k}_diff'].to_numpy() for k in MEASURES]) if len(R) else np.array([])
@@ -229,10 +278,44 @@ def analyze():
     print(json.dumps(gate, indent=1))
 
 
+def analyze_bias():
+    import pandas as pd
+    B = json.load(open(BIAS_FILE))['hearts']
+    rows = []
+    for h in HEARTS:
+        W = np.load(os.path.join(REPO, 'data', 'biv', h, 'ecgW_v51.npz'))['W'].astype(float)
+        drawn = set(B[h]['new'].values()) | set(B[h]['covered'].values())
+        for s in check_sites(h) + bias_sites(h):
+            r = score_site(h, s, W)
+            if r is not None:
+                r |= {'family': s['family'], 'depth_target': s['depth_target'], 'in_subsample': s['id'] in drawn,
+                      'set': 'check' if s['id'] in B[h]['check'] else 'bias'}
+                rows.append(r)
+    R = pd.DataFrame(rows)
+    R.to_csv(os.path.join(HERE, 'bias51.csv'), index=False)
+    band = lambda x: {'n': int(x.notna().sum()), 'median': round(float(x.median()), 1), 'iqr': [round(float(x.quantile(.25)), 1), round(float(x.quantile(.75)), 1)],
+                      'range': [round(float(x.min()), 1), round(float(x.max()), 1)]}
+    out = {'definition': 'eikonal (graph) minus monodomain, pace-map convention, ms', 'sites_finished': int(len(R)),
+           'subsample_finished': int(R.in_subsample.sum()), 'subsample_planned': 7 * len(HEARTS), 'bands': {}}
+    for k in MEASURES:
+        b = -R[f'pace_{k}_diff']
+        out['bands'][k] = {'subsample': band(b[R.in_subsample]), 'all_sites': band(b),
+                           'per_family_median_subsample': {fam: round(float(b[R.in_subsample & (R.family == fam)].median()), 1)
+                                                           for fam in BIAS_FAMILIES + COVERED if (R.in_subsample & (R.family == fam)).any()}}
+    json.dump(out, open(os.path.join(HERE, 'bias51.json'), 'w'), indent=1)
+    print(json.dumps(out, indent=1))
+
+
 if __name__ == '__main__':
     if sys.argv[1] == 'test':
-        run(test=True)
+        run(test=True, bias=sys.argv[2:3] == ['bias'])
     elif sys.argv[1] == 'run':
         run(only=set(sys.argv[2:]) or None)
+    elif sys.argv[1] == 'bias':
+        run(bias=True)
+    elif sys.argv[1] == 'draw':
+        draw_bias()
+    elif sys.argv[1] == 'analyze-bias':
+        analyze_bias()
     else:
         analyze()
