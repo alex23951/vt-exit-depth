@@ -1513,3 +1513,8 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Model as the Y5HYEDL4 entry, with the flat-tuned HF conductivities (gi 0.4463 / 0.1204 / 0.1796 S/m, ge = gi x 3.592); meshes biv51 of each heart (6G8DD8S5 375,672 nodes; 7D98EVAR 337,505 nodes).
 - 6G8DD8S5: 9 of 9 ok, 07:19:12-13:46:41 (6 h 27 min; 14.0-14.3 s per simulated ms).
 - 7D98EVAR: started 13:46:41; 6 of 9 ok by 17:43 (12.5-12.6 s per simulated ms); running rv_free_wall_q50_z0.5_d10, then d50 and d90.
+
+## 2026-10-19 18:23 PC time: decision on the quiet late QRS (Alex, 19 Oct 2026 16:23:20 UTC: "Yes")
+- Reported as a model limitation, not fixed in v5.1: the model's surface QRS ends about 25 ms (summit / cusp) to 45 ms (LV free wall) before the true activation end, because the last-activated basal RV tissue is too quiet (hidden late-QRS check, entry above). Gate 1 stays failed.
+- Wherever the QRS end enters a measure (QRS duration, the Daniels MDI denominator), the true-activation value is reported beside the surface-ECG value. Onset-based measures are unaffected. A sourced fix may go into a later model version.
+- Recorded as an addendum in analysis/v51_2026-10-15/07_report/REPORT.md; passed to the coordinator for the analysis plan (cloud) before the OSF registration.

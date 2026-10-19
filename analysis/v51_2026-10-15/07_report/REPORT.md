@@ -275,3 +275,16 @@ Reading (inference, not verified):
 - **Decision 8:** the conductivity sensitivity build costs 6-8 min, about 6.5 GB peak and about 50 MB per heart. Not run.
 - **GitHub push:** Alex runs `git push -u origin master` and `git push origin v5.1` on the PC.
 - **Proposal Model-tab entry:** done in the cloud later.
+
+## Addendum, 19 Oct 2026: the quiet late QRS (Alex, 19 Oct 2026 16:23:20 UTC: "Yes")
+
+- The 0.4.0 QRS-end rule stays: on 40 real Zheng PVCs it matched Alex's caliper end (median absolute difference 5 ms;
+  cloud thread "QRS end measurement problem").
+- The short model QRS is a model behaviour (analysis/v51_2026-10-15/09_qrs_end/hidden/REPORT.md): the last activation is a
+  small, slowly activated strip of RV, mostly basal (summit and cusp beats: 24 ms, 4.6 mL, 2 % of the ventricles; LV
+  free-wall beats: 43 ms, 12.2 mL), too quiet for the rule to register.
+- Decision: reported as a model limitation, not fixed in v5.1 (frozen; no sourced value to change, and no tuning to pass
+  gate 1). Gate 1 stays failed. Wherever the QRS end enters a measure (QRS duration, the Daniels MDI denominator), the
+  true-activation value is reported beside the surface-ECG value, as in Table A. Onset-based measures (pseudo-delta, IDT,
+  shortest RS, q in lead I) are unaffected. A sourced fix (late RV activation, an ECG model with repolarisation) may go
+  into a later model version.
