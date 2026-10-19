@@ -1505,3 +1505,11 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Readings chosen (brief forks): surface end = gate 1's primary offset (detected, 10 uV noise, median of 10 seeds) for target and contrast alike (clean offsets differ by 0-1 ms); contributions with Vm relative to rest (weights sum to zero per lead); regions = LV AHA segments by the adopted frame per node (1 mm height bands), RV nodes as RV basal / mid / apical; depth thirds by UVC rho.
 - Result (control heart): target (16 summit + cusp beats) hidden window 24 ms [13-26], 4.6 mL [1.2-5.9] = 2.0 % of 233.6 mL, all RV (mostly basal RV), largest lead contribution 0.23 mV (9 % of the largest QRS deflection), spatial velocity 0.55 x the 10 % threshold; no cancellation except the RCC beats (0.28-0.38). Early tissue's plateau dome adds 0.08 mV in the window (0.72 x threshold). Contrast (20 LV free-wall beats) hides more: 43 ms, 12.2 mL, 5 % LV.
 - The template has no repolarisation (-60 to +80 ms, held after); no T wave.
+
+### 2026-10-19_v51_08_mono_6G8DD8S5_7D98EVAR: 27-site monodomain check, hearts 2 and 3 (18 beats), run offline
+- Written 2026-10-19 18:12 PC time, after the start (the PC was offline; I came back online at 17:56). Started 2026-10-19 07:19:12 PC clock by Alex; git 595cf2c at the start; Status: running.
+- Purpose: monodomain beats of the 9 check sites of each HF heart (locked 27-site rule), after Y5HYEDL4 had already settled the gate (fail).
+- Command: `bash ~/vt-exit-depth/analysis/v51_2026-10-15/08_monodomain/run_offline.sh 6G8DD8S5 7D98EVAR` (detached; mono51.py run per heart; stops at the first failing heart). Log: runs/v51_2026-10-15/08_monodomain/offline_20261019_0719.log
+- Model as the Y5HYEDL4 entry, with the flat-tuned HF conductivities (gi 0.4463 / 0.1204 / 0.1796 S/m, ge = gi x 3.592); meshes biv51 of each heart (6G8DD8S5 375,672 nodes; 7D98EVAR 337,505 nodes).
+- 6G8DD8S5: 9 of 9 ok, 07:19:12-13:46:41 (6 h 27 min; 14.0-14.3 s per simulated ms).
+- 7D98EVAR: started 13:46:41; 6 of 9 ok by 17:43 (12.5-12.6 s per simulated ms); running rv_free_wall_q50_z0.5_d10, then d50 and d90.
