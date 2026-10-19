@@ -1,0 +1,17 @@
+site,hidden_ml,pct_LV,endo_mid_epi_pct,regions
+aortic_cusp_lcc_z_d10,4.1,0,24 / 32 / 45,RV basal 77%; RV apical 17%; RV mid 7%
+aortic_cusp_lcc_z_d50,4.28,0,24 / 31 / 45,RV basal 76%; RV apical 17%; RV mid 7%
+aortic_cusp_lcc_z_d75,3.99,0,24 / 32 / 45,RV basal 76%; RV apical 17%; RV mid 7%
+aortic_cusp_lcc_z_d90,4.24,0,23 / 31 / 45,RV basal 75%; RV apical 18%; RV mid 8%
+aortic_cusp_rcc_z_d10,1.45,0,17 / 26 / 57,RV apical 51%; RV basal 47%; RV mid 2%
+aortic_cusp_rcc_z_d50,1.53,0,17 / 26 / 56,RV apical 57%; RV basal 42%; RV mid 1%
+aortic_cusp_rcc_z_d75,1.17,0,17 / 26 / 57,RV apical 52%; RV basal 47%; RV mid 1%
+aortic_cusp_rcc_z_d90,1.53,0,18 / 26 / 56,RV apical 58%; RV basal 40%; RV mid 1%
+lv_summit_inferior_lateral_z_d10,4.84,0,23 / 30 / 48,RV basal 97%; RV apical 2%; RV mid 1%
+lv_summit_inferior_lateral_z_d50,5.1,0,23 / 30 / 47,RV basal 96%; RV apical 3%; RV mid 1%
+lv_summit_inferior_lateral_z_d75,5.18,0,24 / 30 / 46,RV basal 94%; RV apical 4%; RV mid 1%
+lv_summit_inferior_lateral_z_d90,4.99,0,24 / 30 / 45,RV basal 93%; RV apical 5%; RV mid 2%
+lv_summit_superior_z_d10,5.61,0,24 / 30 / 46,RV basal 93%; RV apical 6%; RV mid 2%
+lv_summit_superior_z_d50,5.87,0,25 / 30 / 45,RV basal 82%; RV apical 13%; RV mid 5%
+lv_summit_superior_z_d75,4.88,0,25 / 30 / 45,RV basal 81%; RV apical 12%; RV mid 7%
+lv_summit_superior_z_d90,4.94,0,25 / 30 / 45,RV basal 79%; RV apical 13%; RV mid 8%

@@ -8,8 +8,8 @@ with numpy default_rng(0) from the sorted pool; the 40 are then
 shuffled with a fresh default_rng(0) and named M01 ... M40.
 ECG: recomputed from the beat's activation map with the same weights and template as Step 6 (data/biv/<H>/ecgW_v51.npz,
 15_conductor.py Template / ecg_of; chunked, checked against the stored Step 6 ECG), from -100 to 450 ms (1 ms sampling,
-stimulus at 0). The model has no T wave: its template ends 140 ms after each node's activation and is then held, so the
-trace is flat from about 140 ms after the last activation. Clean (no noise added). Before the stimulus the trace repeats
+stimulus at 0). The model has no T wave: its template runs from 60 ms before to 80 ms after each node's activation and is
+then held, so the trace is flat from about 80 ms after the last activation. Clean (no noise added). Before the stimulus the trace repeats
 its value at 0 ms, as the Step 6 scoring padded it (the template's pre-activation foot would otherwise put a slow drift
 before the stimulus); that value is subtracted per lead, so every lead starts at 0 mV.
 Key (kept on the PC, not posted): analysis/v51_2026-10-15/09_qrs_end/key_model_beats_40.csv: Step 6 0.4.0 values from
