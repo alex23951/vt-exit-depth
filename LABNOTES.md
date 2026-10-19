@@ -1518,3 +1518,11 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Reported as a model limitation, not fixed in v5.1: the model's surface QRS ends about 25 ms (summit / cusp) to 45 ms (LV free wall) before the true activation end, because the last-activated basal RV tissue is too quiet (hidden late-QRS check, entry above). Gate 1 stays failed.
 - Wherever the QRS end enters a measure (QRS duration, the Daniels MDI denominator), the true-activation value is reported beside the surface-ECG value. Onset-based measures are unaffected. A sourced fix may go into a later model version.
 - Recorded as an addendum in analysis/v51_2026-10-15/07_report/REPORT.md; passed to the coordinator for the analysis plan (cloud) before the OSF registration.
+- Status update (2026-10-19_v51_08_mono_6G8DD8S5_7D98EVAR), PC clock 2026-10-19 19:41: ok. 7D98EVAR 9 of 9 by 19:40:22 (5 h 54 min). All 18 beats activated every node.
+
+## 2026-10-19 19:41 PC time: 27-site monodomain check scored (all 27; `python -B analysis/v51_2026-10-15/08_monodomain/mono51.py analyze`, 19:40:52)
+- Gate 9 FAILS: 72 of 108 pairs within 5 ms (66.7 %; needed >= 98). Maximum |difference| 38 ms. Per measure: pseudo-delta 21 / 27, IDT V2 17 / 27, shortest RS 19 / 27, time to largest precordial deflection 15 / 27. Per heart: Y5HYEDL4 25 / 36, 6G8DD8S5 21 / 36, 7D98EVAR 26 / 36.
+- Direction: monodomain minus graph is negative in 106 of 108 pairs (two are +4 and 0): median pseudo-delta -4 ms, IDT -5, shortest RS -3, time to largest deflection -5. Misses: 25 of 5-15 ms, 11 over 15 ms (the large ones are rank swaps between competing peaks, inference from the waveforms; see the Y5HYEDL4 entry).
+- Activation (reported only): median node difference -0.2 to -0.95 ms; 82.7-99.1 % of nodes within 5 ms; last activation -1.4 to +9.2 ms (monodomain minus graph). QRS (any lead) 0-7 ms shorter in monodomain.
+- Locked rule after a fail: no Aim 2 rerun in monodomain; a subsample (one site per region per heart) gives each onset measure's eikonal-minus-monodomain bias, and onset results are reported with that band. Not started; needs Alex's OK and a plan.
+- Files: analysis/v51_2026-10-15/08_monodomain/results51.csv, gate51.json.

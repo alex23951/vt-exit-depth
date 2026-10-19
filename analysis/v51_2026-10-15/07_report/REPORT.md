@@ -288,3 +288,13 @@ Reading (inference, not verified):
   true-activation value is reported beside the surface-ECG value, as in Table A. Onset-based measures (pseudo-delta, IDT,
   shortest RS, q in lead I) are unaffected. A sourced fix (late RV activation, an ECG model with repolarisation) may go
   into a later model version.
+
+## Addendum, 19 Oct 2026: gate 9 (27-site monodomain agreement) scored
+
+- Gate 9 FAILS: 72 of 108 site-measure pairs within 5 ms (66.7 %; the locked rule needs >= 98). Maximum difference 38 ms.
+  Table A's tally becomes 2 pass / 7 fail / 0 not evaluable.
+- The monodomain intervals are shorter than the graph-model intervals in 106 of 108 pairs (median 3-5 ms per measure);
+  11 misses exceed 15 ms. Node activation times agree closely (median difference under 1 ms).
+- Monodomain conductivities were tuned to the v5.1 flat-tissue speeds (Alex, 18 Oct 2026). Details:
+  analysis/v51_2026-10-15/08_monodomain/ (PLAN.md, results51.csv, gate51.json) and LABNOTES 18-19 Oct.
+- As pre-registered, the fallback is a bias band from a subsample (one site per region per heart); not yet run.
