@@ -1,0 +1,61 @@
+{
+ "heart": "6G8DD8S5",
+ "mesh": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/04_build/6G8DD8S5/acceptance_c/mesh/biv51",
+ "lf_dir": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/10_conductor_sens/6G8DD8S5/leadfield_sens/POSTPROC_DIR",
+ "sigma_S_m": {
+  "fibre": {
+   "gi": 0.174,
+   "ge": 0.625
+  },
+  "sheet": {
+   "gi": 0.028661983488277355,
+   "ge": 0.236
+  },
+  "normal": {
+   "gi": 0.05210762656998577,
+   "ge": 0.236
+  }
+ },
+ "C9_sigma_m_vs_openCARP": {
+  "I": {
+   "max_abs_err_mV": 9.442624186034587e-09,
+   "ref_peak_mV": 0.0101573
+  },
+  "II": {
+   "max_abs_err_mV": 2.943729119908589e-07,
+   "ref_peak_mV": 0.256661
+  },
+  "III": {
+   "max_abs_err_mV": 4.2047577938908454e-07,
+   "ref_peak_mV": 0.246503
+  },
+  "V1": {
+   "max_abs_err_mV": 1.0253947202443214e-07,
+   "ref_peak_mV": 0.173479
+  },
+  "V2": {
+   "max_abs_err_mV": 2.179149840575434e-07,
+   "ref_peak_mV": 0.275117
+  },
+  "V3": {
+   "max_abs_err_mV": 4.509657538370737e-07,
+   "ref_peak_mV": 0.124281
+  },
+  "V4": {
+   "max_abs_err_mV": 5.518173984420116e-08,
+   "ref_peak_mV": 0.0891249
+  },
+  "V5": {
+   "max_abs_err_mV": 1.1566649787964067e-07,
+   "ref_peak_mV": 0.360414
+  },
+  "V6": {
+   "max_abs_err_mV": 4.919984846196712e-07,
+   "ref_peak_mV": 0.393399
+  }
+ },
+ "C9_max_abs_err_mV": 4.919984846196712e-07,
+ "C9_pass_0.0002mV": true,
+ "weights_rel_change_median": 330.7064617985208,
+ "written": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/10_conductor_sens/6G8DD8S5/ecgW_sens.npz"
+}

@@ -1,0 +1,459 @@
+{
+ "gates": {
+  "PACE primary: stim onset, clean, QRS any lead": {
+   "relQRS Y5 ratio of means (1.0785-1.1587)": 1.098,
+   "relQRS Y5 pass": true,
+   "relQRS Y5 bootstrap 95% CI": [
+    1.0508,
+    1.1406
+   ],
+   "Bazan2006 Y5 RV / LV median pair %": "3.6 / 9.7",
+   "Bazan2006 Y5 pass": true,
+   "relQRS 6G ratio of means (1.0785-1.1587)": 1.2175,
+   "relQRS 6G pass": false,
+   "relQRS 6G bootstrap 95% CI": [
+    1.1882,
+    1.2413
+   ],
+   "Bazan2006 6G RV / LV median pair %": "3.9 / 22.5",
+   "Bazan2006 6G pass": true,
+   "Berruezo 6G QRS/PdW/IDT/RS %": {
+    "QRS": 22.5,
+    "PdW": 110.1,
+    "IDT": 50.7,
+    "RS": 14.2
+   },
+   "Berruezo 6G pass": false,
+   "relQRS 7D ratio of means (1.0785-1.1587)": 1.1453,
+   "relQRS 7D pass": true,
+   "relQRS 7D bootstrap 95% CI": [
+    1.1025,
+    1.1825
+   ],
+   "Bazan2006 7D RV / LV median pair %": "4.6 / 16.5",
+   "Bazan2006 7D pass": true,
+   "Bazan2007 basal superior q in I 90 vs 10": "6/21 vs 3/21; CI90 [13.8, 50.0] CI10 [5.0, 34.6]; Bazan 90/16 in CI: False; evaluable (n>=20): True",
+   "Bazan2007 apical superior q in I 90 vs 10": "5/9 vs 1/9; CI90 [26.7, 81.1] CI10 [2.0, 43.5]; Bazan 88/26 in CI: False; evaluable (n>=20): False",
+   "Bazan2007 basal inferior Q II/III/aVF 90 vs 10": "8/8 vs 0/8; CI90 [67.6, 100.0] CI10 [0.0, 32.4]; Bazan 81/37 in CI: False; evaluable (n>=20): False",
+   "Bazan2007 apical inferior Q II/III/aVF 90 vs 10": "7/7 vs 0/7; CI90 [64.6, 100.0] CI10 [0.0, 35.4]; Bazan 92/33 in CI: True; evaluable (n>=20): False"
+  },
+  "PACE A3 stim onset, plan noise 10uV": {
+   "relQRS Y5 ratio of means (1.0785-1.1587)": 1.095,
+   "relQRS Y5 pass": true,
+   "relQRS Y5 bootstrap 95% CI": [
+    1.0472,
+    1.1398
+   ],
+   "Bazan2006 Y5 RV / LV median pair %": "3.6 / 9.2",
+   "Bazan2006 Y5 pass": true,
+   "relQRS 6G ratio of means (1.0785-1.1587)": 1.219,
+   "relQRS 6G pass": false,
+   "relQRS 6G bootstrap 95% CI": [
+    1.1917,
+    1.2415
+   ],
+   "Bazan2006 6G RV / LV median pair %": "3.9 / 22.4",
+   "Bazan2006 6G pass": true,
+   "Berruezo 6G QRS/PdW/IDT/RS %": {
+    "QRS": 22.4,
+    "PdW": 115.9,
+    "IDT": 51.8,
+    "RS": 14.8
+   },
+   "Berruezo 6G pass": false,
+   "relQRS 7D ratio of means (1.0785-1.1587)": 1.1499,
+   "relQRS 7D pass": true,
+   "relQRS 7D bootstrap 95% CI": [
+    1.1036,
+    1.1909
+   ],
+   "Bazan2006 7D RV / LV median pair %": "4.6 / 17.1",
+   "Bazan2006 7D pass": true,
+   "Bazan2007 basal superior q in I 90 vs 10": "6/21 vs 3/21; CI90 [13.8, 50.0] CI10 [5.0, 34.6]; Bazan 90/16 in CI: False; evaluable (n>=20): True",
+   "Bazan2007 apical superior q in I 90 vs 10": "5/9 vs 1/9; CI90 [26.7, 81.1] CI10 [2.0, 43.5]; Bazan 88/26 in CI: False; evaluable (n>=20): False",
+   "Bazan2007 basal inferior Q II/III/aVF 90 vs 10": "8/8 vs 0/8; CI90 [67.6, 100.0] CI10 [0.0, 32.4]; Bazan 81/37 in CI: False; evaluable (n>=20): False",
+   "Bazan2007 apical inferior Q II/III/aVF 90 vs 10": "7/7 vs 0/7; CI90 [64.6, 100.0] CI10 [0.0, 35.4]; Bazan 92/33 in CI: True; evaluable (n>=20): False"
+  },
+  "PACE A3 stim onset, clean, precordial offset": {
+   "relQRS Y5 ratio of means (1.0785-1.1587)": 1.0958,
+   "relQRS Y5 pass": true,
+   "relQRS Y5 bootstrap 95% CI": [
+    1.0485,
+    1.1397
+   ],
+   "Bazan2006 Y5 RV / LV median pair %": "4.5 / 9.2",
+   "Bazan2006 Y5 pass": true,
+   "relQRS 6G ratio of means (1.0785-1.1587)": 1.2165,
+   "relQRS 6G pass": false,
+   "relQRS 6G bootstrap 95% CI": [
+    1.1881,
+    1.2389
+   ],
+   "Bazan2006 6G RV / LV median pair %": "3.9 / 22.6",
+   "Bazan2006 6G pass": true,
+   "Berruezo 6G QRS/PdW/IDT/RS %": {
+    "QRS": 22.6,
+    "PdW": 110.1,
+    "IDT": 50.7,
+    "RS": 14.2
+   },
+   "Berruezo 6G pass": false,
+   "relQRS 7D ratio of means (1.0785-1.1587)": 1.1412,
+   "relQRS 7D pass": true,
+   "relQRS 7D bootstrap 95% CI": [
+    1.0985,
+    1.1788
+   ],
+   "Bazan2006 7D RV / LV median pair %": "4.6 / 16.7",
+   "Bazan2006 7D pass": true,
+   "Bazan2007 basal superior q in I 90 vs 10": "6/21 vs 3/21; CI90 [13.8, 50.0] CI10 [5.0, 34.6]; Bazan 90/16 in CI: False; evaluable (n>=20): True",
+   "Bazan2007 apical superior q in I 90 vs 10": "5/9 vs 1/9; CI90 [26.7, 81.1] CI10 [2.0, 43.5]; Bazan 88/26 in CI: False; evaluable (n>=20): False",
+   "Bazan2007 basal inferior Q II/III/aVF 90 vs 10": "8/8 vs 0/8; CI90 [67.6, 100.0] CI10 [0.0, 32.4]; Bazan 81/37 in CI: False; evaluable (n>=20): False",
+   "Bazan2007 apical inferior Q II/III/aVF 90 vs 10": "7/7 vs 0/7; CI90 [64.6, 100.0] CI10 [0.0, 35.4]; Bazan 92/33 in CI: True; evaluable (n>=20): False"
+  },
+  "PACE A3 true (13 Oct)": {
+   "relQRS Y5 ratio of means (1.0785-1.1587)": 1.0774,
+   "relQRS Y5 pass": false,
+   "relQRS Y5 bootstrap 95% CI": [
+    1.0501,
+    1.1021
+   ],
+   "Bazan2006 Y5 RV / LV median pair %": "3.6 / 7.7",
+   "Bazan2006 Y5 pass": true,
+   "relQRS 6G ratio of means (1.0785-1.1587)": 1.1646,
+   "relQRS 6G pass": false,
+   "relQRS 6G bootstrap 95% CI": [
+    1.13,
+    1.1942
+   ],
+   "Bazan2006 6G RV / LV median pair %": "3.9 / 17.9",
+   "Bazan2006 6G pass": true,
+   "Berruezo 6G QRS/PdW/IDT/RS %": {
+    "QRS": 17.9,
+    "PdW": 110.1,
+    "IDT": 50.7,
+    "RS": 14.2
+   },
+   "Berruezo 6G pass": false,
+   "relQRS 7D ratio of means (1.0785-1.1587)": 1.1016,
+   "relQRS 7D pass": true,
+   "relQRS 7D bootstrap 95% CI": [
+    1.0695,
+    1.1317
+   ],
+   "Bazan2006 7D RV / LV median pair %": "5.4 / 10.6",
+   "Bazan2006 7D pass": true,
+   "Bazan2007 basal superior q in I 90 vs 10": "6/21 vs 3/21; CI90 [13.8, 50.0] CI10 [5.0, 34.6]; Bazan 90/16 in CI: False; evaluable (n>=20): True",
+   "Bazan2007 apical superior q in I 90 vs 10": "5/9 vs 1/9; CI90 [26.7, 81.1] CI10 [2.0, 43.5]; Bazan 88/26 in CI: False; evaluable (n>=20): False",
+   "Bazan2007 basal inferior Q II/III/aVF 90 vs 10": "8/8 vs 0/8; CI90 [67.6, 100.0] CI10 [0.0, 32.4]; Bazan 81/37 in CI: False; evaluable (n>=20): False",
+   "Bazan2007 apical inferior Q II/III/aVF 90 vs 10": "7/7 vs 0/7; CI90 [64.6, 100.0] CI10 [0.0, 35.4]; Bazan 92/33 in CI: True; evaluable (n>=20): False"
+  },
+  "SPON primary: detected, plan noise 10uV, QRS any lead": {
+   "abs QRS summit+cusp median (132-193)": 119.5,
+   "abs QRS pass": false,
+   "abs QRS summit / cusp medians": "108.75 / 128.25",
+   "Daniels MDI summit90/vein90/cusp/RVOT/LVendo10": {
+    "summit90": 0.614,
+    "vein90": 0.465,
+    "cusp": 0.696,
+    "RVOT": 0.645,
+    "LVendo10": 0.345
+   },
+   "Daniels pass": false,
+   "No-network summit+cusp median (>193)": 231.25,
+   "No-network wider by family [nonet, net]": {
+    "lv_free_wall": [
+     242.5,
+     95.75
+    ],
+    "lv_septum": [
+     204.75,
+     89.0
+    ],
+    "rv_free_wall": [
+     249.5,
+     115.75
+    ],
+    "rvot": [
+     229.5,
+     118.5
+    ],
+    "aortic_cusp": [
+     222.75,
+     128.25
+    ],
+    "lv_summit": [
+     244.75,
+     108.75
+    ],
+    "lv_vein_course": [
+     254.75,
+     114.5
+    ]
+   },
+   "No-network pass": true,
+   "Durrer (e) His QRS (63-88)": 76.5,
+   "Durrer (e) pass": true,
+   "His QRS 6G / 7D (info)": [
+    123.0,
+    72.0
+   ]
+  },
+  "SPON A3 detected clean": {
+   "abs QRS summit+cusp median (132-193)": 119.5,
+   "abs QRS pass": false,
+   "abs QRS summit / cusp medians": "107.5 / 128.5",
+   "Daniels MDI summit90/vein90/cusp/RVOT/LVendo10": {
+    "summit90": 0.621,
+    "vein90": 0.475,
+    "cusp": 0.7,
+    "RVOT": 0.658,
+    "LVendo10": 0.348
+   },
+   "Daniels pass": false,
+   "No-network summit+cusp median (>193)": 229.5,
+   "No-network wider by family [nonet, net]": {
+    "lv_free_wall": [
+     242.0,
+     96.5
+    ],
+    "lv_septum": [
+     203.0,
+     89.0
+    ],
+    "rv_free_wall": [
+     244.0,
+     114.0
+    ],
+    "rvot": [
+     231.5,
+     119.5
+    ],
+    "aortic_cusp": [
+     222.0,
+     128.5
+    ],
+    "lv_summit": [
+     237.5,
+     107.5
+    ],
+    "lv_vein_course": [
+     254.5,
+     114.0
+    ]
+   },
+   "No-network pass": true,
+   "Durrer (e) His QRS (63-88)": 75.0,
+   "Durrer (e) pass": true,
+   "His QRS 6G / 7D (info)": [
+    123.0,
+    72.0
+   ]
+  },
+  "SPON A3 detected plan noise 20uV": {
+   "abs QRS summit+cusp median (132-193)": 116.5,
+   "abs QRS pass": false,
+   "abs QRS summit / cusp medians": "107.5 / 126.5",
+   "Daniels MDI summit90/vein90/cusp/RVOT/LVendo10": {
+    "summit90": 0.612,
+    "vein90": 0.456,
+    "cusp": 0.692,
+    "RVOT": 0.641,
+    "LVendo10": 0.333
+   },
+   "Daniels pass": false,
+   "No-network summit+cusp median (>193)": 229.0,
+   "No-network wider by family [nonet, net]": {
+    "lv_free_wall": [
+     233.5,
+     93.75
+    ],
+    "lv_septum": [
+     203.0,
+     88.0
+    ],
+    "rv_free_wall": [
+     237.0,
+     114.75
+    ],
+    "rvot": [
+     220.0,
+     113.5
+    ],
+    "aortic_cusp": [
+     217.75,
+     126.5
+    ],
+    "lv_summit": [
+     237.25,
+     107.5
+    ],
+    "lv_vein_course": [
+     253.5,
+     110.25
+    ]
+   },
+   "No-network pass": true,
+   "Durrer (e) His QRS (63-88)": 75.0,
+   "Durrer (e) pass": true,
+   "His QRS 6G / 7D (info)": [
+    122.0,
+    71.0
+   ]
+  },
+  "SPON A3 detected 20uV 0.5-150 + notch": {
+   "abs QRS summit+cusp median (132-193)": 105.5,
+   "abs QRS pass": false,
+   "abs QRS summit / cusp medians": "105.25 / 107.25",
+   "Daniels MDI summit90/vein90/cusp/RVOT/LVendo10": {
+    "summit90": 0.598,
+    "vein90": 0.437,
+    "cusp": 0.639,
+    "RVOT": 0.611,
+    "LVendo10": 0.315
+   },
+   "Daniels pass": false,
+   "No-network summit+cusp median (>193)": 220.0,
+   "No-network wider by family [nonet, net]": {
+    "lv_free_wall": [
+     225.75,
+     89.5
+    ],
+    "lv_septum": [
+     198.75,
+     83.75
+    ],
+    "rv_free_wall": [
+     232.25,
+     111.0
+    ],
+    "rvot": [
+     208.0,
+     106.0
+    ],
+    "aortic_cusp": [
+     212.25,
+     107.25
+    ],
+    "lv_summit": [
+     231.25,
+     105.25
+    ],
+    "lv_vein_course": [
+     249.0,
+     101.25
+    ]
+   },
+   "No-network pass": true,
+   "Durrer (e) His QRS (63-88)": 74.0,
+   "Durrer (e) pass": true,
+   "His QRS 6G / 7D (info)": [
+    122.0,
+    71.0
+   ]
+  },
+  "SPON A3 stim onset to ECG offset, clean": {
+   "abs QRS summit+cusp median (132-193)": 121.5,
+   "abs QRS pass": false,
+   "abs QRS summit / cusp medians": "111.0 / 131.0",
+   "Daniels MDI summit90/vein90/cusp/RVOT/LVendo10": {
+    "summit90": 0.627,
+    "vein90": 0.49,
+    "cusp": 0.706,
+    "RVOT": 0.669,
+    "LVendo10": 0.364
+   },
+   "Daniels pass": false,
+   "No-network summit+cusp median (>193)": 232.0,
+   "No-network wider by family [nonet, net]": {
+    "lv_free_wall": [
+     244.5,
+     101.5
+    ],
+    "lv_septum": [
+     205.0,
+     91.0
+    ],
+    "rv_free_wall": [
+     250.5,
+     117.0
+    ],
+    "rvot": [
+     236.5,
+     121.5
+    ],
+    "aortic_cusp": [
+     224.5,
+     131.0
+    ],
+    "lv_summit": [
+     241.0,
+     111.0
+    ],
+    "lv_vein_course": [
+     257.0,
+     116.0
+    ]
+   },
+   "No-network pass": true,
+   "Durrer (e) His QRS (63-88)": 98.0,
+   "Durrer (e) pass": false,
+   "His QRS 6G / 7D (info)": [
+    165.0,
+    94.0
+   ]
+  },
+  "SPON A3 true (13 Oct)": {
+   "abs QRS summit+cusp median (132-193)": 145.0,
+   "abs QRS pass": true,
+   "abs QRS summit / cusp medians": "134.5 / 149.0",
+   "Daniels MDI summit90/vein90/cusp/RVOT/LVendo10": {
+    "summit90": 0.521,
+    "vein90": 0.424,
+    "cusp": 0.614,
+    "RVOT": 0.583,
+    "LVendo10": 0.239
+   },
+   "Daniels pass": false,
+   "No-network summit+cusp median (>193)": 250.5,
+   "No-network wider by family [nonet, net]": {
+    "lv_free_wall": [
+     257.5,
+     144.0
+    ],
+    "lv_septum": [
+     212.0,
+     129.5
+    ],
+    "rv_free_wall": [
+     258.5,
+     143.5
+    ],
+    "rvot": [
+     235.5,
+     137.0
+    ],
+    "aortic_cusp": [
+     235.0,
+     149.0
+    ],
+    "lv_summit": [
+     257.5,
+     134.5
+    ],
+    "lv_vein_course": [
+     256.5,
+     150.0
+    ]
+   },
+   "No-network pass": true,
+   "Durrer (e) His QRS (63-88)": 135.0,
+   "Durrer (e) pass": false,
+   "His QRS 6G / 7D (info)": [
+    168.0,
+    131.0
+   ]
+  }
+ },
+ "unscorable": []
+}

@@ -1,0 +1,38 @@
+{
+ "hearts": {
+  "Y5HYEDL4": {
+   "check_v51_weights_vs_stored_his_ecg_max_abs_mV": 1.689079240918545e-07,
+   "dirs": {
+    "Y5HYEDL4": {
+     "ecg_written": 145
+    },
+    "Y5HYEDL4_nonet": {
+     "ecg_written": 144
+    }
+   }
+  },
+  "6G8DD8S5": {
+   "check_v51_weights_vs_stored_his_ecg_max_abs_mV": 1.32055817836374e-07,
+   "dirs": {
+    "6G8DD8S5": {
+     "ecg_written": 145
+    },
+    "6G8DD8S5_nonet_rvot": {
+     "ecg_written": 0
+    }
+   }
+  },
+  "7D98EVAR": {
+   "check_v51_weights_vs_stored_his_ecg_max_abs_mV": 9.816544865870469e-08,
+   "dirs": {
+    "7D98EVAR": {
+     "ecg_written": 145
+    },
+    "7D98EVAR_nonet_rvot": {
+     "ecg_written": 0
+    }
+   }
+  }
+ },
+ "wall_s": 1919
+}

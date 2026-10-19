@@ -1,0 +1,1969 @@
+{
+ "Bazan2007 | true mode (13 Oct) | 030": {
+  "basal superior: q in I": {
+   "k90": 7,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 19.0,
+   "ci_pp": [
+    -6.9,
+    42.3
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 11,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 23.8,
+   "ci_pp": [
+    -5.5,
+    48.1
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | true mode (13 Oct) | primary": {
+  "basal superior: q in I": {
+   "k90": 6,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 14.3,
+   "ci_pp": [
+    -10.9,
+    37.6
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 17,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 52.4,
+   "ci_pp": [
+    22.4,
+    71.0
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | true mode (13 Oct) | N20": {
+  "basal superior: q in I": {
+   "k90": 5,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 9.5,
+   "ci_pp": [
+    -14.7,
+    32.8
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 18,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 57.1,
+   "ci_pp": [
+    27.6,
+    74.6
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | true mode (13 Oct) | window_only": {
+  "basal superior: q in I": {
+   "k90": 7,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 19.0,
+   "ci_pp": [
+    -6.9,
+    42.3
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 11,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 23.8,
+   "ci_pp": [
+    -5.5,
+    48.1
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | true mode (13 Oct) | no_window": {
+  "basal superior: q in I": {
+   "k90": 7,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 19.0,
+   "ci_pp": [
+    -6.9,
+    42.3
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 11,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 23.8,
+   "ci_pp": [
+    -5.5,
+    48.1
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | true mode (13 Oct) | wave010": {
+  "basal superior: q in I": {
+   "k90": 4,
+   "n90": 21,
+   "k10": 2,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 9.5,
+   "ci_pp": [
+    -13.0,
+    31.6
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 17,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 52.4,
+   "ci_pp": [
+    22.4,
+    71.0
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 3,
+   "n90": 9,
+   "k10": 0,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 33.3,
+   "ci_pp": [
+    -3.4,
+    64.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 87.5,
+   "ci_pp": [
+    40.1,
+    97.8
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 6,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 85.7,
+   "ci_pp": [
+    34.5,
+    97.4
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | 14 Oct pace-map convention (stimulus onset, clean) | 030": {
+  "basal superior: q in I": {
+   "k90": 7,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 19.0,
+   "ci_pp": [
+    -6.9,
+    42.3
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 11,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 23.8,
+   "ci_pp": [
+    -5.5,
+    48.1
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | 14 Oct pace-map convention (stimulus onset, clean) | primary": {
+  "basal superior: q in I": {
+   "k90": 6,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 14.3,
+   "ci_pp": [
+    -10.9,
+    37.6
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 17,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 52.4,
+   "ci_pp": [
+    22.4,
+    71.0
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | 14 Oct pace-map convention (stimulus onset, clean) | N20": {
+  "basal superior: q in I": {
+   "k90": 5,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 9.5,
+   "ci_pp": [
+    -14.7,
+    32.8
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 18,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 57.1,
+   "ci_pp": [
+    27.6,
+    74.6
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | 14 Oct pace-map convention (stimulus onset, clean) | window_only": {
+  "basal superior: q in I": {
+   "k90": 7,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 19.0,
+   "ci_pp": [
+    -6.9,
+    42.3
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 11,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 23.8,
+   "ci_pp": [
+    -5.5,
+    48.1
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | 14 Oct pace-map convention (stimulus onset, clean) | no_window": {
+  "basal superior: q in I": {
+   "k90": 7,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 19.0,
+   "ci_pp": [
+    -6.9,
+    42.3
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 11,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 23.8,
+   "ci_pp": [
+    -5.5,
+    48.1
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | 14 Oct pace-map convention (stimulus onset, clean) | wave010": {
+  "basal superior: q in I": {
+   "k90": 4,
+   "n90": 21,
+   "k10": 2,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 9.5,
+   "ci_pp": [
+    -13.0,
+    31.6
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 17,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 52.4,
+   "ci_pp": [
+    22.4,
+    71.0
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 3,
+   "n90": 9,
+   "k10": 0,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 33.3,
+   "ci_pp": [
+    -3.4,
+    64.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 87.5,
+   "ci_pp": [
+    40.1,
+    97.8
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 6,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 85.7,
+   "ci_pp": [
+    34.5,
+    97.4
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | stimulus onset, 10 uV noise (majority of 10 seeds) | 030": {
+  "basal superior: q in I": {
+   "k90": 7,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 19.0,
+   "ci_pp": [
+    -6.9,
+    42.3
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 11,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 23.8,
+   "ci_pp": [
+    -5.5,
+    48.1
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "Bazan2007 | stimulus onset, 10 uV noise (majority of 10 seeds) | primary": {
+  "basal superior: q in I": {
+   "k90": 6,
+   "n90": 21,
+   "k10": 3,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 14.3,
+   "ci_pp": [
+    -10.9,
+    37.6
+   ],
+   "bazan_pp": 74,
+   "verdict": "FAIL (Bazan outside CI)"
+  },
+  "basal superior: no Q in II/III/aVF": {
+   "k90": 16,
+   "n90": 21,
+   "k10": 6,
+   "n10": 21,
+   "unscorable": 0,
+   "diff_pp": 47.6,
+   "ci_pp": [
+    17.4,
+    67.4
+   ],
+   "bazan_pp": null,
+   "verdict": "direction as Bazan (more at epi); no Bazan % to compare"
+  },
+  "apical superior: q in I": {
+   "k90": 5,
+   "n90": 9,
+   "k10": 1,
+   "n10": 9,
+   "unscorable": 0,
+   "diff_pp": 44.4,
+   "ci_pp": [
+    1.0,
+    71.6
+   ],
+   "bazan_pp": 62,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "basal inferior: Q in II/III/aVF": {
+   "k90": 8,
+   "n90": 8,
+   "k10": 0,
+   "n10": 8,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    54.1,
+    100.0
+   ],
+   "bazan_pp": 44,
+   "verdict": "not evaluable (< 20 positions)"
+  },
+  "apical inferior: Q in II/III/aVF": {
+   "k90": 7,
+   "n90": 7,
+   "k10": 0,
+   "n10": 7,
+   "unscorable": 0,
+   "diff_pp": 100.0,
+   "ci_pp": [
+    49.9,
+    100.0
+   ],
+   "bazan_pp": 59,
+   "verdict": "not evaluable (< 20 positions)"
+  }
+ },
+ "changed calls 0.3.0 -> 0.4.0 (clean ECG)": {
+  "true / q_lead_I": "49 (49 lost, 0 new)",
+  "true / inferior_q_all": "38 (38 lost, 0 new)",
+  "true / inferior_q_any": "46 (46 lost, 0 new)",
+  "true / inferior_r_any": "57 (57 lost, 0 new)",
+  "true / q_V1": "34 (34 lost, 0 new)",
+  "true / q_V2": "38 (38 lost, 0 new)",
+  "true / qs_V2": "7 (7 lost, 0 new)",
+  "stim / q_lead_I": "49 (49 lost, 0 new)",
+  "stim / inferior_q_all": "38 (38 lost, 0 new)",
+  "stim / inferior_q_any": "46 (46 lost, 0 new)",
+  "stim / inferior_r_any": "57 (57 lost, 0 new)",
+  "stim / q_V1": "34 (34 lost, 0 new)",
+  "stim / q_V2": "38 (38 lost, 0 new)",
+  "stim / qs_V2": "7 (7 lost, 0 new)",
+  "detected / q_lead_I": "49 (49 lost, 0 new)",
+  "detected / inferior_q_all": "38 (38 lost, 0 new)",
+  "detected / inferior_q_any": "46 (46 lost, 0 new)",
+  "detected / inferior_r_any": "57 (57 lost, 0 new)",
+  "detected / q_V1": "34 (34 lost, 0 new)",
+  "detected / q_V2": "38 (38 lost, 0 new)",
+  "detected / qs_V2": "7 (7 lost, 0 new)"
+ },
+ "causes (lead level, clean ECG)": {
+  "window: first 0.05 mV wave (s) starts N ms after the visible onset (> 40)": 633,
+  "recognition: an earlier + deflection (>= threshold for >= N ms, from N ms) comes first": 396,
+  "recognition: an earlier - deflection (>= threshold for >= N ms, from N ms) comes first": 189
+ },
+ "initial_start_ms (primary; median [IQR], ms after the visible onset)": {
+  "stim | 6G8DD8S5 | lv_apical_inferior (n 12)": {
+   "I": "18.0 [8.8-22.5], max 42.0, > 40 ms 1/12",
+   "II": "7.0 [6.0-8.5], max 17.0, > 40 ms 0/12",
+   "III": "6.0 [4.8-7.0], max 11.0, > 40 ms 0/12",
+   "aVF": "6.0 [5.0-7.5], max 20.0, > 40 ms 0/12",
+   "aVL": "8.5 [7.0-11.2], max 19.0, > 40 ms 0/12",
+   "aVR": "12.0 [11.0-13.5], max 22.0, > 40 ms 0/12",
+   "V1": "11.5 [7.5-12.0], max 20.0, > 40 ms 0/12",
+   "V2": "8.0 [5.8-10.0], max 19.0, > 40 ms 0/12"
+  },
+  "stim | 6G8DD8S5 | lv_apical_superior (n 20)": {
+   "I": "9.0 [7.8-18.2], max 33.0, > 40 ms 0/20",
+   "II": "15.0 [12.0-24.5], max 46.0, > 40 ms 2/20",
+   "III": "12.5 [7.0-20.5], max 34.0, > 40 ms 0/20",
+   "aVF": "17.5 [8.0-24.2], max 37.0, > 40 ms 0/20",
+   "aVL": "10.5 [7.0-19.5], max 33.0, > 40 ms 0/20",
+   "aVR": "14.5 [11.0-19.8], max 35.0, > 40 ms 0/20",
+   "V1": "9.0 [5.0-14.2], max 19.0, > 40 ms 0/20",
+   "V2": "7.5 [3.0-13.8], max 37.0, > 40 ms 0/20"
+  },
+  "stim | 6G8DD8S5 | lv_basal_inferior (n 20)": {
+   "I": "10.0 [7.0-16.5], max 59.0, > 40 ms 2/20",
+   "II": "10.5 [7.0-16.5], max 35.0, > 40 ms 0/20",
+   "III": "6.5 [4.0-9.0], max 19.0, > 40 ms 0/20",
+   "aVF": "8.5 [6.0-13.5], max 29.0, > 40 ms 0/20",
+   "aVL": "8.0 [6.0-10.2], max 17.0, > 40 ms 0/20",
+   "aVR": "13.5 [11.0-20.0], max 32.0, > 40 ms 0/20",
+   "V1": "8.0 [5.0-13.0], max 26.0, > 40 ms 0/20",
+   "V2": "8.0 [6.0-11.0], max 26.0, > 40 ms 0/20"
+  },
+  "stim | 6G8DD8S5 | lv_basal_superior (n 48)": {
+   "I": "17.5 [8.0-25.0], max 43.0, > 40 ms 3/48",
+   "II": "10.0 [7.0-17.0], max 36.0, > 40 ms 0/48",
+   "III": "8.0 [5.0-15.0], max 44.0, > 40 ms 1/48",
+   "aVF": "9.5 [6.0-16.5], max 45.0, > 40 ms 2/48",
+   "aVL": "13.0 [8.0-24.0], max 60.0, > 40 ms 5/48",
+   "aVR": "15.0 [11.0-22.0], max 50.0, > 40 ms 2/48",
+   "V1": "10.5 [7.0-18.0], max 38.0, > 40 ms 0/48",
+   "V2": "7.0 [5.8-11.0], max 36.0, > 40 ms 0/48"
+  },
+  "stim | 6G8DD8S5 | rv_apical_inferior (n 12)": {
+   "I": "25.0 [19.8-27.0], max 28.0, > 40 ms 0/12",
+   "II": "15.5 [11.2-19.5], max 25.0, > 40 ms 0/12",
+   "III": "14.5 [8.5-19.8], max 24.0, > 40 ms 0/12",
+   "aVF": "15.0 [10.5-19.8], max 24.0, > 40 ms 0/12",
+   "aVL": "19.5 [14.2-24.2], max 36.0, > 40 ms 0/12",
+   "aVR": "19.5 [15.8-23.8], max 29.0, > 40 ms 0/12",
+   "V1": "17.0 [9.5-21.2], max 26.0, > 40 ms 0/12",
+   "V2": "14.0 [5.8-17.0], max 19.0, > 40 ms 0/12"
+  },
+  "stim | 6G8DD8S5 | rv_apical_superior (n 4)": {
+   "I": "10.5 [10.0-13.2], max 20.0, > 40 ms 0/4",
+   "II": "18.5 [14.8-22.8], max 25.0, > 40 ms 0/4",
+   "III": "9.0 [7.8-14.0], max 26.0, > 40 ms 0/4",
+   "aVF": "11.5 [9.8-16.0], max 25.0, > 40 ms 0/4",
+   "aVL": "9.5 [8.8-14.5], max 28.0, > 40 ms 0/4",
+   "aVR": "27.0 [18.2-34.2], max 35.0, > 40 ms 0/4",
+   "V1": "5.5 [5.0-8.8], max 17.0, > 40 ms 0/4",
+   "V2": "3.5 [3.0-4.0], max 4.0, > 40 ms 0/4"
+  },
+  "stim | 6G8DD8S5 | rv_basal_inferior (n 12)": {
+   "I": "20.0 [14.5-23.5], max 30.0, > 40 ms 0/12",
+   "II": "14.0 [5.8-22.0], max 23.0, > 40 ms 0/12",
+   "III": "5.0 [4.0-15.2], max 21.0, > 40 ms 0/12",
+   "aVF": "8.0 [4.8-20.2], max 23.0, > 40 ms 0/12",
+   "aVL": "14.5 [7.0-20.0], max 24.0, > 40 ms 0/12",
+   "aVR": "22.0 [17.0-24.0], max 29.0, > 40 ms 0/12",
+   "V1": "21.5 [2.0-29.8], max 38.0, > 40 ms 0/12",
+   "V2": "5.0 [4.8-8.2], max 23.0, > 40 ms 0/12"
+  },
+  "stim | 6G8DD8S5 | rv_basal_superior (n 8)": {
+   "I": "32.0 [22.0-41.0], max 42.0, > 40 ms 3/8",
+   "II": "26.5 [21.0-31.0], max 35.0, > 40 ms 0/8",
+   "III": "28.0 [23.5-32.0], max 36.0, > 40 ms 0/8",
+   "aVF": "27.0 [21.2-31.2], max 36.0, > 40 ms 0/8",
+   "aVL": "33.0 [31.2-35.0], max 39.0, > 40 ms 0/8",
+   "aVR": "27.0 [21.0-32.0], max 36.0, > 40 ms 0/8",
+   "V1": "5.0 [3.8-8.8], max 17.0, > 40 ms 0/8",
+   "V2": "0.5 [0.0-1.0], max 1.0, > 40 ms 0/8"
+  },
+  "stim | 6G8DD8S5 | rvot (n 8)": {
+   "I": "23.0 [21.8-29.0], max 41.0, > 40 ms 1/8",
+   "II": "18.5 [15.5-29.2], max 34.0, > 40 ms 0/8",
+   "III": "13.0 [10.8-19.5], max 29.0, > 40 ms 0/8",
+   "aVF": "15.5 [12.8-22.8], max 29.0, > 40 ms 0/8",
+   "aVL": "18.0 [14.8-28.8], max 41.0, > 40 ms 1/8",
+   "aVR": "28.5 [26.2-31.5], max 34.0, > 40 ms 0/8",
+   "V1": "11.0 [6.8-19.2], max 28.0, > 40 ms 0/8",
+   "V2": "5.0 [2.0-6.5], max 10.0, > 40 ms 0/8"
+  },
+  "stim | 7D98EVAR | lv_apical_inferior (n 12)": {
+   "I": "16.5 [9.5-22.8], max 45.0, > 40 ms 1/12",
+   "II": "6.0 [6.0-8.8], max 19.0, > 40 ms 0/12",
+   "III": "6.0 [4.8-10.2], max 17.0, > 40 ms 0/12",
+   "aVF": "6.0 [5.0-9.2], max 18.0, > 40 ms 0/12",
+   "aVL": "9.5 [6.8-17.0], max 20.0, > 40 ms 0/12",
+   "aVR": "12.5 [10.0-15.0], max 24.0, > 40 ms 0/12",
+   "V1": "10.5 [7.5-17.0], max 18.0, > 40 ms 0/12",
+   "V2": "9.0 [7.0-10.5], max 17.0, > 40 ms 0/12"
+  },
+  "stim | 7D98EVAR | lv_apical_superior (n 16)": {
+   "I": "9.0 [6.8-19.2], max 49.0, > 40 ms 1/16",
+   "II": "20.5 [12.0-32.5], max 45.0, > 40 ms 1/16",
+   "III": "12.0 [5.8-15.8], max 37.0, > 40 ms 0/16",
+   "aVF": "16.0 [8.8-20.8], max 37.0, > 40 ms 0/16",
+   "aVL": "10.5 [5.8-19.0], max 37.0, > 40 ms 0/16",
+   "aVR": "14.5 [11.8-25.8], max 41.0, > 40 ms 1/16",
+   "V1": "10.0 [8.0-15.2], max 28.0, > 40 ms 0/16",
+   "V2": "12.0 [4.8-16.2], max 38.0, > 40 ms 0/16"
+  },
+  "stim | 7D98EVAR | lv_basal_inferior (n 20)": {
+   "I": "12.5 [8.0-17.0], max 26.0, > 40 ms 0/20",
+   "II": "17.5 [13.5-24.2], max 47.0, > 40 ms 1/20",
+   "III": "7.5 [6.0-10.0], max 25.0, > 40 ms 0/20",
+   "aVF": "11.0 [8.0-16.0], max 28.0, > 40 ms 0/20",
+   "aVL": "8.0 [7.0-13.0], max 26.0, > 40 ms 0/20",
+   "aVR": "22.0 [15.8-29.2], max 48.0, > 40 ms 2/20",
+   "V1": "9.5 [6.0-16.0], max 19.0, > 40 ms 0/20",
+   "V2": "10.0 [8.8-15.2], max 25.0, > 40 ms 0/20"
+  },
+  "stim | 7D98EVAR | lv_basal_superior (n 52)": {
+   "I": "19.5 [9.0-29.0], max 52.0, > 40 ms 7/52",
+   "II": "15.5 [9.0-25.0], max 46.0, > 40 ms 2/52",
+   "III": "10.0 [6.0-28.0], max 44.0, > 40 ms 6/52",
+   "aVF": "14.5 [7.0-28.2], max 45.0, > 40 ms 2/52",
+   "aVL": "13.0 [8.8-29.8], max 44.0, > 40 ms 6/52",
+   "aVR": "18.5 [13.8-32.0], max 51.0, > 40 ms 9/52",
+   "V1": "14.5 [6.8-21.0], max 43.0, > 40 ms 4/52",
+   "V2": "9.0 [6.8-14.2], max 38.0, > 40 ms 0/52"
+  },
+  "stim | 7D98EVAR | rv_apical_inferior (n 12)": {
+   "I": "20.5 [15.5-34.8], max 39.0, > 40 ms 0/12",
+   "II": "8.5 [8.0-16.8], max 25.0, > 40 ms 0/12",
+   "III": "11.5 [6.8-18.2], max 28.0, > 40 ms 0/12",
+   "aVF": "10.0 [6.8-19.2], max 28.0, > 40 ms 0/12",
+   "aVL": "20.0 [13.5-24.2], max 27.0, > 40 ms 0/12",
+   "aVR": "16.0 [15.2-21.5], max 24.0, > 40 ms 0/12",
+   "V1": "17.0 [13.2-25.0], max 31.0, > 40 ms 0/12",
+   "V2": "17.5 [12.5-27.8], max 32.0, > 40 ms 0/12"
+  },
+  "stim | 7D98EVAR | rv_basal_inferior (n 16)": {
+   "I": "16.5 [12.0-22.2], max 27.0, > 40 ms 0/16",
+   "II": "6.0 [6.0-13.5], max 21.0, > 40 ms 0/16",
+   "III": "5.0 [4.0-12.8], max 20.0, > 40 ms 0/16",
+   "aVF": "5.5 [5.0-13.5], max 20.0, > 40 ms 0/16",
+   "aVL": "10.5 [7.0-18.5], max 22.0, > 40 ms 0/16",
+   "aVR": "19.0 [14.8-26.2], max 32.0, > 40 ms 0/16",
+   "V1": "16.0 [4.0-21.0], max 33.0, > 40 ms 0/16",
+   "V2": "6.0 [5.8-17.8], max 26.0, > 40 ms 0/16"
+  },
+  "stim | 7D98EVAR | rv_basal_superior (n 8)": {
+   "I": "24.5 [20.0-26.0], max 28.0, > 40 ms 0/8",
+   "II": "23.5 [20.0-25.8], max 30.0, > 40 ms 0/8",
+   "III": "23.5 [20.0-25.5], max 28.0, > 40 ms 0/8",
+   "aVF": "26.0 [22.5-30.0], max 35.0, > 40 ms 0/8",
+   "aVL": "28.0 [23.0-33.2], max 38.0, > 40 ms 0/8",
+   "aVR": "22.5 [20.8-25.2], max 27.0, > 40 ms 0/8",
+   "V1": "10.5 [4.8-14.2], max 20.0, > 40 ms 0/8",
+   "V2": "1.5 [1.0-3.0], max 16.0, > 40 ms 0/8"
+  },
+  "stim | 7D98EVAR | rvot (n 8)": {
+   "I": "27.0 [23.5-41.5], max 44.0, > 40 ms 3/8",
+   "II": "27.5 [23.8-32.2], max 34.0, > 40 ms 0/8",
+   "III": "36.0 [33.5-39.8], max 43.0, > 40 ms 2/8",
+   "aVF": "34.0 [31.8-35.2], max 38.0, > 40 ms 0/8",
+   "aVL": "47.5 [38.8-58.8], max 65.0, > 40 ms 5/8",
+   "aVR": "29.0 [25.8-32.8], max 36.0, > 40 ms 0/8",
+   "V1": "23.0 [19.8-31.0], max 34.0, > 40 ms 0/8",
+   "V2": "10.0 [4.0-16.2], max 27.0, > 40 ms 0/8"
+  },
+  "stim | Y5HYEDL4 | lv_apical_inferior (n 28)": {
+   "I": "7.5 [5.0-14.0], max 30.0, > 40 ms 0/28",
+   "II": "9.5 [3.0-13.5], max 34.0, > 40 ms 0/28",
+   "III": "3.0 [3.0-4.0], max 16.0, > 40 ms 0/28",
+   "aVF": "5.5 [3.0-7.5], max 18.0, > 40 ms 0/28",
+   "aVL": "4.0 [4.0-5.0], max 15.0, > 40 ms 0/28",
+   "aVR": "9.0 [7.0-11.2], max 16.0, > 40 ms 0/28",
+   "V1": "3.0 [2.0-6.2], max 17.0, > 40 ms 0/28",
+   "V2": "4.0 [3.0-4.0], max 17.0, > 40 ms 0/28"
+  },
+  "stim | Y5HYEDL4 | lv_apical_superior (n 16)": {
+   "I": "7.0 [5.0-11.0], max 20.0, > 40 ms 0/16",
+   "II": "15.0 [8.5-27.2], max 39.0, > 40 ms 0/16",
+   "III": "8.5 [6.8-12.8], max 20.0, > 40 ms 0/16",
+   "aVF": "10.0 [7.0-13.5], max 23.0, > 40 ms 0/16",
+   "aVL": "8.0 [6.8-12.5], max 16.0, > 40 ms 0/16",
+   "aVR": "8.0 [6.0-17.2], max 39.0, > 40 ms 0/16",
+   "V1": "5.5 [4.0-11.8], max 27.0, > 40 ms 0/16",
+   "V2": "4.0 [2.0-5.0], max 17.0, > 40 ms 0/16"
+  },
+  "stim | Y5HYEDL4 | lv_basal_inferior (n 12)": {
+   "I": "7.5 [4.0-9.2], max 13.0, > 40 ms 0/12",
+   "II": "7.5 [3.8-14.0], max 27.0, > 40 ms 0/12",
+   "III": "3.0 [2.0-4.2], max 13.0, > 40 ms 0/12",
+   "aVF": "4.5 [3.0-6.8], max 14.0, > 40 ms 0/12",
+   "aVL": "4.0 [4.0-5.2], max 13.0, > 40 ms 0/12",
+   "aVR": "21.0 [12.8-26.2], max 35.0, > 40 ms 0/12",
+   "V1": "6.0 [4.2-15.2], max 24.0, > 40 ms 0/12",
+   "V2": "6.5 [4.0-12.2], max 18.0, > 40 ms 0/12"
+  },
+  "stim | Y5HYEDL4 | lv_basal_superior (n 44)": {
+   "I": "8.0 [5.0-17.2], max 24.0, > 40 ms 0/44",
+   "II": "11.0 [4.0-22.0], max 42.0, > 40 ms 1/44",
+   "III": "4.0 [2.0-16.5], max 49.0, > 40 ms 4/44",
+   "aVF": "6.0 [3.0-18.0], max 35.0, > 40 ms 0/44",
+   "aVL": "5.5 [3.0-22.2], max 53.0, > 40 ms 1/44",
+   "aVR": "16.0 [9.8-20.2], max 58.0, > 40 ms 5/44",
+   "V1": "8.0 [4.0-19.2], max 54.0, > 40 ms 3/44",
+   "V2": "4.5 [3.0-14.0], max 25.0, > 40 ms 0/44"
+  },
+  "stim | Y5HYEDL4 | rv_apical_inferior (n 16)": {
+   "I": "14.0 [12.0-19.0], max 21.0, > 40 ms 0/16",
+   "II": "12.0 [4.5-17.2], max 30.0, > 40 ms 0/16",
+   "III": "12.5 [6.0-16.2], max 21.0, > 40 ms 0/16",
+   "aVF": "16.5 [5.2-21.2], max 23.0, > 40 ms 0/16",
+   "aVL": "14.5 [10.8-18.0], max 20.0, > 40 ms 0/16",
+   "aVR": "15.5 [11.8-18.2], max 24.0, > 40 ms 0/16",
+   "V1": "10.0 [3.8-16.2], max 24.0, > 40 ms 0/16",
+   "V2": "3.0 [2.0-8.5], max 17.0, > 40 ms 0/16"
+  },
+  "stim | Y5HYEDL4 | rv_apical_superior (n 4)": {
+   "I": "16.5 [14.0-18.2], max 19.0, > 40 ms 0/4",
+   "II": "20.5 [18.2-22.0], max 22.0, > 40 ms 0/4",
+   "III": "18.0 [15.8-19.2], max 20.0, > 40 ms 0/4",
+   "aVF": "27.5 [23.2-30.8], max 33.0, > 40 ms 0/4",
+   "aVL": "17.0 [15.0-18.2], max 19.0, > 40 ms 0/4",
+   "aVR": "18.0 [16.0-19.2], max 20.0, > 40 ms 0/4",
+   "V1": "14.5 [11.5-17.0], max 17.0, > 40 ms 0/4",
+   "V2": "0.0 [0.0-1.2], max 5.0, > 40 ms 0/4"
+  },
+  "stim | Y5HYEDL4 | rv_basal_inferior (n 12)": {
+   "I": "17.0 [14.0-24.5], max 32.0, > 40 ms 0/12",
+   "II": "15.5 [3.8-17.2], max 21.0, > 40 ms 0/12",
+   "III": "3.0 [2.8-15.5], max 20.0, > 40 ms 0/12",
+   "aVF": "10.0 [2.8-20.0], max 23.0, > 40 ms 0/12",
+   "aVL": "10.0 [4.0-15.2], max 21.0, > 40 ms 0/12",
+   "aVR": "22.0 [14.0-30.5], max 38.0, > 40 ms 0/12",
+   "V1": "4.5 [1.0-9.0], max 23.0, > 40 ms 0/12",
+   "V2": "2.5 [1.8-4.5], max 19.0, > 40 ms 0/12"
+  },
+  "stim | Y5HYEDL4 | rv_basal_superior (n 4)": {
+   "I": "16.0 [14.0-17.8], max 20.0, > 40 ms 0/4",
+   "II": "19.5 [17.0-21.5], max 23.0, > 40 ms 0/4",
+   "III": "15.5 [13.0-17.8], max 20.0, > 40 ms 0/4",
+   "aVF": "16.5 [14.0-18.8], max 21.0, > 40 ms 0/4",
+   "aVL": "16.0 [14.0-17.8], max 20.0, > 40 ms 0/4",
+   "aVR": "18.0 [16.5-19.8], max 22.0, > 40 ms 0/4",
+   "V1": "16.5 [11.8-19.5], max 21.0, > 40 ms 0/4",
+   "V2": "1.0 [0.8-3.5], max 11.0, > 40 ms 0/4"
+  },
+  "stim | Y5HYEDL4 | rvot (n 8)": {
+   "I": "21.5 [6.0-26.2], max 29.0, > 40 ms 0/8",
+   "II": "21.5 [17.0-22.5], max 25.0, > 40 ms 0/8",
+   "III": "21.5 [3.0-38.0], max 40.0, > 40 ms 0/8",
+   "aVF": "22.0 [6.2-33.2], max 36.0, > 40 ms 0/8",
+   "aVL": "34.5 [3.0-62.0], max 63.0, > 40 ms 4/8",
+   "aVR": "23.5 [16.8-25.2], max 28.0, > 40 ms 0/8",
+   "V1": "20.0 [7.0-20.0], max 25.0, > 40 ms 0/8",
+   "V2": "16.5 [13.5-17.2], max 18.0, > 40 ms 0/8"
+  },
+  "true | 6G8DD8S5 | lv_apical_inferior (n 12)": {
+   "I": "18.0 [8.8-22.5], max 42.0, > 40 ms 1/12",
+   "II": "7.0 [6.0-8.5], max 17.0, > 40 ms 0/12",
+   "III": "6.0 [4.8-7.0], max 11.0, > 40 ms 0/12",
+   "aVF": "6.0 [5.0-7.5], max 20.0, > 40 ms 0/12",
+   "aVL": "8.5 [7.0-11.2], max 19.0, > 40 ms 0/12",
+   "aVR": "12.0 [11.0-13.5], max 22.0, > 40 ms 0/12",
+   "V1": "11.5 [7.5-12.0], max 20.0, > 40 ms 0/12",
+   "V2": "8.0 [5.8-10.0], max 19.0, > 40 ms 0/12"
+  },
+  "true | 6G8DD8S5 | lv_apical_superior (n 20)": {
+   "I": "9.0 [7.8-18.2], max 33.0, > 40 ms 0/20",
+   "II": "15.0 [12.0-24.5], max 46.0, > 40 ms 2/20",
+   "III": "12.5 [7.0-20.5], max 34.0, > 40 ms 0/20",
+   "aVF": "17.5 [8.0-24.2], max 37.0, > 40 ms 0/20",
+   "aVL": "10.5 [7.0-19.5], max 33.0, > 40 ms 0/20",
+   "aVR": "14.5 [11.0-19.8], max 35.0, > 40 ms 0/20",
+   "V1": "9.0 [5.0-14.2], max 19.0, > 40 ms 0/20",
+   "V2": "7.5 [3.0-13.8], max 37.0, > 40 ms 0/20"
+  },
+  "true | 6G8DD8S5 | lv_basal_inferior (n 20)": {
+   "I": "10.0 [7.0-16.5], max 59.0, > 40 ms 2/20",
+   "II": "10.5 [7.0-16.5], max 35.0, > 40 ms 0/20",
+   "III": "6.5 [4.0-9.0], max 19.0, > 40 ms 0/20",
+   "aVF": "8.5 [6.0-13.5], max 29.0, > 40 ms 0/20",
+   "aVL": "8.0 [6.0-10.2], max 17.0, > 40 ms 0/20",
+   "aVR": "13.5 [11.0-20.0], max 32.0, > 40 ms 0/20",
+   "V1": "8.0 [5.0-13.0], max 26.0, > 40 ms 0/20",
+   "V2": "8.0 [6.0-11.0], max 26.0, > 40 ms 0/20"
+  },
+  "true | 6G8DD8S5 | lv_basal_superior (n 48)": {
+   "I": "17.5 [8.0-25.0], max 43.0, > 40 ms 3/48",
+   "II": "10.0 [7.0-17.0], max 36.0, > 40 ms 0/48",
+   "III": "8.0 [5.0-15.0], max 44.0, > 40 ms 1/48",
+   "aVF": "9.5 [6.0-16.5], max 45.0, > 40 ms 2/48",
+   "aVL": "13.0 [8.0-24.0], max 60.0, > 40 ms 5/48",
+   "aVR": "15.0 [11.0-22.0], max 50.0, > 40 ms 2/48",
+   "V1": "10.5 [7.0-18.0], max 38.0, > 40 ms 0/48",
+   "V2": "7.0 [5.8-11.0], max 36.0, > 40 ms 0/48"
+  },
+  "true | 6G8DD8S5 | rv_apical_inferior (n 12)": {
+   "I": "25.0 [19.8-27.0], max 28.0, > 40 ms 0/12",
+   "II": "15.5 [11.2-19.5], max 25.0, > 40 ms 0/12",
+   "III": "14.5 [8.5-19.8], max 24.0, > 40 ms 0/12",
+   "aVF": "15.0 [10.5-19.8], max 24.0, > 40 ms 0/12",
+   "aVL": "19.5 [14.2-24.2], max 36.0, > 40 ms 0/12",
+   "aVR": "19.5 [15.8-23.8], max 29.0, > 40 ms 0/12",
+   "V1": "17.0 [9.5-21.2], max 26.0, > 40 ms 0/12",
+   "V2": "14.0 [5.8-17.0], max 19.0, > 40 ms 0/12"
+  },
+  "true | 6G8DD8S5 | rv_apical_superior (n 4)": {
+   "I": "10.5 [10.0-13.2], max 20.0, > 40 ms 0/4",
+   "II": "18.5 [14.8-22.8], max 25.0, > 40 ms 0/4",
+   "III": "9.0 [7.8-14.0], max 26.0, > 40 ms 0/4",
+   "aVF": "11.5 [9.8-16.0], max 25.0, > 40 ms 0/4",
+   "aVL": "9.5 [8.8-14.5], max 28.0, > 40 ms 0/4",
+   "aVR": "27.0 [18.2-34.2], max 35.0, > 40 ms 0/4",
+   "V1": "5.5 [5.0-8.8], max 17.0, > 40 ms 0/4",
+   "V2": "3.5 [3.0-4.0], max 4.0, > 40 ms 0/4"
+  },
+  "true | 6G8DD8S5 | rv_basal_inferior (n 12)": {
+   "I": "20.0 [14.5-23.5], max 30.0, > 40 ms 0/12",
+   "II": "14.0 [5.8-22.0], max 23.0, > 40 ms 0/12",
+   "III": "5.0 [4.0-15.2], max 21.0, > 40 ms 0/12",
+   "aVF": "8.0 [4.8-20.2], max 23.0, > 40 ms 0/12",
+   "aVL": "14.5 [7.0-20.0], max 24.0, > 40 ms 0/12",
+   "aVR": "22.0 [17.0-24.0], max 29.0, > 40 ms 0/12",
+   "V1": "21.5 [2.0-29.8], max 38.0, > 40 ms 0/12",
+   "V2": "5.0 [4.8-8.2], max 23.0, > 40 ms 0/12"
+  },
+  "true | 6G8DD8S5 | rv_basal_superior (n 8)": {
+   "I": "32.0 [22.0-41.0], max 42.0, > 40 ms 3/8",
+   "II": "26.5 [21.0-31.0], max 35.0, > 40 ms 0/8",
+   "III": "28.0 [23.5-32.0], max 36.0, > 40 ms 0/8",
+   "aVF": "27.0 [21.2-31.2], max 36.0, > 40 ms 0/8",
+   "aVL": "33.0 [31.2-35.0], max 39.0, > 40 ms 0/8",
+   "aVR": "27.0 [21.0-32.0], max 36.0, > 40 ms 0/8",
+   "V1": "5.0 [3.8-8.8], max 17.0, > 40 ms 0/8",
+   "V2": "0.5 [0.0-1.0], max 1.0, > 40 ms 0/8"
+  },
+  "true | 6G8DD8S5 | rvot (n 8)": {
+   "I": "23.0 [21.8-29.0], max 41.0, > 40 ms 1/8",
+   "II": "18.5 [15.5-29.2], max 34.0, > 40 ms 0/8",
+   "III": "13.0 [10.8-19.5], max 29.0, > 40 ms 0/8",
+   "aVF": "15.5 [12.8-22.8], max 29.0, > 40 ms 0/8",
+   "aVL": "18.0 [14.8-28.8], max 41.0, > 40 ms 1/8",
+   "aVR": "28.5 [26.2-31.5], max 34.0, > 40 ms 0/8",
+   "V1": "11.0 [6.8-19.2], max 28.0, > 40 ms 0/8",
+   "V2": "5.0 [2.0-6.5], max 10.0, > 40 ms 0/8"
+  },
+  "true | 7D98EVAR | lv_apical_inferior (n 12)": {
+   "I": "16.5 [9.5-22.8], max 45.0, > 40 ms 1/12",
+   "II": "6.0 [6.0-8.8], max 19.0, > 40 ms 0/12",
+   "III": "6.0 [4.8-10.2], max 17.0, > 40 ms 0/12",
+   "aVF": "6.0 [5.0-9.2], max 18.0, > 40 ms 0/12",
+   "aVL": "9.5 [6.8-17.0], max 20.0, > 40 ms 0/12",
+   "aVR": "12.5 [10.0-15.0], max 24.0, > 40 ms 0/12",
+   "V1": "10.5 [7.5-17.0], max 18.0, > 40 ms 0/12",
+   "V2": "9.0 [7.0-10.5], max 17.0, > 40 ms 0/12"
+  },
+  "true | 7D98EVAR | lv_apical_superior (n 16)": {
+   "I": "9.0 [6.8-19.2], max 49.0, > 40 ms 1/16",
+   "II": "20.5 [12.0-32.5], max 45.0, > 40 ms 1/16",
+   "III": "12.0 [5.8-15.8], max 37.0, > 40 ms 0/16",
+   "aVF": "16.0 [8.8-20.8], max 37.0, > 40 ms 0/16",
+   "aVL": "10.5 [5.8-19.0], max 37.0, > 40 ms 0/16",
+   "aVR": "14.5 [11.8-25.8], max 41.0, > 40 ms 1/16",
+   "V1": "10.0 [8.0-15.2], max 28.0, > 40 ms 0/16",
+   "V2": "12.0 [4.8-16.2], max 38.0, > 40 ms 0/16"
+  },
+  "true | 7D98EVAR | lv_basal_inferior (n 20)": {
+   "I": "12.5 [8.0-17.0], max 26.0, > 40 ms 0/20",
+   "II": "17.5 [13.5-24.2], max 47.0, > 40 ms 1/20",
+   "III": "7.5 [6.0-10.0], max 25.0, > 40 ms 0/20",
+   "aVF": "11.0 [8.0-16.0], max 28.0, > 40 ms 0/20",
+   "aVL": "8.0 [7.0-13.0], max 26.0, > 40 ms 0/20",
+   "aVR": "22.0 [15.8-29.2], max 48.0, > 40 ms 2/20",
+   "V1": "9.5 [6.0-16.0], max 19.0, > 40 ms 0/20",
+   "V2": "10.0 [8.8-15.2], max 25.0, > 40 ms 0/20"
+  },
+  "true | 7D98EVAR | lv_basal_superior (n 52)": {
+   "I": "19.5 [9.0-29.0], max 52.0, > 40 ms 7/52",
+   "II": "15.5 [9.0-25.0], max 46.0, > 40 ms 2/52",
+   "III": "10.0 [6.0-28.0], max 44.0, > 40 ms 6/52",
+   "aVF": "14.5 [7.0-28.2], max 45.0, > 40 ms 2/52",
+   "aVL": "13.0 [8.8-29.8], max 44.0, > 40 ms 6/52",
+   "aVR": "18.5 [13.8-32.0], max 51.0, > 40 ms 9/52",
+   "V1": "14.5 [6.8-21.0], max 43.0, > 40 ms 4/52",
+   "V2": "9.0 [6.8-14.2], max 38.0, > 40 ms 0/52"
+  },
+  "true | 7D98EVAR | rv_apical_inferior (n 12)": {
+   "I": "20.5 [15.5-34.8], max 39.0, > 40 ms 0/12",
+   "II": "8.5 [8.0-16.8], max 25.0, > 40 ms 0/12",
+   "III": "11.5 [6.8-18.2], max 28.0, > 40 ms 0/12",
+   "aVF": "10.0 [6.8-19.2], max 28.0, > 40 ms 0/12",
+   "aVL": "20.0 [13.5-24.2], max 27.0, > 40 ms 0/12",
+   "aVR": "16.0 [15.2-21.5], max 24.0, > 40 ms 0/12",
+   "V1": "17.0 [13.2-25.0], max 31.0, > 40 ms 0/12",
+   "V2": "17.5 [12.5-27.8], max 32.0, > 40 ms 0/12"
+  },
+  "true | 7D98EVAR | rv_basal_inferior (n 16)": {
+   "I": "16.5 [12.0-22.2], max 27.0, > 40 ms 0/16",
+   "II": "6.0 [6.0-13.5], max 21.0, > 40 ms 0/16",
+   "III": "5.0 [4.0-12.8], max 20.0, > 40 ms 0/16",
+   "aVF": "5.5 [5.0-13.5], max 20.0, > 40 ms 0/16",
+   "aVL": "10.5 [7.0-18.5], max 22.0, > 40 ms 0/16",
+   "aVR": "19.0 [14.8-26.2], max 32.0, > 40 ms 0/16",
+   "V1": "16.0 [4.0-21.0], max 33.0, > 40 ms 0/16",
+   "V2": "6.0 [5.8-17.8], max 26.0, > 40 ms 0/16"
+  },
+  "true | 7D98EVAR | rv_basal_superior (n 8)": {
+   "I": "24.5 [20.0-26.0], max 28.0, > 40 ms 0/8",
+   "II": "23.5 [20.0-25.8], max 30.0, > 40 ms 0/8",
+   "III": "23.5 [20.0-25.5], max 28.0, > 40 ms 0/8",
+   "aVF": "26.0 [22.5-30.0], max 35.0, > 40 ms 0/8",
+   "aVL": "28.0 [23.0-33.2], max 38.0, > 40 ms 0/8",
+   "aVR": "22.5 [20.8-25.2], max 27.0, > 40 ms 0/8",
+   "V1": "10.5 [4.8-14.2], max 20.0, > 40 ms 0/8",
+   "V2": "1.5 [1.0-3.0], max 16.0, > 40 ms 0/8"
+  },
+  "true | 7D98EVAR | rvot (n 8)": {
+   "I": "27.0 [23.5-41.5], max 44.0, > 40 ms 3/8",
+   "II": "27.5 [23.8-32.2], max 34.0, > 40 ms 0/8",
+   "III": "36.0 [33.5-39.8], max 43.0, > 40 ms 2/8",
+   "aVF": "34.0 [31.8-35.2], max 38.0, > 40 ms 0/8",
+   "aVL": "47.5 [38.8-58.8], max 65.0, > 40 ms 5/8",
+   "aVR": "29.0 [25.8-32.8], max 36.0, > 40 ms 0/8",
+   "V1": "23.0 [19.8-31.0], max 34.0, > 40 ms 0/8",
+   "V2": "10.0 [4.0-16.2], max 27.0, > 40 ms 0/8"
+  },
+  "true | Y5HYEDL4 | lv_apical_inferior (n 28)": {
+   "I": "7.5 [5.0-14.0], max 30.0, > 40 ms 0/28",
+   "II": "9.5 [3.0-13.5], max 34.0, > 40 ms 0/28",
+   "III": "3.0 [3.0-4.0], max 16.0, > 40 ms 0/28",
+   "aVF": "5.5 [3.0-7.5], max 18.0, > 40 ms 0/28",
+   "aVL": "4.0 [4.0-5.0], max 15.0, > 40 ms 0/28",
+   "aVR": "9.0 [7.0-11.2], max 16.0, > 40 ms 0/28",
+   "V1": "3.0 [2.0-6.2], max 17.0, > 40 ms 0/28",
+   "V2": "4.0 [3.0-4.0], max 17.0, > 40 ms 0/28"
+  },
+  "true | Y5HYEDL4 | lv_apical_superior (n 16)": {
+   "I": "7.0 [5.0-11.0], max 20.0, > 40 ms 0/16",
+   "II": "15.0 [8.5-27.2], max 39.0, > 40 ms 0/16",
+   "III": "8.5 [6.8-12.8], max 20.0, > 40 ms 0/16",
+   "aVF": "10.0 [7.0-13.5], max 23.0, > 40 ms 0/16",
+   "aVL": "8.0 [6.8-12.5], max 16.0, > 40 ms 0/16",
+   "aVR": "8.0 [6.0-17.2], max 39.0, > 40 ms 0/16",
+   "V1": "5.5 [4.0-11.8], max 27.0, > 40 ms 0/16",
+   "V2": "4.0 [2.0-5.0], max 17.0, > 40 ms 0/16"
+  },
+  "true | Y5HYEDL4 | lv_basal_inferior (n 12)": {
+   "I": "7.5 [4.0-9.2], max 13.0, > 40 ms 0/12",
+   "II": "7.5 [3.8-14.0], max 27.0, > 40 ms 0/12",
+   "III": "3.0 [2.0-4.2], max 13.0, > 40 ms 0/12",
+   "aVF": "4.5 [3.0-6.8], max 14.0, > 40 ms 0/12",
+   "aVL": "4.0 [4.0-5.2], max 13.0, > 40 ms 0/12",
+   "aVR": "21.0 [12.8-26.2], max 35.0, > 40 ms 0/12",
+   "V1": "6.0 [4.2-15.2], max 24.0, > 40 ms 0/12",
+   "V2": "6.5 [4.0-12.2], max 18.0, > 40 ms 0/12"
+  },
+  "true | Y5HYEDL4 | lv_basal_superior (n 44)": {
+   "I": "8.0 [5.0-17.2], max 24.0, > 40 ms 0/44",
+   "II": "11.0 [4.0-22.0], max 42.0, > 40 ms 1/44",
+   "III": "4.0 [2.0-16.5], max 49.0, > 40 ms 4/44",
+   "aVF": "6.0 [3.0-18.0], max 35.0, > 40 ms 0/44",
+   "aVL": "5.5 [3.0-22.2], max 53.0, > 40 ms 1/44",
+   "aVR": "16.0 [9.8-20.2], max 58.0, > 40 ms 5/44",
+   "V1": "8.0 [4.0-19.2], max 54.0, > 40 ms 3/44",
+   "V2": "4.5 [3.0-14.0], max 25.0, > 40 ms 0/44"
+  },
+  "true | Y5HYEDL4 | rv_apical_inferior (n 16)": {
+   "I": "14.0 [12.0-19.0], max 21.0, > 40 ms 0/16",
+   "II": "12.0 [4.5-17.2], max 30.0, > 40 ms 0/16",
+   "III": "12.5 [6.0-16.2], max 21.0, > 40 ms 0/16",
+   "aVF": "16.5 [5.2-21.2], max 23.0, > 40 ms 0/16",
+   "aVL": "14.5 [10.8-18.0], max 20.0, > 40 ms 0/16",
+   "aVR": "15.5 [11.8-18.2], max 24.0, > 40 ms 0/16",
+   "V1": "10.0 [3.8-16.2], max 24.0, > 40 ms 0/16",
+   "V2": "3.0 [2.0-8.5], max 17.0, > 40 ms 0/16"
+  },
+  "true | Y5HYEDL4 | rv_apical_superior (n 4)": {
+   "I": "16.5 [14.0-18.2], max 19.0, > 40 ms 0/4",
+   "II": "20.5 [18.2-22.0], max 22.0, > 40 ms 0/4",
+   "III": "18.0 [15.8-19.2], max 20.0, > 40 ms 0/4",
+   "aVF": "27.5 [23.2-30.8], max 33.0, > 40 ms 0/4",
+   "aVL": "17.0 [15.0-18.2], max 19.0, > 40 ms 0/4",
+   "aVR": "18.0 [16.0-19.2], max 20.0, > 40 ms 0/4",
+   "V1": "14.5 [11.5-17.0], max 17.0, > 40 ms 0/4",
+   "V2": "0.0 [0.0-1.2], max 5.0, > 40 ms 0/4"
+  },
+  "true | Y5HYEDL4 | rv_basal_inferior (n 12)": {
+   "I": "17.0 [14.0-24.5], max 32.0, > 40 ms 0/12",
+   "II": "15.5 [3.8-17.2], max 21.0, > 40 ms 0/12",
+   "III": "3.0 [2.8-15.5], max 20.0, > 40 ms 0/12",
+   "aVF": "10.0 [2.8-20.0], max 23.0, > 40 ms 0/12",
+   "aVL": "10.0 [4.0-15.2], max 21.0, > 40 ms 0/12",
+   "aVR": "22.0 [14.0-30.5], max 38.0, > 40 ms 0/12",
+   "V1": "4.5 [1.0-9.0], max 23.0, > 40 ms 0/12",
+   "V2": "2.5 [1.8-4.5], max 19.0, > 40 ms 0/12"
+  },
+  "true | Y5HYEDL4 | rv_basal_superior (n 4)": {
+   "I": "16.0 [14.0-17.8], max 20.0, > 40 ms 0/4",
+   "II": "19.5 [17.0-21.5], max 23.0, > 40 ms 0/4",
+   "III": "15.5 [13.0-17.8], max 20.0, > 40 ms 0/4",
+   "aVF": "16.5 [14.0-18.8], max 21.0, > 40 ms 0/4",
+   "aVL": "16.0 [14.0-17.8], max 20.0, > 40 ms 0/4",
+   "aVR": "18.0 [16.5-19.8], max 22.0, > 40 ms 0/4",
+   "V1": "16.5 [11.8-19.5], max 21.0, > 40 ms 0/4",
+   "V2": "1.0 [0.8-3.5], max 11.0, > 40 ms 0/4"
+  },
+  "true | Y5HYEDL4 | rvot (n 8)": {
+   "I": "21.5 [6.0-26.2], max 29.0, > 40 ms 0/8",
+   "II": "21.5 [17.0-22.5], max 25.0, > 40 ms 0/8",
+   "III": "21.5 [3.0-38.0], max 40.0, > 40 ms 0/8",
+   "aVF": "22.0 [6.2-33.2], max 36.0, > 40 ms 0/8",
+   "aVL": "34.5 [3.0-62.0], max 63.0, > 40 ms 4/8",
+   "aVR": "23.5 [16.8-25.2], max 28.0, > 40 ms 0/8",
+   "V1": "20.0 [7.0-20.0], max 25.0, > 40 ms 0/8",
+   "V2": "16.5 [13.5-17.2], max 18.0, > 40 ms 0/8"
+  }
+ },
+ "visible onset - stimulus, ms (clean ECG)": {
+  "6G8DD8S5 | net | aortic_cusp | 0.1": "median 9.5, range 5.0-14.0 (n 2)",
+  "6G8DD8S5 | net | aortic_cusp | 0.5": "median 18.5, range 12.0-25.0 (n 2)",
+  "6G8DD8S5 | net | aortic_cusp | 0.75": "median 4.0, range 4.0-4.0 (n 2)",
+  "6G8DD8S5 | net | aortic_cusp | 0.9": "median 15.5, range 3.0-28.0 (n 2)",
+  "6G8DD8S5 | net | his | nan": "median 42.0, range 42.0-42.0 (n 1)",
+  "6G8DD8S5 | net | lv_free_wall | 0.1": "median 3.0, range 2.0-5.0 (n 10)",
+  "6G8DD8S5 | net | lv_free_wall | 0.5": "median 13.0, range 9.0-18.0 (n 10)",
+  "6G8DD8S5 | net | lv_free_wall | 0.75": "median 4.5, range 3.0-9.0 (n 10)",
+  "6G8DD8S5 | net | lv_free_wall | 0.9": "median 3.0, range 2.0-5.0 (n 10)",
+  "6G8DD8S5 | net | lv_septum | 0.1": "median 3.0, range 3.0-4.0 (n 8)",
+  "6G8DD8S5 | net | lv_septum | 0.5": "median 10.0, range 8.0-11.0 (n 8)",
+  "6G8DD8S5 | net | lv_septum | 0.75": "median 4.0, range 3.0-5.0 (n 8)",
+  "6G8DD8S5 | net | lv_septum | 0.9": "median 3.0, range 2.0-3.0 (n 8)",
+  "6G8DD8S5 | net | lv_summit | 0.1": "median 3.0, range 3.0-3.0 (n 2)",
+  "6G8DD8S5 | net | lv_summit | 0.5": "median 11.5, range 8.0-15.0 (n 2)",
+  "6G8DD8S5 | net | lv_summit | 0.75": "median 8.5, range 8.0-9.0 (n 2)",
+  "6G8DD8S5 | net | lv_summit | 0.9": "median 4.5, range 4.0-5.0 (n 2)",
+  "6G8DD8S5 | net | lv_vein_course | 0.1": "median 3.0, range 3.0-3.0 (n 3)",
+  "6G8DD8S5 | net | lv_vein_course | 0.5": "median 8.0, range 6.0-9.0 (n 3)",
+  "6G8DD8S5 | net | lv_vein_course | 0.75": "median 7.0, range 6.0-7.0 (n 3)",
+  "6G8DD8S5 | net | lv_vein_course | 0.9": "median 3.0, range 3.0-5.0 (n 3)",
+  "6G8DD8S5 | net | rv_free_wall | 0.1": "median 2.0, range 2.0-4.0 (n 9)",
+  "6G8DD8S5 | net | rv_free_wall | 0.5": "median 4.0, range 2.0-15.0 (n 9)",
+  "6G8DD8S5 | net | rv_free_wall | 0.75": "median 3.0, range 2.0-4.0 (n 9)",
+  "6G8DD8S5 | net | rv_free_wall | 0.9": "median 2.0, range 2.0-3.0 (n 9)",
+  "6G8DD8S5 | net | rvot | 0.1": "median 2.5, range 2.0-3.0 (n 2)",
+  "6G8DD8S5 | net | rvot | 0.5": "median 9.5, range 7.0-12.0 (n 2)",
+  "6G8DD8S5 | net | rvot | 0.75": "median 6.5, range 2.0-11.0 (n 2)",
+  "6G8DD8S5 | net | rvot | 0.9": "median 5.5, range 2.0-9.0 (n 2)",
+  "7D98EVAR | net | aortic_cusp | 0.1": "median 4.0, range 3.0-5.0 (n 2)",
+  "7D98EVAR | net | aortic_cusp | 0.5": "median 6.0, range 4.0-8.0 (n 2)",
+  "7D98EVAR | net | aortic_cusp | 0.75": "median 4.0, range 4.0-4.0 (n 2)",
+  "7D98EVAR | net | aortic_cusp | 0.9": "median 4.0, range 3.0-5.0 (n 2)",
+  "7D98EVAR | net | his | nan": "median 22.0, range 22.0-22.0 (n 1)",
+  "7D98EVAR | net | lv_free_wall | 0.1": "median 4.0, range 2.0-5.0 (n 10)",
+  "7D98EVAR | net | lv_free_wall | 0.5": "median 11.0, range 7.0-16.0 (n 10)",
+  "7D98EVAR | net | lv_free_wall | 0.75": "median 4.5, range 3.0-9.0 (n 10)",
+  "7D98EVAR | net | lv_free_wall | 0.9": "median 4.0, range 2.0-5.0 (n 10)",
+  "7D98EVAR | net | lv_septum | 0.1": "median 3.0, range 3.0-4.0 (n 8)",
+  "7D98EVAR | net | lv_septum | 0.5": "median 7.5, range 3.0-14.0 (n 8)",
+  "7D98EVAR | net | lv_septum | 0.75": "median 4.0, range 3.0-6.0 (n 8)",
+  "7D98EVAR | net | lv_septum | 0.9": "median 3.0, range 2.0-3.0 (n 8)",
+  "7D98EVAR | net | lv_summit | 0.1": "median 3.0, range 3.0-3.0 (n 2)",
+  "7D98EVAR | net | lv_summit | 0.5": "median 6.5, range 6.0-7.0 (n 2)",
+  "7D98EVAR | net | lv_summit | 0.75": "median 4.5, range 4.0-5.0 (n 2)",
+  "7D98EVAR | net | lv_summit | 0.9": "median 3.5, range 3.0-4.0 (n 2)",
+  "7D98EVAR | net | lv_vein_course | 0.1": "median 3.0, range 3.0-3.0 (n 3)",
+  "7D98EVAR | net | lv_vein_course | 0.5": "median 5.0, range 4.0-8.0 (n 3)",
+  "7D98EVAR | net | lv_vein_course | 0.75": "median 4.0, range 4.0-6.0 (n 3)",
+  "7D98EVAR | net | lv_vein_course | 0.9": "median 3.0, range 3.0-4.0 (n 3)",
+  "7D98EVAR | net | rv_free_wall | 0.1": "median 3.0, range 2.0-4.0 (n 9)",
+  "7D98EVAR | net | rv_free_wall | 0.5": "median 7.0, range 3.0-16.0 (n 9)",
+  "7D98EVAR | net | rv_free_wall | 0.75": "median 3.0, range 2.0-5.0 (n 9)",
+  "7D98EVAR | net | rv_free_wall | 0.9": "median 3.0, range 2.0-4.0 (n 9)",
+  "7D98EVAR | net | rvot | 0.1": "median 3.0, range 3.0-3.0 (n 2)",
+  "7D98EVAR | net | rvot | 0.5": "median 8.5, range 4.0-13.0 (n 2)",
+  "7D98EVAR | net | rvot | 0.75": "median 3.0, range 3.0-3.0 (n 2)",
+  "7D98EVAR | net | rvot | 0.9": "median 3.0, range 3.0-3.0 (n 2)",
+  "Y5HYEDL4 | net | aortic_cusp | 0.1": "median 2.5, range 2.0-3.0 (n 2)",
+  "Y5HYEDL4 | net | aortic_cusp | 0.5": "median 2.5, range 2.0-3.0 (n 2)",
+  "Y5HYEDL4 | net | aortic_cusp | 0.75": "median 2.5, range 2.0-3.0 (n 2)",
+  "Y5HYEDL4 | net | aortic_cusp | 0.9": "median 2.5, range 2.0-3.0 (n 2)",
+  "Y5HYEDL4 | net | his | nan": "median 23.0, range 23.0-23.0 (n 1)",
+  "Y5HYEDL4 | net | lv_free_wall | 0.1": "median 2.0, range 2.0-3.0 (n 10)",
+  "Y5HYEDL4 | net | lv_free_wall | 0.5": "median 7.0, range 5.0-14.0 (n 10)",
+  "Y5HYEDL4 | net | lv_free_wall | 0.75": "median 3.0, range 2.0-4.0 (n 10)",
+  "Y5HYEDL4 | net | lv_free_wall | 0.9": "median 2.0, range 2.0-3.0 (n 10)",
+  "Y5HYEDL4 | net | lv_septum | 0.1": "median 2.0, range 2.0-2.0 (n 8)",
+  "Y5HYEDL4 | net | lv_septum | 0.5": "median 6.0, range 4.0-7.0 (n 8)",
+  "Y5HYEDL4 | net | lv_septum | 0.75": "median 2.0, range 2.0-3.0 (n 8)",
+  "Y5HYEDL4 | net | lv_septum | 0.9": "median 2.0, range 2.0-2.0 (n 8)",
+  "Y5HYEDL4 | net | lv_summit | 0.1": "median 2.0, range 2.0-2.0 (n 2)",
+  "Y5HYEDL4 | net | lv_summit | 0.5": "median 5.0, range 5.0-5.0 (n 2)",
+  "Y5HYEDL4 | net | lv_summit | 0.75": "median 3.5, range 3.0-4.0 (n 2)",
+  "Y5HYEDL4 | net | lv_summit | 0.9": "median 2.0, range 2.0-2.0 (n 2)",
+  "Y5HYEDL4 | net | lv_vein_course | 0.1": "median 2.0, range 2.0-2.0 (n 3)",
+  "Y5HYEDL4 | net | lv_vein_course | 0.5": "median 3.0, range 2.0-7.0 (n 3)",
+  "Y5HYEDL4 | net | lv_vein_course | 0.75": "median 3.0, range 2.0-4.0 (n 3)",
+  "Y5HYEDL4 | net | lv_vein_course | 0.9": "median 2.0, range 2.0-3.0 (n 3)",
+  "Y5HYEDL4 | net | rv_free_wall | 0.1": "median 1.0, range 1.0-2.0 (n 9)",
+  "Y5HYEDL4 | net | rv_free_wall | 0.5": "median 5.0, range 2.0-13.0 (n 9)",
+  "Y5HYEDL4 | net | rv_free_wall | 0.75": "median 2.0, range 1.0-2.0 (n 9)",
+  "Y5HYEDL4 | net | rv_free_wall | 0.9": "median 1.0, range 1.0-2.0 (n 9)",
+  "Y5HYEDL4 | net | rvot | 0.1": "median 2.0, range 2.0-2.0 (n 2)",
+  "Y5HYEDL4 | net | rvot | 0.5": "median 6.0, range 3.0-9.0 (n 2)",
+  "Y5HYEDL4 | net | rvot | 0.75": "median 2.0, range 2.0-2.0 (n 2)",
+  "Y5HYEDL4 | net | rvot | 0.9": "median 2.0, range 2.0-2.0 (n 2)",
+  "Y5HYEDL4 | nonet | aortic_cusp | 0.1": "median 2.5, range 2.0-3.0 (n 2)",
+  "Y5HYEDL4 | nonet | aortic_cusp | 0.5": "median 2.5, range 2.0-3.0 (n 2)",
+  "Y5HYEDL4 | nonet | aortic_cusp | 0.75": "median 2.5, range 2.0-3.0 (n 2)",
+  "Y5HYEDL4 | nonet | aortic_cusp | 0.9": "median 2.5, range 2.0-3.0 (n 2)",
+  "Y5HYEDL4 | nonet | lv_free_wall | 0.1": "median 2.0, range 2.0-3.0 (n 10)",
+  "Y5HYEDL4 | nonet | lv_free_wall | 0.5": "median 7.0, range 5.0-14.0 (n 10)",
+  "Y5HYEDL4 | nonet | lv_free_wall | 0.75": "median 3.0, range 2.0-4.0 (n 10)",
+  "Y5HYEDL4 | nonet | lv_free_wall | 0.9": "median 2.0, range 2.0-3.0 (n 10)",
+  "Y5HYEDL4 | nonet | lv_septum | 0.1": "median 2.0, range 2.0-2.0 (n 8)",
+  "Y5HYEDL4 | nonet | lv_septum | 0.5": "median 6.0, range 4.0-7.0 (n 8)",
+  "Y5HYEDL4 | nonet | lv_septum | 0.75": "median 2.0, range 2.0-3.0 (n 8)",
+  "Y5HYEDL4 | nonet | lv_septum | 0.9": "median 2.0, range 2.0-2.0 (n 8)",
+  "Y5HYEDL4 | nonet | lv_summit | 0.1": "median 2.0, range 2.0-2.0 (n 2)",
+  "Y5HYEDL4 | nonet | lv_summit | 0.5": "median 5.0, range 5.0-5.0 (n 2)",
+  "Y5HYEDL4 | nonet | lv_summit | 0.75": "median 3.5, range 3.0-4.0 (n 2)",
+  "Y5HYEDL4 | nonet | lv_summit | 0.9": "median 2.0, range 2.0-2.0 (n 2)",
+  "Y5HYEDL4 | nonet | lv_vein_course | 0.1": "median 2.0, range 2.0-2.0 (n 3)",
+  "Y5HYEDL4 | nonet | lv_vein_course | 0.5": "median 3.0, range 2.0-7.0 (n 3)",
+  "Y5HYEDL4 | nonet | lv_vein_course | 0.75": "median 3.0, range 2.0-4.0 (n 3)",
+  "Y5HYEDL4 | nonet | lv_vein_course | 0.9": "median 2.0, range 2.0-3.0 (n 3)",
+  "Y5HYEDL4 | nonet | rv_free_wall | 0.1": "median 1.0, range 1.0-2.0 (n 9)",
+  "Y5HYEDL4 | nonet | rv_free_wall | 0.5": "median 6.0, range 2.0-15.0 (n 9)",
+  "Y5HYEDL4 | nonet | rv_free_wall | 0.75": "median 2.0, range 1.0-2.0 (n 9)",
+  "Y5HYEDL4 | nonet | rv_free_wall | 0.9": "median 1.0, range 1.0-2.0 (n 9)",
+  "Y5HYEDL4 | nonet | rvot | 0.1": "median 2.0, range 2.0-2.0 (n 2)",
+  "Y5HYEDL4 | nonet | rvot | 0.5": "median 6.0, range 3.0-9.0 (n 2)",
+  "Y5HYEDL4 | nonet | rvot | 0.75": "median 2.0, range 2.0-2.0 (n 2)",
+  "Y5HYEDL4 | nonet | rvot | 0.9": "median 2.0, range 2.0-2.0 (n 2)"
+ },
+ "summit / cusp sites with a changed Q ratio, R/S V1 or Santangeli no-q-V1": [
+  "true | Y5HYEDL4 | net | aortic_cusp_rcc_z_d10 | q_ratio_avl_avr: 7.067777727390593 -> 0.0",
+  "true | Y5HYEDL4 | net | aortic_cusp_rcc_z_d50 | q_ratio_avl_avr: 6.001931460813442 -> 0.0",
+  "true | Y5HYEDL4 | net | aortic_cusp_rcc_z_d75 | q_ratio_avl_avr: 7.143352927230327 -> 0.0",
+  "true | Y5HYEDL4 | net | aortic_cusp_rcc_z_d90 | q_ratio_avl_avr: 5.1348421917450455 -> 0.0",
+  "true | Y5HYEDL4 | net | lv_summit_inferior_lateral_z_d90 | q_ratio_avl_avr: 0.09624660906799624 -> inf",
+  "true | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d10 | q_ratio_avl_avr: 0.9572471889433322 -> 0.0",
+  "true | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d10 | santangeli2015_no_q_v1: False -> True",
+  "true | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d50 | q_ratio_avl_avr: 1.0068106326971484 -> 0.0",
+  "true | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d50 | santangeli2015_no_q_v1: False -> True",
+  "true | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d75 | q_ratio_avl_avr: 0.9927696019623088 -> 0.0",
+  "true | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d75 | santangeli2015_no_q_v1: False -> True",
+  "true | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d90 | q_ratio_avl_avr: 1.068450582754399 -> 0.0",
+  "true | Y5HYEDL4 | nonet | lv_summit_superior_z_d10 | q_ratio_avl_avr: 0.0 -> nan",
+  "true | Y5HYEDL4 | nonet | lv_summit_superior_z_d50 | q_ratio_avl_avr: 3.4706842033987093 -> nan",
+  "true | Y5HYEDL4 | nonet | lv_summit_superior_z_d75 | q_ratio_avl_avr: 3.291335149037932 -> inf",
+  "true | Y5HYEDL4 | nonet | lv_summit_superior_z_d90 | q_ratio_avl_avr: 3.299659742797325 -> inf",
+  "true | Y5HYEDL4 | nonet | lv_summit_inferior_lateral_z_d50 | q_ratio_avl_avr: inf -> nan",
+  "true | 6G8DD8S5 | net | aortic_cusp_lcc_z_d10 | q_ratio_avl_avr: inf -> nan",
+  "true | 6G8DD8S5 | net | aortic_cusp_lcc_z_d75 | q_ratio_avl_avr: inf -> nan",
+  "true | 6G8DD8S5 | net | aortic_cusp_lcc_z_d90 | q_ratio_avl_avr: 0.0 -> nan",
+  "true | 6G8DD8S5 | net | lv_summit_inferior_lateral_z_d50 | q_ratio_avl_avr: 0.0 -> nan",
+  "true | 6G8DD8S5 | net | lv_summit_inferior_lateral_z_d75 | q_ratio_avl_avr: 0.08456006320279434 -> inf",
+  "true | 7D98EVAR | net | aortic_cusp_rcc_z_d10 | q_ratio_avl_avr: inf -> nan",
+  "true | 7D98EVAR | net | aortic_cusp_rcc_z_d50 | q_ratio_avl_avr: inf -> nan",
+  "true | 7D98EVAR | net | aortic_cusp_rcc_z_d75 | q_ratio_avl_avr: inf -> nan",
+  "true | 7D98EVAR | net | aortic_cusp_rcc_z_d90 | q_ratio_avl_avr: inf -> nan",
+  "true | 7D98EVAR | net | aortic_cusp_lcc_z_d50 | q_ratio_avl_avr: 0.0 -> nan",
+  "true | 7D98EVAR | net | aortic_cusp_lcc_z_d75 | q_ratio_avl_avr: 0.0 -> nan",
+  "true | 7D98EVAR | net | aortic_cusp_lcc_z_d90 | q_ratio_avl_avr: 0.0 -> nan",
+  "true | 7D98EVAR | net | lv_summit_inferior_lateral_z_d50 | q_ratio_avl_avr: 0.0 -> nan",
+  "true | 7D98EVAR | net | lv_summit_inferior_lateral_z_d75 | q_ratio_avl_avr: 0.0 -> nan",
+  "true | 7D98EVAR | net | lv_summit_inferior_lateral_z_d90 | q_ratio_avl_avr: 0.0 -> nan",
+  "stim | Y5HYEDL4 | net | aortic_cusp_rcc_z_d10 | q_ratio_avl_avr: 7.067777727390593 -> 0.0",
+  "stim | Y5HYEDL4 | net | aortic_cusp_rcc_z_d50 | q_ratio_avl_avr: 6.001931460813442 -> 0.0",
+  "stim | Y5HYEDL4 | net | aortic_cusp_rcc_z_d75 | q_ratio_avl_avr: 7.143352927230327 -> 0.0",
+  "stim | Y5HYEDL4 | net | aortic_cusp_rcc_z_d90 | q_ratio_avl_avr: 5.1348421917450455 -> 0.0",
+  "stim | Y5HYEDL4 | net | lv_summit_inferior_lateral_z_d90 | q_ratio_avl_avr: 0.09624660906799624 -> inf",
+  "stim | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d10 | q_ratio_avl_avr: 0.9572471889433322 -> 0.0",
+  "stim | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d10 | santangeli2015_no_q_v1: False -> True",
+  "stim | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d50 | q_ratio_avl_avr: 1.0068106326971484 -> 0.0",
+  "stim | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d50 | santangeli2015_no_q_v1: False -> True",
+  "stim | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d75 | q_ratio_avl_avr: 0.9927696019623088 -> 0.0",
+  "stim | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d75 | santangeli2015_no_q_v1: False -> True",
+  "stim | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d90 | q_ratio_avl_avr: 1.068450582754399 -> 0.0",
+  "stim | Y5HYEDL4 | nonet | lv_summit_superior_z_d10 | q_ratio_avl_avr: 0.0 -> nan",
+  "stim | Y5HYEDL4 | nonet | lv_summit_superior_z_d50 | q_ratio_avl_avr: 3.4706842033987093 -> nan",
+  "stim | Y5HYEDL4 | nonet | lv_summit_superior_z_d75 | q_ratio_avl_avr: 3.291335149037932 -> inf",
+  "stim | Y5HYEDL4 | nonet | lv_summit_superior_z_d90 | q_ratio_avl_avr: 3.299659742797325 -> inf",
+  "stim | Y5HYEDL4 | nonet | lv_summit_inferior_lateral_z_d50 | q_ratio_avl_avr: inf -> nan",
+  "stim | 6G8DD8S5 | net | aortic_cusp_lcc_z_d10 | q_ratio_avl_avr: inf -> nan",
+  "stim | 6G8DD8S5 | net | aortic_cusp_lcc_z_d75 | q_ratio_avl_avr: inf -> nan",
+  "stim | 6G8DD8S5 | net | aortic_cusp_lcc_z_d90 | q_ratio_avl_avr: 0.0 -> nan",
+  "stim | 6G8DD8S5 | net | lv_summit_inferior_lateral_z_d50 | q_ratio_avl_avr: 0.0 -> nan",
+  "stim | 6G8DD8S5 | net | lv_summit_inferior_lateral_z_d75 | q_ratio_avl_avr: 0.08456006320279434 -> inf",
+  "stim | 7D98EVAR | net | aortic_cusp_rcc_z_d10 | q_ratio_avl_avr: inf -> nan",
+  "stim | 7D98EVAR | net | aortic_cusp_rcc_z_d50 | q_ratio_avl_avr: inf -> nan",
+  "stim | 7D98EVAR | net | aortic_cusp_rcc_z_d75 | q_ratio_avl_avr: inf -> nan",
+  "stim | 7D98EVAR | net | aortic_cusp_rcc_z_d90 | q_ratio_avl_avr: inf -> nan",
+  "stim | 7D98EVAR | net | aortic_cusp_lcc_z_d50 | q_ratio_avl_avr: 0.0 -> nan",
+  "stim | 7D98EVAR | net | aortic_cusp_lcc_z_d75 | q_ratio_avl_avr: 0.0 -> nan",
+  "stim | 7D98EVAR | net | aortic_cusp_lcc_z_d90 | q_ratio_avl_avr: 0.0 -> nan",
+  "stim | 7D98EVAR | net | lv_summit_inferior_lateral_z_d50 | q_ratio_avl_avr: 0.0 -> nan",
+  "stim | 7D98EVAR | net | lv_summit_inferior_lateral_z_d75 | q_ratio_avl_avr: 0.0 -> nan",
+  "stim | 7D98EVAR | net | lv_summit_inferior_lateral_z_d90 | q_ratio_avl_avr: 0.0 -> nan",
+  "detected | Y5HYEDL4 | net | aortic_cusp_rcc_z_d10 | q_ratio_avl_avr: 7.067777727390593 -> 0.0",
+  "detected | Y5HYEDL4 | net | aortic_cusp_rcc_z_d50 | q_ratio_avl_avr: 6.001931460813442 -> 0.0",
+  "detected | Y5HYEDL4 | net | aortic_cusp_rcc_z_d75 | q_ratio_avl_avr: 7.143352927230327 -> 0.0",
+  "detected | Y5HYEDL4 | net | aortic_cusp_rcc_z_d90 | q_ratio_avl_avr: 5.1348421917450455 -> 0.0",
+  "detected | Y5HYEDL4 | net | lv_summit_inferior_lateral_z_d90 | q_ratio_avl_avr: 0.09624660906799624 -> inf",
+  "detected | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d10 | q_ratio_avl_avr: 0.9572471889433322 -> 0.0",
+  "detected | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d10 | santangeli2015_no_q_v1: False -> True",
+  "detected | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d50 | q_ratio_avl_avr: 1.0068106326971484 -> 0.0",
+  "detected | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d50 | santangeli2015_no_q_v1: False -> True",
+  "detected | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d75 | q_ratio_avl_avr: 0.9927696019623088 -> 0.0",
+  "detected | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d75 | santangeli2015_no_q_v1: False -> True",
+  "detected | Y5HYEDL4 | nonet | aortic_cusp_rcc_z_d90 | q_ratio_avl_avr: 1.068450582754399 -> 0.0",
+  "detected | Y5HYEDL4 | nonet | lv_summit_superior_z_d10 | q_ratio_avl_avr: 0.0 -> nan",
+  "detected | Y5HYEDL4 | nonet | lv_summit_superior_z_d50 | q_ratio_avl_avr: 3.4706842033987093 -> nan",
+  "detected | Y5HYEDL4 | nonet | lv_summit_superior_z_d75 | q_ratio_avl_avr: 3.291335149037932 -> inf",
+  "detected | Y5HYEDL4 | nonet | lv_summit_superior_z_d90 | q_ratio_avl_avr: 3.299659742797325 -> inf",
+  "detected | Y5HYEDL4 | nonet | lv_summit_inferior_lateral_z_d50 | q_ratio_avl_avr: inf -> nan",
+  "detected | 6G8DD8S5 | net | aortic_cusp_lcc_z_d10 | q_ratio_avl_avr: inf -> nan",
+  "detected | 6G8DD8S5 | net | aortic_cusp_lcc_z_d75 | q_ratio_avl_avr: inf -> nan",
+  "detected | 6G8DD8S5 | net | aortic_cusp_lcc_z_d90 | q_ratio_avl_avr: 0.0 -> nan",
+  "detected | 6G8DD8S5 | net | lv_summit_inferior_lateral_z_d50 | q_ratio_avl_avr: 0.0 -> nan",
+  "detected | 6G8DD8S5 | net | lv_summit_inferior_lateral_z_d75 | q_ratio_avl_avr: 0.08456006320279434 -> inf",
+  "detected | 7D98EVAR | net | aortic_cusp_rcc_z_d10 | q_ratio_avl_avr: inf -> nan",
+  "detected | 7D98EVAR | net | aortic_cusp_rcc_z_d50 | q_ratio_avl_avr: inf -> nan",
+  "detected | 7D98EVAR | net | aortic_cusp_rcc_z_d75 | q_ratio_avl_avr: inf -> nan",
+  "detected | 7D98EVAR | net | aortic_cusp_rcc_z_d90 | q_ratio_avl_avr: inf -> nan",
+  "detected | 7D98EVAR | net | aortic_cusp_lcc_z_d50 | q_ratio_avl_avr: 0.0 -> nan",
+  "detected | 7D98EVAR | net | aortic_cusp_lcc_z_d75 | q_ratio_avl_avr: 0.0 -> nan",
+  "detected | 7D98EVAR | net | aortic_cusp_lcc_z_d90 | q_ratio_avl_avr: 0.0 -> nan",
+  "detected | 7D98EVAR | net | lv_summit_inferior_lateral_z_d50 | q_ratio_avl_avr: 0.0 -> nan",
+  "detected | 7D98EVAR | net | lv_summit_inferior_lateral_z_d75 | q_ratio_avl_avr: 0.0 -> nan",
+  "detected | 7D98EVAR | net | lv_summit_inferior_lateral_z_d90 | q_ratio_avl_avr: 0.0 -> nan"
+ ],
+ "leads with polarity 0 (neither q nor initial r), clean ECG": {
+  "true | 030": {
+   "I": 0,
+   "II": 0,
+   "III": 0,
+   "aVR": 0,
+   "aVL": 0,
+   "aVF": 0,
+   "V1": 0,
+   "V2": 0,
+   "V3": 0,
+   "V4": 0,
+   "V5": 0,
+   "V6": 0,
+   "beats": 579
+  },
+  "true | window_only": {
+   "I": 113,
+   "II": 100,
+   "III": 75,
+   "aVR": 147,
+   "aVL": 97,
+   "aVF": 83,
+   "V1": 40,
+   "V2": 26,
+   "V3": 67,
+   "V4": 72,
+   "V5": 82,
+   "V6": 101,
+   "beats": 579
+  },
+  "true | N20": {
+   "I": 233,
+   "II": 253,
+   "III": 182,
+   "aVR": 289,
+   "aVL": 205,
+   "aVF": 231,
+   "V1": 162,
+   "V2": 123,
+   "V3": 226,
+   "V4": 225,
+   "V5": 235,
+   "V6": 239,
+   "beats": 579
+  },
+  "true | primary": {
+   "I": 111,
+   "II": 105,
+   "III": 106,
+   "aVR": 136,
+   "aVL": 110,
+   "aVF": 113,
+   "V1": 81,
+   "V2": 73,
+   "V3": 99,
+   "V4": 102,
+   "V5": 98,
+   "V6": 108,
+   "beats": 579
+  },
+  "stim | 030": {
+   "I": 0,
+   "II": 0,
+   "III": 0,
+   "aVR": 0,
+   "aVL": 0,
+   "aVF": 0,
+   "V1": 0,
+   "V2": 0,
+   "V3": 0,
+   "V4": 0,
+   "V5": 0,
+   "V6": 0,
+   "beats": 579
+  },
+  "stim | window_only": {
+   "I": 113,
+   "II": 100,
+   "III": 75,
+   "aVR": 147,
+   "aVL": 97,
+   "aVF": 83,
+   "V1": 40,
+   "V2": 26,
+   "V3": 67,
+   "V4": 72,
+   "V5": 82,
+   "V6": 101,
+   "beats": 579
+  },
+  "stim | N20": {
+   "I": 233,
+   "II": 253,
+   "III": 182,
+   "aVR": 289,
+   "aVL": 205,
+   "aVF": 231,
+   "V1": 162,
+   "V2": 123,
+   "V3": 226,
+   "V4": 225,
+   "V5": 235,
+   "V6": 239,
+   "beats": 579
+  },
+  "stim | primary": {
+   "I": 111,
+   "II": 105,
+   "III": 106,
+   "aVR": 136,
+   "aVL": 110,
+   "aVF": 113,
+   "V1": 81,
+   "V2": 73,
+   "V3": 99,
+   "V4": 102,
+   "V5": 98,
+   "V6": 108,
+   "beats": 579
+  },
+  "detected | 030": {
+   "I": 0,
+   "II": 0,
+   "III": 0,
+   "aVR": 0,
+   "aVL": 0,
+   "aVF": 0,
+   "V1": 0,
+   "V2": 0,
+   "V3": 0,
+   "V4": 0,
+   "V5": 0,
+   "V6": 0,
+   "beats": 579
+  },
+  "detected | window_only": {
+   "I": 113,
+   "II": 100,
+   "III": 75,
+   "aVR": 147,
+   "aVL": 97,
+   "aVF": 83,
+   "V1": 40,
+   "V2": 26,
+   "V3": 67,
+   "V4": 72,
+   "V5": 82,
+   "V6": 101,
+   "beats": 579
+  },
+  "detected | N20": {
+   "I": 233,
+   "II": 253,
+   "III": 182,
+   "aVR": 289,
+   "aVL": 205,
+   "aVF": 231,
+   "V1": 162,
+   "V2": 123,
+   "V3": 226,
+   "V4": 225,
+   "V5": 235,
+   "V6": 239,
+   "beats": 579
+  },
+  "detected | primary": {
+   "I": 111,
+   "II": 105,
+   "III": 106,
+   "aVR": 136,
+   "aVL": 110,
+   "aVF": 113,
+   "V1": 81,
+   "V2": 73,
+   "V3": 99,
+   "V4": 102,
+   "V5": 98,
+   "V6": 108,
+   "beats": 579
+  }
+ },
+ "per_site.csv": {
+  "rows": 2316,
+  "bytes": 541651
+ },
+ "unscorable": {
+  "rows": 0,
+  "note": "0 unscorable, none left out"
+ },
+ "input": {
+  "file": "runs/v51_2026-10-15/10_conductor_sens/rules/per_measurement.csv",
+  "sha256": "4a025825c524c96009195003fd87805b07efc4a68ce61b4d4bcbab9ec82c930e"
+ }
+}

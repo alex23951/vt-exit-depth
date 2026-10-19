@@ -1,0 +1,57 @@
+{
+ "run": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/10_conductor_sens/6G8DD8S5/leadfield_sens",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/6G8DD8S5/torso/full_nofast_blood_v51",
+ "sigma_S_m": {
+  "fibre": {
+   "gi": 0.174,
+   "ge": 0.625
+  },
+  "sheet": {
+   "gi": 0.028661983488277355,
+   "ge": 0.236
+  },
+  "normal": {
+   "gi": 0.05210762656998577,
+   "ge": 0.236
+  }
+ },
+ "g_blood": 0.7,
+ "g_torso": 0.2,
+ "np": 2,
+ "started": "2026-10-19 20:09:23",
+ "parts": {
+  "limb": {
+   "wall_s": 126,
+   "peak_used_mb": 5755,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "v13": {
+   "wall_s": 128,
+   "peak_used_mb": 5918,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "v46": {
+   "wall_s": 128,
+   "peak_used_mb": 5938,
+   "watchdog_killed": false,
+   "returncode": 0
+  }
+ },
+ "lf_files": [
+  "LF_I.igb",
+  "LF_II.igb",
+  "LF_III.igb",
+  "LF_V1.igb",
+  "LF_V2.igb",
+  "LF_V3.igb",
+  "LF_V4.igb",
+  "LF_V5.igb",
+  "LF_V6.igb",
+  "LF_aVF.igb",
+  "LF_aVL.igb",
+  "LF_aVR.igb"
+ ],
+ "finished": "2026-10-19 20:15:45"
+}

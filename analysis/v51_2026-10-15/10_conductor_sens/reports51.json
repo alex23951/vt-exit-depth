@@ -1,0 +1,521 @@
+{
+ "A9": {
+  "Y5HYEDL4": {
+   "network rvot_septal_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 147,
+    "length_mm": 13.3,
+    "width_mm": 9.1,
+    "ratio": 1.45,
+    "area_mm2": 103.7
+   },
+   "network rvot_septal_z_d50": {
+    "earliest_rv_endo_ms": 2.1,
+    "nodes": 181,
+    "length_mm": 11.1,
+    "width_mm": 10.9,
+    "ratio": 1.02,
+    "area_mm2": 126.6
+   },
+   "network rvot_septal_z_d75": {
+    "earliest_rv_endo_ms": 3.5,
+    "nodes": 233,
+    "length_mm": 15.1,
+    "width_mm": 13.1,
+    "ratio": 1.15,
+    "area_mm2": 159.7
+   },
+   "network rvot_septal_z_d90": {
+    "earliest_rv_endo_ms": 3.5,
+    "nodes": 226,
+    "length_mm": 12.4,
+    "width_mm": 13.2,
+    "ratio": 0.94,
+    "area_mm2": 157.1
+   },
+   "network rvot_free_wall_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 161,
+    "length_mm": 13.3,
+    "width_mm": 11.8,
+    "ratio": 1.13,
+    "area_mm2": 110.5
+   },
+   "network rvot_free_wall_z_d50": {
+    "earliest_rv_endo_ms": 3.4,
+    "nodes": 222,
+    "length_mm": 14.8,
+    "width_mm": 13.1,
+    "ratio": 1.13,
+    "area_mm2": 153.1
+   },
+   "network rvot_free_wall_z_d75": {
+    "earliest_rv_endo_ms": 5.3,
+    "nodes": 262,
+    "length_mm": 15.5,
+    "width_mm": 14.3,
+    "ratio": 1.08,
+    "area_mm2": 179.5
+   },
+   "network rvot_free_wall_z_d90": {
+    "earliest_rv_endo_ms": 7.1,
+    "nodes": 308,
+    "length_mm": 16.8,
+    "width_mm": 15.8,
+    "ratio": 1.06,
+    "area_mm2": 212.5
+   },
+   "tissue_only rvot_septal_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 147,
+    "length_mm": 13.3,
+    "width_mm": 9.1,
+    "ratio": 1.45,
+    "area_mm2": 103.7
+   },
+   "tissue_only rvot_septal_z_d50": {
+    "earliest_rv_endo_ms": 2.1,
+    "nodes": 181,
+    "length_mm": 11.1,
+    "width_mm": 10.9,
+    "ratio": 1.02,
+    "area_mm2": 126.6
+   },
+   "tissue_only rvot_septal_z_d75": {
+    "earliest_rv_endo_ms": 3.5,
+    "nodes": 233,
+    "length_mm": 15.1,
+    "width_mm": 13.1,
+    "ratio": 1.15,
+    "area_mm2": 159.7
+   },
+   "tissue_only rvot_septal_z_d90": {
+    "earliest_rv_endo_ms": 3.5,
+    "nodes": 226,
+    "length_mm": 12.4,
+    "width_mm": 13.2,
+    "ratio": 0.94,
+    "area_mm2": 157.1
+   },
+   "tissue_only rvot_free_wall_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 149,
+    "length_mm": 12.7,
+    "width_mm": 9.5,
+    "ratio": 1.33,
+    "area_mm2": 102.2
+   },
+   "tissue_only rvot_free_wall_z_d50": {
+    "earliest_rv_endo_ms": 3.4,
+    "nodes": 219,
+    "length_mm": 14.5,
+    "width_mm": 13.1,
+    "ratio": 1.11,
+    "area_mm2": 151.3
+   },
+   "tissue_only rvot_free_wall_z_d75": {
+    "earliest_rv_endo_ms": 5.3,
+    "nodes": 260,
+    "length_mm": 15.2,
+    "width_mm": 14.3,
+    "ratio": 1.06,
+    "area_mm2": 178.2
+   },
+   "tissue_only rvot_free_wall_z_d90": {
+    "earliest_rv_endo_ms": 7.1,
+    "nodes": 306,
+    "length_mm": 16.8,
+    "width_mm": 15.8,
+    "ratio": 1.06,
+    "area_mm2": 210.9
+   }
+  },
+  "6G8DD8S5": {
+   "network rvot_septal_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 119,
+    "length_mm": 7.4,
+    "width_mm": 10.6,
+    "ratio": 0.7,
+    "area_mm2": 79.6
+   },
+   "network rvot_septal_z_d50": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 116,
+    "length_mm": 8.0,
+    "width_mm": 10.6,
+    "ratio": 0.76,
+    "area_mm2": 77.1
+   },
+   "network rvot_septal_z_d75": {
+    "earliest_rv_endo_ms": 3.1,
+    "nodes": 174,
+    "length_mm": 10.5,
+    "width_mm": 12.7,
+    "ratio": 0.82,
+    "area_mm2": 116.9
+   },
+   "network rvot_septal_z_d90": {
+    "earliest_rv_endo_ms": 2.9,
+    "nodes": 180,
+    "length_mm": 10.4,
+    "width_mm": 11.9,
+    "ratio": 0.87,
+    "area_mm2": 121.9
+   },
+   "network rvot_free_wall_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 120,
+    "length_mm": 12.5,
+    "width_mm": 7.8,
+    "ratio": 1.59,
+    "area_mm2": 79.0
+   },
+   "network rvot_free_wall_z_d50": {
+    "earliest_rv_endo_ms": 2.8,
+    "nodes": 161,
+    "length_mm": 14.1,
+    "width_mm": 10.8,
+    "ratio": 1.31,
+    "area_mm2": 106.6
+   },
+   "network rvot_free_wall_z_d75": {
+    "earliest_rv_endo_ms": 7.6,
+    "nodes": 241,
+    "length_mm": 15.0,
+    "width_mm": 13.1,
+    "ratio": 1.14,
+    "area_mm2": 158.1
+   },
+   "network rvot_free_wall_z_d90": {
+    "earliest_rv_endo_ms": 9.5,
+    "nodes": 272,
+    "length_mm": 15.8,
+    "width_mm": 15.0,
+    "ratio": 1.06,
+    "area_mm2": 178.3
+   },
+   "tissue_only rvot_septal_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 119,
+    "length_mm": 7.4,
+    "width_mm": 10.6,
+    "ratio": 0.7,
+    "area_mm2": 79.6
+   },
+   "tissue_only rvot_septal_z_d50": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 116,
+    "length_mm": 8.0,
+    "width_mm": 10.6,
+    "ratio": 0.76,
+    "area_mm2": 77.1
+   },
+   "tissue_only rvot_septal_z_d75": {
+    "earliest_rv_endo_ms": 3.1,
+    "nodes": 174,
+    "length_mm": 10.5,
+    "width_mm": 12.7,
+    "ratio": 0.82,
+    "area_mm2": 116.9
+   },
+   "tissue_only rvot_septal_z_d90": {
+    "earliest_rv_endo_ms": 2.9,
+    "nodes": 180,
+    "length_mm": 10.4,
+    "width_mm": 11.9,
+    "ratio": 0.87,
+    "area_mm2": 121.9
+   },
+   "tissue_only rvot_free_wall_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 120,
+    "length_mm": 12.5,
+    "width_mm": 7.8,
+    "ratio": 1.59,
+    "area_mm2": 79.0
+   },
+   "tissue_only rvot_free_wall_z_d50": {
+    "earliest_rv_endo_ms": 2.8,
+    "nodes": 161,
+    "length_mm": 14.1,
+    "width_mm": 10.8,
+    "ratio": 1.31,
+    "area_mm2": 106.6
+   },
+   "tissue_only rvot_free_wall_z_d75": {
+    "earliest_rv_endo_ms": 7.6,
+    "nodes": 241,
+    "length_mm": 15.0,
+    "width_mm": 13.1,
+    "ratio": 1.14,
+    "area_mm2": 158.1
+   },
+   "tissue_only rvot_free_wall_z_d90": {
+    "earliest_rv_endo_ms": 9.5,
+    "nodes": 272,
+    "length_mm": 15.8,
+    "width_mm": 15.0,
+    "ratio": 1.06,
+    "area_mm2": 178.3
+   }
+  },
+  "7D98EVAR": {
+   "network rvot_septal_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 114,
+    "length_mm": 12.8,
+    "width_mm": 7.0,
+    "ratio": 1.82,
+    "area_mm2": 79.9
+   },
+   "network rvot_septal_z_d50": {
+    "earliest_rv_endo_ms": 2.3,
+    "nodes": 156,
+    "length_mm": 13.6,
+    "width_mm": 9.7,
+    "ratio": 1.4,
+    "area_mm2": 109.3
+   },
+   "network rvot_septal_z_d75": {
+    "earliest_rv_endo_ms": 4.5,
+    "nodes": 198,
+    "length_mm": 14.0,
+    "width_mm": 12.2,
+    "ratio": 1.14,
+    "area_mm2": 136.7
+   },
+   "network rvot_septal_z_d90": {
+    "earliest_rv_endo_ms": 3.0,
+    "nodes": 144,
+    "length_mm": 13.0,
+    "width_mm": 9.9,
+    "ratio": 1.31,
+    "area_mm2": 100.5
+   },
+   "network rvot_free_wall_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 125,
+    "length_mm": 13.2,
+    "width_mm": 8.8,
+    "ratio": 1.5,
+    "area_mm2": 86.0
+   },
+   "network rvot_free_wall_z_d50": {
+    "earliest_rv_endo_ms": 5.9,
+    "nodes": 195,
+    "length_mm": 14.5,
+    "width_mm": 12.6,
+    "ratio": 1.14,
+    "area_mm2": 134.8
+   },
+   "network rvot_free_wall_z_d75": {
+    "earliest_rv_endo_ms": 8.5,
+    "nodes": 239,
+    "length_mm": 15.5,
+    "width_mm": 14.9,
+    "ratio": 1.04,
+    "area_mm2": 165.5
+   },
+   "network rvot_free_wall_z_d90": {
+    "earliest_rv_endo_ms": 9.9,
+    "nodes": 257,
+    "length_mm": 15.5,
+    "width_mm": 15.2,
+    "ratio": 1.01,
+    "area_mm2": 177.7
+   },
+   "tissue_only rvot_septal_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 114,
+    "length_mm": 12.8,
+    "width_mm": 7.0,
+    "ratio": 1.82,
+    "area_mm2": 79.9
+   },
+   "tissue_only rvot_septal_z_d50": {
+    "earliest_rv_endo_ms": 2.3,
+    "nodes": 156,
+    "length_mm": 13.6,
+    "width_mm": 9.7,
+    "ratio": 1.4,
+    "area_mm2": 109.3
+   },
+   "tissue_only rvot_septal_z_d75": {
+    "earliest_rv_endo_ms": 4.5,
+    "nodes": 198,
+    "length_mm": 14.0,
+    "width_mm": 12.2,
+    "ratio": 1.14,
+    "area_mm2": 136.7
+   },
+   "tissue_only rvot_septal_z_d90": {
+    "earliest_rv_endo_ms": 3.0,
+    "nodes": 144,
+    "length_mm": 13.0,
+    "width_mm": 9.9,
+    "ratio": 1.31,
+    "area_mm2": 100.5
+   },
+   "tissue_only rvot_free_wall_z_d10": {
+    "earliest_rv_endo_ms": 0.0,
+    "nodes": 125,
+    "length_mm": 13.2,
+    "width_mm": 8.8,
+    "ratio": 1.5,
+    "area_mm2": 86.0
+   },
+   "tissue_only rvot_free_wall_z_d50": {
+    "earliest_rv_endo_ms": 5.9,
+    "nodes": 195,
+    "length_mm": 14.5,
+    "width_mm": 12.6,
+    "ratio": 1.14,
+    "area_mm2": 134.8
+   },
+   "tissue_only rvot_free_wall_z_d75": {
+    "earliest_rv_endo_ms": 8.5,
+    "nodes": 239,
+    "length_mm": 15.5,
+    "width_mm": 14.9,
+    "ratio": 1.04,
+    "area_mm2": 165.5
+   },
+   "tissue_only rvot_free_wall_z_d90": {
+    "earliest_rv_endo_ms": 9.9,
+    "nodes": 257,
+    "length_mm": 15.5,
+    "width_mm": 15.2,
+    "ratio": 1.01,
+    "area_mm2": 177.7
+   }
+  }
+ },
+ "LBBB": {
+  "Y5HYEDL4": {
+   "qrs_detected_any_lead_ms_clean": 75.0,
+   "V1_R_S_mV": [
+    2.891,
+    2.736
+   ],
+   "V1_QS_or_rS": false,
+   "V2_R_S_mV": [
+    3.978,
+    2.903
+   ],
+   "V2_QS_or_rS": false,
+   "notches_per_lead": {
+    "V1": 1,
+    "V2": 1,
+    "V5": 0,
+    "V6": 0,
+    "I": 0,
+    "aVL": 1
+   },
+   "strauss_notching_in_ge2_leads": true,
+   "strauss_qrs_ge_140_men": false,
+   "strauss_qrs_ge_130_women": false,
+   "aha_no_q_in_I_V5_V6": false,
+   "aha_R_peak_time_V5_V6_ms": [
+    40,
+    41
+   ],
+   "aha_R_peak_time_gt_60": false,
+   "aha_qrs_ge_120": false,
+   "aha_notched_R_I_aVL_V5_V6": {
+    "I": 0,
+    "aVL": 1,
+    "V5": 0,
+    "V6": 0
+   }
+  },
+  "6G8DD8S5": {
+   "qrs_detected_any_lead_ms_clean": 123.0,
+   "V1_R_S_mV": [
+    0.513,
+    1.54
+   ],
+   "V1_QS_or_rS": false,
+   "V2_R_S_mV": [
+    0.481,
+    2.174
+   ],
+   "V2_QS_or_rS": true,
+   "notches_per_lead": {
+    "V1": 1,
+    "V2": 1,
+    "V5": 1,
+    "V6": 1,
+    "I": 1,
+    "aVL": 1
+   },
+   "strauss_notching_in_ge2_leads": true,
+   "strauss_qrs_ge_140_men": false,
+   "strauss_qrs_ge_130_women": false,
+   "aha_no_q_in_I_V5_V6": true,
+   "aha_R_peak_time_V5_V6_ms": [
+    64,
+    67
+   ],
+   "aha_R_peak_time_gt_60": true,
+   "aha_qrs_ge_120": true,
+   "aha_notched_R_I_aVL_V5_V6": {
+    "I": 1,
+    "aVL": 1,
+    "V5": 1,
+    "V6": 1
+   }
+  },
+  "7D98EVAR": {
+   "qrs_detected_any_lead_ms_clean": 72.0,
+   "V1_R_S_mV": [
+    1.25,
+    1.089
+   ],
+   "V1_QS_or_rS": false,
+   "V2_R_S_mV": [
+    1.699,
+    1.042
+   ],
+   "V2_QS_or_rS": false,
+   "notches_per_lead": {
+    "V1": 1,
+    "V2": 0,
+    "V5": 0,
+    "V6": 0,
+    "I": 0,
+    "aVL": 1
+   },
+   "strauss_notching_in_ge2_leads": true,
+   "strauss_qrs_ge_140_men": false,
+   "strauss_qrs_ge_130_women": false,
+   "aha_no_q_in_I_V5_V6": false,
+   "aha_R_peak_time_V5_V6_ms": [
+    43,
+    45
+   ],
+   "aha_R_peak_time_gt_60": false,
+   "aha_qrs_ge_120": false,
+   "aha_notched_R_I_aVL_V5_V6": {
+    "I": 0,
+    "aVL": 1,
+    "V5": 0,
+    "V6": 0
+   }
+  }
+ },
+ "HIS_QRS": {
+  "Y5HYEDL4": {
+   "spontaneous_primary_ms": 76.5,
+   "comparators": "cohort male controls 90.3 +- 8; Mason 2007 69-109; Rijnbeek 2014 men 20-29 y 80-126"
+  },
+  "6G8DD8S5": {
+   "spontaneous_primary_ms": 123.0,
+   "comparators": "cohort male controls 90.3 +- 8; Mason 2007 69-109; Rijnbeek 2014 men 20-29 y 80-126"
+  },
+  "7D98EVAR": {
+   "spontaneous_primary_ms": 72.0,
+   "comparators": "cohort male controls 90.3 +- 8; Mason 2007 69-109; Rijnbeek 2014 men 20-29 y 80-126"
+  }
+ }
+}

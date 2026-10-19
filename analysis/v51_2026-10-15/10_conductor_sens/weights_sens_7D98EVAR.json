@@ -1,0 +1,61 @@
+{
+ "heart": "7D98EVAR",
+ "mesh": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/04_build/7D98EVAR/acceptance_c/mesh/biv51",
+ "lf_dir": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/10_conductor_sens/7D98EVAR/leadfield_sens/POSTPROC_DIR",
+ "sigma_S_m": {
+  "fibre": {
+   "gi": 0.174,
+   "ge": 0.625
+  },
+  "sheet": {
+   "gi": 0.028661983488277355,
+   "ge": 0.236
+  },
+  "normal": {
+   "gi": 0.05210762656998577,
+   "ge": 0.236
+  }
+ },
+ "C9_sigma_m_vs_openCARP": {
+  "I": {
+   "max_abs_err_mV": 1.8305580707506097e-08,
+   "ref_peak_mV": 0.0300468
+  },
+  "II": {
+   "max_abs_err_mV": 3.1299768210590884e-07,
+   "ref_peak_mV": 0.217147
+  },
+  "III": {
+   "max_abs_err_mV": 5.022234154938854e-07,
+   "ref_peak_mV": 0.247193
+  },
+  "V1": {
+   "max_abs_err_mV": 3.6291986305059254e-07,
+   "ref_peak_mV": 0.165214
+  },
+  "V2": {
+   "max_abs_err_mV": 2.4240360690930274e-07,
+   "ref_peak_mV": 0.263495
+  },
+  "V3": {
+   "max_abs_err_mV": 2.982315479294062e-07,
+   "ref_peak_mV": 0.204579
+  },
+  "V4": {
+   "max_abs_err_mV": 3.4004095378348254e-07,
+   "ref_peak_mV": 0.103463
+  },
+  "V5": {
+   "max_abs_err_mV": 2.364510795493935e-09,
+   "ref_peak_mV": 0.0971153
+  },
+  "V6": {
+   "max_abs_err_mV": 1.2984073174959754e-07,
+   "ref_peak_mV": 0.216451
+  }
+ },
+ "C9_max_abs_err_mV": 5.022234154938854e-07,
+ "C9_pass_0.0002mV": true,
+ "weights_rel_change_median": 269.68032613463083,
+ "written": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/10_conductor_sens/7D98EVAR/ecgW_sens.npz"
+}

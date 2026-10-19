@@ -1,0 +1,114 @@
+{
+ "table_A": {
+  "1": {
+   "gate": "Absolute paced QRS, summit + cusp (control)",
+   "v51_primary": "119.5",
+   "verdict": "FAIL",
+   "changed_vs_13_Oct": true,
+   "convention_dependent": true,
+   "notes": "true mode 145.0; summit / cusp 108.75 / 128.25"
+  },
+  "2a": {
+   "gate": "Relative QRS Y5HYEDL4",
+   "v51_primary": "1.0980 (CI 1.051-1.141)",
+   "verdict": "PASS",
+   "changed_vs_13_Oct": true,
+   "convention_dependent": true,
+   "notes": "true mode 1.0774"
+  },
+  "2b": {
+   "gate": "Relative QRS 6G8DD8S5",
+   "v51_primary": "1.2175 (CI 1.188-1.241)",
+   "verdict": "FAIL",
+   "changed_vs_13_Oct": true,
+   "convention_dependent": false,
+   "notes": "true mode 1.1646"
+  },
+  "2c": {
+   "gate": "Relative QRS 7D98EVAR",
+   "v51_primary": "1.1453 (CI 1.103-1.183)",
+   "verdict": "PASS",
+   "changed_vs_13_Oct": false,
+   "convention_dependent": false,
+   "notes": "true mode 1.1016"
+  },
+  "3": {
+   "gate": "Daniels order (control)",
+   "v51_primary": "0.614, 0.465, 0.696, 0.645, 0.345",
+   "verdict": "FAIL",
+   "changed_vs_13_Oct": false,
+   "convention_dependent": false,
+   "notes": "true mode 0.521, 0.424, 0.614, 0.583, 0.239"
+  },
+  "4": {
+   "gate": "Bazan 2006 RV (all)",
+   "v51_primary": "3.6 / 9.7, 3.9 / 22.5, 4.6 / 16.5",
+   "verdict": "PASS",
+   "changed_vs_13_Oct": false,
+   "convention_dependent": false,
+   "notes": "true mode 3.6 / 7.7, 3.9 / 17.9, 5.4 / 10.6"
+  },
+  "5": {
+   "gate": "Bazan 2007 region Q (pooled)",
+   "v51_primary": "6/21 vs 3/21, diff 14.3 pp (CI -10.9 to 37.6) vs Bazan +74",
+   "verdict": "FAIL",
+   "changed_vs_13_Oct": false,
+   "convention_dependent": false,
+   "notes": "14 of 14 rule x convention combinations FAIL (primary, N20, window only, no window, wave 0.10 mV and 0.3.0; true mode, 14 Oct pace-map convention, 10 uV noise); AHA / body labels, basal superior: 8/17 vs 1/17 (not evaluable, < 20 positions)"
+  },
+  "6": {
+   "gate": "Berruezo (6G8DD8S5)",
+   "v51_primary": "22.5/110.1/50.7/14.2 %",
+   "verdict": "FAIL",
+   "changed_vs_13_Oct": false,
+   "convention_dependent": false,
+   "notes": "true mode {'QRS': 17.9, 'PdW': 110.1, 'IDT': 50.7, 'RS': 14.2}; caveat: Berruezo's baseline QRS 194 +- 19 ms; no stimulus latency in the model"
+  },
+  "7": {
+   "gate": "Durrer (control, His beat)",
+   "v51_primary": "T 113.3; (a) 0.0/5.5/8.7 (1 of 3 within 5 ms, uncalibrated); (b) 85.2 % at 37.5 ms (63.4 % at 30); (c) 27.5; (d) last 5 % in Durrer areas 78.7 %; (e) 76.5",
+   "verdict": "FAIL",
+   "changed_vs_13_Oct": false,
+   "convention_dependent": false,
+   "notes": "parts: T 62-100 FAIL, (a) >= 2 within 5 ms FAIL, (b) >= 90 % by 37.5 ms FAIL, (c) 20-31 ms PASS, (e) 63-88 ms PASS; His beat equal to Step 4.6: False"
+  },
+  "8": {
+   "gate": "No-network control",
+   "v51_primary": "231.25 (7/7 wider)",
+   "verdict": "PASS",
+   "changed_vs_13_Oct": false,
+   "convention_dependent": false,
+   "notes": "true mode 250.50"
+  },
+  "9": {
+   "gate": "Monodomain agreement",
+   "v51_primary": "not run",
+   "verdict": "not evaluable",
+   "changed_vs_13_Oct": false,
+   "convention_dependent": false,
+   "notes": "locked: 27 sites, 5 ms, >= 90 % of 108 pairs; runs on the frozen model before the OSF registration (Alex, 17 Oct)"
+  }
+ },
+ "tally": {
+  "PASS": 2,
+  "FAIL": 6,
+  "not evaluable": 1
+ },
+ "unscorable": [],
+ "his_beat_equal_step_4_6": false,
+ "his_metrics": {
+  "qrs_true_span_ms": 113.3,
+  "his_to_first_myocardium_ms": 21.9,
+  "T_latest_after_lv_onset_ms": 113.3,
+  "b_lv30_pct": 63.4,
+  "b_lv37_pct": 85.2,
+  "c_rv_epi_breakthrough_ms": 27.5,
+  "a_onset_ant_ms": 0.0,
+  "a_onset_sep_ms": 5.5,
+  "a_onset_post_ms": 8.7,
+  "d_last5_in_durrer_areas_pct": 78.7,
+  "e_qrs_detected_ms": 75.0,
+  "axis_net_deg": 75,
+  "axis_area_deg": 101
+ }
+}
