@@ -1,0 +1,91 @@
+{
+ "rule": "Sensitivity set (v5.1 brief, decision 8): fibre sigma_i 0.174, sigma_e 0.625 S/m as v5.1; in each cross-fibre direction d sigma_e,d = 0.236 S/m, and sigma_i,d solved so that sigma_m,d / sigma_m,fibre = (v_d / 0.60)^2 as in v5.1 (sigma_m = sigma_i sigma_e / (sigma_i + sigma_e)). Brief check values: control sheet sigma_i 0.0618, normal 0.1381; HF 0.0287, 0.0521 S/m. Blood 0.7 and torso 0.2 S/m as v5.1. v5.1 uses equal anisotropy (both scaled by (v_d / 0.60)^2). Stages (one heart at a time, run alone; same openCARP job as conductor51.py leadfield / weights, only the heart conductivities differ; 2 processes, light AMG options, memory watchdog at 900 MB):   HEART=<H> python -B .../sens51.py leadfield   -> runs/v51_2026-10-15/10_conductor_sens/<H>/leadfield_sens   HEART=<H> python -B .../sens51.py weights     -> runs/v51_2026-10-15/10_conductor_sens/<H>/ecgW_sens.npz (sigma_i source,                                                    as v5.1), after the C9 check of the sigma_m weights against openCARP   python -B .../sens51.py tensors               -> sigma_sens.json in this folder (the set, with the check values) ",
+ "hearts": {
+  "Y5HYEDL4": {
+   "fibre": {
+    "gi": 0.174,
+    "ge": 0.625
+   },
+   "sheet": {
+    "gi": 0.0618375788078761,
+    "ge": 0.236
+   },
+   "normal": {
+    "gi": 0.13807202178810402,
+    "ge": 0.236
+   }
+  },
+  "6G8DD8S5": {
+   "fibre": {
+    "gi": 0.174,
+    "ge": 0.625
+   },
+   "sheet": {
+    "gi": 0.028661983488277355,
+    "ge": 0.236
+   },
+   "normal": {
+    "gi": 0.05210762656998577,
+    "ge": 0.236
+   }
+  },
+  "7D98EVAR": {
+   "fibre": {
+    "gi": 0.174,
+    "ge": 0.625
+   },
+   "sheet": {
+    "gi": 0.028661983488277355,
+    "ge": 0.236
+   },
+   "normal": {
+    "gi": 0.05210762656998577,
+    "ge": 0.236
+   }
+  }
+ },
+ "v51_for_comparison": {
+  "Y5HYEDL4": {
+   "fibre": {
+    "gi": 0.174,
+    "ge": 0.625
+   },
+   "sheet": {
+    "gi": 0.06263999999999999,
+    "ge": 0.22499999999999998
+   },
+   "normal": {
+    "gi": 0.11136000000000001,
+    "ge": 0.4000000000000001
+   }
+  },
+  "6G8DD8S5": {
+   "fibre": {
+    "gi": 0.174,
+    "ge": 0.625
+   },
+   "sheet": {
+    "gi": 0.03267333333333333,
+    "ge": 0.11736111111111112
+   },
+   "normal": {
+    "gi": 0.0545664,
+    "ge": 0.19600000000000004
+   }
+  },
+  "7D98EVAR": {
+   "fibre": {
+    "gi": 0.174,
+    "ge": 0.625
+   },
+   "sheet": {
+    "gi": 0.03267333333333333,
+    "ge": 0.11736111111111112
+   },
+   "normal": {
+    "gi": 0.0545664,
+    "ge": 0.19600000000000004
+   }
+  }
+ }
+}

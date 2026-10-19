@@ -1541,3 +1541,11 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Command (Alex): `bash ~/vt-exit-depth/analysis/v51_2026-10-15/08_monodomain/run_offline.sh bias` (all three hearts in turn; mono51.py bias; stops at the first failing heart; log runs/v51_2026-10-15/08_monodomain/offline_bias_<date>.log).
 - Sites: the 12 new draws above (bias_sites51.json). Model and settings as the 27-site beats (flat-tuned conductivities per heart, junction replay, 4 processes).
 - Expected: 2,180 simulated ms, about 8-9 h (33-49 min per beat). Then `python -B .../mono51.py analyze-bias` -> bias51.csv, bias51.json.
+
+### 2026-10-19_v51_10_lfsens: decision 8 conductivity sensitivity, lead fields of the three hearts (Alex, 19 Oct 2026 17:58:45 UTC: "2")
+- Date/time: PC clock 2026-10-19 20:00; git 6cdbabc (+ uncommitted analysis/v51_2026-10-15/10_conductor_sens/sens51.py); Status: running
+- Purpose: sensitivity only (nothing adopted; v5.1 frozen): how much do the ECG and the criteria change if the heart's cross-fibre extracellular conductivity is 0.236 S/m instead of v5.1's equal-anisotropy values?
+- Set (sigma_sens.json): fibre sigma_i / sigma_e 0.174 / 0.625 as v5.1; cross-fibre sigma_e 0.236, sigma_i solved so sigma_m keeps the v5.1 speed ratios: Y5HYEDL4 sheet 0.0618 / 0.236, normal 0.1381 / 0.236 (v5.1 0.0626 / 0.225, 0.1114 / 0.400); HF sheet 0.0287 / 0.236, normal 0.0521 / 0.236 (v5.1 0.0327 / 0.1174, 0.0546 / 0.196). Blood 0.7, torso 0.2.
+- Command, per heart in turn (alone on the PC): `HEART=<H> python -B analysis/v51_2026-10-15/10_conductor_sens/sens51.py leadfield` then `... weights` (2 processes, light AMG options, memory watchdog 900 MB; mesh data/biv/<H>/torso/full_nofast_blood_v51, read only).
+- Output: runs/v51_2026-10-15/10_conductor_sens/<H>/ (leadfield_sens, ecgW_sens.npz); analysis/v51_2026-10-15/10_conductor_sens/leadfield_sens_<H>.json, weights_sens_<H>.json. Expected 7-9 min per heart (v5.1 builds: 3 x ~160 s, peak 6.2-6.5 GB used).
+- Rescoring the pilot beats with these weights is a separate step (estimate before it runs).
