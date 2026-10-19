@@ -1481,3 +1481,12 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Status update (2026-10-19_v51_08_mono_Y5HYEDL4), PC clock 2026-10-19 07:16: ok. 9 of 9 beats finished 00:39:01-07:01:52 (6 h 23 min; 38-47 min per beat; 14.0-14.3 s per simulated ms, faster than the 18-19 s/ms test estimate; lowest available memory 2,702 MB).
   - Every beat activated 100 % of nodes. Last activation: monodomain 6.2-7.3 ms later than the graph beat at every site (reported only). Median node difference monodomain minus graph -0.2 to -0.4 ms.
   - ECG measures not scored yet (mono51.py analyze).
+
+## 2026-10-19 07:18 PC time: 27-site monodomain check, Y5HYEDL4 scored (`python -B analysis/v51_2026-10-15/08_monodomain/mono51.py analyze`, 07:17, 9 s)
+- Pace-map convention, ecg_depth_criteria 0.4.0: 25 of 36 pairs within 5 ms (69.4 %); max |difference| 38 ms. Pseudo-delta 8/9, IDT V2 7/9, shortest RS 6/9, time to largest precordial deflection 4/9.
+- The locked pass rule needs >= 98 of 108 pairs, i.e. at most 10 misses in all; Y5HYEDL4 alone has 11, so the check FAILS whatever the other two hearts show.
+- Activation: median node difference (monodomain minus graph) -0.2 to -0.4 ms; 90.0-96.6 % of nodes within 5 ms; last activation 6.2-7.3 ms later in monodomain. QRS (any lead) 2-4 ms shorter in monodomain at every site.
+- Large misses: IDT lv_free_wall d50 88 vs 51 ms; shortest RS lv_free_wall original 54 vs 29 and d50 63 vs 39; time to largest deflection lv_free_wall original 44 vs 31, RV free wall d10 / d50 / d90 63-69 vs 26-32 ms (graph vs mono).
+- Reading (inference from the precordial waveforms): the misses are rank swaps between competing peaks, not shifted timing. The monodomain ECG is larger in some leads (e.g. V2 R 3.25 vs 2.05 mV at the original site), so a different peak becomes the largest (RV d10: V2 +2.21 mV at 26 ms in monodomain; graph's largest V2 deflection -1.90 mV at 91 ms). It did not fail through a slower start near the site, as I had predicted on 18 Oct.
+- Files: analysis/v51_2026-10-15/08_monodomain/results51.csv, gate51.json; mono_ecg.npy in each beat folder.
+- Next: Alex decides whether to run the other two hearts (locked plan: 27 sites, largest difference reported) and the fallback (one site per region per heart, bias band). Nothing tuned.
