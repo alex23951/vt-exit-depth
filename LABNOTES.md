@@ -1478,3 +1478,6 @@ Earlier errors already corrected (kept above): 20 ms pad / baseline-window bug; 
 - Sites and depth: lv_free_wall_original_d0 (node 313318), lv_free_wall_phi180_z0.5_d50 / d90, lv_septum_phi0_z0.5_d10 / d50 / d90, rv_free_wall_q50_z0.5_d10 / d50 / d90.
 - Lead fields: data/biv/Y5HYEDL4/ecgW_v51.npz (sigma_i), applied at analysis.
 - Output: runs/v51_2026-10-15/08_monodomain/beats/Y5HYEDL4/<site>/. Expected about 8 h (1,620 simulated ms).
+- Status update (2026-10-19_v51_08_mono_Y5HYEDL4), PC clock 2026-10-19 07:16: ok. 9 of 9 beats finished 00:39:01-07:01:52 (6 h 23 min; 38-47 min per beat; 14.0-14.3 s per simulated ms, faster than the 18-19 s/ms test estimate; lowest available memory 2,702 MB).
+  - Every beat activated 100 % of nodes. Last activation: monodomain 6.2-7.3 ms later than the graph beat at every site (reported only). Median node difference monodomain minus graph -0.2 to -0.4 ms.
+  - ECG measures not scored yet (mono51.py analyze).
