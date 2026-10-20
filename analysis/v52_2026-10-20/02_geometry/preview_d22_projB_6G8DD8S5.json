@@ -1,0 +1,113 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "variant": "projB",
+ "anchor_A": {
+  "full_node": 54342,
+  "mm": [
+   57.707,
+   63.121,
+   79.45
+  ]
+ },
+ "candidate_quarter_nodes": 5385,
+ "band_9.6mm_nodes": 0,
+ "A_to_nearest_candidate_mm": 12.14,
+ "projB": {
+  "step2_point_full_node": 94139,
+  "projection_distance_mm": 2.69
+ },
+ "bifurcation_B": {
+  "node": 256446,
+  "dist_A_mm": 12.54,
+  "moved_from_v51_B_mm": 9.82
+ },
+ "sector_nodes": 609,
+ "superior_nodes": 391,
+ "inferior_lateral_nodes": 218,
+ "sector_area_mm2 (Kuniewicz 287.38 +- 144.95)": 362.5,
+ "superior_area_share (Kuniewicz 0.545; v5.1 arc 0.549)": 0.603,
+ "sector_apex_angle_deg (Kuniewicz 85.46 +- 15.94)": 268.1,
+ "all_sector_nodes_on_tag1": true,
+ "sector_nodes_not_on_tag1": 0,
+ "positions": {
+  "superior": {
+   "surface_node": 22156,
+   "on_tag1": true,
+   "dist_B_mm": 6.88,
+   "wall_thickness_mm": 4.8,
+   "moved_from_v51_surface_mm": 10.02
+  },
+  "inferior_lateral": {
+   "surface_node": 25242,
+   "on_tag1": true,
+   "dist_B_mm": 15.41,
+   "wall_thickness_mm": 13.2,
+   "moved_from_v51_surface_mm": 8.78
+  }
+ },
+ "sites (preview, not in the manifest)": [
+  {
+   "id": "lv_summit52_superior_d10",
+   "node": 34336,
+   "depth_target": 0.1,
+   "moved_from_v51_mm": 16.78,
+   "dist_to_tip_B_mm (8.4)": 8.22
+  },
+  {
+   "id": "lv_summit52_superior_d50",
+   "node": 97680,
+   "depth_target": 0.5,
+   "moved_from_v51_mm": 13.39,
+   "dist_to_tip_B_mm (8.4)": 7.81
+  },
+  {
+   "id": "lv_summit52_superior_d90",
+   "node": 22156,
+   "depth_target": 0.9,
+   "moved_from_v51_mm": 10.66,
+   "dist_to_tip_B_mm (8.4)": 6.88
+  },
+  {
+   "id": "lv_summit52_superior_d75",
+   "node": 156348,
+   "depth_target": 0.75,
+   "moved_from_v51_mm": 10.74,
+   "dist_to_tip_B_mm (8.4)": 7.3
+  },
+  {
+   "id": "lv_summit52_inferior_lateral_d10",
+   "node": 10647,
+   "depth_target": 0.1,
+   "moved_from_v51_mm": 5.87,
+   "dist_to_tip_B_mm (8.4)": 22.68
+  },
+  {
+   "id": "lv_summit52_inferior_lateral_d50",
+   "node": 329739,
+   "depth_target": 0.5,
+   "moved_from_v51_mm": 6.54,
+   "dist_to_tip_B_mm (8.4)": 18.82
+  },
+  {
+   "id": "lv_summit52_inferior_lateral_d90",
+   "node": 359789,
+   "depth_target": 0.9,
+   "moved_from_v51_mm": 8.17,
+   "dist_to_tip_B_mm (8.4)": 16.15
+  },
+  {
+   "id": "lv_summit52_inferior_lateral_d75",
+   "node": 305246,
+   "depth_target": 0.75,
+   "moved_from_v51_mm": 7.76,
+   "dist_to_tip_B_mm (8.4)": 16.56
+  }
+ ],
+ "acceptance_both_areas_non_empty_and_on_tag1": true,
+ "steps_2_6_sliver (sites52)": {
+  "apex_angle_deg (Kuniewicz 85.46 +- 15.94)": 49.9,
+  "triangle_area_mm2 (Kuniewicz area 287 +- 145)": 18685.5,
+  "lcx_side_mm (G->B)": 9.68
+ }
+}

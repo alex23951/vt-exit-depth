@@ -1,0 +1,131 @@
+{
+ "heart": "Y5HYEDL4",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "opencarp_solver": "experiment 2: PETSc CG + hypre BoomerAMG (default settings); cg_tol_ellip 1e-8 on the preconditioned residual norm, cg_maxit_ellip 500; no iteration or residual output",
+ "fields": {
+  "merged_v52/phi_lv": {
+   "free_nodes": 277480,
+   "dirichlet_nodes": 97710,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.000629458818158805,
+    "relative_residual": 4.003100149322066e-06,
+    "max_abs_residual": 5.040884901018339e-06,
+    "dirichlet_values_exact": true,
+    "min": -6e-05,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.548054734190392e-13,
+    "wall_s": 1.2,
+    "max_abs_change_from_stored": 5.819717090460585e-07,
+    "min": -6e-05,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   }
+  },
+  "merged_v52/phi_rv": {
+   "free_nodes": 277480,
+   "dirichlet_nodes": 97710,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.0005377660672198874,
+    "relative_residual": 3.078562522247015e-06,
+    "max_abs_residual": 4.824546418591424e-06,
+    "dirichlet_values_exact": true,
+    "min": -0.00293,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 1,
+    "at_unused_nodes": 0,
+    "in_weakly_joined_parts": 0,
+    "touching_poor_elements": 0,
+    "other": 1,
+    "largest_excursion": 0.0029
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.447552693565152e-13,
+    "wall_s": 1.8,
+    "max_abs_change_from_stored": 5.77045275562682e-07,
+    "min": -0.00293,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 1,
+    "at_unused_nodes": 0,
+    "in_weakly_joined_parts": 0,
+    "touching_poor_elements": 0,
+    "other": 1,
+    "largest_excursion": 0.0029,
+    "all_used_nodes_within_1e-3_of_[0,1]": false
+   }
+  },
+  "merged_v52/phi_epi_fix": {
+   "free_nodes": 276164,
+   "dirichlet_nodes": 99026,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.0007063858658186184,
+    "relative_residual": 3.00680290550248e-06,
+    "max_abs_residual": 5.29497152026992e-06,
+    "dirichlet_values_exact": true,
+    "min": 0.0,
+    "max": 1.00018,
+    "nodes_outside_by_1e-3": 0
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.895330587599783e-13,
+    "wall_s": 1.5,
+    "max_abs_change_from_stored": 2.5007611628158344e-06,
+    "min": 0.0,
+    "max": 1.00018,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   }
+  },
+  "merged_v52/w_LV (LV-side submesh)": {
+   "free_nodes": 219692,
+   "dirichlet_nodes": 2015,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.0006295489976641457,
+    "relative_residual": 1.8610715348864216e-05,
+    "max_abs_residual": 4.904629436034563e-06,
+    "dirichlet_values_exact": true,
+    "min": 0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.747933667910183e-13,
+    "wall_s": 6.2,
+    "max_abs_change_from_stored": 5.296549852040755e-07,
+    "min": 0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   },
+   "stored_within_1e-6_of_[0,1]": true
+  }
+ },
+ "mesh": {
+  "merged_v52": {
+   "nodes": 375190,
+   "unused_nodes": 0,
+   "face_connected_element_sets": 5,
+   "elements_outside_the_largest": 27,
+   "poor_elements": 0
+  },
+  "lv_submesh": {
+   "nodes": 221707,
+   "face_connected_element_sets": 109,
+   "elements_outside_the_largest": 142,
+   "poor_elements": 0
+  }
+ },
+ "note": "merged mesh identical to v5.1: the v5.1 and merged fields are the same files",
+ "wall_s": 34.5
+}

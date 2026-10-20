@@ -1,0 +1,52 @@
+{
+ "version": "v52-factors-1 (slab calibration, nodal metric; 3-ring where R4.2 applied)",
+ "written": "2026-10-21 00:27:33 CEST",
+ "method": "solver51.calibrate() at the v5.2 speeds; acceptance A (solver51.acceptance_A, rotating wall at the v5.2 LV profile); R4.2 3-ring where the 2-ring failed",
+ "hearts": {
+  "Y5HYEDL4": {
+   "factors": {
+    "fibre": 1.1246983845361904,
+    "sheet": 1.001867052439703,
+    "normal": 1.0265030868307026
+   },
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.23,
+    "normal": 0.48
+   },
+   "stencil": "v51-2ring-1",
+   "metric": "nodal-1",
+   "acceptance_A_pass": true
+  },
+  "6G8DD8S5": {
+   "factors": {
+    "fibre": 1.1158061196311522,
+    "sheet": 1.0008398878681175,
+    "normal": 1.0092386636378798
+   },
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.167,
+    "normal": 0.336
+   },
+   "stencil": "v52-3ring-1 (R4.2: graph distance <= 3, edges <= 5.25 mm)",
+   "metric": "nodal-1",
+   "acceptance_A_pass": true
+  },
+  "7D98EVAR": {
+   "factors": {
+    "fibre": 1.1158061196311522,
+    "sheet": 1.0008398878681175,
+    "normal": 1.0092386636378798
+   },
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.167,
+    "normal": 0.336
+   },
+   "stencil": "v52-3ring-1 (R4.2: graph distance <= 3, edges <= 5.25 mm)",
+   "metric": "nodal-1",
+   "acceptance_A_pass": true
+  }
+ }
+}

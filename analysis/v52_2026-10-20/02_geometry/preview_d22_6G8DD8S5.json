@@ -1,0 +1,17 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "variant": "D22",
+ "anchor_A": {
+  "full_node": 54342,
+  "mm": [
+   57.707,
+   63.121,
+   79.45
+  ]
+ },
+ "candidate_quarter_nodes": 5385,
+ "band_9.6mm_nodes": 0,
+ "A_to_nearest_candidate_mm": 12.14,
+ "stop": "no candidate node 9.6 +- 1 mm from the anchor (D22 acceptance fails in this heart)"
+}

@@ -1,0 +1,20 @@
+{
+ "version": "v52",
+ "written": "2026-10-21, v5.2 step 3 input (LOCK.md section 5, fix 4, sha256 08ea65d3...)",
+ "decision": "fix 4: human in-plane speeds (Anderson 1993 control 0.80 / 0.23 m/s; HF cross-fibre 0.23 x 16 / 22 = 0.167 m/s, Glukhov 2012; transmural 0.48 m/s control, Taggart 2000; HF 0.336 m/s, x 0.70, Glukhov 2012)",
+ "units": "m/s (= mm/ms)",
+ "directions": {
+  "fibre": "along the fibre vector f (first 3 columns of the .lon file)",
+  "sheet": "in-wall cross-fibre direction s (columns 4-6 of the .lon file)",
+  "normal": "sheet-normal n = f x s (transmural in the rule-based fibres)"
+ },
+ "hearts": {
+  "Y5HYEDL4": {"fibre": 0.80, "sheet": 0.23, "normal": 0.48},
+  "6G8DD8S5": {"fibre": 0.80, "sheet": 0.167, "normal": 0.336},
+  "7D98EVAR": {"fibre": 0.80, "sheet": 0.167, "normal": 0.336}
+ },
+ "notes": [
+  "Values copied from LOCK.md section 5's table; no other copy of these numbers is to be used by v5.2 engines.",
+  "Network edge speeds stay bit-identical to v5.1 (R4.5)."
+ ]
+}

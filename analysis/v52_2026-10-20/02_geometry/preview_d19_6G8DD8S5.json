@@ -1,0 +1,229 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "opencarp_solver": "experiment 2: PETSc CG + hypre BoomerAMG (default settings); cg_tol_ellip 1e-8 on the preconditioned residual norm, cg_maxit_ellip 500; no iteration or residual output",
+ "fields": {
+  "v51/phi_lv": {
+   "free_nodes": 295584,
+   "dirichlet_nodes": 80088,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.0006888876445759602,
+    "relative_residual": 4.603705469150811e-06,
+    "max_abs_residual": 4.854705225820766e-06,
+    "dirichlet_values_exact": false,
+    "min": -0.92769,
+    "max": 2.41472,
+    "nodes_outside_by_1e-3": 29,
+    "at_unused_nodes": 0,
+    "in_weakly_joined_parts": 0,
+    "touching_poor_elements": 0,
+    "other": 29,
+    "largest_excursion": 1.4147
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.187757425883702e-13,
+    "wall_s": 1.5,
+    "max_abs_change_from_stored": 2.41472,
+    "min": -0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   }
+  },
+  "v51/phi_rv": {
+   "free_nodes": 295584,
+   "dirichlet_nodes": 80088,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.00044793233246338864,
+    "relative_residual": 3.1232872813964467e-06,
+    "max_abs_residual": 4.915589057352676e-06,
+    "dirichlet_values_exact": false,
+    "min": -0.38684,
+    "max": 2.06543,
+    "nodes_outside_by_1e-3": 30,
+    "at_unused_nodes": 0,
+    "in_weakly_joined_parts": 0,
+    "touching_poor_elements": 0,
+    "other": 30,
+    "largest_excursion": 1.0654
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.473416056582242e-13,
+    "wall_s": 1.6,
+    "max_abs_change_from_stored": 2.06543,
+    "min": 0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   }
+  },
+  "v51/phi_epi_fix": {
+   "free_nodes": 294440,
+   "dirichlet_nodes": 81232,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.0007452202049465347,
+    "relative_residual": 3.4107403199020774e-06,
+    "max_abs_residual": 5.000132469228091e-06,
+    "dirichlet_values_exact": false,
+    "min": 0.0,
+    "max": 1.90945,
+    "nodes_outside_by_1e-3": 2,
+    "at_unused_nodes": 0,
+    "in_weakly_joined_parts": 0,
+    "touching_poor_elements": 0,
+    "other": 2,
+    "largest_excursion": 0.9095
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.507820660454662e-13,
+    "wall_s": 2.4,
+    "max_abs_change_from_stored": 1.90945,
+    "min": 0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   }
+  },
+  "merged_v52/phi_lv": {
+   "free_nodes": 295673,
+   "dirichlet_nodes": 80276,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.0006883868319981506,
+    "relative_residual": 4.600358633681145e-06,
+    "max_abs_residual": 4.796431808673507e-06,
+    "dirichlet_values_exact": false,
+    "min": -0.92769,
+    "max": 2.41472,
+    "nodes_outside_by_1e-3": 29,
+    "at_unused_nodes": 0,
+    "in_weakly_joined_parts": 0,
+    "touching_poor_elements": 0,
+    "other": 29,
+    "largest_excursion": 1.4147
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 8.830131043357097e-13,
+    "wall_s": 1.4,
+    "max_abs_change_from_stored": 2.41472,
+    "min": -0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   }
+  },
+  "merged_v52/phi_rv": {
+   "free_nodes": 295673,
+   "dirichlet_nodes": 80276,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.0004488065775370814,
+    "relative_residual": 3.1159749715763808e-06,
+    "max_abs_residual": 5.377737075207278e-06,
+    "dirichlet_values_exact": false,
+    "min": -0.38684,
+    "max": 2.06543,
+    "nodes_outside_by_1e-3": 32,
+    "at_unused_nodes": 0,
+    "in_weakly_joined_parts": 0,
+    "touching_poor_elements": 0,
+    "other": 32,
+    "largest_excursion": 1.0654
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.835849450741202e-13,
+    "wall_s": 1.7,
+    "max_abs_change_from_stored": 2.06543,
+    "min": 0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   }
+  },
+  "merged_v52/phi_epi_fix": {
+   "free_nodes": 294529,
+   "dirichlet_nodes": 81420,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.0007444986360370928,
+    "relative_residual": 3.4066284769583975e-06,
+    "max_abs_residual": 5.000132469228091e-06,
+    "dirichlet_values_exact": false,
+    "min": -0.1734,
+    "max": 1.90945,
+    "nodes_outside_by_1e-3": 10,
+    "at_unused_nodes": 0,
+    "in_weakly_joined_parts": 0,
+    "touching_poor_elements": 0,
+    "other": 10,
+    "largest_excursion": 0.9095
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.692228984169775e-13,
+    "wall_s": 2.4,
+    "max_abs_change_from_stored": 1.90945,
+    "min": 0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   }
+  },
+  "merged_v52/w_LV (LV-side submesh)": {
+   "free_nodes": 271966,
+   "dirichlet_nodes": 1759,
+   "unused_nodes": 0,
+   "stored_field": {
+    "residual_2norm": 0.000715728717319892,
+    "relative_residual": 2.262215514311237e-05,
+    "max_abs_residual": 5.264183652708976e-06,
+    "dirichlet_values_exact": true,
+    "min": 0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0
+   },
+   "converged_resolve": {
+    "cg_info": 0,
+    "relative_residual": 9.80054216102049e-13,
+    "wall_s": 13.7,
+    "max_abs_change_from_stored": 5.289181580492297e-07,
+    "min": 0.0,
+    "max": 1.0,
+    "nodes_outside_by_1e-3": 0,
+    "all_used_nodes_within_1e-3_of_[0,1]": true
+   },
+   "stored_within_1e-6_of_[0,1]": true
+  }
+ },
+ "mesh": {
+  "v51": {
+   "nodes": 375672,
+   "unused_nodes": 0,
+   "face_connected_element_sets": 3,
+   "elements_outside_the_largest": 2,
+   "poor_elements": 0
+  },
+  "merged_v52": {
+   "nodes": 375949,
+   "unused_nodes": 0,
+   "face_connected_element_sets": 3,
+   "elements_outside_the_largest": 2,
+   "poor_elements": 0
+  },
+  "lv_submesh": {
+   "nodes": 273725,
+   "face_connected_element_sets": 96,
+   "elements_outside_the_largest": 107,
+   "poor_elements": 0
+  }
+ },
+ "wall_s": 74.4
+}
