@@ -1,0 +1,262 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "frame": "D15 (theta 0 = projected mitral-disc centroid; sense from the pulmonary-disc centroid)",
+ "aortic_disc": {
+  "thickness_mm": 6.15,
+  "faces_mm (ventricular, arterial)": [
+   -3.19,
+   2.97
+  ],
+  "frame_check": {
+   "theta0": "projected mitral-disc centroid direction",
+   "pulmonary_centroid_deg": {
+    "+": 230.48,
+    "-": 129.52
+   },
+   "sense": "-",
+   "check_90_150": "pass",
+   "axis": [
+    -0.69904,
+    -0.2447,
+    0.67191
+   ],
+   "ring_centroid_mm": [
+    63.215,
+    57.256,
+    66.568
+   ],
+   "ring_nodes": 171,
+   "disc_thickness_mm": 6.15,
+   "disc_faces_mm": [
+    -3.19,
+    2.97
+   ]
+  }
+ },
+ "pulmonary_disc": {
+  "thickness_mm": 6.19,
+  "faces_mm (ventricular, arterial)": [
+   -2.92,
+   3.27
+  ],
+  "frame": {
+   "posterior_centre_ring_node": 88730,
+   "axis": [
+    -0.04862,
+    0.63628,
+    0.76993
+   ],
+   "ring_centroid_mm": [
+    71.232,
+    40.948,
+    91.799
+   ],
+   "ring_nodes": 203,
+   "disc_thickness_mm": 6.19,
+   "disc_faces_mm": [
+    -2.92,
+    3.27
+   ]
+  }
+ },
+ "35a_35h_aortic_positions": {
+  "N/L": {
+   "theta_deg": 0.0,
+   "boundary_nodes": 13,
+   "de_Kerchove_external_junction_mm": 0.3,
+   "ring_point_height_mm": 0.23,
+   "muscle_top_mm (existing, built)": [
+    3.87,
+    3.87
+   ],
+   "muscle_above_ventricular_face_mm (existing, built)": [
+    7.06,
+    7.06
+   ],
+   "muscle_above_arterial_face_mm (existing, built)": [
+    0.9,
+    0.9
+   ],
+   "35a_luminal_height_mm": 2.17,
+   "35a_epicardial_height_mm": 3.05,
+   "35h_below_valve_plane": false
+  },
+  "LCS": {
+   "theta_deg": 60.2,
+   "boundary_nodes": 20,
+   "de_Kerchove_external_junction_mm": 0.5,
+   "ring_point_height_mm": -0.03,
+   "muscle_top_mm (existing, built)": [
+    3.41,
+    3.41
+   ],
+   "muscle_above_ventricular_face_mm (existing, built)": [
+    6.59,
+    6.59
+   ],
+   "muscle_above_arterial_face_mm (existing, built)": [
+    0.44,
+    0.44
+   ],
+   "35a_luminal_height_mm": 2.94,
+   "35a_epicardial_height_mm": 2.92,
+   "35h_below_valve_plane": false
+  },
+  "L/R": {
+   "theta_deg": 120.4,
+   "boundary_nodes": 18,
+   "de_Kerchove_external_junction_mm": 4.6,
+   "ring_point_height_mm": 0.22,
+   "muscle_top_mm (existing, built)": [
+    5.36,
+    5.36
+   ],
+   "muscle_above_ventricular_face_mm (existing, built)": [
+    8.54,
+    8.54
+   ],
+   "muscle_above_arterial_face_mm (existing, built)": [
+    2.39,
+    2.39
+   ],
+   "35a_luminal_height_mm": 4.15,
+   "35a_epicardial_height_mm": 5.77,
+   "35h_below_valve_plane": false
+  },
+  "RCS": {
+   "theta_deg": 180.7,
+   "boundary_nodes": 20,
+   "de_Kerchove_external_junction_mm": 2.4,
+   "ring_point_height_mm": 0.17,
+   "muscle_top_mm (existing, built)": [
+    4.44,
+    4.44
+   ],
+   "muscle_above_ventricular_face_mm (existing, built)": [
+    7.63,
+    7.63
+   ],
+   "muscle_above_arterial_face_mm (existing, built)": [
+    1.48,
+    1.48
+   ],
+   "35a_luminal_height_mm": 3.37,
+   "35a_epicardial_height_mm": 4.38,
+   "35h_below_valve_plane": false
+  },
+  "R/N": {
+   "theta_deg": 241.0,
+   "boundary_nodes": 13,
+   "de_Kerchove_external_junction_mm": 2.5,
+   "ring_point_height_mm": -0.2,
+   "muscle_top_mm (existing, built)": [
+    4.18,
+    4.18
+   ],
+   "muscle_above_ventricular_face_mm (existing, built)": [
+    7.37,
+    7.37
+   ],
+   "muscle_above_arterial_face_mm (existing, built)": [
+    1.22,
+    1.22
+   ],
+   "35a_luminal_height_mm": 3.26,
+   "35a_epicardial_height_mm": 4.65,
+   "35h_below_valve_plane": false
+  },
+  "NCS": {
+   "theta_deg": 300.5,
+   "boundary_nodes": 22,
+   "de_Kerchove_external_junction_mm": -0.1,
+   "ring_point_height_mm": -0.13,
+   "muscle_top_mm (existing, built)": [
+    4.33,
+    4.33
+   ],
+   "muscle_above_ventricular_face_mm (existing, built)": [
+    7.52,
+    7.52
+   ],
+   "muscle_above_arterial_face_mm (existing, built)": [
+    1.36,
+    1.36
+   ],
+   "35a_luminal_height_mm": 3.81,
+   "35a_epicardial_height_mm": 2.0,
+   "35h_below_valve_plane": false
+  }
+ },
+ "35h_any_below_valve_plane": false,
+ "35e_rv_contact_on_aortic_root": {
+  "L/R": {
+   "existing": {
+    "contact_nodes": 216,
+    "max_height_above_mid_plane_mm": 31.55,
+    "de_Kerchove_mm": 4.6
+   },
+   "built": {
+    "contact_nodes": 216,
+    "max_height_above_mid_plane_mm": 31.55,
+    "de_Kerchove_mm": 4.6
+   }
+  },
+  "RCS": {
+   "existing": {
+    "contact_nodes": 174,
+    "max_height_above_mid_plane_mm": 28.11,
+    "de_Kerchove_mm": 2.4
+   },
+   "built": {
+    "contact_nodes": 174,
+    "max_height_above_mid_plane_mm": 28.11,
+    "de_Kerchove_mm": 2.4
+   }
+  }
+ },
+ "pulmonary_sinus_centres": {
+  "posterior": {
+   "muscle_top_mm (existing, built)": [
+    6.42,
+    6.42
+   ],
+   "muscle_above_ventricular_face_mm (existing, built)": [
+    9.34,
+    9.34
+   ],
+   "muscle_above_arterial_face_mm (existing, built)": [
+    3.15,
+    3.15
+   ]
+  },
+  "sinus_+120": {
+   "muscle_top_mm (existing, built)": [
+    5.24,
+    5.24
+   ],
+   "muscle_above_ventricular_face_mm (existing, built)": [
+    8.16,
+    8.16
+   ],
+   "muscle_above_arterial_face_mm (existing, built)": [
+    1.97,
+    1.97
+   ]
+  },
+  "sinus_-120": {
+   "muscle_top_mm (existing, built)": [
+    2.97,
+    3.99
+   ],
+   "muscle_above_ventricular_face_mm (existing, built)": [
+    5.89,
+    6.91
+   ],
+   "muscle_above_arterial_face_mm (existing, built)": [
+    -0.3,
+    0.72
+   ]
+  }
+ }
+}
