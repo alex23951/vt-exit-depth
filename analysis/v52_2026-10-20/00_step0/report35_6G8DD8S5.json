@@ -1,0 +1,537 @@
+{
+ "heart": "6G8DD8S5",
+ "aortic_valve": {
+  "disc_thickness_mm": 5.73,
+  "ring_nodes": 732,
+  "ring_height_range_mm": [
+   -3.33,
+   4.07
+  ],
+  "ring_radius_median_mm": 12.2,
+  "frame": {
+   "theta0_ring_node (nearest the mitral disc)": 497186,
+   "ring_node_nearest_pulmonary_valve": 73619,
+   "angle_to_pv_nearest_point_deg": {
+    "+": 297.1,
+    "-": 62.9
+   },
+   "reading_2_ring_node_nearest_the_pv_disc_centroid": 73619,
+   "reading_2_angle_deg": {
+    "+": 297.1,
+    "-": 62.9
+   },
+   "reading_2_check_90_150": "fail in both senses",
+   "sense_used": null,
+   "check_90_150": "FAIL in both senses (8.5 item 6 stop rule, step 2c)"
+  }
+ },
+ "pulmonary_valve": {
+  "disc_thickness_mm": 5.81,
+  "ring_nodes": 799,
+  "ring_radius_median_mm": 16.4
+ },
+ "interface_area_mm2": {
+  "1-5": 67.1,
+  "2-5": 732.8,
+  "1-9": 409.2,
+  "5-9": 0.0,
+  "2-6": 385.8,
+  "2-10": 302.1,
+  "6-10": 117.9,
+  "3-5": 814.2,
+  "4-5": 751.4,
+  "5-27": 53.3,
+  "5-6": 226.6,
+  "1-2": 722.9
+ },
+ "35a_35h_tag1_tag5_boundary": {
+  "N/L": {
+   "theta_deg": 0.0,
+   "boundary_nodes": 14,
+   "luminal_height_above_valve_plane_mm": 2.69,
+   "epicardial_height_above_valve_plane_mm": 4.08,
+   "max_height_above_valve_plane_mm": 4.08,
+   "min_height_above_valve_plane_mm": 2.26,
+   "ring_point_height_mm": -0.2,
+   "luminal_height_above_ring_mm": 2.89,
+   "epicardial_height_above_ring_mm": 4.28,
+   "de_Kerchove_external_junction_mm": 0.3,
+   "below_valve_plane": false
+  },
+  "LCS": {
+   "theta_deg": 60.2,
+   "boundary_nodes": 5,
+   "luminal_height_above_valve_plane_mm": 2.7,
+   "epicardial_height_above_valve_plane_mm": 2.8,
+   "max_height_above_valve_plane_mm": 2.93,
+   "min_height_above_valve_plane_mm": 2.64,
+   "ring_point_height_mm": -0.2,
+   "luminal_height_above_ring_mm": 2.89,
+   "epicardial_height_above_ring_mm": 2.99,
+   "de_Kerchove_external_junction_mm": 0.5,
+   "below_valve_plane": false
+  },
+  "L/R": {
+   "theta_deg": 120.4,
+   "boundary_nodes": 10,
+   "luminal_height_above_valve_plane_mm": 4.23,
+   "epicardial_height_above_valve_plane_mm": 4.43,
+   "max_height_above_valve_plane_mm": 5.0,
+   "min_height_above_valve_plane_mm": 3.81,
+   "ring_point_height_mm": -0.01,
+   "luminal_height_above_ring_mm": 4.23,
+   "epicardial_height_above_ring_mm": 4.44,
+   "de_Kerchove_external_junction_mm": 4.6,
+   "below_valve_plane": false
+  },
+  "RCS": {
+   "theta_deg": 180.7,
+   "boundary_nodes": 13,
+   "luminal_height_above_valve_plane_mm": 2.58,
+   "epicardial_height_above_valve_plane_mm": 3.57,
+   "max_height_above_valve_plane_mm": 4.05,
+   "min_height_above_valve_plane_mm": 2.44,
+   "ring_point_height_mm": -0.01,
+   "luminal_height_above_ring_mm": 2.59,
+   "epicardial_height_above_ring_mm": 3.58,
+   "de_Kerchove_external_junction_mm": 2.4,
+   "below_valve_plane": false
+  },
+  "R/N": {
+   "theta_deg": 241.0,
+   "boundary_nodes": 15,
+   "luminal_height_above_valve_plane_mm": 3.66,
+   "epicardial_height_above_valve_plane_mm": 3.33,
+   "max_height_above_valve_plane_mm": 3.97,
+   "min_height_above_valve_plane_mm": 2.9,
+   "ring_point_height_mm": 0.18,
+   "luminal_height_above_ring_mm": 3.48,
+   "epicardial_height_above_ring_mm": 3.16,
+   "de_Kerchove_external_junction_mm": 2.5,
+   "below_valve_plane": false
+  },
+  "NCS": {
+   "theta_deg": 300.5,
+   "boundary_nodes": 20,
+   "luminal_height_above_valve_plane_mm": 4.01,
+   "epicardial_height_above_valve_plane_mm": 4.97,
+   "max_height_above_valve_plane_mm": 4.97,
+   "min_height_above_valve_plane_mm": 3.72,
+   "ring_point_height_mm": -0.08,
+   "luminal_height_above_ring_mm": 4.09,
+   "epicardial_height_above_ring_mm": 5.05,
+   "de_Kerchove_external_junction_mm": -0.1,
+   "below_valve_plane": false
+  }
+ },
+ "35h_precondition_8.5_item9": {
+  "any_position_below_valve_plane": false,
+  "positions_below": [],
+  "positions_without_boundary": []
+ },
+ "existing_lv_muscle_above_aortic_valve_plane_by_sinus": {
+  "rule": "LV muscle tags 1, 25, 29 within the ring radius + 6 mm of the root axis; per 5-deg bin the highest element centroid above the valve mid-plane; the disc half-thickness is 2.86 mm, so heights up to that are muscle beside the disc",
+  "sinuses": {
+   "L (0-120.4)": {
+    "per_5deg_bin_max_height_above_valve_plane_mm_min_median_max": [
+     2.15,
+     2.7,
+     4.57
+    ],
+    "at_sector_midline_mm": 2.61,
+    "empty_bins": 0
+   },
+   "R (120.4-241)": {
+    "per_5deg_bin_max_height_above_valve_plane_mm_min_median_max": [
+     2.68,
+     3.42,
+     5.13
+    ],
+    "at_sector_midline_mm": 2.68,
+    "empty_bins": 0
+   },
+   "N (241-360)": {
+    "per_5deg_bin_max_height_above_valve_plane_mm_min_median_max": [
+     3.3,
+     3.95,
+     4.76
+    ],
+    "at_sector_midline_mm": 3.97,
+    "empty_bins": 0
+   }
+  },
+  "theta_where_existing_exceeds_2.4mm_in_the_RCC_lune_135.5_206": 15,
+  "profile_5deg_bins": [
+   3.05,
+   2.7,
+   2.15,
+   2.3,
+   2.7,
+   2.4,
+   2.41,
+   2.45,
+   2.46,
+   2.4,
+   2.5,
+   2.59,
+   2.61,
+   2.64,
+   2.49,
+   3.16,
+   3.34,
+   3.79,
+   3.42,
+   3.53,
+   4.03,
+   4.15,
+   4.08,
+   4.57,
+   4.54,
+   4.55,
+   4.89,
+   5.13,
+   4.74,
+   4.85,
+   4.37,
+   4.27,
+   3.8,
+   3.73,
+   3.61,
+   2.86,
+   2.68,
+   2.94,
+   2.84,
+   2.98,
+   3.2,
+   3.24,
+   3.16,
+   3.21,
+   3.36,
+   3.76,
+   3.48,
+   3.19,
+   3.23,
+   3.49,
+   3.41,
+   3.3,
+   3.55,
+   3.6,
+   3.75,
+   3.5,
+   3.82,
+   3.86,
+   4.3,
+   4.01,
+   3.97,
+   4.59,
+   4.65,
+   4.72,
+   4.76,
+   4.69,
+   4.58,
+   4.33,
+   4.23,
+   3.95,
+   3.78,
+   3.61
+  ]
+ },
+ "muscle_above_aortic_valve_plane": {
+  "L": {
+   "elements": 1495,
+   "volume_mm3": 168.7,
+   "max_height_above_valve_plane_mm": 4.57,
+   "tags": {
+    "1": 1495
+   }
+  },
+  "R": {
+   "elements": 14131,
+   "volume_mm3": 1635.7,
+   "max_height_above_valve_plane_mm": 25.0,
+   "tags": {
+    "1": 1777,
+    "2": 12354
+   }
+  },
+  "N": {
+   "elements": 17401,
+   "volume_mm3": 2021.0,
+   "max_height_above_valve_plane_mm": 25.0,
+   "tags": {
+    "1": 5432,
+    "2": 11969
+   }
+  }
+ },
+ "35e_rv_contact_on_aortic_root": {
+  "L/R": {
+   "contact_nodes": 0,
+   "max_height_above_valve_plane_mm": null,
+   "max_height_above_ring_mm": null,
+   "de_Kerchove_mm": 4.6
+  },
+  "RCS": {
+   "contact_nodes": 126,
+   "max_height_above_valve_plane_mm": 20.51,
+   "max_height_above_ring_mm": 20.52,
+   "de_Kerchove_mm": 2.4
+  }
+ },
+ "35d_wall_thickness_20mm_above_valve": {
+  "aorta (Hasdemir 1.6 +- 0.4 mm)": {
+   "nodes_in_slab": 1009,
+   "thickness_mm_median_min_max_over_15deg_sectors": [
+    3.24,
+    2.37,
+    4.45
+   ],
+   "vessel_max_height_mm": 41.8
+  },
+  "pulmonary artery (Hasdemir 1.01 +- 0.4 mm)": {
+   "nodes_in_slab": 411,
+   "thickness_mm_median_min_max_over_15deg_sectors": [
+    5.37,
+    2.92,
+    13.81
+   ],
+   "vessel_max_height_mm": 21.2
+  },
+  "label": "a comparison of construction constants (aorta and pulmonary artery are 2 mm distance-map shells)"
+ },
+ "muscle_above_pulmonary_valve_plane": {
+  "posterior_sinus_centre_ring_node (nearest the aortic wall)": 239905,
+  "sinuses (wide selection, r < 30 mm)": {
+   "posterior": {
+    "elements": 9965,
+    "volume_mm3": 1174.0,
+    "max_height_above_valve_plane_mm": 10.27,
+    "lowest_ring_point_height_mm (nadir proxy)": -2.88,
+    "max_height_above_nadir_proxy_mm": 13.15
+   },
+   "sinus_at_+120": {
+    "elements": 4765,
+    "volume_mm3": 565.4,
+    "max_height_above_valve_plane_mm": 6.03,
+    "lowest_ring_point_height_mm (nadir proxy)": -3.68,
+    "max_height_above_nadir_proxy_mm": 9.7
+   },
+   "sinus_at_-120": {
+    "elements": 13896,
+    "volume_mm3": 1665.8,
+    "max_height_above_valve_plane_mm": 10.23,
+    "lowest_ring_point_height_mm (nadir proxy)": -2.81,
+    "max_height_above_nadir_proxy_mm": 13.04
+   }
+  },
+  "existing_rv_muscle_by_sinus (ring radius + 6 mm)": {
+   "posterior (300-60)": {
+    "per_5deg_bin_max_height_above_valve_plane_mm_min_median_max": [
+     1.98,
+     5.17,
+     5.86
+    ],
+    "at_sector_midline_mm": 4.98,
+    "empty_bins": 3
+   },
+   "+120 (60-180)": {
+    "per_5deg_bin_max_height_above_valve_plane_mm_min_median_max": [
+     3.12,
+     5.06,
+     6.03
+    ],
+    "at_sector_midline_mm": 5.35,
+    "empty_bins": 0
+   },
+   "-120 (180-300)": {
+    "per_5deg_bin_max_height_above_valve_plane_mm_min_median_max": [
+     3.54,
+     4.88,
+     5.89
+    ],
+    "at_sector_midline_mm": 5.76,
+    "empty_bins": 3
+   }
+  },
+  "lowest_ring_point_per_sinus_mm (nadir proxy)": {
+   "posterior (300-60)": -2.88,
+   "+120 (60-180)": -3.68,
+   "-120 (180-300)": -2.81
+  },
+  "disc_half_thickness_mm": 2.91,
+  "profile_5deg_bins": [
+   4.98,
+   5.26,
+   5.38,
+   5.42,
+   5.37,
+   5.48,
+   5.63,
+   5.54,
+   5.56,
+   5.58,
+   5.17,
+   5.86,
+   5.69,
+   6.03,
+   6.0,
+   5.73,
+   4.97,
+   5.07,
+   5.5,
+   5.65,
+   5.4,
+   5.24,
+   5.11,
+   5.01,
+   5.35,
+   5.65,
+   5.05,
+   4.14,
+   3.99,
+   3.38,
+   3.12,
+   3.3,
+   3.32,
+   3.68,
+   3.33,
+   3.75,
+   3.95,
+   4.35,
+   4.23,
+   4.54,
+   4.18,
+   4.53,
+   4.88,
+   4.98,
+   5.38,
+   5.36,
+   5.6,
+   5.56,
+   5.76,
+   5.89,
+   5.89,
+   5.67,
+   5.45,
+   4.83,
+   4.38,
+   3.54,
+   3.61,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   1.98,
+   2.39,
+   2.83,
+   2.83,
+   3.0,
+   3.6,
+   4.7,
+   4.94,
+   4.89
+  ]
+ },
+ "35f_infundibulum_cut": {
+  "definition": "0 % = the RV cavity node on the posterior wall nearest the projection, along the RVOT axis (PV disc normal), of the lowest PV-ring point of its posterior aspect (within 45 deg of the aortic side) down to the tricuspid-annulus level; 100 % = that ring point; span = surface distance (2-ring) between them. Three readings of \"the tricuspid-annulus level\" are given; the first is used for the contact areas below",
+  "variants": {
+   "TV ring node nearest the PV ring (superior tricuspid annulus)": {
+    "tricuspid_annulus_level_height_mm": -15.72,
+    "node_0pct": 18155,
+    "node_100pct": 119828,
+    "posterior_span_mm": 10.22,
+    "vs_Jakiel_26.9_pm_6.5_mm": "outside",
+    "candidates": {
+     "37.3 % of the span (07:30 rule)": {
+      "distance_from_0pct_mm": 3.81,
+      "node": 97474,
+      "height_above_pv_plane_mm": -9.27
+     },
+     "12.7 mm above 0 % (D6, primary)": {
+      "distance_from_0pct_mm": 12.7,
+      "node": 119828,
+      "height_above_pv_plane_mm": -2.88
+     },
+     "15.3 mm below the ring": {
+      "distance_from_0pct_mm": -5.08,
+      "node": 18155,
+      "height_above_pv_plane_mm": -11.99
+     }
+    },
+    "gap_12.7mm_minus_37.3pct_mm": 8.89
+   },
+   "TV ring centroid": {
+    "tricuspid_annulus_level_height_mm": -29.53,
+    "node_0pct": 482429,
+    "node_100pct": 119828,
+    "posterior_span_mm": 116.31,
+    "vs_Jakiel_26.9_pm_6.5_mm": "outside",
+    "candidates": {
+     "37.3 % of the span (07:30 rule)": {
+      "distance_from_0pct_mm": 43.38,
+      "node": 397112,
+      "height_above_pv_plane_mm": -10.19
+     },
+     "12.7 mm above 0 % (D6, primary)": {
+      "distance_from_0pct_mm": 12.7,
+      "node": 92982,
+      "height_above_pv_plane_mm": -21.03
+     },
+     "15.3 mm below the ring": {
+      "distance_from_0pct_mm": 101.01,
+      "node": 400069,
+      "height_above_pv_plane_mm": -0.93
+     }
+    },
+    "gap_12.7mm_minus_37.3pct_mm": -30.68
+   },
+   "highest TV ring node along the RVOT axis": {
+    "tricuspid_annulus_level_height_mm": -14.62,
+    "node_0pct": 18155,
+    "node_100pct": 119828,
+    "posterior_span_mm": 10.22,
+    "vs_Jakiel_26.9_pm_6.5_mm": "outside",
+    "candidates": {
+     "37.3 % of the span (07:30 rule)": {
+      "distance_from_0pct_mm": 3.81,
+      "node": 97474,
+      "height_above_pv_plane_mm": -9.27
+     },
+     "12.7 mm above 0 % (D6, primary)": {
+      "distance_from_0pct_mm": 12.7,
+      "node": 119828,
+      "height_above_pv_plane_mm": -2.88
+     },
+     "15.3 mm below the ring": {
+      "distance_from_0pct_mm": -5.08,
+      "node": 18155,
+      "height_above_pv_plane_mm": -11.99
+     }
+    },
+    "gap_12.7mm_minus_37.3pct_mm": 8.89
+   }
+  },
+  "contact_area_mm2": {
+   "tag2_tag5 (infundibulum on the aortic root), all heights": 732.8,
+   "tag1_tag2 above the D6 split height (within 40 mm of the RVOT axis)": 68.3,
+   "tag1_tag2 above the 37.3 % height": 139.8,
+   "split_height_above_pv_plane_mm": -2.88
+  }
+ },
+ "35g_supraventricular_crest": {
+  "tv_to_pv_ring_surface_distance_mm": 20.76,
+  "path_nodes": 14,
+  "wall_thickness_along_path_mm (nearest non-RV-cavity boundary)": {
+   "at_tv_end": 4.67,
+   "median": 4.23,
+   "max": 4.84,
+   "at_pv_end": 4.48
+  },
+  "Jakiel": "origin 12.3 +- 2.9 mm, termination 9.2 +- 1.9 mm",
+  "tag": "no supraventricular-crest or septoparietal-band tag in tags_lvrv.json"
+ },
+ "35b_35c": "after steps 2c-2d (no lune is built at step 0)",
+ "wall_s": 19.4
+}

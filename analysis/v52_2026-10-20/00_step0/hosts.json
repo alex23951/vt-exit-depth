@@ -1,0 +1,331 @@
+{
+ "A35_KCL": {
+  "record": {
+   "id": 7253863,
+   "doi": "10.5281/zenodo.7253863",
+   "title": "Whole Torso Computational Models",
+   "license": {
+    "id": "cc-by-4.0"
+   },
+   "published": "2022-10-26",
+   "creators": [
+    "Shuang Qian, Martin Bishop"
+   ],
+   "file": "KCL_torso1.zip",
+   "file_id": "d4471b7d-4471-47c8-a34f-5d2064be89f5",
+   "bytes": 167823369,
+   "md5": "md5:23082fcd5649f39671e3d831121948cb",
+   "info_pdf": "KCL_TorsoComputationalModels_Info.pdf (file id feda745d-7806-4e72-88bb-2ebe2ebc0672), tag table read"
+  },
+  "i_files_open": {
+   "pass": true,
+   "how": "openCARP text format (.pts um, .elem Tt with tag, .lon), read with numpy / pandas; meshtool reads carp_txt natively"
+  },
+  "ii_size_and_memory": {
+   "nodes": 1689018,
+   "elements": 9686213,
+   "host_heart_elements_removed (tags 34, 35)": 2213581,
+   "tags": {
+    "1": 3550438,
+    "2": 169456,
+    "3": 1183526,
+    "4": 32853,
+    "5": 201799,
+    "6": 69370,
+    "7": 17017,
+    "8": 716567,
+    "9": 15625,
+    "10": 22620,
+    "11": 2297,
+    "12": 54277,
+    "13": 36908,
+    "14": 151438,
+    "15": 90639,
+    "16": 7411,
+    "17": 10426,
+    "18": 2044,
+    "19": 16875,
+    "20": 39196,
+    "21": 45365,
+    "22": 33352,
+    "23": 32451,
+    "24": 335147,
+    "25": 555191,
+    "26": 1992,
+    "27": 2702,
+    "28": 2893,
+    "29": 2392,
+    "30": 3897,
+    "31": 18262,
+    "32": 15358,
+    "33": 32848,
+    "34": 459145,
+    "35": 1754436
+   },
+   "estimate_host_alone": {
+    "by_nodes_gb": 5.11,
+    "by_elements_gb": 4.64,
+    "basis": "total process memory of the v5.1 lead-field solve (2 x 3.0 GB) scaled by nodes or by elements"
+   },
+   "estimate_with_pilot_heart (host heart removed, pilot ventricles 375k nodes / 1.94M elements added)": {
+    "by_nodes_gb": 6.25,
+    "by_elements_gb": 4.51,
+    "basis": "total process memory of the v5.1 lead-field solve (2 x 3.0 GB) scaled by nodes or by elements"
+   },
+   "fits_single_process_7.7GB": true,
+   "note": "smaller than the v5.1 heart-torso mesh in nodes; a measured subset run is still due before the solve (15.1)"
+  },
+  "iii_host_heart_axes": {
+   "inputs_present": "LV wall 35, RV wall 34, LV / RV blood pools 25 / 24, valves 16-19: the v5.1 Laplace set-up (apex patch, valve rims, endocardium, epicardium) can be built",
+   "solves_run": false,
+   "reason_not_run": "item (iv) already fails, so the arm is not run"
+  },
+  "iv_electrode_landmarks": {
+   "bones": "one tag (3) for the whole skeleton, and the skeleton is one connected component, so single bones are told apart only by position",
+   "sternum": {
+    "found": true,
+    "anterior_midline_bone_z_range": [
+     -165,
+     15
+    ]
+   },
+   "intercostal_spaces": "ribs present laterally from the top cut to about z -265 mm; rib gaps would have to be read by position",
+   "clavicles": "the mesh is cut at z +75 mm through the lung apices; clavicles not separable from ribs and scapulae by tag",
+   "costal_margin": "lower anterior rib border near z -165 to -205 mm (by position)",
+   "iliac_crest": {
+    "found": false,
+    "reason": "the mesh ends at z -306 mm; below z -245 mm the bone narrows to the spine (x -31 to +54 mm in the last slab): no iliac wing is in the mesh"
+   },
+   "pass": false
+  },
+  "bone_slabs_20mm": [
+   {
+    "z_top": 75,
+    "bone_x_range": [
+     -148.7,
+     165.2
+    ],
+    "midline_bone_most_anterior_y": -210.2
+   },
+   {
+    "z_top": 55,
+    "bone_x_range": [
+     -147.2,
+     153.0
+    ],
+    "midline_bone_most_anterior_y": -220.3
+   },
+   {
+    "z_top": 35,
+    "bone_x_range": [
+     -141.2,
+     146.0
+    ],
+    "midline_bone_most_anterior_y": -234.0
+   },
+   {
+    "z_top": 15,
+    "bone_x_range": [
+     -146.4,
+     143.0
+    ],
+    "midline_bone_most_anterior_y": -252.2
+   },
+   {
+    "z_top": -5,
+    "bone_x_range": [
+     -149.2,
+     143.9
+    ],
+    "midline_bone_most_anterior_y": -262.3
+   },
+   {
+    "z_top": -25,
+    "bone_x_range": [
+     -146.2,
+     144.6
+    ],
+    "midline_bone_most_anterior_y": -267.6
+   },
+   {
+    "z_top": -45,
+    "bone_x_range": [
+     -146.7,
+     144.7
+    ],
+    "midline_bone_most_anterior_y": -270.4
+   },
+   {
+    "z_top": -65,
+    "bone_x_range": [
+     -146.4,
+     148.7
+    ],
+    "midline_bone_most_anterior_y": -270.4
+   },
+   {
+    "z_top": -85,
+    "bone_x_range": [
+     -139.1,
+     156.6
+    ],
+    "midline_bone_most_anterior_y": -270.4
+   },
+   {
+    "z_top": -105,
+    "bone_x_range": [
+     -136.5,
+     156.8
+    ],
+    "midline_bone_most_anterior_y": -270.4
+   },
+   {
+    "z_top": -125,
+    "bone_x_range": [
+     -137.8,
+     153.6
+    ],
+    "midline_bone_most_anterior_y": -270.3
+   },
+   {
+    "z_top": -145,
+    "bone_x_range": [
+     -139.9,
+     152.9
+    ],
+    "midline_bone_most_anterior_y": -265.5
+   },
+   {
+    "z_top": -165,
+    "bone_x_range": [
+     -139.8,
+     152.2
+    ],
+    "midline_bone_most_anterior_y": -94.1
+   },
+   {
+    "z_top": -185,
+    "bone_x_range": [
+     -136.8,
+     147.0
+    ],
+    "midline_bone_most_anterior_y": -113.9
+   },
+   {
+    "z_top": -205,
+    "bone_x_range": [
+     -132.5,
+     143.1
+    ],
+    "midline_bone_most_anterior_y": -115.7
+   },
+   {
+    "z_top": -225,
+    "bone_x_range": [
+     -123.4,
+     135.0
+    ],
+    "midline_bone_most_anterior_y": -132.4
+   },
+   {
+    "z_top": -245,
+    "bone_x_range": [
+     -100.8,
+     117.9
+    ],
+    "midline_bone_most_anterior_y": -139.4
+   },
+   {
+    "z_top": -265,
+    "bone_x_range": [
+     -100.9,
+     55.0
+    ],
+    "midline_bone_most_anterior_y": -145.5
+   },
+   {
+    "z_top": -285,
+    "bone_x_range": [
+     -31.0,
+     54.3
+    ],
+    "midline_bone_most_anterior_y": -146.0
+   },
+   {
+    "z_top": -305,
+    "bone_x_range": [
+     -13.9,
+     41.7
+    ],
+    "midline_bone_most_anterior_y": -146.3
+   }
+  ],
+  "A35_verdict": "not run: check (iv) fails (no iliac crest in the host mesh, so the LL electrode cannot be placed by the Kligfield landmark rule; the clavicles are not identifiable either)",
+  "host_lung_value_recorded_not_used_S_m": 0.0714
+ },
+ "A36_Moss": {
+  "record": {
+   "id": 8285403,
+   "doi": "10.5281/zenodo.8285403",
+   "title": "Tetrahedral meshes of male human torso and heart",
+   "license": {
+    "id": "eupl-1.2"
+   },
+   "published": "2023-08-26",
+   "creators": [
+    "Moss, Robin",
+    "Wuelfers, Eike M",
+    "Seemann, Gunnar"
+   ],
+   "file": "Torso.vtu",
+   "file_id": "d776d4da-75d0-4d46-b790-904d8c959197",
+   "bytes": 2363848659,
+   "md5": "md5:71c36ab03e5d6f6b8da410b895a02f82"
+  },
+  "i_readable": {
+   "pass": true,
+   "how": "VTK XML UnstructuredGrid, header_type UInt64, inline base64 \"binary\" arrays, no compressor: parsed with the Python standard library (xml text, base64, struct); the full Material array (133,089,852 characters) was fetched and decoded by HTTP range request; meshtool VTU input not tried"
+  },
+  "ii_size_and_memory": {
+   "points": 4252911,
+   "cells": 24954345,
+   "estimate_torso_alone": {
+    "by_nodes_gb": 12.87,
+    "by_elements_gb": 11.95,
+    "basis": "total process memory of the v5.1 lead-field solve (2 x 3.0 GB) scaled by nodes or by elements"
+   },
+   "fits_single_process_7.7GB": false,
+   "note": "about twice the v5.1 heart-torso mesh in cells and nodes before the pilot heart is added; the estimate exceeds WSL's 7.7 GB under either scaling"
+  },
+  "iii_skeletal_muscle_fibres": {
+   "array": "CellData FibreXYZ (Float64, 3 components) exists",
+   "muscle_cells (Material 8)": 0,
+   "sampled_muscle_cells (seed 20261020)": 0,
+   "sampled_with_nonzero_fibre": 0,
+   "control_left_ventricle_cells (Material 31) sampled 20, nonzero": 20,
+   "reading": "Torso.vtu holds no skeletal-muscle cells: Material 8 (Muscles_Skeleton) is listed in material.tab but absent from the mesh (its Material range is 2-62 and no cell is 8), so there is no muscle to give conductivities or fibres to"
+  },
+  "material_counts": {
+   "2 Fatty_Tissue": 6321792,
+   "3 Bones": 169968,
+   "6 Skin": 1767019,
+   "9 Blood": 5808982,
+   "17 Lung": 1265249,
+   "18 Intestine": 118409,
+   "19 Kidney": 110947,
+   "20 Liver": 501223,
+   "23 Spleen": 237078,
+   "26 Urinary_Bladder": 221260,
+   "30 Ventricle_Right": 2497581,
+   "31 Ventricle_Left": 3508140,
+   "32 Atrium_Right": 917873,
+   "33 Atrium_Left": 619449,
+   "60 Vena_Cava": 231160,
+   "61 Pulmonary_Trunk": 316675,
+   "62 Aorta": 341540
+  },
+  "A36_verdict": "not run: Torso.vtu contains no skeletal muscle (Material 8 absent), and check (ii) fails (the memory estimate for the torso alone exceeds the 7.7 GB single-process budget)",
+  "download_bytes_used": 133168588,
+  "wall_s": 17.0
+ }
+}

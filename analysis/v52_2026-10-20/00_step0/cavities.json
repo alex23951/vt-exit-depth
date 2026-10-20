@@ -1,0 +1,833 @@
+{
+ "Y5HYEDL4": {
+  "boundary_components": {
+   "0": {
+    "faces": 63936,
+    "tags": [
+     1,
+     2,
+     8,
+     10,
+     28,
+     29
+    ]
+   },
+   "1": {
+    "faces": 34376,
+    "tags": [
+     4,
+     8,
+     16,
+     17,
+     20,
+     26,
+     28
+    ]
+   },
+   "2": {
+    "faces": 159362,
+    "tags": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     26,
+     27
+    ]
+   },
+   "3": {
+    "faces": 50626,
+    "tags": [
+     1,
+     7,
+     9,
+     25
+    ]
+   },
+   "4": {
+    "faces": 26162,
+    "tags": [
+     3,
+     7,
+     11,
+     12,
+     13,
+     14,
+     15,
+     26
+    ]
+   }
+  },
+  "outer_component_holds_the_great-vessel_lumens": true,
+  "LV": {
+   "component": 3,
+   "faces": 50626,
+   "edge_use": {
+    "edges": 75939,
+    "in_1_face": 0,
+    "in_2_faces": 75939,
+    "in_3plus_faces": 0
+   },
+   "closed": true
+  },
+  "RV": {
+   "component": 0,
+   "faces": 63936,
+   "edge_use": {
+    "edges": 95904,
+    "in_1_face": 0,
+    "in_2_faces": 95904,
+    "in_3plus_faces": 0
+   },
+   "closed": true
+  },
+  "LA": {
+   "component": 4,
+   "faces": 26162,
+   "edge_use": {
+    "edges": 39243,
+    "in_1_face": 0,
+    "in_2_faces": 39243,
+    "in_3plus_faces": 0
+   },
+   "closed": true,
+   "veins_on_cavity_surface": {
+    "LSPV": {
+     "faces": 377,
+     "ostium_loops": [
+      {
+       "nodes": 71,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "LIPV": {
+     "faces": 186,
+     "ostium_loops": [
+      {
+       "nodes": 52,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "RSPV": {
+     "faces": 706,
+     "ostium_loops": [
+      {
+       "nodes": 92,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "RIPV": {
+     "faces": 569,
+     "ostium_loops": [
+      {
+       "nodes": 88,
+       "simple_cycle": false
+      }
+     ]
+    },
+    "LAA": {
+     "faces": 569,
+     "ostium_loops": [
+      {
+       "nodes": 87,
+       "simple_cycle": true
+      }
+     ]
+    }
+   }
+  },
+  "RA": {
+   "component": 1,
+   "faces": 34376,
+   "edge_use": {
+    "edges": 51564,
+    "in_1_face": 0,
+    "in_2_faces": 51564,
+    "in_3plus_faces": 0
+   },
+   "closed": true,
+   "veins_on_cavity_surface": {
+    "SVC": {
+     "faces": 815,
+     "ostium_loops": [
+      {
+       "nodes": 103,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "IVC": {
+     "faces": 926,
+     "ostium_loops": [
+      {
+       "nodes": 75,
+       "simple_cycle": false
+      }
+     ]
+    }
+   }
+  },
+  "voxel": {
+   "size_mm": 0.75,
+   "grid": [
+    "187",
+    "170",
+    "190"
+   ],
+   "solid_fraction": 0.145
+  },
+  "fills": {
+   "LV": {
+    "volume_ml": 162.1,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     75.0,
+     42.5,
+     48.1
+    ]
+   },
+   "RV": {
+    "volume_ml": 185.5,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     64.6,
+     33.1,
+     56.3
+    ]
+   },
+   "LA": {
+    "volume_ml": 55.7,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     64.3,
+     85.4,
+     91.8
+    ]
+   },
+   "RA": {
+    "volume_ml": 83.6,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     23.2,
+     53.1,
+     77.1
+    ]
+   },
+   "aortic_root": {
+    "volume_ml": 13.9,
+    "touches_grid_edge": false,
+    "leak": false,
+    "cap": "cut end closed by the convex hull of the vessel-wall and valve-disc nodes",
+    "seed_mm": [
+     62.7,
+     65.0,
+     93.4
+    ],
+    "wall_length_above_disc_mm": 34.9
+   },
+   "pulmonary_artery": {
+    "volume_ml": 3.8,
+    "touches_grid_edge": false,
+    "leak": false,
+    "cap": "cut end closed by the convex hull of the vessel-wall and valve-disc nodes",
+    "seed_mm": [
+     74.8,
+     51.3,
+     118.1
+    ],
+    "wall_length_above_disc_mm": 16.0
+   }
+  },
+  "dataset_info_volumes_ml": {
+   "LV": 215.342,
+   "RV": 209.546,
+   "LA": 65.5124,
+   "RA": 91.2059
+  },
+  "v51_C6_cavity_ml": [
+   172.0,
+   197.9
+  ],
+  "wall_s": 15.3
+ },
+ "6G8DD8S5": {
+  "boundary_components": {
+   "0": {
+    "faces": 44064,
+    "tags": [
+     1,
+     2,
+     8,
+     10,
+     28,
+     29
+    ]
+   },
+   "1": {
+    "faces": 36450,
+    "tags": [
+     4,
+     8,
+     16,
+     17,
+     26
+    ]
+   },
+   "2": {
+    "faces": 172522,
+    "tags": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     26,
+     27
+    ]
+   },
+   "3": {
+    "faces": 46688,
+    "tags": [
+     1,
+     7,
+     9,
+     25
+    ]
+   },
+   "4": {
+    "faces": 40502,
+    "tags": [
+     3,
+     7,
+     11,
+     12,
+     13,
+     14,
+     15,
+     26
+    ]
+   },
+   "5": {
+    "faces": 22,
+    "tags": [
+     3,
+     21
+    ]
+   }
+  },
+  "outer_component_holds_the_great-vessel_lumens": true,
+  "LV": {
+   "component": 3,
+   "faces": 46688,
+   "edge_use": {
+    "edges": 70028,
+    "in_1_face": 0,
+    "in_2_faces": 70024,
+    "in_3plus_faces": 4
+   },
+   "closed": true
+  },
+  "RV": {
+   "component": 0,
+   "faces": 44064,
+   "edge_use": {
+    "edges": 66081,
+    "in_1_face": 0,
+    "in_2_faces": 66066,
+    "in_3plus_faces": 15
+   },
+   "closed": true
+  },
+  "LA": {
+   "component": 4,
+   "faces": 40502,
+   "edge_use": {
+    "edges": 60753,
+    "in_1_face": 0,
+    "in_2_faces": 60753,
+    "in_3plus_faces": 0
+   },
+   "closed": true,
+   "veins_on_cavity_surface": {
+    "LSPV": {
+     "faces": 542,
+     "ostium_loops": [
+      {
+       "nodes": 76,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "LIPV": {
+     "faces": 366,
+     "ostium_loops": [
+      {
+       "nodes": 66,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "RSPV": {
+     "faces": 633,
+     "ostium_loops": [
+      {
+       "nodes": 83,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "RIPV": {
+     "faces": 769,
+     "ostium_loops": [
+      {
+       "nodes": 95,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "LAA": {
+     "faces": 1590,
+     "ostium_loops": [
+      {
+       "nodes": 140,
+       "simple_cycle": true
+      }
+     ]
+    }
+   }
+  },
+  "RA": {
+   "component": 1,
+   "faces": 36450,
+   "edge_use": {
+    "edges": 54675,
+    "in_1_face": 0,
+    "in_2_faces": 54675,
+    "in_3plus_faces": 0
+   },
+   "closed": true,
+   "veins_on_cavity_surface": {
+    "SVC": {
+     "faces": 935,
+     "ostium_loops": [
+      {
+       "nodes": 109,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "IVC": {
+     "faces": 943,
+     "ostium_loops": [
+      {
+       "nodes": 101,
+       "simple_cycle": true
+      }
+     ]
+    }
+   }
+  },
+  "voxel": {
+   "size_mm": 0.75,
+   "grid": [
+    "209",
+    "175",
+    "157"
+   ],
+   "solid_fraction": 0.162
+  },
+  "fills": {
+   "LV": {
+    "volume_ml": 149.2,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     119.9,
+     68.8,
+     48.7
+    ]
+   },
+   "RV": {
+    "volume_ml": 100.4,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     83.9,
+     25.9,
+     40.4
+    ]
+   },
+   "LA": {
+    "volume_ml": 115.0,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     53.7,
+     96.8,
+     74.0
+    ]
+   },
+   "RA": {
+    "volume_ml": 84.4,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     31.2,
+     42.9,
+     55.0
+    ]
+   },
+   "aortic_root": {
+    "volume_ml": 27.2,
+    "touches_grid_edge": false,
+    "leak": false,
+    "cap": "cut end closed by the convex hull of the vessel-wall and valve-disc nodes",
+    "seed_mm": [
+     58.1,
+     54.4,
+     58.0
+    ],
+    "wall_length_above_disc_mm": 41.8
+   },
+   "pulmonary_artery": {
+    "volume_ml": 11.0,
+    "touches_grid_edge": false,
+    "leak": false,
+    "cap": "cut end closed by the convex hull of the vessel-wall and valve-disc nodes",
+    "seed_mm": [
+     71.2,
+     38.0,
+     86.7
+    ],
+    "wall_length_above_disc_mm": 21.2
+   }
+  },
+  "dataset_info_volumes_ml": {
+   "LV": 211.758,
+   "RV": 128.689,
+   "LA": 149.416,
+   "RA": 104.737
+  },
+  "v51_C6_cavity_ml": [
+   157.8,
+   107.2
+  ],
+  "wall_s": 17.5
+ },
+ "7D98EVAR": {
+  "boundary_components": {
+   "0": {
+    "faces": 148112,
+    "tags": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     26,
+     27
+    ]
+   },
+   "1": {
+    "faces": 28836,
+    "tags": [
+     4,
+     8,
+     16,
+     17,
+     26
+    ]
+   },
+   "2": {
+    "faces": 25986,
+    "tags": [
+     3,
+     7,
+     11,
+     12,
+     13,
+     14,
+     15,
+     26
+    ]
+   },
+   "3": {
+    "faces": 48008,
+    "tags": [
+     1,
+     7,
+     9,
+     25
+    ]
+   },
+   "4": {
+    "faces": 47322,
+    "tags": [
+     1,
+     2,
+     8,
+     10,
+     28,
+     29
+    ]
+   }
+  },
+  "outer_component_holds_the_great-vessel_lumens": true,
+  "LV": {
+   "component": 3,
+   "faces": 48008,
+   "edge_use": {
+    "edges": 72010,
+    "in_1_face": 0,
+    "in_2_faces": 72008,
+    "in_3plus_faces": 2
+   },
+   "closed": true
+  },
+  "RV": {
+   "component": 4,
+   "faces": 47322,
+   "edge_use": {
+    "edges": 70971,
+    "in_1_face": 0,
+    "in_2_faces": 70959,
+    "in_3plus_faces": 12
+   },
+   "closed": true
+  },
+  "LA": {
+   "component": 2,
+   "faces": 25986,
+   "edge_use": {
+    "edges": 38979,
+    "in_1_face": 0,
+    "in_2_faces": 38979,
+    "in_3plus_faces": 0
+   },
+   "closed": true,
+   "veins_on_cavity_surface": {
+    "LSPV": {
+     "faces": 281,
+     "ostium_loops": [
+      {
+       "nodes": 61,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "LIPV": {
+     "faces": 175,
+     "ostium_loops": [
+      {
+       "nodes": 51,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "RSPV": {
+     "faces": 901,
+     "ostium_loops": [
+      {
+       "nodes": 99,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "RIPV": {
+     "faces": 236,
+     "ostium_loops": [
+      {
+       "nodes": 48,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "LAA": {
+     "faces": 970,
+     "ostium_loops": [
+      {
+       "nodes": 106,
+       "simple_cycle": true
+      }
+     ]
+    }
+   }
+  },
+  "RA": {
+   "component": 1,
+   "faces": 28836,
+   "edge_use": {
+    "edges": 43254,
+    "in_1_face": 0,
+    "in_2_faces": 43254,
+    "in_3plus_faces": 0
+   },
+   "closed": true,
+   "veins_on_cavity_surface": {
+    "SVC": {
+     "faces": 834,
+     "ostium_loops": [
+      {
+       "nodes": 102,
+       "simple_cycle": true
+      }
+     ]
+    },
+    "IVC": {
+     "faces": 1156,
+     "ostium_loops": [
+      {
+       "nodes": 116,
+       "simple_cycle": true
+      }
+     ]
+    }
+   }
+  },
+  "voxel": {
+   "size_mm": 0.75,
+   "grid": [
+    "204",
+    "159",
+    "160"
+   ],
+   "solid_fraction": 0.154
+  },
+  "fills": {
+   "LV": {
+    "volume_ml": 163.0,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     103.3,
+     62.9,
+     21.8
+    ]
+   },
+   "RV": {
+    "volume_ml": 113.9,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     73.6,
+     24.8,
+     46.3
+    ]
+   },
+   "LA": {
+    "volume_ml": 57.6,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     55.8,
+     74.9,
+     70.2
+    ]
+   },
+   "RA": {
+    "volume_ml": 67.0,
+    "touches_grid_edge": false,
+    "leak": false,
+    "seed_mm": [
+     33.0,
+     49.1,
+     66.1
+    ]
+   },
+   "aortic_root": {
+    "volume_ml": 17.3,
+    "touches_grid_edge": false,
+    "leak": false,
+    "cap": "cut end closed by the convex hull of the vessel-wall and valve-disc nodes",
+    "seed_mm": [
+     58.4,
+     55.1,
+     71.1
+    ],
+    "wall_length_above_disc_mm": 37.1
+   },
+   "pulmonary_artery": {
+    "volume_ml": 4.7,
+    "touches_grid_edge": false,
+    "leak": false,
+    "cap": "cut end closed by the convex hull of the vessel-wall and valve-disc nodes",
+    "seed_mm": [
+     70.4,
+     45.4,
+     97.5
+    ],
+    "wall_length_above_disc_mm": 18.9
+   }
+  },
+  "dataset_info_volumes_ml": {
+   "LV": 211.917,
+   "RV": 126.671,
+   "LA": 66.3907,
+   "RA": 73.0795
+  },
+  "v51_C6_cavity_ml": [
+   172.8,
+   122.5
+  ],
+  "wall_s": 13.8
+ }
+}

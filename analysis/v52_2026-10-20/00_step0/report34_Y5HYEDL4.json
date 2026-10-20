@@ -1,0 +1,1204 @@
+{
+ "heart": "Y5HYEDL4",
+ "item1": {
+  "fascicle_endpoints (FASCICLE ends, network51 durrer_sites)": {
+   "anterior": {
+    "node": 65188,
+    "z_phi": [
+     0.798,
+     59.8
+    ],
+    "aha_segment": 2
+   },
+   "septal": {
+    "node": 369975,
+    "z_phi": [
+     0.499,
+     -0.2
+    ],
+    "aha_segment": 9
+   },
+   "posterior": {
+    "node": 1411,
+    "z_phi": [
+     0.335,
+     -59.3
+    ],
+    "aha_segment": 14
+   }
+  },
+  "code_durrer_points (14_purkinje.py:93-94 divisions)": {
+   "anterior": {
+    "node": 65188,
+    "z_phi": [
+     0.798,
+     59.8
+    ],
+    "aha_segment": 2
+   },
+   "septal": {
+    "node": 369975,
+    "z_phi": [
+     0.499,
+     -0.2
+    ],
+    "aha_segment": 9
+   },
+   "posterior": {
+    "node": 1411,
+    "z_phi": [
+     0.335,
+     -59.3
+    ],
+    "aha_segment": 14
+   }
+  },
+  "endpoints_equal_code_points": {
+   "anterior": true,
+   "septal": true,
+   "posterior": true
+  }
+ },
+ "item2": {
+  "z_mean_min_max": {
+   "mitral_annulus (mv_rim)": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "aortic_valve (av_rim)": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "tricuspid (tv_rim)": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pulmonary (pv_rim)": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "septal_crest": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "moderator_band_septal_insertion (v5.1 rbb_low)": [
+    0.351,
+    2.8
+   ]
+  },
+  "axial_fraction_f_mean_min_max (aha51 frame: LV apex 0 -> mitral-ring centroid 1)": {
+   "mitral_annulus": [
+    1.0,
+    0.921,
+    1.061
+   ],
+   "aortic_valve": [
+    0.998,
+    0.888,
+    1.088
+   ],
+   "tricuspid": [
+    0.86,
+    0.741,
+    0.973
+   ],
+   "pulmonary": [
+    0.984,
+    0.9,
+    1.072
+   ],
+   "septal_crest": [
+    0.959,
+    0.888,
+    1.039
+   ],
+   "his_exit": [
+    0.858,
+    0.858,
+    0.858
+   ],
+   "moderator_band_septal_insertion": [
+    0.351,
+    0.351,
+    0.351
+   ]
+  },
+  "lv_long_axis_mm (apex -> mitral-ring centroid)": 105.0,
+  "septal_crest_nodes": 149,
+  "crest_nodes_on_rim_or_interface": {
+   "mv_rim": 61,
+   "av_rim": 88,
+   "avplane_iface": 0,
+   "ao_iface": 0,
+   "tv_rim": 0,
+   "pv_rim": 0,
+   "part_iface": 0
+  },
+  "crest_to_apex_mm_2ring": 100.21,
+  "crest_to_apex_mm_1ring_edges": 104.3,
+  "his_to_crest_mm": 6.55
+ },
+ "item3": {
+  "his_exit": {
+   "node": 305272,
+   "z_phi": [
+    0.919,
+    43.2
+   ],
+   "aha_segment": 3,
+   "on_left_septal_surface": true
+  },
+  "his_line_length_to_apex_mm": 96.4,
+  "line_10mm": {
+   "node": 32619,
+   "z_phi": [
+    0.83,
+    44.7
+   ]
+  },
+  "line_12.5mm": {
+   "node": 46420,
+   "z_phi": [
+    0.8,
+    43.4
+   ]
+  },
+  "line_16.5mm": {
+   "node": 20680,
+   "z_phi": [
+    0.764,
+    40.1
+   ]
+  },
+  "sheet_end_33mm": {
+   "node": 41632,
+   "z_phi": [
+    0.575,
+    18.7
+   ],
+   "aha_segment": 9
+  },
+  "D1_line_crossing_on_his_line": {
+   "node": 131319,
+   "s_mm": 28.7,
+   "z_phi": [
+    0.619,
+    24.9
+   ]
+  },
+  "septal_outflow": {
+   "mid_septal_point_at_16.5mm": 13172,
+   "its_z_phi": [
+    0.774,
+    47.9
+   ],
+   "nearest_v51_lv_distal_node": 229026,
+   "distance_mm": 2.31
+  }
+ },
+ "item4": {
+  "lv_junctions": 2221,
+  "rv_junctions": 1444,
+  "lv_junctions_per_aha_segment": {
+   "0": 13,
+   "1": 129,
+   "2": 107,
+   "3": 76,
+   "4": 134,
+   "5": 142,
+   "6": 109,
+   "7": 136,
+   "8": 175,
+   "9": 129,
+   "10": 168,
+   "11": 113,
+   "12": 84,
+   "13": 190,
+   "14": 195,
+   "15": 152,
+   "16": 133,
+   "17": 36
+  },
+  "lv_septal_junctions_per_third": {
+   "upper": 255,
+   "middle": 333,
+   "lower": 94
+  },
+  "lv_septal_junctions_above_D1_line": 255,
+  "above_D1_per_aha_segment": {
+   "2": 107,
+   "3": 76,
+   "8": 59,
+   "9": 13
+  },
+  "lv_endo_area_cm2": 153.3,
+  "rv_endo_area_cm2": 188.9,
+  "lv_junctions_per_cm2": 14.49,
+  "rv_junctions_per_cm2": 7.64,
+  "cross_check_UVC_z_ge_0.67_lv_septal_junctions": 217,
+  "cross_check_AHA_2_3_lv_junctions": 183
+ },
+ "item5": {
+  "cohort_tags": "tags_lvrv.json has no papillary-muscle or trabecular tag (LV, RV, LA, RA, Ao, PArt, valves, vein rings, FEC_LV / RV / SV, BB, AV_plane)",
+  "lv_endo_topology": {
+   "V": 22909,
+   "E": 68376,
+   "F": 45467,
+   "euler_characteristic": 0,
+   "boundary_loops": 2,
+   "surface_components": 1,
+   "edges_in_3_or_more_triangles (pinch edges)": 0,
+   "genus": 0.0
+  },
+  "rv_endo_topology": {
+   "V": 28134,
+   "E": 83986,
+   "F": 55852,
+   "euler_characteristic": 0,
+   "boundary_loops": 2,
+   "surface_components": 1,
+   "edges_in_3_or_more_triangles (pinch edges)": 0,
+   "genus": 0.0
+  },
+  "reading": "genus 0 means no handle: no free-running papillary muscle or trabecula bridges the cavity"
+ },
+ "items6_12": {
+  "v51_RB": {
+   "class_RB_edges": 67,
+   "arc_mm": 78.89,
+   "septal_end (rbb_low, the insertion)": {
+    "node": 16331,
+    "z_phi": [
+     0.351,
+     2.8
+    ]
+   },
+   "class_RB_ends_at (mb_end)": {
+    "node": 311002,
+    "z_phi": [
+     0.361,
+     0.2
+    ],
+    "on_rv_free_wall": true
+   },
+   "straight_moderator_band_edge_in_v51": true,
+   "v51_band_length_mm": 14.74,
+   "v51_band_speed_m_s": 1.5,
+   "v51_band_carries_pmj": false,
+   "rule_in_v51": "14_purkinje.py build(): RB down the RV septum to z 0.35, then a straight cavity-crossing edge to the anterior RV free wall at z 0.35 (75th percentile of phi in the free-wall band), where the RV distal tree is rooted; classed RB at 1.5 m/s by network51.py"
+  },
+  "item6_insertion_to_nearest_anterior_rv_free_wall_mm": 12.02,
+  "item12_candidate_end_node": {
+   "papillary_muscle_in_mesh": false,
+   "anterior_rv_free_wall_label_in_mesh": false,
+   "construction_used": "no such label exists: RV free-wall endocardium = RV endocardial nodes nearer the epicardium than the LV endocardium (as 14_purkinje.py); anterior = the half of the free-wall band (z within +-0.05 of the insertion) with phi above the band's circular mean; nearest such node to the insertion (inference, needs a word before step 2g)",
+   "node": 369808,
+   "z_phi": [
+    0.315,
+    21.6
+   ],
+   "chain_length_mm (straight, cavity-crossing)": 12.02,
+   "vs_Lee_Hur_13.6_mm_and_stop_37.8_mm": "under 37.8 mm",
+   "nearest_v51_rv_distal_node": 42158,
+   "distance_to_v51_mb_end_mm": 12.28
+  },
+  "item12_insertion_level": {
+   "rv_septal_crest_to_insertion_over_crest_to_apex": 0.82,
+   "level": "lower third",
+   "Lee_Hur_origins": "middle 25 of 36, upper third 13.9 %, lower third 11.1 %, top fifth 5.6 %"
+  }
+ },
+ "item7": {
+  "axial_mm (z_MA - 0.90) x base-apex length": 10.1,
+  "surface_mm_median_from_mitral_annulus_to_z0.90_on_lv_endo": 9.5,
+  "lv_distal_nodes_above_z0.90": 0
+ },
+ "item8": {
+  "pmj_graph_nodes_that_are_LB_TRUNK_or_FASCICLE_nodes": 0,
+  "pmj_kinds": {
+   "distal_lv": 2221,
+   "distal_rv": 1444
+  },
+  "LB_TRUNK_FASCICLE_graph_nodes": 125,
+  "their_mesh_nodes": 125,
+  "pmj_at_a_trunk_or_fascicle_mesh_node (a distal copy at the same mesh node)": 18,
+  "answer": "no: in v5.1 junctions sit on distal-network nodes only; LB_TRUNK and FASCICLE nodes are insulated and carry none"
+ },
+ "item9": {
+  "anterior": {
+   "code_point_node": 65188,
+   "z_phi": [
+    0.798,
+    59.8
+   ],
+   "aha_segment": 2,
+   "patch": "anterior_paraseptal",
+   "patch_node": 53314,
+   "euclid_mm": 32.51,
+   "surface_mm": 34.83
+  },
+  "septal": {
+   "code_point_node": 369975,
+   "z_phi": [
+    0.499,
+    -0.2
+   ],
+   "aha_segment": 9,
+   "patch": "central",
+   "patch_node": 63071,
+   "euclid_mm": 6.92,
+   "surface_mm": 7.12
+  },
+  "posterior": {
+   "code_point_node": 1411,
+   "z_phi": [
+    0.335,
+    -59.3
+   ],
+   "aha_segment": 14,
+   "patch": "posterior_paraseptal",
+   "patch_node": 32305,
+   "euclid_mm": 21.33,
+   "surface_mm": 23.03
+  }
+ },
+ "item10": {
+  "uvc_z_definition": "sims/biv_model/03_uvc.py: z = monotone remap of the Laplace field zeta (apex patch 0 -> every valve rim, the AV-plane, aortic, pulmonary and RA interfaces 1) so that its mean follows the normalised axial distance from the LV apex node to the MV + TV rim centroid; z = 1 exactly on that base set (the valve planes), not at the septal crest or the MV + TV centre",
+  "z_at_septal_crest_median": 1.0,
+  "crest_to_apex_mm": 100.21,
+  "D1_line_at_mm_from_crest": 33.4,
+  "D1_line_nodes": 169,
+  "D1_line_z_median_min_max": [
+   0.626,
+   0.591,
+   0.691
+  ],
+  "left_septal_nodes": 7798,
+  "above_D1_nodes": 4079,
+  "cross_check_UVC_z_ge_0.67_share_of_above": 0.895,
+  "cross_check_AHA_2_3_share_of_above": 0.779
+ },
+ "item11": {
+  "rule": "12 points at 2 mm spacing along the His line from the sheet origin (s = 0, 2, ..., 22 mm; assumption 49)",
+  "points": [
+   {
+    "s_mm": 0.0,
+    "node": 305272,
+    "z_phi": [
+     0.919,
+     43.2
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 2.0,
+    "node": 31325,
+    "z_phi": [
+     0.889,
+     44.5
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 4.0,
+    "node": 276391,
+    "z_phi": [
+     0.874,
+     44.9
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 6.0,
+    "node": 300202,
+    "z_phi": [
+     0.864,
+     45.3
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 8.0,
+    "node": 64036,
+    "z_phi": [
+     0.846,
+     45.2
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 10.0,
+    "node": 32619,
+    "z_phi": [
+     0.83,
+     44.7
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 12.0,
+    "node": 46420,
+    "z_phi": [
+     0.8,
+     43.4
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 14.0,
+    "node": 370961,
+    "z_phi": [
+     0.788,
+     42.2
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 16.0,
+    "node": 20680,
+    "z_phi": [
+     0.764,
+     40.1
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 18.0,
+    "node": 255372,
+    "z_phi": [
+     0.745,
+     38.5
+    ],
+    "aha_segment": 3,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 20.0,
+    "node": 70537,
+    "z_phi": [
+     0.722,
+     35.7
+    ],
+    "aha_segment": 9,
+    "on_left_septal_surface": true
+   },
+   {
+    "s_mm": 22.0,
+    "node": 54435,
+    "z_phi": [
+     0.7,
+     33.6
+    ],
+    "aha_segment": 9,
+    "on_left_septal_surface": true
+   }
+  ]
+ },
+ "item13": {
+  "his_line_nodes": 65,
+  "levels": [
+   {
+    "s_mm": 0.0,
+    "envelope_width_mm": 6.0,
+    "adopted_ant_mm": 4.73,
+    "adopted_post_mm": 1.27,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 3,
+     "a_min_max_mm": [
+      0.0,
+      0.72
+     ],
+     "width_mm": 0.72,
+     "midpoint_a_mm": 0.36
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 5,
+     "a_min_max_mm": [
+      0.0,
+      7.88
+     ],
+     "width_mm": 7.88,
+     "midpoint_a_mm": 3.94
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -45.25,
+     45.86
+    ],
+    "footprint_midpoint_a_mm": 0.36
+   },
+   {
+    "s_mm": 2.5,
+    "envelope_width_mm": 9.32,
+    "adopted_ant_mm": 7.34,
+    "adopted_post_mm": 1.98,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 2,
+     "a_min_max_mm": [
+      -1.04,
+      -0.73
+     ],
+     "width_mm": 0.31,
+     "midpoint_a_mm": -0.89
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 55,
+     "a_min_max_mm": [
+      -1.04,
+      38.82
+     ],
+     "width_mm": 39.87,
+     "midpoint_a_mm": 18.89
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -36.53,
+     38.82
+    ],
+    "footprint_midpoint_a_mm": -0.89
+   },
+   {
+    "s_mm": 5.0,
+    "envelope_width_mm": 12.64,
+    "adopted_ant_mm": 9.96,
+    "adopted_post_mm": 2.68,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 3,
+     "a_min_max_mm": [
+      -0.98,
+      -0.8
+     ],
+     "width_mm": 0.18,
+     "midpoint_a_mm": -0.89
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 77,
+     "a_min_max_mm": [
+      -0.98,
+      40.32
+     ],
+     "width_mm": 41.29,
+     "midpoint_a_mm": 19.67
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -26.8,
+     41.01
+    ],
+    "footprint_midpoint_a_mm": -0.89
+   },
+   {
+    "s_mm": 7.5,
+    "envelope_width_mm": 15.96,
+    "adopted_ant_mm": 12.57,
+    "adopted_post_mm": 3.39,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 5,
+     "a_min_max_mm": [
+      -1.04,
+      15.9
+     ],
+     "width_mm": 16.94,
+     "midpoint_a_mm": 7.43
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 26,
+     "a_min_max_mm": [
+      -11.51,
+      24.11
+     ],
+     "width_mm": 35.62,
+     "midpoint_a_mm": 6.3
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -27.15,
+     26.34
+    ],
+    "footprint_midpoint_a_mm": 7.43
+   },
+   {
+    "s_mm": 10.0,
+    "envelope_width_mm": 19.28,
+    "adopted_ant_mm": 15.19,
+    "adopted_post_mm": 4.09,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 24,
+     "a_min_max_mm": [
+      -1.4,
+      18.38
+     ],
+     "width_mm": 19.78,
+     "midpoint_a_mm": 8.49
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 92,
+     "a_min_max_mm": [
+      -22.99,
+      40.16
+     ],
+     "width_mm": 63.15,
+     "midpoint_a_mm": 8.58
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -29.85,
+     41.36
+    ],
+    "footprint_midpoint_a_mm": 8.49
+   },
+   {
+    "s_mm": 12.5,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 3,
+     "a_min_max_mm": [
+      -1.47,
+      -0.95
+     ],
+     "width_mm": 0.52,
+     "midpoint_a_mm": -1.21
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 22,
+     "a_min_max_mm": [
+      -28.6,
+      5.2
+     ],
+     "width_mm": 33.81,
+     "midpoint_a_mm": -11.7
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -30.28,
+     12.27
+    ],
+    "footprint_midpoint_a_mm": -1.21
+   },
+   {
+    "s_mm": 15.0,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 11,
+     "a_min_max_mm": [
+      -3.09,
+      0.81
+     ],
+     "width_mm": 3.9,
+     "midpoint_a_mm": -1.14
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 54,
+     "a_min_max_mm": [
+      -31.06,
+      32.91
+     ],
+     "width_mm": 63.97,
+     "midpoint_a_mm": 0.92
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -31.81,
+     40.84
+    ],
+    "footprint_midpoint_a_mm": -1.14
+   },
+   {
+    "s_mm": 17.5,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 4,
+     "a_min_max_mm": [
+      -3.15,
+      0.83
+     ],
+     "width_mm": 3.98,
+     "midpoint_a_mm": -1.16
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 59,
+     "a_min_max_mm": [
+      -4.42,
+      41.13
+     ],
+     "width_mm": 45.56,
+     "midpoint_a_mm": 18.36
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -9.21,
+     41.28
+    ],
+    "footprint_midpoint_a_mm": -1.16
+   },
+   {
+    "s_mm": 20.0,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 4,
+     "a_min_max_mm": [
+      -3.12,
+      0.0
+     ],
+     "width_mm": 3.12,
+     "midpoint_a_mm": -1.56
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 43,
+     "a_min_max_mm": [
+      -13.26,
+      34.58
+     ],
+     "width_mm": 47.84,
+     "midpoint_a_mm": 10.66
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -13.26,
+     40.76
+    ],
+    "footprint_midpoint_a_mm": -1.56
+   },
+   {
+    "s_mm": 22.5,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 6,
+     "a_min_max_mm": [
+      -3.39,
+      1.07
+     ],
+     "width_mm": 4.47,
+     "midpoint_a_mm": -1.16
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 52,
+     "a_min_max_mm": [
+      -30.26,
+      26.99
+     ],
+     "width_mm": 57.24,
+     "midpoint_a_mm": -1.63
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -31.62,
+     28.22
+    ],
+    "footprint_midpoint_a_mm": -1.16
+   },
+   {
+    "s_mm": 25.0,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 6,
+     "a_min_max_mm": [
+      -3.39,
+      1.48
+     ],
+     "width_mm": 4.88,
+     "midpoint_a_mm": -0.95
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 17,
+     "a_min_max_mm": [
+      -29.14,
+      10.73
+     ],
+     "width_mm": 39.86,
+     "midpoint_a_mm": -9.21
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -30.11,
+     10.73
+    ],
+    "footprint_midpoint_a_mm": -0.95
+   },
+   {
+    "s_mm": 27.5,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 7,
+     "a_min_max_mm": [
+      -4.03,
+      0.96
+     ],
+     "width_mm": 4.99,
+     "midpoint_a_mm": -1.54
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 39,
+     "a_min_max_mm": [
+      -15.52,
+      29.55
+     ],
+     "width_mm": 45.07,
+     "midpoint_a_mm": 7.01
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -28.64,
+     41.2
+    ],
+    "footprint_midpoint_a_mm": -1.54
+   },
+   {
+    "s_mm": 30.0,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 5,
+     "a_min_max_mm": [
+      -4.14,
+      1.4
+     ],
+     "width_mm": 5.54,
+     "midpoint_a_mm": -1.37
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 12,
+     "a_min_max_mm": [
+      -17.96,
+      1.4
+     ],
+     "width_mm": 19.36,
+     "midpoint_a_mm": -8.28
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -27.62,
+     1.4
+    ],
+    "footprint_midpoint_a_mm": -1.37
+   },
+   {
+    "s_mm": 32.5,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 7,
+     "a_min_max_mm": [
+      -4.91,
+      0.9
+     ],
+     "width_mm": 5.82,
+     "midpoint_a_mm": -2.01
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 56,
+     "a_min_max_mm": [
+      -17.37,
+      39.33
+     ],
+     "width_mm": 56.7,
+     "midpoint_a_mm": 10.98
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -23.59,
+     40.95
+    ],
+    "footprint_midpoint_a_mm": -2.01
+   },
+   {
+    "s_mm": 33.0,
+    "envelope_width_mm": 22.6,
+    "adopted_ant_mm": 17.8,
+    "adopted_post_mm": 4.8,
+    "footprint_LB_TRUNK_FASCICLE": {
+     "nodes": 3,
+     "a_min_max_mm": [
+      -4.91,
+      0.0
+     ],
+     "width_mm": 4.91,
+     "midpoint_a_mm": -2.46
+    },
+    "footprint_all_v51_LV_nodes_on_septum": {
+     "nodes": 48,
+     "a_min_max_mm": [
+      -5.87,
+      39.33
+     ],
+     "width_mm": 45.2,
+     "midpoint_a_mm": 16.73
+    },
+    "septal_surface_a_min_max_mm (nodes whose nearest line point is at this level)": [
+     -6.66,
+     40.95
+    ],
+    "footprint_midpoint_a_mm": -2.46
+   }
+  ],
+  "fascicle_endpoints": {
+   "anterior": {
+    "node": 65188,
+    "z_phi": [
+     0.798,
+     59.8
+    ],
+    "aha_segment": 2,
+    "on_left_septal_surface": true,
+    "s_mm": 10.91,
+    "a_mm": 18.38,
+    "beyond_sheet_end": false,
+    "adopted": {
+     "ant_limit": 16.14,
+     "post_limit": -4.35,
+     "inside": false,
+     "outside_by_mm": 2.24
+    },
+    "declined": {
+     "midpoint_a": 4.97,
+     "limits": [
+      -5.28,
+      15.21
+     ],
+     "inside": false,
+     "outside_by_mm": 3.17
+    }
+   },
+   "septal": {
+    "node": 369975,
+    "z_phi": [
+     0.499,
+     -0.2
+    ],
+    "aha_segment": 9,
+    "on_left_septal_surface": true,
+    "s_mm": 39.27,
+    "a_mm": -2.26,
+    "beyond_sheet_end": true,
+    "adopted": {
+     "inside": false,
+     "reason": "beyond the 33 mm sheet end (s = 39.3 mm)"
+    },
+    "declined": {
+     "inside": false,
+     "reason": "beyond the 33 mm sheet end (s = 39.3 mm)"
+    }
+   },
+   "posterior": {
+    "node": 1411,
+    "z_phi": [
+     0.335,
+     -59.3
+    ],
+    "aha_segment": 14,
+    "on_left_septal_surface": true,
+    "s_mm": 57.77,
+    "a_mm": -5.98,
+    "beyond_sheet_end": true,
+    "adopted": {
+     "inside": false,
+     "reason": "beyond the 33 mm sheet end (s = 57.8 mm)"
+    },
+    "declined": {
+     "inside": false,
+     "reason": "beyond the 33 mm sheet end (s = 57.8 mm)"
+    }
+   }
+  },
+  "anterior_minus_posterior_a_mm": 24.36,
+  "anterior_posterior_surface_distance_mm": 52.64,
+  "note_levels": "the anterior and posterior endpoints are at different levels (s and z above), so their separation is given as the difference in a and as the surface distance",
+  "envelope_on_left_septal_surface": {
+   "adopted (17.8 / 4.8 mm)": {
+    "envelope_nodes": 1002,
+    "off_septum_nodes": 0,
+    "off_septum_segments": {},
+    "envelope_area_mm2": 628.2,
+    "area_touching_off_septum_nodes_mm2": 0.0,
+    "off_septum_s_range_mm": null,
+    "off_septum_a_range_mm": null
+   },
+   "declined (centred on the LB_TRUNK + FASCICLE footprint midpoint)": {
+    "envelope_nodes": 989,
+    "off_septum_nodes": 0,
+    "off_septum_segments": {},
+    "envelope_area_mm2": 612.6,
+    "area_touching_off_septum_nodes_mm2": 0.0,
+    "off_septum_s_range_mm": null,
+    "off_septum_a_range_mm": null
+   },
+   "adopted_envelope_area_where_D1_allows_junctions": {
+    "area_mm2": 132.3,
+    "of_total_mm2": 628.2,
+    "share": 0.211,
+    "rule": "triangles of the envelope whose mean distance from the crest is at least L / 3 and whose mean s exceeds 10 mm"
+   }
+  },
+  "any_level_without_footprint (LB_TRUNK + FASCICLE)": [],
+  "footprint_nodes": {
+   "LB_TRUNK + FASCICLE on the LV endocardium": 125,
+   "all v5.1 LV network nodes on the septum": 1274
+  }
+ },
+ "item14": {
+  "z_mitral_annulus_median": 1.0,
+  "boundary_nodes": {
+   "anterior": 199,
+   "posterior_inferior": 162
+  },
+  "boundary_phi_deg": {
+   "z_0.33": {
+    "anterior": {
+     "nodes": 4,
+     "uvc_phi_deg": 51.2,
+     "uvc_phi_range_deg": [
+      50.2,
+      52.2
+     ],
+     "aha_angle_deg": 65.4,
+     "z_mean": 0.332
+    },
+    "posterior_inferior": {
+     "nodes": 3,
+     "uvc_phi_deg": -143.9,
+     "uvc_phi_range_deg": [
+      -145.5,
+      -143.1
+     ],
+     "aha_angle_deg": -58.8,
+     "z_mean": 0.332
+    }
+   },
+   "z_0.333 (= z_MA / 3)": {
+    "anterior": {
+     "nodes": 5,
+     "uvc_phi_deg": 51.6,
+     "uvc_phi_range_deg": [
+      50.2,
+      53.3
+     ],
+     "aha_angle_deg": 65.8,
+     "z_mean": 0.334
+    },
+    "posterior_inferior": {
+     "nodes": 4,
+     "uvc_phi_deg": -144.2,
+     "uvc_phi_range_deg": [
+      -145.5,
+      -143.1
+     ],
+     "aha_angle_deg": -58.8,
+     "z_mean": 0.335
+    }
+   },
+   "z_0.50": {
+    "anterior": {
+     "nodes": 2,
+     "uvc_phi_deg": 68.1,
+     "uvc_phi_range_deg": [
+      68.1,
+      68.1
+     ],
+     "aha_angle_deg": 77.9,
+     "z_mean": 0.501
+    },
+    "posterior_inferior": {
+     "nodes": 2,
+     "uvc_phi_deg": -153.0,
+     "uvc_phi_range_deg": [
+      -153.2,
+      -152.9
+     ],
+     "aha_angle_deg": -64.6,
+     "z_mean": 0.503
+    }
+   },
+   "10mm_below_mitral_annulus": {
+    "anterior": {
+     "nodes": 6,
+     "uvc_phi_deg": 70.5,
+     "uvc_phi_range_deg": [
+      41.3,
+      84.6
+     ],
+     "aha_angle_deg": 18.1,
+     "z_mean": 0.954
+    },
+    "posterior_inferior": {
+     "nodes": 7,
+     "uvc_phi_deg": 129.9,
+     "uvc_phi_range_deg": [
+      -144.9,
+      84.1
+     ],
+     "aha_angle_deg": -42.2,
+     "z_mean": 0.946
+    }
+   }
+  },
+  "patch_centres": {
+   "posterior_paraseptal": {
+    "node": 32305,
+    "z_phi": [
+     0.342,
+     -175.8
+    ],
+    "aha_segment": 15,
+    "aha_angle_deg": -86.2,
+    "distance_from_boundary_mm": 10.22,
+    "level_rule": "z = z_MA / 3 = 0.333"
+   },
+   "central": {
+    "node": 63071,
+    "z_phi": [
+     0.499,
+     22.4
+    ],
+    "aha_segment": 9,
+    "aha_angle_deg": -1.7,
+    "distance_to_anterior_and_inferior_boundaries_mm": [
+     27.63,
+     27.56
+    ]
+   },
+   "anterior_paraseptal": {
+    "node": 53314,
+    "z_phi": [
+     0.898,
+     95.7
+    ],
+    "aha_segment": 1,
+    "aha_angle_deg": 67.1,
+    "distance_from_boundary_mm": 10.29,
+    "distance_below_mitral_annulus_mm": 9.41
+   }
+  },
+  "stop": []
+ },
+ "stop_triggers": {
+  "fascicle_endpoint_outside_envelope (adopted placement)": [
+   "anterior",
+   "posterior"
+  ],
+  "fascicle_endpoint_outside_envelope (declined placement)": [
+   "anterior",
+   "posterior"
+  ],
+  "envelope_off_left_septal_surface (adopted): off-septum nodes": 0,
+  "no_lv_septal_junction_above_D1_line": false,
+  "v51_trunk_fascicle_nodes_carry_no_pmj": true,
+  "septal_boundary_or_mitral_annulus_not_found": []
+ },
+ "wall_s": 5.6
+}

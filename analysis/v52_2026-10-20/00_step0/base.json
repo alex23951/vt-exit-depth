@@ -1,0 +1,696 @@
+{
+ "written": "2026-10-20 18:36:19 CEST",
+ "git": {
+  "v5.1_tag_commit": "d1ff89b89b6e4444c58b3aa1905142763f5fd311",
+  "head": "189c822501e2b6abfe86f5ad68d40fb2698f41f5",
+  "tag_is_ancestor_of_head": true,
+  "files_changed_since_tag_other_than_added": [
+   "LABNOTES.md",
+   "analysis/v51_2026-10-15/04_build/heart51.py"
+  ],
+  "heart51_change_since_tag": "ad121dd v5.1 Step 6: pilot grids on v5.1 (579 beats) and the Aim 1 rescore with 0.4.0: Table A 2 pass / 6 fail / 1 not evaluable (STOP 6)",
+  "tracked_files_with_uncommitted_changes": [
+   " M LABNOTES.md"
+  ],
+  "v51_data_manifest": {
+   "files": 70,
+   "checked": "size, mtime, sha256",
+   "differences": []
+  },
+  "v5_files_check": [
+   "3484 files (size, mtime, sha256), protected-folder git status checked, 34 s",
+   "v5 files unchanged: yes"
+  ]
+ },
+ "template": {
+  "Y5HYEDL4": {
+   "run": "runs/2026-10-02_biv_fullqrs",
+   "site_node": 313318,
+   "site_uvc_z_phi_deg": [
+    0.5,
+    -178.7
+   ],
+   "site_mm": [
+    87.23,
+    61.43,
+    26.58
+   ],
+   "imp_region_settings": {
+    "im": "Tomek"
+   },
+   "cell_type": "ENDO (Tomek default: no flags or im_param given; Tomek.model line 23 \"celltype = ENDO\")",
+   "model": "monodomain (bidomain 0), dt 10 us, tend 140 ms, Vm every 1 ms",
+   "template_node": 87227,
+   "template_node_LAT_ms": 60.0,
+   "template_window_ms": [
+    -60.0,
+    80.0
+   ],
+   "used_by": "sims/biv_model/15_conductor.py Template (node whose LAT is closest to 60 ms), via heart51.Heart51.TM"
+  },
+  "6G8DD8S5": {
+   "run": "runs/2026-10-03_6G8DD8S5_fullqrs",
+   "site_node": 19052,
+   "site_uvc_z_phi_deg": [
+    0.504,
+    180.0
+   ],
+   "site_mm": [
+    111.03,
+    75.75,
+    17.6
+   ],
+   "imp_region_settings": {
+    "im": "Tomek"
+   },
+   "cell_type": "ENDO (Tomek default: no flags or im_param given; Tomek.model line 23 \"celltype = ENDO\")",
+   "model": "monodomain (bidomain 0), dt 10 us, tend 140 ms, Vm every 1 ms",
+   "template_node": 158949,
+   "template_node_LAT_ms": 60.0,
+   "template_window_ms": [
+    -60.0,
+    80.0
+   ],
+   "used_by": "sims/biv_model/15_conductor.py Template (node whose LAT is closest to 60 ms), via heart51.Heart51.TM"
+  },
+  "7D98EVAR": {
+   "run": "runs/2026-10-03_7D98EVAR_fullqrs",
+   "site_node": 277582,
+   "site_uvc_z_phi_deg": [
+    0.501,
+    -179.9
+   ],
+   "site_mm": [
+    104.41,
+    71.53,
+    22.01
+   ],
+   "imp_region_settings": {
+    "im": "Tomek"
+   },
+   "cell_type": "ENDO (Tomek default: no flags or im_param given; Tomek.model line 23 \"celltype = ENDO\")",
+   "model": "monodomain (bidomain 0), dt 10 us, tend 140 ms, Vm every 1 ms",
+   "template_node": 159389,
+   "template_node_LAT_ms": 59.999,
+   "template_window_ms": [
+    -60.0,
+    80.0
+   ],
+   "used_by": "sims/biv_model/15_conductor.py Template (node whose LAT is closest to 60 ms), via heart51.Heart51.TM"
+  }
+ },
+ "tomek": {
+  "model_file": "/usr/local/lib/opencarp/share/openCARP/physics/limpet/models/Tomek.model",
+  "cell_type_flags": {
+   "ENDO": "0",
+   "EPI": "1",
+   "MCELL": "2"
+  },
+  "flag_line": [
+   "celltype = ENDO; .flag(ENDO,EPI,MCELL);"
+  ],
+  "default": "ENDO",
+  "epicardial_type_available": true,
+  "note": "Tomek 2019 (ToR-ORd), openCARP v20 build ffce195; set per region with imp_region[i].im_param \"flags=EPI\" (R1.1 single-cell runs)"
+ },
+ "fibre_transmural": {
+  "LV side (d <= 0.5)": "v5 fibres (analysis/v5_grid_2026-10-13/fibres_E/<H>/bivF.lon, fibre_fix_2026-10-13/fibres_fix.py): Bayer 2012 LDRB; transmural coordinate phi_epi_fix = Laplace, LV + RV endocardium 0 -> epicardium + aortic-root interface 1 (fibres_E/<H>/laplace/phi_epi_fix.dat), per element as the mean of its nodes; septal blend by d = phi_rv / (phi_lv + phi_rv) (LV endocardium 0 -> RV endocardium 1); helix +60 -> -60 deg by bislerp in phi_epi_fix",
+  "RV side (d > 0.5)": "Doste 2019 (analysis/v51_2026-10-15/04_build/doste_rv.py): transmural d = clip(1 - Phi_D, 0, 1), Phi_D = -2 u_lv + u_rv (runs/v51_2026-10-15/04_build/<H>/laplace/phi_D.dat), per element",
+  "site depth (not fibres)": "UVC rho = phi_epi (data/biv/<H>/uvc/rho.dat) and sep for the septum",
+  "per heart": {
+   "Y5HYEDL4": {
+    "phi_epi_fix_sha256": "5682613667127e0cda568dd62c18554360f63a68ab0d9a7c7540a5795369259b",
+    "phi_D_sha256": "70e9e01d1d9ed1109b170ca0c3831b6433dc157a5005819902652303bf8e6cb5",
+    "v51_fibre_file": "data/biv/Y5HYEDL4/fibres_v51/bivF_v51.lon",
+    "doste_report_keys": [
+     "A2",
+     "A7",
+     "R_field",
+     "candidate_file",
+     "gates",
+     "heart",
+     "laplace",
+     "wall_s"
+    ]
+   },
+   "6G8DD8S5": {
+    "phi_epi_fix_sha256": "0be67a598eb581382cdab1978fa78ed3615a99ed1408f2acd4379458d2b0e663",
+    "phi_D_sha256": "aec9993685f38ebfa3feeb7efc0a3e75fce6e6f2a48794b48e3205e6b26fd105",
+    "v51_fibre_file": "data/biv/6G8DD8S5/fibres_v51/bivF_v51.lon",
+    "doste_report_keys": [
+     "A2",
+     "A7",
+     "R_field",
+     "candidate_file",
+     "gates",
+     "heart",
+     "laplace",
+     "wall_s"
+    ]
+   },
+   "7D98EVAR": {
+    "phi_epi_fix_sha256": "a8e0bcf99a13914123917c36851e2856c625cd8b5e812c9ead8ea11df901ddd0",
+    "phi_D_sha256": "d758c78bd18613e12c88814bb1f08fd3d4aa351949b0b9a2d135af1072568b8d",
+    "v51_fibre_file": "data/biv/7D98EVAR/fibres_v51/bivF_v51.lon",
+    "doste_report_keys": [
+     "A2",
+     "A7",
+     "R_field",
+     "candidate_file",
+     "gates",
+     "heart",
+     "laplace",
+     "wall_s"
+    ]
+   }
+  }
+ },
+ "wall_conductivity_v51": {
+  "Y5HYEDL4": {
+   "heart_torso_mesh": "data/biv/Y5HYEDL4/torso/full_nofast_blood_v51",
+   "element_tags": [
+    1,
+    100,
+    101
+   ],
+   "lead_field_gregion_lines": [
+    "gregion[0].ID[0]                        = 1",
+    "gregion[0].g_el                         = 0.625",
+    "gregion[0].g_en                         = 0.4000000000000001",
+    "gregion[0].g_et                         = 0.22499999999999998",
+    "gregion[0].g_il                         = 0.174",
+    "gregion[0].g_in                         = 0.11136000000000001",
+    "gregion[0].g_it                         = 0.06263999999999999",
+    "gregion[0].num_IDs                      = 1",
+    "gregion[1].ID[0]                        = 100",
+    "gregion[1].g_el                         = 0.2",
+    "gregion[1].g_en                         = 0.2",
+    "gregion[1].g_et                         = 0.2",
+    "gregion[1].g_il                         = 0.2",
+    "gregion[1].g_in                         = 0.2",
+    "gregion[1].g_it                         = 0.2",
+    "gregion[1].num_IDs                      = 1",
+    "gregion[2].ID[0]                        = 101",
+    "gregion[2].g_el                         = 0.7",
+    "gregion[2].g_en                         = 0.7",
+    "gregion[2].g_et                         = 0.7",
+    "gregion[2].g_il                         = 0.7",
+    "gregion[2].g_in                         = 0.7",
+    "gregion[2].g_it                         = 0.7",
+    "gregion[2].num_IDs                      = 1"
+   ],
+   "reading": "the v5.1 heart-torso mesh holds the ventricles (tags 1, 2), LV/RV cavity blood (101, 0.7 S/m) and one torso conductor (100, 0.2 S/m); the atria, their blood, the aortic root and pulmonary artery are not separate: their space is torso, so v5.1 used 0.2 S/m for atrial muscle, atrial blood, vessel walls and vessel blood"
+  },
+  "6G8DD8S5": {
+   "heart_torso_mesh": "data/biv/6G8DD8S5/torso/full_nofast_blood_v51",
+   "element_tags": [
+    1,
+    100,
+    101
+   ],
+   "lead_field_gregion_lines": [
+    "gregion[0].ID[0]                        = 1",
+    "gregion[0].g_el                         = 0.625",
+    "gregion[0].g_en                         = 0.19600000000000004",
+    "gregion[0].g_et                         = 0.11736111111111112",
+    "gregion[0].g_il                         = 0.174",
+    "gregion[0].g_in                         = 0.0545664",
+    "gregion[0].g_it                         = 0.03267333333333333",
+    "gregion[0].num_IDs                      = 1",
+    "gregion[1].ID[0]                        = 100",
+    "gregion[1].g_el                         = 0.2",
+    "gregion[1].g_en                         = 0.2",
+    "gregion[1].g_et                         = 0.2",
+    "gregion[1].g_il                         = 0.2",
+    "gregion[1].g_in                         = 0.2",
+    "gregion[1].g_it                         = 0.2",
+    "gregion[1].num_IDs                      = 1",
+    "gregion[2].ID[0]                        = 101",
+    "gregion[2].g_el                         = 0.7",
+    "gregion[2].g_en                         = 0.7",
+    "gregion[2].g_et                         = 0.7",
+    "gregion[2].g_il                         = 0.7",
+    "gregion[2].g_in                         = 0.7",
+    "gregion[2].g_it                         = 0.7",
+    "gregion[2].num_IDs                      = 1"
+   ],
+   "reading": "the v5.1 heart-torso mesh holds the ventricles (tags 1, 2), LV/RV cavity blood (101, 0.7 S/m) and one torso conductor (100, 0.2 S/m); the atria, their blood, the aortic root and pulmonary artery are not separate: their space is torso, so v5.1 used 0.2 S/m for atrial muscle, atrial blood, vessel walls and vessel blood"
+  },
+  "7D98EVAR": {
+   "heart_torso_mesh": "data/biv/7D98EVAR/torso/full_nofast_blood_v51",
+   "element_tags": [
+    1,
+    100,
+    101
+   ],
+   "lead_field_gregion_lines": [
+    "gregion[0].ID[0]                        = 1",
+    "gregion[0].g_el                         = 0.625",
+    "gregion[0].g_en                         = 0.19600000000000004",
+    "gregion[0].g_et                         = 0.11736111111111112",
+    "gregion[0].g_il                         = 0.174",
+    "gregion[0].g_in                         = 0.0545664",
+    "gregion[0].g_it                         = 0.03267333333333333",
+    "gregion[0].num_IDs                      = 1",
+    "gregion[1].ID[0]                        = 100",
+    "gregion[1].g_el                         = 0.2",
+    "gregion[1].g_en                         = 0.2",
+    "gregion[1].g_et                         = 0.2",
+    "gregion[1].g_il                         = 0.2",
+    "gregion[1].g_in                         = 0.2",
+    "gregion[1].g_it                         = 0.2",
+    "gregion[1].num_IDs                      = 1",
+    "gregion[2].ID[0]                        = 101",
+    "gregion[2].g_el                         = 0.7",
+    "gregion[2].g_en                         = 0.7",
+    "gregion[2].g_et                         = 0.7",
+    "gregion[2].g_il                         = 0.7",
+    "gregion[2].g_in                         = 0.7",
+    "gregion[2].g_it                         = 0.7",
+    "gregion[2].num_IDs                      = 1"
+   ],
+   "reading": "the v5.1 heart-torso mesh holds the ventricles (tags 1, 2), LV/RV cavity blood (101, 0.7 S/m) and one torso conductor (100, 0.2 S/m); the atria, their blood, the aortic root and pulmonary artery are not separate: their space is torso, so v5.1 used 0.2 S/m for atrial muscle, atrial blood, vessel walls and vessel blood"
+  }
+ },
+ "stimulus": {
+  "code": [
+   "heart51.py:31: D_ANT, D_RET, BALL_UM = 4.0, 2.0, 1500.0",
+   "heart51.py:76: s = np.where(np.linalg.norm(pts_um - pts_um[site_node], axis=1) < BALL_UM)[0]",
+   "heart51.py:112: s = np.where(np.linalg.norm(self.pts_um - self.pts_um[site_node], axis=1) < BALL_UM)[0]   # no-network arm: tissue only"
+  ],
+  "reading": "radius 1.5 mm: every mesh node with |x - x_site| < 1500 um fires at t = 0 (strict <); no connectivity or tissue clause (the simulation mesh is myocardium only)",
+  "per heart": {
+   "Y5HYEDL4": {
+    "sites": 144,
+    "stimulated_nodes_min_median_max": [
+     7,
+     17.0,
+     24
+    ]
+   },
+   "6G8DD8S5": {
+    "sites": 144,
+    "stimulated_nodes_min_median_max": [
+     12,
+     17.0,
+     23
+    ]
+   },
+   "7D98EVAR": {
+    "sites": 144,
+    "stimulated_nodes_min_median_max": [
+     8,
+     17.0,
+     22
+    ]
+   }
+  }
+ },
+ "dream": {
+  "dream.solve_help": [
+   "dream.solve:",
+   "\tDefines if the simulation is solved using the eikonal model, reaction-eikonal+ model, reaction-eikonal- model or DREAM.",
+   "- Eikonal. Fast solver for activation times.",
+   "- Reaction-eikonal+. Diffusion is taken into account. Depolarization is initiated by a foot current. Only available with parabolic solver.",
+   "- Reaction-eikonal-. Diffusion is neglected. Depolarization is initiated by a foot current. Only available with parabolic solver.",
+   "- Diffusion reaction eikonal alternant model (DREAM). Enables reactivation of nodes in the eikonal solver and supports reentries.",
+   "",
+   "\ttype:\t$short",
+   "\tdefault:\t2",
+   "\tcitations if:\t{",
+   "\t\t1 -> 10.1016/j.jcp.2017.06.020",
+   "\t\t2 -> 10.1016/j.jcp.2017.06.020",
+   "\t}",
+   "\tmenu:\t{",
+   "\t\t0\tEikonal",
+   "\t\t1\tRE+",
+   "\t\t2\tRE-",
+   "\t\t3\tDREAM",
+   "\t}"
+  ],
+  "offered": "0 eikonal, 1 RE+ (diffusion), 2 RE- (default), 3 DREAM"
+ },
+ "pose_v51": {
+  "Y5HYEDL4": {
+   "file": "data/torso/atria/Y5HYEDL4_to_g001_rigid.txt",
+   "convention": "x_torso_mm = R x_heart_mm + t (08a_atrial_fit.py, 08_torso.py)",
+   "rotation_angle_deg": 13.45,
+   "rotation_axis_unit": [
+    -0.2185,
+    -0.7886,
+    0.5747
+   ],
+   "translation_mm": [
+    -9.848,
+    -121.984,
+    -82.004
+   ],
+   "pivot": "R is applied about the heart mesh origin (0, 0, 0), then t (ICP from a centroid match, 60 iterations)",
+   "screw_axis_point_mm": [
+    572.28,
+    -140.8,
+    24.39
+   ],
+   "slide_along_axis_mm": 51.22,
+   "pose_4x4": [
+    [
+     0.973892285,
+     -0.12893463,
+     -0.186841319,
+     -9.84846291
+    ],
+    [
+     0.138384207,
+     0.989634212,
+     0.038391888,
+     -121.984324411
+    ],
+    [
+     0.179954518,
+     -0.063245451,
+     0.981639641,
+     -82.003920757
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "applied_in_v51": true,
+   "max_node_error_mm_v51_mesh_vs_transform": 6.517947118291098e-06
+  },
+  "6G8DD8S5": {
+   "file": "data/torso/atria/6G8DD8S5_to_g001_rigid.txt",
+   "convention": "x_torso_mm = R x_heart_mm + t (08a_atrial_fit.py, 08_torso.py)",
+   "rotation_angle_deg": 19.87,
+   "rotation_axis_unit": [
+    0.455,
+    0.1852,
+    -0.871
+   ],
+   "translation_mm": [
+    -49.591,
+    -73.156,
+    -59.665
+   ],
+   "pivot": "R is applied about the heart mesh origin (0, 0, 0), then t (ICP from a centroid match, 60 iterations)",
+   "screw_axis_point_mm": [
+    -241.79,
+    162.71,
+    -91.72
+   ],
+   "slide_along_axis_mm": 15.86,
+   "pose_4x4": [
+    [
+     0.952771095,
+     0.301129146,
+     0.039350708,
+     -49.590961784
+    ],
+    [
+     -0.291091565,
+     0.942482034,
+     -0.164296426,
+     -73.15635229
+    ],
+    [
+     -0.086561778,
+     0.145082227,
+     0.985625794,
+     -59.66478725
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "applied_in_v51": true,
+   "max_node_error_mm_v51_mesh_vs_transform": 6.532805455994014e-06
+  },
+  "7D98EVAR": {
+   "file": "data/torso/atria/7D98EVAR_to_g001_rigid.txt",
+   "convention": "x_torso_mm = R x_heart_mm + t (08a_atrial_fit.py, 08_torso.py)",
+   "rotation_angle_deg": 18.65,
+   "rotation_axis_unit": [
+    0.7464,
+    0.5742,
+    -0.3365
+   ],
+   "translation_mm": [
+    -50.587,
+    -77.309,
+    -62.975
+   ],
+   "pivot": "R is applied about the heart mesh origin (0, 0, 0), then t (ICP from a centroid match, 60 iterations)",
+   "screw_axis_point_mm": [
+    -191.91,
+    173.86,
+    -129.03
+   ],
+   "slide_along_axis_mm": -60.95,
+   "pose_4x4": [
+    [
+     0.976756263,
+     0.130070619,
+     0.170378509,
+     -50.586614119
+    ],
+    [
+     -0.085087657,
+     0.964818535,
+     -0.248767533,
+     -77.309329766
+    ],
+    [
+     -0.19674169,
+     0.228488138,
+     0.953459951,
+     -62.974736796
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "applied_in_v51": true,
+   "max_node_error_mm_v51_mesh_vs_transform": 7.193068654795888e-06
+  }
+ },
+ "checksums_17_3": {
+  "md5": {
+   "Y5HYEDL4.zip": {
+    "expected": "a7e648775f75badcbfddb73df3e1d720",
+    "got": "a7e648775f75badcbfddb73df3e1d720",
+    "match": true,
+    "bytes": 358810389
+   },
+   "6G8DD8S5.zip": {
+    "expected": "8e8122eb09e0b1b0a65d13303159576b",
+    "got": "8e8122eb09e0b1b0a65d13303159576b",
+    "match": true,
+    "bytes": 382433273
+   },
+   "7D98EVAR.zip": {
+    "expected": "48b4cc87b766d3fe6a70e481deb22f8a",
+    "got": "48b4cc87b766d3fe6a70e481deb22f8a",
+    "match": true,
+    "bytes": 328210243
+   },
+   "dataset_info.csv": {
+    "expected": "5b5a670d36373535f0013b3b94d2d33e",
+    "got": "5b5a670d36373535f0013b3b94d2d33e",
+    "match": true,
+    "note": "no stored copy existed on the PC (searched data/, the repo, ~ and /mnt/c/Users/Alex); downloaded now from Zenodo record 19351401 into runs/v52_2026-10-20/00_step0/"
+   }
+  },
+  "crc32": {
+   "Y5HYEDL4": {
+    "myocardium_AV_FEC_BB_lvrv.pts": {
+     "expected": "a15d542b",
+     "zip_central_directory": "a15d542b",
+     "extracted_file": "a15d542b",
+     "match": true
+    },
+    "myocardium_AV_FEC_BB_lvrv.elem": {
+     "expected": "fd5ee8b4",
+     "zip_central_directory": "fd5ee8b4",
+     "extracted_file": "fd5ee8b4",
+     "match": true
+    },
+    "myocardium_AV_FEC_BB_lvrv.lon": {
+     "expected": "46ebe383",
+     "zip_central_directory": "46ebe383",
+     "extracted_file": "46ebe383",
+     "match": true
+    },
+    "fascicles_lv.vtx": {
+     "expected": "c531067a",
+     "zip_central_directory": "c531067a",
+     "extracted_file": "c531067a",
+     "match": true
+    },
+    "fascicles_rv.vtx": {
+     "expected": "eaa854b6",
+     "zip_central_directory": "eaa854b6",
+     "extracted_file": "eaa854b6",
+     "match": true
+    },
+    "tags_lvrv.json": {
+     "expected": "6e271ea0",
+     "zip_central_directory": "6e271ea0",
+     "extracted_file": "6e271ea0",
+     "match": true
+    },
+    "myocardium_AV_FEC_BB_lvrv.belem": {
+     "expected": "f6e99f45",
+     "zip_central_directory": "f6e99f45",
+     "extracted_file": "f6e99f45",
+     "match": true
+    },
+    "myocardium_AV_FEC_BB_lvrv.bpts": {
+     "expected": "ee9fd3f7",
+     "zip_central_directory": "ee9fd3f7",
+     "extracted_file": "ee9fd3f7",
+     "match": true
+    },
+    "myocardium_AV_FEC_BB_lvrv.blon": {
+     "expected": "37a73ce5",
+     "zip_central_directory": "37a73ce5",
+     "extracted_file": "37a73ce5",
+     "match": true
+    }
+   },
+   "6G8DD8S5": {
+    "myocardium_AV_FEC_BB_lvrv.pts": {
+     "expected": "3fe32117",
+     "zip_central_directory": "3fe32117",
+     "extracted_file": "3fe32117",
+     "match": true
+    },
+    "myocardium_AV_FEC_BB_lvrv.elem": {
+     "expected": "6a0d49b6",
+     "zip_central_directory": "6a0d49b6",
+     "extracted_file": "6a0d49b6",
+     "match": true
+    },
+    "myocardium_AV_FEC_BB_lvrv.lon": {
+     "expected": "b069be97",
+     "zip_central_directory": "b069be97",
+     "extracted_file": "b069be97",
+     "match": true
+    },
+    "fascicles_lv.vtx": {
+     "expected": "d8391977",
+     "zip_central_directory": "d8391977",
+     "extracted_file": "d8391977",
+     "match": true
+    },
+    "fascicles_rv.vtx": {
+     "expected": "ac8d314d",
+     "zip_central_directory": "ac8d314d",
+     "extracted_file": "ac8d314d",
+     "match": true
+    },
+    "tags_lvrv.json": {
+     "expected": "49119edb",
+     "zip_central_directory": "49119edb",
+     "extracted_file": "49119edb",
+     "match": true
+    }
+   },
+   "7D98EVAR": {
+    "myocardium_AV_FEC_BB_lvrv.pts": {
+     "expected": "98f27b73",
+     "zip_central_directory": "98f27b73",
+     "extracted_file": "98f27b73",
+     "match": true
+    },
+    "myocardium_AV_FEC_BB_lvrv.elem": {
+     "expected": "939eef82",
+     "zip_central_directory": "939eef82",
+     "extracted_file": "939eef82",
+     "match": true
+    },
+    "myocardium_AV_FEC_BB_lvrv.lon": {
+     "expected": "197c680e",
+     "zip_central_directory": "197c680e",
+     "extracted_file": "197c680e",
+     "match": true
+    },
+    "fascicles_lv.vtx": {
+     "expected": "1753e290",
+     "zip_central_directory": "1753e290",
+     "extracted_file": "1753e290",
+     "match": true
+    },
+    "fascicles_rv.vtx": {
+     "expected": "5ddd73c5",
+     "zip_central_directory": "5ddd73c5",
+     "extracted_file": "5ddd73c5",
+     "match": true
+    },
+    "tags_lvrv.json": {
+     "expected": "49119edb",
+     "zip_central_directory": "49119edb",
+     "extracted_file": "49119edb",
+     "match": true
+    }
+   }
+  },
+  "dataset_info_pilot_rows": [
+   "Case,ID,Translation_case,Status,Sex,Condition,HF_type,Age,Weight,N_Ventricles,N_Atria,TAT_LV,TAT_RV,TAT_V,TAT_LA,TAT_RA,TAT_A,Vol_LV,Vol_RV,Vol_LA,Vol_RA,delta_Vol_LV,delta_Vol_RV,delta_Vol_LA,delta_Vol_RA,STRAINS_LV,STRAINS_RV,STRAINS_LA,STRAINS_RA,STRAINS_V,STRAINS_A,MAX_STRAINS_LV,MAX_STRAINS_RV,MAX_STRAINS_LA,MAX_STRAINS_RA,MAX_STRAINS_V,MAX_STRAINS_A,Exclude_for_now",
+   "6G8DD8S5,6G8DD8S5,FHF8,WQRS,F,HF,W,64,99,1997928,476779,170.457,214.602,214.602,283.123,330.096,391.71,211.758,128.689,149.416,104.737,55.159,21.347,28.211,14.6334,0.0650459,0.0439803,0.0456243,0.0202305,0.0607811,0.0361226,0.432427,0.222034,0.266499,0.14953,0.432427,0.266499,0",
+   "7D98EVAR,7D98EVAR,FHF6,NQRS,F,HF,N,65,54,1755714,368640,180.054,192.647,192.647,238.753,201.713,270.036,211.917,126.671,66.3907,73.0795,41.29,5.247,4.8065,1.5757,0.0512634,0.0215105,0.0256275,0.00986446,0.0431787,0.0165126,0.409241,0.158602,0.180209,0.0863344,0.409241,0.180209,0",
+   "Y5HYEDL4,Y5HYEDL4,MC5,C,M,C,C,25,,1939909,379964,209.288,204.867,210.351,255.025,211.987,287.064,215.342,209.546,65.5124,91.2059,45.191,13.884,5.8229,2.201,0.0546238,0.025205,0.025797,0.012592,0.0450307,0.0164964,0.465668,0.248156,0.20441,0.161463,0.465668,0.20441,0"
+  ],
+  "all_match": true
+ },
+ "kit_torsos_A37": {
+  "archive": "data/torso/torsoModels.zip",
+  "md5": "528b7c89d1a8ab86168a9d59a87a4ed1",
+  "record": "Zenodo 20086105 (Bender 2026), torsoModels.zip md5 528b7c89d1a8ab86168a9d59a87a4ed1",
+  "shape_surfaces_in_archive_order": [
+   "T_13",
+   "T_24",
+   "T_20",
+   "T_17",
+   "T_01",
+   "T_05",
+   "T_09",
+   "T_04",
+   "T_08",
+   "T_21",
+   "T_16",
+   "T_12",
+   "T_25",
+   "T_02",
+   "T_06",
+   "T_18",
+   "T_10",
+   "T_23",
+   "T_14",
+   "T_19",
+   "T_22",
+   "T_15",
+   "T_11",
+   "T_07",
+   "T_03"
+  ],
+  "n_shapes": 25,
+  "first_four_in_archive_order": [
+   "T_13",
+   "T_24",
+   "T_20",
+   "T_17"
+  ],
+  "meantorso_present": true,
+  "note": "the archive order starts with T_13, the primary torso itself; reported, not resolved here"
+ },
+ "wall_s": 70.2
+}
