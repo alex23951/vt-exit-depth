@@ -1,0 +1,420 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "cusp_crescent": {
+  "lcc_mid": {
+   "theta_deg": 79.5,
+   "built_extent_mm": 4.34,
+   "site_height_mm": 2.17,
+   "node": 372632,
+   "r_inner_mm": 15.07,
+   "r_outer_mm": 17.75,
+   "thickness_mm": 2.68,
+   "target_mm": [
+    69.637,
+    59.961,
+    69.534
+   ],
+   "node_to_target_mm": 0.59
+  },
+  "lcc_q": {
+   "theta_deg": 93.1,
+   "built_extent_mm": 4.76,
+   "site_height_mm": 2.38,
+   "node": 412427,
+   "r_inner_mm": 14.84,
+   "r_outer_mm": 17.82,
+   "thickness_mm": 2.98,
+   "target_mm": [
+    70.85,
+    56.292,
+    69.158
+   ],
+   "node_to_target_mm": 0.57
+  },
+  "rcc_mid": {
+   "theta_deg": 170.8,
+   "built_extent_mm": 3.49,
+   "site_height_mm": 1.75,
+   "node": 231932,
+   "r_inner_mm": 12.26,
+   "r_outer_mm": 14.62,
+   "thickness_mm": 2.36,
+   "target_mm": [
+    67.611,
+    44.304,
+    55.02
+   ],
+   "node_to_target_mm": 0.41
+  },
+  "rcc_q": {
+   "theta_deg": 188.4,
+   "built_extent_mm": 3.76,
+   "site_height_mm": 1.88,
+   "node": 457818,
+   "r_inner_mm": 11.9,
+   "r_outer_mm": 14.14,
+   "thickness_mm": 2.24,
+   "target_mm": [
+    65.149,
+    44.409,
+    51.78
+   ],
+   "node_to_target_mm": 0.32
+  }
+ },
+ "supravalvar": {
+  "posterior": {
+   "theta_deg": 0.0,
+   "sleeve_length_mm": 5.38,
+   "site_height_mm": 2.69,
+   "node": 294936,
+   "r_inner_mm": 15.26,
+   "r_outer_mm": 18.19,
+   "thickness_mm": 2.93,
+   "target_mm": [
+    61.471,
+    43.56,
+    74.219
+   ],
+   "node_to_target_mm": 0.65
+  },
+  "sinus_+120": {
+   "theta_deg": 120.0,
+   "sleeve_length_mm": 5.34,
+   "site_height_mm": 2.67,
+   "node": 286004,
+   "r_inner_mm": 15.19,
+   "r_outer_mm": 18.79,
+   "thickness_mm": 3.6,
+   "target_mm": [
+    64.049,
+    19.965,
+    91.225
+   ],
+   "node_to_target_mm": 0.61
+  },
+  "sinus_-120": {
+   "theta_deg": 240.0,
+   "sleeve_length_mm": 5.56,
+   "site_height_mm": 2.78,
+   "node": 220957,
+   "r_inner_mm": 18.93,
+   "r_outer_mm": 25.44,
+   "thickness_mm": 6.51,
+   "target_mm": [
+    91.98,
+    39.138,
+    88.093
+   ],
+   "node_to_target_mm": 0.6
+  }
+ },
+ "summit_reanchored": {
+  "ostium_full_node": 54342,
+  "ostium_h_theta_r": [
+   15.41,
+   57.4,
+   21.32
+  ],
+  "ostium_candidates_and_window_deg": [
+   9,
+   3.0
+  ],
+  "left_AV_groove_proxy": "tag-1 / tag-27 (AV plane) boundary on the outer surface; no tag-1 / tag-3 boundary exists",
+  "ostium_to_groove_mm (2-ring)": 14.52,
+  "bifurcation_full_node": 94139,
+  "B_along_path_mm": 10.49,
+  "B_to_IV_groove_mm": 16.31,
+  "SP_full_node": 85114,
+  "septal_margin_mm (B->SP, 2-ring)": 19.56,
+  "base_end_on_groove_full_node": 41588,
+  "base_mm (SP->G)": 17.31,
+  "lcx_side_mm (G->B)": 9.68,
+  "apex_angle_deg (Kuniewicz 85.46 +- 15.94)": 49.9,
+  "gcv_proxy_arc_mm (bisector B->base; v5.1 14.0)": 9.32,
+  "triangle_LV_epicardial_nodes": 25844,
+  "triangle_area_mm2 (Kuniewicz area 287 +- 145)": 18685.5,
+  "outside_component_sizes_check": [
+   86187
+  ],
+  "superior_half": "lad_side",
+  "positions": {
+   "superior": {
+    "surface_node_full": 87621,
+    "surface_node": 42178,
+    "half": "lad_side",
+    "half_nodes": 5541,
+    "dist_to_B_mm": 59.18
+   },
+   "inferior": {
+    "surface_node_full": 474487,
+    "surface_node": 321988,
+    "half": "lcx_side",
+    "half_nodes": 20303,
+    "dist_to_B_mm": 83.56
+   }
+  },
+  "sites_as_constructed (not in the manifest; pending Q6 / Q6b)": [
+   {
+    "id": "summit52_superior_d10",
+    "family": "summit_reanchored",
+    "position": "superior",
+    "surface_node": 42178,
+    "depth_target": 0.1,
+    "node": 5472,
+    "wall_thickness_mm": 9.2,
+    "depth_achieved_mm_from_start": 8.46,
+    "dist_to_summit_tip_mm": 54.63,
+    "moved_from_v51_mm": 29.96
+   },
+   {
+    "id": "summit52_superior_d50",
+    "family": "summit_reanchored",
+    "position": "superior",
+    "surface_node": 42178,
+    "depth_target": 0.5,
+    "node": 128681,
+    "wall_thickness_mm": 9.2,
+    "depth_achieved_mm_from_start": 4.98,
+    "dist_to_summit_tip_mm": 56.44,
+    "moved_from_v51_mm": 35.12
+   },
+   {
+    "id": "summit52_superior_d75",
+    "family": "summit_reanchored",
+    "position": "superior",
+    "surface_node": 42178,
+    "depth_target": 0.75,
+    "node": 123780,
+    "wall_thickness_mm": 9.2,
+    "depth_achieved_mm_from_start": 2.31,
+    "dist_to_summit_tip_mm": 57.56,
+    "moved_from_v51_mm": 38.85
+   },
+   {
+    "id": "summit52_superior_d90",
+    "family": "summit_reanchored",
+    "position": "superior",
+    "surface_node": 42178,
+    "depth_target": 0.9,
+    "node": 225914,
+    "wall_thickness_mm": 9.2,
+    "depth_achieved_mm_from_start": 0.75,
+    "dist_to_summit_tip_mm": 59.05,
+    "moved_from_v51_mm": 41.15
+   },
+   {
+    "id": "summit52_inferior_d10",
+    "family": "summit_reanchored",
+    "position": "inferior",
+    "surface_node": 321988,
+    "depth_target": 0.1,
+    "node": 10580,
+    "wall_thickness_mm": 11.4,
+    "depth_achieved_mm_from_start": 10.69,
+    "dist_to_summit_tip_mm": 73.28,
+    "moved_from_v51_mm": 53.7
+   },
+   {
+    "id": "summit52_inferior_d50",
+    "family": "summit_reanchored",
+    "position": "inferior",
+    "surface_node": 321988,
+    "depth_target": 0.5,
+    "node": 197169,
+    "wall_thickness_mm": 11.4,
+    "depth_achieved_mm_from_start": 6.05,
+    "dist_to_summit_tip_mm": 77.67,
+    "moved_from_v51_mm": 63.22
+   },
+   {
+    "id": "summit52_inferior_d75",
+    "family": "summit_reanchored",
+    "position": "inferior",
+    "surface_node": 321988,
+    "depth_target": 0.75,
+    "node": 63559,
+    "wall_thickness_mm": 11.4,
+    "depth_achieved_mm_from_start": 2.71,
+    "dist_to_summit_tip_mm": 80.98,
+    "moved_from_v51_mm": 69.61
+   },
+   {
+    "id": "summit52_inferior_d90",
+    "family": "summit_reanchored",
+    "position": "inferior",
+    "surface_node": 321988,
+    "depth_target": 0.9,
+    "node": 207448,
+    "wall_thickness_mm": 11.4,
+    "depth_achieved_mm_from_start": 0.99,
+    "dist_to_summit_tip_mm": 82.57,
+    "moved_from_v51_mm": 73.06
+   }
+  ]
+ },
+ "gate7a_patch_centres": {
+  "posterior_paraseptal": {
+   "node": 165870,
+   "z_phi": [
+    0.328,
+    -147.9
+   ],
+   "aha_segment": 15,
+   "aha_angle_deg": -88.2,
+   "distance_from_boundary_mm": 10.03,
+   "level_rule": "z = z_MA / 3 = 0.333"
+  },
+  "central": {
+   "node": 30396,
+   "z_phi": [
+    0.492,
+    27.0
+   ],
+   "aha_segment": 9,
+   "aha_angle_deg": -4.7,
+   "distance_to_anterior_and_inferior_boundaries_mm": [
+    29.68,
+    29.92
+   ]
+  },
+  "anterior_paraseptal": {
+   "node": 54805,
+   "z_phi": [
+    0.882,
+    104.4
+   ],
+   "aha_segment": 1,
+   "aha_angle_deg": 67.6,
+   "distance_from_boundary_mm": 9.8,
+   "distance_below_mitral_annulus_mm": 9.76
+  }
+ },
+ "capture": {
+  "sites": 170,
+  "invalid": [],
+  "v51_sites_whose_stimulated_set_differs_from_the_plain_ball": [],
+  "muscle_fraction_new_sites": {
+   "cusp52_lcc_mid": 0.815,
+   "cusp52_lcc_q": 0.851,
+   "cusp52_rcc_mid": 0.933,
+   "cusp52_rcc_q": 0.901,
+   "supra52_posterior": 0.836,
+   "supra52_sinus_+120": 0.922,
+   "supra52_sinus_-120": 1.0,
+   "intramural52_focus": 1.0,
+   "intramural52_lvgrid_00": 0.513,
+   "intramural52_lvgrid_01": 0.488,
+   "intramural52_lvgrid_02": 0.486,
+   "intramural52_lvgrid_10": 0.507,
+   "intramural52_lvgrid_11": 0.501,
+   "intramural52_lvgrid_12": 0.495,
+   "intramural52_lvgrid_20": 0.505,
+   "intramural52_lvgrid_21": 0.495,
+   "intramural52_lvgrid_22": 0.504,
+   "intramural52_rvgrid_00": 0.506,
+   "intramural52_rvgrid_01": 0.497,
+   "intramural52_rvgrid_02": 0.485,
+   "intramural52_rvgrid_10": 0.508,
+   "intramural52_rvgrid_11": 0.507,
+   "intramural52_rvgrid_12": 0.505,
+   "intramural52_rvgrid_20": 0.504,
+   "intramural52_rvgrid_21": 0.489,
+   "intramural52_rvgrid_22": 0.504
+  },
+  "muscle_fraction_v51_outflow_sites": {
+   "rvot_septal_z_d10": 0.503,
+   "rvot_septal_z_d50": 0.873,
+   "rvot_septal_z_d75": 0.509,
+   "rvot_septal_z_d90": 0.518,
+   "rvot_free_wall_z_d10": 0.5,
+   "rvot_free_wall_z_d50": 1.0,
+   "rvot_free_wall_z_d75": 0.859,
+   "rvot_free_wall_z_d90": 0.489,
+   "aortic_cusp_rcc_z_d10": 0.33,
+   "aortic_cusp_rcc_z_d50": 0.522,
+   "aortic_cusp_rcc_z_d75": 0.417,
+   "aortic_cusp_rcc_z_d90": 0.42,
+   "aortic_cusp_lcc_z_d10": 0.476,
+   "aortic_cusp_lcc_z_d50": 0.875,
+   "aortic_cusp_lcc_z_d75": 0.615,
+   "aortic_cusp_lcc_z_d90": 0.531,
+   "lv_summit_superior_z_d10": 0.515,
+   "lv_summit_superior_z_d50": 1.0,
+   "lv_summit_superior_z_d75": 1.0,
+   "lv_summit_superior_z_d90": 1.0,
+   "lv_summit_inferior_lateral_z_d10": 0.844,
+   "lv_summit_inferior_lateral_z_d50": 1.0,
+   "lv_summit_inferior_lateral_z_d75": 1.0,
+   "lv_summit_inferior_lateral_z_d90": 1.0
+  }
+ },
+ "8.4_dist_to_summit_tip_mm": {
+  "aortic_cusp_rcc_z_d10": 31.39,
+  "aortic_cusp_rcc_z_d50": 31.98,
+  "aortic_cusp_rcc_z_d75": 31.89,
+  "aortic_cusp_rcc_z_d90": 32.13,
+  "aortic_cusp_lcc_z_d10": 9.33,
+  "aortic_cusp_lcc_z_d50": 8.9,
+  "aortic_cusp_lcc_z_d75": 7.98,
+  "aortic_cusp_lcc_z_d90": 8.71,
+  "lv_summit_superior_z_d10": 26.93,
+  "lv_summit_superior_z_d50": 22.87,
+  "lv_summit_superior_z_d75": 19.68,
+  "lv_summit_superior_z_d90": 18.8,
+  "lv_summit_inferior_lateral_z_d10": 28.91,
+  "lv_summit_inferior_lateral_z_d50": 26.05,
+  "lv_summit_inferior_lateral_z_d75": 24.49,
+  "lv_summit_inferior_lateral_z_d90": 24.68,
+  "lv_vein_course_proximal_aiv_z_d10": 42.66,
+  "lv_vein_course_proximal_aiv_z_d50": 44.43,
+  "lv_vein_course_proximal_aiv_z_d75": 46.01,
+  "lv_vein_course_proximal_aiv_z_d90": 46.27,
+  "lv_vein_course_basal_ring_anterolateral_z_d10": 37.88,
+  "lv_vein_course_basal_ring_anterolateral_z_d50": 35.18,
+  "lv_vein_course_basal_ring_anterolateral_z_d75": 34.87,
+  "lv_vein_course_basal_ring_anterolateral_z_d90": 33.89,
+  "lv_vein_course_basal_ring_lateral_z_d10": 56.39,
+  "lv_vein_course_basal_ring_lateral_z_d50": 57.49,
+  "lv_vein_course_basal_ring_lateral_z_d75": 58.57,
+  "lv_vein_course_basal_ring_lateral_z_d90": 58.65,
+  "cusp52_lcc_mid": 8.65,
+  "cusp52_lcc_q": 12.27,
+  "cusp52_rcc_mid": 26.59,
+  "cusp52_rcc_q": 28.56
+ },
+ "8.8": {
+  "PV_to_LCC_mm (Acosta 5 +- 3)": [
+   11.93,
+   8.3
+  ],
+  "PV_to_RCC_mm (Acosta 11 +- 5)": [
+   14.01,
+   17.38
+  ],
+  "RVOT_sites_below_PV_mm (within 10)": {
+   "rvot_septal_z_d10": 15.33,
+   "rvot_septal_z_d50": 14.18,
+   "rvot_septal_z_d75": 13.43,
+   "rvot_septal_z_d90": 13.57,
+   "rvot_free_wall_z_d10": 16.36,
+   "rvot_free_wall_z_d50": 16.43,
+   "rvot_free_wall_z_d75": 16.21,
+   "rvot_free_wall_z_d90": 16.53
+  },
+  "LCC_to_summit_GCV_proxy_mm (Yamada 14.3 +- 3.5; GCV/AIV not in the mesh: the summit sites stand in)": []
+ },
+ "files": {
+  "manifest": "data/biv/6G8DD8S5/v52/sites52.json",
+  "sha256": "4e79864f1306b89e58ece886962ae1a3166ec0e876a2c3450f325072b00b644e"
+ },
+ "counts": {
+  "cusp_crescent": 4,
+  "intramural_focus": 1,
+  "intramural_lv_grid": 9,
+  "intramural_rv_grid": 9,
+  "supravalvar": 3
+ },
+ "wall_s": 34.0
+}
