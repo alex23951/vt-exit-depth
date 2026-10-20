@@ -1,0 +1,696 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "regions": {
+  "R_field_sha256": "701a773ca045806d2a1e1afa16f90bbdee051020a384e3bbb7937f583d75771f",
+  "RV_region_elements": 580182,
+  "LV_side_elements": 1176264,
+  "partition_assertion": "pass"
+ },
+ "moved_elements_w_(1-phi_lv)_range": {
+  "elements": 198,
+  "min": 0.556,
+  "median": 0.809,
+  "max": 1.0
+ },
+ "item1_phi_sum": {
+  "v51": {
+   "nodal_max_abs_sum_minus_1": 0.4772,
+   "nodes_over_1e-3": 3023,
+   "of_LV_side_nodes": 224392,
+   "their_distance_to_ao_iface_mm (median, p95, max)": [
+    6.3,
+    12.27,
+    13.9
+   ],
+   "element_max_abs_sum_minus_1": 0.1876,
+   "elements_over_1e-3": 14977
+  },
+  "merged_v52": {
+   "nodal_max_abs_sum_minus_1": 1.8281,
+   "nodes_over_1e-3": 3054,
+   "of_LV_side_nodes": 224392,
+   "their_distance_to_ao_iface_mm (median, p95, max)": [
+    6.3,
+    12.31,
+    13.9
+   ],
+   "element_max_abs_sum_minus_1": 1.0,
+   "elements_over_1e-3": 15142
+  }
+ },
+ "item2_v51_LV_fibres": {
+  "generator": "analysis/fibre_fix_2026-10-13/fibres_fix.py main() (v5 LDRB with the Doste outflow extension), rows kept in v5.1 outside R_field",
+  "longitudinal_field": "gpsi = w unit(grad basal) + (1 - w) unit(grad ot_lv) on the LV side (unit(grad ot_rv) where d > 0.5): a w_ot-blended l (Doste 2019 Eq. 1), not Bayer apex-base grad psi alone",
+  "transmural_fields": "bislerp of axis(gpsi, -grad phi_lv) / axis(gpsi, grad phi_rv) by d, then with axis(gpsi, grad phi_epi_fix) by phi_epi_fix",
+  "files_sha256": {
+   "w (Doste weight)": {
+    "path": "data/biv/7D98EVAR/laplace/w.dat",
+    "sha256": "0abd25ba90164eb59cfa7d20c208aa4d6279cc179bc23def974bab4ee38adf4f"
+   },
+   "basal": {
+    "path": "data/biv/7D98EVAR/laplace/basal.dat",
+    "sha256": "97fd8a3bed24e137445ac5eba6298439e9e7dc022d6544bed523bb11714d9402"
+   },
+   "ot_lv": {
+    "path": "analysis/v5_grid_2026-10-13/fibres_E/7D98EVAR/laplace/ot_lv.dat",
+    "sha256": "f1fac2974bd0b6739b7d613437ece76d653ef96a1b8a7d36f2bd6275bccd3887"
+   },
+   "ot_rv": {
+    "path": "analysis/v5_grid_2026-10-13/fibres_E/7D98EVAR/laplace/ot_rv.dat",
+    "sha256": "2e8f5f2e0d1045f727beda086d5789472df8ea9751b790e6f63f86efe7aba471"
+   },
+   "phi_epi_fix": {
+    "path": "analysis/v5_grid_2026-10-13/fibres_E/7D98EVAR/laplace/phi_epi_fix.dat",
+    "sha256": "a8e0bcf99a13914123917c36851e2856c625cd8b5e812c9ead8ea11df901ddd0"
+   },
+   "phi_lv": {
+    "path": "data/biv/7D98EVAR/laplace/phi_lv.dat",
+    "sha256": "85087660b87ba5554cc55f15be698a0d4d7a8182bdd26900ccc894ebc262ebc0"
+   },
+   "phi_rv": {
+    "path": "data/biv/7D98EVAR/laplace/phi_rv.dat",
+    "sha256": "d7bd0f9346b7fb02181733ec078c8f004085a5bcd242bbf682df057cf487051d"
+   }
+  },
+  "stored_file": {
+   "path": "data/biv/7D98EVAR/fibres_v51/bivF_v51.lon",
+   "sha256": "e1252fcf69b11df3e6ab386d1e2897be31ab7b9f298acbac546d9635ae3a4562"
+  },
+  "regeneration_angle_deg_LV_side": {
+   "n": 1176264,
+   "median": 0.0002,
+   "p95": 0.0004,
+   "max": 74.0636
+  },
+  "regenerates_within_0.01_deg": false,
+  "elements_over_0.01_deg": 2,
+  "elements_over_1_deg": 2,
+  "elements_over_0.01_deg_their_d_phi_epi_fix_w (median)": [
+   0.002,
+   0.991,
+   0.963
+  ]
+ },
+ "item3_across_v51_split": {
+  "face_pairs": 16083,
+  "(a) |w_LV (1 - phi_lv) - d_D RV (clip(1 - Phi_D))|": {
+   "n": 16083,
+   "median": 0.501,
+   "p95": 0.54,
+   "max": 1.0
+  },
+  "(b) |w_LV (1 - phi_lv) - (1 - phi_rv) RV|": {
+   "n": 16083,
+   "median": 0.0166,
+   "p95": 0.0464,
+   "max": 1.0
+  },
+  "(c) fibre line angle, v5.2 LV (R5.1) vs v5.1 RV, deg": {
+   "n": 16083,
+   "median": 30.2207,
+   "p95": 76.053,
+   "max": 90.0
+  },
+  "(c, reference) v5.1 LV vs v5.1 RV, deg": {
+   "n": 16083,
+   "median": 28.8814,
+   "p95": 79.0295,
+   "max": 89.9931
+  }
+ },
+ "item4": {
+  "d 0-0.05": {
+   "elements": 999662,
+   "by_phi_epi_fix_band": {
+    "0-0.2": 172631,
+    "0.2-0.4": 157637,
+    "0.4-0.6": 181465,
+    "0.6-0.8": 214039,
+    "0.8-1.0": 273890
+   },
+   "median_angle_v52_R5.1_vs_v51_stored_deg": 18.71
+  },
+  "d 0.05-0.2": {
+   "elements": 83487,
+   "by_phi_epi_fix_band": {
+    "0-0.2": 37600,
+    "0.2-0.4": 10828,
+    "0.4-0.6": 10619,
+    "0.6-0.8": 11141,
+    "0.8-1.0": 13299
+   },
+   "median_angle_v52_R5.1_vs_v51_stored_deg": 13.9
+  },
+  "d 0.2-0.35": {
+   "elements": 49901,
+   "by_phi_epi_fix_band": {
+    "0-0.2": 30384,
+    "0.2-0.4": 5905,
+    "0.4-0.6": 4946,
+    "0.6-0.8": 4244,
+    "0.8-1.0": 4422
+   },
+   "median_angle_v52_R5.1_vs_v51_stored_deg": 6.38
+  },
+  "d 0.35-0.5": {
+   "elements": 43016,
+   "by_phi_epi_fix_band": {
+    "0-0.2": 29918,
+    "0.2-0.4": 4603,
+    "0.4-0.6": 3304,
+    "0.6-0.8": 2745,
+    "0.8-1.0": 2446
+   },
+   "median_angle_v52_R5.1_vs_v51_stored_deg": 9.64
+  },
+  "d 0.5-1.0": {
+   "elements": 198,
+   "by_phi_epi_fix_band": {
+    "0-0.2": 12,
+    "0.2-0.4": 37,
+    "0.4-0.6": 50,
+    "0.6-0.8": 48,
+    "0.8-1.0": 51
+   },
+   "median_angle_v52_R5.1_vs_v51_stored_deg": 41.65
+  }
+ },
+ "item5_sign": {
+  "free_wall_endo (w<0.1, d<0.05, z<0.80) elements": 81100,
+  "median_acos|f52.f51|_deg": 4.89,
+  "epi (w>0.9, d<0.05) elements": 149402,
+  "share_v52_h_lt_0": 0.9948
+ },
+ "item6_w_LV": {
+  "solve": {
+   "n_bc0": 569,
+   "n_bc1": 1154,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 224392,
+   "wall_s": 10.0
+  },
+  "bc1 (apex set + mitral rim, LV side)": 1154,
+  "bc0 (aortic rim, LV side)": 569,
+  "z>=0.80_nodes": 38085,
+  "max_abs_wLV_minus_w.dat": 2.5327,
+  "median_abs_wLV_minus_w.dat": 0.0308,
+  "w.dat_range_on_these_nodes": [
+   -0.487,
+   2.548
+  ],
+  "max_abs_wLV_minus_clip(w.dat,0,1)": 1.0,
+  "median_abs_wLV_minus_clip(w.dat,0,1)": 0.0308
+ },
+ "item7_z_aortic_rim_LV_side": {
+  "nodes": 569,
+  "min": 1.0,
+  "median": 1.0,
+  "max": 1.0
+ },
+ "item8_blend": {
+  "w_LV | option (a): b = zb (1 - w_ot)": {
+   "elements_b_gt_0": 186128,
+   "by_AHA_segment_and_b_bin": {
+    "1": {
+     "0-0.25": 38045,
+     "0.25-0.5": 5770,
+     "0.5-0.75": 1476,
+     "0.75-1": 1064
+    },
+    "2": {
+     "0-0.25": 13304,
+     "0.25-0.5": 7336,
+     "0.5-0.75": 4464,
+     "0.75-1": 2957
+    },
+    "3": {
+     "0-0.25": 13886,
+     "0.25-0.5": 3390,
+     "0.5-0.75": 2115,
+     "0.75-1": 3438
+    },
+    "4": {
+     "0-0.25": 36646,
+     "0.25-0.5": 136,
+     "0.5-0.75": 566,
+     "0.75-1": 1901
+    },
+    "5": {
+     "0-0.25": 31601,
+     "0.25-0.5": 0,
+     "0.5-0.75": 0,
+     "0.75-1": 0
+    },
+    "6": {
+     "0-0.25": 18005,
+     "0.25-0.5": 0,
+     "0.5-0.75": 0,
+     "0.75-1": 0
+    },
+    "8": {
+     "0-0.25": 28,
+     "0.25-0.5": 0,
+     "0.5-0.75": 0,
+     "0.75-1": 0
+    }
+   },
+   "b_on_aortic_rim_nodes (min, median, max)": [
+    0.832,
+    0.959,
+    1.0
+   ],
+   "neighbour_angle_step_deg where b > 0 (max, p99.9, p99)": [
+    90.0,
+    90.0,
+    44.58
+   ],
+   "same pairs under R5.1 alone (max, p99.9, p99)": [
+    90.0,
+    90.0,
+    45.24
+   ],
+   "pairs, and pairs over 30 deg (blend, R5.1 alone)": [
+    361328,
+    7885,
+    8043
+   ],
+   "largest increase of the step over R5.1 alone, deg": 65.3
+  },
+  "w_LV | mask (b): b = zb where w_ot < 0.5": {
+   "elements_b_gt_0": 36775,
+   "by_AHA_segment_and_b_bin": {
+    "1": {
+     "0-0.25": 0,
+     "0.25-0.5": 0,
+     "0.5-0.75": 2122,
+     "0.75-1": 3326
+    },
+    "2": {
+     "0-0.25": 3716,
+     "0.25-0.5": 4440,
+     "0.5-0.75": 5862,
+     "0.75-1": 6340
+    },
+    "3": {
+     "0-0.25": 946,
+     "0.25-0.5": 1042,
+     "0.5-0.75": 765,
+     "0.75-1": 5730
+    },
+    "4": {
+     "0-0.25": 0,
+     "0.25-0.5": 0,
+     "0.5-0.75": 0,
+     "0.75-1": 2486
+    }
+   },
+   "b_on_aortic_rim_nodes (min, median, max)": [
+    0.874,
+    0.983,
+    1.0
+   ],
+   "neighbour_angle_step_deg where b > 0 (max, p99.9, p99)": [
+    90.0,
+    90.0,
+    61.54
+   ],
+   "same pairs under R5.1 alone (max, p99.9, p99)": [
+    90.0,
+    90.0,
+    63.35
+   ],
+   "pairs, and pairs over 30 deg (blend, R5.1 alone)": [
+    70380,
+    3339,
+    3384
+   ],
+   "largest increase of the step over R5.1 alone, deg": 67.15
+  },
+  "w.dat | option (a): b = zb (1 - w_ot)": {
+   "elements_b_gt_0": 185500,
+   "by_AHA_segment_and_b_bin": {
+    "1": {
+     "0-0.25": 36263,
+     "0.25-0.5": 7072,
+     "0.5-0.75": 1941,
+     "0.75-1": 900
+    },
+    "2": {
+     "0-0.25": 12464,
+     "0.25-0.5": 7276,
+     "0.5-0.75": 6077,
+     "0.75-1": 2197
+    },
+    "3": {
+     "0-0.25": 19200,
+     "0.25-0.5": 1849,
+     "0.5-0.75": 928,
+     "0.75-1": 758
+    },
+    "4": {
+     "0-0.25": 37785,
+     "0.25-0.5": 592,
+     "0.5-0.75": 293,
+     "0.75-1": 287
+    },
+    "5": {
+     "0-0.25": 31587,
+     "0.25-0.5": 0,
+     "0.5-0.75": 0,
+     "0.75-1": 0
+    },
+    "6": {
+     "0-0.25": 18003,
+     "0.25-0.5": 0,
+     "0.5-0.75": 0,
+     "0.75-1": 0
+    },
+    "8": {
+     "0-0.25": 28,
+     "0.25-0.5": 0,
+     "0.5-0.75": 0,
+     "0.75-1": 0
+    }
+   },
+   "b_on_aortic_rim_nodes (min, median, max)": [
+    0.251,
+    0.887,
+    1.0
+   ],
+   "neighbour_angle_step_deg where b > 0 (max, p99.9, p99)": [
+    90.0,
+    90.0,
+    41.94
+   ],
+   "same pairs under R5.1 alone (max, p99.9, p99)": [
+    90.0,
+    90.0,
+    42.11
+   ],
+   "pairs, and pairs over 30 deg (blend, R5.1 alone)": [
+    360732,
+    7409,
+    7467
+   ],
+   "largest increase of the step over R5.1 alone, deg": 39.32
+  },
+  "w.dat | mask (b): b = zb where w_ot < 0.5": {
+   "elements_b_gt_0": 46827,
+   "by_AHA_segment_and_b_bin": {
+    "1": {
+     "0-0.25": 5512,
+     "0.25-0.5": 4797,
+     "0.5-0.75": 4200,
+     "0.75-1": 2683
+    },
+    "2": {
+     "0-0.25": 7580,
+     "0.25-0.5": 6586,
+     "0.5-0.75": 6278,
+     "0.75-1": 4823
+    },
+    "3": {
+     "0-0.25": 895,
+     "0.25-0.5": 712,
+     "0.5-0.75": 487,
+     "0.75-1": 1636
+    },
+    "4": {
+     "0-0.25": 0,
+     "0.25-0.5": 0,
+     "0.5-0.75": 0,
+     "0.75-1": 610
+    },
+    "8": {
+     "0-0.25": 28,
+     "0.25-0.5": 0,
+     "0.5-0.75": 0,
+     "0.75-1": 0
+    }
+   },
+   "b_on_aortic_rim_nodes (min, median, max)": [
+    0.198,
+    0.983,
+    1.0
+   ],
+   "neighbour_angle_step_deg where b > 0 (max, p99.9, p99)": [
+    90.0,
+    85.64,
+    46.72
+   ],
+   "same pairs under R5.1 alone (max, p99.9, p99)": [
+    90.0,
+    84.66,
+    43.11
+   ],
+   "pairs, and pairs over 30 deg (blend, R5.1 alone)": [
+    90929,
+    1994,
+    1679
+   ],
+   "largest increase of the step over R5.1 alone, deg": 67.15
+  }
+ },
+ "item8_v51_sites_with_b_gt_0": [
+  {
+   "site": "aortic_cusp_rcc_z_d50",
+   "family": "aortic_cusp",
+   "w_(1-phi_lv)": 0.804,
+   "b_wLV": 0.948,
+   "b_wdat": 0.051,
+   "alpha_R5.1_deg": -20.0,
+   "alpha_blend_wLV_deg": 15.7,
+   "alpha_blend_wdat_deg": -18.1
+  },
+  {
+   "site": "aortic_cusp_rcc_z_d75",
+   "family": "aortic_cusp",
+   "w_(1-phi_lv)": 0.783,
+   "b_wLV": 0.946,
+   "b_wdat": 0.031,
+   "alpha_R5.1_deg": -17.7,
+   "alpha_blend_wLV_deg": 17.6,
+   "alpha_blend_wdat_deg": -16.6
+  },
+  {
+   "site": "aortic_cusp_rcc_z_d90",
+   "family": "aortic_cusp",
+   "w_(1-phi_lv)": 0.761,
+   "b_wLV": 0.945,
+   "b_wdat": 0.026,
+   "alpha_R5.1_deg": -15.5,
+   "alpha_blend_wLV_deg": 19.4,
+   "alpha_blend_wdat_deg": -14.5
+  },
+  {
+   "site": "aortic_cusp_lcc_z_d10",
+   "family": "aortic_cusp",
+   "w_(1-phi_lv)": 0.117,
+   "b_wLV": 0.872,
+   "b_wdat": 0.762,
+   "alpha_R5.1_deg": 53.4,
+   "alpha_blend_wLV_deg": 76.1,
+   "alpha_blend_wdat_deg": 73.2
+  },
+  {
+   "site": "aortic_cusp_lcc_z_d50",
+   "family": "aortic_cusp",
+   "w_(1-phi_lv)": 0.46,
+   "b_wLV": 0.74,
+   "b_wdat": 0.324,
+   "alpha_R5.1_deg": 16.8,
+   "alpha_blend_wLV_deg": 40.4,
+   "alpha_blend_wdat_deg": 27.1
+  },
+  {
+   "site": "aortic_cusp_lcc_z_d75",
+   "family": "aortic_cusp",
+   "w_(1-phi_lv)": 0.509,
+   "b_wLV": 0.77,
+   "b_wdat": 0.142,
+   "alpha_R5.1_deg": 11.5,
+   "alpha_blend_wLV_deg": 36.7,
+   "alpha_blend_wdat_deg": 16.2
+  },
+  {
+   "site": "aortic_cusp_lcc_z_d90",
+   "family": "aortic_cusp",
+   "w_(1-phi_lv)": 0.538,
+   "b_wLV": 0.738,
+   "b_wdat": 0.066,
+   "alpha_R5.1_deg": 8.4,
+   "alpha_blend_wLV_deg": 32.9,
+   "alpha_blend_wdat_deg": 10.6
+  },
+  {
+   "site": "lv_summit_superior_z_d10",
+   "family": "lv_summit",
+   "w_(1-phi_lv)": 0.051,
+   "b_wLV": 0.383,
+   "b_wdat": 0.483,
+   "alpha_R5.1_deg": 60.5,
+   "alpha_blend_wLV_deg": 70.1,
+   "alpha_blend_wdat_deg": 72.5
+  },
+  {
+   "site": "lv_summit_superior_z_d50",
+   "family": "lv_summit",
+   "w_(1-phi_lv)": 0.397,
+   "b_wLV": 0.428,
+   "b_wdat": 0.523,
+   "alpha_R5.1_deg": 23.5,
+   "alpha_blend_wLV_deg": 36.7,
+   "alpha_blend_wdat_deg": 39.6
+  },
+  {
+   "site": "lv_summit_superior_z_d75",
+   "family": "lv_summit",
+   "w_(1-phi_lv)": 0.706,
+   "b_wLV": 0.439,
+   "b_wdat": 0.528,
+   "alpha_R5.1_deg": -9.6,
+   "alpha_blend_wLV_deg": 6.2,
+   "alpha_blend_wdat_deg": 9.4
+  },
+  {
+   "site": "lv_summit_superior_z_d90",
+   "family": "lv_summit",
+   "w_(1-phi_lv)": 0.873,
+   "b_wLV": 0.448,
+   "b_wdat": 0.541,
+   "alpha_R5.1_deg": -27.4,
+   "alpha_blend_wLV_deg": -10.0,
+   "alpha_blend_wdat_deg": -6.4
+  },
+  {
+   "site": "lv_summit_inferior_lateral_z_d10",
+   "family": "lv_summit",
+   "w_(1-phi_lv)": 0.057,
+   "b_wLV": 0.143,
+   "b_wdat": 0.183,
+   "alpha_R5.1_deg": 59.9,
+   "alpha_blend_wLV_deg": 63.5,
+   "alpha_blend_wdat_deg": 64.5
+  },
+  {
+   "site": "lv_summit_inferior_lateral_z_d50",
+   "family": "lv_summit",
+   "w_(1-phi_lv)": 0.442,
+   "b_wLV": 0.155,
+   "b_wdat": 0.193,
+   "alpha_R5.1_deg": 18.7,
+   "alpha_blend_wLV_deg": 23.6,
+   "alpha_blend_wdat_deg": 24.7
+  },
+  {
+   "site": "lv_summit_inferior_lateral_z_d75",
+   "family": "lv_summit",
+   "w_(1-phi_lv)": 0.778,
+   "b_wLV": 0.162,
+   "b_wdat": 0.199,
+   "alpha_R5.1_deg": -17.2,
+   "alpha_blend_wLV_deg": -11.2,
+   "alpha_blend_wdat_deg": -9.8
+  },
+  {
+   "site": "lv_summit_inferior_lateral_z_d90",
+   "family": "lv_summit",
+   "w_(1-phi_lv)": 0.867,
+   "b_wLV": 0.152,
+   "b_wdat": 0.19,
+   "alpha_R5.1_deg": -26.7,
+   "alpha_blend_wLV_deg": -20.8,
+   "alpha_blend_wdat_deg": -19.4
+  },
+  {
+   "site": "lv_vein_course_basal_ring_anterolateral_z_d10",
+   "family": "lv_vein_course",
+   "w_(1-phi_lv)": 0.082,
+   "b_wLV": 0.057,
+   "b_wdat": 0.07,
+   "alpha_R5.1_deg": 57.3,
+   "alpha_blend_wLV_deg": 58.7,
+   "alpha_blend_wdat_deg": 59.0
+  },
+  {
+   "site": "lv_vein_course_basal_ring_anterolateral_z_d50",
+   "family": "lv_vein_course",
+   "w_(1-phi_lv)": 0.379,
+   "b_wLV": 0.062,
+   "b_wdat": 0.075,
+   "alpha_R5.1_deg": 25.4,
+   "alpha_blend_wLV_deg": 27.3,
+   "alpha_blend_wdat_deg": 27.7
+  },
+  {
+   "site": "lv_vein_course_basal_ring_anterolateral_z_d75",
+   "family": "lv_vein_course",
+   "w_(1-phi_lv)": 0.68,
+   "b_wLV": 0.065,
+   "b_wdat": 0.078,
+   "alpha_R5.1_deg": -6.7,
+   "alpha_blend_wLV_deg": -4.4,
+   "alpha_blend_wdat_deg": -4.0
+  },
+  {
+   "site": "lv_vein_course_basal_ring_anterolateral_z_d90",
+   "family": "lv_vein_course",
+   "w_(1-phi_lv)": 0.862,
+   "b_wLV": 0.062,
+   "b_wdat": 0.074,
+   "alpha_R5.1_deg": -26.3,
+   "alpha_blend_wLV_deg": -23.9,
+   "alpha_blend_wdat_deg": -23.4
+  },
+  {
+   "site": "lv_vein_course_basal_ring_lateral_z_d10",
+   "family": "lv_vein_course",
+   "w_(1-phi_lv)": 0.063,
+   "b_wLV": 0.024,
+   "b_wdat": 0.023,
+   "alpha_R5.1_deg": 59.2,
+   "alpha_blend_wLV_deg": 59.8,
+   "alpha_blend_wdat_deg": 59.8
+  },
+  {
+   "site": "lv_vein_course_basal_ring_lateral_z_d50",
+   "family": "lv_vein_course",
+   "w_(1-phi_lv)": 0.439,
+   "b_wLV": 0.025,
+   "b_wdat": 0.023,
+   "alpha_R5.1_deg": 19.0,
+   "alpha_blend_wLV_deg": 19.8,
+   "alpha_blend_wdat_deg": 19.7
+  },
+  {
+   "site": "lv_vein_course_basal_ring_lateral_z_d75",
+   "family": "lv_vein_course",
+   "w_(1-phi_lv)": 0.751,
+   "b_wLV": 0.026,
+   "b_wdat": 0.022,
+   "alpha_R5.1_deg": -14.4,
+   "alpha_blend_wLV_deg": -13.4,
+   "alpha_blend_wdat_deg": -13.6
+  },
+  {
+   "site": "lv_vein_course_basal_ring_lateral_z_d90",
+   "family": "lv_vein_course",
+   "w_(1-phi_lv)": 0.827,
+   "b_wLV": 0.026,
+   "b_wdat": 0.023,
+   "alpha_R5.1_deg": -22.5,
+   "alpha_blend_wLV_deg": -21.5,
+   "alpha_blend_wdat_deg": -21.6
+  }
+ ],
+ "item8_gate5_eligible_v51_summit_site_with_b_gt_0": true,
+ "item9_free_wall_|w - normalised distance depth|": {
+  "n": 195893,
+  "median": 0.0339,
+  "p95": 0.0795,
+  "max": 0.3747
+ },
+ "wall_s": 41.4
+}

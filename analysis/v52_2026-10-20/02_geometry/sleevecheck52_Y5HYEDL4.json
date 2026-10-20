@@ -1,0 +1,38 @@
+{
+ "heart": "Y5HYEDL4",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "sleeve_elements": 0,
+ "bands": [],
+ "per_sinus": {
+  "posterior": {
+   "nadir": "mid-plane ring point at the sinus centre (D13)",
+   "ring_node": 296012,
+   "existing_height_mm (highest RV node, +-2.5 deg)": 6.69,
+   "rule_max(existing, 4.0)_mm": 6.69,
+   "achieved_height_mm": 6.69,
+   "within_one_element": true
+  },
+  "sinus_+120": {
+   "nadir": "mid-plane ring point at the sinus centre (D13)",
+   "ring_node": 239966,
+   "existing_height_mm (highest RV node, +-2.5 deg)": 5.53,
+   "rule_max(existing, 4.0)_mm": 5.53,
+   "achieved_height_mm": 5.53,
+   "within_one_element": true
+  },
+  "sinus_-120": {
+   "nadir": "mid-plane ring point at the sinus centre (D13)",
+   "ring_node": 96780,
+   "existing_height_mm (highest RV node, +-2.5 deg)": 7.04,
+   "rule_max(existing, 4.0)_mm": 7.04,
+   "achieved_height_mm": 7.04,
+   "within_one_element": true
+  }
+ },
+ "bands_evaluated": 0,
+ "bands_pass": 0,
+ "thickness_acceptance": true,
+ "failing_bands": [],
+ "bins_where_achieved_height_is_below_4.0_minus_one_element": [],
+ "built_height_acceptance": true
+}

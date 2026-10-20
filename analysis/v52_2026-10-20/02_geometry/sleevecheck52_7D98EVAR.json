@@ -1,0 +1,471 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "sleeve_elements": 732,
+ "bands": [
+  {
+   "bin_deg": 225,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.87,
+   "expected_mm": 1.87,
+   "achieved_mm": 1.87,
+   "pass": true
+  },
+  {
+   "bin_deg": 225,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 1.64,
+   "expected_mm": 1.64,
+   "achieved_mm": 1.64,
+   "pass": true
+  },
+  {
+   "bin_deg": 225,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.37,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.07,
+   "pass": true
+  },
+  {
+   "bin_deg": 230,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 0.89,
+   "expected_mm": 0.89,
+   "achieved_mm": 0.89,
+   "pass": true
+  },
+  {
+   "bin_deg": 230,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 1.76,
+   "expected_mm": 1.7,
+   "achieved_mm": 1.76,
+   "pass": true
+  },
+  {
+   "bin_deg": 230,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.7,
+   "expected_mm": 1.0,
+   "achieved_mm": 0.96,
+   "pass": true
+  },
+  {
+   "bin_deg": 235,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.57,
+   "expected_mm": 1.57,
+   "achieved_mm": 1.57,
+   "pass": true
+  },
+  {
+   "bin_deg": 235,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.45,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.08,
+   "pass": true
+  },
+  {
+   "bin_deg": 235,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 3.06,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.14,
+   "pass": true
+  },
+  {
+   "bin_deg": 240,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.71,
+   "expected_mm": 1.71,
+   "achieved_mm": 1.71,
+   "pass": true
+  },
+  {
+   "bin_deg": 240,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 3.1,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.03,
+   "pass": true
+  },
+  {
+   "bin_deg": 240,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.82,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.59,
+   "pass": true
+  },
+  {
+   "bin_deg": 245,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.67,
+   "expected_mm": 1.67,
+   "achieved_mm": 1.67,
+   "pass": true
+  },
+  {
+   "bin_deg": 245,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.51,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.03,
+   "pass": true
+  },
+  {
+   "bin_deg": 245,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.77,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.66,
+   "pass": true
+  },
+  {
+   "bin_deg": 250,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.85,
+   "expected_mm": 1.85,
+   "achieved_mm": 1.85,
+   "pass": true
+  },
+  {
+   "bin_deg": 250,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.48,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.11,
+   "pass": true
+  },
+  {
+   "bin_deg": 250,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.84,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.51,
+   "pass": true
+  },
+  {
+   "bin_deg": 255,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.85,
+   "expected_mm": 1.85,
+   "achieved_mm": 1.85,
+   "pass": true
+  },
+  {
+   "bin_deg": 255,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.29,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.03,
+   "pass": true
+  },
+  {
+   "bin_deg": 255,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.59,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.42,
+   "pass": true
+  },
+  {
+   "bin_deg": 260,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.51,
+   "expected_mm": 1.51,
+   "achieved_mm": 1.51,
+   "pass": true
+  },
+  {
+   "bin_deg": 260,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.11,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.07,
+   "pass": true
+  },
+  {
+   "bin_deg": 260,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.55,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.3,
+   "pass": true
+  },
+  {
+   "bin_deg": 265,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.24,
+   "expected_mm": 1.24,
+   "achieved_mm": 1.24,
+   "pass": true
+  },
+  {
+   "bin_deg": 265,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.4,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.03,
+   "pass": true
+  },
+  {
+   "bin_deg": 265,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.53,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.65,
+   "pass": true
+  },
+  {
+   "bin_deg": 270,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.25,
+   "expected_mm": 1.25,
+   "achieved_mm": 1.25,
+   "pass": true
+  },
+  {
+   "bin_deg": 270,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.89,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.01,
+   "pass": true
+  },
+  {
+   "bin_deg": 270,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.3,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.48,
+   "pass": true
+  },
+  {
+   "bin_deg": 275,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.28,
+   "expected_mm": 1.28,
+   "achieved_mm": 1.28,
+   "pass": true
+  },
+  {
+   "bin_deg": 275,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.43,
+   "expected_mm": 1.7,
+   "achieved_mm": 1.67,
+   "pass": true
+  },
+  {
+   "bin_deg": 275,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.15,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.53,
+   "pass": true
+  },
+  {
+   "bin_deg": 280,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 0.98,
+   "expected_mm": 0.98,
+   "achieved_mm": 0.98,
+   "pass": true
+  },
+  {
+   "bin_deg": 280,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.91,
+   "expected_mm": 1.7,
+   "achieved_mm": 1.74,
+   "pass": true
+  },
+  {
+   "bin_deg": 280,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.56,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.48,
+   "pass": true
+  },
+  {
+   "bin_deg": 285,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.34,
+   "expected_mm": 1.34,
+   "achieved_mm": 1.34,
+   "pass": true
+  },
+  {
+   "bin_deg": 285,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 3.16,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.17,
+   "pass": true
+  },
+  {
+   "bin_deg": 285,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 3.59,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.62,
+   "pass": true
+  },
+  {
+   "bin_deg": 290,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.5,
+   "expected_mm": 1.5,
+   "achieved_mm": 1.5,
+   "pass": true
+  },
+  {
+   "bin_deg": 290,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 2.01,
+   "expected_mm": 1.7,
+   "achieved_mm": 2.01,
+   "pass": true
+  },
+  {
+   "bin_deg": 290,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 3.03,
+   "expected_mm": 1.0,
+   "achieved_mm": 0.97,
+   "pass": true
+  },
+  {
+   "bin_deg": 295,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 1.3,
+   "expected_mm": 1.3,
+   "achieved_mm": 1.3,
+   "pass": true
+  },
+  {
+   "bin_deg": 295,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 1.43,
+   "expected_mm": 1.43,
+   "achieved_mm": 1.43,
+   "pass": true
+  },
+  {
+   "bin_deg": 295,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 2.1,
+   "expected_mm": 1.0,
+   "achieved_mm": 1.48,
+   "pass": true
+  },
+  {
+   "bin_deg": 300,
+   "fraction": 0.25,
+   "rule_mm": 2.0,
+   "local_wall_mm": 0.9,
+   "expected_mm": 0.9,
+   "achieved_mm": 0.9,
+   "pass": true
+  },
+  {
+   "bin_deg": 300,
+   "fraction": 0.5,
+   "rule_mm": 1.7,
+   "local_wall_mm": 0.0,
+   "expected_mm": 0.0,
+   "achieved_mm": 0.0,
+   "pass": true
+  },
+  {
+   "bin_deg": 300,
+   "fraction": 0.75,
+   "rule_mm": 1.0,
+   "local_wall_mm": 1.94,
+   "expected_mm": 1.0,
+   "achieved_mm": 0.89,
+   "pass": true
+  }
+ ],
+ "per_sinus": {
+  "posterior": {
+   "nadir": "mid-plane ring point at the sinus centre (D13)",
+   "ring_node": 12124,
+   "existing_height_mm (highest RV node, +-2.5 deg)": 6.79,
+   "rule_max(existing, 4.0)_mm": 6.79,
+   "achieved_height_mm": 6.79,
+   "within_one_element": true
+  },
+  "sinus_+120": {
+   "nadir": "mid-plane ring point at the sinus centre (D13)",
+   "ring_node": 59403,
+   "existing_height_mm (highest RV node, +-2.5 deg)": 5.56,
+   "rule_max(existing, 4.0)_mm": 5.56,
+   "achieved_height_mm": 5.56,
+   "within_one_element": true
+  },
+  "sinus_-120": {
+   "nadir": "mid-plane ring point at the sinus centre (D13)",
+   "ring_node": 87391,
+   "existing_height_mm (highest RV node, +-2.5 deg)": 3.0,
+   "rule_max(existing, 4.0)_mm": 4.0,
+   "achieved_height_mm": 4.46,
+   "within_one_element": true
+  }
+ },
+ "bands_evaluated": 48,
+ "bands_pass": 48,
+ "thickness_acceptance": true,
+ "failing_bands": [],
+ "bins_where_achieved_height_is_below_4.0_minus_one_element": [],
+ "built_height_acceptance": true
+}
