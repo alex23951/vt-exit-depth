@@ -1,0 +1,810 @@
+{
+ "written": "2026-10-20 19:32:36 CEST",
+ "Y5HYEDL4": {
+  "left_bundle": {
+   "1a_fascicles": {
+    "anterior": {
+     "path_nodes": 37,
+     "path_length_mm": 31.9,
+     "endpoint_mesh_node": 65188,
+     "endpoint_s_a_mm": [
+      10.91,
+      18.38
+     ],
+     "endpoint_inside_envelope": false,
+     "leaves_envelope": true,
+     "first_outside_mesh_node": 53851,
+     "first_outside_s_a_mm": [
+      7.54,
+      15.9
+     ],
+     "last_inside_mesh_node": 136328,
+     "last_inside_s_a_mm": [
+      10.91,
+      15.03
+     ],
+     "path_length_beyond_first_outside_mm": 2.61,
+     "path_length_beyond_last_inside_mm": 3.63,
+     "returns_inside_later": false
+    },
+    "septal": {
+     "path_nodes": 50,
+     "path_length_mm": 41.96,
+     "endpoint_mesh_node": 369975,
+     "endpoint_s_a_mm": [
+      39.27,
+      -2.26
+     ],
+     "endpoint_inside_envelope": false,
+     "leaves_envelope": true,
+     "first_outside_mesh_node": 70951,
+     "first_outside_s_a_mm": [
+      34.67,
+      0.0
+     ],
+     "last_inside_mesh_node": 73249,
+     "last_inside_s_a_mm": [
+      32.77,
+      -0.89
+     ],
+     "path_length_beyond_first_outside_mm": 6.0,
+     "path_length_beyond_last_inside_mm": 7.01,
+     "returns_inside_later": false
+    },
+    "posterior": {
+     "path_nodes": 68,
+     "path_length_mm": 59.53,
+     "endpoint_mesh_node": 1411,
+     "endpoint_s_a_mm": [
+      57.77,
+      -5.98
+     ],
+     "endpoint_inside_envelope": false,
+     "leaves_envelope": true,
+     "first_outside_mesh_node": 34895,
+     "first_outside_s_a_mm": [
+      32.77,
+      -4.91
+     ],
+     "last_inside_mesh_node": 287878,
+     "last_inside_s_a_mm": [
+      31.37,
+      -4.68
+     ],
+     "path_length_beyond_first_outside_mm": 24.73,
+     "path_length_beyond_last_inside_mm": 25.31,
+     "returns_inside_later": false
+    }
+   },
+   "1b_distal_joins": {
+    "count": 3,
+    "inside": 0,
+    "outside": 3,
+    "by_fascicle": {
+     "anterior": {
+      "inside": 0,
+      "outside": 1
+     },
+     "septal": {
+      "inside": 0,
+      "outside": 1
+     },
+     "posterior": {
+      "inside": 0,
+      "outside": 1
+     }
+    },
+    "nodes": [
+     {
+      "mesh_node": 65188,
+      "on": "anterior",
+      "s_a_mm": [
+       10.91,
+       18.38
+      ],
+      "inside_envelope": false,
+      "distal_neighbours": 2,
+      "neighbour_kinds": [
+       "distal_lv",
+       "proximal"
+      ],
+      "is_fascicle_endpoint": true
+     },
+     {
+      "mesh_node": 369975,
+      "on": "septal",
+      "s_a_mm": [
+       39.27,
+       -2.26
+      ],
+      "inside_envelope": false,
+      "distal_neighbours": 2,
+      "neighbour_kinds": [
+       "distal_lv",
+       "proximal"
+      ],
+      "is_fascicle_endpoint": true
+     },
+     {
+      "mesh_node": 1411,
+      "on": "posterior",
+      "s_a_mm": [
+       57.77,
+       -5.98
+      ],
+      "inside_envelope": false,
+      "distal_neighbours": 2,
+      "neighbour_kinds": [
+       "distal_lv",
+       "proximal"
+      ],
+      "is_fascicle_endpoint": true
+     }
+    ],
+    "note": "graph nodes, not mesh nodes: the 18 / 8 / 13 of report 34 item 8 were distal junctions sharing a mesh node with a trunk or fascicle node, a different count"
+   },
+   "1c_reachability": {
+    "network_used": "network_v51.npz",
+    "lv_distal_nodes": 3551,
+    "lv_distal_nodes_inside_envelope": 132,
+    "components_without_trunk_and_fascicles": 1,
+    "component_sizes": [
+     {
+      "nodes": 3758,
+      "distal_lv": 3551,
+      "proximal_kind (DISTAL-class division paths)": 207
+     }
+    ],
+    "nearest_node": {
+     "rule": "each of the three old endpoints joined to the v5.1 LV distal node nearest it (Euclidean) inside the envelope; all trunk and fascicle nodes removed",
+     "attachments": {
+      "anterior": {
+       "attach_mesh_node": 63772,
+       "euclid_mm_from_old_endpoint": 8.85,
+       "attach_s_a_mm": [
+        5.54,
+        10.42
+       ]
+      },
+      "septal": {
+       "attach_mesh_node": 360154,
+       "euclid_mm_from_old_endpoint": 8.19,
+       "attach_s_a_mm": [
+        32.77,
+        3.3
+       ]
+      },
+      "posterior": {
+       "attach_mesh_node": 360154,
+       "euclid_mm_from_old_endpoint": 24.47,
+       "attach_s_a_mm": [
+        32.77,
+        3.3
+       ]
+      }
+     },
+     "lv_distal_nodes_not_reachable": 0,
+     "reachable": 3551,
+     "variant_septal_outflow_by_7.1 (anterior and posterior as above, septal at the mid-septal point at 16.5 mm)": {
+      "septal_attach_mesh_node": 229026,
+      "not_reachable": 0
+     }
+    },
+    "keep_tails": {
+     "rule": "trunk and fascicle nodes inside the envelope replaced by the sheet; the paths beyond kept and joined to the sheet where they leave; distal edges that met a trunk or fascicle node inside the envelope joined to the sheet",
+     "tail_nodes_kept": 40,
+     "distal_edges_rejoined_inside": 0,
+     "lv_distal_nodes_not_reachable": 0,
+     "with_the_7.1_septal_outflow_added": 0
+    }
+   }
+  },
+  "aortic_frame": {
+   "frame": "theta measured about the root axis (AV-disc normal) in the AV-disc mid-plane from the ring node nearest the mitral disc (node 62315); + and - are the two senses",
+   "2a_mitral_disc_centroid_deg": {
+    "+": 67.8,
+    "-": 292.2
+   },
+   "2b_pulmonary_disc_centroid_deg": {
+    "+": 300.9,
+    "-": 59.1
+   },
+   "2c_aortic_ring_within_1.05mm_of_the_mitral_ring": {
+    "none": true,
+    "closest_mm": 8.84,
+    "arc_within_2.1mm": null,
+    "extra_arc_within_closest_plus_1.05mm": {
+     "+": {
+      "start_deg": 348.9,
+      "end_deg": 8.2,
+      "extent_deg": 19.2,
+      "midpoint_deg": 358.5,
+      "nodes": 15
+     },
+     "-": {
+      "start_deg": 351.8,
+      "end_deg": 11.1,
+      "extent_deg": 19.2,
+      "midpoint_deg": 1.5,
+      "nodes": 15
+     }
+    }
+   },
+   "mitral_ring_nodes": 1443,
+   "aortic_ring_nodes": 820,
+   "2d_rv_on_aortic_root_0_to_3mm_above_mid_plane": {
+    "+": {
+     "start_deg": 253.7,
+     "end_deg": 266.5,
+     "extent_deg": 12.8,
+     "midpoint_deg": 260.1,
+     "nodes": 4
+    },
+    "-": {
+     "start_deg": 93.5,
+     "end_deg": 106.3,
+     "extent_deg": 12.8,
+     "midpoint_deg": 99.9,
+     "nodes": 4
+    }
+   },
+   "extra_rv_on_aortic_root_0_to_6mm": {
+    "+": {
+     "start_deg": 156.9,
+     "end_deg": 331.0,
+     "extent_deg": 174.1,
+     "midpoint_deg": 243.9,
+     "nodes": 123
+    },
+    "-": {
+     "start_deg": 29.0,
+     "end_deg": 203.1,
+     "extent_deg": 174.1,
+     "midpoint_deg": 116.1,
+     "nodes": 123
+    }
+   },
+   "extra_mitral_centroid_to_pulmonary_centroid_deg (shorter way round)": 126.9,
+   "rv_aortic_contact_nodes_all_heights": 1330,
+   "for_reference_pv_nearest_ring_node_deg": {
+    "+": 317.7,
+    "-": 42.3
+   }
+  }
+ },
+ "6G8DD8S5": {
+  "left_bundle": {
+   "1a_fascicles": {
+    "anterior": {
+     "path_nodes": 40,
+     "path_length_mm": 34.58,
+     "endpoint_mesh_node": 22502,
+     "endpoint_s_a_mm": [
+      23.63,
+      15.83
+     ],
+     "endpoint_inside_envelope": true,
+     "leaves_envelope": false
+    },
+    "septal": {
+     "path_nodes": 41,
+     "path_length_mm": 36.28,
+     "endpoint_mesh_node": 20374,
+     "endpoint_s_a_mm": [
+      33.88,
+      0.84
+     ],
+     "endpoint_inside_envelope": false,
+     "leaves_envelope": true,
+     "first_outside_mesh_node": 44159,
+     "first_outside_s_a_mm": [
+      33.88,
+      0.0
+     ],
+     "last_inside_mesh_node": 37604,
+     "last_inside_s_a_mm": [
+      32.05,
+      0.87
+     ],
+     "path_length_beyond_first_outside_mm": 0.84,
+     "path_length_beyond_last_inside_mm": 1.8,
+     "returns_inside_later": false
+    },
+    "posterior": {
+     "path_nodes": 54,
+     "path_length_mm": 50.29,
+     "endpoint_mesh_node": 30705,
+     "endpoint_s_a_mm": [
+      48.37,
+      -6.06
+     ],
+     "endpoint_inside_envelope": false,
+     "leaves_envelope": true,
+     "first_outside_mesh_node": 56691,
+     "first_outside_s_a_mm": [
+      32.05,
+      -4.94
+     ],
+     "last_inside_mesh_node": 27035,
+     "last_inside_s_a_mm": [
+      32.05,
+      -4.41
+     ],
+     "path_length_beyond_first_outside_mm": 14.69,
+     "path_length_beyond_last_inside_mm": 15.5,
+     "returns_inside_later": false
+    }
+   },
+   "1b_distal_joins": {
+    "count": 3,
+    "inside": 1,
+    "outside": 2,
+    "by_fascicle": {
+     "anterior": {
+      "inside": 1,
+      "outside": 0
+     },
+     "septal": {
+      "inside": 0,
+      "outside": 1
+     },
+     "posterior": {
+      "inside": 0,
+      "outside": 1
+     }
+    },
+    "nodes": [
+     {
+      "mesh_node": 22502,
+      "on": "anterior",
+      "s_a_mm": [
+       23.63,
+       15.83
+      ],
+      "inside_envelope": true,
+      "distal_neighbours": 2,
+      "neighbour_kinds": [
+       "distal_lv",
+       "proximal"
+      ],
+      "is_fascicle_endpoint": true
+     },
+     {
+      "mesh_node": 20374,
+      "on": "septal",
+      "s_a_mm": [
+       33.88,
+       0.84
+      ],
+      "inside_envelope": false,
+      "distal_neighbours": 2,
+      "neighbour_kinds": [
+       "distal_lv",
+       "proximal"
+      ],
+      "is_fascicle_endpoint": true
+     },
+     {
+      "mesh_node": 30705,
+      "on": "posterior",
+      "s_a_mm": [
+       48.37,
+       -6.06
+      ],
+      "inside_envelope": false,
+      "distal_neighbours": 2,
+      "neighbour_kinds": [
+       "distal_lv",
+       "proximal"
+      ],
+      "is_fascicle_endpoint": true
+     }
+    ],
+    "note": "graph nodes, not mesh nodes: the 18 / 8 / 13 of report 34 item 8 were distal junctions sharing a mesh node with a trunk or fascicle node, a different count"
+   },
+   "1c_reachability": {
+    "network_used": "network_intact_v51.npz (before the LBBB cut)",
+    "lv_distal_nodes": 2965,
+    "lv_distal_nodes_inside_envelope": 169,
+    "components_without_trunk_and_fascicles": 1,
+    "component_sizes": [
+     {
+      "nodes": 3183,
+      "distal_lv": 2965,
+      "proximal_kind (DISTAL-class division paths)": 218
+     }
+    ],
+    "nearest_node": {
+     "rule": "each of the three old endpoints joined to the v5.1 LV distal node nearest it (Euclidean) inside the envelope; all trunk and fascicle nodes removed",
+     "attachments": {
+      "anterior": {
+       "attach_mesh_node": 22502,
+       "euclid_mm_from_old_endpoint": 0.0,
+       "attach_s_a_mm": [
+        23.63,
+        15.83
+       ]
+      },
+      "septal": {
+       "attach_mesh_node": 86440,
+       "euclid_mm_from_old_endpoint": 3.31,
+       "attach_s_a_mm": [
+        32.05,
+        -2.43
+       ]
+      },
+      "posterior": {
+       "attach_mesh_node": 86440,
+       "euclid_mm_from_old_endpoint": 15.57,
+       "attach_s_a_mm": [
+        32.05,
+        -2.43
+       ]
+      }
+     },
+     "lv_distal_nodes_not_reachable": 0,
+     "reachable": 2965,
+     "variant_septal_outflow_by_7.1 (anterior and posterior as above, septal at the mid-septal point at 16.5 mm)": {
+      "septal_attach_mesh_node": 981,
+      "not_reachable": 0
+     }
+    },
+    "keep_tails": {
+     "rule": "trunk and fascicle nodes inside the envelope replaced by the sheet; the paths beyond kept and joined to the sheet where they leave; distal edges that met a trunk or fascicle node inside the envelope joined to the sheet",
+     "tail_nodes_kept": 18,
+     "distal_edges_rejoined_inside": 2,
+     "lv_distal_nodes_not_reachable": 0,
+     "with_the_7.1_septal_outflow_added": 0
+    }
+   }
+  },
+  "aortic_frame": {
+   "frame": "theta measured about the root axis (AV-disc normal) in the AV-disc mid-plane from the ring node nearest the mitral disc (node 497186); + and - are the two senses",
+   "2a_mitral_disc_centroid_deg": {
+    "+": 54.4,
+    "-": 305.6
+   },
+   "2b_pulmonary_disc_centroid_deg": {
+    "+": 288.0,
+    "-": 72.0
+   },
+   "2c_aortic_ring_within_1.05mm_of_the_mitral_ring": {
+    "none": true,
+    "closest_mm": 7.66,
+    "arc_within_2.1mm": null,
+    "extra_arc_within_closest_plus_1.05mm": {
+     "+": {
+      "start_deg": 337.2,
+      "end_deg": 109.1,
+      "extent_deg": 131.9,
+      "midpoint_deg": 43.2,
+      "nodes": 44
+     },
+     "-": {
+      "start_deg": 250.9,
+      "end_deg": 22.8,
+      "extent_deg": 131.9,
+      "midpoint_deg": 316.8,
+      "nodes": 44
+     }
+    }
+   },
+   "mitral_ring_nodes": 1214,
+   "aortic_ring_nodes": 732,
+   "2d_rv_on_aortic_root_0_to_3mm_above_mid_plane": {
+    "+": {
+     "start_deg": 177.8,
+     "end_deg": 213.0,
+     "extent_deg": 35.2,
+     "midpoint_deg": 195.4,
+     "nodes": 8
+    },
+    "-": {
+     "start_deg": 147.0,
+     "end_deg": 182.2,
+     "extent_deg": 35.2,
+     "midpoint_deg": 164.6,
+     "nodes": 8
+    }
+   },
+   "extra_rv_on_aortic_root_0_to_6mm": {
+    "+": {
+     "start_deg": 147.0,
+     "end_deg": 308.4,
+     "extent_deg": 161.3,
+     "midpoint_deg": 227.7,
+     "nodes": 178
+    },
+    "-": {
+     "start_deg": 51.6,
+     "end_deg": 213.0,
+     "extent_deg": 161.3,
+     "midpoint_deg": 132.3,
+     "nodes": 178
+    }
+   },
+   "extra_mitral_centroid_to_pulmonary_centroid_deg (shorter way round)": 126.4,
+   "rv_aortic_contact_nodes_all_heights": 1183,
+   "for_reference_pv_nearest_ring_node_deg": {
+    "+": 297.1,
+    "-": 62.9
+   }
+  }
+ },
+ "7D98EVAR": {
+  "left_bundle": {
+   "1a_fascicles": {
+    "anterior": {
+     "path_nodes": 34,
+     "path_length_mm": 29.61,
+     "endpoint_mesh_node": 18987,
+     "endpoint_s_a_mm": [
+      9.98,
+      21.98
+     ],
+     "endpoint_inside_envelope": false,
+     "leaves_envelope": true,
+     "first_outside_mesh_node": 23592,
+     "first_outside_s_a_mm": [
+      9.98,
+      15.2
+     ],
+     "last_inside_mesh_node": 53066,
+     "last_inside_s_a_mm": [
+      9.98,
+      14.24
+     ],
+     "path_length_beyond_first_outside_mm": 7.14,
+     "path_length_beyond_last_inside_mm": 8.11,
+     "returns_inside_later": false
+    },
+    "septal": {
+     "path_nodes": 42,
+     "path_length_mm": 37.43,
+     "endpoint_mesh_node": 250241,
+     "endpoint_s_a_mm": [
+      35.26,
+      9.79
+     ],
+     "endpoint_inside_envelope": false,
+     "leaves_envelope": true,
+     "first_outside_mesh_node": 219778,
+     "first_outside_s_a_mm": [
+      33.46,
+      9.66
+     ],
+     "last_inside_mesh_node": 36381,
+     "last_inside_s_a_mm": [
+      31.38,
+      10.04
+     ],
+     "path_length_beyond_first_outside_mm": 1.38,
+     "path_length_beyond_last_inside_mm": 2.53,
+     "returns_inside_later": false
+    },
+    "posterior": {
+     "path_nodes": 57,
+     "path_length_mm": 52.05,
+     "endpoint_mesh_node": 259343,
+     "endpoint_s_a_mm": [
+      48.23,
+      0.0
+     ],
+     "endpoint_inside_envelope": false,
+     "leaves_envelope": true,
+     "first_outside_mesh_node": 9848,
+     "first_outside_s_a_mm": [
+      33.46,
+      2.76
+     ],
+     "last_inside_mesh_node": 38080,
+     "last_inside_s_a_mm": [
+      31.38,
+      2.95
+     ],
+     "path_length_beyond_first_outside_mm": 16.0,
+     "path_length_beyond_last_inside_mm": 16.78,
+     "returns_inside_later": false
+    }
+   },
+   "1b_distal_joins": {
+    "count": 3,
+    "inside": 0,
+    "outside": 3,
+    "by_fascicle": {
+     "anterior": {
+      "inside": 0,
+      "outside": 1
+     },
+     "septal": {
+      "inside": 0,
+      "outside": 1
+     },
+     "posterior": {
+      "inside": 0,
+      "outside": 1
+     }
+    },
+    "nodes": [
+     {
+      "mesh_node": 18987,
+      "on": "anterior",
+      "s_a_mm": [
+       9.98,
+       21.98
+      ],
+      "inside_envelope": false,
+      "distal_neighbours": 2,
+      "neighbour_kinds": [
+       "distal_lv",
+       "proximal"
+      ],
+      "is_fascicle_endpoint": true
+     },
+     {
+      "mesh_node": 250241,
+      "on": "septal",
+      "s_a_mm": [
+       35.26,
+       9.79
+      ],
+      "inside_envelope": false,
+      "distal_neighbours": 2,
+      "neighbour_kinds": [
+       "distal_lv",
+       "proximal"
+      ],
+      "is_fascicle_endpoint": true
+     },
+     {
+      "mesh_node": 259343,
+      "on": "posterior",
+      "s_a_mm": [
+       48.23,
+       0.0
+      ],
+      "inside_envelope": false,
+      "distal_neighbours": 2,
+      "neighbour_kinds": [
+       "distal_lv",
+       "proximal"
+      ],
+      "is_fascicle_endpoint": true
+     }
+    ],
+    "note": "graph nodes, not mesh nodes: the 18 / 8 / 13 of report 34 item 8 were distal junctions sharing a mesh node with a trunk or fascicle node, a different count"
+   },
+   "1c_reachability": {
+    "network_used": "network_v51.npz",
+    "lv_distal_nodes": 2983,
+    "lv_distal_nodes_inside_envelope": 125,
+    "components_without_trunk_and_fascicles": 1,
+    "component_sizes": [
+     {
+      "nodes": 3180,
+      "distal_lv": 2983,
+      "proximal_kind (DISTAL-class division paths)": 197
+     }
+    ],
+    "nearest_node": {
+     "rule": "each of the three old endpoints joined to the v5.1 LV distal node nearest it (Euclidean) inside the envelope; all trunk and fascicle nodes removed",
+     "attachments": {
+      "anterior": {
+       "attach_mesh_node": 276874,
+       "euclid_mm_from_old_endpoint": 5.11,
+       "attach_s_a_mm": [
+        14.6,
+        17.5
+       ]
+      },
+      "septal": {
+       "attach_mesh_node": 46735,
+       "euclid_mm_from_old_endpoint": 3.26,
+       "attach_s_a_mm": [
+        31.38,
+        7.7
+       ]
+      },
+      "posterior": {
+       "attach_mesh_node": 46735,
+       "euclid_mm_from_old_endpoint": 17.72,
+       "attach_s_a_mm": [
+        31.38,
+        7.7
+       ]
+      }
+     },
+     "lv_distal_nodes_not_reachable": 0,
+     "reachable": 2983,
+     "variant_septal_outflow_by_7.1 (anterior and posterior as above, septal at the mid-septal point at 16.5 mm)": {
+      "septal_attach_mesh_node": 22081,
+      "not_reachable": 0
+     }
+    },
+    "keep_tails": {
+     "rule": "trunk and fascicle nodes inside the envelope replaced by the sheet; the paths beyond kept and joined to the sheet where they leave; distal edges that met a trunk or fascicle node inside the envelope joined to the sheet",
+     "tail_nodes_kept": 30,
+     "distal_edges_rejoined_inside": 0,
+     "lv_distal_nodes_not_reachable": 0,
+     "with_the_7.1_septal_outflow_added": 0
+    }
+   }
+  },
+  "aortic_frame": {
+   "frame": "theta measured about the root axis (AV-disc normal) in the AV-disc mid-plane from the ring node nearest the mitral disc (node 382184); + and - are the two senses",
+   "2a_mitral_disc_centroid_deg": {
+    "+": 61.0,
+    "-": 299.0
+   },
+   "2b_pulmonary_disc_centroid_deg": {
+    "+": 292.9,
+    "-": 67.1
+   },
+   "2c_aortic_ring_within_1.05mm_of_the_mitral_ring": {
+    "none": true,
+    "closest_mm": 7.91,
+    "arc_within_2.1mm": null,
+    "extra_arc_within_closest_plus_1.05mm": {
+     "+": {
+      "start_deg": 351.8,
+      "end_deg": 129.0,
+      "extent_deg": 137.2,
+      "midpoint_deg": 60.4,
+      "nodes": 11
+     },
+     "-": {
+      "start_deg": 231.0,
+      "end_deg": 8.2,
+      "extent_deg": 137.2,
+      "midpoint_deg": 299.6,
+      "nodes": 11
+     }
+    }
+   },
+   "mitral_ring_nodes": 1131,
+   "aortic_ring_nodes": 719,
+   "2d_rv_on_aortic_root_0_to_3mm_above_mid_plane": {
+    "none": true,
+    "lowest_contact_height_mm": 3.64,
+    "arc_of_lowest_3mm_of_contact": {
+     "+": {
+      "start_deg": 136.3,
+      "end_deg": 324.8,
+      "extent_deg": 188.6,
+      "midpoint_deg": 230.6,
+      "nodes": 177
+     },
+     "-": {
+      "start_deg": 35.2,
+      "end_deg": 223.7,
+      "extent_deg": 188.6,
+      "midpoint_deg": 129.4,
+      "nodes": 177
+     }
+    }
+   },
+   "extra_rv_on_aortic_root_0_to_6mm": {
+    "+": {
+     "start_deg": 136.3,
+     "end_deg": 324.8,
+     "extent_deg": 188.6,
+     "midpoint_deg": 230.6,
+     "nodes": 136
+    },
+    "-": {
+     "start_deg": 35.2,
+     "end_deg": 223.7,
+     "extent_deg": 188.6,
+     "midpoint_deg": 129.4,
+     "nodes": 136
+    }
+   },
+   "extra_mitral_centroid_to_pulmonary_centroid_deg (shorter way round)": 128.1,
+   "rv_aortic_contact_nodes_all_heights": 1403,
+   "for_reference_pv_nearest_ring_node_deg": {
+    "+": 299.1,
+    "-": 60.9
+   }
+  }
+ }
+}
