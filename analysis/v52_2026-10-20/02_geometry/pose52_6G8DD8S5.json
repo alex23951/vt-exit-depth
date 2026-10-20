@@ -1,0 +1,211 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "pose_4x4 (x_torso_mm = x_heart_mm + t_prime; rotation identity)": [
+  [
+   1.0,
+   0.0,
+   0.0,
+   -29.697859
+  ],
+  [
+   0.0,
+   1.0,
+   0.0,
+   -97.994288
+  ],
+  [
+   0.0,
+   0.0,
+   1.0,
+   -54.553356
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "t_prime_mm": [
+  -29.698,
+  -97.994,
+  -54.553
+ ],
+ "v51_R_rotation_deg": 19.87,
+ "v51_t_mm": [
+  -49.591,
+  -73.156,
+  -59.665
+ ],
+ "LA_RA_surface_faces": 112100,
+ "centroid_readings": {
+  "surface_area_weighted (primary)": {
+   "c_mm": [
+    39.746,
+    64.702,
+    58.106
+   ],
+   "t_prime_mm": [
+    -29.698,
+    -97.994,
+    -54.553
+   ],
+   "difference_from_primary_mm": 0.0
+  },
+  "all_LA_RA_nodes (v5.1 fit point cloud)": {
+   "c_mm": [
+    39.68,
+    64.652,
+    58.743
+   ],
+   "t_prime_mm": [
+    -29.685,
+    -98.077,
+    -54.564
+   ],
+   "difference_from_primary_mm": 0.084
+  },
+  "LA_RA_surface_nodes": {
+   "c_mm": [
+    39.901,
+    64.693,
+    58.26
+   ],
+   "t_prime_mm": [
+    -29.702,
+    -98.064,
+    -54.57
+   ],
+   "difference_from_primary_mm": 0.072
+  }
+ },
+ "centroid_lands_where_v51_put_it_mm (check 0)": 0.0,
+ "shift_of_the_ventricles_vs_v51_pose_mm (median node)": 20.8,
+ "clearance": {
+  "skin_surface": "data/torso/torsoModels/T_13_torso_coarse_surface.vtk",
+  "skin_triangles": 5970,
+  "min_mm_simulation_mesh (ventricles + sleeves)": 40.64,
+  "min_mm_all_cohort_nodes (atria, valves, vessels, cavity surfaces)": 36.57,
+  "nearest_search_exact_on_2000_closest (max |k-nearest - brute force| mm)": 0.0,
+  "winding_number_heart_centroids_and_200_closest (min, max)": [
+   1.0,
+   1.0
+  ],
+  "all_inside": true,
+  "required_mm": 5.0,
+  "pass": true,
+  "v51_pose_min_mm_simulation_mesh (report)": 34.16,
+  "closest_simulation_node_torso_mm": [
+   41.8,
+   -85.2,
+   32.2
+  ]
+ },
+ "electrode_to_nearest_myocardium_mm": {
+  "RA": {
+   "v52_CT_pose_mm": 195.6,
+   "v51_pose_mm": 192.3
+  },
+  "LA": {
+   "v52_CT_pose_mm": 128.8,
+   "v51_pose_mm": 136.9
+  },
+  "LL": {
+   "v52_CT_pose_mm": 289.2,
+   "v51_pose_mm": 281.0
+  },
+  "V1": {
+   "v52_CT_pose_mm": 61.6,
+   "v51_pose_mm": 54.3
+  },
+  "V2": {
+   "v52_CT_pose_mm": 44.5,
+   "v51_pose_mm": 37.1
+  },
+  "V3": {
+   "v52_CT_pose_mm": 53.7,
+   "v51_pose_mm": 43.4
+  },
+  "V4": {
+   "v52_CT_pose_mm": 56.1,
+   "v51_pose_mm": 48.3
+  },
+  "V5": {
+   "v52_CT_pose_mm": 66.2,
+   "v51_pose_mm": 69.3
+  },
+  "V6": {
+   "v52_CT_pose_mm": 80.1,
+   "v51_pose_mm": 84.9
+  },
+  "RL": {
+   "v52_CT_pose_mm": 320.1,
+   "v51_pose_mm": 309.9
+  }
+ },
+ "orientation (report only, never used to choose the pose)": {
+  "CT_pose": {
+   "apex_direction_unit": [
+    0.8694,
+    -0.4525,
+    -0.1987
+   ],
+   "frontal_plane_deg (apex below the left horizontal)": 12.9,
+   "anterior_tilt_deg": 26.9,
+   "horizontal_plane_deg (left towards anterior)": 27.5,
+   "short_axis_to_RV_unit": [
+    -0.3659,
+    -0.8596,
+    0.3567
+   ]
+  },
+  "v51_pose": {
+   "apex_direction_unit": [
+    0.6842,
+    -0.6468,
+    -0.3368
+   ],
+   "frontal_plane_deg (apex below the left horizontal)": 26.2,
+   "anterior_tilt_deg": 40.3,
+   "horizontal_plane_deg (left towards anterior)": 43.4,
+   "short_axis_to_RV_unit": [
+    -0.5934,
+    -0.7623,
+    0.2585
+   ]
+  },
+  "long_axis_angle_between_poses_deg": 17.36,
+  "short_axis_angle_between_poses_deg": 15.3
+ },
+ "forward_check_T13_electrodes (9.4, report only)": {
+  "midline_x_mm (halfway between the skin edges at the V1-V2 height)": 7.5,
+  "V1-V2 separation mm": 55.2,
+  "V1, V2 lateral offset from the midline mm (parasternal: right, left)": [
+   -22.0,
+   33.1
+  ],
+  "V1 - V2 height mm (level: 0)": -3.0,
+  "V2 - V4 height mm (one intercostal space; T13 has no ribs)": 76.4,
+  "V3 distance from the V2-V4 midpoint mm (0 = midpoint)": 22.4,
+  "V5 - V4, V6 - V4 height mm (same horizontal plane: 0)": [
+   -8.7,
+   -18.4
+  ],
+  "RA, LA height below the torso top mm (infraclavicular; clavicles not in T13)": [
+   66.1,
+   65.1
+  ],
+  "RA, LA lateral position x mm": [
+   -137.4,
+   150.3
+  ],
+  "LL height above the torso bottom mm (costal margin and iliac crest not in T13)": 28.5,
+  "torso_z_range_mm": [
+   -357.3,
+   204.2
+  ],
+  "note": "report only; the primary electrodes are not moved (9.4)"
+ },
+ "wall_s": 29.0
+}

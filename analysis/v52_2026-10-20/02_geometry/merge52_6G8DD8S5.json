@@ -1,0 +1,95 @@
+{
+ "heart": "6G8DD8S5",
+ "v51_nodes": 375672,
+ "v51_elements": 1997928,
+ "nodes": 375949,
+ "elements": 1998932,
+ "added_elements": {
+  "crescent (tag 1)": 0,
+  "sleeve (tag 2)": 1004
+ },
+ "added_nodes": 277,
+ "added_volume_mm3": 106.12,
+ "surfaces": {
+  "ao_iface": {
+   "faces": 2385,
+   "nodes": 1337
+  },
+  "av_rim": {
+   "faces": 1212,
+   "nodes": 729
+  },
+  "avplane_iface": {
+   "faces": 4406,
+   "nodes": 2596
+  },
+  "epi": {
+   "faces": 79842,
+   "nodes": 40374
+  },
+  "lv_endo": {
+   "faces": 41355,
+   "nodes": 20841
+  },
+  "mv_rim": {
+   "faces": 1253,
+   "nodes": 813
+  },
+  "part_iface": {
+   "faces": 1414,
+   "nodes": 902
+  },
+  "pv_rim": {
+   "faces": 1224,
+   "nodes": 791
+  },
+  "rv_endo": {
+   "faces": 37641,
+   "nodes": 19076
+  },
+  "tag17_iface": {
+   "faces": 92,
+   "nodes": 69
+  },
+  "tag20_iface": {
+   "faces": 4,
+   "nodes": 6
+  },
+  "tv_rim": {
+   "faces": 1352,
+   "nodes": 876
+  }
+ },
+ "luminal_faces_of_added_elements": {
+  "rv_endo": 252,
+  "lv_endo": 0
+ },
+ "surface_change_vs_v51": {
+  "lv_endo": {
+   "v51_faces": 41355,
+   "v52_faces": 41355,
+   "v51_faces_kept": 41355,
+   "added": 0,
+   "removed": 0
+  },
+  "rv_endo": {
+   "v51_faces": 37389,
+   "v52_faces": 37641,
+   "v51_faces_kept": 37389,
+   "added": 252,
+   "removed": 0
+  },
+  "epi": {
+   "v51_faces": 79835,
+   "v52_faces": 79842,
+   "v51_faces_kept": 79835,
+   "added": 7,
+   "removed": 0
+  }
+ },
+ "fibrous_layer_nodes": 190,
+ "identical_to_v51": false,
+ "pts_sha256": "47c94dea29a81b5fa53bc72d46b1f083ec254dd5036b995f16cf3014135fd205",
+ "elem_sha256": "a6e642b87f065feb2d36a169b087b6c1bcd7f5bc525e7ad4ca5ba52f57509657",
+ "wall_s": 11.8
+}

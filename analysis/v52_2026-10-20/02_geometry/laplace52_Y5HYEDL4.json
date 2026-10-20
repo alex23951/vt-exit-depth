@@ -1,0 +1,304 @@
+{
+ "heart": "Y5HYEDL4",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "mesh": "data/biv/Y5HYEDL4/v52/biv52",
+ "mesh_identical_to_v51": true,
+ "conductor": "merged mesh, uncut (8.2: the cut is an activation-engine treatment)",
+ "np": 4,
+ "problems": {
+  "zeta": {
+   "n_bc0": 369,
+   "n_bc1": 8759,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 375190,
+   "wall_s": 15.7
+  },
+  "basal": {
+   "n_bc0": 369,
+   "n_bc1": 4907,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 375190,
+   "wall_s": 16.4
+  },
+  "ot": {
+   "n_bc0": 369,
+   "n_bc1": 3919,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 375190,
+   "wall_s": 16.8
+  },
+  "w": {
+   "n_bc0": 3852,
+   "n_bc1": 5276,
+   "min": -0.797506,
+   "max": 2.81017,
+   "n": 375190,
+   "wall_s": 16.4
+  },
+  "phi_epi": {
+   "n_bc0": 51043,
+   "n_bc1": 46667,
+   "min": 0.0,
+   "max": 1.00299,
+   "n": 375190,
+   "wall_s": 14.5
+  },
+  "phi_lv": {
+   "n_bc0": 74801,
+   "n_bc1": 22909,
+   "min": -5.97737e-05,
+   "max": 1.0,
+   "n": 375190,
+   "wall_s": 14.4
+  },
+  "phi_rv": {
+   "n_bc0": 69576,
+   "n_bc1": 28134,
+   "min": -0.00293117,
+   "max": 1.0,
+   "n": 375190,
+   "wall_s": 13.9
+  },
+  "v": {
+   "n_bc0": 22909,
+   "n_bc1": 28134,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 375190,
+   "wall_s": 15.0
+  },
+  "ot_rv": {
+   "n_bc0": 369,
+   "n_bc1": 1583,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 375190,
+   "wall_s": 20.5
+  },
+  "ot_lv": {
+   "n_bc0": 369,
+   "n_bc1": 2372,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 375190,
+   "wall_s": 21.2
+  },
+  "phi_epi_fix": {
+   "n_bc0": 51043,
+   "n_bc1": 47983,
+   "min": 0.0,
+   "max": 1.00018,
+   "n": 375190,
+   "wall_s": 16.7
+  }
+ },
+ "uvc": {
+  "corr_z_vs_axial_distance": 0.9887776814373159,
+  "z_deciles": [
+   0.246,
+   0.366,
+   0.469,
+   0.563,
+   0.649,
+   0.734,
+   0.813,
+   0.889,
+   0.971
+  ]
+ },
+ "doste": {
+  "R_field_elements": 787003,
+  "problems": {
+   "u_lv": {
+    "n_bc0": 76117,
+    "n_bc1": 22909,
+    "min": -1.70103e-06,
+    "max": 1.0,
+    "n": 375190,
+    "wall_s": 17.7
+   },
+   "u_rv": {
+    "n_bc0": 70892,
+    "n_bc1": 28134,
+    "min": -0.0001808,
+    "max": 1.0,
+    "n": 375190,
+    "wall_s": 17.1
+   },
+   "psi_tv": {
+    "n_bc0": 18,
+    "n_bc1": 1060,
+    "min": 0.0,
+    "max": 1.0,
+    "n": 164206,
+    "wall_s": 6.9
+   },
+   "psi_pv": {
+    "n_bc0": 18,
+    "n_bc1": 732,
+    "min": 0.0,
+    "max": 1.0,
+    "n": 164206,
+    "wall_s": 6.8
+   },
+   "w": {
+    "n_bc0": 732,
+    "n_bc1": 1078,
+    "min": 0.0,
+    "max": 1.0,
+    "n": 164206,
+    "wall_s": 6.6
+   }
+  },
+  "apex_A": {
+   "seed_node": 21279,
+   "seed_uvc_z": 0.18046,
+   "nodes": 18
+  },
+  "rings_in_R_field": {
+   "TV": 1060,
+   "PV": 732,
+   "A_in_R": 18
+  }
+ },
+ "R_field_vs_v51": {
+  "v51_R_field_sha256_matches_v51_record": true,
+  "v51_elements_RV_side_v51": 787003,
+  "v51_elements_RV_side_re_solved": 787003,
+  "v51_elements_LV_to_RV": 0,
+  "v51_elements_RV_to_LV": 0,
+  "added_elements_RV_side": 0,
+  "added_elements": 0
+ },
+ "vs_v51_on_v51_nodes": {
+  "laplace/zeta": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/basal": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/ot": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/w": {
+   "max_abs_diff": 1.0000000000065512e-05,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/phi_epi": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/phi_lv": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 1.0000000000602773e-16,
+   "median_abs_diff": 0.0
+  },
+  "laplace/phi_rv": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 9.99999999987899e-14,
+   "median_abs_diff": 0.0
+  },
+  "laplace/v": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "uvc/z": {
+   "max_abs_diff": 4.000000000004e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "uvc/z_laplace": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "uvc/rho": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "uvc/sep": {
+   "max_abs_diff": 2.0000000000575113e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "uvc/v": {
+   "max_abs_diff": 0.0,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "uvc/phi": {
+   "max_abs_diff": 0.0,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/ot_rv": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/ot_lv": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/phi_epi_fix": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/u_lv": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 9.999999999956538e-17,
+   "median_abs_diff": 0.0
+  },
+  "laplace/u_rv": {
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 9.999999999217246e-14,
+   "median_abs_diff": 0.0
+  },
+  "laplace/phi_D": {
+   "max_abs_diff": 2.9999999999752447e-06,
+   "p99_abs_diff": 2.0000000000575113e-07,
+   "median_abs_diff": 0.0
+  },
+  "laplace/rv_sub/psi_tv": {
+   "n_v51": 164206,
+   "n_v52": 164206,
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/rv_sub/psi_pv": {
+   "n_v51": 164206,
+   "n_v52": 164206,
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "laplace/rv_sub/w": {
+   "n_v51": 164206,
+   "n_v52": 164206,
+   "max_abs_diff": 1.0000000000287557e-06,
+   "p99_abs_diff": 9.999999999593667e-08,
+   "median_abs_diff": 0.0
+  },
+  "laplace/rv_sub_nodes.npy": {
+   "identical": true
+  }
+ },
+ "v52_fields": "v5.1 files copied unchanged into data/biv/<H>/v52/{laplace,uvc} (mesh identical)",
+ "wall_s": 251.2
+}

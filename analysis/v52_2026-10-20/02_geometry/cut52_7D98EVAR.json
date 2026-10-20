@@ -1,0 +1,132 @@
+{
+ "landmarks": {
+  "heart": "7D98EVAR",
+  "pulmonary_frame": {
+   "posterior_centre_ring_node": 88730,
+   "axis": [
+    -0.04862,
+    0.63628,
+    0.76993
+   ],
+   "ring_centroid_mm": [
+    71.232,
+    40.948,
+    91.799
+   ],
+   "ring_nodes": 203,
+   "disc_thickness_mm": 6.19,
+   "disc_faces_mm": [
+    -2.92,
+    3.27
+   ]
+  },
+  "node_100pct (full mesh)": 12124,
+  "node_0pct (full mesh)": 53212,
+  "tv_superior_node": 62329,
+  "tricuspid_level_height_mm": -19.328,
+  "height_100pct_mm": 0.01,
+  "height_0pct_mm": -15.098,
+  "cavity_rim_node_below_the_ring (p_top)": 19414,
+  "height_p_top_mm": -2.978,
+  "span_parts_mm": {
+   "surface path 0 % -> p_top": 13.403,
+   "rise p_top -> mid-plane ring": 3.127
+  },
+  "posterior_span_mm": 16.531,
+  "span_vs_Jakiel_sd": -1.6,
+  "path_nodes": 10,
+  "candidates": {
+   "D14 47.2 % of the span (primary)": {
+    "distance_from_0pct_mm": 7.8,
+    "clipped_to_span": false,
+    "height_above_pv_mid_plane_mm": -7.852,
+    "point_mm": [
+     58.032,
+     39.023,
+     82.357
+    ]
+   },
+   "07:30 rule 37.3 % of the span": {
+    "distance_from_0pct_mm": 6.17,
+    "clipped_to_span": false,
+    "height_above_pv_mid_plane_mm": -9.397,
+    "point_mm": [
+     57.838,
+     38.392,
+     80.859
+    ]
+   },
+   "D6 12.7 mm above 0 %": {
+    "distance_from_0pct_mm": 12.7,
+    "clipped_to_span": false,
+    "height_above_pv_mid_plane_mm": -3.554,
+    "point_mm": [
+     59.784,
+     40.944,
+     86.463
+    ]
+   },
+   "15.3 mm below the ring": {
+    "distance_from_0pct_mm": 1.23,
+    "clipped_to_span": false,
+    "height_above_pv_mid_plane_mm": -14.026,
+    "point_mm": [
+     57.028,
+     36.438,
+     76.411
+    ]
+   }
+  },
+  "split_height_mm": -7.852
+ },
+ "v51_mesh": {
+  "D14 47.2 % of the span (primary)": {
+   "split_faces": 457,
+   "split_area_mm2 (contact area cut)": 154.7,
+   "fused_area_mm2": 823.28,
+   "duplicated_nodes": 281
+  },
+  "07:30 rule 37.3 % of the span": {
+   "split_faces": 501,
+   "split_area_mm2 (contact area cut)": 169.93,
+   "fused_area_mm2": 808.06,
+   "duplicated_nodes": 309
+  },
+  "D6 12.7 mm above 0 %": {
+   "split_faces": 302,
+   "split_area_mm2 (contact area cut)": 104.5,
+   "fused_area_mm2": 873.49,
+   "duplicated_nodes": 184
+  },
+  "15.3 mm below the ring": {
+   "split_faces": 641,
+   "split_area_mm2 (contact area cut)": 217.47,
+   "fused_area_mm2": 760.51,
+   "duplicated_nodes": 395
+  }
+ },
+ "v51_mesh_D14_cut": {
+  "lv_rv_interface_faces": 2895,
+  "lv_rv_interface_area_mm2": 977.99,
+  "split_faces": 457,
+  "split_area_mm2 (contact area cut)": 154.7,
+  "fused_faces_below": 2438,
+  "fused_area_mm2": 823.28,
+  "duplicated_nodes": 281,
+  "front_nodes_kept_shared": 16,
+  "interface_pairs_split": {
+   "1-2": 457
+  },
+  "check_shared_nodes_inside_split_region": 0,
+  "check_lv_rv_faces_still_shared_more_than_0.5mm_above_split_height": 0,
+  "front_faces_still_shared_within_0.5mm_of_split_height": 1,
+  "check_septal_component_fused (faces below kept)": true,
+  "check_connected_components_of_cut_mesh": 1,
+  "split_faces_height_range_mm": [
+   -7.79,
+   2.03
+  ]
+ },
+ "rv_aortic_root_contact_area_mm2 (full mesh, before 2c)": 879.69,
+ "wall_s": 111.1
+}

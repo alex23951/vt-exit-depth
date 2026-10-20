@@ -1,0 +1,92 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "split_height_mm (landmark stage, D14)": -7.852,
+ "merged_mesh": {
+  "nodes": 337700,
+  "elements": 1756446
+ },
+ "cut_mesh_nodes": 337981,
+ "merged_mesh_D14_cut": {
+  "lv_rv_interface_faces": 2895,
+  "lv_rv_interface_area_mm2": 977.99,
+  "split_faces": 457,
+  "split_area_mm2 (contact area cut)": 154.7,
+  "fused_faces_below": 2438,
+  "fused_area_mm2": 823.28,
+  "duplicated_nodes": 281,
+  "front_nodes_kept_shared": 16,
+  "interface_pairs_split": {
+   "1-2": 457
+  },
+  "check_shared_nodes_inside_split_region": 0,
+  "check_lv_rv_faces_still_shared_more_than_0.5mm_above_split_height": 0,
+  "front_faces_still_shared_within_0.5mm_of_split_height": 1,
+  "check_septal_component_fused (faces below kept)": true,
+  "check_connected_components_of_cut_mesh": 1,
+  "split_faces_height_range_mm": [
+   -7.79,
+   2.03
+  ]
+ },
+ "graph_edges_crossing_the_cut": {
+  "near_nodes": 7539,
+  "pairs_up_to_5.25mm_distance_le3": 659364,
+  "pairs_tested (not both LV-only or both RV-only)": 29671,
+  "crossing_tet_edges (must be 0)": 0,
+  "crossing_2ring_edges": 289,
+  "crossing_3ring_edges": 2054,
+  "of_which_(a)_LV_to_RV_with_an_end_on_the_cut (2-ring, 3-ring)": [
+   219,
+   1454
+  ],
+  "of_which_(b)_segment_meets_a_split_face (2-ring, 3-ring)": [
+   71,
+   646
+  ],
+  "zero_length_pairs_between_the_two_copies_of_a_node": 19,
+  "crossing_by_side (0 LV-only, 1 RV-only, 2 shared)": {
+   "0-1": 1518,
+   "0-2": 27,
+   "1-0": 420,
+   "1-2": 1,
+   "2-0": 35,
+   "2-1": 52,
+   "2-2": 1
+  }
+ },
+ "detour_check": {
+  "sampled_split_nodes": 200,
+  "path_LV_copy_to_RV_copy_mm (straight distance 0)": {
+   "min": 1.32,
+   "median": 12.32,
+   "max": 27.55
+  },
+  "no_path_within_30mm_region": 0,
+  "edges_removed_in_this_graph": 289
+ },
+ "contact_after_2c_2d_mm2": {
+  "RV-aortic root (tags 2/28 - 5)": 879.69,
+  "LV-RV interface on the merged mesh": 977.99,
+  "LV-RV interface on the v5.1 mesh (landmark stage)": 977.99,
+  "LV-aortic root (tags 1/25/29 - 5), for reference": 109.83
+ },
+ "connectivity": {
+  "components_cut_mesh (tet edges)": 1,
+  "fibrous_layer_nodes (non-excitable, both copies)": 106,
+  "components_excitable": 1,
+  "component_sizes_nodes": [
+   337875
+  ],
+  "components_without_a_v51_junction_node": 0,
+  "nodes_in_components_without_a_junction": 0,
+  "acceptance (every excitable component reachable from a network junction)": true
+ },
+ "files": {
+  "cut_mesh": "data/biv/7D98EVAR/v52/biv52cut",
+  "pts_sha256": "7bb43d21e0e63b47046b28b4fc209918e39c30194f8d47117b57a418545123ee",
+  "elem_sha256": "6f4ec89bb3b45d78f41bdaf8ff9654a4937ac716fa0f5543fc21fbb781b6c625",
+  "removed_edges": "runs/v52_2026-10-20/02_geometry/7D98EVAR/cut52_edges_removed.npz"
+ },
+ "wall_s": 37.3
+}

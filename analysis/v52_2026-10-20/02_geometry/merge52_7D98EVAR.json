@@ -1,0 +1,87 @@
+{
+ "heart": "7D98EVAR",
+ "v51_nodes": 337505,
+ "v51_elements": 1755714,
+ "nodes": 337700,
+ "elements": 1756446,
+ "added_elements": {
+  "crescent (tag 1)": 0,
+  "sleeve (tag 2)": 732
+ },
+ "added_nodes": 195,
+ "added_volume_mm3": 77.9,
+ "surfaces": {
+  "ao_iface": {
+   "faces": 2942,
+   "nodes": 1631
+  },
+  "av_rim": {
+   "faces": 1212,
+   "nodes": 716
+  },
+  "avplane_iface": {
+   "faces": 4190,
+   "nodes": 2430
+  },
+  "epi": {
+   "faces": 82710,
+   "nodes": 41751
+  },
+  "lv_endo": {
+   "faces": 43982,
+   "nodes": 22135
+  },
+  "mv_rim": {
+   "faces": 1251,
+   "nodes": 783
+  },
+  "part_iface": {
+   "faces": 1137,
+   "nodes": 716
+  },
+  "pv_rim": {
+   "faces": 1031,
+   "nodes": 656
+  },
+  "rv_endo": {
+   "faces": 41641,
+   "nodes": 21026
+  },
+  "tv_rim": {
+   "faces": 1438,
+   "nodes": 908
+  }
+ },
+ "luminal_faces_of_added_elements": {
+  "rv_endo": 141,
+  "lv_endo": 0
+ },
+ "surface_change_vs_v51": {
+  "lv_endo": {
+   "v51_faces": 43982,
+   "v52_faces": 43982,
+   "v51_faces_kept": 43982,
+   "added": 0,
+   "removed": 0
+  },
+  "rv_endo": {
+   "v51_faces": 41500,
+   "v52_faces": 41641,
+   "v51_faces_kept": 41500,
+   "added": 141,
+   "removed": 0
+  },
+  "epi": {
+   "v51_faces": 82710,
+   "v52_faces": 82710,
+   "v51_faces_kept": 82710,
+   "added": 0,
+   "removed": 0
+  }
+ },
+ "fibrous_layer_nodes": 106,
+ "identical_to_v51": false,
+ "pts_sha256": "ad5eb0861ed5e7f1381a5eee86ea7d4e299013189bfe5512bc09091e0c5b8daa",
+ "elem_sha256": "178650e4ed946ceedecdfded3eb17d89bed321a4130582be58c8b32a46f9ee1c",
+ "wall_s": 10.0
+}

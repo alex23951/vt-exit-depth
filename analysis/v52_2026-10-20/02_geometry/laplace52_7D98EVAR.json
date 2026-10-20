@@ -1,0 +1,295 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "mesh": "data/biv/7D98EVAR/v52/biv52",
+ "mesh_identical_to_v51": false,
+ "conductor": "merged mesh, uncut (8.2: the cut is an activation-engine treatment)",
+ "np": 4,
+ "problems": {
+  "zeta": {
+   "n_bc0": 371,
+   "n_bc1": 7323,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 337700,
+   "wall_s": 11.1
+  },
+  "basal": {
+   "n_bc0": 371,
+   "n_bc1": 3825,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 337700,
+   "wall_s": 11.2
+  },
+  "ot": {
+   "n_bc0": 371,
+   "n_bc1": 3568,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 337700,
+   "wall_s": 11.3
+  },
+  "w": {
+   "n_bc0": 3498,
+   "n_bc1": 4196,
+   "min": -0.535742,
+   "max": 3.36284,
+   "n": 337700,
+   "wall_s": 11.1
+  },
+  "phi_epi": {
+   "n_bc0": 43155,
+   "n_bc1": 41751,
+   "min": -0.00011665,
+   "max": 1.01061,
+   "n": 337700,
+   "wall_s": 9.9
+  },
+  "phi_lv": {
+   "n_bc0": 62771,
+   "n_bc1": 22135,
+   "min": -0.273324,
+   "max": 1.0,
+   "n": 337700,
+   "wall_s": 9.8
+  },
+  "phi_rv": {
+   "n_bc0": 63880,
+   "n_bc1": 21026,
+   "min": -0.477205,
+   "max": 1.82813,
+   "n": 337700,
+   "wall_s": 9.6
+  },
+  "v": {
+   "n_bc0": 22135,
+   "n_bc1": 21026,
+   "min": -0.477205,
+   "max": 1.0,
+   "n": 337700,
+   "wall_s": 10.2
+  },
+  "ot_rv": {
+   "n_bc0": 371,
+   "n_bc1": 1284,
+   "min": 0.0,
+   "max": 1.00026,
+   "n": 337700,
+   "wall_s": 12.1
+  },
+  "ot_lv": {
+   "n_bc0": 371,
+   "n_bc1": 2325,
+   "min": 0.0,
+   "max": 1.0,
+   "n": 337700,
+   "wall_s": 14.7
+  },
+  "phi_epi_fix": {
+   "n_bc0": 43155,
+   "n_bc1": 43172,
+   "min": -0.000160416,
+   "max": 1.01061,
+   "n": 337700,
+   "wall_s": 12.7
+  }
+ },
+ "uvc": {
+  "corr_z_vs_axial_distance": 0.9806218909110153,
+  "z_deciles": [
+   0.222,
+   0.333,
+   0.435,
+   0.529,
+   0.617,
+   0.704,
+   0.785,
+   0.848,
+   0.942
+  ]
+ },
+ "doste": {
+  "R_field_elements": 580380,
+  "problems": {
+   "u_lv": {
+    "n_bc0": 64192,
+    "n_bc1": 22135,
+    "min": -0.273324,
+    "max": 1.0,
+    "n": 337700,
+    "wall_s": 13.1
+   },
+   "u_rv": {
+    "n_bc0": 65301,
+    "n_bc1": 21026,
+    "min": -0.477205,
+    "max": 1.82813,
+    "n": 337700,
+    "wall_s": 12.1
+   },
+   "psi_tv": {
+    "n_bc0": 27,
+    "n_bc1": 887,
+    "min": 0.0,
+    "max": 1.0,
+    "n": 121742,
+    "wall_s": 3.8
+   },
+   "psi_pv": {
+    "n_bc0": 27,
+    "n_bc1": 656,
+    "min": 0.0,
+    "max": 1.0,
+    "n": 121742,
+    "wall_s": 3.7
+   },
+   "w": {
+    "n_bc0": 656,
+    "n_bc1": 914,
+    "min": 0.0,
+    "max": 1.0,
+    "n": 121742,
+    "wall_s": 4.0
+   }
+  },
+  "apex_A": {
+   "seed_node": 20642,
+   "seed_uvc_z": 0.19844,
+   "nodes": 27
+  },
+  "rings_in_R_field": {
+   "TV": 887,
+   "PV": 656,
+   "A_in_R": 27
+  }
+ },
+ "R_field_vs_v51": {
+  "v51_R_field_sha256_matches_v51_record": true,
+  "v51_elements_RV_side_v51": 579450,
+  "v51_elements_RV_side_re_solved": 579648,
+  "v51_elements_LV_to_RV": 198,
+  "v51_elements_RV_to_LV": 0,
+  "added_elements_RV_side": 732,
+  "added_elements": 732
+ },
+ "vs_v51_on_v51_nodes": {
+  "laplace/zeta": {
+   "max_abs_diff": 0.0017420000000000213,
+   "p99_abs_diff": 2.799999999991698e-05,
+   "median_abs_diff": 4.000000000004e-06
+  },
+  "laplace/basal": {
+   "max_abs_diff": 0.003946000000000005,
+   "p99_abs_diff": 0.00039200000000005897,
+   "median_abs_diff": 2.599999999997049e-05
+  },
+  "laplace/ot": {
+   "max_abs_diff": 0.0033199999999999896,
+   "p99_abs_diff": 6.099999999997774e-05,
+   "median_abs_diff": 1.7000000000044757e-05
+  },
+  "laplace/w": {
+   "max_abs_diff": 0.00942236,
+   "p99_abs_diff": 0.00015100000000001224,
+   "median_abs_diff": 1.8999999999991246e-05
+  },
+  "laplace/phi_epi": {
+   "max_abs_diff": 0.4380609999999999,
+   "p99_abs_diff": 0.0016073440000000244,
+   "median_abs_diff": 0.0
+  },
+  "laplace/phi_lv": {
+   "max_abs_diff": 0.03567649999999999,
+   "p99_abs_diff": 9.499999999995623e-05,
+   "median_abs_diff": 0.0
+  },
+  "laplace/phi_rv": {
+   "max_abs_diff": 1.82813,
+   "p99_abs_diff": 0.002071832000000037,
+   "median_abs_diff": 0.0
+  },
+  "laplace/v": {
+   "max_abs_diff": 0.25426800000000005,
+   "p99_abs_diff": 0.008875960000000016,
+   "median_abs_diff": 0.0
+  },
+  "uvc/z": {
+   "max_abs_diff": 0.019625000000000004,
+   "p99_abs_diff": 0.0008660000000000334,
+   "median_abs_diff": 0.000144000000000033
+  },
+  "uvc/z_laplace": {
+   "max_abs_diff": 0.0017420000000000213,
+   "p99_abs_diff": 2.799999999991698e-05,
+   "median_abs_diff": 4.000000000004e-06
+  },
+  "uvc/rho": {
+   "max_abs_diff": 0.4380609999999999,
+   "p99_abs_diff": 0.0016073440000000244,
+   "median_abs_diff": 0.0
+  },
+  "uvc/sep": {
+   "max_abs_diff": 1.0,
+   "p99_abs_diff": 0.0013695920000000583,
+   "median_abs_diff": 0.0
+  },
+  "uvc/v": {
+   "max_abs_diff": 1.0,
+   "p99_abs_diff": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "uvc/phi": {
+   "max_abs_diff": 0.007995307179585964,
+   "p99_abs_diff": 0.007990000000000386,
+   "median_abs_diff": 0.007985999999999827
+  },
+  "laplace/ot_rv": {
+   "max_abs_diff": 0.0065349999999999575,
+   "p99_abs_diff": 0.00022900000000003473,
+   "median_abs_diff": 9.100000000000774e-05
+  },
+  "laplace/ot_lv": {
+   "max_abs_diff": 0.011419999999999986,
+   "p99_abs_diff": 0.0018560000000000755,
+   "median_abs_diff": 0.0006140000000000034
+  },
+  "laplace/phi_epi_fix": {
+   "max_abs_diff": 0.516713,
+   "p99_abs_diff": 0.0010239600000000457,
+   "median_abs_diff": 0.0
+  },
+  "laplace/u_lv": {
+   "max_abs_diff": 0.0354809,
+   "p99_abs_diff": 6.300000000003525e-05,
+   "median_abs_diff": 0.0
+  },
+  "laplace/u_rv": {
+   "max_abs_diff": 1.82813,
+   "p99_abs_diff": 0.0011689520000000015,
+   "median_abs_diff": 0.0
+  },
+  "laplace/phi_D": {
+   "max_abs_diff": 1.82813,
+   "p99_abs_diff": 0.001320152000000022,
+   "median_abs_diff": 0.0
+  },
+  "laplace/rv_sub/psi_tv": {
+   "n_v51": 121505,
+   "n_v52": 121742
+  },
+  "laplace/rv_sub/psi_pv": {
+   "n_v51": 121505,
+   "n_v52": 121742
+  },
+  "laplace/rv_sub/w": {
+   "n_v51": 121505,
+   "n_v52": 121742
+  },
+  "laplace/rv_sub_nodes.npy": {
+   "identical": false
+  }
+ },
+ "v52_fields": "re-solved on the merged mesh (this run)",
+ "wall_s": 168.8
+}
