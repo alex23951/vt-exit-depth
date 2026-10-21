@@ -2,7 +2,9 @@
 
 Sheet coordinates exactly as report 34 (step 0, analysis/v52_2026-10-20/00_step0/step0_report34.py, step0_followup.py):
 the His line is the 2-ring surface shortest path on the LV endocardium from the v5.1 His node to the LV endocardial apex;
-s = arc length of a node's nearest line point, a = its surface distance to the line, + anterior (AHA angle). The LV
+s = arc length of a node's nearest line point, a = its surface distance to the line, + anterior (AHA angle). Since D21
+(adopted, Alex 21 Oct 2026 05:18:18 UTC) s is continuous: the arc length at the foot of the node's perpendicular on the
+line segments beside its nearest line node, instead of the arc length of that node (report 34's snapped reading). The LV
 endocardium of the merged mesh is v5.1's (merge52: lv_endo unchanged in every heart), so v5.1 coordinates are used.
 Left bundle sheet (7.1, D4): every LV endocardial node inside the envelope (0 <= s <= 33 mm; width 6 mm at s = 0 widening
 linearly to 22.6 mm at 12.5 mm and held; 17.8 / 22.6 of it anterior and 4.8 / 22.6 posterior of the His line). Nodes =
@@ -53,6 +55,7 @@ R34 = module('r34', os.path.join(S0, 'step0_report34.py'))
 FU = module('fu', os.path.join(S0, 'step0_followup.py'))
 TRUNK_S, V_TRUNK, V_FASC = 10.0, 1.5, 2.0
 ELEM = 1.05                                    # one element (mean edge), the acceptance tolerance of 15.2 step 2g
+FRAME = os.environ.get('SHEET52_FRAME', 'continuous')   # D21 adopted 21 Oct 2026; 'nodes' = report 34's snapped s (the 20 Oct build)
 
 
 def frame(h):
@@ -74,6 +77,23 @@ def frame(h):
     da, src = SL.dist(line, 2)
     s_of_line = dict(zip(line.tolist(), sl.tolist()))
     s_all = np.array([s_of_line.get(int(f), np.nan) for f in SL.nodes[src]])
+    if FRAME == 'continuous':
+        # D21 (Alex, 21 Oct 2026 05:18:18 UTC): s measured continuously along the line, not snapped to its nodes: the
+        # foot of the node's perpendicular on the two line segments next to its nearest line node (2-ring surface
+        # distance), the nearer foot in 3D, s = arc length there. a is unchanged (surface distance to the line).
+        pos = {int(m): i for i, m in enumerate(line.tolist())}
+        k = np.array([pos[int(f)] for f in SL.nodes[src]])
+        X, Pl = P[SL.nodes], P[line]
+        best_d = np.linalg.norm(X - Pl[k], axis=1)
+        for j0 in (k - 1, k):
+            ok = (j0 >= 0) & (j0 + 1 < len(line))
+            j0c = np.clip(j0, 0, len(line) - 2)
+            a0, v = Pl[j0c], Pl[j0c + 1] - Pl[j0c]
+            t = np.clip(np.sum((X - a0) * v, 1) / np.maximum(np.sum(v * v, 1), 1e-12), 0, 1)
+            d = np.linalg.norm(X - (a0 + t[:, None] * v), axis=1)
+            upd = ok & (d < best_d)
+            s_all = np.where(upd, sl[j0c] + t * np.linalg.norm(v, axis=1), s_all)
+            best_d = np.where(upd, d, best_d)
     a_all = da * np.sign(R34.wrapdeg(np.nan_to_num(th_l - th_l[src])) + 1e-12)
     bnodes = SL.nodes[np.unique(SL.boundary_edges)]
     crest = np.intersect1d(lve[S_mask], bnodes)

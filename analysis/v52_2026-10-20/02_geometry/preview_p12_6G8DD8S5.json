@@ -1,0 +1,84 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "b_D29_v52_network": {
+  "network_sha256": "95984b4e89df40edd581e9ff2721b5877744a95ef1e283b15433d6a1267081fc",
+  "v52_LV_junctions (distal_lv + sheet)": 1805,
+  "on_LV_side_elements_with_b_gt_0": 245,
+  "of_which_sheet_junctions": 0,
+  "P10b_v51_junctions_with_b_gt_0": 382,
+  "of_those_removed_by_D1 (not a v5.2 junction)": 137,
+  "highest_height_rel_aortic_mid_plane_mm (negative = below)": -10.93,
+  "heights_below_mid_plane_2mm_bins": {
+   "0-2 mm below": 0,
+   "2-4 mm below": 0,
+   "4-6 mm below": 0,
+   "6-8 mm below": 0,
+   "8-10 mm below": 0,
+   "10-12 mm below": 10,
+   "12-14 mm below": 3,
+   "14-16 mm below": 5,
+   "16-18 mm below": 8,
+   "18-20 mm below": 4,
+   ">= 20 mm below": 215,
+   "above the mid-plane": 0
+  },
+  "largest_b": 0.138,
+  "AHA_segments": {
+   "1": 13,
+   "4": 80,
+   "5": 57,
+   "6": 75,
+   "7": 6,
+   "8": 14
+  },
+  "septal (2, 3, 8, 9, 14)": 14,
+  "free_wall": 231,
+  "apex_17": 0
+ },
+ "c_D32": {
+  "projection_to_0pct": {
+   "direction": "the PV disc normal (pv.n, the RVOT axis): q = 100 % point - (h(100 %) - h_TA) pv.n, i.e. straight down the PV axis to the TV-ring node's height; the 0 % node is then the posterior (within 60 deg) RV cavity node nearest q",
+   "q_height_mm": -15.719,
+   "TA_level_mm": -15.719,
+   "q_to_0pct_node_mm": 6.36,
+   "0pct_node_height_mm": -11.765,
+   "0pct_above_TA_level_mm": 3.95,
+   "q_inside_element_of_tag (None = outside the mesh, e.g. cavity blood)": null,
+   "q_to_nearest_RV_cavity_node_any_side_mm": 6.36,
+   "that_node_height_mm": -11.76
+  },
+  "heights_mm": {
+   "0pct": -11.765,
+   "100pct (mid-plane ring point, not exactly 0)": 0.075,
+   "axial_span (100pct - 0pct)": 11.84
+  },
+  "axial_pct": {
+   "cut52_boundary": {
+    "height_mm": -6.201,
+    "of_span_to_100pct_point": 46.99,
+    "of_span_to_mid_plane_0": 47.29
+   },
+   "wall_only_boundary": {
+    "height_mm": -7.263,
+    "of_span_to_100pct_point": 38.02,
+    "of_span_to_mid_plane_0": 38.27
+   }
+  },
+  "split_area_above": {
+   "cut52_boundary": {
+    "merged_mesh_split_area_mm2 (biv52cut)": 135.5,
+    "of_which_faces_of_elements_added_in_v52 (sleeves, crescents)": 27.5,
+    "v51_elements_only_mm2": 107.9,
+    "full_cohort_mesh_mm2 (P11 d)": 107.9
+   },
+   "wall_only_boundary": {
+    "merged_mesh_split_area_mm2 (biv52cut)": 148.1,
+    "of_which_faces_of_elements_added_in_v52 (sleeves, crescents)": 27.5,
+    "v51_elements_only_mm2": 120.5,
+    "full_cohort_mesh_mm2 (P11 d)": 120.5
+   }
+  },
+  "stored_cut52_apply_split_area_mm2": 135.48
+ }
+}
