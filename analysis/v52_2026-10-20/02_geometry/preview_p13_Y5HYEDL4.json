@@ -1,0 +1,199 @@
+{
+ "heart": "Y5HYEDL4",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "as_built_nodes_match_manifest": true,
+ "as built": {
+  "all": {
+   "n": 144,
+   "outside": 78,
+   "moved_median_mm": 3.6,
+   "moved_p10_mm": 0.87,
+   "moved_lt_3mm": 65
+  },
+  "by_depth": {
+   "0.1": {
+    "n": 36,
+    "outside": 9,
+    "moved_median_mm": 3.84,
+    "moved_p10_mm": 3.48,
+    "moved_lt_3mm": 1
+   },
+   "0.5": {
+    "n": 36,
+    "outside": 15,
+    "moved_median_mm": 3.83,
+    "moved_p10_mm": 1.83,
+    "moved_lt_3mm": 11
+   },
+   "0.75": {
+    "n": 36,
+    "outside": 27,
+    "moved_median_mm": 1.8,
+    "moved_p10_mm": 0.94,
+    "moved_lt_3mm": 27
+   },
+   "0.9": {
+    "n": 36,
+    "outside": 27,
+    "moved_median_mm": 1.02,
+    "moved_p10_mm": 0.8,
+    "moved_lt_3mm": 26
+   }
+  },
+  "by_family": {
+   "aortic_cusp": {
+    "n": 8,
+    "outside": 5,
+    "moved_median_mm": 3.72,
+    "moved_p10_mm": 0.97,
+    "moved_lt_3mm": 3
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "outside": 22,
+    "moved_median_mm": 3.37,
+    "moved_p10_mm": 0.85,
+    "moved_lt_3mm": 19
+   },
+   "lv_septum": {
+    "n": 32,
+    "outside": 0,
+    "moved_median_mm": 4.06,
+    "moved_p10_mm": 3.61,
+    "moved_lt_3mm": 0
+   },
+   "lv_summit": {
+    "n": 8,
+    "outside": 4,
+    "moved_median_mm": 3.05,
+    "moved_p10_mm": 1.49,
+    "moved_lt_3mm": 4
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "outside": 7,
+    "moved_median_mm": 3.12,
+    "moved_p10_mm": 1.05,
+    "moved_lt_3mm": 6
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "outside": 33,
+    "moved_median_mm": 1.44,
+    "moved_p10_mm": 0.87,
+    "moved_lt_3mm": 27
+   },
+   "rvot": {
+    "n": 8,
+    "outside": 7,
+    "moved_median_mm": 1.06,
+    "moved_p10_mm": 0.78,
+    "moved_lt_3mm": 6
+   }
+  },
+  "minus_sense_steps": 0,
+  "septal_sites": {
+   "n": 36,
+   "steps_crossing_d_s_0.5 (site node vs snapped node)": 26,
+   "of_which_lv_septum": 26
+  }
+ },
+ "proposed": {
+  "all": {
+   "n": 144,
+   "outside": 39,
+   "moved_median_mm": 3.88,
+   "moved_p10_mm": 3.01,
+   "moved_lt_3mm": 15
+  },
+  "by_depth": {
+   "0.1": {
+    "n": 36,
+    "outside": 8,
+    "moved_median_mm": 3.86,
+    "moved_p10_mm": 3.6,
+    "moved_lt_3mm": 0
+   },
+   "0.5": {
+    "n": 36,
+    "outside": 13,
+    "moved_median_mm": 3.82,
+    "moved_p10_mm": 2.36,
+    "moved_lt_3mm": 11
+   },
+   "0.75": {
+    "n": 36,
+    "outside": 11,
+    "moved_median_mm": 3.91,
+    "moved_p10_mm": 3.21,
+    "moved_lt_3mm": 3
+   },
+   "0.9": {
+    "n": 36,
+    "outside": 7,
+    "moved_median_mm": 3.91,
+    "moved_p10_mm": 3.61,
+    "moved_lt_3mm": 1
+   }
+  },
+  "by_family": {
+   "aortic_cusp": {
+    "n": 8,
+    "outside": 3,
+    "moved_median_mm": 3.95,
+    "moved_p10_mm": 2.91,
+    "moved_lt_3mm": 1
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "outside": 1,
+    "moved_median_mm": 3.84,
+    "moved_p10_mm": 3.6,
+    "moved_lt_3mm": 0
+   },
+   "lv_septum": {
+    "n": 32,
+    "outside": 0,
+    "moved_median_mm": 4.09,
+    "moved_p10_mm": 3.61,
+    "moved_lt_3mm": 0
+   },
+   "lv_summit": {
+    "n": 8,
+    "outside": 0,
+    "moved_median_mm": 3.97,
+    "moved_p10_mm": 3.76,
+    "moved_lt_3mm": 0
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "outside": 2,
+    "moved_median_mm": 4.07,
+    "moved_p10_mm": 3.64,
+    "moved_lt_3mm": 0
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "outside": 27,
+    "moved_median_mm": 3.66,
+    "moved_p10_mm": 2.5,
+    "moved_lt_3mm": 11
+   },
+   "rvot": {
+    "n": 8,
+    "outside": 6,
+    "moved_median_mm": 3.11,
+    "moved_p10_mm": 2.44,
+    "moved_lt_3mm": 3
+   }
+  },
+  "minus_sense_steps": 77,
+  "septal_sites": {
+   "n": 36,
+   "steps_crossing_d_s_0.5 (site node vs snapped node)": 25,
+   "of_which_lv_septum": 25
+  }
+ },
+ "sites_with_APD_w_within_0.05_of_0.5": 12,
+ "sites_with_APD_w_ge_0.5 (minus sense under the proposal)": 77
+}
