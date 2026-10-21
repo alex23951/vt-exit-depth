@@ -1,0 +1,290 @@
+{
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "P4a_order_used_by_preview_d23r": {
+  "candidate_id": "per heart and tier, the index in the list of new (z, phi) combinations ordered by z then phi (degrees 0-360)",
+  "tiers": "per region: T2 first, then T4, then T8; the tiers run per region across the hearts (each heart has one queue per region, holding its T2, T4, T8 candidates in that order)",
+  "rotation": "Y5HYEDL4, 6G8DD8S5, 7D98EVAR in turn; a heart whose queue for the region is empty is skipped; within a turn a heart takes its next candidate that passes (candidates failing a rule are consumed and counted)",
+  "region_order": "basal superior, apical superior, basal inferior, apical inferior",
+  "existing_for_4mm": "every position of that heart in the pool (v5.1 free wall, vein course, the projB summit positions), v5.1's summit positions if P10A_EXIST=keep, and every position already added for any region",
+  "2_ring_geodesic": "Dijkstra on the surface's 2-ring graph (each node joined to its neighbours and to their neighbours by straight chords, step0_report34.Surf), so slightly shorter than the 1-ring edge path and close to the true geodesic"
+ },
+ "mitral_annulus_z (report 34 item 2)": 1.0,
+ "rules": {
+  "C6": {
+   "matched_before_fill": {
+    "basal_superior": 5,
+    "apical_superior": 0,
+    "basal_inferior": 4,
+    "apical_inferior": 1
+   },
+   "matched_composition_before_fill": {
+    "basal_superior": {
+     "lv_free_wall": 2,
+     "summit_reanchored": 1,
+     "lv_vein_course": 2
+    },
+    "apical_superior": {},
+    "basal_inferior": {
+     "lv_free_wall": 3,
+     "lv_vein_course": 1
+    },
+    "apical_inferior": {
+     "lv_free_wall": 1
+    }
+   },
+   "matched_after_fill": {
+    "basal_superior": 20,
+    "apical_superior": 20,
+    "basal_inferior": 21,
+    "apical_inferior": 20
+   },
+   "matched_composition_after_fill": {
+    "basal_superior": {
+     "gate5fill": 13,
+     "lv_free_wall": 3,
+     "summit_reanchored": 2,
+     "lv_vein_course": 2
+    },
+    "apical_superior": {
+     "gate5fill": 16,
+     "lv_free_wall": 4
+    },
+    "basal_inferior": {
+     "gate5fill": 16,
+     "lv_free_wall": 4,
+     "lv_vein_course": 1
+    },
+    "apical_inferior": {
+     "gate5fill": 14,
+     "lv_free_wall": 6
+    }
+   },
+   "positions_added_per_region": {
+    "basal_superior": 20,
+    "apical_superior": 29,
+    "basal_inferior": 24,
+    "apical_inferior": 23
+   },
+   "positions_added_per_region_heart_tier": {
+    "basal_superior": {
+     "Y5HYEDL4": {
+      "T2": 3,
+      "T4": 4,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 5,
+      "T4": 2,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 4,
+      "T4": 2,
+      "T8": 0
+     }
+    },
+    "apical_superior": {
+     "Y5HYEDL4": {
+      "T2": 7,
+      "T4": 3,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 4,
+      "T4": 6,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 7,
+      "T4": 2,
+      "T8": 0
+     }
+    },
+    "basal_inferior": {
+     "Y5HYEDL4": {
+      "T2": 5,
+      "T4": 3,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 2,
+      "T4": 6,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 1,
+      "T4": 7,
+      "T8": 0
+     }
+    },
+    "apical_inferior": {
+     "Y5HYEDL4": {
+      "T2": 8,
+      "T4": 0,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 8,
+      "T4": 0,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 7,
+      "T4": 0,
+      "T8": 0
+     }
+    }
+   },
+   "total_added_positions": 96,
+   "regions_staying_under_20": [],
+   "dropped": {
+    "nominal_point_off_by_more_than_1.05mm_or_outside": 19,
+    "above_mitral_annulus": 0
+   },
+   "skipped": {
+    "8.7": 0,
+    "4mm": 33
+   },
+   "total_added_beats": 192
+  },
+  "split": {
+   "matched_before_fill": {
+    "basal_superior": 5,
+    "apical_superior": 0,
+    "basal_inferior": 4,
+    "apical_inferior": 1
+   },
+   "matched_composition_before_fill": {
+    "basal_superior": {
+     "lv_free_wall": 2,
+     "summit_reanchored": 1,
+     "lv_vein_course": 2
+    },
+    "apical_superior": {},
+    "basal_inferior": {
+     "lv_free_wall": 3,
+     "lv_vein_course": 1
+    },
+    "apical_inferior": {
+     "lv_free_wall": 1
+    }
+   },
+   "matched_after_fill": {
+    "basal_superior": 20,
+    "apical_superior": 20,
+    "basal_inferior": 21,
+    "apical_inferior": 20
+   },
+   "matched_composition_after_fill": {
+    "basal_superior": {
+     "gate5fill": 13,
+     "lv_free_wall": 3,
+     "summit_reanchored": 2,
+     "lv_vein_course": 2
+    },
+    "apical_superior": {
+     "gate5fill": 15,
+     "lv_free_wall": 5
+    },
+    "basal_inferior": {
+     "gate5fill": 16,
+     "lv_free_wall": 4,
+     "lv_vein_course": 1
+    },
+    "apical_inferior": {
+     "gate5fill": 14,
+     "lv_free_wall": 6
+    }
+   },
+   "positions_added_per_region": {
+    "basal_superior": 20,
+    "apical_superior": 29,
+    "basal_inferior": 24,
+    "apical_inferior": 24
+   },
+   "positions_added_per_region_heart_tier": {
+    "basal_superior": {
+     "Y5HYEDL4": {
+      "T2": 3,
+      "T4": 4,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 5,
+      "T4": 2,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 4,
+      "T4": 2,
+      "T8": 0
+     }
+    },
+    "apical_superior": {
+     "Y5HYEDL4": {
+      "T2": 7,
+      "T4": 3,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 2,
+      "T4": 8,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 5,
+      "T4": 4,
+      "T8": 0
+     }
+    },
+    "basal_inferior": {
+     "Y5HYEDL4": {
+      "T2": 5,
+      "T4": 3,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 2,
+      "T4": 6,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 1,
+      "T4": 7,
+      "T8": 0
+     }
+    },
+    "apical_inferior": {
+     "Y5HYEDL4": {
+      "T2": 8,
+      "T4": 0,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 8,
+      "T4": 0,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 8,
+      "T4": 0,
+      "T8": 0
+     }
+    }
+   },
+   "total_added_positions": 97,
+   "regions_staying_under_20": [],
+   "dropped": {
+    "nominal_point_off_by_more_than_1.05mm_or_outside": 19,
+    "above_mitral_annulus": 0
+   },
+   "skipped": {
+    "8.7": 0,
+    "4mm": 34
+   },
+   "total_added_beats": 194
+  }
+ },
+ "pool_reading": "lock (item 5): v5.1 lv_free_wall + lv_vein_course + projB summit; v5.1 lv_summit not pooled",
+ "existing_for_4mm_v51_summit": "drop"
+}

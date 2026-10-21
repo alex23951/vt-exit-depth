@@ -1,0 +1,266 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "e_fibres_fix_normalises": "yes: fibres_fix.py lines 142-143 take unit(grad basal) and unit(grad ot_lv / ot_rv) before the w blend (w = element mean of w.dat, clipped; ot_rv where d > 0.5); the blend is not renormalised there but axis() normalises it as e1; unit() of a zero vector returns zero (division by max(|g|, 1e-30))",
+ "e_D30_widened": {
+  "trigger_|l_raw|_lt_0.01": 1465,
+  "of_which_|l_raw|_eq_0": 1314,
+  "face_fill_per_pass": [
+   371,
+   228,
+   171,
+   154,
+   125,
+   109,
+   89,
+   72,
+   56,
+   41,
+   27,
+   12,
+   5
+  ],
+  "face_fill_total": 1460,
+  "lowest_id_fallbacks": 0,
+  "nearest_element_last_step": 5,
+  "nearest_element_distances_mm": [
+   3.32,
+   4.41,
+   3.83,
+   2.75,
+   3.46
+  ]
+ },
+ "e_angle_l_to_grad_w_on_D30_elements_deg (folded 0-90; 90 = l in the wall)": {
+  "n": 1458,
+  "median": 63.23,
+  "p5": 23.77,
+  "min": 2.82,
+  "D30 elements with grad w = 0 (not counted)": 7,
+  "for comparison, elements outside D30": {
+   "median": 89.12,
+   "p5": 82.18
+  }
+ },
+ "e_stimulus_nodes": {
+  "checked": 173,
+  "inside_D30_elements (vertex of one)": [],
+  "within_2mm_of_a_D30_element_vertex": [
+   {
+    "id": "cusp52_rcc_mid",
+    "mm": 1.65
+   }
+  ]
+ },
+ "f_D19b_guard_changed": {
+  "below_1pct_median": 260,
+  "of_which_D30": 7,
+  "of_which_no_v51_row": 0,
+  "step1_2mm_mean": 183,
+  "step1_rejected_short": 0,
+  "step2_4mm_mean": 38,
+  "step2_rejected_short": 0,
+  "step3_v51_n": 38,
+  "step3_v51_n_reversed": 0,
+  "step3_rejected_short": 0,
+  "step3_nearest_passing_any_distance (D30 / no row)": 1,
+  "step3_nearest_rejected_short": 0,
+  "stop": 0
+ },
+ "b_D29_LV_PMJs_on_b_gt_0": {
+  "LV_PMJs": 1983,
+  "on_an_LV_side_element_with_b_gt_0": 382,
+  "highest_height_rel_aortic_mid_plane_mm (negative = below)": -4.12,
+  "their_max_b": 0.489,
+  "LV_PMJs_with_no_LV_side_element": 0
+ },
+ "d_D22_step2_point": {
+  "full_node": 94139,
+  "tags_of_its_elements": [
+   5
+  ],
+  "on_outer_surface": true,
+  "to_nearest_tag1_outer_surface_node_mm": 2.69,
+  "B_projection_mm (projB, candidate quarter)": 2.69,
+  "passes_1.05mm (step-2 point to nearest tag-1 epicardial node)": false,
+  "B_passes_1.05mm": false
+ },
+ "g_D20c_after_D30": {
+  "D30_with_converged_w": {
+   "trigger_|l_raw|_lt_0.01": 1703,
+   "of_which_|l_raw|_eq_0": 1703,
+   "face_fill_per_pass": [
+    592,
+    245,
+    171,
+    154,
+    125,
+    109,
+    89,
+    72,
+    56,
+    41,
+    27,
+    12,
+    5
+   ],
+   "face_fill_total": 1698,
+   "lowest_id_fallbacks": 0,
+   "nearest_element_last_step": 5,
+   "nearest_element_distances_mm": [
+    3.32,
+    4.41,
+    3.83,
+    2.75,
+    3.46
+   ]
+  },
+  "stimulus_nodes_with_LV_side_elements": 97,
+  "angle_deg": {
+   "median": 1.44,
+   "p95": 61.08,
+   "max": 103.87
+  },
+  "largest_at": {
+   "site": "aortic_cusp_rcc_z_d10",
+   "z": 1.0,
+   "w_LV": 0.006,
+   "w": 0.819
+  },
+  "sites_over_10_deg": [
+   {
+    "site": "aortic_cusp_rcc_z_d10",
+    "deg": 103.9,
+    "z": 1.0,
+    "w_LV": 0.006,
+    "w": 0.819
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d75",
+    "deg": 77.8,
+    "z": 1.0,
+    "w_LV": 0.131,
+    "w": 0.885
+   },
+   {
+    "site": "aortic_cusp_rcc_z_d50",
+    "deg": 77.4,
+    "z": 1.0,
+    "w_LV": 0.009,
+    "w": 0.867
+   },
+   {
+    "site": "aortic_cusp_rcc_z_d75",
+    "deg": 77.2,
+    "z": 1.0,
+    "w_LV": 0.008,
+    "w": 0.957
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d90",
+    "deg": 69.4,
+    "z": 1.0,
+    "w_LV": 0.221,
+    "w": 0.904
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d50",
+    "deg": 59.0,
+    "z": 0.973,
+    "w_LV": 0.193,
+    "w": 0.768
+   },
+   {
+    "site": "lv_summit_superior_z_d10",
+    "deg": 22.8,
+    "z": 0.884,
+    "w_LV": 0.501,
+    "w": 0.265
+   },
+   {
+    "site": "lv_summit_superior_z_d90",
+    "deg": 20.1,
+    "z": 0.905,
+    "w_LV": 0.459,
+    "w": 0.207
+   },
+   {
+    "site": "lv_summit_superior_z_d75",
+    "deg": 18.5,
+    "z": 0.902,
+    "w_LV": 0.466,
+    "w": 0.233
+   },
+   {
+    "site": "lv_summit_superior_z_d50",
+    "deg": 18.3,
+    "z": 0.891,
+    "w_LV": 0.484,
+    "w": 0.247
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d10",
+    "deg": 13.2,
+    "z": 1.0,
+    "w_LV": 0.082,
+    "w": 0.243
+   },
+   {
+    "site": "lv_summit_inferior_lateral_z_d10",
+    "deg": 13.1,
+    "z": 0.877,
+    "w_LV": 0.705,
+    "w": 0.553
+   },
+   {
+    "site": "lv_vein_course_proximal_aiv_z_d90",
+    "deg": 12.9,
+    "z": 0.766,
+    "w_LV": 0.734,
+    "w": 0.366
+   },
+   {
+    "site": "lv_summit_inferior_lateral_z_d50",
+    "deg": 12.0,
+    "z": 0.878,
+    "w_LV": 0.704,
+    "w": 0.555
+   },
+   {
+    "site": "lv_vein_course_proximal_aiv_z_d10",
+    "deg": 11.8,
+    "z": 0.781,
+    "w_LV": 0.7,
+    "w": 0.35
+   },
+   {
+    "site": "lv_vein_course_proximal_aiv_z_d75",
+    "deg": 11.6,
+    "z": 0.755,
+    "w_LV": 0.731,
+    "w": 0.368
+   },
+   {
+    "site": "lv_summit_inferior_lateral_z_d90",
+    "deg": 11.3,
+    "z": 0.878,
+    "w_LV": 0.707,
+    "w": 0.56
+   },
+   {
+    "site": "lv_vein_course_proximal_aiv_z_d50",
+    "deg": 11.2,
+    "z": 0.758,
+    "w_LV": 0.719,
+    "w": 0.366
+   },
+   {
+    "site": "lv_summit_inferior_lateral_z_d75",
+    "deg": 11.1,
+    "z": 0.878,
+    "w_LV": 0.707,
+    "w": 0.567
+   }
+  ]
+ }
+}

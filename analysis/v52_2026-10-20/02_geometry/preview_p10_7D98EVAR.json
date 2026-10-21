@@ -1,0 +1,197 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "e_fibres_fix_normalises": "yes: fibres_fix.py lines 142-143 take unit(grad basal) and unit(grad ot_lv / ot_rv) before the w blend (w = element mean of w.dat, clipped; ot_rv where d > 0.5); the blend is not renormalised there but axis() normalises it as e1; unit() of a zero vector returns zero (division by max(|g|, 1e-30))",
+ "e_D30_widened": {
+  "trigger_|l_raw|_lt_0.01": 1872,
+  "of_which_|l_raw|_eq_0": 1470,
+  "face_fill_per_pass": [
+   458,
+   348,
+   249,
+   204,
+   151,
+   116,
+   101,
+   71,
+   58,
+   49,
+   30,
+   19,
+   9,
+   1
+  ],
+  "face_fill_total": 1864,
+  "lowest_id_fallbacks": 0,
+  "nearest_element_last_step": 8,
+  "nearest_element_distances_mm": [
+   3.64,
+   0.66,
+   0.74,
+   0.89,
+   5.05,
+   3.66,
+   4.12,
+   3.73
+  ]
+ },
+ "e_angle_l_to_grad_w_on_D30_elements_deg (folded 0-90; 90 = l in the wall)": {
+  "n": 1862,
+  "median": 63.07,
+  "p5": 18.89,
+  "min": 3.56,
+  "D30 elements with grad w = 0 (not counted)": 10,
+  "for comparison, elements outside D30": {
+   "median": 89.25,
+   "p5": 83.55
+  }
+ },
+ "e_stimulus_nodes": {
+  "checked": 173,
+  "inside_D30_elements (vertex of one)": [],
+  "within_2mm_of_a_D30_element_vertex": [
+   {
+    "id": "aortic_cusp_rcc_z_d10",
+    "mm": 1.3
+   }
+  ]
+ },
+ "f_D19b_guard_changed": {
+  "below_1pct_median": 315,
+  "of_which_D30": 10,
+  "of_which_no_v51_row": 0,
+  "step1_2mm_mean": 286,
+  "step1_rejected_short": 0,
+  "step2_4mm_mean": 12,
+  "step2_rejected_short": 0,
+  "step3_v51_n": 15,
+  "step3_v51_n_reversed": 0,
+  "step3_rejected_short": 0,
+  "step3_nearest_passing_any_distance (D30 / no row)": 2,
+  "step3_nearest_rejected_short": 0,
+  "stop": 0
+ },
+ "b_D29_LV_PMJs_on_b_gt_0": {
+  "LV_PMJs": 2004,
+  "on_an_LV_side_element_with_b_gt_0": 270,
+  "highest_height_rel_aortic_mid_plane_mm (negative = below)": -6.87,
+  "their_max_b": 0.36,
+  "LV_PMJs_with_no_LV_side_element": 0
+ },
+ "d_D22_step2_point": {
+  "full_node": 99533,
+  "tags_of_its_elements": [
+   5
+  ],
+  "on_outer_surface": true,
+  "to_nearest_tag1_outer_surface_node_mm": 4.76,
+  "B_projection_mm (projB, candidate quarter)": 4.76,
+  "passes_1.05mm (step-2 point to nearest tag-1 epicardial node)": false,
+  "B_passes_1.05mm": false
+ },
+ "g_D20c_after_D30": {
+  "D30_with_converged_w": {
+   "trigger_|l_raw|_lt_0.01": 2018,
+   "of_which_|l_raw|_eq_0": 2018,
+   "face_fill_per_pass": [
+    597,
+    352,
+    251,
+    205,
+    151,
+    116,
+    101,
+    71,
+    58,
+    49,
+    30,
+    19,
+    9,
+    1
+   ],
+   "face_fill_total": 2010,
+   "lowest_id_fallbacks": 0,
+   "nearest_element_last_step": 8,
+   "nearest_element_distances_mm": [
+    3.64,
+    0.66,
+    0.74,
+    0.89,
+    5.05,
+    3.66,
+    4.12,
+    3.73
+   ]
+  },
+  "stimulus_nodes_with_LV_side_elements": 98,
+  "angle_deg": {
+   "median": 1.08,
+   "p95": 51.71,
+   "max": 104.26
+  },
+  "largest_at": {
+   "site": "aortic_cusp_rcc_z_d90",
+   "z": 1.0,
+   "w_LV": 0.048,
+   "w": 0.974
+  },
+  "sites_over_10_deg": [
+   {
+    "site": "aortic_cusp_rcc_z_d90",
+    "deg": 104.3,
+    "z": 1.0,
+    "w_LV": 0.048,
+    "w": 0.974
+   },
+   {
+    "site": "aortic_cusp_rcc_z_d75",
+    "deg": 87.7,
+    "z": 1.0,
+    "w_LV": 0.045,
+    "w": 0.969
+   },
+   {
+    "site": "aortic_cusp_rcc_z_d50",
+    "deg": 85.8,
+    "z": 1.0,
+    "w_LV": 0.041,
+    "w": 0.948
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d90",
+    "deg": 69.2,
+    "z": 1.0,
+    "w_LV": 0.244,
+    "w": 0.932
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d75",
+    "deg": 66.6,
+    "z": 0.99,
+    "w_LV": 0.2,
+    "w": 0.851
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d50",
+    "deg": 49.1,
+    "z": 0.987,
+    "w_LV": 0.207,
+    "w": 0.654
+   },
+   {
+    "site": "lv_summit_superior_z_d10",
+    "deg": 10.2,
+    "z": 0.935,
+    "w_LV": 0.431,
+    "w": 0.283
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d10",
+    "deg": 10.1,
+    "z": 1.0,
+    "w_LV": 0.09,
+    "w": 0.205
+   }
+  ]
+ }
+}
