@@ -1,0 +1,260 @@
+{
+ "heart": "Y5HYEDL4",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "rule": "D19a / D19b (adopted 21 Oct 2026); see the docstring",
+ "precedence": "a node in both Dirichlet sets takes 1 (02_laplace.py solve(): zero = setdiff(zero, one))",
+ "solver": "scipy CG, Jacobi preconditioner, unpreconditioned relative residual ||r||2 / ||b||2; 1e-10 then 1e-12",
+ "fields": {
+  "zeta": {
+   "relres_1e-10_solve": 9.820500793769405e-11,
+   "relres_1e-12_solve": 9.95737536955777e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.333859521781335e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.302666732376338e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "basal": {
+   "relres_1e-10_solve": 9.991359328156396e-11,
+   "relres_1e-12_solve": 9.91294443586279e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.1573821335229013e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.307984913827113e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "ot": {
+   "relres_1e-10_solve": 9.966722974494066e-11,
+   "relres_1e-12_solve": 9.925892534240462e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.877782818127116e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.303401575673661e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "w": {
+   "relres_1e-10_solve": 9.889817231299995e-11,
+   "relres_1e-12_solve": 9.670141767808752e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 2.5536316394791925e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 2.81017,
+   "stored_nodes_outside_by_1e-3": 43
+  },
+  "phi_epi": {
+   "relres_1e-10_solve": 8.856074969456102e-11,
+   "relres_1e-12_solve": 8.213354633144793e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.893815770870333e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.002991,
+   "nodes_outside_by_1e-3_before_clip": 1,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 9.401403930908714e-07,
+   "stored_nodes_outside_by_1e-3": 1
+  },
+  "phi_lv": {
+   "relres_1e-10_solve": 9.322901435287432e-11,
+   "relres_1e-12_solve": 8.708543421054766e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 9.010351076366163e-10,
+   "largest_excursion_outside_[0,1]_before_clip": 6e-05,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.819876265356072e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "phi_rv": {
+   "relres_1e-10_solve": 9.292063988740855e-11,
+   "relres_1e-12_solve": 8.49730582269178e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.2504517421518813e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.002931,
+   "nodes_outside_by_1e-3_before_clip": 1,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.77078686947452e-07,
+   "stored_nodes_outside_by_1e-3": 1
+  },
+  "v": {
+   "relres_1e-10_solve": 9.181177114592005e-11,
+   "relres_1e-12_solve": 9.649828888290735e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.1161142555191645e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.480494539300551e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "ot_rv": {
+   "relres_1e-10_solve": 9.948713502645825e-11,
+   "relres_1e-12_solve": 9.862939910071177e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 2.9170165172232032e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.304261044836167e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "ot_lv": {
+   "relres_1e-10_solve": 9.772036901260438e-11,
+   "relres_1e-12_solve": 9.890599300677915e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 2.614009786405802e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.306825009432359e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "phi_epi_fix": {
+   "relres_1e-10_solve": 9.640468955295545e-11,
+   "relres_1e-12_solve": 8.818665454392166e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.203014243778e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.000183,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 2.50075557595153e-06,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "u_lv": {
+   "relres_1e-10_solve": 9.898382341650581e-11,
+   "relres_1e-12_solve": 8.723386658545997e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 6.441081001895554e-10,
+   "largest_excursion_outside_[0,1]_before_clip": 2e-06,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.510620750825979e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "u_rv": {
+   "relres_1e-10_solve": 8.644585424839764e-11,
+   "relres_1e-12_solve": 9.471030606731593e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 8.073688384513389e-10,
+   "largest_excursion_outside_[0,1]_before_clip": 0.000181,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.848595635016274e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "w_LV": {
+   "relres_1e-10_solve": 9.422861856745324e-11,
+   "relres_1e-12_solve": 9.820680554610954e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.366647905953755e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.294788343324086e-07,
+   "stored_nodes_outside_by_1e-3": 0,
+   "submesh_nodes": 221707
+  }
+ },
+ "files": {
+  "zeta": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/zeta.npy",
+   "sha256_of_array": "b03e4b1394a12b5c2f851b203ecf2d3f42c12a71ed0eabc262bddcad0ccc1ff5"
+  },
+  "z": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/z.npy",
+   "sha256_of_array": "3d930421d014f16db22b820a3f55a18b8c780d0978396ca7c1685ee737bce306"
+  },
+  "v": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/v.npy",
+   "sha256_of_array": "81bf24e4e052f8542e042756304310ce6e86e1f731cc33aaefa81bf863705b44"
+  },
+  "v_uvc": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/v_uvc.npy",
+   "sha256_of_array": "ef72a0934d5d69b53b8d769963712d7e74f3f0c98f228f6ffe123d5836d862c0"
+  },
+  "phi_uvc": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/phi_uvc.npy",
+   "sha256_of_array": "10cbd32bd0110afd4e9300e8001b515b51fab4acb9a247e6c7cef56ca98cf63e"
+  },
+  "basal": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/basal.npy",
+   "sha256_of_array": "0df21e7c87448b01a74b10305998e358c2996d442bdcc2e5c6b8efb771baef56"
+  },
+  "ot": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/ot.npy",
+   "sha256_of_array": "281114cb139620aedb21c1b29c43b03ee8618b41d473d6d6552c1ae39b7c5828"
+  },
+  "ot_lv": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/ot_lv.npy",
+   "sha256_of_array": "2ec48b82c1d5671c9550954216c7a4b42abf66a811bef8deba7b80ac960a6faa"
+  },
+  "ot_rv": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/ot_rv.npy",
+   "sha256_of_array": "84bf0d128ce751c90ffd2e27513ce87493e1ebdfcdfcd5208150af90b9bbf531"
+  },
+  "w": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/w.npy",
+   "sha256_of_array": "9d43d1011a38acc5494f7876acd8b12f4e3b23f7e8bee207b97ecbd7917a3c35"
+  },
+  "phi_epi": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/phi_epi.npy",
+   "sha256_of_array": "97b75f51516e47ded5c77d1301e3f951a589217d47f19d4ca6dd889a75136883"
+  },
+  "phi_epi_fix": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/phi_epi_fix.npy",
+   "sha256_of_array": "7f59d776ff8c72760d8888456cdfb3724dccc26a68cb15ffe6777df4e337a4d0"
+  },
+  "phi_lv": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/phi_lv.npy",
+   "sha256_of_array": "7cac6c12581c3bf30ee3cfe5045a7d04ae66917ac3eb64ebe06fbf663ce191c4"
+  },
+  "phi_rv": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/phi_rv.npy",
+   "sha256_of_array": "50e95aa914280b0172a7a2449e4ee1dc953b3893f4c34f3d5d9cc66ff1497f1f"
+  },
+  "u_lv": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/u_lv.npy",
+   "sha256_of_array": "e3341d8bc580eb60a2b1841ab0aee51a12ae27f19b9e5323bb0cc5378f05f7e0"
+  },
+  "u_rv": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/u_rv.npy",
+   "sha256_of_array": "62224c2ceab33683440d04d2f276fbce988000f668ad7ea802f684d9e2e2a382"
+  },
+  "w_LV": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/w_LV.npy",
+   "sha256_of_array": "7194c8360af5238e9914b71bc64fe9a7a3efc4bbf816171392cc540213898214"
+  },
+  "rho": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/rho.npy",
+   "sha256_of_array": "97b75f51516e47ded5c77d1301e3f951a589217d47f19d4ca6dd889a75136883"
+  },
+  "sep": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/sep.npy",
+   "sha256_of_array": "e0b68fb1b03813f89f0c1f8ad06e18a75aaa29c6e034f3c4fbdc95b184f37788"
+  },
+  "d_s": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/d_s.npy",
+   "sha256_of_array": "92cdf314f25f421333bde7446acdc4b6e37f077717b1d5adcc30f1de4292c7e3"
+  },
+  "w_lvfib": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/w_lvfib.npy",
+   "sha256_of_array": "c9ba345ded01f42630c4e057b63ffcedf9dd1badac1c5d2b8d81fa6ff83079f3"
+  },
+  "w_apd": {
+   "path": "data/biv/Y5HYEDL4/v52/fields52/w_apd.npy",
+   "sha256_of_array": "0e7cfa75aaa446665c3e67b51af89f6d64715af9bbb375fbc92e719634e659d8"
+  }
+ },
+ "uvc": {
+  "z_max_abs_change_from_stored": 0.00013615803634525747,
+  "v_nodes_changing_side": 0,
+  "phi": "geometric (03_uvc.py), copied from uvc/phi.dat"
+ },
+ "D19b": {
+  "nodes_with_phi_lv_plus_phi_rv_lt_1e-9": 46668,
+  "fill_passes": 2,
+  "filled_per_pass": [
+   46644,
+   24
+  ],
+  "LV_side_nodes_with_|phi_epi_fix + phi_lv + phi_rv - 1| > 1e-6 (share)": 0.0915,
+  "w_apd_range": [
+   0.0,
+   1.0
+  ]
+ },
+ "LV_side": "C2: v5.1 split (d = phi_rv / (phi_lv + phi_rv) > 0.5 on v5.1 phi files, element means) for old elements; appended tag 2 (sleeves) RV, tag 1 (crescents) LV",
+ "wall_s": 107.1
+}

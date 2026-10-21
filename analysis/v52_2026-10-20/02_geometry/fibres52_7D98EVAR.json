@@ -1,0 +1,1129 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "fields": {
+  "zeta": {
+   "path": "data/biv/7D98EVAR/v52/fields52/zeta.npy",
+   "sha256_of_array": "a83df718270061e1d36e21e7f4c3bca68cfbdf7c6da7e54be335e82a2f80a554"
+  },
+  "z": {
+   "path": "data/biv/7D98EVAR/v52/fields52/z.npy",
+   "sha256_of_array": "b78bd1778935b8709b27862fd4c39f6a18b9df952f479a18cd18cbb8d6edb096"
+  },
+  "v": {
+   "path": "data/biv/7D98EVAR/v52/fields52/v.npy",
+   "sha256_of_array": "2f35750e70f8765eaf5663a5d61657f0e3831d1cc102820de7fd5e81d133a245"
+  },
+  "v_uvc": {
+   "path": "data/biv/7D98EVAR/v52/fields52/v_uvc.npy",
+   "sha256_of_array": "b7acce25d882756c4ca82210f2a680b88ff1bc04053659013418d5d32222efd5"
+  },
+  "phi_uvc": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_uvc.npy",
+   "sha256_of_array": "3aba17f7ee2903b0200e25450bc979d564389c5dbde2425d3a42dfeecdebe47e"
+  },
+  "basal": {
+   "path": "data/biv/7D98EVAR/v52/fields52/basal.npy",
+   "sha256_of_array": "e82507e3b6386f4b899f5ad51e61daafda59e369eaaef01351199ce37b38492c"
+  },
+  "ot": {
+   "path": "data/biv/7D98EVAR/v52/fields52/ot.npy",
+   "sha256_of_array": "fe8c90a2bf49898ab427e518098206f6878dc79ab245a54c89e8a1e2cbdf56c4"
+  },
+  "ot_lv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/ot_lv.npy",
+   "sha256_of_array": "1c4711623ea8e0f6507835492907f1b9190390ef497937de665f24188518fb90"
+  },
+  "ot_rv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/ot_rv.npy",
+   "sha256_of_array": "6a99f31e260c54e20befff87cd3335cf0b0bce518ba63e12eec6a42dfff8da5b"
+  },
+  "w": {
+   "path": "data/biv/7D98EVAR/v52/fields52/w.npy",
+   "sha256_of_array": "8380b1e42c183ebb250e59795ba438ed6b6ddee2532061462582b789c8d8b451"
+  },
+  "phi_epi": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_epi.npy",
+   "sha256_of_array": "6029e5eaf4bccf7f36f6d5e717d9202dbc964f57275de76608a0d96f1f370277"
+  },
+  "phi_epi_fix": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_epi_fix.npy",
+   "sha256_of_array": "7fdf79659292a2b73b43e271123b4fa2fa2ebc9273040029f594ab79e7a3a8ca"
+  },
+  "phi_lv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_lv.npy",
+   "sha256_of_array": "48326100ccdccf61b5101f3feb1715778e94797cc41559968a3c0f958365bcef"
+  },
+  "phi_rv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_rv.npy",
+   "sha256_of_array": "71043fa2ca2f3b514cc6ae2e13f23a307b3912e78a6b1b24cfac1c3d982a6bd6"
+  },
+  "u_lv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/u_lv.npy",
+   "sha256_of_array": "24c8d4d442179ccb40eabf91400749d957cd247652aafc101252b19233cd6a1a"
+  },
+  "u_rv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/u_rv.npy",
+   "sha256_of_array": "6497288c04a6fa3c5f74dfca2d13916894e595d32adf615ab5a684aed4dc2104"
+  },
+  "w_LV": {
+   "path": "data/biv/7D98EVAR/v52/fields52/w_LV.npy",
+   "sha256_of_array": "bddfd699a4f9364f1cdc6500c93dca61b88a60aa121901c57346bfcea907b939"
+  },
+  "rho": {
+   "path": "data/biv/7D98EVAR/v52/fields52/rho.npy",
+   "sha256_of_array": "6029e5eaf4bccf7f36f6d5e717d9202dbc964f57275de76608a0d96f1f370277"
+  },
+  "sep": {
+   "path": "data/biv/7D98EVAR/v52/fields52/sep.npy",
+   "sha256_of_array": "00d1a75d993f39c2196dcb98e56cfe3007d53bf2f30e8d4c8bfa7115c8d94156"
+  },
+  "d_s": {
+   "path": "data/biv/7D98EVAR/v52/fields52/d_s.npy",
+   "sha256_of_array": "d3697de0c1d522d67cdc875f3128c382e1a502c0171ef093ad8e764c80b982e8"
+  },
+  "w_lvfib": {
+   "path": "data/biv/7D98EVAR/v52/fields52/w_lvfib.npy",
+   "sha256_of_array": "ff934b8c2afa3c063d7d9042af4d75c39eaa6b086b9ad2839e504ac42a29aa3d"
+  },
+  "w_apd": {
+   "path": "data/biv/7D98EVAR/v52/fields52/w_apd.npy",
+   "sha256_of_array": "a7d3dc2cd6cfb45e9e6e5d71ec17b3cdc8fe614f6e26b7448d70b217db9cc804"
+  }
+ },
+ "regions": {
+  "R_field_sha256 (= v5.1 doste)": "701a773ca045806d2a1e1afa16f90bbdee051020a384e3bbb7937f583d75771f",
+  "old_RV": 579450,
+  "old_LV": 1176264,
+  "sleeve": 732,
+  "crescent": 0
+ },
+ "D31": {
+  "moved_elements (LV side by C2, converged d > 0.5)": 202,
+  "angle_l_otlv_vs_l_otrv_deg (vectors)": {
+   "n": 202,
+   "median": 47.499,
+   "p95": 92.413,
+   "p99": 98.733,
+   "max": 110.252
+  }
+ },
+ "D19b_guard": {
+  "elements_under_1pct (or sent by D30)": 315,
+  "of_which_D30": 10,
+  "of_which_no_v51_row": 0,
+  "step1_2mm": 286,
+  "step2_4mm": 12,
+  "step3_v51_n": 15,
+  "step3_v51_n_reversed": 9,
+  "step3_nearest_passing (D30 / no row)": 2,
+  "rejected_short": {
+   "step1": 0,
+   "step2": 0,
+   "step3": 0
+  },
+  "stop": 0,
+  "step_use_on_D30": {
+   "step2_4mm": 3,
+   "step1_2mm": 5,
+   "step3_nearest_passing (D30 / no row)": 2
+  },
+  "step_use_on_crescent": {}
+ },
+ "D30": {
+  "trigger_|l_raw|_lt_0.01": 1872,
+  "of_which_exactly_0": 1470,
+  "face_fill_per_pass": [
+   458,
+   348,
+   249,
+   204,
+   151,
+   116,
+   101,
+   71,
+   58,
+   49,
+   30,
+   19,
+   9,
+   1
+  ],
+  "face_fill_total": 1864,
+  "lowest_id_fallbacks": 0,
+  "nearest_element_last_step": 8,
+  "nearest_element_distances_mm": [
+   3.64,
+   0.66,
+   0.74,
+   0.89,
+   5.05,
+   3.66,
+   4.12,
+   3.73
+  ],
+  "guard_median_M (D30-filled l)": 0.10897717353690772,
+  "median_after_added_step": 0.10897891034699893,
+  "added_step_projected": 1862,
+  "added_step_short_projection_to_guard": 0,
+  "D30_with_|grad_w|_lt_0.01M_to_guard": 10,
+  "tilt_before_step_deg (90 - angle(l, grad w)) on D30 elements": {
+   "n": 1862,
+   "median": 26.931,
+   "p95": 71.109,
+   "p99": 81.092,
+   "max": 86.439
+  },
+  "tilt_of_t_out_from_grad_w_on_D30_elements_kept_with_filled_l_deg": null
+ },
+ "files": {
+  "biv52.lon": {
+   "path": "data/biv/7D98EVAR/v52/biv52.lon",
+   "sha256": "0d8d5234f31ec7004f554040b6eb1c3c024adcf41ad2759c8fe01eb130916571"
+  },
+  "biv52cut.lon": {
+   "path": "data/biv/7D98EVAR/v52/biv52cut.lon",
+   "sha256": "0d8d5234f31ec7004f554040b6eb1c3c024adcf41ad2759c8fe01eb130916571"
+  }
+ },
+ "acceptance": {
+  "R5.3_free_wall_angles": {
+   "0.1": {
+    "target_deg": 55.3,
+    "elements": 10840,
+    "median_helix_deg": 55.446,
+    "max_|helix - (66 - 107 w)|_deg": 0.0,
+    "median_w_minus_phi_epi": 0.0,
+    "max_w_minus_phi_epi": 0.0469,
+    "pass": true
+   },
+   "0.5": {
+    "target_deg": 12.5,
+    "elements": 15804,
+    "median_helix_deg": 12.5,
+    "max_|helix - (66 - 107 w)|_deg": 0.0,
+    "median_w_minus_phi_epi": 0.0,
+    "max_w_minus_phi_epi": 0.0264,
+    "pass": true
+   },
+   "0.9": {
+    "target_deg": -30.3,
+    "elements": 22590,
+    "median_helix_deg": -30.28,
+    "max_|helix - (66 - 107 w)|_deg": 0.0,
+    "median_w_minus_phi_epi": 0.0,
+    "max_w_minus_phi_epi": 0.0058,
+    "pass": true
+   }
+  },
+  "R5.3_RV_rows_bit_identical_to_v51": true,
+  "R5.3_orthonormal_LV_computed": {
+   "min_norm": 0.9999999999999997,
+   "max_|norm-1|": 4.440892098500626e-16,
+   "max_|f.s|": 2.220446049250313e-16,
+   "max_|f.n|": 1.6740081543176188e-16,
+   "max_|s.n|": 2.220446049250313e-16
+  },
+  "R5.3_orthonormal_LV_as_written": {
+   "min_norm": 0.9999998493095494,
+   "max_|norm-1|": 1.5069045056215202e-07,
+   "max_|f.s|": 1.4777484008687836e-07,
+   "max_|f.n|": 1.942890293094024e-16,
+   "max_|s.n|": 1.8041124150158794e-16
+  },
+  "R5.3_orthonormal_sleeve_as_written": {
+   "min_norm": 0.9999999259162172,
+   "max_|norm-1|": 9.003668854923319e-08,
+   "max_|f.s|": 9.324312998104656e-08,
+   "max_|f.n|": 1.3877787807814457e-16,
+   "max_|s.n|": 1.6653345369377348e-16
+  },
+  "n_equals_t_out_LV (max |n - t_out|)": 4.36391092365752e-14,
+  "max_|l.t_out|": 5.2791104820926193e-14,
+  "orthonormal_within_1e-6": true,
+  "R5.3_one_connected_fibre_field": {
+   "elements_with_a_fibre": 1756446,
+   "of": 1756446,
+   "node_sharing_components": 1,
+   "pass": true
+  },
+  "all_pass": true,
+  "D20a_checks": {
+   "aortic_rim_LV_nodes": 569,
+   "min_nodal_b_on_aortic_rim": 1.0,
+   "elements_b_gt_0": 186138,
+   "elements_b_gt_0_with_z_lt_0.80": 0
+  },
+  "D19b_sign_check": {
+   "median_line_angle_f52_f51_deg_at_w_lt_0.1 (old LV elements)": 5.372,
+   "share_helix_lt_0_at_w_gt_0.9": 0.9935
+  }
+ },
+ "reports": {
+  "line_angle_v52_vs_v51_LV_by_w_band_deg": {
+   "0-0.1": {
+    "n": 110722,
+    "median": 5.372,
+    "p95": 20.131,
+    "p99": 44.584,
+    "max": 89.94
+   },
+   "0.1-0.3": {
+    "n": 190381,
+    "median": 15.652,
+    "p95": 28.677,
+    "p99": 36.891,
+    "max": 89.992
+   },
+   "0.3-0.5": {
+    "n": 226212,
+    "median": 22.841,
+    "p95": 35.608,
+    "p99": 42.608,
+    "max": 89.999
+   },
+   "0.5-0.7": {
+    "n": 225816,
+    "median": 22.442,
+    "p95": 37.037,
+    "p99": 45.235,
+    "max": 89.888
+   },
+   "0.7-0.9": {
+    "n": 260879,
+    "median": 18.812,
+    "p95": 32.231,
+    "p99": 42.915,
+    "max": 89.942
+   },
+   "0.9-1.01": {
+    "n": 162254,
+    "median": 11.348,
+    "p95": 19.887,
+    "p99": 37.863,
+    "max": 89.969
+   }
+  },
+  "C2_moved_elements_w_range": [
+   0.501,
+   1.0
+  ],
+  "D20a_neighbour_steps (face-adjacent LV-side pairs)": {
+   "R5.1_alone": {
+    "pairs_over_30deg": 7061,
+    "p99_deg": 14.15
+   },
+   "as_built (D20a, +90)": {
+    "pairs_over_30deg": 6887,
+    "p99_deg": 13.85
+   },
+   "v51_stored (old-element pairs)": {
+    "pairs_over_30deg": 55580
+   }
+  },
+  "split_line_angle_step_deg": {
+   "v52_LV_vs_v51_RV (all pairs)": {
+    "n": 16083,
+    "median": 31.391,
+    "p95": 78.828,
+    "p99": 87.682,
+    "max": 89.974
+   },
+   "v51_own_LV_vs_RV": {
+    "n": 16083,
+    "median": 28.881,
+    "p95": 79.03,
+    "p99": 87.446,
+    "max": 89.993
+   },
+   "D20b: where b > 0.5, +90": {
+    "n": 956,
+    "median": 61.805,
+    "p95": 88.263,
+    "p99": 89.491,
+    "max": 89.945
+   },
+   "D20b: where b > 0.5, -90": {
+    "n": 956,
+    "median": 48.128,
+    "p95": 85.717,
+    "p99": 89.025,
+    "max": 89.844
+   }
+  },
+  "APD_w_step_along_split_edges": {
+   "n": 55996,
+   "median": 0.045,
+   "p95": 0.123,
+   "p99": 0.196,
+   "max": 0.528
+  },
+  "stimulus_nodes_b_and_helix": [
+   {
+    "id": "lv_septum_phi0_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 52.39,
+    "w": 0.127
+   },
+   {
+    "id": "lv_septum_phi0_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 11.41,
+    "w": 0.51
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 50.4,
+    "w": 0.146
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 2.08,
+    "w": 0.597
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -25.07,
+    "w": 0.851
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -36.69,
+    "w": 0.96
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 51.16,
+    "w": 0.139
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -0.14,
+    "w": 0.618
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -23.91,
+    "w": 0.84
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -35.43,
+    "w": 0.948
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 55.72,
+    "w": 0.096
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 2.16,
+    "w": 0.597
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -23.65,
+    "w": 0.838
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -38.26,
+    "w": 0.974
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 53.74,
+    "w": 0.115
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 5.75,
+    "w": 0.563
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -27.83,
+    "w": 0.877
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -36.67,
+    "w": 0.96
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 51.82,
+    "w": 0.133
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 12.07,
+    "w": 0.504
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 52.24,
+    "w": 0.129
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 13.23,
+    "w": 0.493
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 45.99,
+    "w": 0.187
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 49.39,
+    "w": 0.155
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -1.55,
+    "w": 0.631
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -24.74,
+    "w": 0.848
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -38.31,
+    "w": 0.975
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 50.6,
+    "w": 0.144
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 7.78,
+    "w": 0.544
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -21.43,
+    "w": 0.817
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -33.49,
+    "w": 0.93
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 52.86,
+    "w": 0.123
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.5_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 5.79,
+    "w": 0.563
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.5_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -24.81,
+    "w": 0.849
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.5_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -37.45,
+    "w": 0.967
+   },
+   {
+    "id": "lv_septum_phi-60_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 52.93,
+    "w": 0.122
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 55.16,
+    "w": 0.101
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 52.29,
+    "w": 0.128
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 12.66,
+    "w": 0.498
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 51.78,
+    "w": 0.133
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -0.96,
+    "w": 0.626
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -23.37,
+    "w": 0.835
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -37.84,
+    "w": 0.97
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 51.63,
+    "w": 0.134
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 2.14,
+    "w": 0.597
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -23.91,
+    "w": 0.84
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -37.82,
+    "w": 0.97
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 49.43,
+    "w": 0.155
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.75_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 5.45,
+    "w": 0.566
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.75_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -13.25,
+    "w": 0.741
+   },
+   {
+    "id": "lv_free_wall_phi-135_z0.75_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -31.99,
+    "w": 0.916
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 55.67,
+    "w": 0.097
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 15.05,
+    "w": 0.476
+   },
+   {
+    "id": "rv_free_wall_q25_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 8.11,
+    "w": 0.541
+   },
+   {
+    "id": "rv_free_wall_q25_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 39.07,
+    "w": 0.252
+   },
+   {
+    "id": "rv_free_wall_q25_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 60.49,
+    "w": 0.051
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d50",
+    "set": "v51",
+    "b": 0.948,
+    "helix_deg": 9.62,
+    "w": 0.871
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d75",
+    "set": "v51",
+    "b": 0.946,
+    "helix_deg": 11.78,
+    "w": 0.846
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d90",
+    "set": "v51",
+    "b": 0.945,
+    "helix_deg": 14.24,
+    "w": 0.819
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d10",
+    "set": "v51",
+    "b": 0.872,
+    "helix_deg": 76.09,
+    "w": 0.117
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d50",
+    "set": "v51",
+    "b": 0.74,
+    "helix_deg": 40.35,
+    "w": 0.46
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d75",
+    "set": "v51",
+    "b": 0.77,
+    "helix_deg": 36.66,
+    "w": 0.509
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d90",
+    "set": "v51",
+    "b": 0.738,
+    "helix_deg": 32.87,
+    "w": 0.538
+   },
+   {
+    "id": "lv_summit_superior_z_d10",
+    "set": "v51",
+    "b": 0.383,
+    "helix_deg": 70.06,
+    "w": 0.051
+   },
+   {
+    "id": "lv_summit_superior_z_d50",
+    "set": "v51",
+    "b": 0.428,
+    "helix_deg": 36.65,
+    "w": 0.397
+   },
+   {
+    "id": "lv_summit_superior_z_d75",
+    "set": "v51",
+    "b": 0.439,
+    "helix_deg": 6.17,
+    "w": 0.707
+   },
+   {
+    "id": "lv_summit_superior_z_d90",
+    "set": "v51",
+    "b": 0.448,
+    "helix_deg": -10.04,
+    "w": 0.873
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d10",
+    "set": "v51",
+    "b": 0.143,
+    "helix_deg": 63.45,
+    "w": 0.057
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d50",
+    "set": "v51",
+    "b": 0.155,
+    "helix_deg": 23.55,
+    "w": 0.442
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d75",
+    "set": "v51",
+    "b": 0.161,
+    "helix_deg": -11.23,
+    "w": 0.778
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d90",
+    "set": "v51",
+    "b": 0.152,
+    "helix_deg": -20.84,
+    "w": 0.867
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 63.16,
+    "w": 0.027
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 15.04,
+    "w": 0.476
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -15.86,
+    "w": 0.765
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -32.06,
+    "w": 0.916
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d10",
+    "set": "v51",
+    "b": 0.057,
+    "helix_deg": 58.69,
+    "w": 0.082
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d50",
+    "set": "v51",
+    "b": 0.062,
+    "helix_deg": 27.34,
+    "w": 0.379
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d75",
+    "set": "v51",
+    "b": 0.065,
+    "helix_deg": -4.43,
+    "w": 0.68
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d90",
+    "set": "v51",
+    "b": 0.062,
+    "helix_deg": -23.87,
+    "w": 0.862
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d10",
+    "set": "v51",
+    "b": 0.024,
+    "helix_deg": 59.85,
+    "w": 0.063
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d50",
+    "set": "v51",
+    "b": 0.025,
+    "helix_deg": 19.8,
+    "w": 0.439
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d75",
+    "set": "v51",
+    "b": 0.026,
+    "helix_deg": -13.42,
+    "w": 0.751
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d90",
+    "set": "v51",
+    "b": 0.026,
+    "helix_deg": -21.49,
+    "w": 0.827
+   },
+   {
+    "id": "cusp52_lcc_mid",
+    "set": "v52_new",
+    "b": 0.916,
+    "helix_deg": -0.64,
+    "w": 0.969
+   },
+   {
+    "id": "cusp52_lcc_q",
+    "set": "v52_new",
+    "b": 0.824,
+    "helix_deg": 2.42,
+    "w": 0.896
+   },
+   {
+    "id": "intramural52_focus",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 15.78,
+    "w": 0.469
+   },
+   {
+    "id": "intramural52_lvgrid_00",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 60.12,
+    "w": 0.055
+   },
+   {
+    "id": "intramural52_lvgrid_01",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 58.92,
+    "w": 0.066
+   },
+   {
+    "id": "intramural52_lvgrid_02",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 59.45,
+    "w": 0.061
+   },
+   {
+    "id": "intramural52_lvgrid_10",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 60.26,
+    "w": 0.054
+   },
+   {
+    "id": "intramural52_lvgrid_11",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 62.26,
+    "w": 0.035
+   },
+   {
+    "id": "intramural52_lvgrid_12",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 59.1,
+    "w": 0.065
+   },
+   {
+    "id": "intramural52_lvgrid_20",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 60.51,
+    "w": 0.051
+   },
+   {
+    "id": "intramural52_lvgrid_21",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 60.56,
+    "w": 0.051
+   },
+   {
+    "id": "intramural52_lvgrid_22",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 61.13,
+    "w": 0.046
+   },
+   {
+    "id": "lv_summit52_superior_d10",
+    "set": "v52_new",
+    "b": 0.882,
+    "helix_deg": 76.66,
+    "w": 0.114
+   },
+   {
+    "id": "lv_summit52_superior_d50",
+    "set": "v52_new",
+    "b": 0.807,
+    "helix_deg": 42.38,
+    "w": 0.461
+   },
+   {
+    "id": "lv_summit52_superior_d90",
+    "set": "v52_new",
+    "b": 0.703,
+    "helix_deg": 2.39,
+    "w": 0.847
+   },
+   {
+    "id": "lv_summit52_superior_d75",
+    "set": "v52_new",
+    "b": 0.767,
+    "helix_deg": 13.55,
+    "w": 0.754
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d10",
+    "set": "v52_new",
+    "b": 0.236,
+    "helix_deg": 64.59,
+    "w": 0.069
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d50",
+    "set": "v52_new",
+    "b": 0.226,
+    "helix_deg": 16.4,
+    "w": 0.533
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d90",
+    "set": "v52_new",
+    "b": 0.221,
+    "helix_deg": -16.15,
+    "w": 0.847
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d75",
+    "set": "v52_new",
+    "b": 0.236,
+    "helix_deg": -4.86,
+    "w": 0.743
+   }
+  ],
+  "R5.4_signed_helix_vs_cohort_fibres": {
+   "LV free wall, w 0-0.2": {
+    "v52_median_helix": 57.1,
+    "cohort_median_helix": 57.3,
+    "elements": 201134
+   },
+   "LV free wall, w 0.4-0.6": {
+    "v52_median_helix": 12.5,
+    "cohort_median_helix": 30.7,
+    "elements": 196432
+   },
+   "LV free wall, w 0.8-1.01": {
+    "v52_median_helix": -30.9,
+    "cohort_median_helix": -54.2,
+    "elements": 291153
+   },
+   "LV septum (d_s > 0.25), w 0-0.2": {
+    "v52_median_helix": NaN,
+    "cohort_median_helix": NaN,
+    "elements": 0
+   },
+   "LV septum (d_s > 0.25), w 0.4-0.6": {
+    "v52_median_helix": 17.1,
+    "cohort_median_helix": 7.1,
+    "elements": 31128
+   },
+   "LV septum (d_s > 0.25), w 0.8-1.01": {
+    "v52_median_helix": -28.3,
+    "cohort_median_helix": -32.9,
+    "elements": 8272
+   }
+  },
+  "D19a_v51_limitation: old LV elements where v5.1 stored f differs > 1 deg from its own rule on converged fields": {
+   "elements": 6851,
+   "of": 1176264,
+   "angle_deg": {
+    "n": 1176264,
+    "median": 0.014,
+    "p95": 0.093,
+    "p99": 0.569,
+    "max": 89.97
+   }
+  }
+ },
+ "wall_s": 46.1
+}

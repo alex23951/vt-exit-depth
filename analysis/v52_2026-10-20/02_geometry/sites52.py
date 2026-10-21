@@ -24,8 +24,14 @@ New sets built here (positions are mesh nodes of the merged mesh data/biv/<H>/v5
     the bisector of the apex angle splits the triangle; the superior half is the one whose centroid is higher (+z: the
     CT pose has no rotation); one position per half, the epicardial node nearest the half's centroid, at v5.1's four
     depths (0.1 / 0.5 / 0.75 / 0.9 from the endocardial end along the inward normal), pending the lock thread's Q6.
-  intramural (report 26, pending Q7): a mid-wall septal focus (sep 0.5) under report 34 item 14's central septal point,
-    and a 3 x 3 grid at 5 mm spacing on each septal endocardium (LV, RV) centred on the endocardial node nearest it.
+  intramural (report 26, D25 adopted 21 Oct 2026): the focus in AHA 2 nearest v5.1's septal-RVOT 10 % site among the
+    mid-wall septal nodes (equidistant within 0.5 mm from both endocardia, farther from the epicardium); the 3 x 3 grids
+    are placed from the focus beat (D25), not here. (Until 21 Oct: the PC's default focus and 5 mm grids, now removed.)
+  gate5fill (D23 with C65, D26): read from data/biv/<H>/v52/gate5fill52.json (gate5fill52.py) and entered before the
+    displaced set.
+  displaced (report 7, 11.2a): each v5.1 site moved 4 mm along grad(D19b APD w) and 4 mm along the stored fibre (+f),
+    snapped to the nearest unused node; inside-myocardium recorded; 8.7 capture with the parent site's family.
+  no-network-new (11.2a with D24): the 4 cusp and 8 summit sites, listed in the control heart's manifest.
   gate7a_patch_centres: report 34 item 14's three centres, written into the manifest (patches for scoring, not sites).
 Every site (v5.1's kept sites included) gets the 8.7 capture test on the cut mesh (biv52cut): nodes within 1.5 mm
 (strict) of the site, excitable (not the sleeve fibrous layer), in the site node's connected component inside the ball
@@ -267,35 +273,31 @@ def run(h):
         s['moved_from_v51_mm'] = round(float(np.linalg.norm(Pm[s['node']] - Pm[int(o['node'])])), 2) if o else None
     # not entered in the manifest: the triangle of 8.3 steps 2-6 degenerates on these meshes (Q6b to the lock thread)
     rec['summit_reanchored']['sites_as_constructed (not in the manifest; pending Q6 / Q6b)'] = ssites
-    # intramural (report 26), default pending Q7
+    # intramural (report 26): D25 (ADOPTED, Alex 21 Oct 2026 17:52:13 UTC). The focus: among merged-mesh nodes whose
+    # straight-line distances to the LV and RV endocardial surfaces differ by <= 0.5 mm and whose distance to the epicardial
+    # surface exceeds both, and which lie in AHA 2 (aha51 frame, groove from the converged v of fields52), the node nearest
+    # v5.1's septal-RVOT 10 % site (rvot_septal_z_d10); stop if AHA 2 holds none. The 3 x 3 grids are placed from the
+    # focus beat (D25), so none is in this manifest.
+    import previews2_fields as PF
+    F52 = os.path.join(V, 'fields52')
     r34 = json.load(open(os.path.join(G.REPO, 'analysis', 'v52_2026-10-20', '00_step0', f'report34_{h}.json')))
-    cen = int(r34['item14']['patch_centres']['central']['node'])
-    sep = np.loadtxt(os.path.join(V, 'uvc', 'sep.dat'))
-    lve, rve = read_vtx(os.path.join(S, 'lv_endo.vtx')), read_vtx(os.path.join(S, 'rv_endo.vtx'))
-    # focus: along the straight line from the LV endocardial centre point to the nearest RV endocardial node, the node with sep nearest 0.5
-    q = rve[np.argmin(np.linalg.norm(Pm[rve] - Pm[cen], axis=1))]
-    seg = Pm[cen] + np.linspace(0, 1, 60)[:, None] * (Pm[q] - Pm[cen])
-    nn = np.unique(tree_m.query(seg)[1])
-    foc = int(nn[np.argmin(np.abs(sep[nn] - 0.5))])
-    new.append({'id': 'intramural52_focus', 'family': 'intramural_focus', 'position': 'mid-wall septum', 'node': foc, 'sep': round(float(sep[foc]), 3)})
-    for nm, surf in (('lv', 'lv_endo'), ('rv', 'rv_endo')):
-        tri = np.loadtxt(os.path.join(S, surf + '.surf'), skiprows=1, usecols=(1, 2, 3), dtype=np.int64)
-        SF = R34.Surf(Pm, tri)
-        c0 = int(SF.nodes[np.argmin(np.linalg.norm(SF.X - Pm[foc], axis=1))])
-        d, _ = SF.dist([c0], 2)
-        zz = np.loadtxt(os.path.join(V, 'uvc', 'z.dat'))
-        # two surface directions at c0: base-apex (UVC z gradient) and its perpendicular in the tangent plane
-        near = SF.nodes[d <= 6.0]
-        Xn = Pm[near] - Pm[c0]
-        nrm = np.linalg.svd(Xn - Xn.mean(0))[2][2]
-        gz = np.linalg.lstsq(Xn, zz[near] - zz[c0], rcond=None)[0]; gz -= (gz @ nrm) * nrm; gz /= np.linalg.norm(gz)
-        ga = np.cross(nrm, gz)
-        for i in (-1, 0, 1):
-            for j in (-1, 0, 1):
-                tgt = Pm[c0] + 5.0 * (i * gz + j * ga)
-                k = int(SF.nodes[np.argmin(np.linalg.norm(SF.X - tgt, axis=1))])
-                new.append({'id': f'intramural52_{nm}grid_{i + 1}{j + 1}', 'family': f'intramural_{nm}_grid', 'position': f'{i},{j}', 'node': k,
-                            'surface_mm_from_centre': round(float(d[SF.ids([k])[0]]), 2)})
+    lve, rve, epi_v = (read_vtx(os.path.join(S, n + '.vtx')) for n in ('lv_endo', 'rv_endo', 'epi'))
+    dl, dr, de = (cKDTree(Pm[x]).query(Pm)[0] for x in (lve, rve, epi_v))
+    okn = np.where((np.abs(dl - dr) <= 0.5) & (de > dl) & (de > dr))[0]
+    seg_ok = np.asarray(PF.frame_labels(h, Pm, np.load(os.path.join(F52, 'v_uvc.npy')), Pm[okn])).astype(int)
+    c2 = okn[seg_ok == 2]
+    v51_ = json.load(open(os.path.join(B_, 'sites.json')))
+    anc = int(next(x['node'] for x in v51_ if x['id'] == 'rvot_septal_z_d10'))
+    if not len(c2):
+        raise SystemExit(f'{h}: D25 stop: AHA 2 holds no qualifying node')
+    foc = int(c2[np.argmin(np.linalg.norm(Pm[c2] - Pm[anc], axis=1))])
+    zf52, sepf52 = np.load(os.path.join(F52, 'z.npy')), np.load(os.path.join(F52, 'sep.npy'))
+    new.append({'id': 'intramural52_focus', 'family': 'intramural_focus', 'position': 'AHA 2 mid-wall septum (D25)', 'node': foc,
+                'rule': 'D25', 'AHA_segment': 2, 'z': round(float(zf52[foc]), 4), 'sep': round(float(sepf52[foc]), 3),
+                'distance_from_anchor_mm': round(float(np.linalg.norm(Pm[foc] - Pm[anc])), 2),
+                'dist_LV_RV_epi_mm': [round(float(dl[foc]), 2), round(float(dr[foc]), 2), round(float(de[foc]), 2)]})
+    rec['intramural_D25'] = {'qualifying_nodes': int(len(okn)), 'in_AHA_2': int(len(c2)), 'anchor_v51_rvot_septal_z_d10': anc, 'focus_node': foc,
+                             'grids': 'placed from the focus beat (D25: each 3 x 3 grid, 4 mm, centred on that ventricle\'s earliest-activated endocardial node); not in this manifest'}
     # re-anchored summit sites built by D22 (ADOPTED, Alex 21 Oct 2026 05:18:22 UTC: projB + option A, v5.1's disc started
     # from the ostium anchor): preview_d22.py's construction with B = the candidate-quarter node nearest step 2's point
     # (D22's relative stop: B is no farther from that point than the nearest tag-1 epicardial node). 8 sites per heart
@@ -310,6 +312,53 @@ def run(h):
                     'surface_node': d22['positions'][pos_nm]['surface_node'], 'moved_from_v51_mm': s['moved_from_v51_mm'],
                     'dist_to_tip_B_mm (8.4)': s['dist_to_tip_B_mm (8.4)'], 'construction': 'D22 projB, option A'})
     rec['summit_D22'] = {k: v for k, v in d22.items() if k != 'sites (preview, not in the manifest)'}
+    # gate 5's fill (D23 adopted, with C65 and D26): built by gate5fill52.py; entered here, before the displaced set,
+    # so the displaced sites avoid its nodes
+    g5f = os.path.join(V, 'gate5fill52.json')
+    if os.path.exists(g5f):
+        g5 = json.load(open(g5f))
+        new.extend(dict(x) for x in g5['sites'])
+        rec['gate5fill'] = {'sites': len(g5['sites']), 'positions': len(g5['sites']) // 2, 'source': os.path.relpath(g5f, G.REPO), 'sha256': G.sha256(g5f)}
+    # displaced-site set (report 7; 11.2a): every v5.1 site moved 4 mm along the local w gradient (+transmural: the mean
+    # element gradient of D19b's APD w, fields52 w_apd, over the site node's elements) and 4 mm along the local fibre
+    # (+fibre sense: the stored f of biv52.lon in the site node's element whose centroid is nearest); each lands on the
+    # nearest node not used by another site; whether the moved point lies inside the myocardium is recorded (a point
+    # outside is still snapped, and 8.7's capture decides validity). Model details (mine): the APD w for "w", the
+    # element mean gradient and the nearest-element fibre.
+    import q12measure52 as Q12
+    wapd = np.load(os.path.join(F52, 'w_apd.npy'))
+    lonv = np.loadtxt(os.path.join(V, 'biv52.lon'), skiprows=1)
+    eonm = coo_matrix((np.ones(Em.size), (Em.ravel(), np.repeat(np.arange(len(Em)), 4))), shape=(len(Pm), len(Em))).tocsr()
+    cen_all = Pm[Em].mean(1); tree_c = cKDTree(cen_all)
+
+    def in_mesh(x):
+        for e in tree_c.query(x, k=24)[1]:
+            X = Pm[Em[e]]; lam = np.linalg.solve((X[1:] - X[0]).T, x - X[0])
+            if (lam >= -1e-9).all() and lam.sum() <= 1 + 1e-9:
+                return True
+        return False
+    used_d = {int(x['node']) for x in v51} | {int(x['node']) for x in new}
+    ndisp = {'transmural': 0, 'tangential': 0, 'outside': 0}
+    for sv in v51:
+        n0 = int(sv['node']); ee = eonm.indices[eonm.indptr[n0]:eonm.indptr[n0 + 1]]
+        gw_ = Q12.FF.elem_grad(Pm, Em[ee], wapd).mean(0)
+        dtm = gw_ / max(np.linalg.norm(gw_), 1e-30)
+        en = ee[np.argmin(np.linalg.norm(cen_all[ee] - Pm[n0], axis=1))]
+        dtg = lonv[en, :3] / np.linalg.norm(lonv[en, :3])
+        for kind, dv in (('transmural', dtm), ('tangential', dtg)):
+            x = Pm[n0] + 4.0 * dv
+            node = next(int(c) for c in tree_m.query(x, k=48)[1] if int(c) not in used_d)
+            used_d.add(node)
+            ins = in_mesh(x)
+            ndisp[kind] += 1; ndisp['outside'] += int(not ins)
+            new.append({'id': f"{sv['id']}_disp_{'tm' if kind == 'transmural' else 'tg'}", 'family': f'displaced_{kind}', 'parent': sv['id'],
+                        'parent_family': sv['family'], 'node': node, 'direction': [round(float(c), 5) for c in dv],
+                        'grad_w_apd_norm_per_mm': round(float(np.linalg.norm(gw_)), 5) if kind == 'transmural' else None,
+                        'point_inside_myocardium': bool(ins), 'snap_mm': round(float(np.linalg.norm(Pm[node] - x)), 3),
+                        'moved_mm': round(float(np.linalg.norm(Pm[node] - Pm[n0])), 3)})
+    rec['displaced_set'] = dict(ndisp, rule='+4 mm along grad(D19b APD w) and +4 mm along the stored fibre (+f), nearest unused node')
+    # no-network beats at the new gate-1 sites (11.2a with D24: 4 cusp + 8 summit, control heart only)
+    rec['no_network_new'] = [x['id'] for x in new if x['family'] in ('cusp_crescent', 'summit_reanchored')] if h == 'Y5HYEDL4' else []
     rec['gate7a_patch_centres'] = r34['item14']['patch_centres']
     # ---------------- 8.7 capture and muscle fraction on every site
     Pc = read_pts(os.path.join(V, 'biv52cut')) / 1e3; Ec, _ = read_elem(os.path.join(V, 'biv52cut'))
@@ -348,7 +397,7 @@ def run(h):
     allsites = [{'id': s['id'], 'family': s['family'], 'node': int(s['node']), 'set': 'v51'} for s in v51] + [dict(s, set='v52_new') for s in new]
     cap = []
     for s in allsites:
-        c = capture(s['node'], s['family'])
+        c = capture(s['node'], s.get('parent_family', s['family']))
         c['muscle_fraction'] = round(inside_frac(Pm[s['node']]), 3)
         cap.append({'id': s['id'], 'family': s['family'], 'set': s['set'], 'node': s['node'], **c})
     rec['capture'] = {'sites': len(cap), 'invalid': [c['id'] for c in cap if not c['valid']],
@@ -368,7 +417,7 @@ def run(h):
                        for b in new if b['family'] == 'summit_reanchored' and b['depth_target'] == 0.9]}
     D = os.path.join(V, 'sites52.json')
     G.dump({'heart': h, 'lock_sha256': G.LOCK_SHA, 'new_sites': new, 'gate7a_patch_centres': rec['gate7a_patch_centres'],
-            'v51_sites': 'data/biv/<H>/sites.json (kept unchanged)', 'capture': cap}, D)
+            'v51_sites': 'data/biv/<H>/sites.json (kept unchanged)', 'no_network_new (control heart)': rec['no_network_new'], 'capture': cap}, D)
     rec['files'] = {'manifest': os.path.relpath(D, G.REPO), 'sha256': G.sha256(D)}
     rec['counts'] = {f: sum(1 for s in new if s['family'] == f) for f in sorted({s['family'] for s in new})}
     rec['wall_s'] = round(time.time() - t0, 1)

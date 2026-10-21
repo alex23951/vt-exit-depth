@@ -1,0 +1,1118 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "fields": {
+  "zeta": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/zeta.npy",
+   "sha256_of_array": "13d76d6e4b88bc7ff9ee327cd0fd4f6c81b192373dce3270c5e0865e618228d4"
+  },
+  "z": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/z.npy",
+   "sha256_of_array": "e64f9154462f634bc1706aaf39186e353bdaa655a18ff7a23c742590b4599c8e"
+  },
+  "v": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/v.npy",
+   "sha256_of_array": "d430d632150109f7263c921498660f0eb7c49ac0beb68c178f4bf6aa4d1d85f0"
+  },
+  "v_uvc": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/v_uvc.npy",
+   "sha256_of_array": "f568bbd5c38fe758f379ff4e68142b4faba44a33602ed5c5b4a30eb81891bdc9"
+  },
+  "phi_uvc": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_uvc.npy",
+   "sha256_of_array": "fd83057f1f710c073f94eb8b42dc9d5bfeef95fcbec5a1d551ee195452a89643"
+  },
+  "basal": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/basal.npy",
+   "sha256_of_array": "59078dcdb736a90fb979b6c16caea8f57e56ce99d552ec3911b669f47532018b"
+  },
+  "ot": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/ot.npy",
+   "sha256_of_array": "d5d296c1d6b9542e405a090191002b3b9624132ca00a072ca36159e252f03b79"
+  },
+  "ot_lv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/ot_lv.npy",
+   "sha256_of_array": "7406743f42c045c3abc517d790636d02ed08c5308e682f1ae07d8943f0da647e"
+  },
+  "ot_rv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/ot_rv.npy",
+   "sha256_of_array": "7fd95f31996748b296e442938dcac3a67eedf516ed9ff6b818f3acb6359c8580"
+  },
+  "w": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/w.npy",
+   "sha256_of_array": "a40eb9f45013d49c27989c466b2db61f67364fbe7072cb4be2cbaa2ff4313517"
+  },
+  "phi_epi": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_epi.npy",
+   "sha256_of_array": "fe2b942d9a79817a7e4ded7e2dfbdd604dbfcb9b4107b80ddcfda3fbb520eb7f"
+  },
+  "phi_epi_fix": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_epi_fix.npy",
+   "sha256_of_array": "481b4469fbc9d0bb5ccf410736bb89c399e8ead07ab971c36c924566f8c3d6f1"
+  },
+  "phi_lv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_lv.npy",
+   "sha256_of_array": "973c1eb3126a099f77ab90e6f587a1fe6e00a1917ed27f894110985375ad2424"
+  },
+  "phi_rv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_rv.npy",
+   "sha256_of_array": "56b9c9a180dc7c63146837ff7d74c09eb47ac28cfd033a2f2f4b9fc4120c120e"
+  },
+  "u_lv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/u_lv.npy",
+   "sha256_of_array": "7731723e3d58a9a03a95d85a7a2c0f52c059029849d6c08f77cbddb6ffb82eda"
+  },
+  "u_rv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/u_rv.npy",
+   "sha256_of_array": "d7e2b3936ed351f84a085312376c15051eca41adb72334941eddf63c2fe038c6"
+  },
+  "w_LV": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/w_LV.npy",
+   "sha256_of_array": "6e7640ebea981e555af77e5f99264a96d59a20c1c396797f62d6d624a1369ab6"
+  },
+  "rho": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/rho.npy",
+   "sha256_of_array": "fe2b942d9a79817a7e4ded7e2dfbdd604dbfcb9b4107b80ddcfda3fbb520eb7f"
+  },
+  "sep": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/sep.npy",
+   "sha256_of_array": "1d47f5bef83246331ec4fa543660fc1e2c60636fe3bd1a5ecec031c9822b32c7"
+  },
+  "d_s": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/d_s.npy",
+   "sha256_of_array": "eb7d6b73bee8f1f0a0100d2280369199bff717ed4bcadfe12f6090ad4c9f074e"
+  },
+  "w_lvfib": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/w_lvfib.npy",
+   "sha256_of_array": "8446e50ca39aeea2efac7044ff1aa51dc79486b8bc318bbd43edc20af6e0867d"
+  },
+  "w_apd": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/w_apd.npy",
+   "sha256_of_array": "20100bf79382183815ed97a731b132afc98754e03f616466786da7ec7d69dd96"
+  }
+ },
+ "regions": {
+  "R_field_sha256 (= v5.1 doste)": "c394c43ea2cbe9d0d4f9dfd881ce0c1481b192436f0a420efd284f675d9f925e",
+  "old_RV": 526146,
+  "old_LV": 1471782,
+  "sleeve": 1004,
+  "crescent": 0
+ },
+ "D31": {
+  "moved_elements (LV side by C2, converged d > 0.5)": 1049,
+  "angle_l_otlv_vs_l_otrv_deg (vectors)": {
+   "n": 1049,
+   "median": 38.924,
+   "p95": 84.424,
+   "p99": 115.518,
+   "max": 132.901
+  }
+ },
+ "D19b_guard": {
+  "elements_under_1pct (or sent by D30)": 260,
+  "of_which_D30": 7,
+  "of_which_no_v51_row": 0,
+  "step1_2mm": 183,
+  "step2_4mm": 38,
+  "step3_v51_n": 38,
+  "step3_v51_n_reversed": 24,
+  "step3_nearest_passing (D30 / no row)": 1,
+  "rejected_short": {
+   "step1": 0,
+   "step2": 0,
+   "step3": 0
+  },
+  "stop": 0,
+  "step_use_on_D30": {
+   "step2_4mm": 4,
+   "step3_nearest_passing (D30 / no row)": 1,
+   "step1_2mm": 2
+  },
+  "step_use_on_crescent": {}
+ },
+ "D30": {
+  "trigger_|l_raw|_lt_0.01": 1465,
+  "of_which_exactly_0": 1314,
+  "face_fill_per_pass": [
+   371,
+   228,
+   171,
+   154,
+   125,
+   109,
+   89,
+   72,
+   56,
+   41,
+   27,
+   12,
+   5
+  ],
+  "face_fill_total": 1460,
+  "lowest_id_fallbacks": 0,
+  "nearest_element_last_step": 5,
+  "nearest_element_distances_mm": [
+   3.32,
+   4.41,
+   3.83,
+   2.75,
+   3.46
+  ],
+  "guard_median_M (D30-filled l)": 0.08264524235883608,
+  "median_after_added_step": 0.08264541117397123,
+  "added_step_projected": 1458,
+  "added_step_short_projection_to_guard": 0,
+  "D30_with_|grad_w|_lt_0.01M_to_guard": 7,
+  "tilt_before_step_deg (90 - angle(l, grad w)) on D30 elements": {
+   "n": 1458,
+   "median": 26.766,
+   "p95": 66.226,
+   "p99": 80.943,
+   "max": 87.181
+  },
+  "tilt_of_t_out_from_grad_w_on_D30_elements_kept_with_filled_l_deg": null
+ },
+ "files": {
+  "biv52.lon": {
+   "path": "data/biv/6G8DD8S5/v52/biv52.lon",
+   "sha256": "361dc9c51e343b532cc4d5d86e4fcd74260ce1b1b8d65058257ab61602a2bbe6"
+  },
+  "biv52cut.lon": {
+   "path": "data/biv/6G8DD8S5/v52/biv52cut.lon",
+   "sha256": "361dc9c51e343b532cc4d5d86e4fcd74260ce1b1b8d65058257ab61602a2bbe6"
+  }
+ },
+ "acceptance": {
+  "R5.3_free_wall_angles": {
+   "0.1": {
+    "target_deg": 55.3,
+    "elements": 11259,
+    "median_helix_deg": 55.276,
+    "max_|helix - (66 - 107 w)|_deg": 0.0,
+    "median_w_minus_phi_epi": 0.0,
+    "max_w_minus_phi_epi": 0.0469,
+    "pass": true
+   },
+   "0.5": {
+    "target_deg": 12.5,
+    "elements": 16867,
+    "median_helix_deg": 12.51,
+    "max_|helix - (66 - 107 w)|_deg": 0.0,
+    "median_w_minus_phi_epi": 0.0,
+    "max_w_minus_phi_epi": 0.0265,
+    "pass": true
+   },
+   "0.9": {
+    "target_deg": -30.3,
+    "elements": 27819,
+    "median_helix_deg": -30.299,
+    "max_|helix - (66 - 107 w)|_deg": 0.0,
+    "median_w_minus_phi_epi": 0.0,
+    "max_w_minus_phi_epi": 0.0058,
+    "pass": true
+   }
+  },
+  "R5.3_RV_rows_bit_identical_to_v51": true,
+  "R5.3_orthonormal_LV_computed": {
+   "min_norm": 0.9999999999999997,
+   "max_|norm-1|": 4.440892098500626e-16,
+   "max_|f.s|": 2.220446049250313e-16,
+   "max_|f.n|": 2.220446049250313e-16,
+   "max_|s.n|": 2.220446049250313e-16
+  },
+  "R5.3_orthonormal_LV_as_written": {
+   "min_norm": 0.9999998554737849,
+   "max_|norm-1|": 1.502973947520303e-07,
+   "max_|f.s|": 1.43828599974416e-07,
+   "max_|f.n|": 2.220446049250313e-16,
+   "max_|s.n|": 1.8735013540549517e-16
+  },
+  "R5.3_orthonormal_sleeve_as_written": {
+   "min_norm": 0.9999999284274425,
+   "max_|norm-1|": 1.008006489389146e-07,
+   "max_|f.s|": 9.897437996952974e-08,
+   "max_|f.n|": 1.3877787807814457e-16,
+   "max_|s.n|": 1.6653345369377348e-16
+  },
+  "n_equals_t_out_LV (max |n - t_out|)": 3.431339374067182e-14,
+  "max_|l.t_out|": 4.0190073491430667e-14,
+  "orthonormal_within_1e-6": true,
+  "R5.3_one_connected_fibre_field": {
+   "elements_with_a_fibre": 1998932,
+   "of": 1998932,
+   "node_sharing_components": 1,
+   "pass": true
+  },
+  "all_pass": true,
+  "D20a_checks": {
+   "aortic_rim_LV_nodes": 608,
+   "min_nodal_b_on_aortic_rim": 1.0,
+   "elements_b_gt_0": 359650,
+   "elements_b_gt_0_with_z_lt_0.80": 0
+  },
+  "D19b_sign_check": {
+   "median_line_angle_f52_f51_deg_at_w_lt_0.1 (old LV elements)": 5.487,
+   "share_helix_lt_0_at_w_gt_0.9": 0.9958
+  }
+ },
+ "reports": {
+  "line_angle_v52_vs_v51_LV_by_w_band_deg": {
+   "0-0.1": {
+    "n": 120066,
+    "median": 5.487,
+    "p95": 26.293,
+    "p99": 42.804,
+    "max": 89.988
+   },
+   "0.1-0.3": {
+    "n": 219621,
+    "median": 15.775,
+    "p95": 32.568,
+    "p99": 43.221,
+    "max": 89.996
+   },
+   "0.3-0.5": {
+    "n": 267323,
+    "median": 22.744,
+    "p95": 38.764,
+    "p99": 48.309,
+    "max": 89.996
+   },
+   "0.5-0.7": {
+    "n": 284409,
+    "median": 22.258,
+    "p95": 40.254,
+    "p99": 51.203,
+    "max": 89.952
+   },
+   "0.7-0.9": {
+    "n": 349388,
+    "median": 19.242,
+    "p95": 33.944,
+    "p99": 49.143,
+    "max": 89.982
+   },
+   "0.9-1.01": {
+    "n": 230975,
+    "median": 11.994,
+    "p95": 20.991,
+    "p99": 44.452,
+    "max": 89.944
+   }
+  },
+  "C2_moved_elements_w_range": [
+   0.503,
+   0.991
+  ],
+  "D20a_neighbour_steps (face-adjacent LV-side pairs)": {
+   "R5.1_alone": {
+    "pairs_over_30deg": 6713,
+    "p99_deg": 12.64
+   },
+   "as_built (D20a, +90)": {
+    "pairs_over_30deg": 6364,
+    "p99_deg": 12.34
+   },
+   "v51_stored (old-element pairs)": {
+    "pairs_over_30deg": 55745
+   }
+  },
+  "split_line_angle_step_deg": {
+   "v52_LV_vs_v51_RV (all pairs)": {
+    "n": 16279,
+    "median": 33.052,
+    "p95": 74.516,
+    "p99": 86.16,
+    "max": 89.959
+   },
+   "v51_own_LV_vs_RV": {
+    "n": 16279,
+    "median": 30.943,
+    "p95": 77.695,
+    "p99": 87.272,
+    "max": 89.978
+   },
+   "D20b: where b > 0.5, +90": {
+    "n": 453,
+    "median": 66.972,
+    "p95": 88.087,
+    "p99": 89.597,
+    "max": 89.945
+   },
+   "D20b: where b > 0.5, -90": {
+    "n": 453,
+    "median": 51.312,
+    "p95": 85.279,
+    "p99": 88.856,
+    "max": 89.945
+   }
+  },
+  "APD_w_step_along_split_edges": {
+   "n": 56790,
+   "median": 0.038,
+   "p95": 0.108,
+   "p99": 0.227,
+   "max": 0.551
+  },
+  "stimulus_nodes_b_and_helix": [
+   {
+    "id": "lv_septum_phi0_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 55.72,
+    "w": 0.096
+   },
+   {
+    "id": "lv_septum_phi0_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 14.12,
+    "w": 0.485
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 52.0,
+    "w": 0.131
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 5.62,
+    "w": 0.564
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -19.93,
+    "w": 0.803
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -37.43,
+    "w": 0.967
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 55.16,
+    "w": 0.101
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -3.62,
+    "w": 0.651
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -21.3,
+    "w": 0.816
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -37.52,
+    "w": 0.967
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 54.63,
+    "w": 0.106
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 1.48,
+    "w": 0.603
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -27.65,
+    "w": 0.875
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -34.31,
+    "w": 0.937
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 55.17,
+    "w": 0.101
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -3.65,
+    "w": 0.651
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -27.72,
+    "w": 0.876
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -35.79,
+    "w": 0.951
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 53.32,
+    "w": 0.118
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 12.2,
+    "w": 0.503
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 52.47,
+    "w": 0.126
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 43.81,
+    "w": 0.207
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 13.32,
+    "w": 0.492
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 52.97,
+    "w": 0.122
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 2.83,
+    "w": 0.59
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -23.51,
+    "w": 0.837
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -36.8,
+    "w": 0.961
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 54.84,
+    "w": 0.104
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 4.79,
+    "w": 0.572
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -25.32,
+    "w": 0.853
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -36.07,
+    "w": 0.954
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 47.51,
+    "w": 0.173
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.5_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 0.07,
+    "w": 0.616
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.5_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -22.14,
+    "w": 0.824
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.5_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -32.44,
+    "w": 0.92
+   },
+   {
+    "id": "lv_septum_phi-60_z0.5_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 49.61,
+    "w": 0.153
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 56.02,
+    "w": 0.093
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 15.42,
+    "w": 0.473
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 55.31,
+    "w": 0.1
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 47.19,
+    "w": 0.176
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -0.58,
+    "w": 0.622
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -23.47,
+    "w": 0.836
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -35.73,
+    "w": 0.951
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 50.2,
+    "w": 0.148
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 2.1,
+    "w": 0.597
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -21.41,
+    "w": 0.817
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -36.66,
+    "w": 0.959
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 55.47,
+    "w": 0.098
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.75_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 4.75,
+    "w": 0.572
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.75_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -17.1,
+    "w": 0.777
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.75_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -35.43,
+    "w": 0.948
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 56.64,
+    "w": 0.087
+   },
+   {
+    "id": "rv_free_wall_q75_z0.25_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 13.4,
+    "w": 0.492
+   },
+   {
+    "id": "rv_free_wall_q75_z0.25_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 41.54,
+    "w": 0.229
+   },
+   {
+    "id": "rv_free_wall_q75_z0.25_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 61.7,
+    "w": 0.04
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d10",
+    "set": "v51",
+    "b": 0.992,
+    "helix_deg": 91.6,
+    "w": 0.968
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d50",
+    "set": "v51",
+    "b": 0.983,
+    "helix_deg": 9.74,
+    "w": 0.884
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d75",
+    "set": "v51",
+    "b": 0.989,
+    "helix_deg": 10.44,
+    "w": 0.879
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d10",
+    "set": "v51",
+    "b": 0.852,
+    "helix_deg": 77.11,
+    "w": 0.103
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d50",
+    "set": "v51",
+    "b": 0.722,
+    "helix_deg": 49.09,
+    "w": 0.362
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d75",
+    "set": "v51",
+    "b": 0.829,
+    "helix_deg": 38.19,
+    "w": 0.514
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d90",
+    "set": "v51",
+    "b": 0.734,
+    "helix_deg": 39.51,
+    "w": 0.467
+   },
+   {
+    "id": "lv_summit_superior_z_d10",
+    "set": "v51",
+    "b": 0.209,
+    "helix_deg": 67.82,
+    "w": 0.031
+   },
+   {
+    "id": "lv_summit_superior_z_d50",
+    "set": "v51",
+    "b": 0.234,
+    "helix_deg": 27.66,
+    "w": 0.427
+   },
+   {
+    "id": "lv_summit_superior_z_d75",
+    "set": "v51",
+    "b": 0.271,
+    "helix_deg": 1.99,
+    "w": 0.689
+   },
+   {
+    "id": "lv_summit_superior_z_d90",
+    "set": "v51",
+    "b": 0.287,
+    "helix_deg": -12.97,
+    "w": 0.841
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d10",
+    "set": "v51",
+    "b": 0.113,
+    "helix_deg": 63.22,
+    "w": 0.052
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d50",
+    "set": "v51",
+    "b": 0.115,
+    "helix_deg": 18.79,
+    "w": 0.476
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d75",
+    "set": "v51",
+    "b": 0.115,
+    "helix_deg": -11.3,
+    "w": 0.762
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d90",
+    "set": "v51",
+    "b": 0.114,
+    "helix_deg": -24.72,
+    "w": 0.89
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d10",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 61.36,
+    "w": 0.043
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d50",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": 14.63,
+    "w": 0.48
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d75",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -17.5,
+    "w": 0.78
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d90",
+    "set": "v51",
+    "b": 0.0,
+    "helix_deg": -32.36,
+    "w": 0.919
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d10",
+    "set": "v51",
+    "b": 0.036,
+    "helix_deg": 62.95,
+    "w": 0.037
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d50",
+    "set": "v51",
+    "b": 0.035,
+    "helix_deg": 27.75,
+    "w": 0.367
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d75",
+    "set": "v51",
+    "b": 0.035,
+    "helix_deg": -10.0,
+    "w": 0.722
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d90",
+    "set": "v51",
+    "b": 0.036,
+    "helix_deg": -25.46,
+    "w": 0.868
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d10",
+    "set": "v51",
+    "b": 0.017,
+    "helix_deg": 61.49,
+    "w": 0.046
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d50",
+    "set": "v51",
+    "b": 0.016,
+    "helix_deg": 15.23,
+    "w": 0.479
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d75",
+    "set": "v51",
+    "b": 0.016,
+    "helix_deg": -13.25,
+    "w": 0.746
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d90",
+    "set": "v51",
+    "b": 0.015,
+    "helix_deg": -32.31,
+    "w": 0.924
+   },
+   {
+    "id": "cusp52_lcc_mid",
+    "set": "v52_new",
+    "b": 0.778,
+    "helix_deg": -6.19,
+    "w": 0.969
+   },
+   {
+    "id": "cusp52_lcc_q",
+    "set": "v52_new",
+    "b": 0.714,
+    "helix_deg": -7.96,
+    "w": 0.96
+   },
+   {
+    "id": "intramural52_focus",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 16.38,
+    "w": 0.464
+   },
+   {
+    "id": "intramural52_lvgrid_00",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 60.56,
+    "w": 0.051
+   },
+   {
+    "id": "intramural52_lvgrid_01",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 60.07,
+    "w": 0.055
+   },
+   {
+    "id": "intramural52_lvgrid_02",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 61.65,
+    "w": 0.041
+   },
+   {
+    "id": "intramural52_lvgrid_10",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 60.87,
+    "w": 0.048
+   },
+   {
+    "id": "intramural52_lvgrid_11",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 61.91,
+    "w": 0.038
+   },
+   {
+    "id": "intramural52_lvgrid_12",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 61.62,
+    "w": 0.041
+   },
+   {
+    "id": "intramural52_lvgrid_20",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 61.54,
+    "w": 0.042
+   },
+   {
+    "id": "intramural52_lvgrid_21",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 61.14,
+    "w": 0.045
+   },
+   {
+    "id": "intramural52_lvgrid_22",
+    "set": "v52_new",
+    "b": 0.0,
+    "helix_deg": 61.19,
+    "w": 0.045
+   },
+   {
+    "id": "lv_summit52_superior_d10",
+    "set": "v52_new",
+    "b": 0.803,
+    "helix_deg": 73.21,
+    "w": 0.129
+   },
+   {
+    "id": "lv_summit52_superior_d50",
+    "set": "v52_new",
+    "b": 0.65,
+    "helix_deg": 35.94,
+    "w": 0.476
+   },
+   {
+    "id": "lv_summit52_superior_d90",
+    "set": "v52_new",
+    "b": 0.625,
+    "helix_deg": -9.5,
+    "w": 0.939
+   },
+   {
+    "id": "lv_summit52_superior_d75",
+    "set": "v52_new",
+    "b": 0.619,
+    "helix_deg": 3.29,
+    "w": 0.804
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d10",
+    "set": "v52_new",
+    "b": 0.158,
+    "helix_deg": 66.27,
+    "w": 0.034
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d50",
+    "set": "v52_new",
+    "b": 0.167,
+    "helix_deg": 22.12,
+    "w": 0.46
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d90",
+    "set": "v52_new",
+    "b": 0.179,
+    "helix_deg": -23.2,
+    "w": 0.9
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d75",
+    "set": "v52_new",
+    "b": 0.184,
+    "helix_deg": -10.11,
+    "w": 0.775
+   }
+  ],
+  "R5.4_signed_helix_vs_cohort_fibres": {
+   "LV free wall, w 0-0.2": {
+    "v52_median_helix": 57.0,
+    "cohort_median_helix": 57.6,
+    "elements": 225739
+   },
+   "LV free wall, w 0.4-0.6": {
+    "v52_median_helix": 12.4,
+    "cohort_median_helix": 30.8,
+    "elements": 241177
+   },
+   "LV free wall, w 0.8-1.01": {
+    "v52_median_helix": -31.1,
+    "cohort_median_helix": -54.1,
+    "elements": 403527
+   },
+   "LV septum (d_s > 0.25), w 0-0.2": {
+    "v52_median_helix": NaN,
+    "cohort_median_helix": NaN,
+    "elements": 0
+   },
+   "LV septum (d_s > 0.25), w 0.4-0.6": {
+    "v52_median_helix": 16.7,
+    "cohort_median_helix": 7.0,
+    "elements": 36613
+   },
+   "LV septum (d_s > 0.25), w 0.8-1.01": {
+    "v52_median_helix": -28.8,
+    "cohort_median_helix": -31.3,
+    "elements": 13350
+   }
+  },
+  "D19a_v51_limitation: old LV elements where v5.1 stored f differs > 1 deg from its own rule on converged fields": {
+   "elements": 19324,
+   "of": 1471782,
+   "angle_deg": {
+    "n": 1471782,
+    "median": 0.014,
+    "p95": 0.094,
+    "p99": 1.451,
+    "max": 89.913
+   }
+  }
+ },
+ "wall_s": 55.9
+}

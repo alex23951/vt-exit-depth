@@ -1,0 +1,260 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "rule": "D19a / D19b (adopted 21 Oct 2026); see the docstring",
+ "precedence": "a node in both Dirichlet sets takes 1 (02_laplace.py solve(): zero = setdiff(zero, one))",
+ "solver": "scipy CG, Jacobi preconditioner, unpreconditioned relative residual ||r||2 / ||b||2; 1e-10 then 1e-12",
+ "fields": {
+  "zeta": {
+   "relres_1e-10_solve": 9.672139616516758e-11,
+   "relres_1e-12_solve": 9.811407576518743e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.865814613921657e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 7.1e-05,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 4.945112169529864e-06,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "basal": {
+   "relres_1e-10_solve": 9.875825320264443e-11,
+   "relres_1e-12_solve": 9.878824936483623e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 2.4314598112695762e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 2.9e-05,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 1.4219922817026998e-06,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "ot": {
+   "relres_1e-10_solve": 9.996645224236725e-11,
+   "relres_1e-12_solve": 9.94419554859163e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.5626690486623147e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.000142,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 2.1597557158248293e-06,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "w": {
+   "relres_1e-10_solve": 9.723185436429496e-11,
+   "relres_1e-12_solve": 9.936979790480359e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.0158665564883336e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.000448,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 3.41101,
+   "stored_nodes_outside_by_1e-3": 52
+  },
+  "phi_epi": {
+   "relres_1e-10_solve": 9.482594036275325e-11,
+   "relres_1e-12_solve": 8.882252570207274e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.3433588685884956e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 1.62595,
+   "stored_nodes_outside_by_1e-3": 8
+  },
+  "phi_lv": {
+   "relres_1e-10_solve": 9.376384710717284e-11,
+   "relres_1e-12_solve": 9.722884480575317e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.08508158014331e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 2.41472,
+   "stored_nodes_outside_by_1e-3": 29
+  },
+  "phi_rv": {
+   "relres_1e-10_solve": 8.678284376638373e-11,
+   "relres_1e-12_solve": 7.550863440471075e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.5422802469042836e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 2.06543,
+   "stored_nodes_outside_by_1e-3": 32
+  },
+  "v": {
+   "relres_1e-10_solve": 9.689391349319233e-11,
+   "relres_1e-12_solve": 9.414059855813596e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.5450951757498572e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 2.06543,
+   "stored_nodes_outside_by_1e-3": 30
+  },
+  "ot_rv": {
+   "relres_1e-10_solve": 9.869099382977858e-11,
+   "relres_1e-12_solve": 9.828074152174576e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 2.4084371164079243e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.000214,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 4.828880160179239e-06,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "ot_lv": {
+   "relres_1e-10_solve": 9.642432570697409e-11,
+   "relres_1e-12_solve": 9.699163466356306e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 2.37575081829533e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.305605200733865e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "phi_epi_fix": {
+   "relres_1e-10_solve": 9.297093777243787e-11,
+   "relres_1e-12_solve": 8.45719556159504e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.3116846497851498e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 1.90945,
+   "stored_nodes_outside_by_1e-3": 10
+  },
+  "u_lv": {
+   "relres_1e-10_solve": 9.476147216585177e-11,
+   "relres_1e-12_solve": 9.113857197014931e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.0696447616531657e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 2.41472,
+   "stored_nodes_outside_by_1e-3": 29
+  },
+  "u_rv": {
+   "relres_1e-10_solve": 9.164840250863449e-11,
+   "relres_1e-12_solve": 8.235428409077584e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 6.212717562625869e-10,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 2.06543,
+   "stored_nodes_outside_by_1e-3": 35
+  },
+  "w_LV": {
+   "relres_1e-10_solve": 9.827755753055608e-11,
+   "relres_1e-12_solve": 9.3945683991441e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 9.81179026915413e-10,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.292338164375465e-07,
+   "stored_nodes_outside_by_1e-3": 0,
+   "submesh_nodes": 273725
+  }
+ },
+ "files": {
+  "zeta": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/zeta.npy",
+   "sha256_of_array": "13d76d6e4b88bc7ff9ee327cd0fd4f6c81b192373dce3270c5e0865e618228d4"
+  },
+  "z": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/z.npy",
+   "sha256_of_array": "e64f9154462f634bc1706aaf39186e353bdaa655a18ff7a23c742590b4599c8e"
+  },
+  "v": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/v.npy",
+   "sha256_of_array": "d430d632150109f7263c921498660f0eb7c49ac0beb68c178f4bf6aa4d1d85f0"
+  },
+  "v_uvc": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/v_uvc.npy",
+   "sha256_of_array": "f568bbd5c38fe758f379ff4e68142b4faba44a33602ed5c5b4a30eb81891bdc9"
+  },
+  "phi_uvc": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_uvc.npy",
+   "sha256_of_array": "fd83057f1f710c073f94eb8b42dc9d5bfeef95fcbec5a1d551ee195452a89643"
+  },
+  "basal": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/basal.npy",
+   "sha256_of_array": "59078dcdb736a90fb979b6c16caea8f57e56ce99d552ec3911b669f47532018b"
+  },
+  "ot": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/ot.npy",
+   "sha256_of_array": "d5d296c1d6b9542e405a090191002b3b9624132ca00a072ca36159e252f03b79"
+  },
+  "ot_lv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/ot_lv.npy",
+   "sha256_of_array": "7406743f42c045c3abc517d790636d02ed08c5308e682f1ae07d8943f0da647e"
+  },
+  "ot_rv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/ot_rv.npy",
+   "sha256_of_array": "7fd95f31996748b296e442938dcac3a67eedf516ed9ff6b818f3acb6359c8580"
+  },
+  "w": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/w.npy",
+   "sha256_of_array": "a40eb9f45013d49c27989c466b2db61f67364fbe7072cb4be2cbaa2ff4313517"
+  },
+  "phi_epi": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_epi.npy",
+   "sha256_of_array": "fe2b942d9a79817a7e4ded7e2dfbdd604dbfcb9b4107b80ddcfda3fbb520eb7f"
+  },
+  "phi_epi_fix": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_epi_fix.npy",
+   "sha256_of_array": "481b4469fbc9d0bb5ccf410736bb89c399e8ead07ab971c36c924566f8c3d6f1"
+  },
+  "phi_lv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_lv.npy",
+   "sha256_of_array": "973c1eb3126a099f77ab90e6f587a1fe6e00a1917ed27f894110985375ad2424"
+  },
+  "phi_rv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/phi_rv.npy",
+   "sha256_of_array": "56b9c9a180dc7c63146837ff7d74c09eb47ac28cfd033a2f2f4b9fc4120c120e"
+  },
+  "u_lv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/u_lv.npy",
+   "sha256_of_array": "7731723e3d58a9a03a95d85a7a2c0f52c059029849d6c08f77cbddb6ffb82eda"
+  },
+  "u_rv": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/u_rv.npy",
+   "sha256_of_array": "d7e2b3936ed351f84a085312376c15051eca41adb72334941eddf63c2fe038c6"
+  },
+  "w_LV": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/w_LV.npy",
+   "sha256_of_array": "6e7640ebea981e555af77e5f99264a96d59a20c1c396797f62d6d624a1369ab6"
+  },
+  "rho": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/rho.npy",
+   "sha256_of_array": "fe2b942d9a79817a7e4ded7e2dfbdd604dbfcb9b4107b80ddcfda3fbb520eb7f"
+  },
+  "sep": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/sep.npy",
+   "sha256_of_array": "1d47f5bef83246331ec4fa543660fc1e2c60636fe3bd1a5ecec031c9822b32c7"
+  },
+  "d_s": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/d_s.npy",
+   "sha256_of_array": "eb7d6b73bee8f1f0a0100d2280369199bff717ed4bcadfe12f6090ad4c9f074e"
+  },
+  "w_lvfib": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/w_lvfib.npy",
+   "sha256_of_array": "8446e50ca39aeea2efac7044ff1aa51dc79486b8bc318bbd43edc20af6e0867d"
+  },
+  "w_apd": {
+   "path": "data/biv/6G8DD8S5/v52/fields52/w_apd.npy",
+   "sha256_of_array": "20100bf79382183815ed97a731b132afc98754e03f616466786da7ec7d69dd96"
+  }
+ },
+ "uvc": {
+  "z_max_abs_change_from_stored": 0.022247767955520525,
+  "v_nodes_changing_side": 27,
+  "phi": "geometric (03_uvc.py), copied from uvc/phi.dat"
+ },
+ "D19b": {
+  "nodes_with_phi_lv_plus_phi_rv_lt_1e-9": 40359,
+  "fill_passes": 2,
+  "filled_per_pass": [
+   40310,
+   49
+  ],
+  "LV_side_nodes_with_|phi_epi_fix + phi_lv + phi_rv - 1| > 1e-6 (share)": 0.0892,
+  "w_apd_range": [
+   0.0,
+   1.0
+  ]
+ },
+ "LV_side": "C2: v5.1 split (d = phi_rv / (phi_lv + phi_rv) > 0.5 on v5.1 phi files, element means) for old elements; appended tag 2 (sleeves) RV, tag 1 (crescents) LV",
+ "wall_s": 120.8
+}

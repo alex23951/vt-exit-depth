@@ -1,0 +1,260 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "rule": "D19a / D19b (adopted 21 Oct 2026); see the docstring",
+ "precedence": "a node in both Dirichlet sets takes 1 (02_laplace.py solve(): zero = setdiff(zero, one))",
+ "solver": "scipy CG, Jacobi preconditioner, unpreconditioned relative residual ||r||2 / ||b||2; 1e-10 then 1e-12",
+ "fields": {
+  "zeta": {
+   "relres_1e-10_solve": 9.776694974556293e-11,
+   "relres_1e-12_solve": 9.524730623292957e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 4.426405908475317e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 1e-06,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 8.899998911182649e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "basal": {
+   "relres_1e-10_solve": 9.93717817780794e-11,
+   "relres_1e-12_solve": 9.781393967232207e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.0535627359995487e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.306354744494257e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "ot": {
+   "relres_1e-10_solve": 9.934795209743273e-11,
+   "relres_1e-12_solve": 9.734922742249094e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.1125680921562093e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.318557598776863e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "w": {
+   "relres_1e-10_solve": 9.993077038703245e-11,
+   "relres_1e-12_solve": 9.594410558134863e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 3.060918296604598e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 1e-06,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 3.36284,
+   "stored_nodes_outside_by_1e-3": 53
+  },
+  "phi_epi": {
+   "relres_1e-10_solve": 9.88430512644523e-11,
+   "relres_1e-12_solve": 8.182000427694559e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 9.260714972647577e-10,
+   "largest_excursion_outside_[0,1]_before_clip": 0.000117,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 1.01061,
+   "stored_nodes_outside_by_1e-3": 1
+  },
+  "phi_lv": {
+   "relres_1e-10_solve": 9.30858502875582e-11,
+   "relres_1e-12_solve": 9.816439611800079e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.1499751151333726e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 0.300686,
+   "stored_nodes_outside_by_1e-3": 3
+  },
+  "phi_rv": {
+   "relres_1e-10_solve": 9.173568265121323e-11,
+   "relres_1e-12_solve": 8.791533761717819e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 4.590265390014281e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 1.82813,
+   "stored_nodes_outside_by_1e-3": 2
+  },
+  "v": {
+   "relres_1e-10_solve": 9.532477942209552e-11,
+   "relres_1e-12_solve": 9.547906020734063e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 2.9770652609784065e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 0.477205,
+   "stored_nodes_outside_by_1e-3": 1
+  },
+  "ot_rv": {
+   "relres_1e-10_solve": 9.747428343577979e-11,
+   "relres_1e-12_solve": 9.685169805561797e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.7167645083304706e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.000257,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 2.9901776363860932e-06,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "ot_lv": {
+   "relres_1e-10_solve": 9.756688331216408e-11,
+   "relres_1e-12_solve": 9.957283593043253e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 2.09345885071599e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.303748913387807e-07,
+   "stored_nodes_outside_by_1e-3": 0
+  },
+  "phi_epi_fix": {
+   "relres_1e-10_solve": 9.632571893932658e-11,
+   "relres_1e-12_solve": 9.956118810872396e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 9.042117055102494e-10,
+   "largest_excursion_outside_[0,1]_before_clip": 0.00016,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 1.01061,
+   "stored_nodes_outside_by_1e-3": 1
+  },
+  "u_lv": {
+   "relres_1e-10_solve": 9.323405292208939e-11,
+   "relres_1e-12_solve": 9.697141682643734e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.1408432532000745e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 0.300686,
+   "stored_nodes_outside_by_1e-3": 3
+  },
+  "u_rv": {
+   "relres_1e-10_solve": 9.842684772162103e-11,
+   "relres_1e-12_solve": 9.770982068159863e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 7.550970682057567e-10,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 1.82813,
+   "stored_nodes_outside_by_1e-3": 3
+  },
+  "w_LV": {
+   "relres_1e-10_solve": 9.975070353895645e-11,
+   "relres_1e-12_solve": 9.631592624157593e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.7600931823125165e-09,
+   "largest_excursion_outside_[0,1]_before_clip": 0.0,
+   "nodes_outside_by_1e-3_before_clip": 0,
+   "pass": true,
+   "max_nodal_change_stored_vs_converged": 5.302520335037642e-07,
+   "stored_nodes_outside_by_1e-3": 0,
+   "submesh_nodes": 224392
+  }
+ },
+ "files": {
+  "zeta": {
+   "path": "data/biv/7D98EVAR/v52/fields52/zeta.npy",
+   "sha256_of_array": "a83df718270061e1d36e21e7f4c3bca68cfbdf7c6da7e54be335e82a2f80a554"
+  },
+  "z": {
+   "path": "data/biv/7D98EVAR/v52/fields52/z.npy",
+   "sha256_of_array": "b78bd1778935b8709b27862fd4c39f6a18b9df952f479a18cd18cbb8d6edb096"
+  },
+  "v": {
+   "path": "data/biv/7D98EVAR/v52/fields52/v.npy",
+   "sha256_of_array": "2f35750e70f8765eaf5663a5d61657f0e3831d1cc102820de7fd5e81d133a245"
+  },
+  "v_uvc": {
+   "path": "data/biv/7D98EVAR/v52/fields52/v_uvc.npy",
+   "sha256_of_array": "b7acce25d882756c4ca82210f2a680b88ff1bc04053659013418d5d32222efd5"
+  },
+  "phi_uvc": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_uvc.npy",
+   "sha256_of_array": "3aba17f7ee2903b0200e25450bc979d564389c5dbde2425d3a42dfeecdebe47e"
+  },
+  "basal": {
+   "path": "data/biv/7D98EVAR/v52/fields52/basal.npy",
+   "sha256_of_array": "e82507e3b6386f4b899f5ad51e61daafda59e369eaaef01351199ce37b38492c"
+  },
+  "ot": {
+   "path": "data/biv/7D98EVAR/v52/fields52/ot.npy",
+   "sha256_of_array": "fe8c90a2bf49898ab427e518098206f6878dc79ab245a54c89e8a1e2cbdf56c4"
+  },
+  "ot_lv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/ot_lv.npy",
+   "sha256_of_array": "1c4711623ea8e0f6507835492907f1b9190390ef497937de665f24188518fb90"
+  },
+  "ot_rv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/ot_rv.npy",
+   "sha256_of_array": "6a99f31e260c54e20befff87cd3335cf0b0bce518ba63e12eec6a42dfff8da5b"
+  },
+  "w": {
+   "path": "data/biv/7D98EVAR/v52/fields52/w.npy",
+   "sha256_of_array": "8380b1e42c183ebb250e59795ba438ed6b6ddee2532061462582b789c8d8b451"
+  },
+  "phi_epi": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_epi.npy",
+   "sha256_of_array": "6029e5eaf4bccf7f36f6d5e717d9202dbc964f57275de76608a0d96f1f370277"
+  },
+  "phi_epi_fix": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_epi_fix.npy",
+   "sha256_of_array": "7fdf79659292a2b73b43e271123b4fa2fa2ebc9273040029f594ab79e7a3a8ca"
+  },
+  "phi_lv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_lv.npy",
+   "sha256_of_array": "48326100ccdccf61b5101f3feb1715778e94797cc41559968a3c0f958365bcef"
+  },
+  "phi_rv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/phi_rv.npy",
+   "sha256_of_array": "71043fa2ca2f3b514cc6ae2e13f23a307b3912e78a6b1b24cfac1c3d982a6bd6"
+  },
+  "u_lv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/u_lv.npy",
+   "sha256_of_array": "24c8d4d442179ccb40eabf91400749d957cd247652aafc101252b19233cd6a1a"
+  },
+  "u_rv": {
+   "path": "data/biv/7D98EVAR/v52/fields52/u_rv.npy",
+   "sha256_of_array": "6497288c04a6fa3c5f74dfca2d13916894e595d32adf615ab5a684aed4dc2104"
+  },
+  "w_LV": {
+   "path": "data/biv/7D98EVAR/v52/fields52/w_LV.npy",
+   "sha256_of_array": "bddfd699a4f9364f1cdc6500c93dca61b88a60aa121901c57346bfcea907b939"
+  },
+  "rho": {
+   "path": "data/biv/7D98EVAR/v52/fields52/rho.npy",
+   "sha256_of_array": "6029e5eaf4bccf7f36f6d5e717d9202dbc964f57275de76608a0d96f1f370277"
+  },
+  "sep": {
+   "path": "data/biv/7D98EVAR/v52/fields52/sep.npy",
+   "sha256_of_array": "00d1a75d993f39c2196dcb98e56cfe3007d53bf2f30e8d4c8bfa7115c8d94156"
+  },
+  "d_s": {
+   "path": "data/biv/7D98EVAR/v52/fields52/d_s.npy",
+   "sha256_of_array": "d3697de0c1d522d67cdc875f3128c382e1a502c0171ef093ad8e764c80b982e8"
+  },
+  "w_lvfib": {
+   "path": "data/biv/7D98EVAR/v52/fields52/w_lvfib.npy",
+   "sha256_of_array": "ff934b8c2afa3c063d7d9042af4d75c39eaa6b086b9ad2839e504ac42a29aa3d"
+  },
+  "w_apd": {
+   "path": "data/biv/7D98EVAR/v52/fields52/w_apd.npy",
+   "sha256_of_array": "a7d3dc2cd6cfb45e9e6e5d71ec17b3cdc8fe614f6e26b7448d70b217db9cc804"
+  }
+ },
+ "uvc": {
+  "z_max_abs_change_from_stored": 0.007032045148713362,
+  "v_nodes_changing_side": 0,
+  "phi": "geometric (03_uvc.py), copied from uvc/phi.dat"
+ },
+ "D19b": {
+  "nodes_with_phi_lv_plus_phi_rv_lt_1e-9": 41745,
+  "fill_passes": 2,
+  "filled_per_pass": [
+   41730,
+   15
+  ],
+  "LV_side_nodes_with_|phi_epi_fix + phi_lv + phi_rv - 1| > 1e-6 (share)": 0.0614,
+  "w_apd_range": [
+   0.0,
+   1.0
+  ]
+ },
+ "LV_side": "C2: v5.1 split (d = phi_rv / (phi_lv + phi_rv) > 0.5 on v5.1 phi files, element means) for old elements; appended tag 2 (sleeves) RV, tag 1 (crescents) LV",
+ "wall_s": 98.0
+}

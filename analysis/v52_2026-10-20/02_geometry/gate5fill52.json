@@ -1,0 +1,2104 @@
+{
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "P4a_order_used_by_preview_d23r": {
+  "candidate_id": "per heart and tier, the index in the list of new (z, phi) combinations ordered by z then phi (degrees 0-360)",
+  "tiers": "per region: T2 first, then T4, then T8; the tiers run per region across the hearts (each heart has one queue per region, holding its T2, T4, T8 candidates in that order)",
+  "rotation": "Y5HYEDL4, 6G8DD8S5, 7D98EVAR in turn; a heart whose queue for the region is empty is skipped; within a turn a heart takes its next candidate that passes (candidates failing a rule are consumed and counted)",
+  "region_order": "basal superior, apical superior, basal inferior, apical inferior",
+  "existing_for_4mm": "every position of that heart in the pool (v5.1 free wall, vein course, the projB summit positions), v5.1's summit positions if P10A_EXIST=keep, and every position already added for any region",
+  "2_ring_geodesic": "Dijkstra on the surface's 2-ring graph (each node joined to its neighbours and to their neighbours by straight chords, step0_report34.Surf), so slightly shorter than the 1-ring edge path and close to the true geodesic"
+ },
+ "mitral_annulus_z (report 34 item 2)": 1.0,
+ "rules": {
+  "C6": {
+   "matched_before_fill": {
+    "basal_superior": 5,
+    "apical_superior": 0,
+    "basal_inferior": 4,
+    "apical_inferior": 1
+   },
+   "matched_composition_before_fill": {
+    "basal_superior": {
+     "lv_free_wall": 2,
+     "summit_reanchored": 1,
+     "lv_vein_course": 2
+    },
+    "apical_superior": {},
+    "basal_inferior": {
+     "lv_free_wall": 3,
+     "lv_vein_course": 1
+    },
+    "apical_inferior": {
+     "lv_free_wall": 1
+    }
+   },
+   "matched_after_fill": {
+    "basal_superior": 20,
+    "apical_superior": 20,
+    "basal_inferior": 20,
+    "apical_inferior": 21
+   },
+   "matched_composition_after_fill": {
+    "basal_superior": {
+     "lv_free_wall": 3,
+     "gate5fill": 13,
+     "summit_reanchored": 2,
+     "lv_vein_course": 2
+    },
+    "apical_superior": {
+     "lv_free_wall": 6,
+     "gate5fill": 14
+    },
+    "basal_inferior": {
+     "lv_free_wall": 4,
+     "gate5fill": 15,
+     "lv_vein_course": 1
+    },
+    "apical_inferior": {
+     "lv_free_wall": 8,
+     "gate5fill": 13
+    }
+   },
+   "positions_added_per_region": {
+    "basal_superior": 20,
+    "apical_superior": 29,
+    "basal_inferior": 24,
+    "apical_inferior": 23
+   },
+   "positions_added_per_region_heart_tier": {
+    "basal_superior": {
+     "Y5HYEDL4": {
+      "T2": 3,
+      "T4": 4,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 5,
+      "T4": 2,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 4,
+      "T4": 2,
+      "T8": 0
+     }
+    },
+    "apical_superior": {
+     "Y5HYEDL4": {
+      "T2": 7,
+      "T4": 3,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 4,
+      "T4": 6,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 7,
+      "T4": 2,
+      "T8": 0
+     }
+    },
+    "basal_inferior": {
+     "Y5HYEDL4": {
+      "T2": 5,
+      "T4": 3,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 2,
+      "T4": 6,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 1,
+      "T4": 7,
+      "T8": 0
+     }
+    },
+    "apical_inferior": {
+     "Y5HYEDL4": {
+      "T2": 8,
+      "T4": 0,
+      "T8": 0
+     },
+     "6G8DD8S5": {
+      "T2": 8,
+      "T4": 0,
+      "T8": 0
+     },
+     "7D98EVAR": {
+      "T2": 7,
+      "T4": 0,
+      "T8": 0
+     }
+    }
+   },
+   "total_added_positions": 96,
+   "regions_staying_under_20": [],
+   "dropped": {
+    "nominal_point_off_by_more_than_1.05mm_or_outside": 19,
+    "above_mitral_annulus": 0
+   },
+   "skipped": {
+    "8.7": 0,
+    "4mm": 33
+   },
+   "total_added_beats": 192,
+   "candidate_log_in_order": [
+    {
+     "region_turn": "basal_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 35,
+     "z": 0.625,
+     "phi_deg": 120.0,
+     "surface_node": 57743,
+     "outcome": "added (order 1)",
+     "wall_mm": 9.2,
+     "nodes": {
+      "d90": 298644,
+      "d10": 348057
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 0,
+     "z": 0.125,
+     "phi_deg": 60.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 6,
+     "z": 0.125,
+     "phi_deg": 240.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 26,
+     "z": 0.625,
+     "phi_deg": 90.0,
+     "surface_node": 353438,
+     "outcome": "added (order 2)",
+     "wall_mm": 9.8,
+     "nodes": {
+      "d90": 21974,
+      "d10": 337767
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 36,
+     "z": 0.625,
+     "phi_deg": 150.0,
+     "surface_node": 207661,
+     "outcome": "added (order 3)",
+     "wall_mm": 11.4,
+     "nodes": {
+      "d90": 57067,
+      "d10": 246672
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 52,
+     "z": 0.875,
+     "phi_deg": 120.0,
+     "surface_node": 50564,
+     "outcome": "added (order 4)",
+     "wall_mm": 9.8,
+     "nodes": {
+      "d90": 42361,
+      "d10": 367838
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 27,
+     "z": 0.625,
+     "phi_deg": 120.0,
+     "surface_node": 300324,
+     "outcome": "added (order 5)",
+     "wall_mm": 15.0,
+     "nodes": {
+      "d90": 334170,
+      "d10": 301844
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 42,
+     "z": 0.625,
+     "phi_deg": 330.0,
+     "surface_node": 207661,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 44,
+     "z": 0.75,
+     "phi_deg": 90.0,
+     "surface_node": 26349,
+     "outcome": "added (order 6)",
+     "wall_mm": 8.8,
+     "nodes": {
+      "d90": 10706,
+      "d10": 148103
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 54,
+     "z": 0.875,
+     "phi_deg": 180.0,
+     "surface_node": 373138,
+     "outcome": "added (order 7)",
+     "wall_mm": 9.6,
+     "nodes": {
+      "d90": 61435,
+      "d10": 127360
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 32,
+     "z": 0.625,
+     "phi_deg": 330.0,
+     "surface_node": 55426,
+     "outcome": "added (order 8)",
+     "wall_mm": 16.2,
+     "nodes": {
+      "d90": 323892,
+      "d10": 65598
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 45,
+     "z": 0.75,
+     "phi_deg": 150.0,
+     "surface_node": 23066,
+     "outcome": "added (order 9)",
+     "wall_mm": 12.4,
+     "nodes": {
+      "d90": 294828,
+      "d10": 99867
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 122,
+     "z": 0.5625,
+     "phi_deg": 75.0,
+     "surface_node": 311022,
+     "outcome": "added (order 10)",
+     "wall_mm": 9.4,
+     "nodes": {
+      "d90": 353560,
+      "d10": 153200
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 39,
+     "z": 0.875,
+     "phi_deg": 90.0,
+     "surface_node": 14634,
+     "outcome": "added (order 11)",
+     "wall_mm": 13.4,
+     "nodes": {
+      "d90": 29657,
+      "d10": 178254
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 49,
+     "z": 0.75,
+     "phi_deg": 330.0,
+     "surface_node": 23066,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 52,
+     "z": 0.875,
+     "phi_deg": 120.0,
+     "surface_node": 10543,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 53,
+     "z": 0.875,
+     "phi_deg": 150.0,
+     "surface_node": 280362,
+     "outcome": "added (order 12)",
+     "wall_mm": 7.4,
+     "nodes": {
+      "d90": 9476,
+      "d10": 277498
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 123,
+     "z": 0.5625,
+     "phi_deg": 90.0,
+     "surface_node": 51064,
+     "outcome": "added (order 13)",
+     "wall_mm": 9.2,
+     "nodes": {
+      "d90": 61338,
+      "d10": 332021
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 41,
+     "z": 0.875,
+     "phi_deg": 150.0,
+     "surface_node": 37913,
+     "outcome": "added (order 14)",
+     "wall_mm": 14.2,
+     "nodes": {
+      "d90": 350638,
+      "d10": 272388
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 59,
+     "z": 0.875,
+     "phi_deg": 330.0,
+     "surface_node": 280362,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 125,
+     "z": 0.5625,
+     "phi_deg": 120.0,
+     "surface_node": 173766,
+     "outcome": "added (order 15)",
+     "wall_mm": 10.6,
+     "nodes": {
+      "d90": 4215,
+      "d10": 195902
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 125,
+     "z": 0.5625,
+     "phi_deg": 120.0,
+     "surface_node": 15478,
+     "outcome": "added (order 16)",
+     "wall_mm": 8.6,
+     "nodes": {
+      "d90": 58377,
+      "d10": 179066
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 45,
+     "z": 0.875,
+     "phi_deg": 330.0,
+     "surface_node": 37913,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 0,
+     "z": 0.0625,
+     "phi_deg": 15.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 1,
+     "z": 0.0625,
+     "phi_deg": 60.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 2,
+     "z": 0.0625,
+     "phi_deg": 75.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 3,
+     "z": 0.0625,
+     "phi_deg": 90.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 4,
+     "z": 0.0625,
+     "phi_deg": 105.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 5,
+     "z": 0.0625,
+     "phi_deg": 120.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 6,
+     "z": 0.0625,
+     "phi_deg": 135.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 7,
+     "z": 0.0625,
+     "phi_deg": 150.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 8,
+     "z": 0.0625,
+     "phi_deg": 165.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 9,
+     "z": 0.0625,
+     "phi_deg": 180.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 10,
+     "z": 0.0625,
+     "phi_deg": 195.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 11,
+     "z": 0.0625,
+     "phi_deg": 210.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 12,
+     "z": 0.0625,
+     "phi_deg": 225.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 13,
+     "z": 0.0625,
+     "phi_deg": 240.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 14,
+     "z": 0.0625,
+     "phi_deg": 285.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 15,
+     "z": 0.0625,
+     "phi_deg": 330.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 17,
+     "z": 0.125,
+     "phi_deg": 75.0,
+     "outcome": "dropped: no LV-endocardial triangle holds the nominal point"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 99,
+     "z": 0.5625,
+     "phi_deg": 90.0,
+     "surface_node": 25851,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 102,
+     "z": 0.5625,
+     "phi_deg": 135.0,
+     "surface_node": 25388,
+     "outcome": "added (order 17)",
+     "wall_mm": 19.4,
+     "nodes": {
+      "d90": 176830,
+      "d10": 276622
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 143,
+     "z": 0.625,
+     "phi_deg": 135.0,
+     "surface_node": 37234,
+     "outcome": "added (order 18)",
+     "wall_mm": 11.0,
+     "nodes": {
+      "d90": 270434,
+      "d10": 106380
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 143,
+     "z": 0.625,
+     "phi_deg": 135.0,
+     "surface_node": 2321,
+     "outcome": "added (order 19)",
+     "wall_mm": 9.6,
+     "nodes": {
+      "d90": 28895,
+      "d10": 189025
+     }
+    },
+    {
+     "region_turn": "basal_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 103,
+     "z": 0.5625,
+     "phi_deg": 150.0,
+     "surface_node": 275664,
+     "outcome": "added (order 20)",
+     "wall_mm": 14.6,
+     "nodes": {
+      "d90": 111005,
+      "d10": 237895
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 1,
+     "z": 0.125,
+     "phi_deg": 90.0,
+     "surface_node": 42213,
+     "outcome": "added (order 21)",
+     "wall_mm": 9.0,
+     "nodes": {
+      "d90": 3225,
+      "d10": 159680
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 2,
+     "z": 0.125,
+     "phi_deg": 120.0,
+     "surface_node": 53915,
+     "outcome": "added (order 22)",
+     "wall_mm": 12.2,
+     "nodes": {
+      "d90": 346157,
+      "d10": 162870
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 2,
+     "z": 0.125,
+     "phi_deg": 120.0,
+     "surface_node": 40191,
+     "outcome": "added (order 23)",
+     "wall_mm": 9.4,
+     "nodes": {
+      "d90": 27371,
+      "d10": 242054
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 5,
+     "z": 0.125,
+     "phi_deg": 195.0,
+     "surface_node": 23666,
+     "outcome": "added (order 24)",
+     "wall_mm": 8.8,
+     "nodes": {
+      "d90": 9341,
+      "d10": 37638
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 3,
+     "z": 0.125,
+     "phi_deg": 150.0,
+     "surface_node": 29406,
+     "outcome": "added (order 25)",
+     "wall_mm": 9.8,
+     "nodes": {
+      "d90": 187782,
+      "d10": 298662
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 4,
+     "z": 0.125,
+     "phi_deg": 180.0,
+     "surface_node": 223666,
+     "outcome": "added (order 26)",
+     "wall_mm": 6.6,
+     "nodes": {
+      "d90": 183897,
+      "d10": 162376
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 10,
+     "z": 0.25,
+     "phi_deg": 90.0,
+     "surface_node": 296749,
+     "outcome": "added (order 27)",
+     "wall_mm": 8.6,
+     "nodes": {
+      "d90": 27909,
+      "d10": 368797
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 7,
+     "z": 0.125,
+     "phi_deg": 330.0,
+     "surface_node": 29406,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 9,
+     "z": 0.25,
+     "phi_deg": 150.0,
+     "surface_node": 79360,
+     "outcome": "added (order 28)",
+     "wall_mm": 11.2,
+     "nodes": {
+      "d90": 53379,
+      "d10": 147961
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 10,
+     "z": 0.25,
+     "phi_deg": 90.0,
+     "surface_node": 50256,
+     "outcome": "added (order 29)",
+     "wall_mm": 9.4,
+     "nodes": {
+      "d90": 14853,
+      "d10": 24609
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 16,
+     "z": 0.375,
+     "phi_deg": 60.0,
+     "surface_node": 3503,
+     "outcome": "added (order 30)",
+     "wall_mm": 10.6,
+     "nodes": {
+      "d90": 276650,
+      "d10": 10689
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 11,
+     "z": 0.25,
+     "phi_deg": 330.0,
+     "surface_node": 79360,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 21,
+     "z": 0.5,
+     "phi_deg": 90.0,
+     "surface_node": 55393,
+     "outcome": "added (order 31)",
+     "wall_mm": 9.2,
+     "nodes": {
+      "d90": 33045,
+      "d10": 100707
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 11,
+     "z": 0.25,
+     "phi_deg": 150.0,
+     "surface_node": 170134,
+     "outcome": "added (order 32)",
+     "wall_mm": 8.4,
+     "nodes": {
+      "d90": 52235,
+      "d10": 176742
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 17,
+     "z": 0.375,
+     "phi_deg": 90.0,
+     "surface_node": 36733,
+     "outcome": "added (order 33)",
+     "wall_mm": 8.8,
+     "nodes": {
+      "d90": 33370,
+      "d10": 230915
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 18,
+     "z": 0.125,
+     "phi_deg": 105.0,
+     "surface_node": 28837,
+     "outcome": "added (order 34)",
+     "wall_mm": 11.4,
+     "nodes": {
+      "d90": 275813,
+      "d10": 234442
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 17,
+     "z": 0.375,
+     "phi_deg": 90.0,
+     "surface_node": 10189,
+     "outcome": "added (order 35)",
+     "wall_mm": 8.8,
+     "nodes": {
+      "d90": 30765,
+      "d10": 314294
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 18,
+     "z": 0.375,
+     "phi_deg": 120.0,
+     "surface_node": 327667,
+     "outcome": "added (order 36)",
+     "wall_mm": 8.6,
+     "nodes": {
+      "d90": 37020,
+      "d10": 218513
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 23,
+     "z": 0.125,
+     "phi_deg": 285.0,
+     "surface_node": 28837,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 26,
+     "z": 0.1875,
+     "phi_deg": 75.0,
+     "surface_node": 42486,
+     "outcome": "added (order 37)",
+     "wall_mm": 12.6,
+     "nodes": {
+      "d90": 40246,
+      "d10": 146065
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 18,
+     "z": 0.375,
+     "phi_deg": 120.0,
+     "surface_node": 57232,
+     "outcome": "added (order 38)",
+     "wall_mm": 9.4,
+     "nodes": {
+      "d90": 331050,
+      "d10": 323820
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 24,
+     "z": 0.375,
+     "phi_deg": 240.0,
+     "surface_node": 3503,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 27,
+     "z": 0.5,
+     "phi_deg": 90.0,
+     "surface_node": 43400,
+     "outcome": "added (order 39)",
+     "wall_mm": 8.0,
+     "nodes": {
+      "d90": 24377,
+      "d10": 288337
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 27,
+     "z": 0.1875,
+     "phi_deg": 90.0,
+     "surface_node": 23139,
+     "outcome": "added (order 40)",
+     "wall_mm": 11.2,
+     "nodes": {
+      "d90": 185997,
+      "d10": 159211
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 27,
+     "z": 0.5,
+     "phi_deg": 90.0,
+     "surface_node": 327828,
+     "outcome": "added (order 41)",
+     "wall_mm": 8.4,
+     "nodes": {
+      "d90": 331228,
+      "d10": 168646
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 4,
+     "z": 0.0625,
+     "phi_deg": 105.0,
+     "surface_node": 553,
+     "outcome": "added (order 42)",
+     "wall_mm": 8.6,
+     "nodes": {
+      "d90": 45167,
+      "d10": 360511
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 32,
+     "z": 0.1875,
+     "phi_deg": 165.0,
+     "surface_node": 41662,
+     "outcome": "added (order 43)",
+     "wall_mm": 9.8,
+     "nodes": {
+      "d90": 48754,
+      "d10": 169182
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 0,
+     "z": 0.0625,
+     "phi_deg": 15.0,
+     "surface_node": 15720,
+     "outcome": "added (order 44)",
+     "wall_mm": 11.8,
+     "nodes": {
+      "d90": 7916,
+      "d10": 124251
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 10,
+     "z": 0.0625,
+     "phi_deg": 187.5,
+     "surface_node": 247484,
+     "outcome": "added (order 45)",
+     "wall_mm": 8.0,
+     "nodes": {
+      "d90": 61327,
+      "d10": 141420
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 50,
+     "z": 0.3125,
+     "phi_deg": 75.0,
+     "surface_node": 33195,
+     "outcome": "added (order 46)",
+     "wall_mm": 9.0,
+     "nodes": {
+      "d90": 49943,
+      "d10": 255616
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 1,
+     "z": 0.0625,
+     "phi_deg": 60.0,
+     "surface_node": 43974,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 2,
+     "z": 0.0625,
+     "phi_deg": 75.0,
+     "surface_node": 43974,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 3,
+     "z": 0.0625,
+     "phi_deg": 90.0,
+     "surface_node": 30997,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 4,
+     "z": 0.0625,
+     "phi_deg": 105.0,
+     "surface_node": 15720,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 8,
+     "z": 0.0625,
+     "phi_deg": 165.0,
+     "surface_node": 43974,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 9,
+     "z": 0.0625,
+     "phi_deg": 180.0,
+     "surface_node": 43974,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 10,
+     "z": 0.0625,
+     "phi_deg": 191.25,
+     "surface_node": 43974,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 11,
+     "z": 0.0625,
+     "phi_deg": 202.5,
+     "surface_node": 43974,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 12,
+     "z": 0.0625,
+     "phi_deg": 213.75,
+     "surface_node": 15720,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 13,
+     "z": 0.0625,
+     "phi_deg": 225.0,
+     "surface_node": 15720,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 14,
+     "z": 0.0625,
+     "phi_deg": 228.75,
+     "surface_node": 15720,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 15,
+     "z": 0.0625,
+     "phi_deg": 232.5,
+     "surface_node": 15720,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 17,
+     "z": 0.0625,
+     "phi_deg": 240.0,
+     "surface_node": 15720,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 18,
+     "z": 0.0625,
+     "phi_deg": 285.0,
+     "surface_node": 137858,
+     "outcome": "added (order 47)",
+     "wall_mm": 12.4,
+     "nodes": {
+      "d90": 203779,
+      "d10": 243083
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 13,
+     "z": 0.0625,
+     "phi_deg": 210.0,
+     "surface_node": 797,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 14,
+     "z": 0.0625,
+     "phi_deg": 217.5,
+     "surface_node": 59158,
+     "outcome": "added (order 48)",
+     "wall_mm": 8.4,
+     "nodes": {
+      "d90": 349168,
+      "d10": 102569
+     }
+    },
+    {
+     "region_turn": "apical_superior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 51,
+     "z": 0.3125,
+     "phi_deg": 90.0,
+     "surface_node": 258451,
+     "outcome": "added (order 49)",
+     "wall_mm": 9.0,
+     "nodes": {
+      "d90": 14676,
+      "d10": 279327
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 38,
+     "z": 0.625,
+     "phi_deg": 195.0,
+     "surface_node": 50176,
+     "outcome": "added (order 50)",
+     "wall_mm": 11.0,
+     "nodes": {
+      "d90": 8787,
+      "d10": 319489
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 29,
+     "z": 0.625,
+     "phi_deg": 180.0,
+     "surface_node": 9532,
+     "outcome": "added (order 51)",
+     "wall_mm": 13.6,
+     "nodes": {
+      "d90": 13106,
+      "d10": 309093
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 55,
+     "z": 0.875,
+     "phi_deg": 202.5,
+     "surface_node": 4321,
+     "outcome": "added (order 52)",
+     "wall_mm": 8.6,
+     "nodes": {
+      "d90": 7213,
+      "d10": 17753
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 46,
+     "z": 0.75,
+     "phi_deg": 195.0,
+     "surface_node": 32884,
+     "outcome": "added (order 53)",
+     "wall_mm": 11.2,
+     "nodes": {
+      "d90": 10519,
+      "d10": 292770
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 43,
+     "z": 0.875,
+     "phi_deg": 210.0,
+     "surface_node": 963,
+     "outcome": "added (order 54)",
+     "wall_mm": 12.8,
+     "nodes": {
+      "d90": 46005,
+      "d10": 161741
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 128,
+     "z": 0.5625,
+     "phi_deg": 165.0,
+     "surface_node": 116990,
+     "outcome": "added (order 55)",
+     "wall_mm": 10.6,
+     "nodes": {
+      "d90": 219702,
+      "d10": 111044
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 49,
+     "z": 0.75,
+     "phi_deg": 330.0,
+     "surface_node": 18154,
+     "outcome": "added (order 56)",
+     "wall_mm": 12.0,
+     "nodes": {
+      "d90": 53347,
+      "d10": 161760
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 96,
+     "z": 0.5625,
+     "phi_deg": 15.0,
+     "surface_node": 56494,
+     "outcome": "added (order 57)",
+     "wall_mm": 13.0,
+     "nodes": {
+      "d90": 276243,
+      "d10": 89529
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 129,
+     "z": 0.5625,
+     "phi_deg": 180.0,
+     "surface_node": 25453,
+     "outcome": "added (order 58)",
+     "wall_mm": 12.6,
+     "nodes": {
+      "d90": 21017,
+      "d10": 286466
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 55,
+     "z": 0.875,
+     "phi_deg": 195.0,
+     "surface_node": 246715,
+     "outcome": "added (order 59)",
+     "wall_mm": 9.0,
+     "nodes": {
+      "d90": 348334,
+      "d10": 19445
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 106,
+     "z": 0.5625,
+     "phi_deg": 195.0,
+     "surface_node": 56494,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 108,
+     "z": 0.5625,
+     "phi_deg": 225.0,
+     "surface_node": 10782,
+     "outcome": "added (order 60)",
+     "wall_mm": 13.6,
+     "nodes": {
+      "d90": 178221,
+      "d10": 295411
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 132,
+     "z": 0.5625,
+     "phi_deg": 213.75,
+     "surface_node": 34992,
+     "outcome": "added (order 61)",
+     "wall_mm": 12.0,
+     "nodes": {
+      "d90": 332421,
+      "d10": 91156
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 56,
+     "z": 0.875,
+     "phi_deg": 210.0,
+     "surface_node": 16084,
+     "outcome": "added (order 62)",
+     "wall_mm": 9.0,
+     "nodes": {
+      "d90": 223813,
+      "d10": 314322
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 112,
+     "z": 0.625,
+     "phi_deg": 15.0,
+     "surface_node": 44229,
+     "outcome": "added (order 63)",
+     "wall_mm": 14.6,
+     "nodes": {
+      "d90": 294532,
+      "d10": 198962
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 133,
+     "z": 0.5625,
+     "phi_deg": 225.0,
+     "surface_node": 59157,
+     "outcome": "added (order 64)",
+     "wall_mm": 12.2,
+     "nodes": {
+      "d90": 238503,
+      "d10": 306200
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 129,
+     "z": 0.5625,
+     "phi_deg": 180.0,
+     "surface_node": 1958,
+     "outcome": "added (order 65)",
+     "wall_mm": 11.8,
+     "nodes": {
+      "d90": 184881,
+      "d10": 285437
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 117,
+     "z": 0.625,
+     "phi_deg": 195.0,
+     "surface_node": 6250,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 118,
+     "z": 0.625,
+     "phi_deg": 225.0,
+     "surface_node": 13784,
+     "outcome": "added (order 66)",
+     "wall_mm": 13.2,
+     "nodes": {
+      "d90": 166376,
+      "d10": 91597
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 140,
+     "z": 0.625,
+     "phi_deg": 15.0,
+     "surface_node": 34972,
+     "outcome": "added (order 67)",
+     "wall_mm": 12.2,
+     "nodes": {
+      "d90": 108458,
+      "d10": 253146
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 130,
+     "z": 0.5625,
+     "phi_deg": 187.5,
+     "surface_node": 263206,
+     "outcome": "added (order 68)",
+     "wall_mm": 11.8,
+     "nodes": {
+      "d90": 69332,
+      "d10": 275052
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 127,
+     "z": 0.6875,
+     "phi_deg": 150.0,
+     "surface_node": 200056,
+     "outcome": "added (order 69)",
+     "wall_mm": 17.2,
+     "nodes": {
+      "d90": 335248,
+      "d10": 115758
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 144,
+     "z": 0.625,
+     "phi_deg": 165.0,
+     "surface_node": 272899,
+     "outcome": "added (order 70)",
+     "wall_mm": 10.4,
+     "nodes": {
+      "d90": 45277,
+      "d10": 207561
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T4",
+     "cand": 132,
+     "z": 0.5625,
+     "phi_deg": 202.5,
+     "surface_node": 63778,
+     "outcome": "added (order 71)",
+     "wall_mm": 11.8,
+     "nodes": {
+      "d90": 321386,
+      "d10": 367685
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T4",
+     "cand": 128,
+     "z": 0.6875,
+     "phi_deg": 165.0,
+     "surface_node": 44991,
+     "outcome": "added (order 72)",
+     "wall_mm": 15.4,
+     "nodes": {
+      "d90": 7628,
+      "d10": 237529
+     }
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 145,
+     "z": 0.625,
+     "phi_deg": 191.25,
+     "surface_node": 24236,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "basal_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T4",
+     "cand": 161,
+     "z": 0.6875,
+     "phi_deg": 202.5,
+     "surface_node": 321939,
+     "outcome": "added (order 73)",
+     "wall_mm": 11.4,
+     "nodes": {
+      "d90": 2010,
+      "d10": 258966
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 0,
+     "z": 0.125,
+     "phi_deg": 60.0,
+     "surface_node": 47673,
+     "outcome": "added (order 74)",
+     "wall_mm": 6.0,
+     "nodes": {
+      "d90": 58364,
+      "d10": 340649
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 4,
+     "z": 0.125,
+     "phi_deg": 180.0,
+     "surface_node": 278196,
+     "outcome": "added (order 75)",
+     "wall_mm": 7.2,
+     "nodes": {
+      "d90": 28412,
+      "d10": 139324
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 0,
+     "z": 0.125,
+     "phi_deg": 60.0,
+     "surface_node": 185906,
+     "outcome": "added (order 76)",
+     "wall_mm": 5.6,
+     "nodes": {
+      "d90": 11540,
+      "d10": 185906
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 4,
+     "z": 0.125,
+     "phi_deg": 180.0,
+     "surface_node": 11538,
+     "outcome": "added (order 77)",
+     "wall_mm": 8.6,
+     "nodes": {
+      "d90": 47596,
+      "d10": 325216
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 5,
+     "z": 0.125,
+     "phi_deg": 210.0,
+     "surface_node": 44332,
+     "outcome": "added (order 78)",
+     "wall_mm": 9.8,
+     "nodes": {
+      "d90": 288870,
+      "d10": 370751
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 1,
+     "z": 0.125,
+     "phi_deg": 90.0,
+     "surface_node": 210527,
+     "outcome": "added (order 79)",
+     "wall_mm": 9.0,
+     "nodes": {
+      "d90": 16992,
+      "d10": 157691
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 6,
+     "z": 0.125,
+     "phi_deg": 210.0,
+     "surface_node": 54984,
+     "outcome": "added (order 80)",
+     "wall_mm": 7.4,
+     "nodes": {
+      "d90": 60630,
+      "d10": 210568
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 10,
+     "z": 0.25,
+     "phi_deg": 210.0,
+     "surface_node": 210817,
+     "outcome": "added (order 81)",
+     "wall_mm": 10.2,
+     "nodes": {
+      "d90": 10807,
+      "d10": 365614
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 5,
+     "z": 0.125,
+     "phi_deg": 202.5,
+     "surface_node": 301755,
+     "outcome": "added (order 82)",
+     "wall_mm": 7.2,
+     "nodes": {
+      "d90": 324281,
+      "d10": 202221
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 7,
+     "z": 0.125,
+     "phi_deg": 225.0,
+     "surface_node": 5108,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 8,
+     "z": 0.125,
+     "phi_deg": 240.0,
+     "surface_node": 61543,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 12,
+     "z": 0.25,
+     "phi_deg": 195.0,
+     "surface_node": 51368,
+     "outcome": "added (order 83)",
+     "wall_mm": 10.4,
+     "nodes": {
+      "d90": 55622,
+      "d10": 114078
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 15,
+     "z": 0.375,
+     "phi_deg": 150.0,
+     "surface_node": 6996,
+     "outcome": "added (order 84)",
+     "wall_mm": 13.2,
+     "nodes": {
+      "d90": 161431,
+      "d10": 223318
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 6,
+     "z": 0.125,
+     "phi_deg": 225.0,
+     "surface_node": 48409,
+     "outcome": "added (order 85)",
+     "wall_mm": 6.0,
+     "nodes": {
+      "d90": 42764,
+      "d10": 314626
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 13,
+     "z": 0.25,
+     "phi_deg": 210.0,
+     "surface_node": 802,
+     "outcome": "added (order 86)",
+     "wall_mm": 9.4,
+     "nodes": {
+      "d90": 304940,
+      "d10": 136461
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 16,
+     "z": 0.375,
+     "phi_deg": 180.0,
+     "surface_node": 145299,
+     "outcome": "added (order 87)",
+     "wall_mm": 13.4,
+     "nodes": {
+      "d90": 10451,
+      "d10": 84915
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 7,
+     "z": 0.125,
+     "phi_deg": 232.5,
+     "surface_node": 5185,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 8,
+     "z": 0.125,
+     "phi_deg": 240.0,
+     "surface_node": 185906,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 20,
+     "z": 0.375,
+     "phi_deg": 180.0,
+     "surface_node": 51352,
+     "outcome": "added (order 88)",
+     "wall_mm": 13.6,
+     "nodes": {
+      "d90": 292011,
+      "d10": 251451
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 14,
+     "z": 0.25,
+     "phi_deg": 225.0,
+     "surface_node": 2643,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 20,
+     "z": 0.375,
+     "phi_deg": 180.0,
+     "surface_node": 43447,
+     "outcome": "added (order 89)",
+     "wall_mm": 12.2,
+     "nodes": {
+      "d90": 47925,
+      "d10": 145283
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 17,
+     "z": 0.375,
+     "phi_deg": 210.0,
+     "surface_node": 33371,
+     "outcome": "added (order 90)",
+     "wall_mm": 10.8,
+     "nodes": {
+      "d90": 23854,
+      "d10": 196556
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 25,
+     "z": 0.375,
+     "phi_deg": 330.0,
+     "surface_node": 52011,
+     "outcome": "added (order 91)",
+     "wall_mm": 10.0,
+     "nodes": {
+      "d90": 26675,
+      "d10": 212397
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 21,
+     "z": 0.375,
+     "phi_deg": 195.0,
+     "surface_node": 349202,
+     "outcome": "added (order 92)",
+     "wall_mm": 11.2,
+     "nodes": {
+      "d90": 251,
+      "d10": 115963
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 19,
+     "z": 0.375,
+     "phi_deg": 330.0,
+     "surface_node": 6996,
+     "outcome": "used up: within 4 mm of an existing position"
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 22,
+     "z": 0.5,
+     "phi_deg": 150.0,
+     "surface_node": 6801,
+     "outcome": "added (order 93)",
+     "wall_mm": 13.6,
+     "nodes": {
+      "d90": 346589,
+      "d10": 262302
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "7D98EVAR",
+     "tier": "T2",
+     "cand": 28,
+     "z": 0.5,
+     "phi_deg": 150.0,
+     "surface_node": 31204,
+     "outcome": "added (order 94)",
+     "wall_mm": 10.8,
+     "nodes": {
+      "d90": 33975,
+      "d10": 186495
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "Y5HYEDL4",
+     "tier": "T2",
+     "cand": 28,
+     "z": 0.5,
+     "phi_deg": 150.0,
+     "surface_node": 27129,
+     "outcome": "added (order 95)",
+     "wall_mm": 9.8,
+     "nodes": {
+      "d90": 325474,
+      "d10": 42261
+     }
+    },
+    {
+     "region_turn": "apical_inferior",
+     "heart": "6G8DD8S5",
+     "tier": "T2",
+     "cand": 23,
+     "z": 0.5,
+     "phi_deg": 210.0,
+     "surface_node": 3272,
+     "outcome": "added (order 96)",
+     "wall_mm": 11.8,
+     "nodes": {
+      "d90": 130350,
+      "d10": 234418
+     }
+    }
+   ],
+   "realised_ledger_total": {
+    "base_with_D24 (record D24)": 1600,
+    "minus_the_old_fill_row": 12,
+    "fill_beats": 192,
+    "total": 1780,
+    "before_the_RE+-only_CL600_subset": 1753
+   }
+  }
+ },
+ "pool_reading": "lock (item 5): v5.1 lv_free_wall + lv_vein_course + D22 summit; v5.1 lv_summit not pooled",
+ "existing_for_4mm_v51_summit": "keep",
+ "pairing_order": "record"
+}
