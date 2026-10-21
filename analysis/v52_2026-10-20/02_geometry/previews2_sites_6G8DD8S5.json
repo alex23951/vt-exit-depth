@@ -1,0 +1,104 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "P3_groove_sector": {
+  "B_full_node": 380125,
+  "B_projection_mm (Euclidean, nearest candidate-quarter node to 8.3 step 2 point)": 2.69,
+  "SP_full_node": 38048,
+  "R_geodesic_B_SP_mm": 17.6,
+  "B_to_groove_mm": 2.46,
+  "disc_tag1_nodes": 540,
+  "components_after_cutting_margin_and_groove": [
+   {
+    "nodes": 284,
+    "angular_extent_deg": 87.2
+   },
+   {
+    "nodes": 193,
+    "angular_extent_deg": 156.4
+   }
+  ],
+  "builds": true,
+  "apex_angle_deg (angular extent at B; Kuniewicz 85.46 +- 15.94, range 48-125)": 87.2,
+  "area_mm2 (Kuniewicz 287.38 +- 144.95)": 176.5,
+  "superior_share (Kuniewicz 0.545)": 0.592,
+  "positions": {
+   "superior": {
+    "surface_node_full": 380094,
+    "surface_node": 256422,
+    "on_tag1": true,
+    "geodesic_from_B_mm": 6.66,
+    "from_projB_disc_position_mm": 2.74,
+    "from_v51_position_mm": 12.43
+   },
+   "inferior_lateral": {
+    "surface_node_full": 522533,
+    "surface_node": 354732,
+    "on_tag1": true,
+    "geodesic_from_B_mm": 15.91,
+    "from_projB_disc_position_mm": 1.58,
+    "from_v51_position_mm": 10.23
+   }
+  },
+  "tip_B_mm": [
+   65.072,
+   64.341,
+   69.371
+  ],
+  "LCC_to_vein_arc_mm (Yamada 14.3 +- 3.5)": {
+   "cusp52_lcc_mid": 6.1,
+   "cusp52_lcc_q": 2.92
+  },
+  "projB_disc": {
+   "angular_extent_at_B_deg": 268.1,
+   "LCC_to_vein_arc_mm": {
+    "cusp52_lcc_mid": 6.6,
+    "cusp52_lcc_q": 3.15
+   }
+  },
+  "tag27": {
+   "what": "AV_plane (tags_lvrv.json): the atrioventricular-plane layer of the four-chamber mesh between the atrial and ventricular myocardium",
+   "why_its_tag1_edge": "the LV (tag 1) never touches the LA (tag 3) on these meshes; its outer surface meets tag 27 along the basal epicardial edge, which is where the left AV groove (and the LCx) lies, the edge v5.1 used for its GCV proxy",
+   "tag1_tag27_edge_to_tag3_tag27_edge_mm (median, min, max)": [
+    0.93,
+    0.55,
+    13.45
+   ]
+  }
+ },
+ "P5_focus": {
+  "anchor_v51_rvot_septal_z_d10_node": 17307,
+  "focus_node": 251656,
+  "candidate_nodes": 2712,
+  "distance_from_anchor_mm": 8.17,
+  "dist_LV_RV_epi_mm": [
+   2.11,
+   1.81,
+   3.37
+  ],
+  "nearest_RV_endo_node_below_PV_mid_plane_mm (Acosta 9.2 +- 7)": 17.47,
+  "distance_to_P3_SP_mm": 21.03
+ },
+ "P6_RV_network_heights": {
+  "heights_mm (0 % landmark, PV mid-plane ring, TA level, D14 boundary)": [
+   -11.765,
+   0.075,
+   -15.719,
+   -6.201
+  ],
+  "highest_distal_rv_node": {
+   "height_mm": 0.84,
+   "pct_of_posterior_span (axial)": 106.5,
+   "above_TA_level_mm": 16.56
+  },
+  "highest_RV_PMJ": {
+   "height_mm": 0.84,
+   "pct_of_posterior_span (axial)": 106.5,
+   "above_TA_level_mm": 16.56
+  },
+  "RV_PMJs": 1209,
+  "RV_PMJs_above_the_0pct_landmark": 119,
+  "RV_PMJs_above_the_D14_boundary": 47
+ },
+ "wall_s": 14.8
+}

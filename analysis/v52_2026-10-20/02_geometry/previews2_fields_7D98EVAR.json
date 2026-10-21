@@ -1,0 +1,581 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "precedence": "02_laplace.py solve(): zero = setdiff(zero, one), so a node in both Dirichlet sets takes 1",
+ "solver": "scipy CG, Jacobi preconditioner, unpreconditioned relative residual ||r||2 / ||b||2",
+ "fields": {
+  "zeta": {
+   "relres_1e-10_solve": 9.776694974556293e-11,
+   "relres_1e-12_solve": 9.524730623292957e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 4.426405908475317e-09,
+   "max_nodal_change_stored_vs_converged": 8.899998911182649e-07,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    0,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.0,
+    1e-06
+   ]
+  },
+  "basal": {
+   "relres_1e-10_solve": 9.93717817780794e-11,
+   "relres_1e-12_solve": 9.781393967232207e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 3.0535627359995487e-09,
+   "max_nodal_change_stored_vs_converged": 5.306354744494257e-07,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    0,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.0,
+    0.0
+   ]
+  },
+  "ot": {
+   "relres_1e-10_solve": 9.934795209743273e-11,
+   "relres_1e-12_solve": 9.734922742249094e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 3.1125680921562093e-09,
+   "max_nodal_change_stored_vs_converged": 5.318557598776863e-07,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    0,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.0,
+    0.0
+   ]
+  },
+  "w": {
+   "relres_1e-10_solve": 9.993077038703245e-11,
+   "relres_1e-12_solve": 9.594410558134863e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 3.060918296604598e-09,
+   "max_nodal_change_stored_vs_converged": 3.36284,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    53,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    2.36284,
+    1e-06
+   ]
+  },
+  "phi_epi": {
+   "relres_1e-10_solve": 9.88430512644523e-11,
+   "relres_1e-12_solve": 8.182000427694559e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 9.260714972647577e-10,
+   "max_nodal_change_stored_vs_converged": 1.01061,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    1,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.01061,
+    0.000117
+   ]
+  },
+  "phi_lv": {
+   "relres_1e-10_solve": 9.30858502875582e-11,
+   "relres_1e-12_solve": 9.816439611800079e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 1.1499751151333726e-09,
+   "max_nodal_change_stored_vs_converged": 0.300686,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    3,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.27332,
+    0.0
+   ]
+  },
+  "phi_rv": {
+   "relres_1e-10_solve": 9.173568265121323e-11,
+   "relres_1e-12_solve": 8.791533761717819e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 4.590265390014281e-09,
+   "max_nodal_change_stored_vs_converged": 1.82813,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    2,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.82813,
+    0.0
+   ]
+  },
+  "v": {
+   "relres_1e-10_solve": 9.532477942209552e-11,
+   "relres_1e-12_solve": 9.547906020734063e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 2.9770652609784065e-09,
+   "max_nodal_change_stored_vs_converged": 0.477205,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    1,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.4772,
+    0.0
+   ]
+  },
+  "ot_rv": {
+   "relres_1e-10_solve": 9.747428343577979e-11,
+   "relres_1e-12_solve": 9.685169805561797e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 1.7167645083304706e-09,
+   "max_nodal_change_stored_vs_converged": 2.9901776363860932e-06,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    0,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.00026,
+    0.000257
+   ]
+  },
+  "ot_lv": {
+   "relres_1e-10_solve": 9.756688331216408e-11,
+   "relres_1e-12_solve": 9.957283593043253e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 2.09345885071599e-09,
+   "max_nodal_change_stored_vs_converged": 5.303748913387807e-07,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    0,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.0,
+    0.0
+   ]
+  },
+  "phi_epi_fix": {
+   "relres_1e-10_solve": 9.632571893932658e-11,
+   "relres_1e-12_solve": 9.956118810872396e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 9.042117055102494e-10,
+   "max_nodal_change_stored_vs_converged": 1.01061,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    1,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.01061,
+    0.00016
+   ]
+  },
+  "u_lv": {
+   "relres_1e-10_solve": 9.323405292208939e-11,
+   "relres_1e-12_solve": 9.697141682643734e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 1.1408432532000745e-09,
+   "max_nodal_change_stored_vs_converged": 0.300686,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    3,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.27332,
+    0.0
+   ]
+  },
+  "u_rv": {
+   "relres_1e-10_solve": 9.842684772162103e-11,
+   "relres_1e-12_solve": 9.770982068159863e-13,
+   "cg_info": [
+    0,
+    0
+   ],
+   "max_nodal_change_1e-10_vs_1e-12": 7.550970682057567e-10,
+   "max_nodal_change_stored_vs_converged": 1.82813,
+   "nodes_outside_by_1e-3 (stored, converged)": [
+    3,
+    0
+   ],
+   "largest_excursion (stored, converged)": [
+    0.82813,
+    0.0
+   ]
+  },
+  "w_LV (LV-side submesh)": {
+   "relres_1e-10_solve": 9.975070353895645e-11,
+   "relres_1e-12_solve": 9.631592624157593e-13,
+   "max_nodal_change_1e-10_vs_1e-12": 1.7600931823125165e-09,
+   "max_nodal_change_stored_vs_converged": 5.302520335037642e-07,
+   "range_converged": [
+    0.0,
+    1.0
+   ],
+   "within_1e-6_of_[0,1]": true
+  }
+ },
+ "uvc": {
+  "z_max_abs_change": 0.007032045148713362,
+  "z_p99_abs_change": 7.334004864450131e-05,
+  "v_nodes_changing_side": 0,
+  "phi": "geometric (03_uvc.py: apex, MV+TV centroid, RV-endocardium centroid, aortic centroid); unchanged"
+ },
+ "phi_sum_share_LV_side_nodes_over_1e-6": {
+  "phi_epi_fix": {
+   "stored": 0.0663,
+   "converged": 0.0614
+  },
+  "phi_epi (plain)": {
+   "stored": 0.0246,
+   "converged": 0.0193
+  }
+ },
+ "phi_epi_fix_definition": "laplace_fix.py: the same Laplace problem as phi_epi (LV + RV endocardium 0 -> epicardium 1) with the aortic-root interface (ao_iface minus endocardial nodes) added to the \"1\" set; it is a boundary-set change, not a post-process, so re-solving the same problem re-applies it",
+ "P1a_fields_and_consumers": {
+  "zeta -> UVC z (03_uvc remap)": [
+   "R5.2 / D20 r(z) (z >= 0.80)",
+   "11.3 item 2 basal z >= 0.55",
+   "summit candidate quarter z >= 0.75 (D22)",
+   "D23 candidates lv_start(z, phi)",
+   "v5.1 site placement and the D3 patch centres (report 34, placed on v5.1 z: fixed)"
+  ],
+  "v -> UVC v": [
+   "summit candidate quarter v = 0 (D22)",
+   "D23 epicardial line end (v = 0)",
+   "aha51 frame RV-insertion groove (v5.1 v.dat: AHA segments, 11.3 item 2)"
+  ],
+  "UVC phi (geometric)": [
+   "summit quarter sin(phi) >= 0",
+   "D23 candidates",
+   "lv_start"
+  ],
+  "basal, ot_lv, ot_rv, w": [
+   "l (fibres_fix.py: w unit(grad basal) + (1 - w) unit(grad ot); ot_rv where the element's d > 0.5) for R5.1-R5.3 and D19's frame"
+  ],
+  "phi_epi_fix, phi_lv, phi_rv": [
+   "D19 LV w (R5.1 helix, R1.3 APD blend)",
+   "D19b d_s and the RV APD coordinate",
+   "v5.1 split (R_field, from v5.1 files; fixed)"
+  ],
+  "w_LV (LV-side submesh)": [
+   "D20 b"
+  ],
+  "phi_epi (plain), sep, rho": [
+   "reports only (site rho / sep)"
+  ],
+  "u_lv, u_rv (phi_D), RV-submesh psi_tv / psi_pv / w": [
+   "not consumed in v5.2 (RV fibres are v5.1 rows; RV APD by D19b)"
+  ]
+ },
+ "P1c_label_changes_stored_vs_converged": {
+  "items": 93,
+  "gate5_region": 0,
+  "AHA_segment": 0,
+  "z_0.55": 0,
+  "z_0.75": 0,
+  "z_0.80": 0,
+  "examples": []
+ },
+ "P1d_l_angle_converged_vs_stored_deg": {
+  "median": 0.0048,
+  "p95": 0.0137,
+  "max": 90.0,
+  "LV_side_elements_where_d_gt_0.5_(ot_rv used by the literal rule)": 202
+ },
+ "P1e_D19b_APD_w_along_edges_at_the_split": {
+  "edges": 55996,
+  "max": 0.528,
+  "p99": 0.196,
+  "median": 0.0447,
+  "edges_where_the_formula_switches": 24193,
+  "max_on_switching_edges": 0.5168,
+  "largest_at": {
+   "edge_nodes": [
+    23403,
+    324473
+   ],
+   "z": 1.0,
+   "height_above_PV_mid_plane_mm": -18.9,
+   "height_above_AV_mid_plane_mm": -1.5,
+   "d_s": [
+    0.0,
+    0.492
+   ],
+   "phi_epi_fix": [
+    0.0,
+    0.071
+   ]
+  },
+  "nodes_with_phi_lv_plus_phi_rv_lt_1e-9": 41745
+ },
+ "P1f_D19_frame": {
+  "guard": {
+   "below_1pct_median": 237,
+   "filled_2mm": 208,
+   "filled_4mm": 12,
+   "unfilled (stop)": 17
+  },
+  "orthonormality": {
+   "max_|f|-1": 1.0,
+   "max_|s|-1": 1.0,
+   "max_|f.s|": 4.363176486776865e-14,
+   "max_|n|-1": 1.0,
+   "max_|l.t_out|": 5.129230373768223e-14
+  }
+ },
+ "P2a": {
+  "rule_in_code": "v5.1's RV rows are doste_rv.py's (not fibres_fix.py): h = 90 (1 - d) - 25 w d in the standard helix convention (LV subendocardium positive, t_out outward), so +90 at the RV endocardium in the outflow (w = 0); fibres_fix.py (v5's rule, still v5.1's LV side) gives a_s(d) = a_endo (1 - d) - a_endo d, i.e. -a_endo (-90 in the outflow) at d = 1, in its own frame axis(gpsi, grad phi_rv), whose transmural axis points into the RV",
+  "elements (RV region, D19b APD w 0.4-0.6, outflow weight 1 - w_doste > 0.9, below the PV mid-plane)": 7195,
+  "v51_stored_RV_helix_median_deg (D19 frame: l fibres_fix rule, t_out = grad of the D19b APD w)": 35.7,
+  "p10_p90": [
+   -44.7,
+   50.3
+  ]
+ },
+ "P2b": {
+  "stimulus_nodes_with_b_gt_0": 33,
+  "median_helix_plus90": 14.2,
+  "median_helix_minus90": -15.8,
+  "median_abs_difference_deg": 19.0,
+  "largest_abs_difference_deg": 140.3,
+  "largest_at": "lv_summit52_superior_d10",
+  "rows": [
+   {
+    "site": "aortic_cusp_rcc_z_d50",
+    "b": 0.948,
+    "helix_plus90": 9.6,
+    "helix_minus90": -12.5
+   },
+   {
+    "site": "aortic_cusp_rcc_z_d75",
+    "b": 0.946,
+    "helix_plus90": 11.8,
+    "helix_minus90": -14.4
+   },
+   {
+    "site": "aortic_cusp_rcc_z_d90",
+    "b": 0.945,
+    "helix_plus90": 14.2,
+    "helix_minus90": -16.6
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d10",
+    "b": 0.872,
+    "helix_plus90": 76.1,
+    "helix_minus90": -62.4
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d50",
+    "b": 0.74,
+    "helix_plus90": 40.4,
+    "helix_minus90": -31.5
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d75",
+    "b": 0.77,
+    "helix_plus90": 36.7,
+    "helix_minus90": -31.2
+   },
+   {
+    "site": "aortic_cusp_lcc_z_d90",
+    "b": 0.738,
+    "helix_plus90": 32.9,
+    "helix_minus90": -28.4
+   },
+   {
+    "site": "lv_summit_superior_z_d10",
+    "b": 0.383,
+    "helix_plus90": 70.1,
+    "helix_minus90": 4.7
+   },
+   {
+    "site": "lv_summit_superior_z_d50",
+    "b": 0.428,
+    "helix_plus90": 36.7,
+    "helix_minus90": -9.8
+   },
+   {
+    "site": "lv_summit_superior_z_d75",
+    "b": 0.439,
+    "helix_plus90": 6.2,
+    "helix_minus90": -17.0
+   },
+   {
+    "site": "lv_summit_superior_z_d90",
+    "b": 0.448,
+    "helix_plus90": -10.0,
+    "helix_minus90": -20.2
+   },
+   {
+    "site": "lv_summit_inferior_lateral_z_d10",
+    "b": 0.143,
+    "helix_plus90": 63.4,
+    "helix_minus90": 39.2
+   },
+   {
+    "site": "lv_summit_inferior_lateral_z_d50",
+    "b": 0.155,
+    "helix_plus90": 23.6,
+    "helix_minus90": 8.0
+   },
+   {
+    "site": "lv_summit_inferior_lateral_z_d75",
+    "b": 0.161,
+    "helix_plus90": -11.2,
+    "helix_minus90": -17.7
+   },
+   {
+    "site": "lv_summit_inferior_lateral_z_d90",
+    "b": 0.152,
+    "helix_plus90": -20.8,
+    "helix_minus90": -24.5
+   },
+   {
+    "site": "lv_vein_course_basal_ring_anterolateral_z_d10",
+    "b": 0.057,
+    "helix_plus90": 58.7,
+    "helix_minus90": 49.3
+   },
+   {
+    "site": "lv_vein_course_basal_ring_anterolateral_z_d50",
+    "b": 0.062,
+    "helix_plus90": 27.3,
+    "helix_minus90": 20.4
+   },
+   {
+    "site": "lv_vein_course_basal_ring_anterolateral_z_d75",
+    "b": 0.065,
+    "helix_plus90": -4.4,
+    "helix_minus90": -8.2
+   },
+   {
+    "site": "lv_vein_course_basal_ring_anterolateral_z_d90",
+    "b": 0.062,
+    "helix_plus90": -23.9,
+    "helix_minus90": -25.4
+   },
+   {
+    "site": "lv_vein_course_basal_ring_lateral_z_d10",
+    "b": 0.024,
+    "helix_plus90": 59.8,
+    "helix_minus90": 55.8
+   },
+   {
+    "site": "lv_vein_course_basal_ring_lateral_z_d50",
+    "b": 0.025,
+    "helix_plus90": 19.8,
+    "helix_minus90": 17.3
+   },
+   {
+    "site": "lv_vein_course_basal_ring_lateral_z_d75",
+    "b": 0.026,
+    "helix_plus90": -13.4,
+    "helix_minus90": -14.6
+   },
+   {
+    "site": "lv_vein_course_basal_ring_lateral_z_d90",
+    "b": 0.026,
+    "helix_plus90": -21.5,
+    "helix_minus90": -22.3
+   },
+   {
+    "site": "cusp52_lcc_mid",
+    "b": 0.916,
+    "helix_plus90": -0.6,
+    "helix_minus90": -5.7
+   },
+   {
+    "site": "cusp52_lcc_q",
+    "b": 0.824,
+    "helix_plus90": 2.4,
+    "helix_minus90": -12.9
+   },
+   {
+    "site": "lv_summit52_superior_d10",
+    "b": 0.882,
+    "helix_plus90": 76.7,
+    "helix_minus90": -63.6
+   },
+   {
+    "site": "lv_summit52_superior_d50",
+    "b": 0.807,
+    "helix_plus90": 42.4,
+    "helix_minus90": -36.2
+   },
+   {
+    "site": "lv_summit52_superior_d90",
+    "b": 0.703,
+    "helix_plus90": 2.4,
+    "helix_minus90": -17.1
+   },
+   {
+    "site": "lv_summit52_superior_d75",
+    "b": 0.767,
+    "helix_plus90": 13.6,
+    "helix_minus90": -20.4
+   },
+   {
+    "site": "lv_summit52_inferior_lateral_d10",
+    "b": 0.236,
+    "helix_plus90": 64.6,
+    "helix_minus90": 25.1
+   },
+   {
+    "site": "lv_summit52_inferior_lateral_d50",
+    "b": 0.226,
+    "helix_plus90": 16.4,
+    "helix_minus90": -2.6
+   },
+   {
+    "site": "lv_summit52_inferior_lateral_d90",
+    "b": 0.221,
+    "helix_plus90": -16.1,
+    "helix_minus90": -22.3
+   },
+   {
+    "site": "lv_summit52_inferior_lateral_d75",
+    "b": 0.236,
+    "helix_plus90": -4.9,
+    "helix_minus90": -15.8
+   }
+  ],
+  "note": "b and w on the converged fields (D19 w, D20 b with converged w_LV and z)"
+ },
+ "wall_s": 99.6
+}

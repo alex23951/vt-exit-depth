@@ -1,0 +1,2075 @@
+{
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "model": "openCARP Tomek (bench, build ffce195)",
+ "CL_ms": 1000.0,
+ "criterion": "max - min of the last 10 beats APD90 < 0.5 ms",
+ "baseline": {
+  "ENDO": {
+   "beats": 200,
+   "steady_state_met": true,
+   "last10_APD90_span_ms": 0.02,
+   "APD90_ms (bench, last beat)": 271.72,
+   "first_window_meeting_the_criterion (index in the kept-beat series)": 10,
+   "state_file": "runs/v52_2026-10-20/04_cells/baseline_ENDO/state_200.sv",
+   "trace_dir (last two beats, 1 ms)": "runs/v52_2026-10-20/04_cells/baseline_ENDO/chunk_00000",
+   "wall_s": 22.2
+  },
+  "EPI": {
+   "beats": 200,
+   "steady_state_met": true,
+   "last10_APD90_span_ms": 0.14,
+   "APD90_ms (bench, last beat)": 241.99,
+   "first_window_meeting_the_criterion (index in the kept-beat series)": 106,
+   "state_file": "runs/v52_2026-10-20/04_cells/baseline_EPI/state_200.sv",
+   "trace_dir (last two beats, 1 ms)": "runs/v52_2026-10-20/04_cells/baseline_EPI/chunk_00000",
+   "wall_s": 22.6
+  }
+ },
+ "derive": {
+  "APD90_endo_bench_ms": 271.72,
+  "APD90_epi_bench_ms": 241.99,
+  "APD90_endo_minus_epi_ms": 29.73,
+  "APD90_from_trace_ms (endo, epi; my measure)": [
+   271.982,
+   242.458
+  ],
+  "mean_ms": 256.855,
+  "tomek_figure_reading_sanity (290 / 258 ms, about 32 ms)": "reported beside, never used",
+  "grid": [
+   {
+    "w": 0.0,
+    "APD90_blend_ms": 271.984,
+    "V_at_80ms_mV": 14.4867,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.5867,
+    "control": {
+     "target_ms": 270.855,
+     "stretch_factor_k": 0.994119,
+     "APD90_after_stretch_ms": 270.855,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 288.609,
+     "stretch_factor_k": 1.086596,
+     "APD90_after_stretch_ms": 288.609,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.01,
+    "APD90_blend_ms": 271.884,
+    "V_at_80ms_mV": 14.4884,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.5884,
+    "control": {
+     "target_ms": 270.575,
+     "stretch_factor_k": 0.993181,
+     "APD90_after_stretch_ms": 270.575,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 288.539,
+     "stretch_factor_k": 1.0868,
+     "APD90_after_stretch_ms": 288.539,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.02,
+    "APD90_blend_ms": 271.785,
+    "V_at_80ms_mV": 14.4901,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.5901,
+    "control": {
+     "target_ms": 270.295,
+     "stretch_factor_k": 0.99223,
+     "APD90_after_stretch_ms": 270.295,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 288.469,
+     "stretch_factor_k": 1.086993,
+     "APD90_after_stretch_ms": 288.469,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.03,
+    "APD90_blend_ms": 271.685,
+    "V_at_80ms_mV": 14.4918,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.5918,
+    "control": {
+     "target_ms": 270.015,
+     "stretch_factor_k": 0.991289,
+     "APD90_after_stretch_ms": 270.015,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 288.399,
+     "stretch_factor_k": 1.087197,
+     "APD90_after_stretch_ms": 288.399,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.04,
+    "APD90_blend_ms": 271.582,
+    "V_at_80ms_mV": 14.4936,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.5936,
+    "control": {
+     "target_ms": 269.735,
+     "stretch_factor_k": 0.990358,
+     "APD90_after_stretch_ms": 269.735,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 288.329,
+     "stretch_factor_k": 1.087413,
+     "APD90_after_stretch_ms": 288.329,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.05,
+    "APD90_blend_ms": 271.478,
+    "V_at_80ms_mV": 14.4953,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.5953,
+    "control": {
+     "target_ms": 269.455,
+     "stretch_factor_k": 0.989436,
+     "APD90_after_stretch_ms": 269.455,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 288.259,
+     "stretch_factor_k": 1.087641,
+     "APD90_after_stretch_ms": 288.259,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.06,
+    "APD90_blend_ms": 271.371,
+    "V_at_80ms_mV": 14.497,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.597,
+    "control": {
+     "target_ms": 269.175,
+     "stretch_factor_k": 0.988525,
+     "APD90_after_stretch_ms": 269.175,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 288.189,
+     "stretch_factor_k": 1.087882,
+     "APD90_after_stretch_ms": 288.189,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.07,
+    "APD90_blend_ms": 271.262,
+    "V_at_80ms_mV": 14.4988,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.5988,
+    "control": {
+     "target_ms": 268.895,
+     "stretch_factor_k": 0.987625,
+     "APD90_after_stretch_ms": 268.895,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 288.119,
+     "stretch_factor_k": 1.088136,
+     "APD90_after_stretch_ms": 288.119,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.08,
+    "APD90_blend_ms": 271.151,
+    "V_at_80ms_mV": 14.5005,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6005,
+    "control": {
+     "target_ms": 268.615,
+     "stretch_factor_k": 0.986735,
+     "APD90_after_stretch_ms": 268.615,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 288.049,
+     "stretch_factor_k": 1.088404,
+     "APD90_after_stretch_ms": 288.049,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.09,
+    "APD90_blend_ms": 271.037,
+    "V_at_80ms_mV": 14.5022,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6022,
+    "control": {
+     "target_ms": 268.335,
+     "stretch_factor_k": 0.985856,
+     "APD90_after_stretch_ms": 268.335,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.979,
+     "stretch_factor_k": 1.088685,
+     "APD90_after_stretch_ms": 287.979,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.1,
+    "APD90_blend_ms": 270.921,
+    "V_at_80ms_mV": 14.5039,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6039,
+    "control": {
+     "target_ms": 268.055,
+     "stretch_factor_k": 0.98499,
+     "APD90_after_stretch_ms": 268.055,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.909,
+     "stretch_factor_k": 1.088981,
+     "APD90_after_stretch_ms": 287.909,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.11,
+    "APD90_blend_ms": 270.806,
+    "V_at_80ms_mV": 14.5057,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6057,
+    "control": {
+     "target_ms": 267.775,
+     "stretch_factor_k": 0.984117,
+     "APD90_after_stretch_ms": 267.775,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.839,
+     "stretch_factor_k": 1.089271,
+     "APD90_after_stretch_ms": 287.839,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.12,
+    "APD90_blend_ms": 270.689,
+    "V_at_80ms_mV": 14.5074,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6074,
+    "control": {
+     "target_ms": 267.495,
+     "stretch_factor_k": 0.983251,
+     "APD90_after_stretch_ms": 267.495,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.769,
+     "stretch_factor_k": 1.089571,
+     "APD90_after_stretch_ms": 287.769,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.13,
+    "APD90_blend_ms": 270.57,
+    "V_at_80ms_mV": 14.5091,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6091,
+    "control": {
+     "target_ms": 267.215,
+     "stretch_factor_k": 0.982397,
+     "APD90_after_stretch_ms": 267.215,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.699,
+     "stretch_factor_k": 1.089885,
+     "APD90_after_stretch_ms": 287.699,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.14,
+    "APD90_blend_ms": 270.448,
+    "V_at_80ms_mV": 14.5108,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6108,
+    "control": {
+     "target_ms": 266.935,
+     "stretch_factor_k": 0.981556,
+     "APD90_after_stretch_ms": 266.935,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.629,
+     "stretch_factor_k": 1.090216,
+     "APD90_after_stretch_ms": 287.629,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.15,
+    "APD90_blend_ms": 270.323,
+    "V_at_80ms_mV": 14.5126,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6126,
+    "control": {
+     "target_ms": 266.655,
+     "stretch_factor_k": 0.980728,
+     "APD90_after_stretch_ms": 266.655,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.559,
+     "stretch_factor_k": 1.090563,
+     "APD90_after_stretch_ms": 287.559,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.16,
+    "APD90_blend_ms": 270.195,
+    "V_at_80ms_mV": 14.5143,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6143,
+    "control": {
+     "target_ms": 266.375,
+     "stretch_factor_k": 0.979915,
+     "APD90_after_stretch_ms": 266.375,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.489,
+     "stretch_factor_k": 1.090927,
+     "APD90_after_stretch_ms": 287.489,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.17,
+    "APD90_blend_ms": 270.064,
+    "V_at_80ms_mV": 14.516,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.616,
+    "control": {
+     "target_ms": 266.095,
+     "stretch_factor_k": 0.979115,
+     "APD90_after_stretch_ms": 266.095,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.419,
+     "stretch_factor_k": 1.091309,
+     "APD90_after_stretch_ms": 287.419,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.18,
+    "APD90_blend_ms": 269.931,
+    "V_at_80ms_mV": 14.5177,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6177,
+    "control": {
+     "target_ms": 265.815,
+     "stretch_factor_k": 0.978331,
+     "APD90_after_stretch_ms": 265.815,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.349,
+     "stretch_factor_k": 1.091709,
+     "APD90_after_stretch_ms": 287.349,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.19,
+    "APD90_blend_ms": 269.797,
+    "V_at_80ms_mV": 14.5195,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6195,
+    "control": {
+     "target_ms": 265.535,
+     "stretch_factor_k": 0.977545,
+     "APD90_after_stretch_ms": 265.535,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.279,
+     "stretch_factor_k": 1.09211,
+     "APD90_after_stretch_ms": 287.279,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.2,
+    "APD90_blend_ms": 269.661,
+    "V_at_80ms_mV": 14.5212,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6212,
+    "control": {
+     "target_ms": 265.255,
+     "stretch_factor_k": 0.976768,
+     "APD90_after_stretch_ms": 265.255,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.209,
+     "stretch_factor_k": 1.092523,
+     "APD90_after_stretch_ms": 287.209,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.21,
+    "APD90_blend_ms": 269.522,
+    "V_at_80ms_mV": 14.5229,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6229,
+    "control": {
+     "target_ms": 264.975,
+     "stretch_factor_k": 0.976008,
+     "APD90_after_stretch_ms": 264.975,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.139,
+     "stretch_factor_k": 1.092955,
+     "APD90_after_stretch_ms": 287.139,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.22,
+    "APD90_blend_ms": 269.379,
+    "V_at_80ms_mV": 14.5246,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6246,
+    "control": {
+     "target_ms": 264.695,
+     "stretch_factor_k": 0.975264,
+     "APD90_after_stretch_ms": 264.695,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 287.069,
+     "stretch_factor_k": 1.093408,
+     "APD90_after_stretch_ms": 287.069,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.23,
+    "APD90_blend_ms": 269.233,
+    "V_at_80ms_mV": 14.5264,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6264,
+    "control": {
+     "target_ms": 264.415,
+     "stretch_factor_k": 0.974538,
+     "APD90_after_stretch_ms": 264.415,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.999,
+     "stretch_factor_k": 1.093883,
+     "APD90_after_stretch_ms": 286.999,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.24,
+    "APD90_blend_ms": 269.083,
+    "V_at_80ms_mV": 14.5281,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6281,
+    "control": {
+     "target_ms": 264.135,
+     "stretch_factor_k": 0.97383,
+     "APD90_after_stretch_ms": 264.135,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.929,
+     "stretch_factor_k": 1.09438,
+     "APD90_after_stretch_ms": 286.929,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.25,
+    "APD90_blend_ms": 268.93,
+    "V_at_80ms_mV": 14.5298,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6298,
+    "control": {
+     "target_ms": 263.855,
+     "stretch_factor_k": 0.973141,
+     "APD90_after_stretch_ms": 263.855,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.859,
+     "stretch_factor_k": 1.0949,
+     "APD90_after_stretch_ms": 286.859,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.26,
+    "APD90_blend_ms": 268.775,
+    "V_at_80ms_mV": 14.5316,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6316,
+    "control": {
+     "target_ms": 263.575,
+     "stretch_factor_k": 0.972454,
+     "APD90_after_stretch_ms": 263.575,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.789,
+     "stretch_factor_k": 1.095426,
+     "APD90_after_stretch_ms": 286.789,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.27,
+    "APD90_blend_ms": 268.618,
+    "V_at_80ms_mV": 14.5333,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6333,
+    "control": {
+     "target_ms": 263.295,
+     "stretch_factor_k": 0.971781,
+     "APD90_after_stretch_ms": 263.295,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.719,
+     "stretch_factor_k": 1.09597,
+     "APD90_after_stretch_ms": 286.719,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.28,
+    "APD90_blend_ms": 268.456,
+    "V_at_80ms_mV": 14.535,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.635,
+    "control": {
+     "target_ms": 263.015,
+     "stretch_factor_k": 0.97113,
+     "APD90_after_stretch_ms": 263.015,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.649,
+     "stretch_factor_k": 1.096539,
+     "APD90_after_stretch_ms": 286.649,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.29,
+    "APD90_blend_ms": 268.289,
+    "V_at_80ms_mV": 14.5367,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6367,
+    "control": {
+     "target_ms": 262.735,
+     "stretch_factor_k": 0.9705,
+     "APD90_after_stretch_ms": 262.735,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.579,
+     "stretch_factor_k": 1.097135,
+     "APD90_after_stretch_ms": 286.579,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.3,
+    "APD90_blend_ms": 268.119,
+    "V_at_80ms_mV": 14.5385,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6385,
+    "control": {
+     "target_ms": 262.455,
+     "stretch_factor_k": 0.969893,
+     "APD90_after_stretch_ms": 262.455,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.509,
+     "stretch_factor_k": 1.097759,
+     "APD90_after_stretch_ms": 286.509,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.31,
+    "APD90_blend_ms": 267.943,
+    "V_at_80ms_mV": 14.5402,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6402,
+    "control": {
+     "target_ms": 262.175,
+     "stretch_factor_k": 0.969309,
+     "APD90_after_stretch_ms": 262.175,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.439,
+     "stretch_factor_k": 1.098412,
+     "APD90_after_stretch_ms": 286.439,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.32,
+    "APD90_blend_ms": 267.766,
+    "V_at_80ms_mV": 14.5419,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6419,
+    "control": {
+     "target_ms": 261.895,
+     "stretch_factor_k": 0.968735,
+     "APD90_after_stretch_ms": 261.895,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.369,
+     "stretch_factor_k": 1.099078,
+     "APD90_after_stretch_ms": 286.369,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.33,
+    "APD90_blend_ms": 267.584,
+    "V_at_80ms_mV": 14.5436,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6436,
+    "control": {
+     "target_ms": 261.615,
+     "stretch_factor_k": 0.968179,
+     "APD90_after_stretch_ms": 261.615,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.299,
+     "stretch_factor_k": 1.099769,
+     "APD90_after_stretch_ms": 286.299,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.34,
+    "APD90_blend_ms": 267.397,
+    "V_at_80ms_mV": 14.5454,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6454,
+    "control": {
+     "target_ms": 261.335,
+     "stretch_factor_k": 0.96765,
+     "APD90_after_stretch_ms": 261.335,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.229,
+     "stretch_factor_k": 1.100491,
+     "APD90_after_stretch_ms": 286.229,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.35,
+    "APD90_blend_ms": 267.205,
+    "V_at_80ms_mV": 14.5471,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6471,
+    "control": {
+     "target_ms": 261.055,
+     "stretch_factor_k": 0.967149,
+     "APD90_after_stretch_ms": 261.055,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.159,
+     "stretch_factor_k": 1.101248,
+     "APD90_after_stretch_ms": 286.159,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.36,
+    "APD90_blend_ms": 267.007,
+    "V_at_80ms_mV": 14.5488,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6488,
+    "control": {
+     "target_ms": 260.775,
+     "stretch_factor_k": 0.966676,
+     "APD90_after_stretch_ms": 260.775,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.089,
+     "stretch_factor_k": 1.10204,
+     "APD90_after_stretch_ms": 286.089,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.37,
+    "APD90_blend_ms": 266.804,
+    "V_at_80ms_mV": 14.5505,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6505,
+    "control": {
+     "target_ms": 260.495,
+     "stretch_factor_k": 0.966224,
+     "APD90_after_stretch_ms": 260.495,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 286.019,
+     "stretch_factor_k": 1.102859,
+     "APD90_after_stretch_ms": 286.019,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.38,
+    "APD90_blend_ms": 266.598,
+    "V_at_80ms_mV": 14.5523,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6523,
+    "control": {
+     "target_ms": 260.215,
+     "stretch_factor_k": 0.965793,
+     "APD90_after_stretch_ms": 260.215,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.949,
+     "stretch_factor_k": 1.103704,
+     "APD90_after_stretch_ms": 285.949,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.39,
+    "APD90_blend_ms": 266.385,
+    "V_at_80ms_mV": 14.554,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.654,
+    "control": {
+     "target_ms": 259.935,
+     "stretch_factor_k": 0.965394,
+     "APD90_after_stretch_ms": 259.935,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.879,
+     "stretch_factor_k": 1.10459,
+     "APD90_after_stretch_ms": 285.879,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.4,
+    "APD90_blend_ms": 266.165,
+    "V_at_80ms_mV": 14.5557,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6557,
+    "control": {
+     "target_ms": 259.655,
+     "stretch_factor_k": 0.965029,
+     "APD90_after_stretch_ms": 259.655,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.809,
+     "stretch_factor_k": 1.105517,
+     "APD90_after_stretch_ms": 285.809,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.41,
+    "APD90_blend_ms": 265.939,
+    "V_at_80ms_mV": 14.5574,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6574,
+    "control": {
+     "target_ms": 259.375,
+     "stretch_factor_k": 0.964699,
+     "APD90_after_stretch_ms": 259.375,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.739,
+     "stretch_factor_k": 1.106488,
+     "APD90_after_stretch_ms": 285.739,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.42,
+    "APD90_blend_ms": 265.708,
+    "V_at_80ms_mV": 14.5592,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6592,
+    "control": {
+     "target_ms": 259.095,
+     "stretch_factor_k": 0.964393,
+     "APD90_after_stretch_ms": 259.095,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.669,
+     "stretch_factor_k": 1.107489,
+     "APD90_after_stretch_ms": 285.669,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.43,
+    "APD90_blend_ms": 265.469,
+    "V_at_80ms_mV": 14.5609,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6609,
+    "control": {
+     "target_ms": 258.815,
+     "stretch_factor_k": 0.964121,
+     "APD90_after_stretch_ms": 258.815,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.599,
+     "stretch_factor_k": 1.108533,
+     "APD90_after_stretch_ms": 285.599,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.44,
+    "APD90_blend_ms": 265.223,
+    "V_at_80ms_mV": 14.5626,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6626,
+    "control": {
+     "target_ms": 258.535,
+     "stretch_factor_k": 0.963891,
+     "APD90_after_stretch_ms": 258.535,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.529,
+     "stretch_factor_k": 1.109628,
+     "APD90_after_stretch_ms": 285.529,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.45,
+    "APD90_blend_ms": 264.969,
+    "V_at_80ms_mV": 14.5644,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6644,
+    "control": {
+     "target_ms": 258.255,
+     "stretch_factor_k": 0.963703,
+     "APD90_after_stretch_ms": 258.255,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.459,
+     "stretch_factor_k": 1.110777,
+     "APD90_after_stretch_ms": 285.459,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.46,
+    "APD90_blend_ms": 264.708,
+    "V_at_80ms_mV": 14.5661,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6661,
+    "control": {
+     "target_ms": 257.975,
+     "stretch_factor_k": 0.963548,
+     "APD90_after_stretch_ms": 257.975,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.389,
+     "stretch_factor_k": 1.111967,
+     "APD90_after_stretch_ms": 285.389,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.47,
+    "APD90_blend_ms": 264.439,
+    "V_at_80ms_mV": 14.5678,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6678,
+    "control": {
+     "target_ms": 257.695,
+     "stretch_factor_k": 0.963436,
+     "APD90_after_stretch_ms": 257.695,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.319,
+     "stretch_factor_k": 1.113209,
+     "APD90_after_stretch_ms": 285.319,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.48,
+    "APD90_blend_ms": 264.16,
+    "V_at_80ms_mV": 14.5695,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6695,
+    "control": {
+     "target_ms": 257.415,
+     "stretch_factor_k": 0.963373,
+     "APD90_after_stretch_ms": 257.415,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.249,
+     "stretch_factor_k": 1.114513,
+     "APD90_after_stretch_ms": 285.249,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.49,
+    "APD90_blend_ms": 263.872,
+    "V_at_80ms_mV": 14.5713,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6713,
+    "control": {
+     "target_ms": 257.135,
+     "stretch_factor_k": 0.963361,
+     "APD90_after_stretch_ms": 257.135,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.179,
+     "stretch_factor_k": 1.115881,
+     "APD90_after_stretch_ms": 285.179,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.5,
+    "APD90_blend_ms": 263.576,
+    "V_at_80ms_mV": 14.573,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.673,
+    "control": {
+     "target_ms": 256.855,
+     "stretch_factor_k": 0.963389,
+     "APD90_after_stretch_ms": 256.855,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.109,
+     "stretch_factor_k": 1.117299,
+     "APD90_after_stretch_ms": 285.109,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.51,
+    "APD90_blend_ms": 263.269,
+    "V_at_80ms_mV": 14.5747,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6747,
+    "control": {
+     "target_ms": 256.575,
+     "stretch_factor_k": 0.963475,
+     "APD90_after_stretch_ms": 256.575,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 285.039,
+     "stretch_factor_k": 1.118788,
+     "APD90_after_stretch_ms": 285.039,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.52,
+    "APD90_blend_ms": 262.951,
+    "V_at_80ms_mV": 14.5764,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6764,
+    "control": {
+     "target_ms": 256.295,
+     "stretch_factor_k": 0.963621,
+     "APD90_after_stretch_ms": 256.295,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.969,
+     "stretch_factor_k": 1.120352,
+     "APD90_after_stretch_ms": 284.969,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.53,
+    "APD90_blend_ms": 262.623,
+    "V_at_80ms_mV": 14.5782,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6782,
+    "control": {
+     "target_ms": 256.015,
+     "stretch_factor_k": 0.963817,
+     "APD90_after_stretch_ms": 256.015,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.899,
+     "stretch_factor_k": 1.12198,
+     "APD90_after_stretch_ms": 284.899,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.54,
+    "APD90_blend_ms": 262.283,
+    "V_at_80ms_mV": 14.5799,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6799,
+    "control": {
+     "target_ms": 255.735,
+     "stretch_factor_k": 0.964078,
+     "APD90_after_stretch_ms": 255.735,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.829,
+     "stretch_factor_k": 1.123687,
+     "APD90_after_stretch_ms": 284.829,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.55,
+    "APD90_blend_ms": 261.93,
+    "V_at_80ms_mV": 14.5816,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6816,
+    "control": {
+     "target_ms": 255.455,
+     "stretch_factor_k": 0.96441,
+     "APD90_after_stretch_ms": 255.455,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.759,
+     "stretch_factor_k": 1.125483,
+     "APD90_after_stretch_ms": 284.759,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.56,
+    "APD90_blend_ms": 261.566,
+    "V_at_80ms_mV": 14.5833,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6833,
+    "control": {
+     "target_ms": 255.175,
+     "stretch_factor_k": 0.964799,
+     "APD90_after_stretch_ms": 255.175,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.689,
+     "stretch_factor_k": 1.127351,
+     "APD90_after_stretch_ms": 284.689,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.57,
+    "APD90_blend_ms": 261.189,
+    "V_at_80ms_mV": 14.5851,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6851,
+    "control": {
+     "target_ms": 254.895,
+     "stretch_factor_k": 0.965264,
+     "APD90_after_stretch_ms": 254.895,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.619,
+     "stretch_factor_k": 1.129314,
+     "APD90_after_stretch_ms": 284.619,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.58,
+    "APD90_blend_ms": 260.797,
+    "V_at_80ms_mV": 14.5868,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6868,
+    "control": {
+     "target_ms": 254.615,
+     "stretch_factor_k": 0.965807,
+     "APD90_after_stretch_ms": 254.615,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.549,
+     "stretch_factor_k": 1.131374,
+     "APD90_after_stretch_ms": 284.549,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.59,
+    "APD90_blend_ms": 260.393,
+    "V_at_80ms_mV": 14.5885,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6885,
+    "control": {
+     "target_ms": 254.335,
+     "stretch_factor_k": 0.966417,
+     "APD90_after_stretch_ms": 254.335,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.479,
+     "stretch_factor_k": 1.133519,
+     "APD90_after_stretch_ms": 284.479,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.6,
+    "APD90_blend_ms": 259.973,
+    "V_at_80ms_mV": 14.5902,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6902,
+    "control": {
+     "target_ms": 254.055,
+     "stretch_factor_k": 0.967119,
+     "APD90_after_stretch_ms": 254.055,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.409,
+     "stretch_factor_k": 1.135778,
+     "APD90_after_stretch_ms": 284.409,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.61,
+    "APD90_blend_ms": 259.54,
+    "V_at_80ms_mV": 14.592,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.692,
+    "control": {
+     "target_ms": 253.775,
+     "stretch_factor_k": 0.967889,
+     "APD90_after_stretch_ms": 253.775,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.339,
+     "stretch_factor_k": 1.138124,
+     "APD90_after_stretch_ms": 284.339,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.62,
+    "APD90_blend_ms": 259.091,
+    "V_at_80ms_mV": 14.5937,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6937,
+    "control": {
+     "target_ms": 253.495,
+     "stretch_factor_k": 0.968753,
+     "APD90_after_stretch_ms": 253.495,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.269,
+     "stretch_factor_k": 1.140587,
+     "APD90_after_stretch_ms": 284.269,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.63,
+    "APD90_blend_ms": 258.628,
+    "V_at_80ms_mV": 14.5954,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6954,
+    "control": {
+     "target_ms": 253.215,
+     "stretch_factor_k": 0.969694,
+     "APD90_after_stretch_ms": 253.215,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.199,
+     "stretch_factor_k": 1.143149,
+     "APD90_after_stretch_ms": 284.199,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.64,
+    "APD90_blend_ms": 258.151,
+    "V_at_80ms_mV": 14.5971,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6971,
+    "control": {
+     "target_ms": 252.935,
+     "stretch_factor_k": 0.970723,
+     "APD90_after_stretch_ms": 252.935,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.129,
+     "stretch_factor_k": 1.145822,
+     "APD90_after_stretch_ms": 284.129,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.65,
+    "APD90_blend_ms": 257.659,
+    "V_at_80ms_mV": 14.5989,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.6989,
+    "control": {
+     "target_ms": 252.655,
+     "stretch_factor_k": 0.971833,
+     "APD90_after_stretch_ms": 252.655,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 284.059,
+     "stretch_factor_k": 1.148599,
+     "APD90_after_stretch_ms": 284.059,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.66,
+    "APD90_blend_ms": 257.154,
+    "V_at_80ms_mV": 14.6006,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7006,
+    "control": {
+     "target_ms": 252.375,
+     "stretch_factor_k": 0.973023,
+     "APD90_after_stretch_ms": 252.375,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.989,
+     "stretch_factor_k": 1.151478,
+     "APD90_after_stretch_ms": 283.989,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.67,
+    "APD90_blend_ms": 256.637,
+    "V_at_80ms_mV": 14.6023,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7023,
+    "control": {
+     "target_ms": 252.095,
+     "stretch_factor_k": 0.974287,
+     "APD90_after_stretch_ms": 252.095,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.919,
+     "stretch_factor_k": 1.154453,
+     "APD90_after_stretch_ms": 283.919,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.68,
+    "APD90_blend_ms": 256.108,
+    "V_at_80ms_mV": 14.6041,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7041,
+    "control": {
+     "target_ms": 251.815,
+     "stretch_factor_k": 0.975623,
+     "APD90_after_stretch_ms": 251.815,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.849,
+     "stretch_factor_k": 1.157523,
+     "APD90_after_stretch_ms": 283.849,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.69,
+    "APD90_blend_ms": 255.571,
+    "V_at_80ms_mV": 14.6058,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7058,
+    "control": {
+     "target_ms": 251.535,
+     "stretch_factor_k": 0.977009,
+     "APD90_after_stretch_ms": 251.535,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.779,
+     "stretch_factor_k": 1.160661,
+     "APD90_after_stretch_ms": 283.779,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.7,
+    "APD90_blend_ms": 255.024,
+    "V_at_80ms_mV": 14.6075,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7075,
+    "control": {
+     "target_ms": 251.255,
+     "stretch_factor_k": 0.978467,
+     "APD90_after_stretch_ms": 251.255,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.709,
+     "stretch_factor_k": 1.163893,
+     "APD90_after_stretch_ms": 283.709,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.71,
+    "APD90_blend_ms": 254.477,
+    "V_at_80ms_mV": 14.6092,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7092,
+    "control": {
+     "target_ms": 250.975,
+     "stretch_factor_k": 0.979927,
+     "APD90_after_stretch_ms": 250.975,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.639,
+     "stretch_factor_k": 1.167138,
+     "APD90_after_stretch_ms": 283.639,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.72,
+    "APD90_blend_ms": 253.918,
+    "V_at_80ms_mV": 14.611,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.711,
+    "control": {
+     "target_ms": 250.695,
+     "stretch_factor_k": 0.981466,
+     "APD90_after_stretch_ms": 250.695,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.569,
+     "stretch_factor_k": 1.170485,
+     "APD90_after_stretch_ms": 283.569,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.73,
+    "APD90_blend_ms": 253.373,
+    "V_at_80ms_mV": 14.6127,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7127,
+    "control": {
+     "target_ms": 250.415,
+     "stretch_factor_k": 0.982941,
+     "APD90_after_stretch_ms": 250.415,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.499,
+     "stretch_factor_k": 1.173767,
+     "APD90_after_stretch_ms": 283.499,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.74,
+    "APD90_blend_ms": 252.817,
+    "V_at_80ms_mV": 14.6144,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7144,
+    "control": {
+     "target_ms": 250.135,
+     "stretch_factor_k": 0.984479,
+     "APD90_after_stretch_ms": 250.135,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.429,
+     "stretch_factor_k": 1.177134,
+     "APD90_after_stretch_ms": 283.429,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.75,
+    "APD90_blend_ms": 252.278,
+    "V_at_80ms_mV": 14.6161,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7161,
+    "control": {
+     "target_ms": 249.855,
+     "stretch_factor_k": 0.985935,
+     "APD90_after_stretch_ms": 249.855,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.359,
+     "stretch_factor_k": 1.180412,
+     "APD90_after_stretch_ms": 283.359,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.76,
+    "APD90_blend_ms": 251.737,
+    "V_at_80ms_mV": 14.6179,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7179,
+    "control": {
+     "target_ms": 249.575,
+     "stretch_factor_k": 0.987408,
+     "APD90_after_stretch_ms": 249.575,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.289,
+     "stretch_factor_k": 1.18372,
+     "APD90_after_stretch_ms": 283.289,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.77,
+    "APD90_blend_ms": 251.213,
+    "V_at_80ms_mV": 14.6196,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7196,
+    "control": {
+     "target_ms": 249.295,
+     "stretch_factor_k": 0.988799,
+     "APD90_after_stretch_ms": 249.295,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.219,
+     "stretch_factor_k": 1.186939,
+     "APD90_after_stretch_ms": 283.219,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.78,
+    "APD90_blend_ms": 250.694,
+    "V_at_80ms_mV": 14.6213,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7213,
+    "control": {
+     "target_ms": 249.015,
+     "stretch_factor_k": 0.990162,
+     "APD90_after_stretch_ms": 249.015,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.149,
+     "stretch_factor_k": 1.190134,
+     "APD90_after_stretch_ms": 283.149,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.79,
+    "APD90_blend_ms": 250.192,
+    "V_at_80ms_mV": 14.623,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.723,
+    "control": {
+     "target_ms": 248.735,
+     "stretch_factor_k": 0.991439,
+     "APD90_after_stretch_ms": 248.735,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.079,
+     "stretch_factor_k": 1.193235,
+     "APD90_after_stretch_ms": 283.079,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.8,
+    "APD90_blend_ms": 249.699,
+    "V_at_80ms_mV": 14.6248,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7248,
+    "control": {
+     "target_ms": 248.455,
+     "stretch_factor_k": 0.992668,
+     "APD90_after_stretch_ms": 248.455,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 283.009,
+     "stretch_factor_k": 1.196288,
+     "APD90_after_stretch_ms": 283.009,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.81,
+    "APD90_blend_ms": 249.225,
+    "V_at_80ms_mV": 14.6265,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7265,
+    "control": {
+     "target_ms": 248.175,
+     "stretch_factor_k": 0.993796,
+     "APD90_after_stretch_ms": 248.175,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.939,
+     "stretch_factor_k": 1.199227,
+     "APD90_after_stretch_ms": 282.939,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.82,
+    "APD90_blend_ms": 248.758,
+    "V_at_80ms_mV": 14.6282,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7282,
+    "control": {
+     "target_ms": 247.895,
+     "stretch_factor_k": 0.994888,
+     "APD90_after_stretch_ms": 247.895,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.869,
+     "stretch_factor_k": 1.202132,
+     "APD90_after_stretch_ms": 282.869,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.83,
+    "APD90_blend_ms": 248.315,
+    "V_at_80ms_mV": 14.6299,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7299,
+    "control": {
+     "target_ms": 247.615,
+     "stretch_factor_k": 0.995843,
+     "APD90_after_stretch_ms": 247.615,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.799,
+     "stretch_factor_k": 1.20488,
+     "APD90_after_stretch_ms": 282.799,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.84,
+    "APD90_blend_ms": 247.87,
+    "V_at_80ms_mV": 14.6317,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7317,
+    "control": {
+     "target_ms": 247.335,
+     "stretch_factor_k": 0.99681,
+     "APD90_after_stretch_ms": 247.335,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.729,
+     "stretch_factor_k": 1.207652,
+     "APD90_after_stretch_ms": 282.729,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.85,
+    "APD90_blend_ms": 247.46,
+    "V_at_80ms_mV": 14.6334,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7334,
+    "control": {
+     "target_ms": 247.055,
+     "stretch_factor_k": 0.997583,
+     "APD90_after_stretch_ms": 247.055,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.659,
+     "stretch_factor_k": 1.210195,
+     "APD90_after_stretch_ms": 282.659,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.86,
+    "APD90_blend_ms": 247.047,
+    "V_at_80ms_mV": 14.6351,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7351,
+    "control": {
+     "target_ms": 246.775,
+     "stretch_factor_k": 0.998371,
+     "APD90_after_stretch_ms": 246.775,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.589,
+     "stretch_factor_k": 1.212765,
+     "APD90_after_stretch_ms": 282.589,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.87,
+    "APD90_blend_ms": 246.655,
+    "V_at_80ms_mV": 14.6369,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7369,
+    "control": {
+     "target_ms": 246.495,
+     "stretch_factor_k": 0.999038,
+     "APD90_after_stretch_ms": 246.495,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.519,
+     "stretch_factor_k": 1.215197,
+     "APD90_after_stretch_ms": 282.519,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.88,
+    "APD90_blend_ms": 246.276,
+    "V_at_80ms_mV": 14.6386,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7386,
+    "control": {
+     "target_ms": 246.215,
+     "stretch_factor_k": 0.999636,
+     "APD90_after_stretch_ms": 246.215,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.449,
+     "stretch_factor_k": 1.217552,
+     "APD90_after_stretch_ms": 282.449,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.89,
+    "APD90_blend_ms": 245.895,
+    "V_at_80ms_mV": 14.6403,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7403,
+    "control": {
+     "target_ms": 245.935,
+     "stretch_factor_k": 1.000238,
+     "APD90_after_stretch_ms": 245.935,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.379,
+     "stretch_factor_k": 1.219919,
+     "APD90_after_stretch_ms": 282.379,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.9,
+    "APD90_blend_ms": 245.546,
+    "V_at_80ms_mV": 14.642,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.742,
+    "control": {
+     "target_ms": 245.655,
+     "stretch_factor_k": 1.000659,
+     "APD90_after_stretch_ms": 245.655,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.309,
+     "stretch_factor_k": 1.222072,
+     "APD90_after_stretch_ms": 282.309,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.91,
+    "APD90_blend_ms": 245.197,
+    "V_at_80ms_mV": 14.6438,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7438,
+    "control": {
+     "target_ms": 245.375,
+     "stretch_factor_k": 1.001078,
+     "APD90_after_stretch_ms": 245.375,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.239,
+     "stretch_factor_k": 1.22423,
+     "APD90_after_stretch_ms": 282.239,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.92,
+    "APD90_blend_ms": 244.852,
+    "V_at_80ms_mV": 14.6455,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7455,
+    "control": {
+     "target_ms": 245.095,
+     "stretch_factor_k": 1.001474,
+     "APD90_after_stretch_ms": 245.095,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.169,
+     "stretch_factor_k": 1.226367,
+     "APD90_after_stretch_ms": 282.169,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.93,
+    "APD90_blend_ms": 244.531,
+    "V_at_80ms_mV": 14.6472,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7472,
+    "control": {
+     "target_ms": 244.815,
+     "stretch_factor_k": 1.001727,
+     "APD90_after_stretch_ms": 244.815,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.099,
+     "stretch_factor_k": 1.228335,
+     "APD90_after_stretch_ms": 282.099,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.94,
+    "APD90_blend_ms": 244.211,
+    "V_at_80ms_mV": 14.6489,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7489,
+    "control": {
+     "target_ms": 244.535,
+     "stretch_factor_k": 1.001975,
+     "APD90_after_stretch_ms": 244.535,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 282.029,
+     "stretch_factor_k": 1.230303,
+     "APD90_after_stretch_ms": 282.029,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.95,
+    "APD90_blend_ms": 243.892,
+    "V_at_80ms_mV": 14.6507,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7507,
+    "control": {
+     "target_ms": 244.255,
+     "stretch_factor_k": 1.002214,
+     "APD90_after_stretch_ms": 244.255,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 281.959,
+     "stretch_factor_k": 1.232268,
+     "APD90_after_stretch_ms": 281.959,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.96,
+    "APD90_blend_ms": 243.597,
+    "V_at_80ms_mV": 14.6524,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7524,
+    "control": {
+     "target_ms": 243.975,
+     "stretch_factor_k": 1.002312,
+     "APD90_after_stretch_ms": 243.975,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 281.889,
+     "stretch_factor_k": 1.234066,
+     "APD90_after_stretch_ms": 281.889,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.97,
+    "APD90_blend_ms": 243.303,
+    "V_at_80ms_mV": 14.6541,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7541,
+    "control": {
+     "target_ms": 243.695,
+     "stretch_factor_k": 1.002402,
+     "APD90_after_stretch_ms": 243.695,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 281.819,
+     "stretch_factor_k": 1.235858,
+     "APD90_after_stretch_ms": 281.819,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.98,
+    "APD90_blend_ms": 243.01,
+    "V_at_80ms_mV": 14.6558,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7558,
+    "control": {
+     "target_ms": 243.415,
+     "stretch_factor_k": 1.002482,
+     "APD90_after_stretch_ms": 243.415,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 281.749,
+     "stretch_factor_k": 1.237645,
+     "APD90_after_stretch_ms": 281.749,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 0.99,
+    "APD90_blend_ms": 242.731,
+    "V_at_80ms_mV": 14.6576,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7576,
+    "control": {
+     "target_ms": 243.135,
+     "stretch_factor_k": 1.002485,
+     "APD90_after_stretch_ms": 243.135,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 281.679,
+     "stretch_factor_k": 1.239342,
+     "APD90_after_stretch_ms": 281.679,
+     "check_within_0.5ms": true
+    }
+   },
+   {
+    "w": 1.0,
+    "APD90_blend_ms": 242.46,
+    "V_at_80ms_mV": 14.6593,
+    "splice_offset_mV (to 13.9 at +80 ms)": -0.7593,
+    "control": {
+     "target_ms": 242.855,
+     "stretch_factor_k": 1.002432,
+     "APD90_after_stretch_ms": 242.855,
+     "check_within_0.5ms": true
+    },
+    "HF": {
+     "target_ms": 281.609,
+     "stretch_factor_k": 1.240978,
+     "APD90_after_stretch_ms": 281.609,
+     "check_within_0.5ms": true
+    }
+   }
+  ],
+  "checks": {
+   "control_endo_minus_epi_after_stretch_ms": 28.0,
+   "HF_endo_minus_epi_after_stretch_ms": 7.0,
+   "every_w_within_0.5ms_of_target": true,
+   "control_scale_of_the_transmural_difference (28 / own)": 0.9418
+  }
+ },
+ "iks": {
+  "ENDO control": {
+   "target_ms": 270.855,
+   "GKs_scale": 1.349859,
+   "GKs_b": 0.0014848446883336036,
+   "achieved_APD90_ms": 270.87,
+   "within_0.25ms": true,
+   "evaluations": [
+    {
+     "scale": 1.0,
+     "APD90_ms": 271.72,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 1.349859,
+     "APD90_ms": 270.87,
+     "beats": 200,
+     "steady": true
+    }
+   ],
+   "wall_s": 59.0
+  },
+  "EPI control": {
+   "target_ms": 242.855,
+   "GKs_scale": 0.740818,
+   "GKs_b": 0.0008149000427498897,
+   "achieved_APD90_ms": 242.7,
+   "within_0.25ms": true,
+   "evaluations": [
+    {
+     "scale": 1.0,
+     "APD90_ms": 241.99,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.740818,
+     "APD90_ms": 242.7,
+     "beats": 200,
+     "steady": true
+    }
+   ],
+   "wall_s": 58.9
+  },
+  "ENDO HF": {
+   "target_ms": 288.609,
+   "GKs_scale": 0.0,
+   "GKs_b": 4.8581289240421785e-32,
+   "achieved_APD90_ms": 274.22,
+   "within_0.25ms": false,
+   "evaluations": [
+    {
+     "scale": 1.0,
+     "APD90_ms": 271.72,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.740818,
+     "APD90_ms": 272.37,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.000412,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 274.22,
+     "beats": 200,
+     "steady": true
+    }
+   ],
+   "wall_s": 386.7
+  },
+  "EPI HF": {
+   "target_ms": 281.609,
+   "GKs_scale": 0.0,
+   "GKs_b": 2.75806421060977e-133,
+   "achieved_APD90_ms": 244.84,
+   "within_0.25ms": false,
+   "evaluations": [
+    {
+     "scale": 1.0,
+     "APD90_ms": 241.99,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.740818,
+     "APD90_ms": 242.7,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "scale": 0.0,
+     "APD90_ms": 244.84,
+     "beats": 200,
+     "steady": true
+    }
+   ],
+   "wall_s": 336.0
+  }
+ }
+}

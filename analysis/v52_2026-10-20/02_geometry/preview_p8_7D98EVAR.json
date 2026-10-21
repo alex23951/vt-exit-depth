@@ -1,0 +1,58 @@
+{
+ "heart": "7D98EVAR",
+ "a_D19b_fill": {
+  "nodes_with_phi_lv_plus_phi_rv_lt_1e-9": 41745,
+  "passes": 2,
+  "left_unfilled": 0
+ },
+ "a_APD_w_step_along_split_edges": {
+  "edges": 55996,
+  "median": 0.0447,
+  "p99": 0.196,
+  "max": 0.528,
+  "largest_at": {
+   "z": 1.0,
+   "height_above_AV_mid_plane_mm": -1.5,
+   "height_above_PV_mid_plane_mm": -18.9,
+   "d_s": [
+    0.0,
+    0.492
+   ],
+   "phi_epi_fix": [
+    0.0,
+    0.071
+   ],
+   "w_apd": [
+    0.0,
+    0.528
+   ]
+  }
+ },
+ "a_guard": {
+  "below_1pct_median": 355,
+  "filled_2mm": 326,
+  "filled_4mm": 12,
+  "fallback_v51_n": 17,
+  "stop (fallback also under 1 %)": 0
+ },
+ "a_orthonormality": {
+  "max_|f|-1": 1.0,
+  "max_|s|-1": 3.3306690738754696e-16,
+  "max_|f.s|": 4.360400929215302e-14,
+  "max_|n|-1": 1.0,
+  "max_|l.s|": 5.2791104820926193e-14
+ },
+ "a_stored_transmural_vector": "n = f x s of data/biv/<H>/fibres_v51/bivF_v51.lon (the .lon holds the fibre f and the sheet s; s is the in-wall cross-fibre column, so the transmural direction is the sheet normal). For LV-side elements fibres_fix.py built it as column e2 of its frame: grad phi_lv, grad phi_rv and grad phi_epi_fix, each orthogonalised to l, bislerped by d and by phi_epi_fix, so yes, from transmural gradients (rotated with the fibre about e2, which leaves e2 unchanged)",
+ "b_D25_focus": {
+  "node": 181680,
+  "AHA_segment": 2,
+  "z_converged": 0.9592,
+  "in_AHA_2": true
+ },
+ "d_D29_RV_PMJs_above_PV_mid_plane": {
+  "count": 0,
+  "heights_mm": [],
+  "on_surfaces (v5.2 surface files)": {},
+  "angles_in_pulmonary_frame_deg": []
+ }
+}

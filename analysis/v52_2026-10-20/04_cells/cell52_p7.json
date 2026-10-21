@@ -1,0 +1,176 @@
+{
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "model": "Tomek52b (see docstring)",
+ "targets_ms": {
+  "ENDO": 288.609,
+  "EPI": 281.609
+ },
+ "a_IKr": {
+  "ENDO": {
+   "target_ms": 288.609,
+   "GKr_scale": 0.878867,
+   "APD90_CL1000_ms": 288.46,
+   "within_0.25ms": true,
+   "steady_CL1000": true,
+   "afterdepolarisations_CL1000": {
+    "EAD_any": false,
+    "failure_any": false,
+    "DAD_any": false
+   },
+   "APD90_CL600_ms": 252.67,
+   "steady_CL600": true,
+   "afterdepolarisations_CL600": {
+    "EAD_any": false,
+    "failure_any": false,
+    "DAD_any": false
+   },
+   "evaluations": [
+    {
+     "GKr_scale": 1.0,
+     "APD90_ms": 271.72,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "GKr_scale": 0.740818,
+     "APD90_ms": 310.96,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "GKr_scale": 0.878867,
+     "APD90_ms": 288.46,
+     "beats": 200,
+     "steady": true
+    }
+   ]
+  },
+  "EPI": {
+   "target_ms": 281.609,
+   "GKr_scale": 0.736025,
+   "APD90_CL1000_ms": 281.63,
+   "within_0.25ms": true,
+   "steady_CL1000": true,
+   "afterdepolarisations_CL1000": {
+    "EAD_any": true,
+    "failure_any": false,
+    "DAD_any": false
+   },
+   "APD90_CL600_ms": 239.49,
+   "steady_CL600": true,
+   "afterdepolarisations_CL600": {
+    "EAD_any": true,
+    "failure_any": false,
+    "DAD_any": false
+   },
+   "evaluations": [
+    {
+     "GKr_scale": 1.0,
+     "APD90_ms": 241.99,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "GKr_scale": 0.740818,
+     "APD90_ms": 280.77,
+     "beats": 200,
+     "steady": true
+    },
+    {
+     "GKr_scale": 0.736025,
+     "APD90_ms": 281.63,
+     "beats": 200,
+     "steady": true
+    }
+   ]
+  }
+ },
+ "b_Gomez2014": {
+  "threshold x0.8": {
+   "ENDO": {
+    "APD90_CL1000_ms": 421.41,
+    "beats": 400,
+    "steady_CL1000": true,
+    "afterdepolarisations_CL1000": {
+     "EAD_any": false,
+     "failure_any": false,
+     "DAD_any": false
+    },
+    "APD90_CL600_ms": 335.48,
+    "steady_CL600": true,
+    "afterdepolarisations_CL600": {
+     "EAD_any": false,
+     "failure_any": false,
+     "DAD_any": false
+    }
+   },
+   "EPI": {
+    "APD90_CL1000_ms": 344.06,
+    "beats": 400,
+    "steady_CL1000": true,
+    "afterdepolarisations_CL1000": {
+     "EAD_any": false,
+     "failure_any": false,
+     "DAD_any": false
+    },
+    "APD90_CL600_ms": 285.22,
+    "steady_CL600": true,
+    "afterdepolarisations_CL600": {
+     "EAD_any": false,
+     "failure_any": false,
+     "DAD_any": false
+    }
+   },
+   "mean_CL1000_ms (target 1.110 x 256.855 = 285.11)": 382.735,
+   "endo_minus_epi_CL1000_ms (target 7)": 77.35,
+   "mean_ratio_to_control": 1.4901
+  },
+  "threshold / 0.8": {
+   "ENDO": {
+    "APD90_CL1000_ms": 419.89,
+    "beats": 400,
+    "steady_CL1000": true,
+    "afterdepolarisations_CL1000": {
+     "EAD_any": false,
+     "failure_any": false,
+     "DAD_any": false
+    },
+    "APD90_CL600_ms": 335.88,
+    "steady_CL600": true,
+    "afterdepolarisations_CL600": {
+     "EAD_any": false,
+     "failure_any": false,
+     "DAD_any": false
+    }
+   },
+   "EPI": {
+    "APD90_CL1000_ms": 345.3,
+    "beats": 400,
+    "steady_CL1000": true,
+    "afterdepolarisations_CL1000": {
+     "EAD_any": false,
+     "failure_any": false,
+     "DAD_any": false
+    },
+    "APD90_CL600_ms": 284.91,
+    "steady_CL600": true,
+    "afterdepolarisations_CL600": {
+     "EAD_any": false,
+     "failure_any": false,
+     "DAD_any": false
+    }
+   },
+   "mean_CL1000_ms (target 1.110 x 256.855 = 285.11)": 382.595,
+   "endo_minus_epi_CL1000_ms (target 7)": 74.59,
+   "mean_ratio_to_control": 1.4895
+  }
+ },
+ "mapping_notes": [
+  "INab x1.00: no change",
+  "Jup x0.50 scales the SERCA uptake terms only; ToR-ORd computes Jup = Jup_b ((1 - f) Jupnp + f Jupp - Jleak), so the leak is scaled separately (x1.30)",
+  "CaMKa x1.50: the active-CaMK variable that sets the phosphorylated fractions; the CaMKt rate equation uses CaMKb + CaMKt directly and is not scaled",
+  "Jrel,NP,inf Ca sensitivity x0.80: ToR-ORd uses Cajsr_half = 1.7 mM (ORd 1.5 mM); the factor is applied to Cajsr_half in the NP term only; its direction is not stated in the paper, both readings reported",
+  "tau_hL x1.80: thL; ToR-ORd ties thLp = 3 thL as ORd does"
+ ],
+ "wall_s": 446.0
+}

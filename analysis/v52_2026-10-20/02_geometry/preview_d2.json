@@ -1,0 +1,114 @@
+{
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "Y5HYEDL4": {
+  "LV_side_elements": 1152906,
+  "angle_deg_median_p95_max": [
+   0.552,
+   7.351,
+   90.0
+  ],
+  "elements_over_5deg": 97700,
+  "stimulus_nodes": 86,
+  "at_stimulus_nodes_median_p95_max": [
+   0.67,
+   12.08,
+   90.0
+  ],
+  "largest_at": [
+   [
+    "aortic_cusp_lcc_z_d90",
+    90.0
+   ],
+   [
+    "aortic_cusp_rcc_z_d10",
+    82.85
+   ],
+   [
+    "aortic_cusp_lcc_z_d50",
+    15.78
+   ],
+   [
+    "aortic_cusp_rcc_z_d50",
+    13.7
+   ],
+   [
+    "aortic_cusp_rcc_z_d75",
+    12.99
+   ]
+  ]
+ },
+ "6G8DD8S5": {
+  "LV_side_elements": 1471782,
+  "angle_deg_median_p95_max": [
+   1.072,
+   10.251,
+   90.0
+  ],
+  "elements_over_5deg": 193891,
+  "stimulus_nodes": 89,
+  "at_stimulus_nodes_median_p95_max": [
+   1.44,
+   64.656,
+   79.49
+  ],
+  "largest_at": [
+   [
+    "aortic_cusp_rcc_z_d10",
+    79.49
+   ],
+   [
+    "aortic_cusp_rcc_z_d50",
+    75.85
+   ],
+   [
+    "aortic_cusp_rcc_z_d75",
+    72.99
+   ],
+   [
+    "aortic_cusp_lcc_z_d75",
+    69.85
+   ],
+   [
+    "aortic_cusp_lcc_z_d90",
+    68.34
+   ]
+  ]
+ },
+ "7D98EVAR": {
+  "LV_side_elements": 1176264,
+  "angle_deg_median_p95_max": [
+   0.716,
+   6.488,
+   90.0
+  ],
+  "elements_over_5deg": 96372,
+  "stimulus_nodes": 90,
+  "at_stimulus_nodes_median_p95_max": [
+   1.065,
+   58.283,
+   85.21
+  ],
+  "largest_at": [
+   [
+    "aortic_cusp_rcc_z_d50",
+    85.21
+   ],
+   [
+    "aortic_cusp_rcc_z_d75",
+    80.38
+   ],
+   [
+    "aortic_cusp_rcc_z_d90",
+    69.62
+   ],
+   [
+    "aortic_cusp_lcc_z_d90",
+    68.59
+   ],
+   [
+    "aortic_cusp_lcc_z_d75",
+    65.96
+   ]
+  ]
+ }
+}
