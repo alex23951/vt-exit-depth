@@ -1,0 +1,85 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "b_step0_first_reading_rerun": {
+  "reading": "TV ring node nearest the PV ring (superior tricuspid annulus)",
+  "span_mm_now": 10.22,
+  "span_mm_stored": 10.22,
+  "whole_35f_block_identical_to_stored": true,
+  "TA_level_height_mm": -15.72,
+  "its_100pct_point": {
+   "full_node": 119828,
+   "what": "lowest PV disc-wall contact node on the RV cavity surface within 45 deg of the aortic side",
+   "height_D13_frame_mm (mid-plane ring = 0)": -2.88,
+   "theta_D13_frame_deg": 354.5,
+   "distance_to_cut52_100pct_mm": 3.14,
+   "distance_to_cut52_p_top_mm": 1.0
+  },
+  "PV_disc_faces_D13_frame_mm (ventricular, arterial)": [
+   -2.97,
+   2.84
+  ]
+ },
+ "a_0pct_landmarks": {
+  "cut52": {
+   "full_node": 116417,
+   "height_mm": -11.765,
+   "projected_from": "the D13 mid-plane ring point at the posterior centre (cut52 100 %)"
+  },
+  "step0_first_reading": {
+   "full_node": 18155,
+   "height_mm": -11.989,
+   "projected_from": "step 0's 100 % point (b)"
+  },
+  "same_node": false,
+  "distance_between_mm": 1.06,
+  "same_TA_level_reading": "yes: both use the TV-ring cavity node nearest the PV disc (superior annulus); heights -15.719 (cut52) and -15.72 (step 0)"
+ },
+ "c_100pct_point": {
+  "full_node": 508294,
+  "height_mm": 0.075,
+  "tags_of_its_elements": [
+   2,
+   10
+  ],
+  "on_any_boundary_face": false,
+  "on_RV_cavity_surface": false,
+  "nearest_RV_cavity_surface_node": {
+   "full_node": 352621,
+   "mm": 2.6,
+   "height_mm": -2.5
+  },
+  "p_top (cavity rim node within 10 deg of posterior, nearest the ring point)": {
+   "full_node": 352621,
+   "mm": 2.597,
+   "height_mm": -2.5
+  }
+ },
+ "d_boundaries": {
+  "path_check": {
+   "surface_mm": 10.943,
+   "rise_mm": 2.597,
+   "span_mm": 13.54,
+   "stored_span_mm": 13.54
+  },
+  "cut52 (47.2 % of surface + rise)": {
+   "distance_along_mm": 6.39,
+   "height_on_PV_axis_mm": -6.201,
+   "pct_of_axial_span": 47.0,
+   "tag1_tag2_area_above_mm2": 107.9,
+   "tag1_tag2_area_above_within_40mm_of_RVOT_axis_mm2": 107.9,
+   "LV_group_RV_group_area_above_mm2 (the faces the cut splits)": 107.9,
+   "RV_PMJs_above": 47
+  },
+  "wall-only (47.2 % of the surface path)": {
+   "distance_along_mm": 5.17,
+   "height_on_PV_axis_mm": -7.263,
+   "pct_of_axial_span": 38.0,
+   "tag1_tag2_area_above_mm2": 120.5,
+   "tag1_tag2_area_above_within_40mm_of_RVOT_axis_mm2": 120.5,
+   "LV_group_RV_group_area_above_mm2 (the faces the cut splits)": 120.5,
+   "RV_PMJs_above": 60
+  },
+  "RV_PMJs_total": 1209
+ }
+}
