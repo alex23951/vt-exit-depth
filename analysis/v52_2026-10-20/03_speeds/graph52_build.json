@@ -1,0 +1,92 @@
+{
+ "6G8DD8S5": {
+  "topology_key": "543ba7210bafa53bb48cd31f18126259dce2eae58152330d4b90542192262dbe",
+  "inputs": {
+   "heart": "6G8DD8S5",
+   "pts_sha256": "706f24068856f7b6aaf4cc0e95b84c3b86c0149e5ff51c407ec3d0baaa24f3b5",
+   "elem_sha256": "00e2ee1ac91877e83866d80d8a4c0c673a647023126a6ed947fdb9e7da77200a",
+   "stencil": "v52-3ring-1 (R4.2: graph distance <= 3, edges <= 5.25 mm)",
+   "ring": 3,
+   "max_mm": 5.25,
+   "midpoint_knn": 32,
+   "removed_sha256": "e1096eb3b04e7901939f14050d37d7aeb71daadcbdaaa54d25176aebd611555f"
+  },
+  "info": {
+   "nodes": 376213,
+   "elements": 1998932,
+   "ring": 3,
+   "E1": 2461631,
+   "E2_pairs_candidates": 9021621,
+   "E2_surface_pairs_tested": 558494,
+   "E2_kept": 8760746,
+   "E3_pairs_candidates": 20071897,
+   "E3_surface_pairs_tested": 910252,
+   "E3_kept": 19682370,
+   "removed_pairs_in_list": 2788,
+   "edges_per_node": 164.29,
+   "build_s": 91.2,
+   "peak_rss_MB": 3082.0
+  },
+  "cache": "topo52_6G8DD8S5_543ba7210bafa53b.npz",
+  "q_cache": "q52_6G8DD8S5_01b99a81c434c4ac.npz"
+ },
+ "7D98EVAR": {
+  "topology_key": "ffa1004c563cbc7d9391bbe622d4757ab21d50743792f5364dcbbd89dbc8f2ba",
+  "inputs": {
+   "heart": "7D98EVAR",
+   "pts_sha256": "7bb43d21e0e63b47046b28b4fc209918e39c30194f8d47117b57a418545123ee",
+   "elem_sha256": "6f4ec89bb3b45d78f41bdaf8ff9654a4937ac716fa0f5543fc21fbb781b6c625",
+   "stencil": "v52-3ring-1 (R4.2: graph distance <= 3, edges <= 5.25 mm)",
+   "ring": 3,
+   "max_mm": 5.25,
+   "midpoint_knn": 32,
+   "removed_sha256": "52040608a0648b24efb5ed5f2ccbfe9a10cb0fd7aef3e3d02793a1911e11c0e9"
+  },
+  "info": {
+   "nodes": 337981,
+   "elements": 1756446,
+   "ring": 3,
+   "E1": 2185648,
+   "E2_pairs_candidates": 7925110,
+   "E2_surface_pairs_tested": 584070,
+   "E2_kept": 7646072,
+   "E3_pairs_candidates": 17415555,
+   "E3_surface_pairs_tested": 951884,
+   "E3_kept": 16988320,
+   "removed_pairs_in_list": 2054,
+   "edges_per_node": 158.71,
+   "build_s": 78.4,
+   "peak_rss_MB": 3245.0
+  },
+  "cache": "topo52_7D98EVAR_ffa1004c563cbc7d.npz",
+  "q_cache": "q52_7D98EVAR_b270b44a52ebd9b2.npz"
+ },
+ "Y5HYEDL4": {
+  "topology_key": "45cb80eb1f0403b152d269d6b8de75be5d9b995ab6aeebdc6a8b36ed8f807ee5",
+  "inputs": {
+   "heart": "Y5HYEDL4",
+   "pts_sha256": "8db0f1f5c04cbb451aa266aaa7abebd5034d7983ab5ca59f36cd9c1bbbf2b785",
+   "elem_sha256": "93265f6b27f24c55b9cbb6e9d6204c7dea3548d13241e3e384bba2bb3e5a7ce4",
+   "stencil": "v51-2ring-1",
+   "ring": 2,
+   "max_mm": 3.5,
+   "midpoint_knn": 32,
+   "removed_sha256": "7ec39e0df7d151f1a0bacfaba622ff6e162438987590d8ef8fc87a224a1a3379"
+  },
+  "info": {
+   "nodes": 375446,
+   "elements": 1939909,
+   "ring": 2,
+   "E1": 2420534,
+   "E2_pairs_candidates": 8752623,
+   "E2_surface_pairs_tested": 672878,
+   "E2_kept": 8430163,
+   "removed_pairs_in_list": 280,
+   "edges_per_node": 57.8,
+   "build_s": 30.0,
+   "peak_rss_MB": 1462.0
+  },
+  "cache": "topo52_Y5HYEDL4_45cb80eb1f0403b1.npz",
+  "q_cache": "q52_Y5HYEDL4_6ba0b8343e41afd2.npz"
+ }
+}
