@@ -254,6 +254,61 @@
    }
   ]
  },
+ "summit_D22": {
+  "heart": "Y5HYEDL4",
+  "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+  "variant": "projB",
+  "anchor_A": {
+   "full_node": 57499,
+   "mm": [
+    73.296,
+    74.636,
+    110.316
+   ]
+  },
+  "candidate_quarter_nodes": 4998,
+  "band_9.6mm_nodes": 2,
+  "A_to_nearest_candidate_mm": 10.4,
+  "projB": {
+   "step2_point_full_node": 33194,
+   "projection_distance_mm": 2.79
+  },
+  "bifurcation_B": {
+   "node": 228529,
+   "dist_A_mm": 11.27,
+   "moved_from_v51_B_mm": 13.29
+  },
+  "sector_nodes": 548,
+  "superior_nodes": 360,
+  "inferior_lateral_nodes": 188,
+  "sector_area_mm2 (Kuniewicz 287.38 +- 144.95)": 321.7,
+  "superior_area_share (Kuniewicz 0.545; v5.1 arc 0.549)": 0.623,
+  "sector_apex_angle_deg (Kuniewicz 85.46 +- 15.94)": 227.2,
+  "all_sector_nodes_on_tag1": true,
+  "sector_nodes_not_on_tag1": 0,
+  "positions": {
+   "superior": {
+    "surface_node": 194639,
+    "on_tag1": true,
+    "dist_B_mm": 6.05,
+    "wall_thickness_mm": 3.8,
+    "moved_from_v51_surface_mm": 15.15
+   },
+   "inferior_lateral": {
+    "surface_node": 55459,
+    "on_tag1": true,
+    "dist_B_mm": 15.17,
+    "wall_thickness_mm": 9.0,
+    "moved_from_v51_surface_mm": 10.98
+   }
+  },
+  "acceptance_both_areas_non_empty_and_on_tag1": true,
+  "steps_2_6_sliver (sites52)": {
+   "apex_angle_deg (Kuniewicz 85.46 +- 15.94)": 35.5,
+   "triangle_area_mm2 (Kuniewicz area 287 +- 145)": 17051.5,
+   "lcx_side_mm (G->B)": 5.54
+  }
+ },
  "gate7a_patch_centres": {
   "posterior_paraseptal": {
    "node": 32305,
@@ -292,7 +347,7 @@
   }
  },
  "capture": {
-  "sites": 170,
+  "sites": 178,
   "invalid": [],
   "v51_sites_whose_stimulated_set_differs_from_the_plain_ball": [],
   "muscle_fraction_new_sites": {
@@ -321,7 +376,15 @@
    "intramural52_rvgrid_12": 0.494,
    "intramural52_rvgrid_20": 0.501,
    "intramural52_rvgrid_21": 0.502,
-   "intramural52_rvgrid_22": 0.495
+   "intramural52_rvgrid_22": 0.495,
+   "lv_summit52_superior_d10": 0.507,
+   "lv_summit52_superior_d50": 0.879,
+   "lv_summit52_superior_d90": 0.429,
+   "lv_summit52_superior_d75": 0.824,
+   "lv_summit52_inferior_lateral_d10": 0.508,
+   "lv_summit52_inferior_lateral_d50": 1.0,
+   "lv_summit52_inferior_lateral_d90": 0.841,
+   "lv_summit52_inferior_lateral_d75": 1.0
   },
   "muscle_fraction_v51_outflow_sites": {
    "rvot_septal_z_d10": 0.494,
@@ -351,38 +414,46 @@
   }
  },
  "8.4_dist_to_summit_tip_mm": {
-  "aortic_cusp_rcc_z_d10": 32.17,
-  "aortic_cusp_rcc_z_d50": 31.46,
-  "aortic_cusp_rcc_z_d75": 30.71,
-  "aortic_cusp_rcc_z_d90": 30.79,
-  "aortic_cusp_lcc_z_d10": 10.13,
-  "aortic_cusp_lcc_z_d50": 10.61,
-  "aortic_cusp_lcc_z_d75": 10.34,
-  "aortic_cusp_lcc_z_d90": 10.39,
-  "lv_summit_superior_z_d10": 22.3,
-  "lv_summit_superior_z_d50": 20.96,
-  "lv_summit_superior_z_d75": 20.91,
-  "lv_summit_superior_z_d90": 19.98,
-  "lv_summit_inferior_lateral_z_d10": 27.01,
-  "lv_summit_inferior_lateral_z_d50": 26.28,
-  "lv_summit_inferior_lateral_z_d75": 25.26,
-  "lv_summit_inferior_lateral_z_d90": 25.42,
-  "lv_vein_course_proximal_aiv_z_d10": 42.44,
-  "lv_vein_course_proximal_aiv_z_d50": 43.84,
-  "lv_vein_course_proximal_aiv_z_d75": 45.11,
-  "lv_vein_course_proximal_aiv_z_d90": 45.23,
-  "lv_vein_course_basal_ring_anterolateral_z_d10": 36.73,
-  "lv_vein_course_basal_ring_anterolateral_z_d50": 36.67,
-  "lv_vein_course_basal_ring_anterolateral_z_d75": 36.0,
-  "lv_vein_course_basal_ring_anterolateral_z_d90": 36.27,
-  "lv_vein_course_basal_ring_lateral_z_d10": 55.76,
-  "lv_vein_course_basal_ring_lateral_z_d50": 56.21,
-  "lv_vein_course_basal_ring_lateral_z_d75": 56.31,
-  "lv_vein_course_basal_ring_lateral_z_d90": 56.69,
-  "cusp52_lcc_mid": 9.14,
-  "cusp52_lcc_q": 13.16,
-  "cusp52_rcc_mid": 27.05,
-  "cusp52_rcc_q": 28.75
+  "aortic_cusp_rcc_z_d10": 30.33,
+  "aortic_cusp_rcc_z_d50": 29.65,
+  "aortic_cusp_rcc_z_d75": 28.87,
+  "aortic_cusp_rcc_z_d90": 29.01,
+  "aortic_cusp_lcc_z_d10": 8.05,
+  "aortic_cusp_lcc_z_d50": 8.41,
+  "aortic_cusp_lcc_z_d75": 8.31,
+  "aortic_cusp_lcc_z_d90": 8.07,
+  "lv_summit_superior_z_d10": 20.71,
+  "lv_summit_superior_z_d50": 19.77,
+  "lv_summit_superior_z_d75": 20.13,
+  "lv_summit_superior_z_d90": 19.32,
+  "lv_summit_inferior_lateral_z_d10": 25.72,
+  "lv_summit_inferior_lateral_z_d50": 25.36,
+  "lv_summit_inferior_lateral_z_d75": 24.59,
+  "lv_summit_inferior_lateral_z_d90": 24.85,
+  "lv_vein_course_proximal_aiv_z_d10": 40.78,
+  "lv_vein_course_proximal_aiv_z_d50": 42.44,
+  "lv_vein_course_proximal_aiv_z_d75": 43.86,
+  "lv_vein_course_proximal_aiv_z_d90": 44.06,
+  "lv_vein_course_basal_ring_anterolateral_z_d10": 35.46,
+  "lv_vein_course_basal_ring_anterolateral_z_d50": 35.57,
+  "lv_vein_course_basal_ring_anterolateral_z_d75": 35.03,
+  "lv_vein_course_basal_ring_anterolateral_z_d90": 35.34,
+  "lv_vein_course_basal_ring_lateral_z_d10": 53.49,
+  "lv_vein_course_basal_ring_lateral_z_d50": 53.99,
+  "lv_vein_course_basal_ring_lateral_z_d75": 54.14,
+  "lv_vein_course_basal_ring_lateral_z_d90": 54.53,
+  "cusp52_lcc_mid": 7.73,
+  "cusp52_lcc_q": 11.73,
+  "cusp52_rcc_mid": 25.05,
+  "cusp52_rcc_q": 26.67,
+  "lv_summit52_superior_d10": 7.4,
+  "lv_summit52_superior_d50": 6.22,
+  "lv_summit52_superior_d90": 6.05,
+  "lv_summit52_superior_d75": 5.98,
+  "lv_summit52_inferior_lateral_d10": 18.48,
+  "lv_summit52_inferior_lateral_d50": 16.65,
+  "lv_summit52_inferior_lateral_d90": 15.72,
+  "lv_summit52_inferior_lateral_d75": 15.95
  },
  "8.8": {
   "PV_to_LCC_mm (Acosta 5 +- 3)": [
@@ -403,18 +474,24 @@
    "rvot_free_wall_z_d75": 14.93,
    "rvot_free_wall_z_d90": 15.08
   },
-  "LCC_to_summit_GCV_proxy_mm (Yamada 14.3 +- 3.5; GCV/AIV not in the mesh: the summit sites stand in)": []
+  "LCC_to_summit_GCV_proxy_mm (Yamada 14.3 +- 3.5; GCV/AIV not in the mesh: the summit sites stand in)": [
+   2.05,
+   10.7,
+   5.71,
+   12.37
+  ]
  },
  "files": {
   "manifest": "data/biv/Y5HYEDL4/v52/sites52.json",
-  "sha256": "4f664c8d461d549cb2824c4c52cc52159b85e2de48c511d36d3a46e073225e73"
+  "sha256": "14aa00bc39d2ff57d9ef3f7a8b75ef28a0031ea1a7494f0c095fed70cab067cd"
  },
  "counts": {
   "cusp_crescent": 4,
   "intramural_focus": 1,
   "intramural_lv_grid": 9,
   "intramural_rv_grid": 9,
+  "summit_reanchored": 8,
   "supravalvar": 3
  },
- "wall_s": 31.5
+ "wall_s": 45.3
 }

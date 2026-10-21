@@ -9,7 +9,12 @@ New sets built here (positions are mesh nodes of the merged mesh data/biv/<H>/v5
   supravalvar (8.6): 3 per heart at the pulmonary sinus centres (posterior 0, +-120 deg); the sleeve length = the highest
     RV-muscle (sleeve included) element centroid above the pulmonary mid-plane ring within +-2.5 deg; the site at 50 % of
     it, mid-thickness as above (radial from the pulmonary axis).
-  summit_reanchored (8.3): the LCA ostium on the aortic root's outer surface at theta 56.2 deg (D15), 14.8 mm above the
+  summit_reanchored, as built (D22, ADOPTED 21 Oct 2026 05:18:22 UTC, projB + option A): v5.1's own summit construction
+    (preview_d22.py, 11_site_grid.py's rules on the v5.2 UVC) with B = the candidate-quarter node nearest 8.3 step 2's
+    point below, the sector = candidates within 18.9 mm of B and farther from the ostium than B, two positions, four
+    depths each; these 8 sites enter the manifest (count = D24, pending). The 8.3 steps 2-6 construction below is kept
+    as a report only (its triangle degenerates on these meshes, Q6b).
+  summit_reanchored, 8.3 as written (report only): the LCA ostium on the aortic root's outer surface at theta 56.2 deg (D15), 14.8 mm above the
     aortic mid-plane (the tag-5 outer-surface node of largest radius within +-0.75 mm and +-3 deg); the bifurcation B at
     9.59 mm along the outer surface (2-ring geodesic) on the shortest path toward the left AV groove; the septal margin
     18.92 mm from B toward the anterior interventricular groove (shortest path to the tag-1/tag-2 boundary, then down
@@ -291,6 +296,20 @@ def run(h):
                 k = int(SF.nodes[np.argmin(np.linalg.norm(SF.X - tgt, axis=1))])
                 new.append({'id': f'intramural52_{nm}grid_{i + 1}{j + 1}', 'family': f'intramural_{nm}_grid', 'position': f'{i},{j}', 'node': k,
                             'surface_mm_from_centre': round(float(d[SF.ids([k])[0]]), 2)})
+    # re-anchored summit sites built by D22 (ADOPTED, Alex 21 Oct 2026 05:18:22 UTC: projB + option A, v5.1's disc started
+    # from the ostium anchor): preview_d22.py's construction with B = the candidate-quarter node nearest step 2's point
+    # (D22's relative stop: B is no farther from that point than the nearest tag-1 epicardial node). 8 sites per heart
+    # (2 positions x 4 depths); the count is D24, still pending (geometry may be built, nothing runs on it).
+    import preview_d22 as D22
+    used = {int(s['node']) for s in v51} | {int(s['node']) for s in new}
+    d22 = D22.construct(h, 'projB', used=used, s52sum=geo)
+    tip = np.array(d22.pop('_B_xyz')); d22.pop('_out_json')
+    for s in d22['sites (preview, not in the manifest)']:
+        pos_nm = 'superior' if '_superior_' in s['id'] else 'inferior_lateral'
+        new.append({'id': s['id'], 'family': 'summit_reanchored', 'position': pos_nm, 'node': int(s['node']), 'depth_target': s['depth_target'],
+                    'surface_node': d22['positions'][pos_nm]['surface_node'], 'moved_from_v51_mm': s['moved_from_v51_mm'],
+                    'dist_to_tip_B_mm (8.4)': s['dist_to_tip_B_mm (8.4)'], 'construction': 'D22 projB, option A'})
+    rec['summit_D22'] = {k: v for k, v in d22.items() if k != 'sites (preview, not in the manifest)'}
     rec['gate7a_patch_centres'] = r34['item14']['patch_centres']
     # ---------------- 8.7 capture and muscle fraction on every site
     Pc = read_pts(os.path.join(V, 'biv52cut')) / 1e3; Ec, _ = read_elem(os.path.join(V, 'biv52cut'))

@@ -33,13 +33,15 @@ DEPTHS = (0.10, 0.50, 0.90, 0.75)
 VARIANT = os.environ.get('D22_VARIANT', 'D22')        # 'D22' as proposed, or 'projB' (reported alternative)
 
 
-def run(h):
+def construct(h, variant=VARIANT, used=None, s52sum=None):
+    """The construction; returns the record. used / s52sum: sites52.py passes its own (the build); else read from files."""
+    VARIANT = variant
     B_ = os.path.join(G.REPO, 'data', 'biv', h); V = os.path.join(B_, 'v52'); S = os.path.join(V, 'surfaces')
     pts = read_pts(os.path.join(V, 'biv52')) / 1e3; E, tg = read_elem(os.path.join(V, 'biv52'))
     nod = np.fromfile(os.path.join(V, 'biv52.nod'), dtype=np.int64)
     z, phi, v = (np.loadtxt(os.path.join(V, 'uvc', n + '.dat')) for n in ('z', 'phi', 'v'))
     epi = read_vtx(os.path.join(S, 'epi.vtx'))
-    s52 = json.load(open(os.path.join(HERE, f'sites52_{h}.json')))
+    s52 = {'summit_reanchored': s52sum} if s52sum is not None else json.load(open(os.path.join(HERE, f'sites52_{h}.json')))
     Afull = int(s52['summit_reanchored']['ostium_full_node'])
     Pfull, _, _ = G.load_full(h)
     A = Pfull[Afull]
@@ -74,7 +76,8 @@ def run(h):
     if VARIANT == 'D22':
         if not len(band):
             rec['stop'] = 'no candidate node 9.6 +- 1 mm from the anchor (D22 acceptance fails in this heart)'
-            G.dump(rec, out_json); print(h, rec['stop'], rec['A_to_nearest_candidate_mm']); return
+            rec['_B_xyz'] = None; rec['_out_json'] = out_json
+            return rec
         bif = int(band[np.argmin(np.linalg.norm(pts[band] - pts[band].mean(0), axis=1))])
     else:
         # variant "projB": B = the candidate nearest 8.3 step 2's bifurcation point (9.59 mm along the outer surface from the ostium)
@@ -106,7 +109,9 @@ def run(h):
                 'sector_apex_angle_deg (Kuniewicz 85.46 +- 15.94)': round(float(extent), 1),
                 'all_sector_nodes_on_tag1': bool(tag1[sector].all()), 'sector_nodes_not_on_tag1': int((~tag1[sector]).sum())})
     v51 = json.load(open(os.path.join(B_, 'sites.json')))
-    used = {int(s['node']) for s in v51} | {int(s['node']) for s in json.load(open(os.path.join(V, 'sites52.json')))['new_sites']}
+    if used is None:
+        used = {int(s['node']) for s in v51} | {int(s['node']) for s in json.load(open(os.path.join(V, 'sites52.json')))['new_sites']}
+    used = set(used)
     s11 = json.load(open(os.path.join(B_, 'summary_11.json')))
     b51 = int(s11['summit_v5']['bifurcation_node'])
     rec['bifurcation_B']['moved_from_v51_B_mm'] = round(float(np.linalg.norm(Bp - pts[b51])), 2)
@@ -139,7 +144,16 @@ def run(h):
     rec['acceptance_both_areas_non_empty_and_on_tag1'] = bool(pos.get('superior') and pos.get('inferior_lateral') and len(sup) and len(inf)
                                                              and pos['superior']['on_tag1'] and pos['inferior_lateral']['on_tag1'])
     rec['steps_2_6_sliver (sites52)'] = {k: s52['summit_reanchored'][k] for k in ('apex_angle_deg (Kuniewicz 85.46 +- 15.94)', 'triangle_area_mm2 (Kuniewicz area 287 +- 145)', 'lcx_side_mm (G->B)')}
+    rec['_B_xyz'] = Bp.tolist(); rec['_out_json'] = out_json
+    return rec
+
+
+def run(h):
+    rec = construct(h)
+    out_json = rec.pop('_out_json'); rec.pop('_B_xyz')
     G.dump(rec, out_json)
+    if 'stop' in rec:
+        print(h, rec['stop'], rec['A_to_nearest_candidate_mm']); return
     print(h, VARIANT, {k: rec[k] for k in ('sector_area_mm2 (Kuniewicz 287.38 +- 144.95)', 'superior_area_share (Kuniewicz 0.545; v5.1 arc 0.549)',
                                   'sector_apex_angle_deg (Kuniewicz 85.46 +- 15.94)', 'acceptance_both_areas_non_empty_and_on_tag1')},
           'B moved', rec['bifurcation_B'], flush=True)
