@@ -1,0 +1,27 @@
+{
+ "heart": "6G8DD8S5",
+ "set": "HF",
+ "mean_ms": 256.855,
+ "w_range": [
+  0.0,
+  1.0
+ ],
+ "target_apd90_ms_range": [
+  281.609,
+  288.609
+ ],
+ "endo_surface_nodes_median_target_ms": 288.609,
+ "epi_surface_nodes_median_target_ms": 281.609,
+ "endo_minus_epi_at_w0_w1_ms": 7.0,
+ "check_difference_within_0.5ms_of_target": true,
+ "max_|k_interp - k_exact|_at_20_random_w": 4.532432978909817e-05,
+ "largest_APD_step_along_a_tet_edge_ms": 7.0,
+ "its_nodes_w": [
+  0.0,
+  1.0
+ ],
+ "median_APD_step_along_tet_edges_ms": 0.3085,
+ "p99_APD_step_ms": 1.894,
+ "file": "data/biv/6G8DD8S5/v52/apd52.npz",
+ "sha256": "36203162f6f877111373f5987ab1ce80b569b0da30d9565c977cc7f786a0b68a"
+}
