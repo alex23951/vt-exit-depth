@@ -1,0 +1,205 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "b_D30_undefined_l": {
+  "elements_|l|_lt_1e-9": 1314,
+  "of_which_exactly_0": 1314,
+  "cause": {
+   "both gradients zero": 1284,
+   "grad basal zero and w_LV = 1 (all weight on it)": 10,
+   "grad ot_lv zero and w_LV = 0 (all weight on it)": 20,
+   "other": 0
+  },
+  "elements_1e-9_le_|l|_lt_0.01 (not filled; normalised as computed)": 151,
+  "face_pairs_touching_them_that_differ_between_merged_and_cut_mesh": 0,
+  "elements_filled_per_pass": [
+   240,
+   208,
+   171,
+   154,
+   125,
+   109,
+   89,
+   72,
+   56,
+   41,
+   27,
+   12,
+   5
+  ],
+  "left_unfilled": 5,
+  "lowest_id_fallbacks": 0,
+  "left_unfilled_detail (no face path to an LV-side element with l)": [
+   {
+    "element": 352185,
+    "z": 1.0,
+    "face_neighbours": 2,
+    "of_which_LV_side": 1,
+    "of_which_LV_side_with_l": 0,
+    "of_which_RV_side": 1,
+    "LV_face_neighbours_also_left": 1,
+    "LV_side_elements_with_l_sharing_a_node": 0,
+    "nearest_LV_side_element_with_l_centroid_mm": 3.32
+   },
+   {
+    "element": 506136,
+    "z": 1.0,
+    "face_neighbours": 1,
+    "of_which_LV_side": 0,
+    "of_which_LV_side_with_l": 0,
+    "of_which_RV_side": 1,
+    "LV_face_neighbours_also_left": 0,
+    "LV_side_elements_with_l_sharing_a_node": 0,
+    "nearest_LV_side_element_with_l_centroid_mm": 4.41
+   },
+   {
+    "element": 646624,
+    "z": 1.0,
+    "face_neighbours": 1,
+    "of_which_LV_side": 0,
+    "of_which_LV_side_with_l": 0,
+    "of_which_RV_side": 1,
+    "LV_face_neighbours_also_left": 0,
+    "LV_side_elements_with_l_sharing_a_node": 0,
+    "nearest_LV_side_element_with_l_centroid_mm": 3.83
+   },
+   {
+    "element": 1178180,
+    "z": 1.0,
+    "face_neighbours": 2,
+    "of_which_LV_side": 0,
+    "of_which_LV_side_with_l": 0,
+    "of_which_RV_side": 2,
+    "LV_face_neighbours_also_left": 0,
+    "LV_side_elements_with_l_sharing_a_node": 0,
+    "nearest_LV_side_element_with_l_centroid_mm": 2.75
+   },
+   {
+    "element": 1862982,
+    "z": 1.0,
+    "face_neighbours": 2,
+    "of_which_LV_side": 1,
+    "of_which_LV_side_with_l": 0,
+    "of_which_RV_side": 1,
+    "LV_face_neighbours_also_left": 1,
+    "LV_side_elements_with_l_sharing_a_node": 0,
+    "nearest_LV_side_element_with_l_centroid_mm": 3.46
+   }
+  ]
+ },
+ "b_D19b_guard_with_D30_l": {
+  "below_1pct_median": 260,
+  "filled_2mm": 183,
+  "filled_4mm": 38,
+  "fallback_v51_n": 39,
+  "stop (fallback also under 1 %)": 0,
+  "D30_elements_among_below_1pct": 7
+ },
+ "b_orthonormality_after_all": {
+  "zero_f_s_n_elements (= the unfilled l)": 5
+ },
+ "b_orthonormality_after (excluding the unfilled)": {
+  "min_|f|": 0.9999999999999998,
+  "min_|s|": 0.9999999999999998,
+  "min_|n|": 0.9999999999999997,
+  "max_||f|-1|": 2.220446049250313e-16,
+  "max_||s|-1|": 2.220446049250313e-16,
+  "max_||n|-1|": 4.440892098500626e-16,
+  "max_|f.s|": 2.220446049250313e-16,
+  "max_|f.n|": 2.220446049250313e-16,
+  "max_|s.n|": 2.220446049250313e-16,
+  "max_|l.t_out|": 4.0190073491430667e-14,
+  "min_|l|": 0.9999999999999998
+ },
+ "a_axis": {
+  "v5.1 graph eikonal": "n = f x s: analysis/v51_2026-10-15/04_build/graph51.py S3 metric, M = sum over fibre, sheet and normal (= f x s) of (factor x speed)^-2 a a^T; the \"normal\" speed is 0.48 (Y5HYEDL4) / 0.336 m/s (params/v51_speeds.json, v51_graph_factors.json)",
+  "v5.1 openCARP eikonal (acceptance C)": "n = f x s: acceptance_c.py setup(), dream.vel_n = the \"normal\" speed and g_in / g_en = calibration \"sheet_normal\"; openCARP's own help: g_it 'sheet direction (transversal)', g_in 'sheet-normal direction (normal)'",
+  "v5.1 monodomain": "n = f x s: 08_monodomain/mono51.py lines 184-185 (g_in / g_en = the \"normal\" set) and mono_cal51.py (that set tuned to the 6 mm transit at the normal speed)",
+  "v5.2 graph eikonal (step 3, written)": "n = f x s: params/v52_speeds.json \"normal\" (sheet normal) = 0.48 / 0.336 m/s; slab52.py acceptance A measured it so",
+  "v5.2 openCARP eikonal and monodomain (not yet written)": "planned as v5.1: vel_n and g_in / g_en on the sheet normal, so the transmural speed on n",
+  "RV side (C2)": "fibres copied from v5.1's file, so transmural on n as in v5.1"
+ },
+ "a_n_equals_t_out": {
+  "max_|n - t_out|": 3.446167689251199e-14,
+  "min_n.t_out": 0.9999999999999996
+ },
+ "a_angle_v52_n_to_v51_n_deg": {
+  "all LV-side elements": {
+   "median": 0.06,
+   "p95": 3.0,
+   "max": 90.0,
+   "n": 1471777
+  },
+  "excluding the D30 elements": {
+   "median": 0.06,
+   "p95": 2.94,
+   "max": 90.0,
+   "n": 1470468
+  },
+  "D30 elements filled (v5.1 rows arbitrary there)": {
+   "median": 44.06,
+   "p95": 84.92,
+   "max": 89.96,
+   "n": 1309
+  },
+  "excluding D30 and guard-filled elements": {
+   "median": 0.06,
+   "p95": 2.93,
+   "max": 90.0,
+   "n": 1470215
+  },
+  "elements_over_10_deg (excl. D30)": 26495,
+  "elements_over_30_deg (excl. D30)": 7615
+ },
+ "a_for_contrast_angle_v52_n_to_v51_s_deg (what s = t_out would have swapped)": {
+  "median": 89.97,
+  "p95": 90.0,
+  "max": 90.0,
+  "n": 1470468
+ },
+ "b_stimulus_nodes": {
+  "checked": 173,
+  "inside_D30_elements (vertex of one)": [],
+  "within_2mm_of_a_D30_element_vertex": [
+   {
+    "id": "cusp52_rcc_mid",
+    "set": "v52_new",
+    "valid": true,
+    "mm": 1.65
+   }
+  ],
+  "nearest_mm": 1.65,
+  "nearest_id": "cusp52_rcc_mid"
+ },
+ "b_D30_elements_where": {
+  "z_ge_0.95": 30,
+  "z_le_0.05": 1284,
+  "other": 0
+ },
+ "c_D25_revised": {
+  "qualifying_nodes": 2712,
+  "in_AHA_2": 151,
+  "segments_of_qualifying_nodes": {
+   "2": 151,
+   "3": 364,
+   "8": 681,
+   "9": 664,
+   "14": 852
+  },
+  "P5_focus_node": 251656,
+  "anchor_node (v5.1 rvot_septal_z_d10)": 17307,
+  "focus_node": 251656,
+  "same_as_P5_focus": true,
+  "AHA_segment": 2,
+  "distance_from_anchor_mm": 8.17,
+  "z_converged": 0.9306,
+  "dist_LV_endo_RV_endo_epi_mm": [
+   2.11,
+   1.81,
+   3.37
+  ],
+  "nearest_RV_endo_node_below_PV_mid_plane_mm": 17.47,
+  "distance_to_P3_SP_mm": 21.03,
+  "distance_from_P5_focus_mm": 0.0
+ }
+}
