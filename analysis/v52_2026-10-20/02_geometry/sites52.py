@@ -29,8 +29,10 @@ New sets built here (positions are mesh nodes of the merged mesh data/biv/<H>/v5
     are placed from the focus beat (D25), not here. (Until 21 Oct: the PC's default focus and 5 mm grids, now removed.)
   gate5fill (D23 with C65, D26): read from data/biv/<H>/v52/gate5fill52.json (gate5fill52.py) and entered before the
     displaced set.
-  displaced (report 7, 11.2a): each v5.1 site moved 4 mm along grad(D19b APD w) and 4 mm along the stored fibre (+f),
-    snapped to the nearest unused node; inside-myocardium recorded; 8.7 capture with the parent site's family.
+  displaced (report 7, 11.2a, D33 adopted 22 Oct 2026): each v5.1 site moved 4 mm along grad(D19b APD w) toward w = 0.5
+    (+ where the site's APD w < 0.5, - where >= 0.5) and 4 mm along the stored fibre (+f; the 21 Oct nodes, held in
+    d33_tangential_held.json), snapped to the nearest unused node; inside-myocardium recorded; 8.7 capture with the parent
+    site's family.
   no-network-new (11.2a with D24): the 4 cusp and 8 summit sites, listed in the control heart's manifest.
   gate7a_patch_centres: report 34 item 14's three centres, written into the manifest (patches for scoring, not sites).
 Every site (v5.1's kept sites included) gets the 8.7 capture test on the cut mesh (biv52cut): nodes within 1.5 mm
@@ -337,26 +339,59 @@ def run(h):
             if (lam >= -1e-9).all() and lam.sum() <= 1 + 1e-9:
                 return True
         return False
-    used_d = {int(x['node']) for x in v51} | {int(x['node']) for x in new}
-    ndisp = {'transmural': 0, 'tangential': 0, 'outside': 0}
+    # D33 (ADOPTED, Alex 22 Oct 2026 17:42:36 UTC, "Mid-wall"): the transmural step runs along the local APD w gradient in
+    # the + sense where the site's nodal APD w is under 0.5 and in the - sense where it is 0.5 or more (toward w = 0.5).
+    # The tangential sites keep their 21 Oct nodes (d33_tangential_held.json); only the transmural sites are re-snapped,
+    # in v5.1 site order, avoiding every other site's node.
+    held_f = os.path.join(V, 'd33_tangential_held.json')
+    held = {x['parent']: x for x in json.load(open(held_f))['sites']} if os.path.exists(held_f) else None
+    dsf = np.load(os.path.join(F52, 'd_s.npy'))
+    used_d = {int(x['node']) for x in v51} | {int(x['node']) for x in new} | ({int(x['node']) for x in held.values()} if held else set())
+    disp = []
     for sv in v51:
         n0 = int(sv['node']); ee = eonm.indices[eonm.indptr[n0]:eonm.indptr[n0 + 1]]
         gw_ = Q12.FF.elem_grad(Pm, Em[ee], wapd).mean(0)
-        dtm = gw_ / max(np.linalg.norm(gw_), 1e-30)
+        sense = 1.0 if wapd[n0] < 0.5 else -1.0
+        dtm = sense * gw_ / max(np.linalg.norm(gw_), 1e-30)
         en = ee[np.argmin(np.linalg.norm(cen_all[ee] - Pm[n0], axis=1))]
         dtg = lonv[en, :3] / np.linalg.norm(lonv[en, :3])
         for kind, dv in (('transmural', dtm), ('tangential', dtg)):
+            if kind == 'tangential' and held is not None:
+                hx = dict(held[sv['id']]); assert hx['parent'] == sv['id']
+                hx['held_from_21_Oct_build (D33)'] = True
+                disp.append(hx); new.append(hx); continue
             x = Pm[n0] + 4.0 * dv
             node = next(int(c) for c in tree_m.query(x, k=48)[1] if int(c) not in used_d)
             used_d.add(node)
             ins = in_mesh(x)
-            ndisp[kind] += 1; ndisp['outside'] += int(not ins)
-            new.append({'id': f"{sv['id']}_disp_{'tm' if kind == 'transmural' else 'tg'}", 'family': f'displaced_{kind}', 'parent': sv['id'],
-                        'parent_family': sv['family'], 'node': node, 'direction': [round(float(c), 5) for c in dv],
-                        'grad_w_apd_norm_per_mm': round(float(np.linalg.norm(gw_)), 5) if kind == 'transmural' else None,
-                        'point_inside_myocardium': bool(ins), 'snap_mm': round(float(np.linalg.norm(Pm[node] - x)), 3),
-                        'moved_mm': round(float(np.linalg.norm(Pm[node] - Pm[n0])), 3)})
-    rec['displaced_set'] = dict(ndisp, rule='+4 mm along grad(D19b APD w) and +4 mm along the stored fibre (+f), nearest unused node')
+            ent = {'id': f"{sv['id']}_disp_{'tm' if kind == 'transmural' else 'tg'}", 'family': f'displaced_{kind}', 'parent': sv['id'],
+                   'parent_family': sv['family'], 'node': node, 'direction': [round(float(c), 5) for c in dv],
+                   'grad_w_apd_norm_per_mm': round(float(np.linalg.norm(gw_)), 5) if kind == 'transmural' else None,
+                   'point_inside_myocardium': bool(ins), 'snap_mm': round(float(np.linalg.norm(Pm[node] - x)), 3),
+                   'moved_mm': round(float(np.linalg.norm(Pm[node] - Pm[n0])), 3)}
+            if kind == 'transmural':
+                ent.update({'sense (D33)': int(sense), 'site_w_apd': round(float(wapd[n0]), 4), 'site_d_s': round(float(dsf[n0]), 4), 'node_d_s': round(float(dsf[node]), 4)})
+            disp.append(ent); new.append(ent)
+    # report 7 lines (D33)
+    def summ(xs):
+        mv = np.array([x['moved_mm'] for x in xs]); ou = np.array([not x['point_inside_myocardium'] for x in xs])
+        return {'n': int(len(xs)), 'outside': int(ou.sum()), 'moved_median_mm': round(float(np.median(mv)), 2), 'moved_p10_mm': round(float(np.percentile(mv, 10)), 2),
+                'moved_lt_3mm': int((mv < 3).sum())} if xs else None
+    par = {x['id']: x for x in v51}
+    tm = [x for x in disp if x['family'] == 'displaced_transmural']; tg = [x for x in disp if x['family'] == 'displaced_tangential']
+    rep7 = {'rule': 'D33: 4 mm along grad(D19b APD w), + where the site APD w < 0.5, - where >= 0.5; tangential +4 mm along the stored fibre, held from 21 Oct',
+            'transmural': summ(tm), 'tangential': summ(tg), 'minus_sense_sites': int(sum(x['sense (D33)'] < 0 for x in tm)),
+            'by_family': {}, 'by_depth': {}}
+    for fam in sorted({x['parent_family'] for x in tm}):
+        rep7['by_family'][fam] = {'transmural': summ([x for x in tm if x['parent_family'] == fam]), 'tangential': summ([x for x in tg if x['parent_family'] == fam])}
+    for d_ in (0.1, 0.5, 0.75, 0.9):
+        rep7['by_depth'][str(d_)] = {'transmural': summ([x for x in tm if par[x['parent']]['depth_target'] == d_]), 'tangential': summ([x for x in tg if par[x['parent']]['depth_target'] == d_])}
+    rep7['families_with_most_transmural_points_outside'] = [f for f, v in rep7['by_family'].items() if v['transmural']['outside'] > v['transmural']['n'] / 2]
+    rep7['sites_with_APD_w_within_0.05_of_0.5'] = [x['parent'] for x in tm if abs(x['site_w_apd'] - 0.5) <= 0.05]
+    sep_ = [x for x in tm if x['parent_family'] == 'lv_septum' or 'septal' in x['parent']]
+    rep7['septal_sites'] = len(sep_)
+    rep7['septal_steps_crossing_d_s_0.5 (site node vs snapped node)'] = [x['parent'] for x in sep_ if (x['site_d_s'] - 0.5) * (x['node_d_s'] - 0.5) < 0]
+    rec['displaced_set'] = rep7
     # no-network beats at the new gate-1 sites (11.2a with D24: 4 cusp + 8 summit, control heart only)
     rec['no_network_new'] = [x['id'] for x in new if x['family'] in ('cusp_crescent', 'summit_reanchored')] if h == 'Y5HYEDL4' else []
     rec['gate7a_patch_centres'] = r34['item14']['patch_centres']

@@ -91,6 +91,8 @@ def run(h):
     rec['sites_with_APD_w_within_0.05_of_0.5'] = int((np.abs(w - 0.5) <= 0.05).sum())
     rec['sites_with_APD_w_ge_0.5 (minus sense under the proposal)'] = int((w >= 0.5).sum())
     G.dump(rec, os.path.join(HERE, f'preview_p13_{h}.json'))
+    if os.environ.get('P13_SAVE_NODES') == '1':                                              # added 22 Oct: node lists for the D33 check
+        G.dump({r: {o['id']: o['node'] for o in out} for r, out in rows.items()}, os.path.join(G.RUN, f'preview_p13_nodes_{h}.json'))
     print(h, json.dumps({k: (v['all'] if isinstance(v, dict) and 'all' in v else v) for k, v in rec.items()}), flush=True)
 
 
