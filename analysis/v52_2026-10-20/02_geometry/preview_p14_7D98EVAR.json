@@ -1,0 +1,727 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "h0_mm": -15.098,
+ "h100_mm": 0.01,
+ "D14_boundary_mm": -7.852,
+ "h_at_74.0_pct_mm": -3.918,
+ "1a_zone": {
+  "rv_endo_nodes": 1015,
+  "area_cm2": 6.485,
+  "existing_RV_PMJs": 0
+ },
+ "1b_level_b_adds": {
+  "density_per_cm2": 8.8,
+  "round(density x area)": 57,
+  "adds": 57
+ },
+ "1c_RV_PMJs_above_0pct_landmark": 12,
+ "1d_step8a_plan": "no step-8a plan exists yet on the PC; A19b / A20 beat lists not drawn up",
+ "2_found": {
+  "step0_density_area": "the whole v5.1 rv_endo surface (data/biv/7D98EVAR/surfaces/rv_endo.surf, septum included): 140.5 cm2; v5.2 rv_endo (sleeve lumen added) 141.0 cm2",
+  "rv_endo_covers": "the whole RV cavity surface: free wall, septum and RVOT (plus, in v5.2, the sleeves' luminal faces)",
+  "rv_septal_part (rv_endo nodes nearer the LV endocardium than the epicardium), nodes / of": [
+   4693,
+   21026
+  ],
+  "RV_PMJs_not_on_rv_endo": 0,
+  "RV_PMJ_max_distance_mm": 0.0,
+  "RV_distal_nodes_not_on_rv_endo": 0,
+  "RV_distal_max_distance_mm": 0.0,
+  "rv_endo_area_above_0pct_cm2": 15.179
+ },
+ "2_parts (heights: (lo, hi], first part (h0, boundary))": {
+  "0 % to boundary": {
+   "RV_PMJs": 12,
+   "area_cm2": 8.204,
+   "by_quadrant": {
+    "q0 (-45..45, posterior)": {
+     "RV_PMJs": 0,
+     "area_cm2": 2.076
+    },
+    "q90 (45..135)": {
+     "RV_PMJs": 4,
+     "area_cm2": 1.933
+    },
+    "q180 (135..225, anterior)": {
+     "RV_PMJs": 8,
+     "area_cm2": 2.475
+    },
+    "q270 (225..315)": {
+     "RV_PMJs": 0,
+     "area_cm2": 1.72
+    }
+   }
+  },
+  "boundary to 74.0 %": {
+   "RV_PMJs": 0,
+   "area_cm2": 4.311,
+   "by_quadrant": {
+    "q0 (-45..45, posterior)": {
+     "RV_PMJs": 0,
+     "area_cm2": 1.05
+    },
+    "q90 (45..135)": {
+     "RV_PMJs": 0,
+     "area_cm2": 1.046
+    },
+    "q180 (135..225, anterior)": {
+     "RV_PMJs": 0,
+     "area_cm2": 1.257
+    },
+    "q270 (225..315)": {
+     "RV_PMJs": 0,
+     "area_cm2": 0.958
+    }
+   }
+  },
+  "74.0 % to ring": {
+   "RV_PMJs": 0,
+   "area_cm2": 2.173,
+   "by_quadrant": {
+    "q0 (-45..45, posterior)": {
+     "RV_PMJs": 0,
+     "area_cm2": 0.443
+    },
+    "q90 (45..135)": {
+     "RV_PMJs": 0,
+     "area_cm2": 0.692
+    },
+    "q180 (135..225, anterior)": {
+     "RV_PMJs": 0,
+     "area_cm2": 0.664
+    },
+    "q270 (225..315)": {
+     "RV_PMJs": 0,
+     "area_cm2": 0.375
+    }
+   }
+  },
+  "above ring": {
+   "RV_PMJs": 0,
+   "area_cm2": 0.49,
+   "by_quadrant": {
+    "q0 (-45..45, posterior)": {
+     "RV_PMJs": 0,
+     "area_cm2": 0.0
+    },
+    "q90 (45..135)": {
+     "RV_PMJs": 0,
+     "area_cm2": 0.0
+    },
+    "q180 (135..225, anterior)": {
+     "RV_PMJs": 0,
+     "area_cm2": 0.0
+    },
+    "q270 (225..315)": {
+     "RV_PMJs": 0,
+     "area_cm2": 0.49
+    }
+   }
+  }
+ },
+ "2_zone_rv_endo_distance_to_nearest_RV_PMJ_mm": {
+  "all_PMJs": {
+   "median": 19.37,
+   "p90": 36.01,
+   "max": 41.99
+  },
+  "without_PMJs_above_0pct": {
+   "median": 21.64,
+   "p90": 37.83,
+   "max": 44.38
+  }
+ },
+ "3_sites (v5.1 RVOT family = gate 3 RVOT in Y5HYEDL4; supravalvar)": [
+  {
+   "id": "rvot_septal_z_d10",
+   "family": "rvot",
+   "depth": 0.1,
+   "height_mm": -11.05,
+   "pct": 26.8,
+   "8.1_label (D14)": "septal component",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "septal",
+    "septal"
+   ],
+   "above_0pct": true,
+   "above_boundary": false,
+   "rv_endo_mm_to_nearest_RV_PMJ": 35.14,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 35.14,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 3.46
+  },
+  {
+   "id": "rvot_septal_z_d50",
+   "family": "rvot",
+   "depth": 0.5,
+   "height_mm": -10.54,
+   "pct": 30.2,
+   "8.1_label (D14)": "septal component",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "septal",
+    "septal"
+   ],
+   "above_0pct": true,
+   "above_boundary": false,
+   "rv_endo_mm_to_nearest_RV_PMJ": 35.78,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 35.78,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 3.85
+  },
+  {
+   "id": "rvot_septal_z_d75",
+   "family": "rvot",
+   "depth": 0.75,
+   "height_mm": -10.14,
+   "pct": 32.8,
+   "8.1_label (D14)": "septal component",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "septal",
+    "septal"
+   ],
+   "above_0pct": true,
+   "above_boundary": false,
+   "rv_endo_mm_to_nearest_RV_PMJ": 35.71,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 35.71,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 2.94
+  },
+  {
+   "id": "rvot_septal_z_d90",
+   "family": "rvot",
+   "depth": 0.9,
+   "height_mm": -10.3,
+   "pct": 31.8,
+   "8.1_label (D14)": "septal component",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "septal",
+    "septal"
+   ],
+   "above_0pct": true,
+   "above_boundary": false,
+   "rv_endo_mm_to_nearest_RV_PMJ": 35.14,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 35.14,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 3.46
+  },
+  {
+   "id": "rvot_free_wall_z_d10",
+   "family": "rvot",
+   "depth": 0.1,
+   "height_mm": -15.71,
+   "pct": -4.0,
+   "8.1_label (D14)": "septal component",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "septal",
+    "septal"
+   ],
+   "above_0pct": false,
+   "above_boundary": false,
+   "rv_endo_mm_to_nearest_RV_PMJ": 8.45,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 9.41,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 8.44
+  },
+  {
+   "id": "rvot_free_wall_z_d50",
+   "family": "rvot",
+   "depth": 0.5,
+   "height_mm": -15.29,
+   "pct": -1.2,
+   "8.1_label (D14)": "septal component",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "septal",
+    "septal"
+   ],
+   "above_0pct": false,
+   "above_boundary": false,
+   "rv_endo_mm_to_nearest_RV_PMJ": 8.45,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 9.41,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 8.44
+  },
+  {
+   "id": "rvot_free_wall_z_d75",
+   "family": "rvot",
+   "depth": 0.75,
+   "height_mm": -14.63,
+   "pct": 3.1,
+   "8.1_label (D14)": "septal component",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "septal",
+    "septal"
+   ],
+   "above_0pct": true,
+   "above_boundary": false,
+   "rv_endo_mm_to_nearest_RV_PMJ": 8.45,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 9.41,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 8.44
+  },
+  {
+   "id": "rvot_free_wall_z_d90",
+   "family": "rvot",
+   "depth": 0.9,
+   "height_mm": -14.67,
+   "pct": 2.8,
+   "8.1_label (D14)": "septal component",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "septal",
+    "septal"
+   ],
+   "above_0pct": true,
+   "above_boundary": false,
+   "rv_endo_mm_to_nearest_RV_PMJ": 8.45,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 9.41,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 8.44
+  },
+  {
+   "id": "supra52_posterior",
+   "family": "supravalvar",
+   "depth": null,
+   "height_mm": 3.11,
+   "pct": 120.5,
+   "8.1_label (D14)": "free-standing infundibulum",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "free",
+    "free"
+   ],
+   "above_0pct": true,
+   "above_boundary": true,
+   "rv_endo_mm_to_nearest_RV_PMJ": 31.23,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 31.23,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 6.67
+  },
+  {
+   "id": "supra52_sinus_+120",
+   "family": "supravalvar",
+   "depth": null,
+   "height_mm": 2.98,
+   "pct": 119.6,
+   "8.1_label (D14)": "free-standing infundibulum",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "free",
+    "free"
+   ],
+   "above_0pct": true,
+   "above_boundary": true,
+   "rv_endo_mm_to_nearest_RV_PMJ": 11.23,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": 15.17,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": 6.87
+  },
+  {
+   "id": "supra52_sinus_-120",
+   "family": "supravalvar",
+   "depth": null,
+   "height_mm": 1.74,
+   "pct": 111.4,
+   "8.1_label (D14)": "free-standing infundibulum",
+   "beside: D6 12.7 mm / 07:30 37.3 %": [
+    "free",
+    "free"
+   ],
+   "above_0pct": true,
+   "above_boundary": true,
+   "rv_endo_mm_to_nearest_RV_PMJ": Infinity,
+   "rv_endo_mm_to_nearest_RV_PMJ_below_0pct": Infinity,
+   "rv_endo_mm_to_D14_boundary (0 if on the far side)": Infinity
+  }
+ ],
+ "4": {
+  "above_0pct": [
+   {
+    "id": "lv_free_wall_phi120_z0.5_d10",
+    "height_mm": -13.05,
+    "roles": [
+     "gate-8 family lv_free_wall"
+    ]
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d50",
+    "height_mm": -10.84,
+    "roles": [
+     "gate-8 family lv_free_wall"
+    ]
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d75",
+    "height_mm": -9.42,
+    "roles": [
+     "gate-8 family lv_free_wall"
+    ]
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d90",
+    "height_mm": -8.67,
+    "roles": [
+     "gate-8 family lv_free_wall"
+    ]
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d10",
+    "height_mm": 7.47,
+    "roles": [
+     "gate-8 family lv_free_wall"
+    ]
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d50",
+    "height_mm": 10.37,
+    "roles": [
+     "gate-8 family lv_free_wall"
+    ]
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d75",
+    "height_mm": 12.08,
+    "roles": [
+     "gate-8 family lv_free_wall"
+    ]
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d90",
+    "height_mm": 13.76,
+    "roles": [
+     "gate-8 family lv_free_wall"
+    ]
+   },
+   {
+    "id": "rvot_septal_z_d10",
+    "height_mm": -11.05,
+    "roles": [
+     "gate-8 family rvot"
+    ]
+   },
+   {
+    "id": "rvot_septal_z_d50",
+    "height_mm": -10.54,
+    "roles": [
+     "gate-8 family rvot"
+    ]
+   },
+   {
+    "id": "rvot_septal_z_d75",
+    "height_mm": -10.14,
+    "roles": [
+     "gate-8 family rvot"
+    ]
+   },
+   {
+    "id": "rvot_septal_z_d90",
+    "height_mm": -10.3,
+    "roles": [
+     "gate-8 family rvot"
+    ]
+   },
+   {
+    "id": "rvot_free_wall_z_d75",
+    "height_mm": -14.63,
+    "roles": [
+     "gate-8 family rvot"
+    ]
+   },
+   {
+    "id": "rvot_free_wall_z_d90",
+    "height_mm": -14.67,
+    "roles": [
+     "gate-8 family rvot"
+    ]
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d10",
+    "height_mm": -14.0,
+    "roles": [
+     "gate-8 family aortic_cusp"
+    ]
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d10",
+    "height_mm": 0.06,
+    "roles": [
+     "gate-8 family aortic_cusp"
+    ]
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d50",
+    "height_mm": 2.27,
+    "roles": [
+     "gate-8 family aortic_cusp"
+    ]
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d75",
+    "height_mm": 2.8,
+    "roles": [
+     "gate-8 family aortic_cusp"
+    ]
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d90",
+    "height_mm": 3.67,
+    "roles": [
+     "gate-8 family aortic_cusp"
+    ]
+   },
+   {
+    "id": "lv_summit_superior_z_d10",
+    "height_mm": -2.76,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_summit_superior_z_d50",
+    "height_mm": -0.63,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_summit_superior_z_d75",
+    "height_mm": 1.49,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_summit_superior_z_d90",
+    "height_mm": 2.23,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d10",
+    "height_mm": 4.09,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d50",
+    "height_mm": 6.52,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d75",
+    "height_mm": 8.32,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d90",
+    "height_mm": 8.95,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d10",
+    "height_mm": -14.35,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d50",
+    "height_mm": -12.85,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d75",
+    "height_mm": -11.04,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d90",
+    "height_mm": -10.76,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d10",
+    "height_mm": 9.59,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d50",
+    "height_mm": 11.2,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d75",
+    "height_mm": 12.43,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d90",
+    "height_mm": 13.43,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d10",
+    "height_mm": -11.96,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d50",
+    "height_mm": -10.92,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d75",
+    "height_mm": -10.13,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d90",
+    "height_mm": -9.7,
+    "roles": [
+     "gate-8 family lv_vein_course"
+    ]
+   },
+   {
+    "id": "cusp52_lcc_mid",
+    "height_mm": 2.63,
+    "roles": [
+     "gate-8 family cusp_crescent"
+    ]
+   },
+   {
+    "id": "cusp52_lcc_q",
+    "height_mm": 0.1,
+    "roles": [
+     "gate-8 family cusp_crescent"
+    ]
+   },
+   {
+    "id": "cusp52_rcc_mid",
+    "height_mm": -15.01,
+    "roles": [
+     "gate-8 family cusp_crescent"
+    ]
+   },
+   {
+    "id": "lv_summit52_superior_d10",
+    "height_mm": -0.7,
+    "roles": [
+     "gate-8 family summit_reanchored"
+    ]
+   },
+   {
+    "id": "lv_summit52_superior_d50",
+    "height_mm": 0.68,
+    "roles": [
+     "gate-8 family summit_reanchored"
+    ]
+   },
+   {
+    "id": "lv_summit52_superior_d90",
+    "height_mm": 3.15,
+    "roles": [
+     "gate-8 family summit_reanchored"
+    ]
+   },
+   {
+    "id": "lv_summit52_superior_d75",
+    "height_mm": 2.45,
+    "roles": [
+     "gate-8 family summit_reanchored"
+    ]
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d10",
+    "height_mm": 2.35,
+    "roles": [
+     "gate-8 family summit_reanchored"
+    ]
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d50",
+    "height_mm": 5.4,
+    "roles": [
+     "gate-8 family summit_reanchored"
+    ]
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d90",
+    "height_mm": 7.43,
+    "roles": [
+     "gate-8 family summit_reanchored"
+    ]
+   },
+   {
+    "id": "lv_summit52_inferior_lateral_d75",
+    "height_mm": 6.58,
+    "roles": [
+     "gate-8 family summit_reanchored"
+    ]
+   }
+  ],
+  "between_boundary_and_ring": [
+   {
+    "id": "lv_summit_superior_z_d10",
+    "height_mm": -2.76,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_summit_superior_z_d50",
+    "height_mm": -0.63,
+    "roles": [
+     "gate-8 family lv_summit"
+    ]
+   },
+   {
+    "id": "lv_summit52_superior_d10",
+    "height_mm": -0.7,
+    "roles": [
+     "gate-8 family summit_reanchored"
+    ]
+   }
+  ],
+  "gate8_families": [
+   "aortic_cusp",
+   "cusp_crescent",
+   "lv_free_wall",
+   "lv_septum",
+   "lv_summit",
+   "lv_vein_course",
+   "rv_free_wall",
+   "rvot",
+   "summit_reanchored"
+  ]
+ },
+ "5_network_times_ms (network graph alone; +4 ms to muscle at a junction)": {
+  "His_to_moderator_band_free_wall_end": 43.27,
+  "His_to_lowest_RV_PMJ_above_boundary": null,
+  "His_to_highest_RV_PMJ_above_boundary": null,
+  "RV_PMJs_above_boundary": 0
+ },
+ "6_numbers": {
+  "distal_rv_nodes": 1935,
+  "distal_rv_with_PMJ": 1237,
+  "share_of_distal_rv_nodes_with_PMJ": 0.639,
+  "max_UVC_z_of_distal_rv_nodes": {
+   "uvc": 0.9,
+   "uvc_v1": 0.9
+  }
+ }
+}
