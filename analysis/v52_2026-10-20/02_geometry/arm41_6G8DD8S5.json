@@ -1,0 +1,397 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "rule": "D34 (adopted 25 Oct 2026 21:26:55 UTC), section 13 row A41; record relock4 sha256 60f01c99...",
+ "frame": {
+  "h0_mm": -11.765,
+  "h100_mm": 0.075,
+  "D14_boundary_mm": -6.201,
+  "h_at_73.5pct_mm": -3.063,
+  "ring_mm": 0.0
+ },
+ "primary_network": {
+  "file": "data/biv/6G8DD8S5/v52/purkinje/network_v52.npz",
+  "sha256": "95984b4e89df40edd581e9ff2721b5877744a95ef1e283b15433d6a1267081fc"
+ },
+ "level_a_remove": {
+  "built": true,
+  "RV_PMJs_removed": 119,
+  "nodes_and_edges_kept": true,
+  "removed_by_part": {
+   "0 % landmark to boundary": {
+    "count": 72,
+    "by_quadrant": {
+     "q0 (-45..45, posterior)": 3,
+     "q90 (45..135)": 18,
+     "q180 (135..225, anterior)": 28,
+     "q270 (225..315)": 23
+    }
+   },
+   "boundary to 73.5 %": {
+    "count": 28,
+    "by_quadrant": {
+     "q0 (-45..45, posterior)": 0,
+     "q90 (45..135)": 0,
+     "q180 (135..225, anterior)": 2,
+     "q270 (225..315)": 26
+    }
+   },
+   "73.5 % to ring": {
+    "count": 17,
+    "by_quadrant": {
+     "q0 (-45..45, posterior)": 0,
+     "q90 (45..135)": 0,
+     "q180 (135..225, anterior)": 0,
+     "q270 (225..315)": 17
+    }
+   },
+   "above ring": {
+    "count": 2,
+    "by_quadrant": {
+     "q0 (-45..45, posterior)": 0,
+     "q90 (45..135)": 0,
+     "q180 (135..225, anterior)": 0,
+     "q270 (225..315)": 2
+    }
+   }
+  },
+  "PMJs_primary_then_a": [
+   3014,
+   2895
+  ],
+  "file": "data/biv/6G8DD8S5/v52/purkinje/network_v52_A41a.npz",
+  "sha256": "5322ba325de0c3fa4fdd62f1af760261d7070acaaec08b133dbf0e1d7f3e97ca",
+  "RV_PMJs_above_0pct_after": 0
+ },
+ "level_b_extend": {
+  "zone_rv_endo_nodes": 1044,
+  "zone_sleeve_only_nodes (not built on)": 0,
+  "zone_area_cm2": 6.4017,
+  "reachability_check": {
+   "zone_nodes_unreachable": 0,
+   "pass": true
+  },
+  "density_per_cm2 (step 0, as written)": 9.6,
+  "target_before_rounding": 61.456,
+  "target": 61,
+  "existing_zone_RV_PMJs": 45,
+  "built": true,
+  "positions_chosen": 16,
+  "PMJ_on_existing_v51_DISTAL_nodes": 0,
+  "new_DISTAL_nodes": 16,
+  "zone_RV_PMJs_after": 61,
+  "zone_density_after_per_cm2": 9.529,
+  "beside: 0 % landmark to boundary, primary (PMJs, cm2, per cm2)": [
+   72,
+   7.428,
+   9.692
+  ],
+  "added_by_part": {
+   "0 % landmark to boundary": {
+    "count": 0,
+    "by_quadrant": {
+     "q0 (-45..45, posterior)": 0,
+     "q90 (45..135)": 0,
+     "q180 (135..225, anterior)": 0,
+     "q270 (225..315)": 0
+    }
+   },
+   "boundary to 73.5 %": {
+    "count": 7,
+    "by_quadrant": {
+     "q0 (-45..45, posterior)": 3,
+     "q90 (45..135)": 4,
+     "q180 (135..225, anterior)": 0,
+     "q270 (225..315)": 0
+    }
+   },
+   "73.5 % to ring": {
+    "count": 9,
+    "by_quadrant": {
+     "q0 (-45..45, posterior)": 3,
+     "q90 (45..135)": 4,
+     "q180 (135..225, anterior)": 2,
+     "q270 (225..315)": 0
+    }
+   },
+   "above ring": {
+    "count": 0,
+    "by_quadrant": {
+     "q0 (-45..45, posterior)": 0,
+     "q90 (45..135)": 0,
+     "q180 (135..225, anterior)": 0,
+     "q270 (225..315)": 0
+    }
+   }
+  },
+  "added_edges": 16,
+  "added_edges_total_rv_endo_length_mm": 109.129,
+  "added_edges_total_straight_length_mm": 103.605,
+  "added_edge_time_check_max_abs_err_ms": 0.0,
+  "added_nodes_above_ring": 0,
+  "added_nodes_in_sleeves": 0,
+  "added_PMJ_nodes_reached_from_His": true,
+  "straight_line_speed_mb_end_to_added_PMJ_m_s (against 2.0)": {
+   "median": 1.35,
+   "p90": 1.69,
+   "max": 1.89,
+   "min": 1.11,
+   "n_ge_2": 0,
+   "n_lt_2": 16,
+   "n_non_finite": 0
+  },
+  "speed_rows (mesh node, network id, straight mm from mb_end, network ms from mb_end, m/s)": [
+   [
+    43336,
+    6019,
+    57.884,
+    40.784,
+    1.4193
+   ],
+   [
+    25301,
+    6020,
+    58.915,
+    43.528,
+    1.3535
+   ],
+   [
+    34482,
+    6021,
+    55.971,
+    44.886,
+    1.247
+   ],
+   [
+    368724,
+    6022,
+    53.286,
+    37.934,
+    1.4047
+   ],
+   [
+    335113,
+    6023,
+    59.362,
+    46.121,
+    1.2871
+   ],
+   [
+    13365,
+    6024,
+    58.753,
+    48.708,
+    1.2062
+   ],
+   [
+    13855,
+    6025,
+    59.002,
+    51.407,
+    1.1477
+   ],
+   [
+    361885,
+    6026,
+    54.29,
+    28.769,
+    1.8871
+   ],
+   [
+    51941,
+    6027,
+    54.763,
+    40.858,
+    1.3403
+   ],
+   [
+    2639,
+    6028,
+    57.069,
+    40.603,
+    1.4055
+   ],
+   [
+    39535,
+    6029,
+    59.629,
+    43.478,
+    1.3715
+   ],
+   [
+    272325,
+    6030,
+    51.296,
+    32.974,
+    1.5556
+   ],
+   [
+    270525,
+    6031,
+    61.404,
+    46.51,
+    1.3202
+   ],
+   [
+    95100,
+    6032,
+    57.597,
+    31.562,
+    1.8249
+   ],
+   [
+    113835,
+    6033,
+    61.847,
+    49.631,
+    1.2461
+   ],
+   [
+    45874,
+    6034,
+    60.188,
+    54.128,
+    1.1119
+   ]
+  ],
+  "placement_smallest_margin_best_vs_second_mm (step, 1-based)": [
+   0.009937,
+   13
+  ],
+  "file": "data/biv/6G8DD8S5/v52/purkinje/network_v52_A41b.npz",
+  "sha256": "306cf8b397a65e96ef32b1a42918f156986ff7d1d5fa93d82c245dd3629c082d",
+  "chosen_positions_in_order": [
+   39535,
+   2639,
+   113835,
+   45874,
+   25301,
+   34482,
+   51941,
+   95100,
+   13365,
+   270525,
+   272325,
+   361885,
+   13855,
+   43336,
+   368724,
+   335113
+  ],
+  "joins_in_order (new mesh node, joined to network id, rv_endo mm, time ms)": [
+   [
+    43336,
+    4759,
+    20.986,
+    10.4931
+   ],
+   [
+    25301,
+    6019,
+    5.488,
+    2.7441
+   ],
+   [
+    34482,
+    6019,
+    8.204,
+    4.1021
+   ],
+   [
+    368724,
+    4684,
+    7.544,
+    3.7721
+   ],
+   [
+    335113,
+    6020,
+    5.187,
+    2.5936
+   ],
+   [
+    13365,
+    6023,
+    5.173,
+    2.5866
+   ],
+   [
+    13855,
+    6024,
+    5.399,
+    2.6997
+   ],
+   [
+    361885,
+    4177,
+    5.243,
+    2.6215
+   ],
+   [
+    51941,
+    6022,
+    5.848,
+    2.9241
+   ],
+   [
+    2639,
+    6022,
+    5.339,
+    2.6696
+   ],
+   [
+    39535,
+    6019,
+    5.389,
+    2.6947
+   ],
+   [
+    272325,
+    4367,
+    5.994,
+    2.9969
+   ],
+   [
+    270525,
+    6029,
+    6.064,
+    3.032
+   ],
+   [
+    95100,
+    6026,
+    5.585,
+    2.7927
+   ],
+   [
+    113835,
+    6031,
+    6.242,
+    3.121
+   ],
+   [
+    45874,
+    6025,
+    5.442,
+    2.721
+   ]
+  ]
+ },
+ "zone_rv_endo_distance_to_nearest_RV_PMJ_mm": {
+  "primary": {
+   "median": 4.07,
+   "p90": 17.5,
+   "max": 24.08
+  },
+  "level_a": {
+   "median": 10.96,
+   "p90": 17.83,
+   "max": 24.08
+  },
+  "level_b": {
+   "median": 2.09,
+   "p90": 3.55,
+   "max": 4.99
+  }
+ }
+}
