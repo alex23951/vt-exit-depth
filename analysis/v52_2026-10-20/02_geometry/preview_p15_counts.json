@@ -1,0 +1,483 @@
+{
+ "A1": {
+  "counts": [
+   689,
+   0,
+   0
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A2": {
+  "counts": [
+   689,
+   0,
+   0
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A3": {
+  "counts": [
+   689,
+   0,
+   0
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A4": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A5": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A6": {
+  "counts": [
+   0,
+   533,
+   527
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A7": {
+  "counts": [
+   1,
+   1,
+   1
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A8": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A9": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A10": {
+  "counts": [
+   1378,
+   1066,
+   1054
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   2,
+   2,
+   2
+  ]
+ },
+ "A11": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A12": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A13": {
+  "counts": [
+   0,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   1,
+   1
+  ]
+ },
+ "A14": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A15": {
+  "counts": [
+   100,
+   100,
+   94
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A16": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A17": {
+  "counts": [
+   533,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A18": {
+  "counts": [
+   533,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A19": {
+  "counts": [
+   533,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A19b": {
+  "counts": [
+   533,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A20": {
+  "counts": [
+   533,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A21": {
+  "counts": [
+   533,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A22": {
+  "counts": [
+   533,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A23": {
+  "counts": [
+   0,
+   533,
+   0
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A24": {
+  "counts": [
+   0,
+   533,
+   0
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   1,
+   0
+  ]
+ },
+ "A25": {
+  "counts": [
+   0,
+   533,
+   0
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   1,
+   0
+  ]
+ },
+ "A26": {
+  "counts": [
+   688,
+   532,
+   526
+  ],
+  "kind": "shift",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A27": {
+  "counts": [
+   272,
+   192,
+   192
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A28": {
+  "counts": [
+   60,
+   0,
+   0
+  ],
+  "kind": "ident",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A30a": {
+  "counts": [
+   35,
+   27,
+   27
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A31": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A32": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ },
+ "A33": {
+  "counts": [
+   13780,
+   10660,
+   10540
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   20,
+   20,
+   20
+  ]
+ },
+ "A34": {
+  "counts": [
+   17225,
+   13325,
+   13175
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   25,
+   25,
+   25
+  ]
+ },
+ "A37": {
+  "counts": [
+   1378,
+   2132,
+   2108
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   2,
+   4,
+   4
+  ]
+ },
+ "A39": {
+  "counts": [
+   533,
+   533,
+   527
+  ],
+  "kind": "act",
+  "lead_field_solves": [
+   0,
+   0,
+   0
+  ]
+ },
+ "A40": {
+  "counts": [
+   689,
+   533,
+   527
+  ],
+  "kind": "ecg",
+  "lead_field_solves": [
+   1,
+   1,
+   1
+  ]
+ }
+}
