@@ -1,0 +1,377 @@
+{
+ "rule": "D37 (3), lock thread, 2 Nov 2026; gate 9 counted by D38 (1)",
+ "D37_1_commit": "16949c5",
+ "v51_commit": "53bab54",
+ "git_status_v51_before": "",
+ "package_unchanged_since_D37_1": true,
+ "pkg_040_files_sha256": {
+  "README.md": "dac2a49cc3efe1047a186fccd549042a9a94e7a08c860c001e397c16965f1818",
+  "pyproject.toml": "eb1b804da409c8a0b4f4b44b51f52bf57fb7c792ceaae5140b649ae65d1ea809",
+  "tests/conftest.py": "e940f0ecdaf982b115892fe6f5068a94141317d865285c9fc0241983ddd12b5c",
+  "tests/synthetic.py": "f86edc5da90a07b50d3af624930188f50898fb70d06801150a259b983c5a9887",
+  "tests/test_criteria.py": "831caf18e88acaa914d6791f65571e845cd29fb937468ba4e6ef5ec66352d117",
+  "tests/test_measure.py": "d9edf9f69ebe207201c5324fc5b66eb61989d5a8f92c7b5cf63233cc58869fc9",
+  "tests/test_q_window.py": "48e16e2eb921f03c51f05f035e7eb0de442ea76e10b4ca2920ad909451184841",
+  "tests/test_summit_prisco.py": "2843018d269ac69198b447ea0fe1db28d4234f63e6d17e120bcb8b05a3255de9",
+  "ecg_depth_criteria/__init__.py": "e50afeab2b340d27619a4f62366caeded04b35f49d7a1b04207a81347d337e12",
+  "ecg_depth_criteria/__main__.py": "7f68169e25c711af7cb977932d6bce5a1835651ebc70b2d4dbf317811ad86764",
+  "ecg_depth_criteria/criteria.py": "2b5318351346dbea98054e52d53cd63134d3da51c0a5d8844619addbda0ffb13",
+  "ecg_depth_criteria/fiducials.py": "b4e71ea405d070eff5299f281b8a6b54c89dfe858d1d1f87a39cd9798dbe8da5",
+  "ecg_depth_criteria/leads.py": "1a71b3c4c2c87ca6adbc3c0d4b02b8bb41010e885ff6846de462a01f592e1117",
+  "ecg_depth_criteria/measure.py": "11d2d29f1bb4e7e9334f357465ae71379b1e3d96d02d544e3764b10b4727e58e"
+ },
+ "versions": {
+  "0.4.0": "0.4.0",
+  "0.4.1": "0.4.1"
+ },
+ "positive_control": {
+  "got": {
+   "0.4.0": [
+    "V4",
+    100.0
+   ],
+   "0.4.1": [
+    "V3",
+    105.0
+   ]
+  },
+  "expected": {
+   "0.4.0": [
+    "V4",
+    100.0
+   ],
+   "0.4.1": [
+    "V3",
+    105.0
+   ]
+  },
+  "pass": true
+ },
+ "core_beats": 579,
+ "gate6_berruezo_6G_RS_pct (value, pairs)": {
+  "primary: stim onset, clean": {
+   "v51_stored_040": [
+    14.2,
+    10
+   ],
+   "rerun_040_reproduced_rows_only": [
+    14.2,
+    10
+   ],
+   "rescored_041_reproduced_rows_only": [
+    14.2,
+    10
+   ]
+  },
+  "A3 stim onset, plan noise 10uV": {
+   "v51_stored_040": [
+    -3.0,
+    10
+   ],
+   "rerun_040_reproduced_rows_only": [
+    -3.0,
+    10
+   ],
+   "rescored_041_reproduced_rows_only": [
+    -3.0,
+    10
+   ]
+  },
+  "A3 true (13 Oct)": {
+   "v51_stored_040": [
+    14.2,
+    10
+   ],
+   "rerun_040_reproduced_rows_only": [
+    14.2,
+    10
+   ],
+   "rescored_041_reproduced_rows_only": [
+    14.2,
+    10
+   ]
+  }
+ },
+ "gate9": {
+  "v51_stored_gate51_json": {
+   "within_5ms": 72,
+   "pairs_scorable": 108,
+   "max_abs_diff_ms": 38.0
+  },
+  "sites_reproduced_040": 27,
+  "sites": 27,
+  "float32_fallback_sites": [],
+  "values_not_reproduced_040": [],
+  "rerun_040 (floating point <= 5, as v5.1 counted)": [
+   72,
+   108
+  ],
+  "rerun_040 (D38 rule)": [
+   73,
+   108
+  ],
+  "rescored_041 (D38 rule)": [
+   73,
+   108
+  ],
+  "C70_reports_040": {
+   "pseudo_delta_ms": {
+    "6G8DD8S5": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -5.0
+    },
+    "7D98EVAR": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -4.0
+    },
+    "Y5HYEDL4": {
+     "earlier": 6,
+     "equal": 3,
+     "later": 0,
+     "median_ms": -2.0
+    }
+   },
+   "idt_v2_ms": {
+    "6G8DD8S5": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -6.0
+    },
+    "7D98EVAR": {
+     "earlier": 8,
+     "equal": 1,
+     "later": 0,
+     "median_ms": -5.0
+    },
+    "Y5HYEDL4": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -3.0
+    }
+   },
+   "srs_ms": {
+    "6G8DD8S5": {
+     "earlier": 7,
+     "equal": 1,
+     "later": 1,
+     "median_ms": -4.0
+    },
+    "7D98EVAR": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -3.0
+    },
+    "Y5HYEDL4": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -3.0
+    }
+   },
+   "t_largest_precordial_ms": {
+    "6G8DD8S5": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -4.0
+    },
+    "7D98EVAR": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -7.0
+    },
+    "Y5HYEDL4": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -5.000000000000007
+    }
+   },
+   "pooled_median_removed_within (D38 rule)": {
+    "per_heart": {
+     "6G8DD8S5": 26,
+     "7D98EVAR": 34,
+     "Y5HYEDL4": 28
+    },
+    "all": 88,
+    "medians_removed_ms": {
+     "pseudo_delta_ms": -4.0,
+     "idt_v2_ms": -5.0,
+     "srs_ms": -3.0,
+     "t_largest_precordial_ms": -5.0
+    }
+   }
+  },
+  "C70_reports_041": {
+   "pseudo_delta_ms": {
+    "6G8DD8S5": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -5.0
+    },
+    "7D98EVAR": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -4.0
+    },
+    "Y5HYEDL4": {
+     "earlier": 6,
+     "equal": 3,
+     "later": 0,
+     "median_ms": -2.0
+    }
+   },
+   "idt_v2_ms": {
+    "6G8DD8S5": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -6.0
+    },
+    "7D98EVAR": {
+     "earlier": 8,
+     "equal": 1,
+     "later": 0,
+     "median_ms": -5.0
+    },
+    "Y5HYEDL4": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -3.0
+    }
+   },
+   "srs_ms": {
+    "6G8DD8S5": {
+     "earlier": 7,
+     "equal": 1,
+     "later": 1,
+     "median_ms": -4.0
+    },
+    "7D98EVAR": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -3.0
+    },
+    "Y5HYEDL4": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -3.0
+    }
+   },
+   "t_largest_precordial_ms": {
+    "6G8DD8S5": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -4.0
+    },
+    "7D98EVAR": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -7.0
+    },
+    "Y5HYEDL4": {
+     "earlier": 9,
+     "equal": 0,
+     "later": 0,
+     "median_ms": -5.000000000000007
+    }
+   },
+   "pooled_median_removed_within (D38 rule)": {
+    "per_heart": {
+     "6G8DD8S5": 26,
+     "7D98EVAR": 34,
+     "Y5HYEDL4": 28
+    },
+    "all": 88,
+    "medians_removed_ms": {
+     "pseudo_delta_ms": -4.0,
+     "idt_v2_ms": -5.0,
+     "srs_ms": -3.0,
+     "t_largest_precordial_ms": -5.0
+    }
+   }
+  }
+ },
+ "regression": {
+  "measurements": 13455,
+  "other_keys_differ": [],
+  "srs_shorter_041": [],
+  "nan_pattern_differs": [],
+  "version_rows_wrong": 0,
+  "counts": {
+   "other_keys_differ": 0,
+   "srs_shorter_041": 0,
+   "nan_pattern_differs": 0
+  }
+ },
+ "reproduction_core": {
+  "per_site_rows": 13347,
+  "rows_not_reproduced": 0,
+  "examples": []
+ },
+ "srs_changed": {
+  "6G8DD8S5 detected": {
+   "n": 10,
+   "median_ms": 12.0,
+   "max_ms": 34.0
+  },
+  "6G8DD8S5 stim": {
+   "n": 82,
+   "median_ms": 33.0,
+   "max_ms": 35.0
+  },
+  "6G8DD8S5 true": {
+   "n": 10,
+   "median_ms": 12.0,
+   "max_ms": 34.0
+  },
+  "7D98EVAR detected": {
+   "n": 4,
+   "median_ms": 14.5,
+   "max_ms": 24.0
+  },
+  "7D98EVAR stim": {
+   "n": 25,
+   "median_ms": 15.0,
+   "max_ms": 24.0
+  },
+  "7D98EVAR true": {
+   "n": 4,
+   "median_ms": 14.5,
+   "max_ms": 24.0
+  },
+  "Y5HYEDL4 detected": {
+   "n": 209,
+   "median_ms": 10.0,
+   "max_ms": 74.0
+  },
+  "Y5HYEDL4 stim": {
+   "n": 44,
+   "median_ms": 9.0,
+   "max_ms": 10.0
+  },
+  "Y5HYEDL4 true": {
+   "n": 4,
+   "median_ms": 8.0,
+   "max_ms": 8.0
+  }
+ },
+ "regression_pass": true,
+ "git_status_v51_after": "",
+ "wall_s": 105
+}

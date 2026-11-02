@@ -262,7 +262,7 @@ def main(commit1):
         a = x[x.depth == 0.9].set_index(['position', 'level_z'])[col]; b = x[x.depth == 0.1].set_index(['position', 'level_z'])[col]
         j = pd.concat([a.rename('a'), b.rename('b')], axis=1, join='inner').dropna()
         return round(float((100 * (j.a - j.b) / j.b).median()), 1), int(len(j))
-    R41 = pd.DataFrame(rows41)
+    R41 = pd.DataFrame(rows041)
     psr = ps.merge(R41[['heart', 'network', 'site', 'mode', 'noise', 'seed', '_reproduced_040']], on=['heart', 'network', 'site', 'mode', 'noise', 'seed'])
     g6 = {}
     for cond, (mode, noise) in {'primary: stim onset, clean': ('stim', 'clean'), 'A3 stim onset, plan noise 10uV': ('stim', 'plan10'), 'A3 true (13 Oct)': ('true', 'clean')}.items():
