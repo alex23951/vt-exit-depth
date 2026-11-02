@@ -1,0 +1,52 @@
+{
+ "version": "v52-A11-factors-1 (slab calibration, nodal metric; stencil by R-L9)",
+ "written": "2026-11-02 02:19:57 CET",
+ "method": "slab52.py's calibrate / acceptance A at A11's Caldwell speeds (C67 (5)); each heart on its primary's stencil first, the other only if A fails (R-L9)",
+ "hearts": {
+  "Y5HYEDL4": {
+   "factors": {
+    "fibre": 1.1624289602360374,
+    "sheet": 1.0026887505805109,
+    "normal": 1.0121003226017076
+   },
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.24,
+    "normal": 0.34
+   },
+   "stencil": "v51-2ring-1",
+   "metric": "nodal-1",
+   "acceptance_A_pass": true
+  },
+  "6G8DD8S5": {
+   "factors": {
+    "fibre": 1.1821442127694806,
+    "sheet": 1.001228143242879,
+    "normal": 1.0040612923286563
+   },
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.173,
+    "normal": 0.235
+   },
+   "stencil": "v52-3ring-1 (R4.2: graph distance <= 3, edges <= 5.25 mm)",
+   "metric": "nodal-1",
+   "acceptance_A_pass": true
+  },
+  "7D98EVAR": {
+   "factors": {
+    "fibre": 1.1821442127694806,
+    "sheet": 1.001228143242879,
+    "normal": 1.0040612923286563
+   },
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.173,
+    "normal": 0.235
+   },
+   "stencil": "v52-3ring-1 (R4.2: graph distance <= 3, edges <= 5.25 mm)",
+   "metric": "nodal-1",
+   "acceptance_A_pass": true
+  }
+ }
+}

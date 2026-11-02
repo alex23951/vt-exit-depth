@@ -1,0 +1,3685 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "pre_ladder_manifest": {
+  "path": "data/biv/6G8DD8S5/v52/sites52_pre_ladder.json",
+  "sha256": "ae9539313c83e3d96ead13a2a36c0546629e3860b15e71c83aacebee5716f74c"
+ },
+ "direction_checks": {
+  "max_angle_to_report7_transmural_deg": 0.0004,
+  "max_angle_to_report7_fibre_deg": 0.0004,
+  "max_|f.s|": 1e-05,
+  "|s.unit(grad w)| (median, max)": [
+   0.015,
+   0.9545
+  ],
+  "sites_on_RV_side_rows (element tag in RV group)": 41,
+  "per_site": [
+   {
+    "id": "lv_septum_phi0_z0.25_d10",
+    "element": 268332,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00024564656892003123,
+    "angle_to_report7_fibre_deg": 0.00026990592460553154,
+    "f_dot_s": 4.602757885940889e-08,
+    "s_dot_grad_w": -0.013135049306230651
+   },
+   {
+    "id": "lv_septum_phi0_z0.25_d50",
+    "element": 857523,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 5.9672609375492795e-05,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -4.8222281218146534e-06,
+    "s_dot_grad_w": -0.42972541232958855
+   },
+   {
+    "id": "lv_septum_phi0_z0.25_d75",
+    "element": 1000915,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00032056670827827223,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 3.509114057248519e-06,
+    "s_dot_grad_w": 0.032644357162563205
+   },
+   {
+    "id": "lv_septum_phi0_z0.25_d90",
+    "element": 64745,
+    "element_tag": 29,
+    "angle_to_report7_transmural_deg": 0.00019635865827033832,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -4.838607756074698e-06,
+    "s_dot_grad_w": 0.005071854165452217
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d10",
+    "element": 1819918,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00021865774817216103,
+    "angle_to_report7_fibre_deg": 0.00022376037475034153,
+    "f_dot_s": -1.6385799227885967e-08,
+    "s_dot_grad_w": 0.0017039071904975524
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d50",
+    "element": 873185,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002133170156391021,
+    "angle_to_report7_fibre_deg": 0.00033113652419398395,
+    "f_dot_s": 1.581456049448704e-08,
+    "s_dot_grad_w": 0.038186645952024326
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d75",
+    "element": 654539,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0001286509690702215,
+    "angle_to_report7_fibre_deg": 0.00020324475715276265,
+    "f_dot_s": -2.7239138333801094e-08,
+    "s_dot_grad_w": 0.03924375800650718
+   },
+   {
+    "id": "lv_free_wall_phi60_z0.25_d90",
+    "element": 1486984,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00029182327933613547,
+    "angle_to_report7_fibre_deg": 0.00027431522715750756,
+    "f_dot_s": -7.048904265838374e-08,
+    "s_dot_grad_w": 0.029710157297076073
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d10",
+    "element": 305113,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00020404832914829835,
+    "angle_to_report7_fibre_deg": 0.00026321718280044134,
+    "f_dot_s": 8.952296406961047e-08,
+    "s_dot_grad_w": 0.02243917013849135
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d50",
+    "element": 1206141,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00018692769080463288,
+    "angle_to_report7_fibre_deg": 0.00012911756348439883,
+    "f_dot_s": 4.918720702962176e-08,
+    "s_dot_grad_w": 0.006100617451493429
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d75",
+    "element": 1924872,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002339308630901343,
+    "angle_to_report7_fibre_deg": 0.0002783852009344998,
+    "f_dot_s": 7.59557985952064e-09,
+    "s_dot_grad_w": -0.004061545660434535
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.25_d90",
+    "element": 840819,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00013771450956521984,
+    "angle_to_report7_fibre_deg": 0.0002005114264559157,
+    "f_dot_s": -1.7490129483599404e-08,
+    "s_dot_grad_w": 0.0012895542214568468
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d10",
+    "element": 1347977,
+    "element_tag": 25,
+    "angle_to_report7_transmural_deg": 0.00033016101390340516,
+    "angle_to_report7_fibre_deg": 0.00012618243038085952,
+    "f_dot_s": 2.8135598517664562e-08,
+    "s_dot_grad_w": -0.04540379860911206
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d50",
+    "element": 1098436,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00024736019494257024,
+    "angle_to_report7_fibre_deg": 0.0001260870773129916,
+    "f_dot_s": 2.958651029727477e-08,
+    "s_dot_grad_w": 0.01081685716819351
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d75",
+    "element": 1337486,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002468365777010542,
+    "angle_to_report7_fibre_deg": 0.00013484489184505686,
+    "f_dot_s": -3.5131741016325435e-08,
+    "s_dot_grad_w": -0.017220160345945233
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.25_d90",
+    "element": 148086,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00017171890576536417,
+    "angle_to_report7_fibre_deg": 0.00037016774028815556,
+    "f_dot_s": -1.4267648840160518e-08,
+    "s_dot_grad_w": -0.003719113815703935
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d10",
+    "element": 891365,
+    "element_tag": 25,
+    "angle_to_report7_transmural_deg": 0.00014547761797925146,
+    "angle_to_report7_fibre_deg": 0.0002832200244681745,
+    "f_dot_s": 3.8629789110566914e-08,
+    "s_dot_grad_w": 0.01472095338747072
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d50",
+    "element": 582937,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0001338764992333225,
+    "angle_to_report7_fibre_deg": 0.0001492737218060669,
+    "f_dot_s": -6.769956792385123e-08,
+    "s_dot_grad_w": 0.08311250090676671
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d75",
+    "element": 1527853,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00023266075963118292,
+    "angle_to_report7_fibre_deg": 0.0003171076693708927,
+    "f_dot_s": 8.411394237725633e-08,
+    "s_dot_grad_w": 0.03645110646772071
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.25_d90",
+    "element": 218345,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00020891476513552765,
+    "angle_to_report7_fibre_deg": 0.00025375468440213845,
+    "f_dot_s": 1.511168924023254e-08,
+    "s_dot_grad_w": 0.024915509657898825
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d10",
+    "element": 1418880,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00015540087617257076,
+    "angle_to_report7_fibre_deg": 0.00013881109750818682,
+    "f_dot_s": 6.967199595031559e-10,
+    "s_dot_grad_w": 0.026320953611503838
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d50",
+    "element": 1807674,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002679707015668371,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 1.5727946136856463e-06,
+    "s_dot_grad_w": -0.01598003043267736
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d75",
+    "element": 402265,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00015920532168899875,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -2.2944023079229936e-06,
+    "s_dot_grad_w": -0.008617914714942596
+   },
+   {
+    "id": "lv_septum_phi-60_z0.25_d90",
+    "element": 113184,
+    "element_tag": 29,
+    "angle_to_report7_transmural_deg": 0.00019743411731969462,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 6.086318228965297e-06,
+    "s_dot_grad_w": -4.0600157694444695e-06
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d10",
+    "element": 844766,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00011085257093651302,
+    "angle_to_report7_fibre_deg": 0.00021487296402398167,
+    "f_dot_s": -1.7185300404953807e-09,
+    "s_dot_grad_w": -0.009950569333382146
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d50",
+    "element": 670555,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0001925841602715829,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 6.174984435447506e-07,
+    "s_dot_grad_w": 0.018113102862081547
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d75",
+    "element": 1861894,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00011892916730144798,
+    "angle_to_report7_fibre_deg": 8.537736462515939e-07,
+    "f_dot_s": 2.3968112905503602e-06,
+    "s_dot_grad_w": 0.010997697567561353
+   },
+   {
+    "id": "lv_septum_phi0_z0.5_d90",
+    "element": 1989968,
+    "element_tag": 29,
+    "angle_to_report7_transmural_deg": 0.0003306860527973723,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 6.484105708692844e-06,
+    "s_dot_grad_w": 0.009144481371918374
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d10",
+    "element": 598488,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002346309164489225,
+    "angle_to_report7_fibre_deg": 6.913985291554978e-05,
+    "f_dot_s": 8.514504806766965e-08,
+    "s_dot_grad_w": 0.023719998511156883
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d50",
+    "element": 165155,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.000276129457287619,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.1282044277138858e-06,
+    "s_dot_grad_w": 0.040632075271613464
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d75",
+    "element": 369987,
+    "element_tag": 29,
+    "angle_to_report7_transmural_deg": 0.00021756658730611648,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -5.429979338389401e-08,
+    "s_dot_grad_w": 0.024914096070411527
+   },
+   {
+    "id": "lv_septum_phi60_z0.5_d90",
+    "element": 955946,
+    "element_tag": 29,
+    "angle_to_report7_transmural_deg": 0.00030731344907165397,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -4.923999066819285e-07,
+    "s_dot_grad_w": -0.027380401672648644
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d10",
+    "element": 1685358,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002876571084823146,
+    "angle_to_report7_fibre_deg": 3.380771155232102e-05,
+    "f_dot_s": 6.538206162587379e-08,
+    "s_dot_grad_w": 0.007481708161678553
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d50",
+    "element": 1155691,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0003011122999876619,
+    "angle_to_report7_fibre_deg": 0.00020711711056110843,
+    "f_dot_s": 4.801141145760468e-08,
+    "s_dot_grad_w": 0.01826058413560184
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d75",
+    "element": 840541,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00022391668659249293,
+    "angle_to_report7_fibre_deg": 0.0001235761779137177,
+    "f_dot_s": 5.451555974700373e-08,
+    "s_dot_grad_w": -0.008340816502249786
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.5_d90",
+    "element": 424221,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 7.026925373173664e-05,
+    "angle_to_report7_fibre_deg": 0.00029124695687869455,
+    "f_dot_s": -4.460109809256707e-09,
+    "s_dot_grad_w": 0.009884231690809354
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d10",
+    "element": 984667,
+    "element_tag": 25,
+    "angle_to_report7_transmural_deg": 0.00033585007120118823,
+    "angle_to_report7_fibre_deg": 0.00022254359769791578,
+    "f_dot_s": -1.0418199497541636e-09,
+    "s_dot_grad_w": -0.01735191569764038
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d50",
+    "element": 650869,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0003016709840284525,
+    "angle_to_report7_fibre_deg": 0.0001583790385626996,
+    "f_dot_s": -1.2213929125037826e-08,
+    "s_dot_grad_w": -0.003386537615563726
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d75",
+    "element": 1607292,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00033900834798805495,
+    "angle_to_report7_fibre_deg": 7.984951974325939e-05,
+    "f_dot_s": -3.808462149812453e-08,
+    "s_dot_grad_w": 0.0023128057069451806
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.5_d90",
+    "element": 349612,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00027095041696299365,
+    "angle_to_report7_fibre_deg": 3.7566040435070805e-05,
+    "f_dot_s": 1.730732032689808e-08,
+    "s_dot_grad_w": 0.012913505798347314
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.5_d10",
+    "element": 39712,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00033356445768891905,
+    "angle_to_report7_fibre_deg": 0.00024048850191204577,
+    "f_dot_s": 9.163619724139593e-09,
+    "s_dot_grad_w": 0.013922405416365575
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.5_d50",
+    "element": 629802,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.000363231272600513,
+    "angle_to_report7_fibre_deg": 0.0003005137701686486,
+    "f_dot_s": 2.4430800993346935e-09,
+    "s_dot_grad_w": 0.03650436404523059
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.5_d75",
+    "element": 1711225,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00022386296670747608,
+    "angle_to_report7_fibre_deg": 0.0002152390285874822,
+    "f_dot_s": 1.492739987174474e-09,
+    "s_dot_grad_w": -0.0932190241630371
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.5_d90",
+    "element": 521002,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00031625947096848946,
+    "angle_to_report7_fibre_deg": 0.00015480401880341437,
+    "f_dot_s": -7.867099471869921e-10,
+    "s_dot_grad_w": -0.06102502926224521
+   },
+   {
+    "id": "lv_septum_phi-60_z0.5_d10",
+    "element": 947727,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00023366897218145402,
+    "angle_to_report7_fibre_deg": 0.00019214839321871172,
+    "f_dot_s": -3.931723996375425e-08,
+    "s_dot_grad_w": 0.0016651280855797383
+   },
+   {
+    "id": "lv_septum_phi-60_z0.5_d50",
+    "element": 1025834,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0001255715000515014,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 3.500497566511832e-06,
+    "s_dot_grad_w": -0.016533559586226567
+   },
+   {
+    "id": "lv_septum_phi-60_z0.5_d75",
+    "element": 1416270,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00019598150423344386,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -7.821973914690084e-07,
+    "s_dot_grad_w": -0.004600315150108002
+   },
+   {
+    "id": "lv_septum_phi-60_z0.5_d90",
+    "element": 912448,
+    "element_tag": 29,
+    "angle_to_report7_transmural_deg": 0.00021189760637074597,
+    "angle_to_report7_fibre_deg": 1.2074182697257333e-06,
+    "f_dot_s": -7.153167061887955e-06,
+    "s_dot_grad_w": -0.011216952771650251
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d10",
+    "element": 1000074,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0001733307697993568,
+    "angle_to_report7_fibre_deg": 0.00020514743501222986,
+    "f_dot_s": 2.6026791111188885e-08,
+    "s_dot_grad_w": -0.04766616954587693
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d50",
+    "element": 1555932,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0003404063087909164,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 2.236988864409706e-06,
+    "s_dot_grad_w": -0.01298744555074658
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d75",
+    "element": 1070128,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002487721190827862,
+    "angle_to_report7_fibre_deg": 8.537736462515939e-07,
+    "f_dot_s": -2.5412100767563395e-06,
+    "s_dot_grad_w": 0.005935700546382109
+   },
+   {
+    "id": "lv_septum_phi0_z0.75_d90",
+    "element": 119551,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 6.69001252290882e-05,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.4407895043977437e-06,
+    "s_dot_grad_w": 0.03290495602798804
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d10",
+    "element": 122983,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00033618306272569393,
+    "angle_to_report7_fibre_deg": 0.00015252708604118366,
+    "f_dot_s": -1.3818598487702616e-09,
+    "s_dot_grad_w": -0.017008381847836124
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d50",
+    "element": 378112,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.000254670818445249,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.3237099207863423e-06,
+    "s_dot_grad_w": -0.015126581494654606
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d75",
+    "element": 159830,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.000285525701681268,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -3.612288820648013e-06,
+    "s_dot_grad_w": 0.0218105267157208
+   },
+   {
+    "id": "lv_septum_phi60_z0.75_d90",
+    "element": 1751964,
+    "element_tag": 29,
+    "angle_to_report7_transmural_deg": 0.00023731836038870557,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.2073929574474285e-06,
+    "s_dot_grad_w": 0.025682452228252647
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d10",
+    "element": 331107,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.000304884469799103,
+    "angle_to_report7_fibre_deg": 6.966499985708211e-05,
+    "f_dot_s": 5.094352142909209e-08,
+    "s_dot_grad_w": 0.018063128675423194
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d50",
+    "element": 409315,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 6.951835858817655e-05,
+    "angle_to_report7_fibre_deg": 0.00017005748017727976,
+    "f_dot_s": 8.09620286229551e-08,
+    "s_dot_grad_w": 0.009096794000169129
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d75",
+    "element": 1786451,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00025112268214692613,
+    "angle_to_report7_fibre_deg": 0.00025247748304275345,
+    "f_dot_s": 2.062091059018556e-08,
+    "s_dot_grad_w": -0.01565178388442082
+   },
+   {
+    "id": "lv_free_wall_phi120_z0.75_d90",
+    "element": 1580152,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0001805080217742004,
+    "angle_to_report7_fibre_deg": 2.9991647633427174e-05,
+    "f_dot_s": 4.078350102076911e-09,
+    "s_dot_grad_w": -0.01254844226379999
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d10",
+    "element": 1375245,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002967179730073158,
+    "angle_to_report7_fibre_deg": 7.616790272332832e-05,
+    "f_dot_s": 9.025590330669075e-09,
+    "s_dot_grad_w": 0.01966620281984775
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d50",
+    "element": 278954,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00032321055783578553,
+    "angle_to_report7_fibre_deg": 0.00020826477700348548,
+    "f_dot_s": 3.2600040361652205e-08,
+    "s_dot_grad_w": -0.006405632837906979
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d75",
+    "element": 1697170,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002459401651847716,
+    "angle_to_report7_fibre_deg": 0.00013482597060889953,
+    "f_dot_s": 2.4234919831361834e-08,
+    "s_dot_grad_w": -0.005508188356204278
+   },
+   {
+    "id": "lv_free_wall_phi180_z0.75_d90",
+    "element": 1979099,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002900871078831168,
+    "angle_to_report7_fibre_deg": 0.00019384234502127536,
+    "f_dot_s": 1.3281429928069244e-08,
+    "s_dot_grad_w": 0.010425007307931264
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.75_d10",
+    "element": 636431,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00027235780773454866,
+    "angle_to_report7_fibre_deg": 0.00016300370235745212,
+    "f_dot_s": -9.050719895764558e-09,
+    "s_dot_grad_w": -0.005628024138378476
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.75_d50",
+    "element": 357449,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00018551462081078447,
+    "angle_to_report7_fibre_deg": 9.7382606259184e-05,
+    "f_dot_s": -5.469385744305555e-08,
+    "s_dot_grad_w": 0.13894572802000396
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.75_d75",
+    "element": 675840,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00028308744678549874,
+    "angle_to_report7_fibre_deg": 8.537736462515939e-07,
+    "f_dot_s": -5.903842366913881e-06,
+    "s_dot_grad_w": 0.436322742116143
+   },
+   {
+    "id": "lv_free_wall_phi-120_z0.75_d90",
+    "element": 562302,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00028489698671023953,
+    "angle_to_report7_fibre_deg": 0.00023957594403244974,
+    "f_dot_s": -3.8578719711857e-08,
+    "s_dot_grad_w": 0.01020918153789061
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d10",
+    "element": 1651692,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002485727918120386,
+    "angle_to_report7_fibre_deg": 0.00012257525687254023,
+    "f_dot_s": -5.330141761294982e-08,
+    "s_dot_grad_w": 0.007527019183767601
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d50",
+    "element": 518225,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002997365697074543,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.0477950741494269e-06,
+    "s_dot_grad_w": -0.010418633033483993
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d75",
+    "element": 1934326,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0001611010014767552,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 2.326090608073539e-06,
+    "s_dot_grad_w": 0.008132904755775336
+   },
+   {
+    "id": "lv_septum_phi-60_z0.75_d90",
+    "element": 232663,
+    "element_tag": 29,
+    "angle_to_report7_transmural_deg": 0.0002968960260330719,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 6.497397720045539e-06,
+    "s_dot_grad_w": 0.03938843634649883
+   },
+   {
+    "id": "rv_free_wall_q25_z0.25_d10",
+    "element": 1932699,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00022675205807487205,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 1.3607925101188911e-06,
+    "s_dot_grad_w": -0.005383091359922396
+   },
+   {
+    "id": "rv_free_wall_q25_z0.25_d50",
+    "element": 720655,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00037546437334419903,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 8.816946809320214e-07,
+    "s_dot_grad_w": -0.01236441450840578
+   },
+   {
+    "id": "rv_free_wall_q25_z0.25_d75",
+    "element": 1832177,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0003152702974401708,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 4.677231667582493e-06,
+    "s_dot_grad_w": 0.03525726779871877
+   },
+   {
+    "id": "rv_free_wall_q25_z0.25_d90",
+    "element": 322646,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00024150176454024947,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.4224106280880111e-06,
+    "s_dot_grad_w": 0.016405757542260622
+   },
+   {
+    "id": "rv_free_wall_q50_z0.25_d10",
+    "element": 624194,
+    "element_tag": 28,
+    "angle_to_report7_transmural_deg": 0.00012587299268248048,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 7.228026009942212e-07,
+    "s_dot_grad_w": -0.0012192403111623443
+   },
+   {
+    "id": "rv_free_wall_q50_z0.25_d50",
+    "element": 516153,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00020621063928788507,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.1787029455812004e-06,
+    "s_dot_grad_w": 0.05135661260851246
+   },
+   {
+    "id": "rv_free_wall_q50_z0.25_d75",
+    "element": 928244,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00021166355657491626,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 3.202285630610202e-06,
+    "s_dot_grad_w": -0.024177515050164664
+   },
+   {
+    "id": "rv_free_wall_q50_z0.25_d90",
+    "element": 753006,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0003054577320275556,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 6.372983946234534e-06,
+    "s_dot_grad_w": 0.025570262441643343
+   },
+   {
+    "id": "rv_free_wall_q75_z0.25_d10",
+    "element": 625189,
+    "element_tag": 29,
+    "angle_to_report7_transmural_deg": 9.226682458216989e-05,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 4.407919273474725e-06,
+    "s_dot_grad_w": 0.05695640849760225
+   },
+   {
+    "id": "rv_free_wall_q75_z0.25_d50",
+    "element": 1733762,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00021502556666118684,
+    "angle_to_report7_fibre_deg": 0.00032722260326614733,
+    "f_dot_s": 1.4828520161769276e-08,
+    "s_dot_grad_w": -0.07055545616680745
+   },
+   {
+    "id": "rv_free_wall_q75_z0.25_d75",
+    "element": 1858500,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00020414475946719818,
+    "angle_to_report7_fibre_deg": 0.00018356331945354053,
+    "f_dot_s": 3.337995896357526e-08,
+    "s_dot_grad_w": 0.025461987861495113
+   },
+   {
+    "id": "rv_free_wall_q75_z0.25_d90",
+    "element": 420042,
+    "element_tag": 25,
+    "angle_to_report7_transmural_deg": 0.0001904432019490227,
+    "angle_to_report7_fibre_deg": 0.00029684446304048014,
+    "f_dot_s": -1.330333987414889e-08,
+    "s_dot_grad_w": 0.06747544752309688
+   },
+   {
+    "id": "rv_free_wall_q25_z0.5_d10",
+    "element": 848541,
+    "element_tag": 28,
+    "angle_to_report7_transmural_deg": 0.00023589813741272425,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 8.374954176132432e-07,
+    "s_dot_grad_w": 0.008862792092805355
+   },
+   {
+    "id": "rv_free_wall_q25_z0.5_d50",
+    "element": 198681,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00023367989016261195,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 5.644006123330103e-07,
+    "s_dot_grad_w": 0.004124775232101945
+   },
+   {
+    "id": "rv_free_wall_q25_z0.5_d75",
+    "element": 825274,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00030661530534231685,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.1204015424384761e-06,
+    "s_dot_grad_w": 0.009800877198106378
+   },
+   {
+    "id": "rv_free_wall_q25_z0.5_d90",
+    "element": 911133,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0002837047561431959,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -7.745969912431594e-06,
+    "s_dot_grad_w": 0.010851361493466464
+   },
+   {
+    "id": "rv_free_wall_q50_z0.5_d10",
+    "element": 716533,
+    "element_tag": 28,
+    "angle_to_report7_transmural_deg": 5.366563345030527e-05,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 5.252500352936895e-06,
+    "s_dot_grad_w": 0.06676769813916221
+   },
+   {
+    "id": "rv_free_wall_q50_z0.5_d50",
+    "element": 1834879,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00035376531117126326,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -3.5916157302140483e-06,
+    "s_dot_grad_w": 0.0035040840435255132
+   },
+   {
+    "id": "rv_free_wall_q50_z0.5_d75",
+    "element": 445246,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00017863670670398342,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 2.902010303174052e-07,
+    "s_dot_grad_w": -0.005660966540014119
+   },
+   {
+    "id": "rv_free_wall_q50_z0.5_d90",
+    "element": 1384103,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 9.821737217099072e-05,
+    "angle_to_report7_fibre_deg": 1.2074182697257333e-06,
+    "f_dot_s": -8.041423166627037e-06,
+    "s_dot_grad_w": 0.007527645654035711
+   },
+   {
+    "id": "rv_free_wall_q75_z0.5_d10",
+    "element": 178741,
+    "element_tag": 28,
+    "angle_to_report7_transmural_deg": 0.0001349772662310871,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 3.6104796919400606e-06,
+    "s_dot_grad_w": 0.016429383732841585
+   },
+   {
+    "id": "rv_free_wall_q75_z0.5_d50",
+    "element": 1152005,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00016146934128612818,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 5.14497935819036e-06,
+    "s_dot_grad_w": -0.0006730151625068835
+   },
+   {
+    "id": "rv_free_wall_q75_z0.5_d75",
+    "element": 329133,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00035923280756088846,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.168005011098483e-06,
+    "s_dot_grad_w": 0.004773996524033767
+   },
+   {
+    "id": "rv_free_wall_q75_z0.5_d90",
+    "element": 1996407,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00016890914197816918,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 1.7532902590322585e-06,
+    "s_dot_grad_w": -0.0017019794431052922
+   },
+   {
+    "id": "rv_free_wall_q25_z0.75_d10",
+    "element": 498263,
+    "element_tag": 28,
+    "angle_to_report7_transmural_deg": 0.00011353263526597924,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.8486024806751988e-06,
+    "s_dot_grad_w": -0.010397945402604802
+   },
+   {
+    "id": "rv_free_wall_q25_z0.75_d50",
+    "element": 833509,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00011826537141608445,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -2.304015138433757e-07,
+    "s_dot_grad_w": -0.0017800186160121102
+   },
+   {
+    "id": "rv_free_wall_q25_z0.75_d75",
+    "element": 1107069,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0001944430820158907,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 4.764997319772757e-07,
+    "s_dot_grad_w": 0.0037863678750507186
+   },
+   {
+    "id": "rv_free_wall_q25_z0.75_d90",
+    "element": 1698183,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 9.183525254292165e-05,
+    "angle_to_report7_fibre_deg": 1.2074182697257333e-06,
+    "f_dot_s": -8.346605845227506e-06,
+    "s_dot_grad_w": 0.0005023702923825818
+   },
+   {
+    "id": "rv_free_wall_q50_z0.75_d10",
+    "element": 1116049,
+    "element_tag": 28,
+    "angle_to_report7_transmural_deg": 0.00015882484744906202,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 4.0709869997268555e-07,
+    "s_dot_grad_w": 0.021654816862764593
+   },
+   {
+    "id": "rv_free_wall_q50_z0.75_d50",
+    "element": 947068,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00013165289287118585,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -6.978006398261627e-07,
+    "s_dot_grad_w": 0.00014748620448522409
+   },
+   {
+    "id": "rv_free_wall_q50_z0.75_d75",
+    "element": 589693,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0002596047556283551,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.2315973546006553e-06,
+    "s_dot_grad_w": 0.014897480617905887
+   },
+   {
+    "id": "rv_free_wall_q50_z0.75_d90",
+    "element": 977624,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0001443887491663221,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -5.169976946550747e-08,
+    "s_dot_grad_w": -0.0057033695415168294
+   },
+   {
+    "id": "rv_free_wall_q75_z0.75_d10",
+    "element": 1397465,
+    "element_tag": 28,
+    "angle_to_report7_transmural_deg": 0.00027795938198171133,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 6.219943301050135e-06,
+    "s_dot_grad_w": -0.0005352305061066509
+   },
+   {
+    "id": "rv_free_wall_q75_z0.75_d50",
+    "element": 1719216,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0002190624127718076,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -2.4280063593007384e-07,
+    "s_dot_grad_w": -0.01094143891235245
+   },
+   {
+    "id": "rv_free_wall_q75_z0.75_d75",
+    "element": 1889966,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0003336179925840564,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.6673086226104417e-06,
+    "s_dot_grad_w": 0.006927356766459845
+   },
+   {
+    "id": "rv_free_wall_q75_z0.75_d90",
+    "element": 1348994,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0003577810766224666,
+    "angle_to_report7_fibre_deg": 1.2074182697257333e-06,
+    "f_dot_s": -4.763201470248113e-06,
+    "s_dot_grad_w": 0.0014779637556932323
+   },
+   {
+    "id": "rvot_septal_z_d10",
+    "element": 809474,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00027196007683219893,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -1.0279958297249037e-06,
+    "s_dot_grad_w": 0.03422296673861274
+   },
+   {
+    "id": "rvot_septal_z_d50",
+    "element": 1198674,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00016214957559600523,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 3.2911248855072017e-06,
+    "s_dot_grad_w": 0.02180249585774634
+   },
+   {
+    "id": "rvot_septal_z_d75",
+    "element": 1947179,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0001162198885961429,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -4.5327043163012615e-06,
+    "s_dot_grad_w": -0.004766095989073278
+   },
+   {
+    "id": "rvot_septal_z_d90",
+    "element": 497831,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00030118370480615794,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -5.1008434980015505e-06,
+    "s_dot_grad_w": 0.006228734928902114
+   },
+   {
+    "id": "rvot_free_wall_z_d10",
+    "element": 1696659,
+    "element_tag": 28,
+    "angle_to_report7_transmural_deg": 0.00025175611939638097,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 2.3092862466884967e-06,
+    "s_dot_grad_w": 0.005801759849755754
+   },
+   {
+    "id": "rvot_free_wall_z_d50",
+    "element": 433533,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.0002656402516096286,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -4.974520834311047e-06,
+    "s_dot_grad_w": -0.003844329479308988
+   },
+   {
+    "id": "rvot_free_wall_z_d75",
+    "element": 1656133,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00023559048002078607,
+    "angle_to_report7_fibre_deg": 1.2074182697257333e-06,
+    "f_dot_s": -2.3143057021890456e-06,
+    "s_dot_grad_w": -0.006069689035711109
+   },
+   {
+    "id": "rvot_free_wall_z_d90",
+    "element": 1408444,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00029773818162749795,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": -3.3450058875839073e-06,
+    "s_dot_grad_w": -0.021920072686280254
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d10",
+    "element": 157065,
+    "element_tag": 2,
+    "angle_to_report7_transmural_deg": 0.00029547723200108137,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 7.879982338761249e-07,
+    "s_dot_grad_w": 0.2602578793433004
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d50",
+    "element": 1531115,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00018544781188690784,
+    "angle_to_report7_fibre_deg": 0.00011812969643940889,
+    "f_dot_s": -3.953030180969819e-09,
+    "s_dot_grad_w": 0.9515750779315444
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d75",
+    "element": 1988450,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0003468938114801889,
+    "angle_to_report7_fibre_deg": 0.0003463038940409888,
+    "f_dot_s": 7.71866004445343e-09,
+    "s_dot_grad_w": 0.9544581937427606
+   },
+   {
+    "id": "aortic_cusp_rcc_z_d90",
+    "element": 643941,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002586948236780193,
+    "angle_to_report7_fibre_deg": 8.537736462515939e-07,
+    "f_dot_s": -4.458991696237868e-06,
+    "s_dot_grad_w": -0.6486772976012302
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d10",
+    "element": 953939,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0003268815988701856,
+    "angle_to_report7_fibre_deg": 3.892870796406178e-05,
+    "f_dot_s": -8.284520100487747e-08,
+    "s_dot_grad_w": -0.4310065853136573
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d50",
+    "element": 159468,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0003409561919020129,
+    "angle_to_report7_fibre_deg": 2.247550002225511e-05,
+    "f_dot_s": -8.509300422348696e-09,
+    "s_dot_grad_w": 0.1533511151041913
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d75",
+    "element": 615610,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0001803585460862518,
+    "angle_to_report7_fibre_deg": 0.00023083645925823251,
+    "f_dot_s": 7.95976593829522e-08,
+    "s_dot_grad_w": 0.3325856446250255
+   },
+   {
+    "id": "aortic_cusp_lcc_z_d90",
+    "element": 1964650,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00027708736687935564,
+    "angle_to_report7_fibre_deg": 0.00020110492800016268,
+    "f_dot_s": 6.174320112475873e-09,
+    "s_dot_grad_w": 0.12452329960088217
+   },
+   {
+    "id": "lv_summit_superior_z_d10",
+    "element": 1293190,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0003556087664860578,
+    "angle_to_report7_fibre_deg": 0.00011955879850289926,
+    "f_dot_s": 3.5670577960139616e-08,
+    "s_dot_grad_w": 0.03641971496792712
+   },
+   {
+    "id": "lv_summit_superior_z_d50",
+    "element": 256122,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002722293118086696,
+    "angle_to_report7_fibre_deg": 0.00029885980329225434,
+    "f_dot_s": 1.130951934880109e-08,
+    "s_dot_grad_w": 0.07843736492520732
+   },
+   {
+    "id": "lv_summit_superior_z_d75",
+    "element": 243129,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 6.038298646180987e-05,
+    "angle_to_report7_fibre_deg": 0.0003000476914698481,
+    "f_dot_s": 5.3406187403015615e-08,
+    "s_dot_grad_w": 0.07314548579444691
+   },
+   {
+    "id": "lv_summit_superior_z_d90",
+    "element": 1140704,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00018717319973455296,
+    "angle_to_report7_fibre_deg": 0.00016860678551688376,
+    "f_dot_s": 2.021046094369261e-08,
+    "s_dot_grad_w": -0.0005863201947055123
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d10",
+    "element": 202193,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002813051366428668,
+    "angle_to_report7_fibre_deg": 0.0001502641617403236,
+    "f_dot_s": -5.218014048624653e-08,
+    "s_dot_grad_w": -0.020037533844393832
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d50",
+    "element": 1601228,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00018996031940897394,
+    "angle_to_report7_fibre_deg": 0.00012007591059031237,
+    "f_dot_s": 7.160570256528609e-09,
+    "s_dot_grad_w": 0.0007409146700594871
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d75",
+    "element": 722580,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00016347926153720916,
+    "angle_to_report7_fibre_deg": 2.3505925099591037e-05,
+    "f_dot_s": 5.465739706667083e-08,
+    "s_dot_grad_w": 0.000764253601033727
+   },
+   {
+    "id": "lv_summit_inferior_lateral_z_d90",
+    "element": 683990,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00038464374197591495,
+    "angle_to_report7_fibre_deg": 0.0003342313918837589,
+    "f_dot_s": 6.506241637116439e-08,
+    "s_dot_grad_w": -0.0028917629555173475
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d10",
+    "element": 70965,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00010390814622045157,
+    "angle_to_report7_fibre_deg": 0.0002912957571596651,
+    "f_dot_s": 3.1758512153423624e-08,
+    "s_dot_grad_w": 0.03289523291976635
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d50",
+    "element": 21339,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00031200374964874964,
+    "angle_to_report7_fibre_deg": 0.0002234767808655322,
+    "f_dot_s": -8.653382772296457e-08,
+    "s_dot_grad_w": 0.04688315497480261
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d75",
+    "element": 1790184,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00017641533756737035,
+    "angle_to_report7_fibre_deg": 0.0002321479466753785,
+    "f_dot_s": -7.706385819067352e-08,
+    "s_dot_grad_w": 0.00865450182207956
+   },
+   {
+    "id": "lv_vein_course_proximal_aiv_z_d90",
+    "element": 235671,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 5.614170370038792e-05,
+    "angle_to_report7_fibre_deg": 0.0,
+    "f_dot_s": 4.831300309204867e-06,
+    "s_dot_grad_w": 0.08035024753638428
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d10",
+    "element": 1291840,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00017464210714507954,
+    "angle_to_report7_fibre_deg": 0.00015769640687755327,
+    "f_dot_s": 9.122819596973919e-09,
+    "s_dot_grad_w": -0.026902456485512493
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d50",
+    "element": 1594614,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 2.937775443794112e-05,
+    "angle_to_report7_fibre_deg": 0.00031092602943710954,
+    "f_dot_s": 3.70532002441637e-08,
+    "s_dot_grad_w": -0.03416000064458968
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d75",
+    "element": 1564698,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00027644868982543917,
+    "angle_to_report7_fibre_deg": 0.00028579746026005074,
+    "f_dot_s": 4.6152920540887266e-08,
+    "s_dot_grad_w": -0.027641926872871276
+   },
+   {
+    "id": "lv_vein_course_basal_ring_anterolateral_z_d90",
+    "element": 791922,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00027738710279361393,
+    "angle_to_report7_fibre_deg": 0.0002665442490563074,
+    "f_dot_s": -1.0912870031243305e-08,
+    "s_dot_grad_w": -0.012308774707670077
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d10",
+    "element": 1935377,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002689590257452636,
+    "angle_to_report7_fibre_deg": 0.00016210011850182544,
+    "f_dot_s": -2.743829857765334e-09,
+    "s_dot_grad_w": 0.009672925503970043
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d50",
+    "element": 1013219,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.00010745344254279549,
+    "angle_to_report7_fibre_deg": 0.00025514550817393,
+    "f_dot_s": 1.1695410251366667e-08,
+    "s_dot_grad_w": -0.06089069692699979
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d75",
+    "element": 343652,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 5.795607694683767e-05,
+    "angle_to_report7_fibre_deg": 0.00034863875854421504,
+    "f_dot_s": -1.4325400310433167e-09,
+    "s_dot_grad_w": -0.030442271228557787
+   },
+   {
+    "id": "lv_vein_course_basal_ring_lateral_z_d90",
+    "element": 1356044,
+    "element_tag": 1,
+    "angle_to_report7_transmural_deg": 0.0002286966224272201,
+    "angle_to_report7_fibre_deg": 0.00021868941559906796,
+    "f_dot_s": 1.6531320534696192e-08,
+    "s_dot_grad_w": -0.052055266903037495
+   }
+  ]
+ },
+ "per_step": {
+  "fibre (+f) 2 mm": {
+   "n": 144,
+   "achieved_mm (median, smallest, largest)": [
+    1.97,
+    0.8,
+    2.49
+   ],
+   "d_APD_w (median, largest |change|)": [
+    0.0,
+    -0.1544
+   ],
+   "median_|d_APD_w|": 0.0097,
+   "excluded_by_8.7_capture": 0,
+   "unsnapped_point_left_myocardium": 26,
+   "snap_mm (median, largest)": [
+    0.409,
+    1.94
+   ]
+  },
+  "fibre (+f) 6 mm": {
+   "n": 144,
+   "achieved_mm (median, smallest, largest)": [
+    5.96,
+    3.45,
+    6.51
+   ],
+   "d_APD_w (median, largest |change|)": [
+    0.0109,
+    -1.0
+   ],
+   "median_|d_APD_w|": 0.0414,
+   "excluded_by_8.7_capture": 0,
+   "unsnapped_point_left_myocardium": 28,
+   "snap_mm (median, largest)": [
+    0.447,
+    5.381
+   ]
+  },
+  "fibre (+f) 10 mm": {
+   "n": 144,
+   "achieved_mm (median, smallest, largest)": [
+    9.9,
+    5.96,
+    12.34
+   ],
+   "d_APD_w (median, largest |change|)": [
+    0.049,
+    -1.0
+   ],
+   "median_|d_APD_w|": 0.1012,
+   "excluded_by_8.7_capture": 0,
+   "unsnapped_point_left_myocardium": 50,
+   "snap_mm (median, largest)": [
+    0.508,
+    7.525
+   ]
+  },
+  "cross-fibre (+s) 2 mm": {
+   "n": 144,
+   "achieved_mm (median, smallest, largest)": [
+    1.92,
+    1.24,
+    2.46
+   ],
+   "d_APD_w (median, largest |change|)": [
+    0.0,
+    0.1928
+   ],
+   "median_|d_APD_w|": 0.01,
+   "excluded_by_8.7_capture": 0,
+   "unsnapped_point_left_myocardium": 22,
+   "snap_mm (median, largest)": [
+    0.406,
+    1.046
+   ]
+  },
+  "cross-fibre (+s) 4 mm": {
+   "n": 144,
+   "achieved_mm (median, smallest, largest)": [
+    4.01,
+    1.77,
+    4.52
+   ],
+   "d_APD_w (median, largest |change|)": [
+    0.0,
+    0.4129
+   ],
+   "median_|d_APD_w|": 0.0178,
+   "excluded_by_8.7_capture": 0,
+   "unsnapped_point_left_myocardium": 25,
+   "snap_mm (median, largest)": [
+    0.442,
+    2.645
+   ]
+  },
+  "cross-fibre (+s) 6 mm": {
+   "n": 144,
+   "achieved_mm (median, smallest, largest)": [
+    6.04,
+    2.9,
+    6.5
+   ],
+   "d_APD_w (median, largest |change|)": [
+    0.0042,
+    0.6298
+   ],
+   "median_|d_APD_w|": 0.0437,
+   "excluded_by_8.7_capture": 0,
+   "unsnapped_point_left_myocardium": 29,
+   "snap_mm (median, largest)": [
+    0.455,
+    4.284
+   ]
+  },
+  "cross-fibre (+s) 10 mm": {
+   "n": 144,
+   "achieved_mm (median, smallest, largest)": [
+    9.9,
+    4.43,
+    10.48
+   ],
+   "d_APD_w (median, largest |change|)": [
+    0.0445,
+    1.0
+   ],
+   "median_|d_APD_w|": 0.1109,
+   "excluded_by_8.7_capture": 0,
+   "unsnapped_point_left_myocardium": 46,
+   "snap_mm (median, largest)": [
+    0.494,
+    6.876
+   ]
+  },
+  "transmural (D33) 2 mm": {
+   "n": 144,
+   "achieved_mm (median, smallest, largest)": [
+    1.94,
+    1.07,
+    2.91
+   ],
+   "d_APD_w (median, largest |change|)": [
+    -0.1178,
+    1.0
+   ],
+   "median_|d_APD_w|": 0.2175,
+   "excluded_by_8.7_capture": 0,
+   "unsnapped_point_left_myocardium": 6,
+   "snap_mm (median, largest)": [
+    0.498,
+    1.386
+   ]
+  }
+ },
+ "per_step_and_parent_depth": {
+  "fibre (+f) 2 mm": {
+   "0.1": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     2.01,
+     0.8,
+     2.49
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.0829
+    ],
+    "median_|d_APD_w|": 0.0077,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 7,
+    "snap_mm (median, largest)": [
+     0.389,
+     1.94
+    ]
+   },
+   "0.5": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     2.01,
+     1.63,
+     2.49
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.0014,
+     -0.1298
+    ],
+    "median_|d_APD_w|": 0.0184,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.421,
+     0.74
+    ]
+   },
+   "0.75": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.97,
+     1.5,
+     2.44
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0007,
+     -0.0978
+    ],
+    "median_|d_APD_w|": 0.017,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.45,
+     1.448
+    ]
+   },
+   "0.9": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.89,
+     1.08,
+     2.45
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -0.1544
+    ],
+    "median_|d_APD_w|": 0.0,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 16,
+    "snap_mm (median, largest)": [
+     0.349,
+     1.545
+    ]
+   }
+  },
+  "fibre (+f) 6 mm": {
+   "0.1": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     5.94,
+     3.45,
+     6.51
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0294,
+     0.2247
+    ],
+    "median_|d_APD_w|": 0.0372,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 3,
+    "snap_mm (median, largest)": [
+     0.418,
+     5.381
+    ]
+   },
+   "0.5": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     5.97,
+     4.56,
+     6.4
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0238,
+     -0.4684
+    ],
+    "median_|d_APD_w|": 0.0473,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.424,
+     3.365
+    ]
+   },
+   "0.75": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     5.94,
+     4.49,
+     6.5
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0169,
+     -0.6818
+    ],
+    "median_|d_APD_w|": 0.0416,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 4,
+    "snap_mm (median, largest)": [
+     0.448,
+     4.053
+    ]
+   },
+   "0.9": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     6.04,
+     5.01,
+     6.42
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -1.0
+    ],
+    "median_|d_APD_w|": 0.0,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 20,
+    "snap_mm (median, largest)": [
+     0.498,
+     4.089
+    ]
+   }
+  },
+  "fibre (+f) 10 mm": {
+   "0.1": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     10.01,
+     6.47,
+     12.34
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0979,
+     0.9531
+    ],
+    "median_|d_APD_w|": 0.1127,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 5,
+    "snap_mm (median, largest)": [
+     0.446,
+     7.525
+    ]
+   },
+   "0.5": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     9.91,
+     5.96,
+     10.54
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0801,
+     -0.6494
+    ],
+    "median_|d_APD_w|": 0.1227,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 3,
+    "snap_mm (median, largest)": [
+     0.495,
+     6.353
+    ]
+   },
+   "0.75": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     9.89,
+     7.31,
+     10.51
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0778,
+     -1.0
+    ],
+    "median_|d_APD_w|": 0.1274,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 13,
+    "snap_mm (median, largest)": [
+     0.498,
+     6.89
+    ]
+   },
+   "0.9": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     9.83,
+     7.83,
+     10.37
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -1.0
+    ],
+    "median_|d_APD_w|": 0.0,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 29,
+    "snap_mm (median, largest)": [
+     0.764,
+     6.789
+    ]
+   }
+  },
+  "cross-fibre (+s) 2 mm": {
+   "0.1": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     2.0,
+     1.61,
+     2.43
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.0905
+    ],
+    "median_|d_APD_w|": 0.0062,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.378,
+     0.68
+    ]
+   },
+   "0.5": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.88,
+     1.65,
+     2.46
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.0044,
+     0.1928
+    ],
+    "median_|d_APD_w|": 0.0282,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.438,
+     1.046
+    ]
+   },
+   "0.75": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.96,
+     1.24,
+     2.45
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0059,
+     0.1262
+    ],
+    "median_|d_APD_w|": 0.0246,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.425,
+     0.804
+    ]
+   },
+   "0.9": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.87,
+     1.52,
+     2.43
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.1218
+    ],
+    "median_|d_APD_w|": 0.0,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 17,
+    "snap_mm (median, largest)": [
+     0.379,
+     0.733
+    ]
+   }
+  },
+  "cross-fibre (+s) 4 mm": {
+   "0.1": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     3.98,
+     3.49,
+     4.52
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0044,
+     0.2524
+    ],
+    "median_|d_APD_w|": 0.0095,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.441,
+     0.709
+    ]
+   },
+   "0.5": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     4.08,
+     1.99,
+     4.43
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0149,
+     0.4129
+    ],
+    "median_|d_APD_w|": 0.0425,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.451,
+     2.645
+    ]
+   },
+   "0.75": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     3.96,
+     1.77,
+     4.44
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0015,
+     -0.3435
+    ],
+    "median_|d_APD_w|": 0.0271,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 3,
+    "snap_mm (median, largest)": [
+     0.442,
+     2.514
+    ]
+   },
+   "0.9": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     4.02,
+     3.18,
+     4.41
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.1996
+    ],
+    "median_|d_APD_w|": 0.0,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 18,
+    "snap_mm (median, largest)": [
+     0.424,
+     1.408
+    ]
+   }
+  },
+  "cross-fibre (+s) 6 mm": {
+   "0.1": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     6.0,
+     5.63,
+     6.49
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0677,
+     0.2701
+    ],
+    "median_|d_APD_w|": 0.0839,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.478,
+     0.812
+    ]
+   },
+   "0.5": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     6.04,
+     4.26,
+     6.4
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0111,
+     0.6298
+    ],
+    "median_|d_APD_w|": 0.044,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.429,
+     4.048
+    ]
+   },
+   "0.75": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     6.06,
+     2.9,
+     6.5
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0018,
+     0.4899
+    ],
+    "median_|d_APD_w|": 0.0378,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 3,
+    "snap_mm (median, largest)": [
+     0.456,
+     4.284
+    ]
+   },
+   "0.9": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     6.0,
+     3.52,
+     6.37
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.4436
+    ],
+    "median_|d_APD_w|": 0.0,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 22,
+    "snap_mm (median, largest)": [
+     0.432,
+     3.042
+    ]
+   }
+  },
+  "cross-fibre (+s) 10 mm": {
+   "0.1": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     9.97,
+     9.16,
+     10.41
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.2216,
+     -1.0
+    ],
+    "median_|d_APD_w|": 0.2531,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.47,
+     2.176
+    ]
+   },
+   "0.5": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     9.91,
+     5.08,
+     10.45
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0672,
+     0.6298
+    ],
+    "median_|d_APD_w|": 0.1232,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 7,
+    "snap_mm (median, largest)": [
+     0.485,
+     6.313
+    ]
+   },
+   "0.75": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     9.89,
+     4.43,
+     10.48
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0105,
+     0.864
+    ],
+    "median_|d_APD_w|": 0.0923,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 8,
+    "snap_mm (median, largest)": [
+     0.516,
+     6.876
+    ]
+   },
+   "0.9": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     9.86,
+     7.35,
+     10.47
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     1.0
+    ],
+    "median_|d_APD_w|": 0.0,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 29,
+    "snap_mm (median, largest)": [
+     0.577,
+     6.648
+    ]
+   }
+  },
+  "transmural (D33) 2 mm": {
+   "0.1": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.92,
+     1.46,
+     2.59
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.2408,
+     1.0
+    ],
+    "median_|d_APD_w|": 0.2408,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.472,
+     0.827
+    ]
+   },
+   "0.5": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.96,
+     1.07,
+     2.6
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.1632,
+     -0.5981
+    ],
+    "median_|d_APD_w|": 0.2109,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 3,
+    "snap_mm (median, largest)": [
+     0.526,
+     1.386
+    ]
+   },
+   "0.75": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.97,
+     1.6,
+     2.48
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.1595,
+     -1.0
+    ],
+    "median_|d_APD_w|": 0.1951,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.496,
+     0.919
+    ]
+   },
+   "0.9": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.92,
+     1.56,
+     2.91
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.1341,
+     -1.0
+    ],
+    "median_|d_APD_w|": 0.2034,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.556,
+     0.916
+    ]
+   }
+  }
+ },
+ "per_step_and_parent_family": {
+  "fibre (+f) 2 mm": {
+   "aortic_cusp": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     1.69,
+     0.8,
+     2.37
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0002,
+     -0.1079
+    ],
+    "median_|d_APD_w|": 0.028,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 5,
+    "snap_mm (median, largest)": [
+     0.701,
+     1.94
+    ]
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "achieved_mm (median, smallest, largest)": [
+     2.04,
+     1.63,
+     2.49
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0015,
+     -0.0978
+    ],
+    "median_|d_APD_w|": 0.012,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.435,
+     0.594
+    ]
+   },
+   "lv_septum": {
+    "n": 32,
+    "achieved_mm (median, smallest, largest)": [
+     2.12,
+     1.76,
+     2.45
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.0693
+    ],
+    "median_|d_APD_w|": 0.0105,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 6,
+    "snap_mm (median, largest)": [
+     0.407,
+     0.598
+    ]
+   },
+   "lv_summit": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     1.92,
+     1.77,
+     2.28
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0088,
+     -0.0385
+    ],
+    "median_|d_APD_w|": 0.0118,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.387,
+     0.614
+    ]
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "achieved_mm (median, smallest, largest)": [
+     1.93,
+     1.5,
+     2.25
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.001,
+     -0.1544
+    ],
+    "median_|d_APD_w|": 0.0123,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.412,
+     0.659
+    ]
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.94,
+     1.49,
+     2.44
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -0.1298
+    ],
+    "median_|d_APD_w|": 0.0068,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 9,
+    "snap_mm (median, largest)": [
+     0.405,
+     0.567
+    ]
+   },
+   "rvot": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     1.85,
+     1.59,
+     2.09
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -0.0187
+    ],
+    "median_|d_APD_w|": 0.0,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 3,
+    "snap_mm (median, largest)": [
+     0.348,
+     0.533
+    ]
+   }
+  },
+  "fibre (+f) 6 mm": {
+   "aortic_cusp": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     4.79,
+     3.45,
+     6.4
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0625,
+     -0.3847
+    ],
+    "median_|d_APD_w|": 0.2119,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 7,
+    "snap_mm (median, largest)": [
+     3.438,
+     5.381
+    ]
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "achieved_mm (median, smallest, largest)": [
+     5.98,
+     5.62,
+     6.51
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0376,
+     -0.5718
+    ],
+    "median_|d_APD_w|": 0.0521,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.483,
+     0.668
+    ]
+   },
+   "lv_septum": {
+    "n": 32,
+    "achieved_mm (median, smallest, largest)": [
+     5.96,
+     5.52,
+     6.43
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.1815
+    ],
+    "median_|d_APD_w|": 0.0175,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 8,
+    "snap_mm (median, largest)": [
+     0.415,
+     0.673
+    ]
+   },
+   "lv_summit": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     5.95,
+     5.79,
+     6.21
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0162,
+     0.0539
+    ],
+    "median_|d_APD_w|": 0.0162,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.406,
+     0.623
+    ]
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "achieved_mm (median, smallest, largest)": [
+     6.14,
+     5.61,
+     6.41
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0483,
+     -0.481
+    ],
+    "median_|d_APD_w|": 0.0545,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.402,
+     0.617
+    ]
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     5.96,
+     5.19,
+     6.41
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0109,
+     0.2247
+    ],
+    "median_|d_APD_w|": 0.028,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 10,
+    "snap_mm (median, largest)": [
+     0.438,
+     1.12
+    ]
+   },
+   "rvot": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     6.08,
+     5.77,
+     6.4
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -1.0
+    ],
+    "median_|d_APD_w|": 0.1286,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.366,
+     0.46
+    ]
+   }
+  },
+  "fibre (+f) 10 mm": {
+   "aortic_cusp": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     8.8,
+     5.96,
+     12.34
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.1237,
+     0.9531
+    ],
+    "median_|d_APD_w|": 0.5231,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 7,
+    "snap_mm (median, largest)": [
+     6.155,
+     7.525
+    ]
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "achieved_mm (median, smallest, largest)": [
+     10.1,
+     8.82,
+     10.41
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0675,
+     -0.9449
+    ],
+    "median_|d_APD_w|": 0.1216,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 10,
+    "snap_mm (median, largest)": [
+     0.489,
+     1.909
+    ]
+   },
+   "lv_septum": {
+    "n": 32,
+    "achieved_mm (median, smallest, largest)": [
+     10.06,
+     9.44,
+     10.37
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.0045,
+     0.2573
+    ],
+    "median_|d_APD_w|": 0.041,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 9,
+    "snap_mm (median, largest)": [
+     0.461,
+     1.355
+    ]
+   },
+   "lv_summit": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     9.86,
+     9.67,
+     10.51
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0592,
+     0.2138
+    ],
+    "median_|d_APD_w|": 0.061,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.5,
+     0.552
+    ]
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "achieved_mm (median, smallest, largest)": [
+     9.92,
+     9.48,
+     10.54
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.1221,
+     -0.5786
+    ],
+    "median_|d_APD_w|": 0.1264,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.471,
+     1.43
+    ]
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     9.82,
+     9.11,
+     10.5
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.1283,
+     0.6215
+    ],
+    "median_|d_APD_w|": 0.1283,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 16,
+    "snap_mm (median, largest)": [
+     0.554,
+     2.502
+    ]
+   },
+   "rvot": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     9.72,
+     8.59,
+     10.28
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -1.0
+    ],
+    "median_|d_APD_w|": 0.3322,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 6,
+    "snap_mm (median, largest)": [
+     0.893,
+     2.16
+    ]
+   }
+  },
+  "cross-fibre (+s) 2 mm": {
+   "aortic_cusp": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     1.99,
+     1.24,
+     2.36
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.1077,
+     0.1928
+    ],
+    "median_|d_APD_w|": 0.1077,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 4,
+    "snap_mm (median, largest)": [
+     0.487,
+     1.046
+    ]
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "achieved_mm (median, smallest, largest)": [
+     1.88,
+     1.67,
+     2.46
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0003,
+     0.0569
+    ],
+    "median_|d_APD_w|": 0.0084,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.43,
+     0.579
+    ]
+   },
+   "lv_septum": {
+    "n": 32,
+    "achieved_mm (median, smallest, largest)": [
+     1.92,
+     1.66,
+     2.42
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -0.0708
+    ],
+    "median_|d_APD_w|": 0.0094,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 6,
+    "snap_mm (median, largest)": [
+     0.396,
+     0.677
+    ]
+   },
+   "lv_summit": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     1.92,
+     1.63,
+     2.15
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0028,
+     0.0554
+    ],
+    "median_|d_APD_w|": 0.007,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.482,
+     0.68
+    ]
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "achieved_mm (median, smallest, largest)": [
+     2.02,
+     1.73,
+     2.34
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0093,
+     0.0646
+    ],
+    "median_|d_APD_w|": 0.0207,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.394,
+     0.559
+    ]
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     1.86,
+     1.56,
+     2.39
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -0.1179
+    ],
+    "median_|d_APD_w|": 0.0105,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 9,
+    "snap_mm (median, largest)": [
+     0.409,
+     0.531
+    ]
+   },
+   "rvot": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     1.99,
+     1.8,
+     2.38
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -0.1631
+    ],
+    "median_|d_APD_w|": 0.0,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.305,
+     0.447
+    ]
+   }
+  },
+  "cross-fibre (+s) 4 mm": {
+   "aortic_cusp": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     3.23,
+     1.77,
+     3.95
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.1094,
+     0.4129
+    ],
+    "median_|d_APD_w|": 0.1431,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 6,
+    "snap_mm (median, largest)": [
+     1.068,
+     2.645
+    ]
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "achieved_mm (median, smallest, largest)": [
+     3.98,
+     3.49,
+     4.52
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0062,
+     -0.0922
+    ],
+    "median_|d_APD_w|": 0.0158,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.464,
+     0.619
+    ]
+   },
+   "lv_septum": {
+    "n": 32,
+    "achieved_mm (median, smallest, largest)": [
+     4.03,
+     3.49,
+     4.43
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.1413
+    ],
+    "median_|d_APD_w|": 0.0123,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 6,
+    "snap_mm (median, largest)": [
+     0.415,
+     0.603
+    ]
+   },
+   "lv_summit": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     4.07,
+     3.54,
+     4.34
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.0019,
+     -0.0677
+    ],
+    "median_|d_APD_w|": 0.0246,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.5,
+     0.591
+    ]
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "achieved_mm (median, smallest, largest)": [
+     4.17,
+     3.74,
+     4.39
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0559,
+     0.1271
+    ],
+    "median_|d_APD_w|": 0.0559,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.486,
+     0.621
+    ]
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     4.01,
+     3.56,
+     4.41
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.2524
+    ],
+    "median_|d_APD_w|": 0.0205,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 9,
+    "snap_mm (median, largest)": [
+     0.44,
+     0.709
+    ]
+   },
+   "rvot": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     4.02,
+     3.76,
+     4.3
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     -0.3435
+    ],
+    "median_|d_APD_w|": 0.0126,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.345,
+     0.5
+    ]
+   }
+  },
+  "cross-fibre (+s) 6 mm": {
+   "aortic_cusp": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     4.27,
+     2.9,
+     6.15
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.1572,
+     0.6298
+    ],
+    "median_|d_APD_w|": 0.165,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 6,
+    "snap_mm (median, largest)": [
+     2.431,
+     4.284
+    ]
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "achieved_mm (median, smallest, largest)": [
+     6.11,
+     5.52,
+     6.42
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0361,
+     -0.2237
+    ],
+    "median_|d_APD_w|": 0.0485,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.455,
+     0.628
+    ]
+   },
+   "lv_septum": {
+    "n": 32,
+    "achieved_mm (median, smallest, largest)": [
+     6.01,
+     5.47,
+     6.36
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.2602
+    ],
+    "median_|d_APD_w|": 0.0221,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 8,
+    "snap_mm (median, largest)": [
+     0.489,
+     0.841
+    ]
+   },
+   "lv_summit": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     6.03,
+     5.75,
+     6.5
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.022,
+     -0.1138
+    ],
+    "median_|d_APD_w|": 0.0546,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.36,
+     0.505
+    ]
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "achieved_mm (median, smallest, largest)": [
+     6.14,
+     5.57,
+     6.49
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0546,
+     0.1396
+    ],
+    "median_|d_APD_w|": 0.0752,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 2,
+    "snap_mm (median, largest)": [
+     0.415,
+     0.513
+    ]
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     6.13,
+     5.49,
+     6.46
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     0.2701
+    ],
+    "median_|d_APD_w|": 0.0232,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 10,
+    "snap_mm (median, largest)": [
+     0.437,
+     0.86
+    ]
+   },
+   "rvot": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     5.74,
+     5.64,
+     6.01
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.0401,
+     -0.3783
+    ],
+    "median_|d_APD_w|": 0.1032,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.398,
+     0.812
+    ]
+   }
+  },
+  "cross-fibre (+s) 10 mm": {
+   "aortic_cusp": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     7.88,
+     4.43,
+     10.41
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.2723,
+     -1.0
+    ],
+    "median_|d_APD_w|": 0.5101,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 7,
+    "snap_mm (median, largest)": [
+     6.067,
+     6.876
+    ]
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "achieved_mm (median, smallest, largest)": [
+     9.86,
+     9.43,
+     10.48
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0527,
+     -0.9449
+    ],
+    "median_|d_APD_w|": 0.0784,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 6,
+    "snap_mm (median, largest)": [
+     0.482,
+     0.716
+    ]
+   },
+   "lv_septum": {
+    "n": 32,
+    "achieved_mm (median, smallest, largest)": [
+     10.0,
+     9.43,
+     10.45
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0,
+     1.0
+    ],
+    "median_|d_APD_w|": 0.0619,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 8,
+    "snap_mm (median, largest)": [
+     0.507,
+     1.912
+    ]
+   },
+   "lv_summit": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     9.94,
+     9.7,
+     10.27
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.0174,
+     -0.3528
+    ],
+    "median_|d_APD_w|": 0.1278,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.384,
+     0.669
+    ]
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "achieved_mm (median, smallest, largest)": [
+     9.51,
+     8.35,
+     10.14
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0847,
+     -0.3845
+    ],
+    "median_|d_APD_w|": 0.199,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 7,
+    "snap_mm (median, largest)": [
+     0.738,
+     2.576
+    ]
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     9.93,
+     9.48,
+     10.47
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.1713,
+     0.8889
+    ],
+    "median_|d_APD_w|": 0.1741,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 14,
+    "snap_mm (median, largest)": [
+     0.506,
+     1.756
+    ]
+   },
+   "rvot": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     9.93,
+     9.16,
+     10.39
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.0321,
+     -0.4684
+    ],
+    "median_|d_APD_w|": 0.198,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 3,
+    "snap_mm (median, largest)": [
+     0.47,
+     2.176
+    ]
+   }
+  },
+  "transmural (D33) 2 mm": {
+   "aortic_cusp": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     1.73,
+     1.63,
+     2.08
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.1462,
+     0.5302
+    ],
+    "median_|d_APD_w|": 0.2513,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 4,
+    "snap_mm (median, largest)": [
+     0.493,
+     0.886
+    ]
+   },
+   "lv_free_wall": {
+    "n": 40,
+    "achieved_mm (median, smallest, largest)": [
+     1.97,
+     1.56,
+     2.6
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.1332,
+     0.2662
+    ],
+    "median_|d_APD_w|": 0.1535,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.466,
+     0.919
+    ]
+   },
+   "lv_septum": {
+    "n": 32,
+    "achieved_mm (median, smallest, largest)": [
+     1.9,
+     1.61,
+     2.63
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.1953,
+     0.3297
+    ],
+    "median_|d_APD_w|": 0.1992,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.534,
+     0.923
+    ]
+   },
+   "lv_summit": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     2.01,
+     1.46,
+     2.91
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.018,
+     -0.238
+    ],
+    "median_|d_APD_w|": 0.1659,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.473,
+     0.916
+    ]
+   },
+   "lv_vein_course": {
+    "n": 12,
+    "achieved_mm (median, smallest, largest)": [
+     1.9,
+     1.58,
+     2.51
+    ],
+    "d_APD_w (median, largest |change|)": [
+     0.0455,
+     0.2769
+    ],
+    "median_|d_APD_w|": 0.2117,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 0,
+    "snap_mm (median, largest)": [
+     0.451,
+     0.647
+    ]
+   },
+   "rv_free_wall": {
+    "n": 36,
+    "achieved_mm (median, smallest, largest)": [
+     2.02,
+     1.07,
+     2.59
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.3847,
+     0.7089
+    ],
+    "median_|d_APD_w|": 0.4401,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.607,
+     0.999
+    ]
+   },
+   "rvot": {
+    "n": 8,
+    "achieved_mm (median, smallest, largest)": [
+     2.08,
+     1.53,
+     2.35
+    ],
+    "d_APD_w (median, largest |change|)": [
+     -0.4139,
+     1.0
+    ],
+    "median_|d_APD_w|": 0.5181,
+    "excluded_by_8.7_capture": 0,
+    "unsnapped_point_left_myocardium": 1,
+    "snap_mm (median, largest)": [
+     0.753,
+     1.386
+    ]
+   }
+  }
+ },
+ "excluded_points": [],
+ "snapped_node_touches_no_element_of_parent_side": {
+  "count": 45,
+  "ids": [
+   "lv_free_wall_phi-120_z0.25_d90_lad_f10",
+   "lv_free_wall_phi-120_z0.25_d90_lad_s10",
+   "lv_septum_phi60_z0.5_d90_lad_s10",
+   "lv_free_wall_phi-120_z0.75_d90_lad_s10",
+   "rv_free_wall_q75_z0.25_d10_lad_f2",
+   "rv_free_wall_q75_z0.25_d10_lad_f6",
+   "rv_free_wall_q75_z0.25_d10_lad_f10",
+   "rv_free_wall_q75_z0.25_d10_lad_s2",
+   "rv_free_wall_q75_z0.25_d10_lad_s4",
+   "rv_free_wall_q75_z0.25_d10_lad_tm2",
+   "rv_free_wall_q75_z0.25_d50_lad_f2",
+   "rv_free_wall_q75_z0.25_d50_lad_f6",
+   "rv_free_wall_q75_z0.25_d50_lad_f10",
+   "rv_free_wall_q75_z0.25_d50_lad_s2",
+   "rv_free_wall_q75_z0.25_d50_lad_s4",
+   "rv_free_wall_q75_z0.25_d50_lad_s6",
+   "rv_free_wall_q75_z0.25_d50_lad_s10",
+   "rv_free_wall_q75_z0.25_d50_lad_tm2",
+   "rv_free_wall_q75_z0.25_d75_lad_f2",
+   "rv_free_wall_q75_z0.25_d75_lad_f6",
+   "rv_free_wall_q75_z0.25_d75_lad_f10",
+   "rv_free_wall_q75_z0.25_d75_lad_s2",
+   "rv_free_wall_q75_z0.25_d75_lad_s4",
+   "rv_free_wall_q75_z0.25_d75_lad_s6",
+   "rv_free_wall_q75_z0.25_d75_lad_s10",
+   "rv_free_wall_q75_z0.25_d75_lad_tm2",
+   "rv_free_wall_q75_z0.25_d90_lad_f2",
+   "rv_free_wall_q75_z0.25_d90_lad_f6",
+   "rv_free_wall_q75_z0.25_d90_lad_f10",
+   "rv_free_wall_q75_z0.25_d90_lad_s2",
+   "rv_free_wall_q75_z0.25_d90_lad_s4",
+   "rv_free_wall_q75_z0.25_d90_lad_s6",
+   "rv_free_wall_q75_z0.25_d90_lad_s10",
+   "rv_free_wall_q75_z0.25_d90_lad_tm2",
+   "aortic_cusp_rcc_z_d10_lad_s2",
+   "aortic_cusp_rcc_z_d10_lad_s4",
+   "aortic_cusp_rcc_z_d10_lad_s6",
+   "aortic_cusp_rcc_z_d10_lad_s10",
+   "aortic_cusp_rcc_z_d50_lad_s6",
+   "aortic_cusp_rcc_z_d50_lad_s10",
+   "aortic_cusp_rcc_z_d75_lad_s10",
+   "aortic_cusp_rcc_z_d90_lad_s2",
+   "aortic_cusp_rcc_z_d90_lad_s4",
+   "aortic_cusp_rcc_z_d90_lad_s6",
+   "aortic_cusp_rcc_z_d90_lad_s10"
+  ]
+ },
+ "muscle_fraction (median, p10, smallest)": [
+  0.961,
+  0.494,
+  0.073
+ ],
+ "8.8": {
+  "RVOT-parent ladder points below the PV, mm (8.8: every RVOT origin within the first 10 mm below the PV)": {
+   "rvot_septal_z_d10_lad_f2": 15.13,
+   "rvot_septal_z_d10_lad_f6": 15.11,
+   "rvot_septal_z_d10_lad_f10": 14.72,
+   "rvot_septal_z_d10_lad_s2": 13.91,
+   "rvot_septal_z_d10_lad_s4": 12.98,
+   "rvot_septal_z_d10_lad_s6": 11.56,
+   "rvot_septal_z_d10_lad_s10": 8.7,
+   "rvot_septal_z_d10_lad_tm2": 13.45,
+   "rvot_septal_z_d50_lad_f2": 14.42,
+   "rvot_septal_z_d50_lad_f6": 15.65,
+   "rvot_septal_z_d50_lad_f10": 15.06,
+   "rvot_septal_z_d50_lad_s2": 13.34,
+   "rvot_septal_z_d50_lad_s4": 12.03,
+   "rvot_septal_z_d50_lad_s6": 10.81,
+   "rvot_septal_z_d50_lad_s10": 8.49,
+   "rvot_septal_z_d50_lad_tm2": 13.03,
+   "rvot_septal_z_d75_lad_f2": 14.24,
+   "rvot_septal_z_d75_lad_f6": 16.74,
+   "rvot_septal_z_d75_lad_f10": 17.55,
+   "rvot_septal_z_d75_lad_s2": 13.07,
+   "rvot_septal_z_d75_lad_s4": 13.22,
+   "rvot_septal_z_d75_lad_s6": 12.76,
+   "rvot_septal_z_d75_lad_s10": 12.12,
+   "rvot_septal_z_d75_lad_tm2": 15.53,
+   "rvot_septal_z_d90_lad_f2": 14.3,
+   "rvot_septal_z_d90_lad_f6": 17.47,
+   "rvot_septal_z_d90_lad_f10": 17.5,
+   "rvot_septal_z_d90_lad_s2": 13.1,
+   "rvot_septal_z_d90_lad_s4": 12.57,
+   "rvot_septal_z_d90_lad_s6": 12.87,
+   "rvot_septal_z_d90_lad_s10": 12.08,
+   "rvot_septal_z_d90_lad_tm2": 14.84,
+   "rvot_free_wall_z_d10_lad_f2": 14.72,
+   "rvot_free_wall_z_d10_lad_f6": 10.62,
+   "rvot_free_wall_z_d10_lad_f10": 6.18,
+   "rvot_free_wall_z_d10_lad_s2": 16.56,
+   "rvot_free_wall_z_d10_lad_s4": 16.66,
+   "rvot_free_wall_z_d10_lad_s6": 16.93,
+   "rvot_free_wall_z_d10_lad_s10": 17.29,
+   "rvot_free_wall_z_d10_lad_tm2": 16.77,
+   "rvot_free_wall_z_d50_lad_f2": 14.7,
+   "rvot_free_wall_z_d50_lad_f6": 11.13,
+   "rvot_free_wall_z_d50_lad_f10": 7.88,
+   "rvot_free_wall_z_d50_lad_s2": 15.31,
+   "rvot_free_wall_z_d50_lad_s4": 14.34,
+   "rvot_free_wall_z_d50_lad_s6": 13.76,
+   "rvot_free_wall_z_d50_lad_s10": 10.65,
+   "rvot_free_wall_z_d50_lad_tm2": 17.12,
+   "rvot_free_wall_z_d75_lad_f2": 15.41,
+   "rvot_free_wall_z_d75_lad_f6": 12.58,
+   "rvot_free_wall_z_d75_lad_f10": 10.84,
+   "rvot_free_wall_z_d75_lad_s2": 14.2,
+   "rvot_free_wall_z_d75_lad_s4": 12.9,
+   "rvot_free_wall_z_d75_lad_s6": 11.5,
+   "rvot_free_wall_z_d75_lad_s10": 8.12,
+   "rvot_free_wall_z_d75_lad_tm2": 16.18,
+   "rvot_free_wall_z_d90_lad_f2": 16.09,
+   "rvot_free_wall_z_d90_lad_f6": 14.96,
+   "rvot_free_wall_z_d90_lad_f10": 13.9,
+   "rvot_free_wall_z_d90_lad_s2": 14.83,
+   "rvot_free_wall_z_d90_lad_s4": 12.79,
+   "rvot_free_wall_z_d90_lad_s6": 11.11,
+   "rvot_free_wall_z_d90_lad_s10": 6.54,
+   "rvot_free_wall_z_d90_lad_tm2": 16.53
+  },
+  "RVOT-parent ladder points outside 0-10 mm below the PV": [
+   "rvot_free_wall_z_d10_lad_f2",
+   "rvot_free_wall_z_d10_lad_f6",
+   "rvot_free_wall_z_d10_lad_s10",
+   "rvot_free_wall_z_d10_lad_s2",
+   "rvot_free_wall_z_d10_lad_s4",
+   "rvot_free_wall_z_d10_lad_s6",
+   "rvot_free_wall_z_d10_lad_tm2",
+   "rvot_free_wall_z_d50_lad_f2",
+   "rvot_free_wall_z_d50_lad_f6",
+   "rvot_free_wall_z_d50_lad_s10",
+   "rvot_free_wall_z_d50_lad_s2",
+   "rvot_free_wall_z_d50_lad_s4",
+   "rvot_free_wall_z_d50_lad_s6",
+   "rvot_free_wall_z_d50_lad_tm2",
+   "rvot_free_wall_z_d75_lad_f10",
+   "rvot_free_wall_z_d75_lad_f2",
+   "rvot_free_wall_z_d75_lad_f6",
+   "rvot_free_wall_z_d75_lad_s2",
+   "rvot_free_wall_z_d75_lad_s4",
+   "rvot_free_wall_z_d75_lad_s6",
+   "rvot_free_wall_z_d75_lad_tm2",
+   "rvot_free_wall_z_d90_lad_f10",
+   "rvot_free_wall_z_d90_lad_f2",
+   "rvot_free_wall_z_d90_lad_f6",
+   "rvot_free_wall_z_d90_lad_s2",
+   "rvot_free_wall_z_d90_lad_s4",
+   "rvot_free_wall_z_d90_lad_s6",
+   "rvot_free_wall_z_d90_lad_tm2",
+   "rvot_septal_z_d10_lad_f10",
+   "rvot_septal_z_d10_lad_f2",
+   "rvot_septal_z_d10_lad_f6",
+   "rvot_septal_z_d10_lad_s2",
+   "rvot_septal_z_d10_lad_s4",
+   "rvot_septal_z_d10_lad_s6",
+   "rvot_septal_z_d10_lad_tm2",
+   "rvot_septal_z_d50_lad_f10",
+   "rvot_septal_z_d50_lad_f2",
+   "rvot_septal_z_d50_lad_f6",
+   "rvot_septal_z_d50_lad_s2",
+   "rvot_septal_z_d50_lad_s4",
+   "rvot_septal_z_d50_lad_s6",
+   "rvot_septal_z_d50_lad_tm2",
+   "rvot_septal_z_d75_lad_f10",
+   "rvot_septal_z_d75_lad_f2",
+   "rvot_septal_z_d75_lad_f6",
+   "rvot_septal_z_d75_lad_s10",
+   "rvot_septal_z_d75_lad_s2",
+   "rvot_septal_z_d75_lad_s4",
+   "rvot_septal_z_d75_lad_s6",
+   "rvot_septal_z_d75_lad_tm2",
+   "rvot_septal_z_d90_lad_f10",
+   "rvot_septal_z_d90_lad_f2",
+   "rvot_septal_z_d90_lad_f6",
+   "rvot_septal_z_d90_lad_s10",
+   "rvot_septal_z_d90_lad_s2",
+   "rvot_septal_z_d90_lad_s4",
+   "rvot_septal_z_d90_lad_s6",
+   "rvot_septal_z_d90_lad_tm2"
+  ],
+  "aortic-cusp-parent ladder points to the PV rim, mm (8.8: PV-LCC 5 +- 3, PV-RCC 11 +- 5)": {
+   "aortic_cusp_rcc_z_d10_lad_f2": 29.42,
+   "aortic_cusp_rcc_z_d10_lad_f6": 28.23,
+   "aortic_cusp_rcc_z_d10_lad_f10": 26.13,
+   "aortic_cusp_rcc_z_d10_lad_s2": 30.16,
+   "aortic_cusp_rcc_z_d10_lad_s4": 28.95,
+   "aortic_cusp_rcc_z_d10_lad_s6": 28.32,
+   "aortic_cusp_rcc_z_d10_lad_s10": 26.64,
+   "aortic_cusp_rcc_z_d10_lad_tm2": 32.26,
+   "aortic_cusp_rcc_z_d50_lad_f2": 29.62,
+   "aortic_cusp_rcc_z_d50_lad_f6": 26.67,
+   "aortic_cusp_rcc_z_d50_lad_f10": 24.29,
+   "aortic_cusp_rcc_z_d50_lad_s2": 30.63,
+   "aortic_cusp_rcc_z_d50_lad_s4": 29.99,
+   "aortic_cusp_rcc_z_d50_lad_s6": 29.62,
+   "aortic_cusp_rcc_z_d50_lad_s10": 28.6,
+   "aortic_cusp_rcc_z_d50_lad_tm2": 32.44,
+   "aortic_cusp_rcc_z_d75_lad_f2": 30.56,
+   "aortic_cusp_rcc_z_d75_lad_f6": 27.83,
+   "aortic_cusp_rcc_z_d75_lad_f10": 24.88,
+   "aortic_cusp_rcc_z_d75_lad_s2": 31.4,
+   "aortic_cusp_rcc_z_d75_lad_s4": 31.34,
+   "aortic_cusp_rcc_z_d75_lad_s6": 32.16,
+   "aortic_cusp_rcc_z_d75_lad_s10": 29.06,
+   "aortic_cusp_rcc_z_d75_lad_tm2": 32.96,
+   "aortic_cusp_rcc_z_d90_lad_f2": 29.44,
+   "aortic_cusp_rcc_z_d90_lad_f6": 27.4,
+   "aortic_cusp_rcc_z_d90_lad_f10": 24.41,
+   "aortic_cusp_rcc_z_d90_lad_s2": 30.86,
+   "aortic_cusp_rcc_z_d90_lad_s4": 31.35,
+   "aortic_cusp_rcc_z_d90_lad_s6": 30.47,
+   "aortic_cusp_rcc_z_d90_lad_s10": 27.88,
+   "aortic_cusp_rcc_z_d90_lad_tm2": 31.52,
+   "aortic_cusp_lcc_z_d10_lad_f2": 19.0,
+   "aortic_cusp_lcc_z_d10_lad_f6": 20.55,
+   "aortic_cusp_lcc_z_d10_lad_f10": 8.08,
+   "aortic_cusp_lcc_z_d10_lad_s2": 16.88,
+   "aortic_cusp_lcc_z_d10_lad_s4": 15.65,
+   "aortic_cusp_lcc_z_d10_lad_s6": 13.98,
+   "aortic_cusp_lcc_z_d10_lad_s10": 12.13,
+   "aortic_cusp_lcc_z_d10_lad_tm2": 19.24,
+   "aortic_cusp_lcc_z_d50_lad_f2": 21.13,
+   "aortic_cusp_lcc_z_d50_lad_f6": 22.24,
+   "aortic_cusp_lcc_z_d50_lad_f10": 23.18,
+   "aortic_cusp_lcc_z_d50_lad_s2": 18.41,
+   "aortic_cusp_lcc_z_d50_lad_s4": 18.11,
+   "aortic_cusp_lcc_z_d50_lad_s6": 18.13,
+   "aortic_cusp_lcc_z_d50_lad_s10": 17.8,
+   "aortic_cusp_lcc_z_d50_lad_tm2": 19.52,
+   "aortic_cusp_lcc_z_d75_lad_f2": 20.46,
+   "aortic_cusp_lcc_z_d75_lad_f6": 21.76,
+   "aortic_cusp_lcc_z_d75_lad_f10": 22.88,
+   "aortic_cusp_lcc_z_d75_lad_s2": 18.88,
+   "aortic_cusp_lcc_z_d75_lad_s4": 18.65,
+   "aortic_cusp_lcc_z_d75_lad_s6": 18.39,
+   "aortic_cusp_lcc_z_d75_lad_s10": 19.04,
+   "aortic_cusp_lcc_z_d75_lad_tm2": 20.1,
+   "aortic_cusp_lcc_z_d90_lad_f2": 20.53,
+   "aortic_cusp_lcc_z_d90_lad_f6": 21.09,
+   "aortic_cusp_lcc_z_d90_lad_f10": 22.17,
+   "aortic_cusp_lcc_z_d90_lad_s2": 18.32,
+   "aortic_cusp_lcc_z_d90_lad_s4": 17.76,
+   "aortic_cusp_lcc_z_d90_lad_s6": 17.45,
+   "aortic_cusp_lcc_z_d90_lad_s10": 13.46,
+   "aortic_cusp_lcc_z_d90_lad_tm2": 19.05
+  },
+  "not applicable to ladder points": "LVOT breakout, outflow connections, LCC-GCV spacing, two apicobasal levels and nearest-sleeve checks place site families, not steps from a site; none is a ladder rule"
+ },
+ "5b_5c": {
+  "ladder cross-fibre (+s) 10 mm | parent depth 0.1": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 8,
+   "with_lv_endo": 4,
+   "with_rv_endo": 4,
+   "with_pmj_coupling_node": 2
+  },
+  "ladder cross-fibre (+s) 10 mm | parent depth 0.5": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 2,
+   "with_lv_endo": 1,
+   "with_rv_endo": 1,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder cross-fibre (+s) 10 mm | parent depth 0.75": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 7,
+   "with_lv_endo": 1,
+   "with_rv_endo": 6,
+   "with_pmj_coupling_node": 1
+  },
+  "ladder cross-fibre (+s) 10 mm | parent depth 0.9": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 11,
+   "with_lv_endo": 1,
+   "with_rv_endo": 10,
+   "with_pmj_coupling_node": 4
+  },
+  "ladder cross-fibre (+s) 2 mm | parent depth 0.1": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 30,
+   "with_lv_endo": 19,
+   "with_rv_endo": 11,
+   "with_pmj_coupling_node": 9
+  },
+  "ladder cross-fibre (+s) 2 mm | parent depth 0.5": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 2,
+   "with_lv_endo": 1,
+   "with_rv_endo": 1,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder cross-fibre (+s) 2 mm | parent depth 0.75": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 2,
+   "with_lv_endo": 0,
+   "with_rv_endo": 2,
+   "with_pmj_coupling_node": 1
+  },
+  "ladder cross-fibre (+s) 2 mm | parent depth 0.9": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 9,
+   "with_lv_endo": 1,
+   "with_rv_endo": 8,
+   "with_pmj_coupling_node": 2
+  },
+  "ladder cross-fibre (+s) 4 mm | parent depth 0.1": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 29,
+   "with_lv_endo": 19,
+   "with_rv_endo": 10,
+   "with_pmj_coupling_node": 7
+  },
+  "ladder cross-fibre (+s) 4 mm | parent depth 0.5": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 1,
+   "with_lv_endo": 0,
+   "with_rv_endo": 1,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder cross-fibre (+s) 4 mm | parent depth 0.75": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 3,
+   "with_lv_endo": 0,
+   "with_rv_endo": 3,
+   "with_pmj_coupling_node": 1
+  },
+  "ladder cross-fibre (+s) 4 mm | parent depth 0.9": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 9,
+   "with_lv_endo": 1,
+   "with_rv_endo": 8,
+   "with_pmj_coupling_node": 3
+  },
+  "ladder cross-fibre (+s) 6 mm | parent depth 0.1": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 20,
+   "with_lv_endo": 11,
+   "with_rv_endo": 9,
+   "with_pmj_coupling_node": 7
+  },
+  "ladder cross-fibre (+s) 6 mm | parent depth 0.5": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 1,
+   "with_lv_endo": 0,
+   "with_rv_endo": 1,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder cross-fibre (+s) 6 mm | parent depth 0.75": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 6,
+   "with_lv_endo": 0,
+   "with_rv_endo": 6,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder cross-fibre (+s) 6 mm | parent depth 0.9": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 9,
+   "with_lv_endo": 1,
+   "with_rv_endo": 8,
+   "with_pmj_coupling_node": 3
+  },
+  "ladder fibre (+f) 10 mm | parent depth 0.1": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 17,
+   "with_lv_endo": 8,
+   "with_rv_endo": 9,
+   "with_pmj_coupling_node": 4
+  },
+  "ladder fibre (+f) 10 mm | parent depth 0.5": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 4,
+   "with_lv_endo": 0,
+   "with_rv_endo": 4,
+   "with_pmj_coupling_node": 1
+  },
+  "ladder fibre (+f) 10 mm | parent depth 0.75": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 9,
+   "with_lv_endo": 0,
+   "with_rv_endo": 9,
+   "with_pmj_coupling_node": 4
+  },
+  "ladder fibre (+f) 10 mm | parent depth 0.9": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 12,
+   "with_lv_endo": 0,
+   "with_rv_endo": 12,
+   "with_pmj_coupling_node": 3
+  },
+  "ladder fibre (+f) 2 mm | parent depth 0.1": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 30,
+   "with_lv_endo": 19,
+   "with_rv_endo": 11,
+   "with_pmj_coupling_node": 11
+  },
+  "ladder fibre (+f) 2 mm | parent depth 0.5": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 2,
+   "with_lv_endo": 0,
+   "with_rv_endo": 2,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder fibre (+f) 2 mm | parent depth 0.75": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 2,
+   "with_lv_endo": 0,
+   "with_rv_endo": 2,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder fibre (+f) 2 mm | parent depth 0.9": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 9,
+   "with_lv_endo": 1,
+   "with_rv_endo": 8,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder fibre (+f) 6 mm | parent depth 0.1": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 22,
+   "with_lv_endo": 12,
+   "with_rv_endo": 10,
+   "with_pmj_coupling_node": 4
+  },
+  "ladder fibre (+f) 6 mm | parent depth 0.5": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 1,
+   "with_lv_endo": 0,
+   "with_rv_endo": 1,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder fibre (+f) 6 mm | parent depth 0.75": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 6,
+   "with_lv_endo": 0,
+   "with_rv_endo": 6,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder fibre (+f) 6 mm | parent depth 0.9": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 11,
+   "with_lv_endo": 1,
+   "with_rv_endo": 10,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder transmural (D33) 2 mm | parent depth 0.1": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 0,
+   "with_lv_endo": 0,
+   "with_rv_endo": 0,
+   "with_pmj_coupling_node": 0
+  },
+  "ladder transmural (D33) 2 mm | parent depth 0.5": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 8,
+   "with_lv_endo": 0,
+   "with_rv_endo": 8,
+   "with_pmj_coupling_node": 2
+  },
+  "ladder transmural (D33) 2 mm | parent depth 0.75": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 4,
+   "with_lv_endo": 0,
+   "with_rv_endo": 4,
+   "with_pmj_coupling_node": 1
+  },
+  "ladder transmural (D33) 2 mm | parent depth 0.9": {
+   "sets": 36,
+   "with_lv_or_rv_endo": 1,
+   "with_lv_endo": 0,
+   "with_rv_endo": 1,
+   "with_pmj_coupling_node": 0
+  }
+ },
+ "2b_ii_site_to_own_displaced_and_ladder": {
+  "pairs": 1440,
+  "0-2": 255,
+  "2-4": 405,
+  "4-6": 350,
+  "6-10": 311,
+  "10-20": 119,
+  "20-40": 0
+ },
+ "2b_iii_all_built_sets_with_ladder": {
+  "points": 1666,
+  "0-2": 1970,
+  "2-4": 5942,
+  "4-6": 8722,
+  "6-10": 16942,
+  "10-20": 54925,
+  "20-40": 282219
+ },
+ "manifest": {
+  "path": "data/biv/6G8DD8S5/v52/sites52.json",
+  "sha256": "9de1433cda9aa1df8499004570996119c1cef77c504ec5d3e1e45a075a40964a"
+ },
+ "counts": {
+  "ladder_points": 1152,
+  "ladder_excluded_by_capture": 0,
+  "ladder_beats_at_most": 1152,
+  "stim25_sets_built": 0,
+  "stim25_beats_at_most": 0
+ },
+ "wall_s": 80.1
+}

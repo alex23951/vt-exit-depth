@@ -1,0 +1,922 @@
+{
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "arm": "A11",
+ "speeds_m_s": {
+  "Y5HYEDL4": {
+   "fibre": 0.8,
+   "sheet": 0.24,
+   "normal": 0.34
+  },
+  "6G8DD8S5": {
+   "fibre": 0.8,
+   "sheet": 0.173,
+   "normal": 0.235
+  },
+  "7D98EVAR": {
+   "fibre": 0.8,
+   "sheet": 0.173,
+   "normal": 0.235
+  }
+ },
+ "rule": "C67 (5), R-L9 (D36 (e))",
+ "primary_stencils": {
+  "Y5HYEDL4": "v51-2ring-1",
+  "6G8DD8S5": "v52-3ring-1 (R4.2: graph distance <= 3, edges <= 5.25 mm)",
+  "7D98EVAR": "v52-3ring-1 (R4.2: graph distance <= 3, edges <= 5.25 mm)"
+ },
+ "hearts": {
+  "Y5HYEDL4": {
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.24,
+    "normal": 0.34
+   },
+   "tried_in_order": [
+    "2-ring"
+   ],
+   "stencil_passed": "2-ring",
+   "tries": [
+    {
+     "stencil": "2-ring",
+     "factors": {
+      "fibre": 1.1624289602360374,
+      "sheet": 1.0026887505805109,
+      "normal": 1.0121003226017076
+     },
+     "converged_within_0.5pct": true,
+     "iterations": 4,
+     "calibration_slab": {
+      "seed": 0,
+      "nodes": 46225,
+      "tets": 287615,
+      "edge_mean_mm": 1.029,
+      "edge_max_mm": 1.741,
+      "E1": 341435,
+      "E2": 1362411,
+      "E2_rejected_midpoint": 0
+     },
+     "calibration_history": [
+      {
+       "iteration": 0,
+       "factors": {
+        "fibre": 1.0,
+        "sheet": 1.0,
+        "normal": 1.0
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7092675541818969,
+         "ratio_to_target": 0.8865844427273711,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.23923540510122393,
+         "ratio_to_target": 0.9968141879217665,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.3350276365454102,
+         "ratio_to_target": 0.9853754016041475,
+         "nodes": 41
+        }
+       }
+      },
+      {
+       "iteration": 1,
+       "factors": {
+        "fibre": 1.127924145526096,
+        "sheet": 1.0031959939142474,
+        "normal": 1.0148416515898857
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7808445139385857,
+         "ratio_to_target": 0.9760556424232321,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.24010364626197322,
+         "ratio_to_target": 1.0004318594248884,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.340750237049243,
+         "ratio_to_target": 1.002206579556597,
+         "nodes": 41
+        }
+       }
+      },
+      {
+       "iteration": 2,
+       "factors": {
+        "fibre": 1.1555941039650397,
+        "sheet": 1.0027629412871237,
+        "normal": 1.0126072531262753
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7952961555468406,
+         "ratio_to_target": 0.9941201944335507,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.24001775802269326,
+         "ratio_to_target": 1.000073991761222,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.3401702957449021,
+         "ratio_to_target": 1.0005008698379472,
+         "nodes": 41
+        }
+       }
+      },
+      {
+       "iteration": 3,
+       "factors": {
+        "fibre": 1.1624289602360374,
+        "sheet": 1.0026887505805109,
+        "normal": 1.0121003226017076
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7988348594355265,
+         "ratio_to_target": 0.998543574294408,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.24000416319565887,
+         "ratio_to_target": 1.0000173466485787,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.3400404333185881,
+         "ratio_to_target": 1.000118921525259,
+         "nodes": 41
+        }
+       }
+      }
+     ],
+     "acceptance_A_fresh_mesh": {
+      "mesh": {
+       "seed": 1,
+       "nodes": 46225,
+       "tets": 287144,
+       "edge_mean_mm": 1.029,
+       "edge_max_mm": 1.747,
+       "E1": 340964,
+       "E2": 1360792,
+       "E2_rejected_midpoint": 4
+      },
+      "principal": {
+       "fibre": {
+        "speed_m_s": 0.8015,
+        "ratio_to_target": 1.0019,
+        "nodes": 89
+       },
+       "sheet": {
+        "speed_m_s": 0.2397,
+        "ratio_to_target": 0.9986,
+        "nodes": 82
+       },
+       "normal": {
+        "speed_m_s": 0.34,
+        "ratio_to_target": 1.0,
+        "nodes": 43
+       }
+      },
+      "principal_pass_1.5pct": true,
+      "rays_graph_speed_over_exact": {
+       "fibre-sheet (xy)": {
+        "0-15 deg": {
+         "ratio": 0.9797,
+         "nodes": 114
+        },
+        "15-30 deg": {
+         "ratio": 1.0022,
+         "nodes": 109
+        },
+        "30-45 deg": {
+         "ratio": 1.0056,
+         "nodes": 110
+        },
+        "45-60 deg": {
+         "ratio": 1.0028,
+         "nodes": 107
+        },
+        "60-75 deg": {
+         "ratio": 0.9996,
+         "nodes": 118
+        },
+        "75-90 deg": {
+         "ratio": 0.9987,
+         "nodes": 118
+        }
+       },
+       "fibre-normal (xz)": {
+        "0-15 deg": {
+         "ratio": 0.9803,
+         "nodes": 135
+        },
+        "15-30 deg": {
+         "ratio": 0.9936,
+         "nodes": 123
+        },
+        "30-45 deg": {
+         "ratio": 1.0016,
+         "nodes": 132
+        },
+        "45-60 deg": {
+         "ratio": 1.0008,
+         "nodes": 128
+        },
+        "60-75 deg": {
+         "ratio": 0.9943,
+         "nodes": 130
+        },
+        "75-90 deg": {
+         "ratio": 0.9942,
+         "nodes": 129
+        }
+       },
+       "sheet-normal (yz)": {
+        "0-15 deg": {
+         "ratio": 0.998,
+         "nodes": 123
+        },
+        "15-30 deg": {
+         "ratio": 0.9994,
+         "nodes": 115
+        },
+        "30-45 deg": {
+         "ratio": 1.0002,
+         "nodes": 120
+        },
+        "45-60 deg": {
+         "ratio": 1.0005,
+         "nodes": 126
+        },
+        "60-75 deg": {
+         "ratio": 0.9979,
+         "nodes": 115
+        },
+        "75-90 deg": {
+         "ratio": 0.9937,
+         "nodes": 123
+        }
+       }
+      },
+      "rays_worst_abs_dev": 0.0203,
+      "rays_pass_3pct": true,
+      "pass": true,
+      "rotating_wall_v51_profile_(report)": {
+       "z 2.5 mm": {
+        "ratio": 0.9947,
+        "nodes": 529
+       },
+       "z 5.0 mm": {
+        "ratio": 0.9939,
+        "nodes": 529
+       },
+       "z 7.5 mm": {
+        "ratio": 0.9942,
+        "nodes": 529
+       },
+       "z 10.0 mm": {
+        "ratio": 0.9936,
+        "nodes": 529
+       }
+      },
+      "rotating_wall_v52_profile": {
+       "profile_deg": [
+        66.0,
+        -41.0
+       ],
+       "transmural_arrival_over_z_over_vn": {
+        "z 2.5 mm": {
+         "ratio": 0.9945,
+         "nodes": 529
+        },
+        "z 5.0 mm": {
+         "ratio": 0.9941,
+         "nodes": 529
+        },
+        "z 7.5 mm": {
+         "ratio": 0.9941,
+         "nodes": 529
+        },
+        "z 10.0 mm": {
+         "ratio": 0.9933,
+         "nodes": 529
+        }
+       }
+      },
+      "rotating_pass_2pct": true
+     },
+     "pass": true,
+     "wall_s": 34.6,
+     "process_peak_rss_MB_so_far": 1277.0
+    }
+   ]
+  },
+  "6G8DD8S5": {
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.173,
+    "normal": 0.235
+   },
+   "tried_in_order": [
+    "3-ring"
+   ],
+   "stencil_passed": "3-ring",
+   "tries": [
+    {
+     "stencil": "3-ring",
+     "factors": {
+      "fibre": 1.1821442127694806,
+      "sheet": 1.001228143242879,
+      "normal": 1.0040612923286563
+     },
+     "converged_within_0.5pct": true,
+     "iterations": 4,
+     "calibration_slab": {
+      "seed": 0,
+      "nodes": 46225,
+      "tets": 287615,
+      "edge_mean_mm": 1.029,
+      "edge_max_mm": 1.741,
+      "E1": 341435,
+      "E2_le_5.25mm": 1362411,
+      "E3_le_5.25mm": 3117411,
+      "E2_rejected_midpoint": 0,
+      "E3_rejected_midpoint": 0
+     },
+     "calibration_history": [
+      {
+       "iteration": 0,
+       "factors": {
+        "fibre": 1.0,
+        "sheet": 1.0,
+        "normal": 1.0
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7038438660454879,
+         "ratio_to_target": 0.8798048325568598,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.17275421061783325,
+         "ratio_to_target": 0.9985792521262038,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.23387051317479235,
+         "ratio_to_target": 0.9951936730842228,
+         "nodes": 41
+        }
+       }
+      },
+      {
+       "iteration": 1,
+       "factors": {
+        "fibre": 1.1366157163445363,
+        "sheet": 1.0014227692702118,
+        "normal": 1.0048295392603148
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7757371867737973,
+         "ratio_to_target": 0.9696714834672466,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.17302807110819723,
+         "ratio_to_target": 1.0001622607410245,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.2351505991580161,
+         "ratio_to_target": 1.0006408474809196,
+         "nodes": 41
+        }
+       }
+      },
+      {
+       "iteration": 2,
+       "factors": {
+        "fibre": 1.172165765131453,
+        "sheet": 1.0012603040313213,
+        "normal": 1.0041860091859534
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7932472214268,
+         "ratio_to_target": 0.9915590267835,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.17300555699161885,
+         "ratio_to_target": 1.0000321213388372,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.2350291899126963,
+         "ratio_to_target": 1.0001242123944525,
+         "nodes": 41
+        }
+       }
+      },
+      {
+       "iteration": 3,
+       "factors": {
+        "fibre": 1.1821442127694806,
+        "sheet": 1.001228143242879,
+        "normal": 1.0040612923286563
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7980880367715038,
+         "ratio_to_target": 0.9976100459643796,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.17300147646053188,
+         "ratio_to_target": 1.0000085344539416,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.2350076386766679,
+         "ratio_to_target": 1.0000325050070975,
+         "nodes": 41
+        }
+       }
+      }
+     ],
+     "acceptance_A_fresh_mesh": {
+      "mesh": {
+       "seed": 1,
+       "nodes": 46225,
+       "tets": 287144,
+       "edge_mean_mm": 1.029,
+       "edge_max_mm": 1.747,
+       "E1": 340964,
+       "E2_le_5.25mm": 1360792,
+       "E3_le_5.25mm": 3114523,
+       "E2_rejected_midpoint": 4,
+       "E3_rejected_midpoint": 2
+      },
+      "principal": {
+       "fibre": {
+        "speed_m_s": 0.8086,
+        "ratio_to_target": 1.0107,
+        "nodes": 89
+       },
+       "sheet": {
+        "speed_m_s": 0.1729,
+        "ratio_to_target": 0.9997,
+        "nodes": 82
+       },
+       "normal": {
+        "speed_m_s": 0.2351,
+        "ratio_to_target": 1.0005,
+        "nodes": 43
+       }
+      },
+      "principal_pass_1.5pct": true,
+      "rays_graph_speed_over_exact": {
+       "fibre-sheet (xy)": {
+        "0-15 deg": {
+         "ratio": 1.0269,
+         "nodes": 114
+        },
+        "15-30 deg": {
+         "ratio": 1.0151,
+         "nodes": 109
+        },
+        "30-45 deg": {
+         "ratio": 1.0069,
+         "nodes": 110
+        },
+        "45-60 deg": {
+         "ratio": 1.0026,
+         "nodes": 107
+        },
+        "60-75 deg": {
+         "ratio": 1.0007,
+         "nodes": 118
+        },
+        "75-90 deg": {
+         "ratio": 0.9998,
+         "nodes": 118
+        }
+       },
+       "fibre-normal (xz)": {
+        "0-15 deg": {
+         "ratio": 1.0223,
+         "nodes": 135
+        },
+        "15-30 deg": {
+         "ratio": 1.0115,
+         "nodes": 123
+        },
+        "30-45 deg": {
+         "ratio": 1.0089,
+         "nodes": 132
+        },
+        "45-60 deg": {
+         "ratio": 1.005,
+         "nodes": 128
+        },
+        "60-75 deg": {
+         "ratio": 1.0009,
+         "nodes": 130
+        },
+        "75-90 deg": {
+         "ratio": 0.9973,
+         "nodes": 129
+        }
+       },
+       "sheet-normal (yz)": {
+        "0-15 deg": {
+         "ratio": 0.9999,
+         "nodes": 123
+        },
+        "15-30 deg": {
+         "ratio": 1.0004,
+         "nodes": 115
+        },
+        "30-45 deg": {
+         "ratio": 1.0011,
+         "nodes": 120
+        },
+        "45-60 deg": {
+         "ratio": 1.0011,
+         "nodes": 126
+        },
+        "60-75 deg": {
+         "ratio": 1.0017,
+         "nodes": 115
+        },
+        "75-90 deg": {
+         "ratio": 0.9971,
+         "nodes": 123
+        }
+       }
+      },
+      "rays_worst_abs_dev": 0.0269,
+      "rays_pass_3pct": true,
+      "pass": true,
+      "rotating_wall_v51_profile_(report)": {
+       "z 2.5 mm": {
+        "ratio": 0.9972,
+        "nodes": 529
+       },
+       "z 5.0 mm": {
+        "ratio": 0.9978,
+        "nodes": 529
+       },
+       "z 7.5 mm": {
+        "ratio": 0.9978,
+        "nodes": 529
+       },
+       "z 10.0 mm": {
+        "ratio": 0.9975,
+        "nodes": 529
+       }
+      },
+      "rotating_wall_v52_profile": {
+       "profile_deg": [
+        66.0,
+        -41.0
+       ],
+       "transmural_arrival_over_z_over_vn": {
+        "z 2.5 mm": {
+         "ratio": 0.9972,
+         "nodes": 529
+        },
+        "z 5.0 mm": {
+         "ratio": 0.9978,
+         "nodes": 529
+        },
+        "z 7.5 mm": {
+         "ratio": 0.9978,
+         "nodes": 529
+        },
+        "z 10.0 mm": {
+         "ratio": 0.9974,
+         "nodes": 529
+        }
+       }
+      },
+      "rotating_pass_2pct": true
+     },
+     "pass": true,
+     "wall_s": 55.9,
+     "process_peak_rss_MB_so_far": 1615.0
+    }
+   ]
+  },
+  "7D98EVAR": {
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.173,
+    "normal": 0.235
+   },
+   "tried_in_order": [
+    "3-ring"
+   ],
+   "stencil_passed": "3-ring",
+   "tries": [
+    {
+     "stencil": "3-ring",
+     "factors": {
+      "fibre": 1.1821442127694806,
+      "sheet": 1.001228143242879,
+      "normal": 1.0040612923286563
+     },
+     "converged_within_0.5pct": true,
+     "iterations": 4,
+     "calibration_slab": {
+      "seed": 0,
+      "nodes": 46225,
+      "tets": 287615,
+      "edge_mean_mm": 1.029,
+      "edge_max_mm": 1.741,
+      "E1": 341435,
+      "E2_le_5.25mm": 1362411,
+      "E3_le_5.25mm": 3117411,
+      "E2_rejected_midpoint": 0,
+      "E3_rejected_midpoint": 0
+     },
+     "calibration_history": [
+      {
+       "iteration": 0,
+       "factors": {
+        "fibre": 1.0,
+        "sheet": 1.0,
+        "normal": 1.0
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7038438660454879,
+         "ratio_to_target": 0.8798048325568598,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.17275421061783325,
+         "ratio_to_target": 0.9985792521262038,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.23387051317479235,
+         "ratio_to_target": 0.9951936730842228,
+         "nodes": 41
+        }
+       }
+      },
+      {
+       "iteration": 1,
+       "factors": {
+        "fibre": 1.1366157163445363,
+        "sheet": 1.0014227692702118,
+        "normal": 1.0048295392603148
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7757371867737973,
+         "ratio_to_target": 0.9696714834672466,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.17302807110819723,
+         "ratio_to_target": 1.0001622607410245,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.2351505991580161,
+         "ratio_to_target": 1.0006408474809196,
+         "nodes": 41
+        }
+       }
+      },
+      {
+       "iteration": 2,
+       "factors": {
+        "fibre": 1.172165765131453,
+        "sheet": 1.0012603040313213,
+        "normal": 1.0041860091859534
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7932472214268,
+         "ratio_to_target": 0.9915590267835,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.17300555699161885,
+         "ratio_to_target": 1.0000321213388372,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.2350291899126963,
+         "ratio_to_target": 1.0001242123944525,
+         "nodes": 41
+        }
+       }
+      },
+      {
+       "iteration": 3,
+       "factors": {
+        "fibre": 1.1821442127694806,
+        "sheet": 1.001228143242879,
+        "normal": 1.0040612923286563
+       },
+       "principal": {
+        "fibre": {
+         "speed_m_s": 0.7980880367715038,
+         "ratio_to_target": 0.9976100459643796,
+         "nodes": 73
+        },
+        "sheet": {
+         "speed_m_s": 0.17300147646053188,
+         "ratio_to_target": 1.0000085344539416,
+         "nodes": 82
+        },
+        "normal": {
+         "speed_m_s": 0.2350076386766679,
+         "ratio_to_target": 1.0000325050070975,
+         "nodes": 41
+        }
+       }
+      }
+     ],
+     "acceptance_A_fresh_mesh": {
+      "mesh": {
+       "seed": 1,
+       "nodes": 46225,
+       "tets": 287144,
+       "edge_mean_mm": 1.029,
+       "edge_max_mm": 1.747,
+       "E1": 340964,
+       "E2_le_5.25mm": 1360792,
+       "E3_le_5.25mm": 3114523,
+       "E2_rejected_midpoint": 4,
+       "E3_rejected_midpoint": 2
+      },
+      "principal": {
+       "fibre": {
+        "speed_m_s": 0.8086,
+        "ratio_to_target": 1.0107,
+        "nodes": 89
+       },
+       "sheet": {
+        "speed_m_s": 0.1729,
+        "ratio_to_target": 0.9997,
+        "nodes": 82
+       },
+       "normal": {
+        "speed_m_s": 0.2351,
+        "ratio_to_target": 1.0005,
+        "nodes": 43
+       }
+      },
+      "principal_pass_1.5pct": true,
+      "rays_graph_speed_over_exact": {
+       "fibre-sheet (xy)": {
+        "0-15 deg": {
+         "ratio": 1.0269,
+         "nodes": 114
+        },
+        "15-30 deg": {
+         "ratio": 1.0151,
+         "nodes": 109
+        },
+        "30-45 deg": {
+         "ratio": 1.0069,
+         "nodes": 110
+        },
+        "45-60 deg": {
+         "ratio": 1.0026,
+         "nodes": 107
+        },
+        "60-75 deg": {
+         "ratio": 1.0007,
+         "nodes": 118
+        },
+        "75-90 deg": {
+         "ratio": 0.9998,
+         "nodes": 118
+        }
+       },
+       "fibre-normal (xz)": {
+        "0-15 deg": {
+         "ratio": 1.0223,
+         "nodes": 135
+        },
+        "15-30 deg": {
+         "ratio": 1.0115,
+         "nodes": 123
+        },
+        "30-45 deg": {
+         "ratio": 1.0089,
+         "nodes": 132
+        },
+        "45-60 deg": {
+         "ratio": 1.005,
+         "nodes": 128
+        },
+        "60-75 deg": {
+         "ratio": 1.0009,
+         "nodes": 130
+        },
+        "75-90 deg": {
+         "ratio": 0.9973,
+         "nodes": 129
+        }
+       },
+       "sheet-normal (yz)": {
+        "0-15 deg": {
+         "ratio": 0.9999,
+         "nodes": 123
+        },
+        "15-30 deg": {
+         "ratio": 1.0004,
+         "nodes": 115
+        },
+        "30-45 deg": {
+         "ratio": 1.0011,
+         "nodes": 120
+        },
+        "45-60 deg": {
+         "ratio": 1.0011,
+         "nodes": 126
+        },
+        "60-75 deg": {
+         "ratio": 1.0017,
+         "nodes": 115
+        },
+        "75-90 deg": {
+         "ratio": 0.9971,
+         "nodes": 123
+        }
+       }
+      },
+      "rays_worst_abs_dev": 0.0269,
+      "rays_pass_3pct": true,
+      "pass": true,
+      "rotating_wall_v51_profile_(report)": {
+       "z 2.5 mm": {
+        "ratio": 0.9972,
+        "nodes": 529
+       },
+       "z 5.0 mm": {
+        "ratio": 0.9978,
+        "nodes": 529
+       },
+       "z 7.5 mm": {
+        "ratio": 0.9978,
+        "nodes": 529
+       },
+       "z 10.0 mm": {
+        "ratio": 0.9975,
+        "nodes": 529
+       }
+      },
+      "rotating_wall_v52_profile": {
+       "profile_deg": [
+        66.0,
+        -41.0
+       ],
+       "transmural_arrival_over_z_over_vn": {
+        "z 2.5 mm": {
+         "ratio": 0.9972,
+         "nodes": 529
+        },
+        "z 5.0 mm": {
+         "ratio": 0.9978,
+         "nodes": 529
+        },
+        "z 7.5 mm": {
+         "ratio": 0.9978,
+         "nodes": 529
+        },
+        "z 10.0 mm": {
+         "ratio": 0.9974,
+         "nodes": 529
+        }
+       }
+      },
+      "rotating_pass_2pct": true
+     },
+     "pass": true,
+     "wall_s": 55.9,
+     "process_peak_rss_MB_so_far": 1615.0
+    }
+   ]
+  }
+ },
+ "all_pass": true,
+ "wall_s": 90.5,
+ "peak_rss_MB": 1615.0
+}
