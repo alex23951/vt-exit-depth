@@ -316,7 +316,7 @@ def build():
     for L, c in comps.items():
         if L == outer:
             continue
-        if c['faces'] <= 20 and c['bbox_mm3'] < 1.0:                   # a closed void of a few faces inside the cohort mesh
+        if c['faces'] <= 200 and c['bbox_mm3'] < 50.0 and not (set(c['tags']) & set(DISC)):   # a small closed void inside the cohort mesh
             voids[L] = c
             continue
         t = set(c['tags'])
