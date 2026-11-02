@@ -1,0 +1,268 @@
+{
+ "heart": "7D98EVAR",
+ "root_lining": 1,
+ "cov": 0.9,
+ "slab_mm": 0.75,
+ "tau": 0.0,
+ "h_margin_mm": 1.0,
+ "rho_margin_mm": 0.5,
+ "nodes": 474796,
+ "tets": 2412863,
+ "boundary_faces": 298264,
+ "pinch_edges": 47,
+ "aorta": {
+  "disc_nodes": 3750,
+  "wall_nodes": 15266,
+  "o_mm": [
+   63.273,
+   56.7883,
+   66.4578
+  ],
+  "a": [
+   -0.699039,
+   -0.244695,
+   0.671915
+  ],
+  "ring_top_mm": 28.5,
+  "ring_start_mm": 3.5,
+  "h_root_mm": 6.24,
+  "rho_root_mm": 15.994,
+  "sheet_faces": 9674,
+  "sheet_tags": {
+   "1": 347,
+   "5": 8164,
+   "9": 1162,
+   "27": 1
+  },
+  "rim": {
+   "nodes": 179,
+   "distinct_nodes": 177,
+   "start_node": 45499,
+   "length_mm": 170.22,
+   "height_mm": [
+    27.113,
+    37.053
+   ],
+   "plane_tilt_from_axis_deg": 16.14,
+   "max_dev_from_own_plane_mm": 0.933,
+   "cap_area_mm2": 1151.87,
+   "sorted_node_ids_sha256": "0d962eaa3652fe87c62260eaefe36f0ffd825c027efd1549635ec86723c5cb60"
+  },
+  "holes": [
+   {
+    "nodes": 3,
+    "height_mm": [
+     3.44,
+     4.15
+    ],
+    "fan_area_mm2": 0.33
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     3.61,
+     3.74
+    ],
+    "fan_area_mm2": 0.36
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     -2.71,
+     -2.0
+    ],
+    "fan_area_mm2": 0.33
+   },
+   {
+    "nodes": 6,
+    "height_mm": [
+     3.8,
+     4.22
+    ],
+    "fan_area_mm2": 0.78
+   },
+   {
+    "nodes": 15,
+    "height_mm": [
+     1.16,
+     2.23
+    ],
+    "fan_area_mm2": 4.68
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     4.36,
+     5.24
+    ],
+    "fan_area_mm2": 0.26
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     2.44,
+     2.78
+    ],
+    "fan_area_mm2": 0.41
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     0.77,
+     1.24
+    ],
+    "fan_area_mm2": 0.36
+   },
+   {
+    "nodes": 4,
+    "height_mm": [
+     1.9,
+     2.48
+    ],
+    "fan_area_mm2": 0.53
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     3.96,
+     4.6
+    ],
+    "fan_area_mm2": 0.27
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     2.94,
+     3.09
+    ],
+    "fan_area_mm2": 0.38
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     4.06,
+     4.86
+    ],
+    "fan_area_mm2": 0.31
+   },
+   {
+    "nodes": 4,
+    "height_mm": [
+     2.45,
+     3.07
+    ],
+    "fan_area_mm2": 0.59
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     4.1,
+     4.81
+    ],
+    "fan_area_mm2": 0.37
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     2.46,
+     2.9
+    ],
+    "fan_area_mm2": 0.26
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     -1.71,
+     -0.9
+    ],
+    "fan_area_mm2": 0.3
+   }
+  ],
+  "closed_surface_triangles": 9918,
+  "unpaired_directed_edges": 0,
+  "volume_mL": 18.5132
+ },
+ "PA": {
+  "disc_nodes": 5210,
+  "wall_nodes": 4826,
+  "o_mm": [
+   70.7909,
+   40.7961,
+   91.8962
+  ],
+  "a": [
+   -0.048621,
+   0.636276,
+   0.769928
+  ],
+  "ring_top_mm": 6.5,
+  "ring_start_mm": 4.0,
+  "h_root_mm": 6.777,
+  "rho_root_mm": 15.529,
+  "sheet_faces": 4457,
+  "sheet_tags": {
+   "2": 118,
+   "6": 2805,
+   "10": 1534
+  },
+  "rim": {
+   "nodes": 90,
+   "distinct_nodes": 90,
+   "start_node": 49021,
+   "length_mm": 83.68,
+   "height_mm": [
+    4.951,
+    18.084
+   ],
+   "plane_tilt_from_axis_deg": 36.68,
+   "max_dev_from_own_plane_mm": 0.439,
+   "cap_area_mm2": 413.69,
+   "sorted_node_ids_sha256": "aef3518a696c7d778b5354fcac6b9f93e4568acd958799e57f0d17b8f894f8dd"
+  },
+  "holes": [
+   {
+    "nodes": 4,
+    "height_mm": [
+     15.0,
+     15.61
+    ],
+    "fan_area_mm2": 0.82
+   },
+   {
+    "nodes": 6,
+    "height_mm": [
+     13.58,
+     14.73
+    ],
+    "fan_area_mm2": 1.59
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     14.79,
+     15.16
+    ],
+    "fan_area_mm2": 0.25
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     1.83,
+     2.7
+    ],
+    "fan_area_mm2": 0.4
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     -1.87,
+     -1.16
+    ],
+    "fan_area_mm2": 0.33
+   }
+  ],
+  "closed_surface_triangles": 4566,
+  "unpaired_directed_edges": 0,
+  "volume_mL": 5.2065
+ }
+}

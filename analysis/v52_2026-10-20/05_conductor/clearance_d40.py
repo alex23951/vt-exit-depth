@@ -51,7 +51,7 @@ out = {'heart': h, 'lock_sha256': C.G.LOCK_SHA, 'rule': 'D40 (1), lock thread, 2
        'all_inside': bool((wn > 0.5).all()), 'floor_mm': FLOOR_MM,
        'pass': bool((wn > 0.5).all() and da.min() >= FLOOR_MM and dr.min() >= FLOOR_MM),
        'wall_s': round(time.time() - t0), 'python_peak_rss_MB': C.peak_mb()}
-C.G.dump(out, os.path.join(HERE, f'clearance_d40_{h}.json'))
+C.G.dump(out, os.path.join(HERE, f'clearance_d40_{h}{C.SFX}.json'))
 print(out)
 if not out['pass']:
     sys.exit(f'{h}: D40 (1) 12 mm floor not met at the primary pose; stop and report (9.1)')

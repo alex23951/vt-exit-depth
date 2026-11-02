@@ -1,0 +1,203 @@
+{
+ "all_match": true,
+ "per_vessel": {
+  "Y5HYEDL4 aorta": {
+   "rim_walked": [
+    166,
+    166
+   ],
+   "rim_distinct": [
+    165,
+    165
+   ],
+   "rim_sha256": [
+    "d60e9b735a86fb8eb04c6ec77565500a99c6479fbbfdf3ca969d905138057bcc",
+    "d60e9b735a86fb8eb04c6ec77565500a99c6479fbbfdf3ca969d905138057bcc"
+   ],
+   "pinch_edges": [
+    10,
+    10
+   ],
+   "pinch_edges_apex_to_twice_walked_node": [
+    8,
+    8
+   ],
+   "unpaired_directed_edges": [
+    0,
+    0
+   ],
+   "volume_mL": [
+    14.9224,
+    14.9224
+   ],
+   "match": true,
+   "holes": 20,
+   "ring_top_mm": 23.0
+  },
+  "Y5HYEDL4 PA": {
+   "rim_walked": [
+    149,
+    149
+   ],
+   "rim_distinct": [
+    142,
+    142
+   ],
+   "rim_sha256": [
+    "620156320cc797bdfa6339f32559dcbe7dd2166520a20670f66dd8ce090c29a4",
+    "620156320cc797bdfa6339f32559dcbe7dd2166520a20670f66dd8ce090c29a4"
+   ],
+   "pinch_edges": [
+    10,
+    10
+   ],
+   "pinch_edges_apex_to_twice_walked_node": [
+    7,
+    7
+   ],
+   "unpaired_directed_edges": [
+    0,
+    0
+   ],
+   "volume_mL": [
+    4.4917,
+    4.4917
+   ],
+   "match": true,
+   "holes": 6,
+   "ring_top_mm": 9.0
+  },
+  "6G8DD8S5 aorta": {
+   "rim_walked": [
+    222,
+    222
+   ],
+   "rim_distinct": [
+    216,
+    216
+   ],
+   "rim_sha256": [
+    "d98e868d67837074f2383a66b7704e4d8244e40cea084de079eaa4f2ec8959d8",
+    "d98e868d67837074f2383a66b7704e4d8244e40cea084de079eaa4f2ec8959d8"
+   ],
+   "pinch_edges": [
+    10,
+    10
+   ],
+   "pinch_edges_apex_to_twice_walked_node": [
+    8,
+    8
+   ],
+   "unpaired_directed_edges": [
+    0,
+    0
+   ],
+   "volume_mL": [
+    28.7744,
+    28.7744
+   ],
+   "match": true,
+   "holes": 11,
+   "ring_top_mm": 36.5
+  },
+  "6G8DD8S5 PA": {
+   "rim_walked": [
+    171,
+    171
+   ],
+   "rim_distinct": [
+    169,
+    169
+   ],
+   "rim_sha256": [
+    "6665d91153c629a241734f7df1dfeab1ecdff1d31c1db900b2eea2b4d662de8c",
+    "6665d91153c629a241734f7df1dfeab1ecdff1d31c1db900b2eea2b4d662de8c"
+   ],
+   "pinch_edges": [
+    2,
+    2
+   ],
+   "pinch_edges_apex_to_twice_walked_node": [
+    2,
+    2
+   ],
+   "unpaired_directed_edges": [
+    0,
+    0
+   ],
+   "volume_mL": [
+    11.8278,
+    11.8278
+   ],
+   "match": true,
+   "holes": 7,
+   "ring_top_mm": 11.0
+  },
+  "7D98EVAR aorta": {
+   "rim_walked": [
+    179,
+    179
+   ],
+   "rim_distinct": [
+    177,
+    177
+   ],
+   "rim_sha256": [
+    "0d962eaa3652fe87c62260eaefe36f0ffd825c027efd1549635ec86723c5cb60",
+    "0d962eaa3652fe87c62260eaefe36f0ffd825c027efd1549635ec86723c5cb60"
+   ],
+   "pinch_edges": [
+    5,
+    5
+   ],
+   "pinch_edges_apex_to_twice_walked_node": [
+    5,
+    5
+   ],
+   "unpaired_directed_edges": [
+    0,
+    0
+   ],
+   "volume_mL": [
+    18.5132,
+    18.5132
+   ],
+   "match": true,
+   "holes": 16,
+   "ring_top_mm": 28.5
+  },
+  "7D98EVAR PA": {
+   "rim_walked": [
+    90,
+    90
+   ],
+   "rim_distinct": [
+    90,
+    90
+   ],
+   "rim_sha256": [
+    "aef3518a696c7d778b5354fcac6b9f93e4568acd958799e57f0d17b8f894f8dd",
+    "aef3518a696c7d778b5354fcac6b9f93e4568acd958799e57f0d17b8f894f8dd"
+   ],
+   "pinch_edges": [
+    0,
+    0
+   ],
+   "pinch_edges_apex_to_twice_walked_node": [
+    0,
+    0
+   ],
+   "unpaired_directed_edges": [
+    0,
+    0
+   ],
+   "volume_mL": [
+    5.2065,
+    5.2065
+   ],
+   "match": true,
+   "holes": 5,
+   "ring_top_mm": 6.5
+  }
+ }
+}

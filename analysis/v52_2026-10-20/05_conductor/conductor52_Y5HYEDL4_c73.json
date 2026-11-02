@@ -1,0 +1,973 @@
+{
+ "heart": "Y5HYEDL4",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "stage": "build",
+ "blood_scale (meshtool -scale in the chamber cavities)": 1.0,
+ "heart_mesh": {
+  "cohort_nodes": 521183,
+  "cohort_elements": 2638070,
+  "biv52_nodes_first": 375190,
+  "biv52_elements_first": 1939909,
+  "other_heart_elements": 698161,
+  "t_prime_mm (pose52, rotation identity)": [
+   -36.441463,
+   -113.870006,
+   -80.980961
+  ],
+  "sleeve_elements_retagged_2": 0,
+  "crescent_elements_retagged_1": 0,
+  "fibrous_layer_nodes (no element of their own)": 0
+ },
+ "boundary_components": {
+  "LV": {
+   "faces": 50626,
+   "tags": [
+    1,
+    7,
+    9,
+    25
+   ],
+   "bbox_mm3": 546698.3390697421,
+   "closure": {
+    "edges": 75939,
+    "edges_in_2_triangles": 75939,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true
+   }
+  },
+  "RV": {
+   "faces": 63936,
+   "tags": [
+    1,
+    2,
+    8,
+    10,
+    28,
+    29
+   ],
+   "bbox_mm3": 669341.3334139453,
+   "closure": {
+    "edges": 95904,
+    "edges_in_2_triangles": 95904,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true
+   }
+  },
+  "outer": {
+   "faces": 159362,
+   "tags": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    26,
+    27
+   ],
+   "bbox_mm3": 1973119.2504152576,
+   "closure": {
+    "edges": 238982,
+    "edges_in_2_triangles": 238921,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 61,
+    "edges_other_counts": 0,
+    "orientation_consistent": true
+   }
+  },
+  "RA": {
+   "faces": 34376,
+   "tags": [
+    4,
+    8,
+    16,
+    17,
+    20,
+    26,
+    28
+   ],
+   "bbox_mm3": 254921.0867131264,
+   "closure": {
+    "edges": 51564,
+    "edges_in_2_triangles": 51564,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true
+   }
+  },
+  "LA": {
+   "faces": 26162,
+   "tags": [
+    3,
+    7,
+    11,
+    12,
+    13,
+    14,
+    15,
+    26
+   ],
+   "bbox_mm3": 137279.52570922946,
+   "closure": {
+    "edges": 39243,
+    "edges_in_2_triangles": 39243,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true
+   }
+  }
+ },
+ "internal_voids (left as they are: no element fills them; not meshed)": {
+  "5": {
+   "faces": 4,
+   "tags": [
+    4,
+    27
+   ],
+   "bbox_mm3": 0.24280150170619622,
+   "closure": {
+    "edges": 6,
+    "edges_in_2_triangles": 6,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true
+   }
+  },
+  "6": {
+   "faces": 4,
+   "tags": [
+    3,
+    4,
+    27
+   ],
+   "bbox_mm3": 0.3875234926771107,
+   "closure": {
+    "edges": 6,
+    "edges_in_2_triangles": 6,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true
+   }
+  },
+  "7": {
+   "faces": 4,
+   "tags": [
+    4,
+    27
+   ],
+   "bbox_mm3": 0.3929655902154125,
+   "closure": {
+    "edges": 6,
+    "edges_in_2_triangles": 6,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true
+   }
+  },
+  "8": {
+   "faces": 4,
+   "tags": [
+    4,
+    27
+   ],
+   "bbox_mm3": 0.3054438891766075,
+   "closure": {
+    "edges": 6,
+    "edges_in_2_triangles": 6,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true
+   }
+  }
+ },
+ "meshtool": {
+  "resample_skin": {
+   "wall_s": 2,
+   "peak_used_mb": 1656,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "torso": {
+   "wall_s": 46,
+   "peak_used_mb": 3384,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "cav_LV": {
+   "wall_s": 18,
+   "peak_used_mb": 2365,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "cav_RV": {
+   "wall_s": 18,
+   "peak_used_mb": 2461,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "cav_LA": {
+   "wall_s": 6,
+   "peak_used_mb": 2049,
+   "watchdog_killed": false,
+   "returncode": 0
+  },
+  "cav_RA": {
+   "wall_s": 8,
+   "peak_used_mb": 2128,
+   "watchdog_killed": false,
+   "returncode": 0
+  }
+ },
+ "merge": {
+  "torso": {
+   "nodes": 977775,
+   "matched_to_heart_surface": 79642,
+   "surface_nodes": 79642,
+   "all_surface_nodes_matched_once": true,
+   "max_match_mm": 6.032175313129145e-06,
+   "elements": 5963083,
+   "tag0_elements_dropped": 8
+  },
+  "skin_nodes_found_mm_max": 0.0,
+  "LV": {
+   "nodes": 442436,
+   "matched_to_heart_surface": 25315,
+   "surface_nodes": 25315,
+   "all_surface_nodes_matched_once": true,
+   "max_match_mm": 6.031833380880549e-06,
+   "elements": 2750715,
+   "tag0_elements_dropped": 0
+  },
+  "RV": {
+   "nodes": 499327,
+   "matched_to_heart_surface": 31970,
+   "surface_nodes": 31970,
+   "all_surface_nodes_matched_once": true,
+   "max_match_mm": 6.031833383309561e-06,
+   "elements": 3092151,
+   "tag0_elements_dropped": 0
+  },
+  "LA": {
+   "nodes": 159044,
+   "matched_to_heart_surface": 13083,
+   "surface_nodes": 13083,
+   "all_surface_nodes_matched_once": true,
+   "max_match_mm": 3.078640942886486e-06,
+   "elements": 974877,
+   "tag0_elements_dropped": 0
+  },
+  "RA": {
+   "nodes": 233245,
+   "matched_to_heart_surface": 17190,
+   "surface_nodes": 17190,
+   "all_surface_nodes_matched_once": true,
+   "max_match_mm": 2.9387858030635135e-06,
+   "elements": 1436636,
+   "tag0_elements_dropped": 0
+  }
+ },
+ "final_before_lumens": {
+  "nodes": 2665810,
+  "elements": 16855532,
+  "min_element_volume_mm3": 0.0015120906143980771,
+  "tags": {
+   "1": 1241143,
+   "2": 506625,
+   "3": 124770,
+   "4": 181690,
+   "5": 47853,
+   "6": 18212,
+   "7": 49394,
+   "8": 70309,
+   "9": 21289,
+   "10": 33457,
+   "11": 4198,
+   "12": 2169,
+   "13": 9475,
+   "14": 4405,
+   "15": 6180,
+   "16": 9475,
+   "17": 14433,
+   "18": 1572,
+   "19": 927,
+   "20": 1435,
+   "21": 1068,
+   "22": 1060,
+   "23": 1203,
+   "24": 2110,
+   "25": 90018,
+   "26": 73504,
+   "27": 17973,
+   "28": 73006,
+   "29": 29117,
+   "100": 5963083,
+   "101": 2750715,
+   "102": 3092151,
+   "103": 974877,
+   "104": 1436636
+  }
+ },
+ "R3.1_R3.2": {
+  "aortic_root": {
+   "surface": {
+    "rule": "C73 (lock thread, 2 Nov 2026): rimcap.py sheet + fans over the rim and every hole",
+    "surface_file": "analysis/v52_2026-10-20/05_conductor/c73/ref_Y5HYEDL4_aorta_surface.npz",
+    "C73_match_at_CT_pose": {
+     "rim_walked": 166,
+     "rim_distinct": 165,
+     "rim_sha256": "d60e9b735a86fb8eb04c6ec77565500a99c6479fbbfdf3ca969d905138057bcc",
+     "pinch_edges": 10,
+     "unpaired_directed_edges": 0,
+     "volume_mL": 14.9224
+    },
+    "ring_top_mm": 23.0,
+    "rim": {
+     "nodes": 166,
+     "distinct_nodes": 165,
+     "length_mm": 152.91,
+     "height_mm": [
+      21.061,
+      34.639
+     ],
+     "plane_tilt_from_axis_deg": 22.13,
+     "max_dev_from_own_plane_mm": 0.985,
+     "cap_area_mm2": 958.88
+    },
+    "holes": 20,
+    "hole_fan_area_mm2": 14.76,
+    "sheet_faces": 8438,
+    "disc_distal_faces": 1367,
+    "luminal_faces (sheet less the disc distal faces)": 7071,
+    "sheet_tags_cohort": {
+     "1": 476,
+     "5": 6594,
+     "9": 1367,
+     "27": 1
+    },
+    "sheet_tags_v52": {
+     "1": 476,
+     "5": 6594,
+     "9": 1367,
+     "27": 1
+    },
+    "closed_surface_triangles": 8692,
+    "edges": 13028,
+    "edges_in_2_triangles": 13018,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 10,
+    "edges_other_counts": 0,
+    "orientation_consistent": true,
+    "pinch_edges (edges of > 2 triangles)": 10,
+    "volume_ml": 14.9224
+   },
+   "C7": {
+    "candidates_in_box": 434362,
+    "blood_elements": 239710,
+    "split_votes": 0
+   },
+   "R3.2": {
+    "blood_ml": 14.921,
+    "enclosed_ml": 14.9224,
+    "blood_over_enclosed": 0.9999,
+    "blood_within_2pct": true,
+    "torso_volume_inside_ml_sampled": 0.042,
+    "blood_volume_outside_ml_sampled": 0.041,
+    "luminal_faces_with_a_neighbour_tet": 7071,
+    "luminal_faces_bordering_blood_frac": 0.9931,
+    "ge_95pct": true,
+    "closed_and_consistent (pinch edges counted as passing)": true,
+    "luminal_faces (C73: sheet less the disc distal faces)": 7071,
+    "disc_distal_faces": 1367,
+    "disc_distal_faces_with_a_neighbour_tet": 1367,
+    "disc_distal_faces_bordering_blood_frac (reported beside)": 1.0
+   },
+   "rim_cap_C69": {
+    "rule": "C73 (5): the rim's least-squares plane (normal into the lumen), the mean of the rim's nodes as walked as centroid, the farthest rim node from it as radius; blood centroids > 0.5 mm beyond the plane and closer to its axis than the radius, distance from the axis |v - (v . n) n| (C69); reported only",
+    "radius_mm": 18.03,
+    "blood_elements": 239710,
+    "blood_centroids_beyond_plane_within_ring (C69)": 28
+   }
+  },
+  "pulmonary_artery": {
+   "surface": {
+    "rule": "C73 (lock thread, 2 Nov 2026): rimcap.py sheet + fans over the rim and every hole",
+    "surface_file": "analysis/v52_2026-10-20/05_conductor/c73/ref_Y5HYEDL4_PA_surface.npz",
+    "C73_match_at_CT_pose": {
+     "rim_walked": 149,
+     "rim_distinct": 142,
+     "rim_sha256": "620156320cc797bdfa6339f32559dcbe7dd2166520a20670f66dd8ce090c29a4",
+     "pinch_edges": 10,
+     "unpaired_directed_edges": 0,
+     "volume_mL": 4.4917
+    },
+    "ring_top_mm": 9.0,
+    "rim": {
+     "nodes": 149,
+     "distinct_nodes": 142,
+     "length_mm": 132.22,
+     "height_mm": [
+      7.639,
+      15.325
+     ],
+     "plane_tilt_from_axis_deg": 21.16,
+     "max_dev_from_own_plane_mm": 0.769,
+     "cap_area_mm2": 455.13
+    },
+    "holes": 6,
+    "hole_fan_area_mm2": 1.62,
+    "sheet_faces": 4963,
+    "disc_distal_faces": 1995,
+    "luminal_faces (sheet less the disc distal faces)": 2968,
+    "sheet_tags_cohort": {
+     "2": 181,
+     "6": 2787,
+     "10": 1995
+    },
+    "sheet_tags_v52": {
+     "2": 181,
+     "6": 2787,
+     "10": 1995
+    },
+    "closed_surface_triangles": 5130,
+    "edges": 7685,
+    "edges_in_2_triangles": 7675,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 10,
+    "edges_other_counts": 0,
+    "orientation_consistent": true,
+    "pinch_edges (edges of > 2 triangles)": 10,
+    "volume_ml": 4.4917
+   },
+   "C7": {
+    "candidates_in_box": 126373,
+    "blood_elements": 73290,
+    "split_votes": 0
+   },
+   "R3.2": {
+    "blood_ml": 4.485,
+    "enclosed_ml": 4.4917,
+    "blood_over_enclosed": 0.9984,
+    "blood_within_2pct": true,
+    "torso_volume_inside_ml_sampled": 0.018,
+    "blood_volume_outside_ml_sampled": 0.019,
+    "luminal_faces_with_a_neighbour_tet": 2968,
+    "luminal_faces_bordering_blood_frac": 0.9919,
+    "ge_95pct": true,
+    "closed_and_consistent (pinch edges counted as passing)": true,
+    "luminal_faces (C73: sheet less the disc distal faces)": 2968,
+    "disc_distal_faces": 1995,
+    "disc_distal_faces_with_a_neighbour_tet": 1993,
+    "disc_distal_faces_bordering_blood_frac (reported beside)": 1.0
+   },
+   "rim_cap_C69": {
+    "rule": "C73 (5): the rim's least-squares plane (normal into the lumen), the mean of the rim's nodes as walked as centroid, the farthest rim node from it as radius; blood centroids > 0.5 mm beyond the plane and closer to its axis than the radius, distance from the axis |v - (v . n) n| (C69); reported only",
+    "radius_mm": 12.68,
+    "blood_elements": 73290,
+    "blood_centroids_beyond_plane_within_ring (C69)": 0
+   }
+  },
+  "LV": {
+   "surface": {
+    "faces": 50626,
+    "tags_on_faces": [
+     1,
+     7,
+     9,
+     25
+    ],
+    "edges": 75939,
+    "edges_in_2_triangles": 75939,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true,
+    "volume_ml": 170.151
+   },
+   "R3.2": {
+    "blood_ml": 170.151,
+    "enclosed_ml": 170.151,
+    "blood_over_enclosed": 1.0,
+    "blood_within_2pct": true,
+    "torso_volume_inside_ml_sampled": 0.0,
+    "blood_volume_outside_ml_sampled": 0.0,
+    "luminal_faces": 50626,
+    "luminal_faces_with_a_neighbour_tet": 50626,
+    "luminal_faces_bordering_blood_frac": 1.0,
+    "ge_95pct": true,
+    "closed_and_consistent (pinch edges counted as passing)": true
+   },
+   "valve_planes": [
+    {
+     "loop_nodes": 226,
+     "discs_touching": [
+      "mitral"
+     ],
+     "radius_mm": 26.21,
+     "ring_planarity_rms_mm": 0.66,
+     "blood_centroids_beyond_plane_within_ring (C69)": 20442,
+     "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 18373
+    },
+    {
+     "loop_nodes": 125,
+     "discs_touching": [
+      "aortic"
+     ],
+     "radius_mm": 16.76,
+     "ring_planarity_rms_mm": 0.5,
+     "blood_centroids_beyond_plane_within_ring (C69)": 32,
+     "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 32
+    }
+   ]
+  },
+  "RV": {
+   "surface": {
+    "faces": 63936,
+    "tags_on_faces": [
+     1,
+     2,
+     8,
+     10,
+     28,
+     29
+    ],
+    "edges": 95904,
+    "edges_in_2_triangles": 95904,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true,
+    "volume_ml": 195.662
+   },
+   "R3.2": {
+    "blood_ml": 195.662,
+    "enclosed_ml": 195.662,
+    "blood_over_enclosed": 1.0,
+    "blood_within_2pct": true,
+    "torso_volume_inside_ml_sampled": 0.0,
+    "blood_volume_outside_ml_sampled": 0.0,
+    "luminal_faces": 63936,
+    "luminal_faces_with_a_neighbour_tet": 63936,
+    "luminal_faces_bordering_blood_frac": 1.0,
+    "ge_95pct": true,
+    "closed_and_consistent (pinch edges counted as passing)": true
+   },
+   "valve_planes": [
+    {
+     "loop_nodes": 250,
+     "discs_touching": [
+      "tricuspid"
+     ],
+     "radius_mm": 32.08,
+     "ring_planarity_rms_mm": 1.06,
+     "blood_centroids_beyond_plane_within_ring (C69)": 1290,
+     "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 1290
+    },
+    {
+     "loop_nodes": 166,
+     "discs_touching": [
+      "pulmonary"
+     ],
+     "radius_mm": 19.41,
+     "ring_planarity_rms_mm": 0.63,
+     "blood_centroids_beyond_plane_within_ring (C69)": 67,
+     "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 67
+    }
+   ]
+  },
+  "RA": {
+   "surface": {
+    "faces": 34376,
+    "tags_on_faces": [
+     4,
+     8,
+     16,
+     17,
+     20,
+     26,
+     28
+    ],
+    "edges": 51564,
+    "edges_in_2_triangles": 51564,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true,
+    "volume_ml": 89.005
+   },
+   "R3.2": {
+    "blood_ml": 89.005,
+    "enclosed_ml": 89.005,
+    "blood_over_enclosed": 1.0,
+    "blood_within_2pct": true,
+    "torso_volume_inside_ml_sampled": 0.0,
+    "blood_volume_outside_ml_sampled": 0.0,
+    "luminal_faces": 34376,
+    "luminal_faces_with_a_neighbour_tet": 34376,
+    "luminal_faces_bordering_blood_frac": 1.0,
+    "ge_95pct": true,
+    "closed_and_consistent (pinch edges counted as passing)": true
+   },
+   "valve_planes": [
+    {
+     "loop_nodes": 217,
+     "discs_touching": [
+      "tricuspid"
+     ],
+     "radius_mm": 26.43,
+     "ring_planarity_rms_mm": 0.76,
+     "blood_centroids_beyond_plane_within_ring (C69)": 4670,
+     "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 4670
+    }
+   ]
+  },
+  "LA": {
+   "surface": {
+    "faces": 26162,
+    "tags_on_faces": [
+     3,
+     7,
+     11,
+     12,
+     13,
+     14,
+     15,
+     26
+    ],
+    "edges": 39243,
+    "edges_in_2_triangles": 39243,
+    "edges_in_1_triangle": 0,
+    "pinch_edges_in_4_triangles": 0,
+    "edges_other_counts": 0,
+    "orientation_consistent": true,
+    "volume_ml": 59.69
+   },
+   "R3.2": {
+    "blood_ml": 59.69,
+    "enclosed_ml": 59.69,
+    "blood_over_enclosed": 1.0,
+    "blood_within_2pct": true,
+    "torso_volume_inside_ml_sampled": 0.0,
+    "blood_volume_outside_ml_sampled": 0.0,
+    "luminal_faces": 26162,
+    "luminal_faces_with_a_neighbour_tet": 26162,
+    "luminal_faces_bordering_blood_frac": 1.0,
+    "ge_95pct": true,
+    "closed_and_consistent (pinch edges counted as passing)": true
+   },
+   "valve_planes": [
+    {
+     "loop_nodes": 180,
+     "discs_touching": [
+      "mitral"
+     ],
+     "radius_mm": 22.81,
+     "ring_planarity_rms_mm": 0.41,
+     "blood_centroids_beyond_plane_within_ring (C69)": 4135,
+     "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 4135
+    }
+   ]
+  }
+ },
+ "C66_tags": {
+  "1": {
+   "elements": 1241143,
+   "v52": "myocardium: sigma_i + sigma_e on biv52 fibres (R2.1-R2.3)",
+   "v51": "myocardium (v5.1 sigma, v5.1 speeds)"
+  },
+  "2": {
+   "elements": 506625,
+   "v52": "myocardium: sigma_i + sigma_e on biv52 fibres (R2.1-R2.3)",
+   "v51": "myocardium (v5.1 sigma, v5.1 speeds)"
+  },
+  "3": {
+   "elements": 124770,
+   "v52": "atrial muscle 0.2478 S/m isotropic (R3.3; C66 for 26)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "4": {
+   "elements": 181690,
+   "v52": "atrial muscle 0.2478 S/m isotropic (R3.3; C66 for 26)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "5": {
+   "elements": 47853,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "6": {
+   "elements": 18212,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "7": {
+   "elements": 49394,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "8": {
+   "elements": 70309,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "9": {
+   "elements": 21289,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "10": {
+   "elements": 33457,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "11": {
+   "elements": 4198,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "12": {
+   "elements": 2169,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "13": {
+   "elements": 9475,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "14": {
+   "elements": 4405,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "15": {
+   "elements": 6180,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "16": {
+   "elements": 9475,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "17": {
+   "elements": 14433,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "18": {
+   "elements": 1572,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "19": {
+   "elements": 927,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "20": {
+   "elements": 1435,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "21": {
+   "elements": 1068,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "22": {
+   "elements": 1060,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "23": {
+   "elements": 1203,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "24": {
+   "elements": 2110,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "25": {
+   "elements": 90018,
+   "v52": "myocardium: sigma_i + sigma_e on biv52 fibres (R2.1-R2.3)",
+   "v51": "myocardium (v5.1 sigma, v5.1 speeds)"
+  },
+  "26": {
+   "elements": 73504,
+   "v52": "atrial muscle 0.2478 S/m isotropic (R3.3; C66 for 26)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "27": {
+   "elements": 17973,
+   "v52": "0.2 S/m (R3.3 walls 5, 6; C66 for 7-24, 27)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "28": {
+   "elements": 73006,
+   "v52": "myocardium: sigma_i + sigma_e on biv52 fibres (R2.1-R2.3)",
+   "v51": "myocardium (v5.1 sigma, v5.1 speeds)"
+  },
+  "29": {
+   "elements": 29117,
+   "v52": "myocardium: sigma_i + sigma_e on biv52 fibres (R2.1-R2.3)",
+   "v51": "myocardium (v5.1 sigma, v5.1 speeds)"
+  },
+  "100": {
+   "elements": 5650083,
+   "v52": "torso 0.2 S/m",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "101": {
+   "elements": 2750715,
+   "v52": "blood 0.7 S/m (R3.1)",
+   "v51": "blood 0.7 S/m (v5.1 C7, ventricular cavities)"
+  },
+  "102": {
+   "elements": 3092151,
+   "v52": "blood 0.7 S/m (R3.1)",
+   "v51": "blood 0.7 S/m (v5.1 C7, ventricular cavities)"
+  },
+  "103": {
+   "elements": 974877,
+   "v52": "blood 0.7 S/m (R3.1)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "104": {
+   "elements": 1436636,
+   "v52": "blood 0.7 S/m (R3.1)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "105": {
+   "elements": 239710,
+   "v52": "blood 0.7 S/m (R3.1)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  },
+  "106": {
+   "elements": 73290,
+   "v52": "blood 0.7 S/m (R3.1)",
+   "v51": "not in v5.1 mesh: its space was torso, 0.2 S/m"
+  }
+ },
+ "tag26": {
+  "elements": 73504,
+  "sharing_a_node_with_tag_3_or_4": 6188,
+  "centroid_inside_a_chamber_surface": 0,
+  "in_atrial_wall (C66)": false
+ },
+ "electrodes": {
+  "RA": {
+   "node": 526699,
+   "snap_mm": 3.781
+  },
+  "LA": {
+   "node": 531478,
+   "snap_mm": 3.437
+  },
+  "LL": {
+   "node": 530426,
+   "snap_mm": 1.798
+  },
+  "V1": {
+   "node": 529054,
+   "snap_mm": 4.236
+  },
+  "V2": {
+   "node": 524811,
+   "snap_mm": 3.517
+  },
+  "V3": {
+   "node": 530807,
+   "snap_mm": 5.05
+  },
+  "V4": {
+   "node": 529512,
+   "snap_mm": 1.632
+  },
+  "V5": {
+   "node": 530460,
+   "snap_mm": 4.272
+  },
+  "V6": {
+   "node": 528017,
+   "snap_mm": 3.106
+  },
+  "RL": {
+   "node": 532068,
+   "snap_mm": 2.133
+  }
+ },
+ "final": {
+  "nodes": 2665810,
+  "elements": 16855532,
+  "tags": {
+   "1": 1241143,
+   "2": 506625,
+   "3": 124770,
+   "4": 181690,
+   "5": 47853,
+   "6": 18212,
+   "7": 49394,
+   "8": 70309,
+   "9": 21289,
+   "10": 33457,
+   "11": 4198,
+   "12": 2169,
+   "13": 9475,
+   "14": 4405,
+   "15": 6180,
+   "16": 9475,
+   "17": 14433,
+   "18": 1572,
+   "19": 927,
+   "20": 1435,
+   "21": 1068,
+   "22": 1060,
+   "23": 1203,
+   "24": 2110,
+   "25": 90018,
+   "26": 73504,
+   "27": 17973,
+   "28": 73006,
+   "29": 29117,
+   "100": 5650083,
+   "101": 2750715,
+   "102": 3092151,
+   "103": 974877,
+   "104": 1436636,
+   "105": 239710,
+   "106": 73290
+  },
+  "files": "/home/alex/vt-exit-depth/data/biv/Y5HYEDL4/v52/torso52_c73/heart_torso52.{pts,elem,lon}",
+  "elem_sha256": "b6bb0f7d5b46b872522f55f8f89bd1274f10b0f25edc8c50bf7e6fc0e727c3fd"
+ },
+ "wall_s": 367,
+ "python_peak_rss_MB": 3958
+}

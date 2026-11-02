@@ -1,0 +1,244 @@
+{
+ "heart": "6G8DD8S5",
+ "root_lining": 1,
+ "cov": 0.9,
+ "slab_mm": 0.75,
+ "tau": 0.0,
+ "h_margin_mm": 1.0,
+ "rho_margin_mm": 0.5,
+ "nodes": 553102,
+ "tets": 2820735,
+ "boundary_faces": 340248,
+ "pinch_edges": 44,
+ "aorta": {
+  "disc_nodes": 4300,
+  "wall_nodes": 17330,
+  "o_mm": [
+   63.3776,
+   56.9712,
+   54.3217
+  ],
+  "a": [
+   -0.765936,
+   -0.364666,
+   0.529491
+  ],
+  "ring_top_mm": 36.5,
+  "ring_start_mm": 4.0,
+  "h_root_mm": 6.922,
+  "rho_root_mm": 17.74,
+  "sheet_faces": 13064,
+  "sheet_tags": {
+   "1": 397,
+   "5": 11122,
+   "9": 1533,
+   "27": 12
+  },
+  "rim": {
+   "nodes": 222,
+   "distinct_nodes": 216,
+   "start_node": 30863,
+   "length_mm": 208.91,
+   "height_mm": [
+    34.807,
+    41.758
+   ],
+   "plane_tilt_from_axis_deg": 9.7,
+   "max_dev_from_own_plane_mm": 1.156,
+   "cap_area_mm2": 1557.73,
+   "sorted_node_ids_sha256": "d98e868d67837074f2383a66b7704e4d8244e40cea084de079eaa4f2ec8959d8"
+  },
+  "holes": [
+   {
+    "nodes": 3,
+    "height_mm": [
+     2.77,
+     3.34
+    ],
+    "fan_area_mm2": 0.29
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     2.64,
+     2.7
+    ],
+    "fan_area_mm2": 0.35
+   },
+   {
+    "nodes": 7,
+    "height_mm": [
+     2.41,
+     3.07
+    ],
+    "fan_area_mm2": 1.07
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     1.47,
+     1.63
+    ],
+    "fan_area_mm2": 0.31
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     3.62,
+     3.88
+    ],
+    "fan_area_mm2": 0.31
+   },
+   {
+    "nodes": 6,
+    "height_mm": [
+     4.42,
+     5.0
+    ],
+    "fan_area_mm2": 0.92
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     -1.9,
+     -1.07
+    ],
+    "fan_area_mm2": 0.35
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     2.56,
+     2.95
+    ],
+    "fan_area_mm2": 0.28
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     3.11,
+     3.35
+    ],
+    "fan_area_mm2": 0.29
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     -1.9,
+     -1.07
+    ],
+    "fan_area_mm2": 0.39
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     -1.77,
+     -0.97
+    ],
+    "fan_area_mm2": 0.38
+   }
+  ],
+  "closed_surface_triangles": 13326,
+  "unpaired_directed_edges": 0,
+  "volume_mL": 28.7744
+ },
+ "PA": {
+  "disc_nodes": 7721,
+  "wall_nodes": 7697,
+  "o_mm": [
+   73.0884,
+   34.2751,
+   81.2606
+  ],
+  "a": [
+   -0.27896,
+   0.541723,
+   0.792917
+  ],
+  "ring_top_mm": 11.0,
+  "ring_start_mm": 1.5,
+  "h_root_mm": 4.902,
+  "rho_root_mm": 20.402,
+  "sheet_faces": 7126,
+  "sheet_tags": {
+   "2": 30,
+   "6": 4604,
+   "10": 2492
+  },
+  "rim": {
+   "nodes": 171,
+   "distinct_nodes": 169,
+   "start_node": 123602,
+   "length_mm": 160.38,
+   "height_mm": [
+    9.525,
+    21.031
+   ],
+   "plane_tilt_from_axis_deg": 20.51,
+   "max_dev_from_own_plane_mm": 0.6,
+   "cap_area_mm2": 1066.81,
+   "sorted_node_ids_sha256": "6665d91153c629a241734f7df1dfeab1ecdff1d31c1db900b2eea2b4d662de8c"
+  },
+  "holes": [
+   {
+    "nodes": 3,
+    "height_mm": [
+     3.61,
+     3.9
+    ],
+    "fan_area_mm2": 0.36
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     1.45,
+     1.87
+    ],
+    "fan_area_mm2": 0.23
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     3.37,
+     3.72
+    ],
+    "fan_area_mm2": 0.24
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     1.19,
+     1.37
+    ],
+    "fan_area_mm2": 0.25
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     2.95,
+     3.59
+    ],
+    "fan_area_mm2": 0.27
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     -0.75,
+     -0.02
+    ],
+    "fan_area_mm2": 0.3
+   },
+   {
+    "nodes": 3,
+    "height_mm": [
+     -2.97,
+     -2.45
+    ],
+    "fan_area_mm2": 0.32
+   }
+  ],
+  "closed_surface_triangles": 7318,
+  "unpaired_directed_edges": 0,
+  "volume_mL": 11.8278
+ }
+}
