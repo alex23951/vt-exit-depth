@@ -1,0 +1,364 @@
+{
+ "rule": "D39 read-only (proposed entry): D39 (1) (e) and (3) (8), lock thread, 2 Nov 2026",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "threshold_finding2": 0.3,
+ "hearts": {
+  "Y5HYEDL4": {
+   "manifest_sha256": "fcf9184ab9c6ef87d1d4fd8fe6ade0a0e9bb999796f893eb034e5400f64d6bef",
+   "v51_sites_sha256": "4403184009cb9804bdfe0a2b16c80df059c482e2b4fa1cca52930cb2efdb720b",
+   "region_counts_by_family": {
+    "v51 sites": {
+     "LV free wall": 48,
+     "RV free wall": 36,
+     "RVOT": 8,
+     "cusps": 8,
+     "septum": 32,
+     "summit": 12
+    },
+    "cusp_crescent": {
+     "cusps": 4
+    },
+    "supravalvar": {
+     "supravalvar": 3
+    },
+    "intramural_focus": {
+     "septum": 1
+    },
+    "summit_reanchored": {
+     "summit": 8
+    },
+    "gate5fill": {
+     "LV free wall": 66
+    },
+    "displaced_transmural": {
+     "LV free wall": 48,
+     "RV free wall": 36,
+     "RVOT": 8,
+     "cusps": 8,
+     "septum": 32,
+     "summit": 12
+    },
+    "displaced_tangential": {
+     "LV free wall": 48,
+     "RV free wall": 36,
+     "RVOT": 8,
+     "cusps": 8,
+     "septum": 32,
+     "summit": 12
+    },
+    "ladder": {
+     "LV free wall": 384,
+     "RV free wall": 288,
+     "RVOT": 64,
+     "cusps": 64,
+     "septum": 256,
+     "summit": 96
+    }
+   },
+   "region_counts_all": {
+    "LV free wall": 594,
+    "RV free wall": 396,
+    "RVOT": 88,
+    "cusps": 92,
+    "septum": 353,
+    "summit": 140,
+    "supravalvar": 3
+   },
+   "LVOT": "no site (D39 (3) (8))",
+   "report26_grids": "placed from the focus beat (D25); not in the manifest yet; region septum when built",
+   "report7_points": {
+    "points": 288,
+    "by_family": {
+     "displaced_transmural": 144,
+     "displaced_tangential": 144
+    },
+    "finding2 (fibre points with |f . unit grad APD w| > 0.3)": {
+     "count": 3,
+     "by_family_and_parent_family": {
+      "displaced_tangential": {
+       "aortic_cusp": 1,
+       "lv_free_wall": 1,
+       "lv_septum": 1
+      }
+     },
+     "ids": [
+      "lv_septum_phi60_z0.5_d50_disp_tg",
+      "lv_free_wall_phi-150_z0.5_d90_disp_tg",
+      "aortic_cusp_lcc_z_d10_disp_tg"
+     ]
+    },
+    "finding2_undefined (parent has no APD w gradient: finding 1)": [
+     "aortic_cusp_rcc_z_d90_disp_tg"
+    ],
+    "|f . unit grad w| over fibre points (median, p90, max)": [
+     0.0109,
+     0.0405,
+     0.9695
+    ],
+    "transmural points |d . unit grad w| (min, max; 1 by D33, not flagged)": [
+     1.0,
+     1.0
+    ],
+    "finding3 (snapped node touches no element of the parent ventricle)": {
+     "count": 1,
+     "by_family_and_parent_family": {
+      "displaced_tangential": {
+       "rv_free_wall": 1
+      }
+     },
+     "ids": [
+      "rv_free_wall_q75_z0.25_d90_disp_tg"
+     ]
+    },
+    "flagged_by_either": 4
+   }
+  },
+  "6G8DD8S5": {
+   "manifest_sha256": "9de1433cda9aa1df8499004570996119c1cef77c504ec5d3e1e45a075a40964a",
+   "v51_sites_sha256": "209582a29f32c88bd33ce772e9380f6372eb17022f68ab39594492defa9d964e",
+   "region_counts_by_family": {
+    "v51 sites": {
+     "LV free wall": 48,
+     "RV free wall": 36,
+     "RVOT": 8,
+     "cusps": 8,
+     "septum": 32,
+     "summit": 12
+    },
+    "cusp_crescent": {
+     "cusps": 4
+    },
+    "supravalvar": {
+     "supravalvar": 3
+    },
+    "intramural_focus": {
+     "septum": 1
+    },
+    "summit_reanchored": {
+     "summit": 8
+    },
+    "gate5fill": {
+     "LV free wall": 66
+    },
+    "displaced_transmural": {
+     "LV free wall": 48,
+     "RV free wall": 36,
+     "RVOT": 8,
+     "cusps": 8,
+     "septum": 32,
+     "summit": 12
+    },
+    "displaced_tangential": {
+     "LV free wall": 48,
+     "RV free wall": 36,
+     "RVOT": 8,
+     "cusps": 8,
+     "septum": 32,
+     "summit": 12
+    },
+    "ladder": {
+     "LV free wall": 384,
+     "RV free wall": 288,
+     "RVOT": 64,
+     "cusps": 64,
+     "septum": 256,
+     "summit": 96
+    }
+   },
+   "region_counts_all": {
+    "LV free wall": 594,
+    "RV free wall": 396,
+    "RVOT": 88,
+    "cusps": 92,
+    "septum": 353,
+    "summit": 140,
+    "supravalvar": 3
+   },
+   "LVOT": "no site (D39 (3) (8))",
+   "report26_grids": "placed from the focus beat (D25); not in the manifest yet; region septum when built",
+   "report7_points": {
+    "points": 288,
+    "by_family": {
+     "displaced_transmural": 144,
+     "displaced_tangential": 144
+    },
+    "finding2 (fibre points with |f . unit grad APD w| > 0.3)": {
+     "count": 4,
+     "by_family_and_parent_family": {
+      "displaced_tangential": {
+       "aortic_cusp": 1,
+       "lv_free_wall": 2,
+       "lv_vein_course": 1
+      }
+     },
+     "ids": [
+      "lv_free_wall_phi-120_z0.5_d75_disp_tg",
+      "lv_free_wall_phi-120_z0.75_d75_disp_tg",
+      "aortic_cusp_lcc_z_d10_disp_tg",
+      "lv_vein_course_proximal_aiv_z_d90_disp_tg"
+     ]
+    },
+    "finding2_undefined (parent has no APD w gradient: finding 1)": [],
+    "|f . unit grad w| over fibre points (median, p90, max)": [
+     0.0134,
+     0.0576,
+     0.7941
+    ],
+    "transmural points |d . unit grad w| (min, max; 1 by D33, not flagged)": [
+     1.0,
+     1.0
+    ],
+    "finding3 (snapped node touches no element of the parent ventricle)": {
+     "count": 8,
+     "by_family_and_parent_family": {
+      "displaced_transmural": {
+       "rv_free_wall": 4
+      },
+      "displaced_tangential": {
+       "rv_free_wall": 4
+      }
+     },
+     "ids": [
+      "rv_free_wall_q75_z0.25_d10_disp_tm",
+      "rv_free_wall_q75_z0.25_d10_disp_tg",
+      "rv_free_wall_q75_z0.25_d50_disp_tm",
+      "rv_free_wall_q75_z0.25_d50_disp_tg",
+      "rv_free_wall_q75_z0.25_d75_disp_tm",
+      "rv_free_wall_q75_z0.25_d75_disp_tg",
+      "rv_free_wall_q75_z0.25_d90_disp_tm",
+      "rv_free_wall_q75_z0.25_d90_disp_tg"
+     ]
+    },
+    "flagged_by_either": 12
+   }
+  },
+  "7D98EVAR": {
+   "manifest_sha256": "8750e0b9c34c09bce44ef1afa29bbc792a49357f01215ec1d3c0b69da8587641",
+   "v51_sites_sha256": "66b4c698406dcfcc831dfec86e92142b7db36f1b0d439de961ac562dd004e75c",
+   "region_counts_by_family": {
+    "v51 sites": {
+     "LV free wall": 48,
+     "RV free wall": 36,
+     "RVOT": 8,
+     "cusps": 8,
+     "septum": 32,
+     "summit": 12
+    },
+    "cusp_crescent": {
+     "cusps": 4
+    },
+    "supravalvar": {
+     "supravalvar": 3
+    },
+    "intramural_focus": {
+     "septum": 1
+    },
+    "summit_reanchored": {
+     "summit": 8
+    },
+    "gate5fill": {
+     "LV free wall": 60
+    },
+    "displaced_transmural": {
+     "LV free wall": 48,
+     "RV free wall": 36,
+     "RVOT": 8,
+     "cusps": 8,
+     "septum": 32,
+     "summit": 12
+    },
+    "displaced_tangential": {
+     "LV free wall": 48,
+     "RV free wall": 36,
+     "RVOT": 8,
+     "cusps": 8,
+     "septum": 32,
+     "summit": 12
+    },
+    "ladder": {
+     "LV free wall": 384,
+     "RV free wall": 288,
+     "RVOT": 64,
+     "cusps": 64,
+     "septum": 256,
+     "summit": 96
+    }
+   },
+   "region_counts_all": {
+    "LV free wall": 588,
+    "RV free wall": 396,
+    "RVOT": 88,
+    "cusps": 92,
+    "septum": 353,
+    "summit": 140,
+    "supravalvar": 3
+   },
+   "LVOT": "no site (D39 (3) (8))",
+   "report26_grids": "placed from the focus beat (D25); not in the manifest yet; region septum when built",
+   "report7_points": {
+    "points": 288,
+    "by_family": {
+     "displaced_transmural": 144,
+     "displaced_tangential": 144
+    },
+    "finding2 (fibre points with |f . unit grad APD w| > 0.3)": {
+     "count": 2,
+     "by_family_and_parent_family": {
+      "displaced_tangential": {
+       "aortic_cusp": 2
+      }
+     },
+     "ids": [
+      "aortic_cusp_lcc_z_d10_disp_tg",
+      "aortic_cusp_lcc_z_d90_disp_tg"
+     ]
+    },
+    "finding2_undefined (parent has no APD w gradient: finding 1)": [],
+    "|f . unit grad w| over fibre points (median, p90, max)": [
+     0.0149,
+     0.0573,
+     0.6112
+    ],
+    "transmural points |d . unit grad w| (min, max; 1 by D33, not flagged)": [
+     1.0,
+     1.0
+    ],
+    "finding3 (snapped node touches no element of the parent ventricle)": {
+     "count": 12,
+     "by_family_and_parent_family": {
+      "displaced_transmural": {
+       "aortic_cusp": 1,
+       "lv_septum": 2,
+       "rv_free_wall": 4
+      },
+      "displaced_tangential": {
+       "lv_septum": 2,
+       "rv_free_wall": 3
+      }
+     },
+     "ids": [
+      "lv_septum_phi60_z0.5_d75_disp_tm",
+      "lv_septum_phi60_z0.5_d75_disp_tg",
+      "lv_septum_phi60_z0.5_d90_disp_tm",
+      "lv_septum_phi60_z0.5_d90_disp_tg",
+      "rv_free_wall_q25_z0.25_d10_disp_tm",
+      "rv_free_wall_q25_z0.25_d50_disp_tm",
+      "rv_free_wall_q25_z0.25_d50_disp_tg",
+      "rv_free_wall_q25_z0.25_d75_disp_tm",
+      "rv_free_wall_q25_z0.25_d75_disp_tg",
+      "rv_free_wall_q25_z0.25_d90_disp_tm",
+      "rv_free_wall_q25_z0.25_d90_disp_tg",
+      "aortic_cusp_rcc_z_d90_disp_tm"
+     ]
+    },
+    "flagged_by_either": 14
+   }
+  }
+ },
+ "csv": {
+  "path": "analysis/v52_2026-10-20/02_geometry/d39_regions52.csv",
+  "rows": 4992,
+  "sha256": "76be85e76ca9e11ff61225497dcd09c64cc7769e5bdfb78e26035def7bfda202"
+ },
+ "wall_s": 2.8
+}
