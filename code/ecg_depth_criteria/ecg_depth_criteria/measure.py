@@ -167,16 +167,29 @@ def measure_beat(
             r = max(r_peaks, key=lambda p: x[v2, p])
         idt = ms(r - on)
 
-    # Shortest RS: onset to the nadir of the first S wave in any precordial lead.
+    # Shortest RS: onset to the nadir of the first S wave in any precordial lead. Negative
+    # pieces split by a notch that stays inside the wave threshold are one S wave, as for the
+    # S amplitude below, and its nadir is the deepest of them (0.4.1); the S wave ends at the
+    # next positive wave.
     srs, srs_lead = NAN, None
     for k in PRECORDIAL:
         w = [v for v in lead_waves[k] if v.start <= off_pre]
         first_r = next((n for n, v in enumerate(w) if v.sign > 0), None)
         if first_r is None:
             continue
-        s_wave = next((v for v in w[first_r + 1 :] if v.sign < 0), None)
-        if s_wave is not None and (math.isnan(srs) or ms(s_wave.peak - on) < srs):
-            srs, srs_lead = ms(s_wave.peak - on), k
+        rest = w[first_r + 1 :]
+        n0 = next((n for n, v in enumerate(rest) if v.sign < 0), None)
+        if n0 is None:
+            continue
+        s_wave = []
+        for v in rest[n0:]:
+            if v.sign > 0:
+                break
+            s_wave.append(v)
+        row = LEADS.index(k)
+        nadir = min((v.peak for v in s_wave), key=lambda i: x[row, i])
+        if math.isnan(srs) or ms(nadir - on) < srs:
+            srs, srs_lead = ms(nadir - on), k
 
     # Maximum deflection index: onset to the largest deflection in each
     # precordial lead, divided by QRS duration; the shortest lead is reported.

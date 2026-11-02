@@ -3,7 +3,14 @@
 Python code that measures the published 12-lead ECG criteria for an epicardial
 origin of a PVC or VT, each one the way its paper defines it. The same code
 scores simulated (openCARP) and real ECGs, so the two are measured identically.
-Version 0.4.0, 16 Oct 2026. It needs only numpy; the tests need pytest.
+Version 0.4.1, 27 Oct 2026. It needs only numpy; the tests need pytest.
+
+Changes in 0.4.1 (27 Oct 2026, from a code audit): shortest RS ends at the deepest point
+of the whole first S wave. 0.4.0 split an S wave wherever a notch came back inside
++-0.05 mV and ended the interval at the nadir of its first piece, while the S amplitude
+already took those pieces as one wave. Now the negative pieces after the first R wave, up
+to the next positive wave, are one S wave, so shortest RS can only stay the same or grow.
+Nothing else changes. 0.4.0 is at commit 53bab54.
 
 Changes in 0.4.0 (decision H of the 13-14 Oct 2026 audit, chosen 15 Oct 2026): q waves
 and initial r waves are read from each lead's first recognised deflection, inside an
@@ -43,7 +50,7 @@ Alex chose the change, which is recorded in the Analysis plan.
 
 ```
 python3 -m pip install numpy pytest
-python3 -m pytest          # run inside this folder; 76 tests
+python3 -m pytest          # run inside this folder; 78 tests
 ```
 
 ## Use
@@ -140,7 +147,7 @@ every beat.
 | QRS offset | End of the QRS in the precordial leads (Berruezo, Vallès, Piers); latest end in any lead (Daniels, Bazan 2006) | The point where the combined slope of V1 to V6 (or of I, II and V1 to V6) falls below 10% of its peak and stays down. Reported as `offset_precordial_ms` and `offset_any_lead_ms` |
 | Pseudo-delta | Onset to the earliest fast deflection in any precordial lead | The first sample where any precordial slope reaches 30% of the steepest precordial slope in the QRS |
 | IDT | Onset to the peak of the R wave in V2 | Peak of the first positive wave in V2, since a later positive wave after an S wave is R′. Positive pieces split by a notch that never turns negative (noise on a slow upstroke) count as one wave. Version 0.1.0 used the largest positive wave; that is now the sensitivity analysis, `Settings(r_peak="largest")` (`"last"` also exists) |
-| Shortest RS | Onset to the nadir of the first S wave in any precordial lead | In each precordial lead, the nadir of the first negative wave after the first positive wave; the earliest across leads is kept |
+| Shortest RS | Onset to the nadir of the first S wave in any precordial lead | In each precordial lead, the deepest point of the first S wave: the negative pieces after the first positive wave, up to the next positive wave, are one wave, as for the S amplitude (0.4.1; 0.4.0 took the first piece's nadir); the earliest across leads is kept |
 | MDI | Onset to the largest deflection in each precordial lead, shortest lead, divided by QRS duration | `mdi_valles` divides by the precordial QRS (Vallès, Piers). `mdi_daniels` divides by the QRS to the latest offset in any lead |
 | q wave | Initial negative deflection, sometimes after a short isoelectric segment (Vallès, Piers) | 0.4.0: the lead's first recognised deflection (beyond max(0.02 mV, 5 x baseline SD), at most 0.05 mV, for at least 6 ms) is negative, starts within 40 ms of the detected QRS onset and reaches -0.05 mV before the lead turns positive (see Changes in 0.4.0). 0.3.0: the first wave larger than 0.05 mV after the onset is negative, at any time |
 | Inferior q | All of II, III and aVF (Piers Q-INF), or any of them (Bazan) | `inferior_q_all`, `inferior_q_any`. `inferior_r_any` is Piers's absence of inferior q |
