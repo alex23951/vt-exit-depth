@@ -20,7 +20,7 @@ Stages (one heart at a time, HEART=<H>; run alone):
               ray-parity test (C7). Nodes are merged by coordinates (1 um).
               R3.2 gates for all six (closed and consistently oriented, pinch edges counted; blood within +-2 % of the
               enclosed volume; no blood outside; >= 95 % of the luminal faces border blood; volumes). v5.1's
-              "blood centroids beyond plane within ring" count (C8; C69: v5.1's formula for now) at every loop where a
+              "blood centroids beyond plane within ring" count (C8; axis distance by C69, v5.1's line beside) at every loop where a
               chamber's wall faces meet its valve-disc faces. lon: biv52.lon rows (rotation identity), others isotropic.
               C66's table: every tag with its conductivity and element count beside v5.1's value; tag 26's count and
               placement. Electrodes: the resampled skin node nearest each T13 electrode (as 08_torso.py).
@@ -34,7 +34,7 @@ C66) 0.248 / 0.242 isotropic; torso 0.2 and, at the torso's value, the vessel wa
 rings and AV plane (7-24, 27; C66). The sleeves' fibrous layer is a set of luminal-face nodes (outflow52.py), not
 elements, so no element takes its 0.2 S/m here (reported; the control heart has no sleeve).
 Usage (repo root, venv): python -B analysis/v52_2026-10-20/05_conductor/conductor52.py tensors
-                         HEART=<H> python -B .../conductor52.py build | leadfield | weights
+                         HEART=<H> python -B .../conductor52.py build | lumens | recount | leadfield | weights
 """
 import importlib.util
 import json
@@ -270,6 +270,122 @@ def read_carp(base):
     return P, E, tag
 
 
+def comps_space(P, Fs):
+    """Edge-connected components of an oriented boundary triangle set, for finding a lumen: at an edge in two faces the
+    two are linked; at a pinch edge (four or more faces) each face is linked only to the face that bounds the same empty
+    wedge, its rotational neighbour about the edge on its normal side, so two spaces that touch along an edge stay apart."""
+    N = int(P.shape[0])
+    ed = np.concatenate([Fs[:, [0, 1]], Fs[:, [1, 2]], Fs[:, [2, 0]]])
+    opp = np.concatenate([Fs[:, 2], Fs[:, 0], Fs[:, 1]])
+    k = np.minimum(ed[:, 0], ed[:, 1]).astype(np.int64) * N + np.maximum(ed[:, 0], ed[:, 1])
+    fid = np.tile(np.arange(len(Fs)), 3)
+    o = np.argsort(k, kind='stable'); k, fid, ed, opp = k[o], fid[o], ed[o], opp[o]
+    _, st, cnt = np.unique(k, return_index=True, return_counts=True)
+    a, b = list(fid[st[cnt == 2]]), list(fid[st[cnt == 2] + 1])
+    nrm = np.cross(P[Fs[:, 1]] - P[Fs[:, 0]], P[Fs[:, 2]] - P[Fs[:, 0]])
+    for s0, m in zip(st[cnt > 2], cnt[cnt > 2]):
+        r = np.arange(s0, s0 + m)
+        p0 = P[min(ed[s0])]; ax = P[max(ed[s0])] - p0; ax /= np.linalg.norm(ax)
+        e1 = np.cross(ax, [1.0, 0, 0])
+        if np.linalg.norm(e1) < 0.1:
+            e1 = np.cross(ax, [0, 1.0, 0])
+        e1 /= np.linalg.norm(e1); e2 = np.cross(ax, e1)
+        wv = P[opp[r]] - p0; wv -= np.outer(wv @ ax, ax)
+        order = np.argsort(np.arctan2(wv @ e2, wv @ e1))
+        for q in range(m):
+            f = fid[r[order[q]]]
+            up = np.cross(ax, wv[order[q]])                     # direction of increasing angle at this face's wing
+            a.append(f); b.append(fid[r[order[(q + 1) % m if nrm[f] @ up > 0 else (q - 1) % m]]])
+    A = coo_matrix((np.ones(len(a)), (a, b)), shape=(len(Fs), len(Fs)))
+    return connected_components(A, directed=False)[1]
+
+
+def lumen_faces(h, vname, frame, wall_tags, disc, Pc, Fo, oo, th, wall, c, nrm, hgt, hdisc, dirn, span):
+    """A great vessel's luminal faces among the heart's outer-boundary faces Fo (R3.1: capped at the valve disc and at
+    the mesh's cut end). Rule 1 (as built for Y5HYEDL4): a plane normal to the cut end's direction n_cut (from the
+    far-end wall faces that face along the vessel), `back` mm (1.0, 1.5, ... 5.0) before the lowest end-facing face; the
+    luminal set is the component of the faces on the valve side that holds the disc face nearest the axis. Rule 2, used
+    only where rule 1 finds no sealed set (a strongly curved vessel, or a cut end that dips close to the valve on one
+    side): the highest plane normal to the valve axis, in 0.5 mm steps from 1 mm above the disc's upper face, whose
+    valve-side component is sealed, with pinch edges paired by the empty wedge they bound (comps_space). A set is sealed
+    when it holds under 20 % of Fo and no tag beyond those of rule 2's lowest plane plus the vessel's wall tags (a set
+    that reaches over the cut end picks up the atria's, the other vessel's or the epicardium's tags)."""
+    allowed_wall = set(wall_tags) | ({2} if vname == 'pulmonary_artery' else set())
+    z = (hgt - hdisc) * dirn
+    top = float(((frame.h(Pc[np.unique(Fo[th[oo] == disc])]) - hdisc) * dirn).max())
+
+    def component(sub, comps):
+        lab2 = comps(Fo[sub])
+        dsc = np.where((th[oo[sub]] == disc) & ((nrm[sub] @ frame.n) * dirn > 0.5))[0]
+        if not len(dsc):
+            raise SystemExit(f'{h}: {vname}: no disc face looks into the lumen; stop and report')
+        seed = dsc[np.argmin(frame.r(c[sub][dsc]))]
+        return sub[lab2 == lab2[seed]]
+
+    base = component(np.where(z < top + 1.0)[0], lambda Fs: comps_space(Pc, Fs))
+    allowed = set(th[oo[base]].tolist()) | allowed_wall
+
+    def sealed(cand):
+        return len(cand) < 0.2 * len(Fo) and set(th[oo[cand]].tolist()) <= allowed
+
+    info = {'lumen_rule': None, 'allowed_tags_on_luminal_faces': sorted(allowed), 'disc_upper_face_above_disc_mid_mm': round(top, 2)}
+    far = wall & (z > 0.8 * span) & ((nrm @ frame.n) * dirn > 0.3)
+    if far.sum() >= 10:
+        n_cut = nrm[far].mean(0); n_cut /= np.linalg.norm(n_cut)
+        for _ in range(3):
+            sel = far & (nrm @ n_cut > 0.9)
+            n_cut = nrm[sel].mean(0); n_cut /= np.linalg.norm(n_cut)
+        tpl = (c - c[sel].mean(0)) @ n_cut
+        endf = far & (nrm @ n_cut > 0.7)
+        info['rule1_cut_plane_normal_angle_to_valve_axis_deg'] = round(float(np.degrees(np.arccos(abs(n_cut @ frame.n)))), 1)
+        info['rule1_cut_end_irregularity_mm (end-facing faces along n_cut)'] = round(float(tpl[endf].max() - tpl[endf].min()), 2)
+        for back in np.arange(1.0, 5.01, 0.5):
+            cand = component(np.where(tpl < tpl[endf].min() - back)[0], face_components)
+            if sealed(cand):
+                info.update({'lumen_rule': 1, 'cap_plane_back_from_lowest_end_face_mm': float(back)})
+                return cand, info
+    last = None
+    for zc in np.arange(top + 1.0, top + 80.0, 0.5):
+        cand = component(np.where(z < zc)[0], lambda Fs: comps_space(Pc, Fs))
+        if not sealed(cand):
+            break
+        last = (float(zc), cand)
+    if last is None:
+        raise SystemExit(f'{h}: {vname}: neither cut-end rule seals the lumen; stop and report')
+    info.update({'lumen_rule': 2, 'cap_plane_normal_to_valve_axis_above_disc_mid_mm': round(last[0], 2),
+                 'first_unsealed_plane_mm': round(last[0] + 0.5, 2)})
+    return last[1], info
+
+
+def valve_planes(F, lab, own, th, names, Ph, Pf, Ef, tf):
+    """v5.1's valve-plane count (C8), reported only: at each loop where a chamber's wall faces meet its valve-disc faces,
+    the blood centroids more than 0.5 mm beyond the ring's plane and closer to its axis than the ring's radius. The
+    distance from the axis is |v - (v . n) n| (C69, lock thread, 27 Oct 2026); v5.1's line (conductor51.py l.237,
+    |v - d n| with d = -(v . n), which doubles the axial part) is reported beside it."""
+    res = {}
+    for L, nm in names.items():
+        Fc, oc = F[lab == L], own[lab == L]
+        isdisc = np.isin(th[oc], list(DISC))
+        loops = boundary_loops(Fc[~isdisc]) if isdisc.any() else []
+        bc = centroids(Pf, Ef[tf == BLOOD[nm]])
+        out = []
+        for be in loops:
+            nb = np.unique(be); Cc = Ph[nb].mean(0)
+            tri = np.stack([Ph[be[:, 1]], Ph[be[:, 0]], np.repeat(Cc[None], len(be), 0)], 1)
+            nc = np.cross(tri[:, 1] - tri[:, 0], tri[:, 2] - tri[:, 0]).sum(0); nc /= np.linalg.norm(nc)
+            rad = float(np.linalg.norm(Ph[nb] - Cc, axis=1).max())
+            d = -(bc - Cc) @ nc
+            r = np.linalg.norm((bc - Cc) + np.outer(d, nc), axis=1)
+            r51 = np.linalg.norm((bc - Cc) - np.outer(d, nc), axis=1)
+            dn = [DISC[int(t)] for t in np.unique(th[oc[isdisc]]) if np.isin(Fc[isdisc][th[oc[isdisc]] == t], nb).any()]
+            out.append({'loop_nodes': int(len(nb)), 'discs_touching': dn, 'radius_mm': round(rad, 2),
+                        'ring_planarity_rms_mm': round(float(np.sqrt(np.mean(((Ph[nb] - Cc) @ nc) ** 2))), 2),
+                        'blood_centroids_beyond_plane_within_ring (C69)': int(((d > 0.5) & (r < rad)).sum()),
+                        'blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)': int(((d > 0.5) & (r51 < rad)).sum())})
+        res[nm] = out
+    return res
+
+
 # ------------------------------------------------------------------ build
 def build():
     h = os.environ['HEART']
@@ -398,33 +514,7 @@ def build():
         hdisc = float(np.median(frame.h(Pc[np.unique(Eh[th == disc])])))
         dirn = 1.0 if hw.max() - hdisc >= hdisc - hw.min() else -1.0        # the cut end is the wall's end farther from the disc
         span = (hw.max() - hdisc) if dirn > 0 else (hdisc - hw.min())
-        # the cut end: its plane normal n_cut from the far-end wall faces that face along the vessel (the cut may be oblique
-        # to the valve axis where the vessel curves); the lumen = the outer-boundary faces on the valve side of a plane
-        # normal to n_cut placed `back` mm before the lowest end-facing face, connected to the disc face nearest the
-        # axis. back starts at 1.0 mm and grows by 0.5 mm (to 5 mm) until that set no longer reaches the exterior.
-        far = wall & ((hgt - hdisc) * dirn > 0.8 * span) & ((nrm @ frame.n) * dirn > 0.3)
-        if far.sum() < 10:
-            raise SystemExit(f'{h}: {vname}: no cut-end faces found; stop and report')
-        n_cut = nrm[far].mean(0); n_cut /= np.linalg.norm(n_cut)
-        for _ in range(3):
-            sel = far & (nrm @ n_cut > 0.9)
-            n_cut = nrm[sel].mean(0); n_cut /= np.linalg.norm(n_cut)
-        tpl = (c - c[sel].mean(0)) @ n_cut
-        endf = far & (nrm @ n_cut > 0.7)
-        Lsel = None
-        for back in np.arange(1.0, 5.01, 0.5):
-            sub = np.where(tpl < tpl[endf].min() - back)[0]
-            lab2 = face_components(Fo[sub])
-            dsc = np.where((th[oo[sub]] == disc) & ((nrm[sub] @ frame.n) * dirn > 0.5))[0]
-            if not len(dsc):
-                raise SystemExit(f'{h}: {vname}: no disc face looks into the lumen; stop and report')
-            seed = dsc[np.argmin(frame.r(c[sub][dsc]))]
-            cand_ = sub[lab2 == lab2[seed]]
-            if len(cand_) < 0.2 * len(Fo):
-                Lsel = cand_
-                break
-        if Lsel is None:
-            raise SystemExit(f'{h}: {vname}: no cap plane up to 5 mm before the cut end separates the lumen; stop and report')
+        Lsel, lsurf = lumen_faces(h, vname, frame, wall_tags, disc, Pc, Fo, oo, th, wall, c, nrm, hgt, hdisc, dirn, span)
         FL = Fo[Lsel]
         loops = boundary_loops(FL)
         caps = []
@@ -445,9 +535,7 @@ def build():
         lum[vname] = {'T': Tl, 'faces': FL, 'loops': loops}
         gates[vname] = {'surface': {'luminal_faces': int(len(FL)), 'cut_end_loops': len(loops),
                                     'wall_length_beyond_disc_mm': round(float(span), 2),
-                                    'cut_plane_normal_angle_to_valve_axis_deg': round(float(np.degrees(np.arccos(abs(n_cut @ frame.n)))), 1),
-                                    'cut_end_irregularity_mm (end-facing faces along n_cut)': round(float(tpl[endf].max() - tpl[endf].min()), 2),
-                                    'cap_plane_back_from_lowest_end_face_mm': float(back),
+                                    **lsurf,
                                     'cap_triangles': int(sum(len(x) for x in caps)), 'tags_on_luminal_faces': sorted(set(th[oo[Lsel]].tolist())),
                                     **cl, 'volume_ml': round(svol, 3)},
                         'C7': {'candidates_in_box': int(len(cand)), 'blood_elements': int(ins.sum()), 'split_votes': split}}
@@ -494,24 +582,7 @@ def build():
                      'luminal_faces_bordering_blood_frac': round(bord, 4), 'ge_95pct': bool(bord >= 0.95),
                      'closed_and_consistent (pinch edges counted as passing)': bool(g['surface']['edges_in_1_triangle'] == 0 and g['surface']['edges_other_counts'] == 0 and g['surface']['orientation_consistent'])}
         log(h, nm, 'R3.2', g['R3.2'])
-    # v5.1's valve-plane count (C8; C69: v5.1's formula): loops where a chamber's wall faces meet its valve-disc faces
-    for L, nm in names.items():
-        Fc, oc = F[lab == L], own[lab == L]
-        isdisc = np.isin(th[oc], list(DISC))
-        loops = boundary_loops(Fc[~isdisc]) if isdisc.any() else []
-        bc = centroids(Pf, Ef[tf == BLOOD[nm]])
-        out = []
-        for be in loops:
-            nb = np.unique(be); Cc = Ph[nb].mean(0)
-            tri = np.stack([Ph[be[:, 1]], Ph[be[:, 0]], np.repeat(Cc[None], len(be), 0)], 1)
-            nc = np.cross(tri[:, 1] - tri[:, 0], tri[:, 2] - tri[:, 0]).sum(0); nc /= np.linalg.norm(nc)
-            rad = float(np.linalg.norm(Ph[nb] - Cc, axis=1).max())
-            d = -(bc - Cc) @ nc
-            r = np.linalg.norm((bc - Cc) - np.outer(d, nc), axis=1)
-            dn = [DISC[int(t)] for t in np.unique(th[oc[isdisc]]) if np.isin(Fc[isdisc][th[oc[isdisc]] == t], nb).any()]
-            out.append({'loop_nodes': int(len(nb)), 'discs_touching': dn, 'radius_mm': round(rad, 2),
-                        'ring_planarity_rms_mm': round(float(np.sqrt(np.mean(((Ph[nb] - Cc) @ nc) ** 2))), 2),
-                        'blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)': int(((d > 0.5) & (r < rad)).sum())})
+    for nm, out in valve_planes(F, lab, own, th, names, Ph, Pf, Ef, tf).items():
         gates[nm]['valve_planes'] = out
     rep['R3.1_R3.2'] = gates
     # ---------------- C66 table, tag 26
@@ -571,6 +642,92 @@ def build():
     rep['wall_s'] = round(time.time() - t0); rep['python_peak_rss_MB'] = peak_mb()
     G.dump(rep, os.path.join(HERE, f'conductor52_{h}{SFX}.json'))
     log(h, 'build done', rep['wall_s'], 's', 'peak', rep['python_peak_rss_MB'], 'MB')
+
+
+def assemble(h):
+    """The heart at the CT pose, its boundary and its chambers, as build() makes them (no mesh written)."""
+    P, E, tag = G.load_full(h)
+    z = np.load(os.path.join(G.RUN, h, 'outflow52.npz'))
+    tag52 = tag.copy(); tag52[z['crescent_elements']] = 1; tag52[z['sleeve_elements']] = 2
+    nod = np.fromfile(hd(h, 'biv52.nod'), dtype=np.int64)
+    Em, tm = read_elem(hd(h, 'biv52'))
+    idx = match_rows(E, nod[Em], len(P))
+    rest = np.setdiff1d(np.arange(len(E)), idx)
+    Nm = len(nod)
+    newid = np.full(len(P), -1, np.int64); newid[nod] = np.arange(Nm)
+    oth = np.where(newid < 0)[0]; newid[oth] = Nm + np.arange(len(oth))
+    pose = json.load(open(os.path.join(REPO, 'analysis', 'v52_2026-10-20', '02_geometry', f'pose52_{h}.json')))
+    M = np.array(pose['pose_4x4 (x_torso_mm = x_heart_mm + t_prime; rotation identity)'])
+    Ph = np.empty((len(P), 3)); Ph[newid] = P; Ph = Ph + M[:3, 3]
+    Eh = np.vstack([Em, newid[E[rest]]]); th = np.concatenate([tm, tag52[rest]])
+    F, own = oriented_boundary(Ph, Eh)
+    lab = face_components(F)
+    comps = {}
+    for L in np.unique(lab):
+        ext = Ph[np.unique(F[lab == L])]
+        comps[int(L)] = {'faces': int((lab == L).sum()), 'tags': sorted(set(th[own[lab == L]].tolist())), 'bbox_mm3': float(np.prod(ext.max(0) - ext.min(0)))}
+    outer = max(comps, key=lambda L: comps[L]['bbox_mm3'])
+    names = {}
+    for L, c in comps.items():
+        if L == outer or (c['faces'] <= 200 and c['bbox_mm3'] < 50.0 and not (set(c['tags']) & set(DISC))):
+            continue
+        t = set(c['tags'])
+        names[L] = 'LA' if (3 in t and 4 not in t) else 'RA' if (4 in t and 3 not in t) else 'LV' if (9 in t and 10 not in t) else 'RV' if (10 in t and 9 not in t) else None
+    assert sorted(names.values()) == ['LA', 'LV', 'RA', 'RV'], names
+    inv = np.full(len(E), -1); inv[idx] = np.arange(len(idx))
+    sleeve_new = np.zeros(len(Eh), bool); sleeve_new[inv[z['sleeve_elements']]] = True
+    return {'P': P, 'E': E, 'tag': tag, 'M': M, 'Ph': Ph, 'Eh': Eh, 'th': th, 'F': F, 'own': own, 'lab': lab,
+            'comps': comps, 'outer': outer, 'names': names, 'sleeve_new': sleeve_new}
+
+
+def lumens():
+    """Read-only check of lumen_faces() on an assembled heart (no mesh): writes lumens52_<H>.json."""
+    h = os.environ['HEART']
+    A = assemble(h)
+    P, E, tag, M, Eh, th, F, own, lab = (A[k] for k in ('P', 'E', 'tag', 'M', 'Eh', 'th', 'F', 'own', 'lab'))
+    Pc = A['Ph'] - M[:3, 3]
+    av, _ = G.aortic_frame(P, E, tag); pv, _ = G.pulmonary_frame(P, E, tag)
+    fo = lab == A['outer']
+    out = {'heart': h, 'lock_sha256': G.LOCK_SHA}
+    for vname, frame, wall_tags, disc in (('aortic_root', av, [5], 9), ('pulmonary_artery', pv, [6], 10)):
+        Fo, oo = F[fo], own[fo]
+        wall = np.isin(th[oo], wall_tags) | (A['sleeve_new'][oo] if vname == 'pulmonary_artery' else False)
+        c = Pc[Fo].mean(1)
+        nrm = np.cross(Pc[Fo[:, 1]] - Pc[Fo[:, 0]], Pc[Fo[:, 2]] - Pc[Fo[:, 0]]); nrm /= np.linalg.norm(nrm, axis=1, keepdims=True)
+        hgt = frame.h(c)
+        hw = frame.h(Pc[np.unique(Eh[np.isin(th, wall_tags)])])
+        hdisc = float(np.median(frame.h(Pc[np.unique(Eh[th == disc])])))
+        dirn = 1.0 if hw.max() - hdisc >= hdisc - hw.min() else -1.0
+        span = (hw.max() - hdisc) if dirn > 0 else (hdisc - hw.min())
+        Lsel, info = lumen_faces(h, vname, frame, wall_tags, disc, Pc, Fo, oo, th, wall, c, nrm, hgt, hdisc, dirn, span)
+        out[vname] = {'luminal_faces': int(len(Lsel)), 'tags_on_luminal_faces': sorted(set(th[oo[Lsel]].tolist())),
+                      'loops': sorted([int(len(x)) for x in boundary_loops(Fo[Lsel])], reverse=True), 'wall_length_beyond_disc_mm': round(float(span), 2), **info}
+    G.dump(out, os.path.join(HERE, f'lumens52_{h}.json'))
+    print(json.dumps(out))
+
+
+def recount():
+    """C69 on a mesh already built: the heart assembled and its chambers named as build() does them, the blood read from
+    heart_torso52, and valve_planes() run on both. Writes c69_recount_<H>.json only; the mesh is not touched."""
+    h = os.environ['HEART']
+    t0 = time.time()
+    A = assemble(h)
+    F, lab, own, th, names, Ph = A['F'], A['lab'], A['own'], A['th'], A['names'], A['Ph']
+    del A
+    base = tdir(h, 'heart_torso52')
+    Pf, Ef, tf = read_carp(base)
+    dev = float(np.abs(Pf[:len(Ph)] - Ph).max())
+    assert dev < 1e-5, f'heart nodes of {base} differ from the assembled heart by {dev} mm'
+    res = valve_planes(F, lab, own, th, names, Ph, Pf, Ef, tf)
+    built = json.load(open(os.path.join(HERE, f'conductor52_{h}{SFX}.json')))['R3.1_R3.2']
+    k51 = 'blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)'
+    same = all([o[k51] for o in res[nm]] == [o[k51] for o in built[nm]['valve_planes']] for nm in res)
+    out = {'heart': h, 'lock_sha256': G.LOCK_SHA, 'rule': 'C69 (lock thread, 27 Oct 2026): distance from the ring axis |v - (v . n) n|',
+           'mesh': base + '.elem', 'elem_sha256': G.sha256(base + '.elem'), 'heart_nodes_max_deviation_mm': dev,
+           'v51_formula_counts_reproduce_the_build_report': bool(same), 'valve_planes': res,
+           'wall_s': round(time.time() - t0), 'python_peak_rss_MB': peak_mb()}
+    G.dump(out, os.path.join(HERE, f'c69_recount_{h}{SFX}.json'))
+    print(json.dumps(out, indent=1))
 
 
 # ------------------------------------------------------------------ lead fields
@@ -738,4 +895,4 @@ def weights():
 
 
 if __name__ == '__main__':
-    {'tensors': tensors, 'build': build, 'leadfield': leadfield, 'weights': weights}[sys.argv[1]]()
+    {'tensors': tensors, 'build': build, 'lumens': lumens, 'recount': recount, 'leadfield': leadfield, 'weights': weights}[sys.argv[1]]()

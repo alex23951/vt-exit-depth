@@ -1,0 +1,50 @@
+{
+ "heart": "Y5HYEDL4",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "aortic_root": {
+  "luminal_faces": 7645,
+  "tags_on_luminal_faces": [
+   1,
+   5,
+   9,
+   27
+  ],
+  "loops": [
+   123
+  ],
+  "wall_length_beyond_disc_mm": 34.93,
+  "lumen_rule": 1,
+  "allowed_tags_on_luminal_faces": [
+   1,
+   5,
+   9,
+   27
+  ],
+  "disc_upper_face_above_disc_mid_mm": 4.14,
+  "rule1_cut_plane_normal_angle_to_valve_axis_deg": 20.8,
+  "rule1_cut_end_irregularity_mm (end-facing faces along n_cut)": 1.98,
+  "cap_plane_back_from_lowest_end_face_mm": 1.0
+ },
+ "pulmonary_artery": {
+  "luminal_faces": 3892,
+  "tags_on_luminal_faces": [
+   2,
+   6,
+   10
+  ],
+  "loops": [
+   114
+  ],
+  "wall_length_beyond_disc_mm": 16.01,
+  "lumen_rule": 1,
+  "allowed_tags_on_luminal_faces": [
+   2,
+   6,
+   10
+  ],
+  "disc_upper_face_above_disc_mid_mm": 3.69,
+  "rule1_cut_plane_normal_angle_to_valve_axis_deg": 10.5,
+  "rule1_cut_end_irregularity_mm (end-facing faces along n_cut)": 4.26,
+  "cap_plane_back_from_lowest_end_face_mm": 2.0
+ }
+}

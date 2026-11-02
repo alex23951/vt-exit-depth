@@ -1,0 +1,143 @@
+diff --git a/code/ecg_depth_criteria/README.md b/code/ecg_depth_criteria/README.md
+index 5381b61..e8e4f23 100644
+--- a/code/ecg_depth_criteria/README.md
++++ b/code/ecg_depth_criteria/README.md
+@@ -3,7 +3,14 @@
+ Python code that measures the published 12-lead ECG criteria for an epicardial
+ origin of a PVC or VT, each one the way its paper defines it. The same code
+ scores simulated (openCARP) and real ECGs, so the two are measured identically.
+-Version 0.4.0, 16 Oct 2026. It needs only numpy; the tests need pytest.
++Version 0.4.1, 27 Oct 2026. It needs only numpy; the tests need pytest.
++
++Changes in 0.4.1 (27 Oct 2026, from a code audit): shortest RS ends at the deepest point
++of the whole first S wave. 0.4.0 split an S wave wherever a notch came back inside
+++-0.05 mV and ended the interval at the nadir of its first piece, while the S amplitude
++already took those pieces as one wave. Now the negative pieces after the first R wave, up
++to the next positive wave, are one S wave, so shortest RS can only stay the same or grow.
++Nothing else changes. 0.4.0 is at commit 53bab54.
+ 
+ Changes in 0.4.0 (decision H of the 13-14 Oct 2026 audit, chosen 15 Oct 2026): q waves
+ and initial r waves are read from each lead's first recognised deflection, inside an
+@@ -43,7 +50,7 @@ Alex chose the change, which is recorded in the Analysis plan.
+ 
+ ```
+ python3 -m pip install numpy pytest
+-python3 -m pytest          # run inside this folder; 76 tests
++python3 -m pytest          # run inside this folder; 78 tests
+ ```
+ 
+ ## Use
+@@ -140,7 +147,7 @@ every beat.
+ | QRS offset | End of the QRS in the precordial leads (Berruezo, Vallès, Piers); latest end in any lead (Daniels, Bazan 2006) | The point where the combined slope of V1 to V6 (or of I, II and V1 to V6) falls below 10% of its peak and stays down. Reported as `offset_precordial_ms` and `offset_any_lead_ms` |
+ | Pseudo-delta | Onset to the earliest fast deflection in any precordial lead | The first sample where any precordial slope reaches 30% of the steepest precordial slope in the QRS |
+ | IDT | Onset to the peak of the R wave in V2 | Peak of the first positive wave in V2, since a later positive wave after an S wave is R′. Positive pieces split by a notch that never turns negative (noise on a slow upstroke) count as one wave. Version 0.1.0 used the largest positive wave; that is now the sensitivity analysis, `Settings(r_peak="largest")` (`"last"` also exists) |
+-| Shortest RS | Onset to the nadir of the first S wave in any precordial lead | In each precordial lead, the nadir of the first negative wave after the first positive wave; the earliest across leads is kept |
++| Shortest RS | Onset to the nadir of the first S wave in any precordial lead | In each precordial lead, the deepest point of the first S wave: the negative pieces after the first positive wave, up to the next positive wave, are one wave, as for the S amplitude (0.4.1; 0.4.0 took the first piece's nadir); the earliest across leads is kept |
+ | MDI | Onset to the largest deflection in each precordial lead, shortest lead, divided by QRS duration | `mdi_valles` divides by the precordial QRS (Vallès, Piers). `mdi_daniels` divides by the QRS to the latest offset in any lead |
+ | q wave | Initial negative deflection, sometimes after a short isoelectric segment (Vallès, Piers) | 0.4.0: the lead's first recognised deflection (beyond max(0.02 mV, 5 x baseline SD), at most 0.05 mV, for at least 6 ms) is negative, starts within 40 ms of the detected QRS onset and reaches -0.05 mV before the lead turns positive (see Changes in 0.4.0). 0.3.0: the first wave larger than 0.05 mV after the onset is negative, at any time |
+ | Inferior q | All of II, III and aVF (Piers Q-INF), or any of them (Bazan) | `inferior_q_all`, `inferior_q_any`. `inferior_r_any` is Piers's absence of inferior q |
+diff --git a/code/ecg_depth_criteria/ecg_depth_criteria/__init__.py b/code/ecg_depth_criteria/ecg_depth_criteria/__init__.py
+index 509143e..b705e56 100644
+--- a/code/ecg_depth_criteria/ecg_depth_criteria/__init__.py
++++ b/code/ecg_depth_criteria/ecg_depth_criteria/__init__.py
+@@ -5,7 +5,7 @@ from .fiducials import Settings
+ from .leads import LEADS, from_leads
+ from .measure import measure_beat
+ 
+-__version__ = "0.4.0"
++__version__ = "0.4.1"
+ __all__ = [
+     "CUTOFFS", "CUTOFFS_BELOW", "JOSEPHSON_LV", "LEADS", "REGIONS", "SUMMIT", "Settings",
+     "bazan", "evaluate", "from_leads", "measure_beat", "summit", "valles_4step",
+diff --git a/code/ecg_depth_criteria/ecg_depth_criteria/measure.py b/code/ecg_depth_criteria/ecg_depth_criteria/measure.py
+index 46e7e7b..ae04192 100644
+--- a/code/ecg_depth_criteria/ecg_depth_criteria/measure.py
++++ b/code/ecg_depth_criteria/ecg_depth_criteria/measure.py
+@@ -167,16 +167,29 @@ def measure_beat(
+             r = max(r_peaks, key=lambda p: x[v2, p])
+         idt = ms(r - on)
+ 
+-    # Shortest RS: onset to the nadir of the first S wave in any precordial lead.
++    # Shortest RS: onset to the nadir of the first S wave in any precordial lead. Negative
++    # pieces split by a notch that stays inside the wave threshold are one S wave, as for the
++    # S amplitude below, and its nadir is the deepest of them (0.4.1); the S wave ends at the
++    # next positive wave.
+     srs, srs_lead = NAN, None
+     for k in PRECORDIAL:
+         w = [v for v in lead_waves[k] if v.start <= off_pre]
+         first_r = next((n for n, v in enumerate(w) if v.sign > 0), None)
+         if first_r is None:
+             continue
+-        s_wave = next((v for v in w[first_r + 1 :] if v.sign < 0), None)
+-        if s_wave is not None and (math.isnan(srs) or ms(s_wave.peak - on) < srs):
+-            srs, srs_lead = ms(s_wave.peak - on), k
++        rest = w[first_r + 1 :]
++        n0 = next((n for n, v in enumerate(rest) if v.sign < 0), None)
++        if n0 is None:
++            continue
++        s_wave = []
++        for v in rest[n0:]:
++            if v.sign > 0:
++                break
++            s_wave.append(v)
++        row = LEADS.index(k)
++        nadir = min((v.peak for v in s_wave), key=lambda i: x[row, i])
++        if math.isnan(srs) or ms(nadir - on) < srs:
++            srs, srs_lead = ms(nadir - on), k
+ 
+     # Maximum deflection index: onset to the largest deflection in each
+     # precordial lead, divided by QRS duration; the shortest lead is reported.
+diff --git a/code/ecg_depth_criteria/pyproject.toml b/code/ecg_depth_criteria/pyproject.toml
+index 9a7f0da..b0cd263 100644
+--- a/code/ecg_depth_criteria/pyproject.toml
++++ b/code/ecg_depth_criteria/pyproject.toml
+@@ -1,6 +1,6 @@
+ [project]
+ name = "ecg-depth-criteria"
+-version = "0.4.0"
++version = "0.4.1"
+ description = "Published 12-lead ECG criteria for an epicardial origin of PVCs and VT, measured as each paper defines them"
+ requires-python = ">=3.9"
+ dependencies = ["numpy"]
+diff --git a/code/ecg_depth_criteria/tests/test_notched_s.py b/code/ecg_depth_criteria/tests/test_notched_s.py
+new file mode 100644
+index 0000000..8c7f29e
+--- /dev/null
++++ b/code/ecg_depth_criteria/tests/test_notched_s.py
+@@ -0,0 +1,23 @@
++"""Shortest RS on a notched S wave (0.4.1)."""
++import synthetic as S
++
++from ecg_depth_criteria import measure_beat
++
++
++def test_notched_s_uses_deepest_point():
++    # V4's S wave comes back to -0.03 mV, inside the 0.05 mV threshold, between -0.4 and
++    # -0.9 mV: one S wave, whose nadir at 125 ms makes V3 (105 ms) the shortest RS.
++    o = S.ONSET
++    v4 = [(o, 0), (o + 60, 0.2), (o + 85, 0.9), (o + 100, -0.4), (o + 112, -0.03), (o + 125, -0.9), (o + 150, 0)]
++    m = measure_beat(S.beat(V4=v4), S.FS, stim_ms=o)
++    assert m["srs_lead"] == "V3" and abs(m["srs_ms"] - 105) <= 0.5
++    assert abs(m["s_amplitude_mv"]["V4"] - 0.9) <= 0.01
++
++
++def test_s_wave_ends_at_the_next_positive_wave():
++    # A positive wave (R') between two negative ones ends the first S wave: V4's shortest RS
++    # stays at the first nadir, 100 ms, even though the later S' is deeper.
++    o = S.ONSET
++    v4 = [(o, 0), (o + 60, 0.2), (o + 85, 0.9), (o + 100, -0.4), (o + 112, 0.2), (o + 125, -0.9), (o + 150, 0)]
++    m = measure_beat(S.beat(V4=v4), S.FS, stim_ms=o)
++    assert m["srs_lead"] == "V4" and abs(m["srs_ms"] - 100) <= 0.5
+diff --git a/code/ecg_depth_criteria/tests/test_summit_prisco.py b/code/ecg_depth_criteria/tests/test_summit_prisco.py
+index 8c87d8b..f2beda5 100644
+--- a/code/ecg_depth_criteria/tests/test_summit_prisco.py
++++ b/code/ecg_depth_criteria/tests/test_summit_prisco.py
+@@ -23,7 +23,7 @@ def measure(**override):
+ 
+ 
+ def test_version():
+-    assert __version__ == "0.4.0"
++    assert __version__ == "0.4.1"
+ 
+ 
+ def test_q_wave_ratio_reproduces_jauregui_figure_5():

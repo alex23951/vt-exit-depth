@@ -1,0 +1,81 @@
+{
+ "heart": "Y5HYEDL4",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "rule": "C69 (lock thread, 27 Oct 2026): distance from the ring axis |v - (v . n) n|",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/Y5HYEDL4/v52/torso52/heart_torso52.elem",
+ "elem_sha256": "6fa3ac7cdb816a8e732d20803f9d457f626e6db7a75d09b82c468e929950eef0",
+ "heart_nodes_max_deviation_mm": 5.000000058430487e-07,
+ "v51_formula_counts_reproduce_the_build_report": true,
+ "valve_planes": {
+  "LV": [
+   {
+    "loop_nodes": 226,
+    "discs_touching": [
+     "mitral"
+    ],
+    "radius_mm": 26.21,
+    "ring_planarity_rms_mm": 0.66,
+    "blood_centroids_beyond_plane_within_ring (C69)": 20442,
+    "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 18373
+   },
+   {
+    "loop_nodes": 125,
+    "discs_touching": [
+     "aortic"
+    ],
+    "radius_mm": 16.76,
+    "ring_planarity_rms_mm": 0.5,
+    "blood_centroids_beyond_plane_within_ring (C69)": 32,
+    "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 32
+   }
+  ],
+  "RV": [
+   {
+    "loop_nodes": 250,
+    "discs_touching": [
+     "tricuspid"
+    ],
+    "radius_mm": 32.08,
+    "ring_planarity_rms_mm": 1.06,
+    "blood_centroids_beyond_plane_within_ring (C69)": 1290,
+    "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 1290
+   },
+   {
+    "loop_nodes": 166,
+    "discs_touching": [
+     "pulmonary"
+    ],
+    "radius_mm": 19.41,
+    "ring_planarity_rms_mm": 0.63,
+    "blood_centroids_beyond_plane_within_ring (C69)": 67,
+    "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 67
+   }
+  ],
+  "RA": [
+   {
+    "loop_nodes": 217,
+    "discs_touching": [
+     "tricuspid"
+    ],
+    "radius_mm": 26.43,
+    "ring_planarity_rms_mm": 0.76,
+    "blood_centroids_beyond_plane_within_ring (C69)": 4670,
+    "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 4670
+   }
+  ],
+  "LA": [
+   {
+    "loop_nodes": 180,
+    "discs_touching": [
+     "mitral"
+    ],
+    "radius_mm": 22.81,
+    "ring_planarity_rms_mm": 0.41,
+    "blood_centroids_beyond_plane_within_ring (C69)": 4135,
+    "blood_centroids_beyond_plane_within_ring (v5.1 formula, C69)": 4135
+   }
+  ]
+ },
+ "wall_s": 28,
+ "python_peak_rss_MB": 1748
+}
