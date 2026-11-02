@@ -1,0 +1,83 @@
+{
+ "heart": "Y5HYEDL4",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/Y5HYEDL4/v52/biv52",
+ "lf_dir": "/home/alex/vt-exit-depth/runs/v52_2026-10-20/05_conductor/Y5HYEDL4/leadfield52_c73_jacobi/POSTPROC_DIR",
+ "C9_sigma_m_vs_openCARP": {
+  "I": {
+   "max_abs_err_mV": 5.431083702212014e-08,
+   "ref_peak_mV": 0.0840475,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "II": {
+   "max_abs_err_mV": 5.3226043572607296e-08,
+   "ref_peak_mV": 0.322983,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "III": {
+   "max_abs_err_mV": 3.5301805062504243e-07,
+   "ref_peak_mV": 0.407033,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V1": {
+   "max_abs_err_mV": 6.1336520612576e-08,
+   "ref_peak_mV": 0.095704,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V2": {
+   "max_abs_err_mV": 3.9027229870036706e-07,
+   "ref_peak_mV": 0.263845,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V3": {
+   "max_abs_err_mV": 1.1214405698511953e-07,
+   "ref_peak_mV": 0.221538,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V4": {
+   "max_abs_err_mV": 1.2682579417222506e-08,
+   "ref_peak_mV": 0.0633467,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V5": {
+   "max_abs_err_mV": 1.511308427015745e-08,
+   "ref_peak_mV": 0.0798076,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V6": {
+   "max_abs_err_mV": 4.150572804617614e-07,
+   "ref_peak_mV": 0.145719,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  }
+ },
+ "C9_max_abs_err_mV": 4.150572804617614e-07,
+ "C9_pass_0.0002mV": true,
+ "sigma_i_over_sigma_m_weight_ratio_median": 1.3199294605188667,
+ "written": "/home/alex/vt-exit-depth/data/biv/Y5HYEDL4/v52/ecgW_v52_c73.npz"
+}

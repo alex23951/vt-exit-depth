@@ -1,0 +1,39 @@
+{
+ "heart": "6G8DD8S5",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "rule": "D40 (1), lock thread, 2 Nov 2026: 12 mm floor at the primary pose",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/6G8DD8S5/v52/torso52_c73/heart_torso52.elem",
+ "elem_sha256": "2c971e84e51d780c24487a166ad59a6ed3899743d92d11698259343f28f5cb33",
+ "heart_mesh_nodes (every non-torso tag)": 1796517,
+ "clearance": {
+  "T13_coarse_skin": {
+   "min_mm": 36.57,
+   "node": 385423,
+   "node_torso_mm": [
+    11.5,
+    -89.6,
+    28.8
+   ],
+   "nodes_under_floor": 0
+  },
+  "resampled_skin_of_the_step5_mesh": {
+   "min_mm": 36.85,
+   "node": 385423,
+   "node_torso_mm": [
+    11.5,
+    -89.6,
+    28.8
+   ],
+   "nodes_under_floor": 0
+  }
+ },
+ "winding_200_closest (min, max)": [
+  1.0,
+  1.0
+ ],
+ "all_inside": true,
+ "floor_mm": 12.0,
+ "pass": true,
+ "wall_s": 130,
+ "python_peak_rss_MB": 1571
+}

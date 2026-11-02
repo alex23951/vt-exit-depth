@@ -1,0 +1,39 @@
+{
+ "heart": "7D98EVAR",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "rule": "D40 (1), lock thread, 2 Nov 2026: 12 mm floor at the primary pose",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/7D98EVAR/v52/torso52_c73/heart_torso52.elem",
+ "elem_sha256": "c80c3568eb8f7c1d2f66bd5622fac30624616fc486ac3db3d6f95835c66303ef",
+ "heart_mesh_nodes (every non-torso tag)": 1543213,
+ "clearance": {
+  "T13_coarse_skin": {
+   "min_mm": 39.2,
+   "node": 45418,
+   "node_torso_mm": [
+    26.1,
+    -95.8,
+    10.8
+   ],
+   "nodes_under_floor": 0
+  },
+  "resampled_skin_of_the_step5_mesh": {
+   "min_mm": 39.29,
+   "node": 45418,
+   "node_torso_mm": [
+    26.1,
+    -95.8,
+    10.8
+   ],
+   "nodes_under_floor": 0
+  }
+ },
+ "winding_200_closest (min, max)": [
+  1.0,
+  1.0
+ ],
+ "all_inside": true,
+ "floor_mm": 12.0,
+ "pass": true,
+ "wall_s": 110,
+ "python_peak_rss_MB": 1383
+}

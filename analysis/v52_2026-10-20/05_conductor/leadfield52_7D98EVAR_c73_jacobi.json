@@ -1,0 +1,198 @@
+{
+ "run": "/home/alex/vt-exit-depth/runs/v52_2026-10-20/05_conductor/7D98EVAR/leadfield52_c73_jacobi",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/7D98EVAR/v52/torso52_c73/heart_torso52",
+ "sigma_S_m": {
+  "fibre": {
+   "gi": 0.174,
+   "ge": 0.625
+  },
+  "sheet": {
+   "gi": 0.006084004784397954,
+   "ge": 0.236
+  },
+  "normal": {
+   "gi": 0.02672861397858667,
+   "ge": 0.236
+  }
+ },
+ "atrial_S_m": 0.24208400478439795,
+ "g_blood": 0.7,
+ "g_torso_and_walls": 0.2,
+ "np": 1,
+ "regions": {
+  "myocardium": [
+   1,
+   2,
+   25,
+   28,
+   29
+  ],
+  "at_0.2": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   27,
+   100
+  ],
+  "blood": [
+   101,
+   102,
+   103,
+   104,
+   105,
+   106
+  ],
+  "atrial": [
+   3,
+   4,
+   26
+  ]
+ },
+ "test_vm": {
+  "source": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/04_build/7D98EVAR/leadfield_v51/vm_first10ms.igb",
+  "v51_nodes": 337505,
+  "biv52_nodes": 337700,
+  "frames": 11,
+  "appended_nodes_from_nearest": 195
+ },
+ "solver": {
+  "options_file": "analysis/v52_2026-10-20/05_conductor/ellip_cg_jacobi.opts",
+  "options": [
+   "-ksp_type cg",
+   "-pc_type jacobi",
+   "-ksp_converged_reason",
+   "-ksp_monitor_true_residual",
+   "-options_left",
+   ""
+  ],
+  "cg_tol_ellip": "1e-8 (openCARP default, as v5.1)",
+  "cg_norm_ellip": "0 (openCARP default, as v5.1)",
+  "cg_maxit_ellip": "10000"
+ },
+ "parts": {
+  "I": {
+   "wall_s": 288,
+   "peak_used_mb": 4959,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4032,
+   "iterations_monitored": 1040,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.385219781761e-01 true resid norm 1.414213562373e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1040 KSP preconditioned resid norm 9.862742879723e-09 true resid norm 1.070141801411e-07 ||r(i)||/||b|| 7.567045246086e-08"
+  },
+  "II": {
+   "wall_s": 294,
+   "peak_used_mb": 4840,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4031,
+   "iterations_monitored": 1087,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.593909834290e-01 true resid norm 1.414213562373e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1087 KSP preconditioned resid norm 9.882632213586e-09 true resid norm 1.060701318310e-07 ||r(i)||/||b|| 7.500290949907e-08"
+  },
+  "III": {
+   "wall_s": 294,
+   "peak_used_mb": 4832,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4031,
+   "iterations_monitored": 1085,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.218012659536e-01 true resid norm 1.414213562373e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1085 KSP preconditioned resid norm 9.889959413227e-09 true resid norm 1.132700880837e-07 ||r(i)||/||b|| 8.009404738956e-08"
+  },
+  "V1": {
+   "wall_s": 288,
+   "peak_used_mb": 4817,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4081,
+   "iterations_monitored": 1049,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.299233421091e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1049 KSP preconditioned resid norm 9.740324170705e-09 true resid norm 8.082979474688e-08 ||r(i)||/||b|| 7.000065511194e-08"
+  },
+  "V2": {
+   "wall_s": 292,
+   "peak_used_mb": 4752,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4081,
+   "iterations_monitored": 1071,
+   "first_monitor_line": "0 KSP preconditioned resid norm 9.075377908547e-02 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1071 KSP preconditioned resid norm 9.790015543928e-09 true resid norm 7.727374022068e-08 ||r(i)||/||b|| 6.692102157795e-08"
+  },
+  "V3": {
+   "wall_s": 294,
+   "peak_used_mb": 4754,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4081,
+   "iterations_monitored": 1073,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.425080633708e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1073 KSP preconditioned resid norm 9.978929720699e-09 true resid norm 7.897285026965e-08 ||r(i)||/||b|| 6.839249403321e-08"
+  },
+  "V4": {
+   "wall_s": 286,
+   "peak_used_mb": 4749,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4081,
+   "iterations_monitored": 1044,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.191827590706e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1044 KSP preconditioned resid norm 9.978343424300e-09 true resid norm 7.902767160648e-08 ||r(i)||/||b|| 6.843997070323e-08"
+  },
+  "V5": {
+   "wall_s": 282,
+   "peak_used_mb": 4737,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4081,
+   "iterations_monitored": 1004,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.246772270704e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1004 KSP preconditioned resid norm 9.878860136897e-09 true resid norm 8.731722485067e-08 ||r(i)||/||b|| 7.561893434523e-08"
+  },
+  "V6": {
+   "wall_s": 284,
+   "peak_used_mb": 4742,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4080,
+   "iterations_monitored": 1007,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.540011753074e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1007 KSP preconditioned resid norm 9.871982091369e-09 true resid norm 9.289362163174e-08 ||r(i)||/||b|| 8.044823558324e-08"
+  }
+ },
+ "lf_nodes": 337700,
+ "lf_nodes_equal_biv52": true,
+ "III_minus_(II_minus_I)_max_abs": 1.1874362826347351e-08,
+ "lf_files": [
+  "LF_I.igb",
+  "LF_II.igb",
+  "LF_III.igb",
+  "LF_V1.igb",
+  "LF_V2.igb",
+  "LF_V3.igb",
+  "LF_V4.igb",
+  "LF_V5.igb",
+  "LF_V6.igb",
+  "LF_aVF.igb",
+  "LF_aVL.igb",
+  "LF_aVR.igb"
+ ]
+}
