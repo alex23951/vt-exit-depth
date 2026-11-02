@@ -1,0 +1,115 @@
+{
+ "Y5HYEDL4": {
+  "heart": "Y5HYEDL4",
+  "elements": 73504,
+  "volume_ml": 8.4,
+  "regions": [
+   {
+    "elements": 73504,
+    "touches_tag_3": true,
+    "touches_tag_4": true
+   }
+  ],
+  "every_region_touches_tag_3_or_4": true,
+  "elements_sharing_a_node_with_tag_3_or_4": 6188,
+  "centroid_to_nearest_tag_3_4_node_mm (median, p95, max)": [
+   5.83,
+   15.03,
+   19.73
+  ],
+  "boundary_faces_by_surface": {
+   "outer": 8103,
+   "LA": 5144,
+   "RA": 4364
+  },
+  "interior_faces_shared_with_tags": {
+   "4": 1142,
+   "24": 518,
+   "3": 963,
+   "16": 329,
+   "19": 179,
+   "23": 296,
+   "14": 385,
+   "13": 281
+  },
+  "reading": "one or two connected regions, each touching tag 3 and/or 4, with faces on the outer (epicardial) surface and on the LA and RA cavity surfaces: a full-thickness part of the atrial walls, bordered by tags 3 and 4 and the vein rings. Element by element, most tag-26 elements share no node with tags 3 or 4 (the region is wider than a bundle: up to about 20 mm from the nearest tag-3/4 node)."
+ },
+ "6G8DD8S5": {
+  "heart": "6G8DD8S5",
+  "elements": 110490,
+  "volume_ml": 12.5,
+  "regions": [
+   {
+    "elements": 82171,
+    "touches_tag_3": true,
+    "touches_tag_4": true
+   },
+   {
+    "elements": 28319,
+    "touches_tag_3": false,
+    "touches_tag_4": true
+   }
+  ],
+  "every_region_touches_tag_3_or_4": true,
+  "elements_sharing_a_node_with_tag_3_or_4": 13094,
+  "centroid_to_nearest_tag_3_4_node_mm (median, p95, max)": [
+   4.32,
+   17.16,
+   22.19
+  ],
+  "boundary_faces_by_surface": {
+   "outer": 12189,
+   "LA": 9937,
+   "RA": 3694
+  },
+  "interior_faces_shared_with_tags": {
+   "24": 271,
+   "23": 131,
+   "4": 3165,
+   "3": 1166,
+   "16": 20,
+   "13": 159,
+   "19": 65,
+   "14": 360,
+   "5": 37
+  },
+  "reading": "one or two connected regions, each touching tag 3 and/or 4, with faces on the outer (epicardial) surface and on the LA and RA cavity surfaces: a full-thickness part of the atrial walls, bordered by tags 3 and 4 and the vein rings. Element by element, most tag-26 elements share no node with tags 3 or 4 (the region is wider than a bundle: up to about 20 mm from the nearest tag-3/4 node)."
+ },
+ "7D98EVAR": {
+  "heart": "7D98EVAR",
+  "elements": 75363,
+  "volume_ml": 8.58,
+  "regions": [
+   {
+    "elements": 75363,
+    "touches_tag_3": true,
+    "touches_tag_4": true
+   }
+  ],
+  "every_region_touches_tag_3_or_4": true,
+  "elements_sharing_a_node_with_tag_3_or_4": 6463,
+  "centroid_to_nearest_tag_3_4_node_mm (median, p95, max)": [
+   5.55,
+   14.57,
+   18.37
+  ],
+  "boundary_faces_by_surface": {
+   "RA": 3857,
+   "outer": 7614,
+   "LA": 5188
+  },
+  "interior_faces_shared_with_tags": {
+   "4": 1225,
+   "3": 954,
+   "19": 221,
+   "24": 187,
+   "16": 233,
+   "20": 93,
+   "23": 185,
+   "17": 352,
+   "13": 205,
+   "14": 230
+  },
+  "reading": "one or two connected regions, each touching tag 3 and/or 4, with faces on the outer (epicardial) surface and on the LA and RA cavity surfaces: a full-thickness part of the atrial walls, bordered by tags 3 and 4 and the vein rings. Element by element, most tag-26 elements share no node with tags 3 or 4 (the region is wider than a bundle: up to about 20 mm from the nearest tag-3/4 node)."
+ }
+}

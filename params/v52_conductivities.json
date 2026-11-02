@@ -1,0 +1,110 @@
+{
+ "version": "v52-conductivities-1",
+ "written": "2026-11-02 02:37:04 CET",
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "rule": "R2.1 sigma_e 0.625 / 0.236 / 0.236; R2.2 sigma_i fibre 0.174, cross-fibre and transmural solved so that sigma_m,d = sigma_m,f (v_d / 0.80)^2, sigma_m = sigma_i sigma_e / (sigma_i + sigma_e)",
+ "blood_S_m": 0.7,
+ "torso_S_m": 0.2,
+ "ecg_source": "sigma_i (R2.3)",
+ "hearts": {
+  "Y5HYEDL4": {
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.23,
+    "normal": 0.48
+   },
+   "sigma_S_m": {
+    "fibre": {
+     "gi": 0.174,
+     "ge": 0.625
+    },
+    "sheet": {
+     "gi": 0.011813287413603034,
+     "ge": 0.236
+    },
+    "normal": {
+     "gi": 0.0618375788078761,
+     "ge": 0.236
+    }
+   },
+   "sigma_m_S_m": {
+    "fibre": 0.13610763454317898,
+    "sheet": 0.011250146667709633,
+    "normal": 0.04899874843554443
+   },
+   "R2.3_max_abs_error": 1.3877787807814457e-17,
+   "atrial_muscle_S_m (R3.3; tags 3, 4, 26 by C66)": 0.24781328741360303,
+   "bulk_sigma_i_plus_sigma_e_S_m (R2.6 report)": {
+    "fibre": 0.7989999999999999,
+    "sheet": 0.24781328741360303,
+    "normal": 0.2978375788078761
+   }
+  },
+  "6G8DD8S5": {
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.167,
+    "normal": 0.336
+   },
+   "sigma_S_m": {
+    "fibre": {
+     "gi": 0.174,
+     "ge": 0.625
+    },
+    "sheet": {
+     "gi": 0.006084004784397954,
+     "ge": 0.236
+    },
+    "normal": {
+     "gi": 0.02672861397858667,
+     "ge": 0.236
+    }
+   },
+   "sigma_m_S_m": {
+    "fibre": 0.13610763454317898,
+    "sheet": 0.005931102843397997,
+    "normal": 0.024009386733416765
+   },
+   "R2.3_max_abs_error": 2.7755575615628914e-17,
+   "atrial_muscle_S_m (R3.3; tags 3, 4, 26 by C66)": 0.24208400478439795,
+   "bulk_sigma_i_plus_sigma_e_S_m (R2.6 report)": {
+    "fibre": 0.7989999999999999,
+    "sheet": 0.24208400478439795,
+    "normal": 0.26272861397858666
+   }
+  },
+  "7D98EVAR": {
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.167,
+    "normal": 0.336
+   },
+   "sigma_S_m": {
+    "fibre": {
+     "gi": 0.174,
+     "ge": 0.625
+    },
+    "sheet": {
+     "gi": 0.006084004784397954,
+     "ge": 0.236
+    },
+    "normal": {
+     "gi": 0.02672861397858667,
+     "ge": 0.236
+    }
+   },
+   "sigma_m_S_m": {
+    "fibre": 0.13610763454317898,
+    "sheet": 0.005931102843397997,
+    "normal": 0.024009386733416765
+   },
+   "R2.3_max_abs_error": 2.7755575615628914e-17,
+   "atrial_muscle_S_m (R3.3; tags 3, 4, 26 by C66)": 0.24208400478439795,
+   "bulk_sigma_i_plus_sigma_e_S_m (R2.6 report)": {
+    "fibre": 0.7989999999999999,
+    "sheet": 0.24208400478439795,
+    "normal": 0.26272861397858666
+   }
+  }
+ }
+}
