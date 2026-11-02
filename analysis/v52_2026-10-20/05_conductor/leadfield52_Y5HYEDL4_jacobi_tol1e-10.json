@@ -1,0 +1,101 @@
+{
+ "run": "/home/alex/vt-exit-depth/runs/v52_2026-10-20/05_conductor/Y5HYEDL4/leadfield52_jacobi_tol1e-10",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/Y5HYEDL4/v52/torso52/heart_torso52",
+ "sigma_S_m": {
+  "fibre": {
+   "gi": 0.174,
+   "ge": 0.625
+  },
+  "sheet": {
+   "gi": 0.011813287413603034,
+   "ge": 0.236
+  },
+  "normal": {
+   "gi": 0.0618375788078761,
+   "ge": 0.236
+  }
+ },
+ "atrial_S_m": 0.24781328741360303,
+ "g_blood": 0.7,
+ "g_torso_and_walls": 0.2,
+ "np": 1,
+ "regions": {
+  "myocardium": [
+   1,
+   2,
+   25,
+   28,
+   29
+  ],
+  "at_0.2": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   27,
+   100
+  ],
+  "blood": [
+   101,
+   102,
+   103,
+   104,
+   105,
+   106
+  ],
+  "atrial": [
+   3,
+   4,
+   26
+  ]
+ },
+ "test_vm": {
+  "source": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/04_build/Y5HYEDL4/leadfield_v51/vm_first10ms.igb",
+  "v51_nodes": 375190,
+  "biv52_nodes": 375190,
+  "frames": 11,
+  "appended_nodes_from_nearest": 0
+ },
+ "solver": {
+  "options_file": "analysis/v52_2026-10-20/05_conductor/ellip_cg_jacobi.opts",
+  "options": [
+   "-ksp_type cg",
+   "-pc_type jacobi",
+   "-ksp_converged_reason",
+   "-ksp_monitor_true_residual",
+   "-options_left",
+   ""
+  ],
+  "cg_tol_ellip": "1e-10",
+  "cg_norm_ellip": "0 (openCARP default, as v5.1)",
+  "cg_maxit_ellip": "10000"
+ },
+ "parts": {
+  "I": {
+   "wall_s": 392,
+   "peak_used_mb": 5530,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4515,
+   "iterations_monitored": 1354,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.494583462375e-01 true resid norm 1.414213562373e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1354 KSP preconditioned resid norm 9.822405389209e-11 true resid norm 9.409872460434e-10 ||r(i)||/||b|| 6.653784626873e-10"
+  }
+ }
+}

@@ -83,12 +83,18 @@ def hd(h, *p):
     return os.path.join(REPO, 'data', 'biv', h, 'v52', *p)
 
 
+# BLOOD_SCALE (environment, default 1): meshtool's interior edge-length scaling inside the four chamber cavities (the cavity
+# surfaces are kept as built). Any value other than 1 writes to its own folders and reports, suffix _bs<scale>.
+BLOOD_SCALE = float(os.environ.get('BLOOD_SCALE', '1'))
+SFX = '' if BLOOD_SCALE == 1.0 else f'_bs{BLOOD_SCALE:g}'
+
+
 def tdir(h, *p):
-    return hd(h, 'torso52', *p)
+    return hd(h, 'torso52' + SFX, *p)
 
 
 def lf_dir(h):
-    return os.path.join(REPO, 'runs', 'v52_2026-10-20', '05_conductor', h, 'leadfield52')
+    return os.path.join(REPO, 'runs', 'v52_2026-10-20', '05_conductor', h, 'leadfield52' + SFX)
 
 
 def peak_mb():
@@ -269,7 +275,7 @@ def build():
     h = os.environ['HEART']
     t0 = time.time()
     os.makedirs(tdir(h), exist_ok=True)
-    rep = {'heart': h, 'lock_sha256': G.LOCK_SHA, 'stage': 'build'}
+    rep = {'heart': h, 'lock_sha256': G.LOCK_SHA, 'stage': 'build', 'blood_scale (meshtool -scale in the chamber cavities)': BLOOD_SCALE}
     # heart: cohort mesh with v5.2's tags, biv52 first
     P, E, tag = G.load_full(h)
     z = np.load(os.path.join(G.RUN, h, 'outflow52.npz'))
@@ -339,7 +345,7 @@ def build():
     rep['meshtool']['torso'] = meshtool('mt_torso', h, 'generate', 'mesh', f'-surf={tdir(h, "skin")},{tdir(h, "heart_outer")}', '-holes=0,1',
                                         f'-ins_tag={TAG_TORSO},0', '-prsv_bdry=1', '-mode=1', f'-outmsh={tdir(h, "torso_vol")}', *io)
     for nm in ('LV', 'RV', 'LA', 'RA'):
-        rep['meshtool'][f'cav_{nm}'] = meshtool(f'mt_cav_{nm}', h, 'generate', 'mesh', f'-surf={tdir(h, f"cav_{nm}")}', f'-ins_tag={BLOOD[nm]}',
+        rep['meshtool'][f'cav_{nm}'] = meshtool(f'mt_cav_{nm}', h, 'generate', 'mesh', f'-surf={tdir(h, f"cav_{nm}")}', f'-ins_tag={BLOOD[nm]}', f'-scale={BLOOD_SCALE:g}',
                                                 '-prsv_bdry=1', '-mode=1', f'-outmsh={tdir(h, f"blood_{nm}")}', *io)
     # merge by coordinates
     Pall, Eall, tall = [Ph], [Eh], [th]
@@ -563,7 +569,7 @@ def build():
     rep['final'] = {'nodes': int(len(Pf)), 'elements': int(len(Ef)), 'tags': tags_all, 'files': base + '.{pts,elem,lon}',
                     'elem_sha256': G.sha256(base + '.elem')}
     rep['wall_s'] = round(time.time() - t0); rep['python_peak_rss_MB'] = peak_mb()
-    G.dump(rep, os.path.join(HERE, f'conductor52_{h}.json'))
+    G.dump(rep, os.path.join(HERE, f'conductor52_{h}{SFX}.json'))
     log(h, 'build done', rep['wall_s'], 's', 'peak', rep['python_peak_rss_MB'], 'MB')
 
 
@@ -586,17 +592,45 @@ def test_vm(h, rid):
     return out, {'source': src, 'v51_nodes': x, 'biv52_nodes': Nm, 'frames': nt, 'appended_nodes_from_nearest': Nm - x}
 
 
+def solver_log(f):
+    """openCARP's own peak memory (/usr/bin/time -v), PETSc's convergence line, iterations and last residuals."""
+    out = {}
+    try:
+        L = open(f, errors='replace').read().splitlines()
+    except OSError:
+        return out
+    for l in L:
+        if 'Maximum resident set size' in l:
+            out['opencarp_max_rss_mb'] = round(int(l.split(':')[-1]) / 1024)
+        if 'Linear solve' in l and ('converged' in l or 'did not converge' in l):
+            out['petsc'] = l.strip()
+    mon = [l for l in L if 'true resid norm' in l]
+    if mon:
+        out['iterations_monitored'] = len(mon) - 1
+        out['first_monitor_line'] = mon[0].strip()
+        out['last_monitor_line'] = mon[-1].strip()
+    return out
+
+
 def leadfield():
     h = os.environ['HEART']
     CD = C51.biv_module('cd', '15_conductor.py', h)
     from carputils.leadfield import leadfield_setup
     sg = json.load(open(os.path.join(REPO, 'params', 'v52_conductivities.json')))['hearts'][h]
     s, atr = sg['sigma_S_m'], sg['atrial_muscle_S_m (R3.3; tags 3, 4, 26 by C66)']
-    rid = lf_dir(h)
+    # solver set-up (lock thread, 2 Nov 2026 01:59 UTC: lower-memory solvers at v5.1's tolerance, mesh as built):
+    # LF_OPTS = PETSc options file (default v5.1's light AMG), LF_TAG = name of that set-up (its own run folder),
+    # LF_MAXIT = openCARP's cg_maxit_ellip (default 500, as v5.1), LF_LEADS = comma list (a subset skips the assembly)
+    opts_file = os.environ.get('LF_OPTS', OPTS)
+    tagname = os.environ.get('LF_TAG', '')
+    maxit = os.environ.get('LF_MAXIT')
+    tol = os.environ.get('LF_TOL')                      # only for a tolerance check against the adopted set-up
+    leads = os.environ['LF_LEADS'].split(',') if os.environ.get('LF_LEADS') else RUNS
+    rid = lf_dir(h) + (f'_{tagname}' if tagname else '')
     os.makedirs(os.path.join(rid, 'POSTPROC_DIR'), exist_ok=True)
     vm, vinfo = test_vm(h, rid)
     mesh = tdir(h, 'heart_torso52')
-    tags = json.load(open(os.path.join(HERE, f'conductor52_{h}.json')))['final']['tags']
+    tags = json.load(open(os.path.join(HERE, f'conductor52_{h}{SFX}.json')))['final']['tags']
     present = sorted(int(t) for t in tags)
     t02 = [t for t in present if t == TAG_TORSO or t in AT_TORSO]
     tb = [t for t in present if t in BLOOD.values()]
@@ -621,22 +655,30 @@ def leadfield():
     stim, elec, opts = leadfield_setup(12, tdir(h, 'electrodes'), lf_vmfile=vm, ecg_timedt=10)
     env = dict(os.environ, PATH='/usr/local/lib/opencarp/lib/petsc/bin:' + os.environ.get('PATH', ''))
     res = {'run': rid, 'mesh': mesh, 'sigma_S_m': s, 'atrial_S_m': atr, 'g_blood': G_BLOOD, 'g_torso_and_walls': G_TORSO, 'np': 1,
-           'regions': {'myocardium': tm, 'at_0.2': t02, 'blood': tb, 'atrial': ta}, 'test_vm': vinfo, 'parts': {}}
-    rf = os.path.join(HERE, f'leadfield52_{h}.json')
-    for lead in RUNS:
+           'regions': {'myocardium': tm, 'at_0.2': t02, 'blood': tb, 'atrial': ta}, 'test_vm': vinfo,
+           'solver': {'options_file': os.path.relpath(opts_file, REPO), 'options': open(opts_file).read().split('\n'),
+                      'cg_tol_ellip': tol or '1e-8 (openCARP default, as v5.1)', 'cg_norm_ellip': '0 (openCARP default, as v5.1)',
+                      'cg_maxit_ellip': maxit or '500 (openCARP default, as v5.1)'}, 'parts': {}}
+    rf = os.path.join(HERE, f'leadfield52_{h}{SFX}{"_" + tagname if tagname else ""}.json')
+    for lead in leads:
         sub = os.path.join(rid, lead)
         if os.path.exists(os.path.join(sub, 'POSTPROC_DIR', f'LF_{lead}.igb')):
             res['parts'][lead] = 'exists'
             continue
         os.makedirs(sub, exist_ok=True)
-        cmd = ['openCARP', '-meshname', mesh, '-simID', sub, '-bidomain', 0, '-dt', 10, '-tend', 10] + imp + g + phys \
-            + CD.lead_subset(stim, elec, [lead]) + opts + ['-ellip_options_file', OPTS]
+        cmd = ['/usr/bin/time', '-v', 'openCARP', '-meshname', mesh, '-simID', sub, '-bidomain', 0, '-dt', 10, '-tend', 10] + imp + g + phys \
+            + CD.lead_subset(stim, elec, [lead]) + opts + ['-ellip_options_file', opts_file] + (['-cg_maxit_ellip', maxit] if maxit else []) + (['-cg_tol_ellip', tol] if tol else [])
         r = guarded(cmd, os.path.join(sub, 'openCARP.log'), env=env)
+        r.update(solver_log(os.path.join(sub, 'openCARP.log')))
         res['parts'][lead] = r
         log(h, lead, r)
         if r['watchdog_killed'] or r['returncode'] or not os.path.exists(os.path.join(sub, 'POSTPROC_DIR', f'LF_{lead}.igb')):
             G.dump(res, rf)
             raise SystemExit(f'{h}: lead {lead} failed: {r}')
+    if leads != RUNS:
+        G.dump(res, rf)
+        log(h, 'lead subset done', {k: (v if isinstance(v, str) else (v['wall_s'], v['peak_used_mb'], v.get('opencarp_max_rss_mb'))) for k, v in res['parts'].items()})
+        return
     pp = os.path.join(rid, 'POSTPROC_DIR')
     Z = {}
     for lead in RUNS:
@@ -664,8 +706,10 @@ def weights():
     pair = [(s[a]['gi'], s[a]['ge']) for a in ('fibre', 'sheet', 'normal')]
     Gc = {'myo': pair, 'fast': pair}
     mesh = hd(h, 'biv52')
-    pp = os.path.join(lf_dir(h), 'POSTPROC_DIR')
-    vm = FE.igb(os.path.join(lf_dir(h), 'vm_first10ms.igb'))
+    tagname = os.environ.get('LF_TAG', '')
+    rid = lf_dir(h) + (f'_{tagname}' if tagname else '')
+    pp = os.path.join(rid, 'POSTPROC_DIR')
+    vm = FE.igb(os.path.join(rid, 'vm_first10ms.igb'))
     out = {'heart': h, 'mesh': mesh, 'lf_dir': pp}
     Wm = FE.weights(mesh, pp, Gc, 'm', -1.0, True)
     mine = FE.project(Wm, vm)
@@ -684,10 +728,10 @@ def weights():
     Wi = FE.weights(mesh, pp, Gc, 'i', -1.0, True)
     out['sigma_i_over_sigma_m_weight_ratio_median'] = float(np.median(np.abs(Wi[np.abs(Wm) > 1e-12] / Wm[np.abs(Wm) > 1e-12])))
     if out['C9_pass_0.0002mV']:
-        wf = hd(h, 'ecgW_v52.npz')
+        wf = hd(h, f'ecgW_v52{SFX}.npz')
         np.savez(wf, W=Wi.astype(np.float32), sigma='i', c=-1.0, lf_dir=pp, mesh=mesh, conductor='v52 step 5 (fixes 2 and 3, CT pose)', ecg_source='sigma_i (R2.3)')
         out['written'] = wf
-    G.dump(out, os.path.join(HERE, f'weights52_{h}.json'))
+    G.dump(out, os.path.join(HERE, f'weights52_{h}{SFX}.json'))
     print(json.dumps({k: v for k, v in out.items() if k != 'C9_sigma_m_vs_openCARP'}, indent=1))
     if not out['C9_pass_0.0002mV']:
         sys.exit('C9 failed')

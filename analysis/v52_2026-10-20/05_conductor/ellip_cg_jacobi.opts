@@ -1,0 +1,5 @@
+-ksp_type cg
+-pc_type jacobi
+-ksp_converged_reason
+-ksp_monitor_true_residual
+-options_left

@@ -1,0 +1,83 @@
+{
+ "heart": "Y5HYEDL4",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/Y5HYEDL4/v52/biv52",
+ "lf_dir": "/home/alex/vt-exit-depth/runs/v52_2026-10-20/05_conductor/Y5HYEDL4/leadfield52_jacobi/POSTPROC_DIR",
+ "C9_sigma_m_vs_openCARP": {
+  "I": {
+   "max_abs_err_mV": 6.8523908630657715e-09,
+   "ref_peak_mV": 0.0841543,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "II": {
+   "max_abs_err_mV": 3.855346147885186e-08,
+   "ref_peak_mV": 0.32274,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "III": {
+   "max_abs_err_mV": 2.355327609615543e-07,
+   "ref_peak_mV": 0.406897,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V1": {
+   "max_abs_err_mV": 2.7290023532633434e-08,
+   "ref_peak_mV": 0.0956693,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V2": {
+   "max_abs_err_mV": 4.6544130222203606e-07,
+   "ref_peak_mV": 0.264059,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V3": {
+   "max_abs_err_mV": 3.516875048958923e-07,
+   "ref_peak_mV": 0.22219,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V4": {
+   "max_abs_err_mV": 5.3429378379932224e-08,
+   "ref_peak_mV": 0.0634769,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V5": {
+   "max_abs_err_mV": 1.8354399250464226e-08,
+   "ref_peak_mV": 0.0795545,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  },
+  "V6": {
+   "max_abs_err_mV": 2.7448310224720274e-07,
+   "ref_peak_mV": 0.145244,
+   "times_ms": [
+    0.0,
+    10.0
+   ]
+  }
+ },
+ "C9_max_abs_err_mV": 4.6544130222203606e-07,
+ "C9_pass_0.0002mV": true,
+ "sigma_i_over_sigma_m_weight_ratio_median": 1.319936540267957,
+ "written": "/home/alex/vt-exit-depth/data/biv/Y5HYEDL4/v52/ecgW_v52.npz"
+}

@@ -1,0 +1,189 @@
+{
+ "run": "/home/alex/vt-exit-depth/runs/v52_2026-10-20/05_conductor/Y5HYEDL4/leadfield52_jacobi",
+ "mesh": "/home/alex/vt-exit-depth/data/biv/Y5HYEDL4/v52/torso52/heart_torso52",
+ "sigma_S_m": {
+  "fibre": {
+   "gi": 0.174,
+   "ge": 0.625
+  },
+  "sheet": {
+   "gi": 0.011813287413603034,
+   "ge": 0.236
+  },
+  "normal": {
+   "gi": 0.0618375788078761,
+   "ge": 0.236
+  }
+ },
+ "atrial_S_m": 0.24781328741360303,
+ "g_blood": 0.7,
+ "g_torso_and_walls": 0.2,
+ "np": 1,
+ "regions": {
+  "myocardium": [
+   1,
+   2,
+   25,
+   28,
+   29
+  ],
+  "at_0.2": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   27,
+   100
+  ],
+  "blood": [
+   101,
+   102,
+   103,
+   104,
+   105,
+   106
+  ],
+  "atrial": [
+   3,
+   4,
+   26
+  ]
+ },
+ "test_vm": {
+  "source": "/home/alex/vt-exit-depth/runs/v51_2026-10-15/04_build/Y5HYEDL4/leadfield_v51/vm_first10ms.igb",
+  "v51_nodes": 375190,
+  "biv52_nodes": 375190,
+  "frames": 11,
+  "appended_nodes_from_nearest": 0
+ },
+ "solver": {
+  "options_file": "analysis/v52_2026-10-20/05_conductor/ellip_cg_jacobi.opts",
+  "options": [
+   "-ksp_type cg",
+   "-pc_type jacobi",
+   "-ksp_converged_reason",
+   "-ksp_monitor_true_residual",
+   "-options_left",
+   ""
+  ],
+  "cg_tol_ellip": "1e-8 (openCARP default, as v5.1)",
+  "cg_norm_ellip": "0 (openCARP default, as v5.1)",
+  "cg_maxit_ellip": "10000"
+ },
+ "parts": {
+  "I": "exists",
+  "II": {
+   "wall_s": 344,
+   "peak_used_mb": 5530,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4515,
+   "iterations_monitored": 1118,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.442593222047e-01 true resid norm 1.414213562373e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1118 KSP preconditioned resid norm 9.972183254717e-09 true resid norm 1.157092008668e-07 ||r(i)||/||b|| 8.181876057856e-08"
+  },
+  "III": {
+   "wall_s": 342,
+   "peak_used_mb": 5573,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4515,
+   "iterations_monitored": 1083,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.580522922000e-01 true resid norm 1.414213562373e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1083 KSP preconditioned resid norm 9.878391916203e-09 true resid norm 1.124562648805e-07 ||r(i)||/||b|| 7.951858748389e-08"
+  },
+  "V1": {
+   "wall_s": 334,
+   "peak_used_mb": 5547,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4514,
+   "iterations_monitored": 1024,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.290733799115e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1024 KSP preconditioned resid norm 9.919171323610e-09 true resid norm 8.798943275528e-08 ||r(i)||/||b|| 7.620108346291e-08"
+  },
+  "V2": {
+   "wall_s": 350,
+   "peak_used_mb": 5796,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4515,
+   "iterations_monitored": 1129,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.295721888263e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1129 KSP preconditioned resid norm 9.866056666729e-09 true resid norm 7.666365003934e-08 ||r(i)||/||b|| 6.639266798624e-08"
+  },
+  "V3": {
+   "wall_s": 350,
+   "peak_used_mb": 5514,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4515,
+   "iterations_monitored": 1129,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.172265626610e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1129 KSP preconditioned resid norm 9.778738115727e-09 true resid norm 8.147629807561e-08 ||r(i)||/||b|| 7.056054341408e-08"
+  },
+  "V4": {
+   "wall_s": 348,
+   "peak_used_mb": 5756,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4515,
+   "iterations_monitored": 1123,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.474475199611e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1123 KSP preconditioned resid norm 9.819978348111e-09 true resid norm 7.738021133268e-08 ||r(i)||/||b|| 6.701322826502e-08"
+  },
+  "V5": {
+   "wall_s": 344,
+   "peak_used_mb": 5685,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4515,
+   "iterations_monitored": 1072,
+   "first_monitor_line": "0 KSP preconditioned resid norm 9.972164187913e-02 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1072 KSP preconditioned resid norm 9.738687486056e-09 true resid norm 8.934674822098e-08 ||r(i)||/||b|| 7.737655312840e-08"
+  },
+  "V6": {
+   "wall_s": 342,
+   "peak_used_mb": 5368,
+   "watchdog_killed": false,
+   "returncode": 0,
+   "opencarp_max_rss_mb": 4515,
+   "iterations_monitored": 1082,
+   "first_monitor_line": "0 KSP preconditioned resid norm 1.436484352006e-01 true resid norm 1.154700546982e+00 ||r(i)||/||b|| 1.000000000000e+00",
+   "last_monitor_line": "1082 KSP preconditioned resid norm 9.846681157540e-09 true resid norm 9.104523702119e-08 ||r(i)||/||b|| 7.884748756647e-08"
+  }
+ },
+ "lf_nodes": 375190,
+ "lf_nodes_equal_biv52": true,
+ "III_minus_(II_minus_I)_max_abs": 1.1641532182693481e-08,
+ "lf_files": [
+  "LF_I.igb",
+  "LF_II.igb",
+  "LF_III.igb",
+  "LF_V1.igb",
+  "LF_V2.igb",
+  "LF_V3.igb",
+  "LF_V4.igb",
+  "LF_V5.igb",
+  "LF_V6.igb",
+  "LF_aVF.igb",
+  "LF_aVL.igb",
+  "LF_aVR.igb"
+ ]
+}
