@@ -1,0 +1,218 @@
+{
+ "Y5HYEDL4": {
+  "heart": "Y5HYEDL4",
+  "nodes": 1983222,
+  "elements": 12528941,
+  "tags": {
+   "1": 1939909,
+   "100": 4708318,
+   "101": 5880714
+  },
+  "torso_and_blood_edge_mm_p5_p50_p95": [
+   0.77,
+   0.94,
+   6.79
+  ],
+  "near_heart_lt5mm": [
+   0.76,
+   0.91,
+   1.31
+  ],
+  "far_gt20mm": [
+   1.03,
+   5.56,
+   8.66
+  ],
+  "heart_edge_mm_p5_p50_p95": [
+   0.97,
+   1.05,
+   1.14
+  ],
+  "electrodes_within_10mm": {
+   "LA": {
+    "elements": 45,
+    "edge_mm_median": 8.18
+   },
+   "LL": {
+    "elements": 28,
+    "edge_mm_median": 8.83
+   },
+   "RA": {
+    "elements": 38,
+    "edge_mm_median": 8.0
+   },
+   "RL": {
+    "elements": 31,
+    "edge_mm_median": 9.17
+   },
+   "V1": {
+    "elements": 45,
+    "edge_mm_median": 8.09
+   },
+   "V2": {
+    "elements": 67,
+    "edge_mm_median": 7.09
+   },
+   "V3": {
+    "elements": 57,
+    "edge_mm_median": 7.26
+   },
+   "V4": {
+    "elements": 72,
+    "edge_mm_median": 6.73
+   },
+   "V5": {
+    "elements": 49,
+    "edge_mm_median": 7.84
+   },
+   "V6": {
+    "elements": 46,
+    "edge_mm_median": 7.62
+   }
+  }
+ },
+ "6G8DD8S5": {
+  "heart": "6G8DD8S5",
+  "nodes": 1640909,
+  "elements": 10333536,
+  "tags": {
+   "1": 1997928,
+   "100": 4104861,
+   "101": 4230747
+  },
+  "torso_and_blood_edge_mm_p5_p50_p95": [
+   0.78,
+   0.96,
+   7.31
+  ],
+  "near_heart_lt5mm": [
+   0.77,
+   0.92,
+   1.33
+  ],
+  "far_gt20mm": [
+   0.99,
+   6.08,
+   8.76
+  ],
+  "heart_edge_mm_p5_p50_p95": [
+   0.97,
+   1.05,
+   1.13
+  ],
+  "electrodes_within_10mm": {
+   "LA": {
+    "elements": 39,
+    "edge_mm_median": 8.12
+   },
+   "LL": {
+    "elements": 28,
+    "edge_mm_median": 9.09
+   },
+   "RA": {
+    "elements": 38,
+    "edge_mm_median": 8.28
+   },
+   "RL": {
+    "elements": 34,
+    "edge_mm_median": 8.64
+   },
+   "V1": {
+    "elements": 43,
+    "edge_mm_median": 8.09
+   },
+   "V2": {
+    "elements": 51,
+    "edge_mm_median": 7.99
+   },
+   "V3": {
+    "elements": 57,
+    "edge_mm_median": 6.97
+   },
+   "V4": {
+    "elements": 63,
+    "edge_mm_median": 7.0
+   },
+   "V5": {
+    "elements": 53,
+    "edge_mm_median": 7.32
+   },
+   "V6": {
+    "elements": 46,
+    "edge_mm_median": 7.87
+   }
+  }
+ },
+ "7D98EVAR": {
+  "heart": "7D98EVAR",
+  "nodes": 1709957,
+  "elements": 10791117,
+  "tags": {
+   "1": 1755714,
+   "100": 4437179,
+   "101": 4598224
+  },
+  "torso_and_blood_edge_mm_p5_p50_p95": [
+   0.78,
+   0.97,
+   7.13
+  ],
+  "near_heart_lt5mm": [
+   0.77,
+   0.92,
+   1.3
+  ],
+  "far_gt20mm": [
+   0.93,
+   5.55,
+   8.6
+  ],
+  "heart_edge_mm_p5_p50_p95": [
+   0.97,
+   1.05,
+   1.14
+  ],
+  "electrodes_within_10mm": {
+   "LA": {
+    "elements": 35,
+    "edge_mm_median": 8.49
+   },
+   "LL": {
+    "elements": 33,
+    "edge_mm_median": 8.53
+   },
+   "RA": {
+    "elements": 36,
+    "edge_mm_median": 8.18
+   },
+   "RL": {
+    "elements": 30,
+    "edge_mm_median": 8.83
+   },
+   "V1": {
+    "elements": 40,
+    "edge_mm_median": 8.37
+   },
+   "V2": {
+    "elements": 55,
+    "edge_mm_median": 7.63
+   },
+   "V3": {
+    "elements": 50,
+    "edge_mm_median": 7.55
+   },
+   "V4": {
+    "elements": 63,
+    "edge_mm_median": 6.65
+   },
+   "V5": {
+    "elements": 52,
+    "edge_mm_median": 7.17
+   },
+   "V6": {
+    "elements": 53,
+    "edge_mm_median": 7.59
+   }
+  }
+ }
+}

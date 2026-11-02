@@ -1,0 +1,224 @@
+{
+ "heart": "Y5HYEDL4",
+ "pivot_ventricular_centroid_mm": [
+  44.75,
+  -69.28,
+  -28.92
+ ],
+ "boundary_nodes": {
+  "cohort": 167213,
+  "v52_sim": 104751
+ },
+ "shapes": {
+  "T_24": {
+   "skin_triangles": 6096,
+   "ct_pose": {
+    "min_mm_v52_sim": -2.17,
+    "min_mm_cohort": -2.17,
+    "nodes_outside_skin": 798,
+    "nodes_under_5mm": 4470
+   },
+   "a33_fixed_poses_min_mm": {
+    "rot_x_-10deg": -5.15,
+    "trans_x_-10mm": -1.17,
+    "rot_x_+10deg": -1.56,
+    "trans_x_+10mm": -4.25,
+    "rot_y_-10deg": -1.41,
+    "trans_y_-10mm": -11.06,
+    "rot_y_+10deg": -2.75,
+    "trans_y_+10mm": 6.56,
+    "rot_z_-10deg": -4.52,
+    "trans_z_-10mm": -6.1,
+    "rot_z_+10deg": 0.5,
+    "trans_z_+10mm": -0.06
+   },
+   "a33_fixed_poses_under_5mm": [
+    "rot_x_-10deg",
+    "trans_x_-10mm",
+    "rot_x_+10deg",
+    "trans_x_+10mm",
+    "rot_y_-10deg",
+    "trans_y_-10mm",
+    "rot_y_+10deg",
+    "rot_z_-10deg",
+    "trans_z_-10mm",
+    "rot_z_+10deg",
+    "trans_z_+10mm"
+   ],
+   "combined_worst": {
+    "pose_deg_xyz_mm_xyz": [
+     -10.0,
+     10.0,
+     -0.0,
+     10.0,
+     0.0,
+     0.0
+    ],
+    "min_mm_candidates": 0.0,
+    "min_mm_all_boundary_nodes": -7.18,
+    "grid_worst_unsigned_mm": 0.0
+   }
+  },
+  "T_20": {
+   "skin_triangles": 6002,
+   "ct_pose": {
+    "min_mm_v52_sim": 17.07,
+    "min_mm_cohort": 17.07,
+    "nodes_outside_skin": 0,
+    "nodes_under_5mm": 0
+   },
+   "a33_fixed_poses_min_mm": {
+    "rot_x_-10deg": 22.21,
+    "trans_x_-10mm": 16.77,
+    "rot_x_+10deg": 10.35,
+    "trans_x_+10mm": 17.4,
+    "rot_y_-10deg": 18.7,
+    "trans_y_-10mm": 9.64,
+    "rot_y_+10deg": 16.63,
+    "trans_y_+10mm": 24.67,
+    "rot_z_-10deg": 18.62,
+    "trans_z_-10mm": 22.81,
+    "rot_z_+10deg": 15.56,
+    "trans_z_+10mm": 10.6
+   },
+   "a33_fixed_poses_under_5mm": [],
+   "combined_worst": {
+    "pose_deg_xyz_mm_xyz": [
+     9.96,
+     10.0,
+     0.0,
+     10.0,
+     -9.93,
+     9.93
+    ],
+    "min_mm_candidates": 0.0,
+    "min_mm_all_boundary_nodes": -3.87,
+    "grid_worst_unsigned_mm": 0.0
+   }
+  },
+  "T_17": {
+   "skin_triangles": 6010,
+   "ct_pose": {
+    "min_mm_v52_sim": 1.35,
+    "min_mm_cohort": 1.35,
+    "nodes_outside_skin": 0,
+    "nodes_under_5mm": 3978
+   },
+   "a33_fixed_poses_min_mm": {
+    "rot_x_-10deg": -2.93,
+    "trans_x_-10mm": 2.52,
+    "rot_x_+10deg": 2.8,
+    "trans_x_+10mm": -1.08,
+    "rot_y_-10deg": 0.61,
+    "trans_y_-10mm": -8.33,
+    "rot_y_+10deg": 1.9,
+    "trans_y_+10mm": 11.04,
+    "rot_z_-10deg": -0.98,
+    "trans_z_-10mm": 0.7,
+    "rot_z_+10deg": 0.48,
+    "trans_z_+10mm": 2.46
+   },
+   "a33_fixed_poses_under_5mm": [
+    "rot_x_-10deg",
+    "trans_x_-10mm",
+    "rot_x_+10deg",
+    "trans_x_+10mm",
+    "rot_y_-10deg",
+    "trans_y_-10mm",
+    "rot_y_+10deg",
+    "rot_z_-10deg",
+    "trans_z_-10mm",
+    "rot_z_+10deg",
+    "trans_z_+10mm"
+   ],
+   "combined_worst": {
+    "pose_deg_xyz_mm_xyz": [
+     0.0,
+     -10.0,
+     10.0,
+     10.0,
+     -10.0,
+     -10.0
+    ],
+    "min_mm_candidates": 0.0,
+    "min_mm_all_boundary_nodes": -9.8,
+    "grid_worst_unsigned_mm": 0.0
+   }
+  },
+  "T_01": {
+   "skin_triangles": 5968,
+   "ct_pose": {
+    "min_mm_v52_sim": 45.69,
+    "min_mm_cohort": 45.69,
+    "nodes_outside_skin": 0,
+    "nodes_under_5mm": 0
+   },
+   "a33_fixed_poses_min_mm": {
+    "rot_x_-10deg": 47.39,
+    "trans_x_-10mm": 45.28,
+    "rot_x_+10deg": 43.05,
+    "trans_x_+10mm": 46.2,
+    "rot_y_-10deg": 46.46,
+    "trans_y_-10mm": 36.1,
+    "rot_y_+10deg": 45.05,
+    "trans_y_+10mm": 55.29,
+    "rot_z_-10deg": 48.5,
+    "trans_z_-10mm": 48.5,
+    "rot_z_+10deg": 42.96,
+    "trans_z_+10mm": 42.92
+   },
+   "a33_fixed_poses_under_5mm": [],
+   "combined_worst": {
+    "pose_deg_xyz_mm_xyz": [
+     10.0,
+     -9.31,
+     10.0,
+     -10.0,
+     -10.0,
+     10.0
+    ],
+    "min_mm_candidates": 27.82,
+    "min_mm_all_boundary_nodes": 27.82,
+    "grid_worst_unsigned_mm": 27.83
+   }
+  },
+  "T_13": {
+   "skin_triangles": 5970,
+   "ct_pose": {
+    "min_mm_v52_sim": 29.19,
+    "min_mm_cohort": 29.19,
+    "nodes_outside_skin": 0,
+    "nodes_under_5mm": 0
+   },
+   "a33_fixed_poses_min_mm": {
+    "rot_x_-10deg": 27.56,
+    "trans_x_-10mm": 28.87,
+    "rot_x_+10deg": 26.47,
+    "trans_x_+10mm": 29.75,
+    "rot_y_-10deg": 29.66,
+    "trans_y_-10mm": 19.39,
+    "rot_y_+10deg": 28.72,
+    "trans_y_+10mm": 39.0,
+    "rot_z_-10deg": 29.44,
+    "trans_z_-10mm": 30.63,
+    "rot_z_+10deg": 25.94,
+    "trans_z_+10mm": 26.92
+   },
+   "a33_fixed_poses_under_5mm": [],
+   "combined_worst": {
+    "pose_deg_xyz_mm_xyz": [
+     10.0,
+     -10.0,
+     10.0,
+     -10.0,
+     -10.0,
+     10.0
+    ],
+    "min_mm_candidates": 10.21,
+    "min_mm_all_boundary_nodes": 10.21,
+    "grid_worst_unsigned_mm": 10.21
+   }
+  }
+ },
+ "seconds": 3937.0
+}
