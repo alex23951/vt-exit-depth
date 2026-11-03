@@ -1,14 +1,18 @@
 {
- "released": false,
+ "released": true,
  "alex_word": "\"Yes everything\", 3 Nov 2026 11:20:47 UTC (this PC thread), answering the 10:49 and 11:10 UTC questions",
  "deviation": "proposed deviation (number to be assigned by the lock thread): step 11's T1 brought forward, before the v5.2 tag and despite D36's deferral, for the 27 gate-9 sites only; step 6 and these beats (27 graph, 27 RE+, 27 monodomain) released from the hold; run in unattended ~8 h night chunks",
  "site9": "position",
  "mono_window": "qrs",
  "delete_raw_vm": false,
  "deviation_number": "D42 (lock thread, interim note relayed 3 Nov 12:38 UTC)",
- "hold": "No RE+ or monodomain beat of the 27 until Alex answers D43 (Vm at the cut: per copy, not the mean) and D44 (four readings); graph and test beats allowed (lock thread, 12:37 UTC)",
+ "hold": "Reading hold (addendum 2): no ECG measure, T2 value, activation map or Vm trace of a v5.2 heart beat is opened; chunk reports give counts only",
  "delete_raw_vm_engines": [
   "re"
  ],
- "delete_raw_vm_note": "Alex's word covered RE+ raw files only (lock thread reading); before deleting, both split copies' 1 ms Vm at the cut nodes are kept"
+ "delete_raw_vm_note": "Alex's word covered RE+ raw files only (lock thread reading); before deleting, both split copies' 1 ms Vm at the cut nodes are kept",
+ "release": [
+  "Y5HYEDL4/mono"
+ ],
+ "release_note": "3 Nov 16:1x PC: the control heart's 9 monodomain beats, after every condition of pc-note-d42 section 0 for them was logged (LABNOTES 14:41-16:07); RE+ waits for D45/D46/D48 and the flat-block run, HF ionic beats for D44 (d)"
 }

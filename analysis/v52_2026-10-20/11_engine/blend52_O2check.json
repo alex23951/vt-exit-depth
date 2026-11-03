@@ -1,0 +1,34 @@
+{
+ "control_w0.0": {
+  "max_abs_dVm_mV": 0.0,
+  "wall_O0_s": 3.7,
+  "wall_O2_s": 3.6
+ },
+ "control_w0.5": {
+  "max_abs_dVm_mV": 0.0,
+  "wall_O0_s": 3.9,
+  "wall_O2_s": 3.6
+ },
+ "control_w1.0": {
+  "max_abs_dVm_mV": 0.0,
+  "wall_O0_s": 4.0,
+  "wall_O2_s": 3.7
+ },
+ "HF_w0.0": {
+  "max_abs_dVm_mV": 0.0,
+  "wall_O0_s": 3.9,
+  "wall_O2_s": 3.4
+ },
+ "HF_w0.5": {
+  "max_abs_dVm_mV": 0.0,
+  "wall_O0_s": 3.9,
+  "wall_O2_s": 3.2
+ },
+ "HF_w1.0": {
+  "max_abs_dVm_mV": 0.0,
+  "wall_O0_s": 3.9,
+  "wall_O2_s": 3.2
+ },
+ "builtin_ENDO_vs_O2": 2.3100000007048038e-05,
+ "builtin_EPI_vs_O2": 4.94000000017536e-05
+}
