@@ -1,0 +1,456 @@
+{
+ "lock_sha256": "08ea65d3cda1adac9dcb1935a9000f32bbe093fc65e1e2e52ed8556373a1980b",
+ "slab": {
+  "nodes": 46225,
+  "tets": 287615,
+  "edge_mean_mm": 1.029,
+  "edge_max_mm": 1.741
+ },
+ "np": 6,
+ "sets": {
+  "control": {
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.23,
+    "normal": 0.48
+   },
+   "ratio_ge_over_gi": {
+    "fibre": 3.591954022988506,
+    "sheet": 19.977504291332597,
+    "normal": 3.816449553001277
+   },
+   "start_gi": {
+    "fibre": 0.7655182196925281,
+    "sheet": 0.06441630838603189,
+    "normal": 0.2967357345132544
+   },
+   "stop": null,
+   "within_1pct": true,
+   "within_3pct": true,
+   "rounds": 4,
+   "gi": {
+    "fibre": 0.6593626888372689,
+    "sheet": 0.06900762403148367,
+    "normal": 0.2887636976418943
+   },
+   "ge": {
+    "fibre": 2.3684004627775463,
+    "sheet": 1.3786001052236314,
+    "normal": 1.1020520847884034
+   },
+   "measured_m_s": {
+    "fibre": 0.7999536970470343,
+    "sheet": 0.2308178635986367,
+    "normal": 0.47947709718239584
+   },
+   "history": [
+    {
+     "round": 0,
+     "gi": {
+      "fibre": 0.7655182196925281,
+      "sheet": 0.06441630838603189,
+      "normal": 0.2967357345132544
+     },
+     "ge": {
+      "fibre": 2.7497062488955755,
+      "sheet": 1.286877077213756,
+      "normal": 1.1324769613426156
+     },
+     "measured_m_s": {
+      "fibre": 0.8875506323920138,
+      "sheet": 0.229512839293597,
+      "normal": 0.49462145626639414
+     },
+     "ratio": {
+      "fibre": 1.1094382904900173,
+      "sheet": 0.9978819099721609,
+      "normal": 1.0304613672216545
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 75.7,
+       "tend_ms": 44.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 254.9,
+       "tend_ms": 136.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 81.4,
+       "tend_ms": 47.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 1,
+     "gi": {
+      "fibre": 0.6219410607271919,
+      "sheet": 0.06469005689550393,
+      "normal": 0.2794514843379811
+     },
+     "ge": {
+      "fibre": 2.233983695140776,
+      "sheet": 1.2923458892364796,
+      "normal": 1.0665124924872313
+     },
+     "measured_m_s": {
+      "fibre": 0.766992545591418,
+      "sheet": 0.22000975820622592,
+      "normal": 0.46626649283345417
+     },
+     "ratio": {
+      "fibre": 0.9587406819892725,
+      "sheet": 0.9565641661140257,
+      "normal": 0.9713885267363629
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 70.7,
+       "tend_ms": 44.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 219.6,
+       "tend_ms": 136.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 79.8,
+       "tend_ms": 47.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 2,
+     "gi": {
+      "fibre": 0.6603652804645129,
+      "sheet": 0.07069835644251235,
+      "normal": 0.2878208662084804
+     },
+     "ge": {
+      "fibre": 2.3720017258064403,
+      "sheet": 1.412376719220452,
+      "normal": 1.0984538161857955
+     },
+     "measured_m_s": {
+      "fibre": 0.8008770268754299,
+      "sheet": 0.23385847533746457,
+      "normal": 0.47861185943055257
+     },
+     "ratio": {
+      "fibre": 1.0010962835942874,
+      "sheet": 1.0167759797281068,
+      "normal": 0.9971080404803179
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 71.1,
+       "tend_ms": 44.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 222.4,
+       "tend_ms": 136.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 81.8,
+       "tend_ms": 47.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 3,
+     "gi": {
+      "fibre": 0.6593626888372689,
+      "sheet": 0.06900762403148367,
+      "normal": 0.2887636976418943
+     },
+     "ge": {
+      "fibre": 2.3684004627775463,
+      "sheet": 1.3786001052236314,
+      "normal": 1.1020520847884034
+     },
+     "measured_m_s": {
+      "fibre": 0.7999536970470343,
+      "sheet": 0.2308178635986367,
+      "normal": 0.47947709718239584
+     },
+     "ratio": {
+      "fibre": 0.9999421213087929,
+      "sheet": 1.0035559286897249,
+      "normal": 0.9989106191299914
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 72.3,
+       "tend_ms": 44.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 256.9,
+       "tend_ms": 136.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 99.5,
+       "tend_ms": 47.0,
+       "unactivated_in_range": 0
+      }
+     }
+    }
+   ]
+  },
+  "HF": {
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.167,
+    "normal": 0.336
+   },
+   "ratio_ge_over_gi": {
+    "fibre": 3.591954022988506,
+    "sheet": 38.79023905523662,
+    "normal": 8.829488883676078
+   },
+   "start_gi": {
+    "fibre": 0.7934044129165794,
+    "sheet": 0.03985717613719138,
+    "normal": 0.15637831335844887
+   },
+   "stop": null,
+   "within_1pct": true,
+   "within_3pct": true,
+   "rounds": 4,
+   "gi": {
+    "fibre": 0.6698447552295598,
+    "sheet": 0.03763471232242318,
+    "normal": 0.14819805733956912
+   },
+   "ge": {
+    "fibre": 2.4060515633245685,
+    "sheet": 1.4598594877618545,
+    "normal": 1.3085130998621155
+   },
+   "measured_m_s": {
+    "fibre": 0.8001165173552224,
+    "sheet": 0.1660916215667782,
+    "normal": 0.3354985753142864
+   },
+   "history": [
+    {
+     "round": 0,
+     "gi": {
+      "fibre": 0.7934044129165794,
+      "sheet": 0.03985717613719138,
+      "normal": 0.15637831335844887
+     },
+     "ge": {
+      "fibre": 2.849872172832541,
+      "sheet": 1.546069390428326,
+      "normal": 1.3807405794464387
+     },
+     "measured_m_s": {
+      "fibre": 0.9032152573637157,
+      "sheet": 0.17951703939106534,
+      "normal": 0.35616231415704397
+     },
+     "ratio": {
+      "fibre": 1.1290190717046444,
+      "sheet": 1.0749523316830258,
+      "normal": 1.0600068873721546
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 96.1,
+       "tend_ms": 44.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 361.5,
+       "tend_ms": 186.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 127.6,
+       "tend_ms": 65.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 1,
+     "gi": {
+      "fibre": 0.6224322050885616,
+      "sheet": 0.034492773274705506,
+      "normal": 0.1391743336022923
+     },
+     "ge": {
+      "fibre": 2.2357478631054657,
+      "sheet": 1.3379829210039034,
+      "normal": 1.228838231434466
+     },
+     "measured_m_s": {
+      "fibre": 0.7579760621060623,
+      "sheet": 0.15559256696367937,
+      "normal": 0.3184428588603827
+     },
+     "ratio": {
+      "fibre": 0.9474700776325778,
+      "sheet": 0.9316920177465831,
+      "normal": 0.947746603751139
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 78.9,
+       "tend_ms": 44.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 341.7,
+       "tend_ms": 186.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 135.2,
+       "tend_ms": 65.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 2,
+     "gi": {
+      "fibre": 0.6707100762565714,
+      "sheet": 0.03704955587551615,
+      "normal": 0.14717234141553784
+     },
+     "ge": {
+      "fibre": 2.4091597566687195,
+      "sheet": 1.437161129301618,
+      "normal": 1.2994565525130717
+     },
+     "measured_m_s": {
+      "fibre": 0.8007594993742466,
+      "sheet": 0.1648895151761287,
+      "normal": 0.3340123215481319
+     },
+     "ratio": {
+      "fibre": 1.0009493742178082,
+      "sheet": 0.987362366324124,
+      "normal": 0.994084290321821
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 102.2,
+       "tend_ms": 44.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 366.2,
+       "tend_ms": 186.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 120.3,
+       "tend_ms": 65.0,
+       "unactivated_in_range": 0
+      }
+     }
+    },
+    {
+     "round": 3,
+     "gi": {
+      "fibre": 0.6698447552295598,
+      "sheet": 0.03763471232242318,
+      "normal": 0.14819805733956912
+     },
+     "ge": {
+      "fibre": 2.4060515633245685,
+      "sheet": 1.4598594877618545,
+      "normal": 1.3085130998621155
+     },
+     "measured_m_s": {
+      "fibre": 0.8001165173552224,
+      "sheet": 0.1660916215667782,
+      "normal": 0.3354985753142864
+     },
+     "ratio": {
+      "fibre": 1.000145646694028,
+      "sheet": 0.9945606081843006,
+      "normal": 0.9985076646258523
+     },
+     "runs": {
+      "fibre": {
+       "n": 10250,
+       "bins": 18,
+       "wall_s": 78.1,
+       "tend_ms": 44.0,
+       "unactivated_in_range": 0
+      },
+      "sheet": {
+       "n": 10247,
+       "bins": 18,
+       "wall_s": 325.9,
+       "tend_ms": 186.0,
+       "unactivated_in_range": 0
+      },
+      "normal": {
+       "n": 13057,
+       "bins": 10,
+       "wall_s": 119.1,
+       "tend_ms": 65.0,
+       "unactivated_in_range": 0
+      }
+     }
+    }
+   ]
+  }
+ }
+}

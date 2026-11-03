@@ -1,0 +1,47 @@
+{
+ "nodes": 442401,
+ "extent_mm": [
+  20.0,
+  7.0,
+  3.0
+ ],
+ "lon_first_rows": [
+  [
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.0,
+   0.0
+  ]
+ ],
+ "stim_nodes": 4096,
+ "np": 6,
+ "dt_ms": 0.005,
+ "dx_mm": 0.1,
+ "tend_ms": 80.0,
+ "unactivated_nodes": 0,
+ "last_activation_ms": 43.094,
+ "activation_at_far_corner_ms": 43.086,
+ "accept_37.8_48.7": true,
+ "vs_gold_standard_42.5_43_ms": 0.344,
+ "wall_s_sim": 2085.4,
+ "wall_s_total": 2102.3
+}

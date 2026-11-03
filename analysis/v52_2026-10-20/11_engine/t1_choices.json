@@ -1,0 +1,14 @@
+{
+ "released": false,
+ "alex_word": "\"Yes everything\", 3 Nov 2026 11:20:47 UTC (this PC thread), answering the 10:49 and 11:10 UTC questions",
+ "deviation": "proposed deviation (number to be assigned by the lock thread): step 11's T1 brought forward, before the v5.2 tag and despite D36's deferral, for the 27 gate-9 sites only; step 6 and these beats (27 graph, 27 RE+, 27 monodomain) released from the hold; run in unattended ~8 h night chunks",
+ "site9": "position",
+ "mono_window": "qrs",
+ "delete_raw_vm": false,
+ "deviation_number": "D42 (lock thread, interim note relayed 3 Nov 12:38 UTC)",
+ "hold": "No RE+ or monodomain beat of the 27 until Alex answers D43 (Vm at the cut: per copy, not the mean) and D44 (four readings); graph and test beats allowed (lock thread, 12:37 UTC)",
+ "delete_raw_vm_engines": [
+  "re"
+ ],
+ "delete_raw_vm_note": "Alex's word covered RE+ raw files only (lock thread reading); before deleting, both split copies' 1 ms Vm at the cut nodes are kept"
+}

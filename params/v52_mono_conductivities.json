@@ -1,0 +1,102 @@
+{
+ "method": "v5.2 step 6 (R4.4): flat block, straight fibres, planar waves, within 3 % (mono_slab52.py, slab_mono52.json)",
+ "written": "2026-11-03 13:25:32 CET",
+ "slab": {
+  "nodes": 46225,
+  "tets": 287615,
+  "edge_mean_mm": 1.029,
+  "edge_max_mm": 1.741
+ },
+ "hearts": {
+  "Y5HYEDL4": {
+   "speed_set": "control",
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.23,
+    "normal": 0.48
+   },
+   "within_3pct": true,
+   "within_1pct": true,
+   "rounds": 4,
+   "measured_m_s": {
+    "fibre": 0.7999536970470343,
+    "sheet": 0.2308178635986367,
+    "normal": 0.47947709718239584
+   },
+   "conductivities_S_m": {
+    "fibre": {
+     "gi": 0.6593626888372689,
+     "ge": 2.3684004627775463
+    },
+    "sheet": {
+     "gi": 0.06900762403148367,
+     "ge": 1.3786001052236314
+    },
+    "normal": {
+     "gi": 0.2887636976418943,
+     "ge": 1.1020520847884034
+    }
+   }
+  },
+  "6G8DD8S5": {
+   "speed_set": "HF",
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.167,
+    "normal": 0.336
+   },
+   "within_3pct": true,
+   "within_1pct": true,
+   "rounds": 4,
+   "measured_m_s": {
+    "fibre": 0.8001165173552224,
+    "sheet": 0.1660916215667782,
+    "normal": 0.3354985753142864
+   },
+   "conductivities_S_m": {
+    "fibre": {
+     "gi": 0.6698447552295598,
+     "ge": 2.4060515633245685
+    },
+    "sheet": {
+     "gi": 0.03763471232242318,
+     "ge": 1.4598594877618545
+    },
+    "normal": {
+     "gi": 0.14819805733956912,
+     "ge": 1.3085130998621155
+    }
+   }
+  },
+  "7D98EVAR": {
+   "speed_set": "HF",
+   "speeds_m_s": {
+    "fibre": 0.8,
+    "sheet": 0.167,
+    "normal": 0.336
+   },
+   "within_3pct": true,
+   "within_1pct": true,
+   "rounds": 4,
+   "measured_m_s": {
+    "fibre": 0.8001165173552224,
+    "sheet": 0.1660916215667782,
+    "normal": 0.3354985753142864
+   },
+   "conductivities_S_m": {
+    "fibre": {
+     "gi": 0.6698447552295598,
+     "ge": 2.4060515633245685
+    },
+    "sheet": {
+     "gi": 0.03763471232242318,
+     "ge": 1.4598594877618545
+    },
+    "normal": {
+     "gi": 0.14819805733956912,
+     "ge": 1.3085130998621155
+    }
+   }
+  }
+ }
+}

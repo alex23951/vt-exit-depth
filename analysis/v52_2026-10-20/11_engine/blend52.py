@@ -161,5 +161,63 @@ def check():
     print({s: rec['grid'][s + '_max_abs_deviation_ms'] for s in SETTINGS})
 
 
+def interp_sv(f0, f1, frac, w, out):
+    """The tissue runs' initial state at w: line by line linear interpolation of two grid states (wb set to w)."""
+    L0, L1, o = open(f0).read().split('\n'), open(f1).read().split('\n'), []
+    for a, b in zip(L0, L1):
+        p, q = a.split('#'), b.split('#')
+        if len(p) == 2 and p[0].strip() not in ('', '-') and len(q) == 2:
+            v = float(w) if p[1].strip() == 'wb' else (1 - frac) * float(p[0]) + frac * float(q[0])
+            o.append(f'{v:<20.10g}# {p[1].strip()}')
+        else:
+            o.append(a)
+    open(out, 'w').write('\n'.join(o))
+
+
+def trace_apd(d):
+    import importlib.util
+    sp = importlib.util.spec_from_file_location('cell52', os.path.join(C4, 'cell52.py'))
+    c52 = importlib.util.module_from_spec(sp); sp.loader.exec_module(c52)
+    x = np.loadtxt(os.path.join(d, 'out.txt'))
+    return c52.apd90(x[:, 0], x[:, 1])[0], float(x[0, 1])
+
+
+def midcheck():
+    """D44 (c): at each grid midpoint, a cell started from the interpolated state against that w's own steady state:
+    first-beat APD90 within 0.5 ms and resting Vm within 0.5 mV (APD90 from the 1 ms trace, cell52.apd90, both sides)."""
+    rec = json.load(open(OUT))
+    jobs = [(s, round(w + 0.05, 2)) for s in SETTINGS for w in W_GRID[:-1]]
+
+    def one(job):
+        s, w = job
+        par = ','.join([f'wb={w}'] + [f'{k}={v}' for k, v in SETTINGS[s]['par'].items()])
+        apd, state, n = steady(f'mid_{s}/own_w{w:.2f}', par)
+        own_rest = read_first(state)
+        own_apd, _ = trace_apd(os.path.join(RUN, f'mid_{s}/own_w{w:.2f}', f'chunk_{n - CHUNK:05d}'))
+        lo, hi = f'{w - 0.05:.1f}', f'{w + 0.05:.1f}'
+        g = rec['grid'][s]
+        sv = os.path.join(RUN, f'mid_{s}', f'interp_w{w:.2f}.sv')
+        interp_sv(os.path.join(REPO, g[lo]['state_file']), os.path.join(REPO, g[hi]['state_file']), 0.5, w, sv)
+        d = bench(f'mid_{s}/interp_w{w:.2f}', 1, 'Tomek52w', par, restore=sv, trace_last=1)
+        a1, v0 = trace_apd(d)
+        return s, w, {'own_steady_APD90_ms (last beat, trace)': round(own_apd, 3), 'own_rest_Vm_mV': own_rest, 'own_beats': int(n),
+                      'interp_first_beat_APD90_ms': round(a1, 3), 'interp_rest_Vm_mV': round(v0, 4),
+                      'dAPD90_ms': round(a1 - own_apd, 3), 'dVrest_mV': round(v0 - own_rest, 4),
+                      'pass': bool(abs(a1 - own_apd) <= 0.5 and abs(v0 - own_rest) <= 0.5)}
+    out = {}
+    with ThreadPoolExecutor(int(os.environ.get('BLEND_JOBS', '4'))) as ex:
+        for s, w, r in ex.map(one, jobs):
+            out.setdefault(s, {})[f'{w:.2f}'] = r
+            print(s, w, r, flush=True)
+    rec['midcheck_D44c'] = {'grid_spacing': 0.1, 'rule': 'first-beat APD90 within 0.5 ms and resting Vm within 0.5 mV of the own steady state', **out,
+                            'all_pass': all(r['pass'] for v in out.values() for r in v.values())}
+    json.dump(rec, open(OUT, 'w'), indent=1)
+    print('all pass', rec['midcheck_D44c']['all_pass'])
+
+
+def read_first(f):
+    return float(open(f).readline().split('#')[0])
+
+
 if __name__ == '__main__':
-    {'build': build, 'check': check}[sys.argv[1]]()
+    {'build': build, 'check': check, 'midcheck': midcheck}[sys.argv[1]]()

@@ -206,7 +206,7 @@ def prep_heart(h):
         cfg = {'heart': h, 'site': s, 'graph': {**info, 'junction_exits_replayed': int(drive.sum())}, 'stims': stims, 'window': win}
         json.dump(cfg, open(os.path.join(bd, 'beat_config.json'), 'w'), indent=1)
         beats.append({'site': s['id'], 'stimuli': len(stims), **win})
-        print(h, s['id'], {k: v for k, v in win.items()}, 'stimuli', len(stims), flush=True)
+        print(h, s['id'], 'stimuli', len(stims), 'unactivated excitable', info['unactivated_excitable_nodes'], flush=True)   # counts only (lock thread)
     rec = {'heart': h, 'setting': setting, 'sim_nodes': int(len(used)), 'sim_elements': int(ke.sum()), 'elements_removed_fibrous': int((~ke).sum()),
            'cut_nodes': int(Hh.N), 'merged_nodes': int(Hh.Nm), 'adjustments': adjs, 'vm0_range_mV': [float(vm0.min()), float(vm0.max())],
            'heart52_keys': Hh.keys, 'beats': beats, 'wall_s': round(time.time() - t0, 1)}
@@ -227,14 +227,27 @@ def queue():
         win = choices().get('mono_window', 'qrs')
         for b in P['beats']:
             for eng in ('re', 'mono'):
+                if not released(h, eng):
+                    continue
                 tend = b['re_tend_ms'] if (eng == 're' or win == 'r16') else b['qrs_tend_ms']
                 q.append({'id': f"{h}/{b['site']}/{eng}", 'heart': h, 'site': b['site'], 'engine': eng, 'tend_ms': tend,
                           'est_h': round(RATE[eng] * scale * tend / 3600 + 0.05, 2)})
     return q
 
 
+def released(h, eng):
+    """t1_choices.json 'release' lists '<HEART>/<engine>' items the lock thread's conditions allow (note of 3 Nov 13:35 UTC)."""
+    ch = choices()
+    return bool(ch.get('released')) and f'{h}/{eng}' in ch.get('release', [])
+
+
+def c_free_gb():
+    import shutil
+    return shutil.disk_usage('/mnt/c').free / 1e9
+
+
 def bdir(b):
-    return hdir(b['heart'], b['site'], b['engine'])
+    return b.get('dir') or hdir(b['heart'], b['site'], b['engine'])
 
 
 def retry(b):
@@ -264,6 +277,7 @@ def command(b):
     ad = ['-num_adjustments', len(P['adjustments'])]
     for i, (var, f) in enumerate(P['adjustments']):
         ad += [f'-adjustment[{i}].variable', var, f'-adjustment[{i}].file', f]
+    ad += ['-adjustment[0].dump', 1]                                                          # wb as openCARP applied it, kept for a check
     setting = B.SETTINGS[P['setting']]['par']
     imp = ['-num_external_imp', 1, '-external_imp[0]', B.SO, '-num_imp_regions', 1, '-imp_region[0].im', 'Tomek52w',
            '-imp_region[0].im_param', ','.join(f'{k}={v}' for k, v in setting.items()), '-imp_region[0].num_IDs', len(TAGS)]
@@ -299,27 +313,36 @@ def finish(b, rec):
     h, d = b['heart'], bdir(b)
     M = np.load(hdir(h, 'mesh', 'maps.npz'))
     vm0 = np.load(hdir(h, 'mesh', 'vm0.npy'))
-    W = np.load(os.path.join(REPO, 'data', 'biv', h, 'v52', 'ecgW_v52_c73.npz'))['W'].astype(np.float64)
+    W = np.load(hdir(h, 'mesh', 'ecgW_split.npz'))['W'].astype(np.float64)              # D43: per copy, ecgsplit52.py
     vm = igb(os.path.join(d, 'vm.igb'))
-    Nm = int(M['Nm']); cnt = np.bincount(M['merged'], minlength=Nm).astype(float)
-    full = np.zeros(Nm); miss = cnt == 0
-    ecg = np.zeros((len(vm), 12))
-    for t in range(len(vm)):
-        acc = np.bincount(M['merged'], weights=vm[t].astype(np.float64), minlength=Nm)
-        full[:] = np.where(miss, 0.0, acc / np.maximum(cnt, 1))
-        ecg[t] = W[:, ~miss] @ full[~miss]
+    assert vm.shape[1] == W.shape[1]
+    Nm = int(M['Nm'])
+    ecg = np.concatenate([np.asarray(vm[i:i + 50], np.float64) @ W.T for i in range(0, len(vm), 50)])
+    I, II = ecg[:, LEADS.index('I')], ecg[:, LEADS.index('II')]
+    elec = np.c_[-(I + II) / 3, (2 * I - II) / 3, (2 * II - I) / 3, ecg[:, [LEADS.index(f'V{k}') for k in range(1, 7)]]]
+    cfg = json.load(open(hdir(h, b['site'], 'beat_config.json')))
+    site = np.loadtxt(cfg['stims'][0]['vtx'] + '.vtx', skiprows=2, dtype=np.int64, ndmin=1)
+    xyz = np.loadtxt(hdir(h, 'mesh', 'sim52.pts'), skiprows=1)[site]
     rec['nan_frames'] = int(np.isnan(vm).any(1).sum())
-    rec['merged_nodes_without_sim_node'] = int(miss.sum())
     lat = np.loadtxt(os.path.join(d, 'init_acts_LATs-thresh.dat'))
     rec['unactivated_nodes'] = int((lat < 0).sum())
     shift = BASE_MS if b['engine'] == 're' else 0.0
+    if b['engine'] == 'mono':
+        rec['own_last_activation_inside_window'] = bool((lat >= 0).all() and lat.max() < b['tend_ms'])   # check 5 (b), a count
     rec['last_activation_ms_from_stimulus'] = round(float(lat[lat >= 0].max() - shift), 2) if (lat >= 0).any() else None
+    split = np.where(np.bincount(M['merged'], minlength=Nm)[M['merged']] > 1)[0]               # sim nodes whose merged node is split
     np.savez_compressed(os.path.join(d, 'kept.npz'), ecg=ecg.astype(np.float32), leads=np.array(LEADS), lat=lat.astype(np.float32),
-                        stim_ms=shift, vm5=vm[::5].astype(np.float16), vm5_dt_ms=5.0)
+                        electrodes=elec.astype(np.float32), electrode_names=np.array(['RA', 'LA', 'LL', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6']),
+                        electrode_reference='Wilson central terminal (RA + LA + LL) / 3', site_nodes=site, site_xyz_um=xyz,
+                        stim_ms=shift, vm5=vm[::5].astype(np.float16), vm5_dt_ms=5.0, ecg_rule='D43: per copy, element by element on the split mesh',
+                        split_sim_nodes=split, split_merged_nodes=M['merged'][split], vm_split_1ms=np.asarray(vm[:, split], np.float32))
+    rec['split_copies_kept'] = int(len(split))
     rec['ecg_frames'] = int(len(ecg))
-    if choices().get('delete_raw_vm') and rec['nan_frames'] == 0:
+    ch = choices()
+    if b['engine'] in ch.get('delete_raw_vm_engines', []) and rec['nan_frames'] == 0 and not b.get('test'):
         chk = np.load(os.path.join(d, 'kept.npz'))
-        if np.allclose(chk['ecg'], ecg.astype(np.float32)):
+        if (np.allclose(chk['ecg'], ecg.astype(np.float32)) and chk['vm_split_1ms'].shape == (len(vm), len(split))
+                and 'check6' in chk.files):                                                # section 4 check 6's per-node values (not built yet)
             os.remove(os.path.join(d, 'vm.igb')); rec['raw_vm_removed'] = True
     del vm
     return rec
@@ -359,26 +382,43 @@ def close(j, status):
     json.dump(rec, open(os.path.join(bdir(b), 'summary.json'), 'w'), indent=1)
     labnote(f"- Beat ended, PC clock {time.strftime('%d %b %H:%M')}: {b['id']}: {status}; wall {rec['wall_s'] / 3600:.2f} h "
             f"({rec['s_per_sim_ms']} s per simulated ms), lowest MemAvailable {rec['min_mem_available_mb']} MB"
-            + (f", last activation {rec.get('last_activation_ms_from_stimulus')} ms after the stimulus, unactivated {rec.get('unactivated_nodes')}" if status == 'ok' else '') + '.')
+            + (f", unactivated nodes {rec.get('unactivated_nodes')}, NaN frames {rec.get('nan_frames')}" if 'nan_frames' in rec else '') + '.')
+    return rec['status']
 
 
 def night(hours=8.0):
+    """One chunk. Lock thread's rules (note of 3 Nov 13:35 UTC, section 1): nothing else runs; a beat that fails (exit,
+    NaN, unactivated excitable nodes, no log progress for 30 min) starts no new beat in its lane, keeps its raw file and
+    waits for a report; a memory kill is re-run in the next chunk with one RE+ lane fewer; no beat starts if C: would fall
+    below 10 GB."""
     ch = choices()
-    if not ch.get('released'):
-        sys.exit('t1_choices.json does not hold Alex\'s release (the v5.2 beat hold stands): nothing started')
+    if not ch.get('released') or not ch.get('release'):
+        sys.exit('t1_choices.json releases no beat (the lock thread\'s conditions are not all logged): nothing started')
     if not os.path.exists(os.path.join(REPO, 'params', 'v52_mono_conductivities.json')):
         sys.exit('step 6 not done (params/v52_mono_conductivities.json missing): nothing started')
     t_end = time.time() + hours * 3600
     q = [b for b in queue() if not done(b)]
-    labnote(f"\n### 2026-11-03_v52_11_t1_27 night chunk (PC clock {time.strftime('%d %b %H:%M')}): {len(q)} beats left, "
-            f"{hours:g} h, up to {RE_LANES} RE+ lanes then monodomain on {MONO_NP} processes")
-    jobs, stopped = [], False
+    lanes = int(ch.get('re_lanes', RE_LANES))
+    labnote(f"\n### 2026-11-03_v52_11_t1_27 night chunk (PC clock {time.strftime('%d %b %H:%M')}): {len(q)} released beats left "
+            f"({', '.join(ch['release'])}), {hours:g} h, up to {lanes} RE+ lanes, then monodomain on {MONO_NP} processes; C: {c_free_gb():.1f} GB free")
+    jobs, stopped, mono_ok, notes = [], False, True, []
     while True:
         now = time.time()
         for j in list(jobs):
             r = j['p'].poll()
             if r is not None:
-                close(j, 'ok' if r == 0 else f'failed (exit {r})'); jobs.remove(j)
+                st = close(j, 'ok' if r == 0 else f'failed (exit {r})'); jobs.remove(j)
+                if st != 'ok':
+                    if j['b']['engine'] == 're':
+                        lanes -= 1
+                    else:
+                        mono_ok = False
+            elif now - max(j['t0'], os.path.getmtime(os.path.join(bdir(j['b']), 'openCARP.log'))) > 1800:
+                os.killpg(j['p'].pid, signal.SIGTERM); j['p'].wait(); close(j, 'failed (no progress for 30 min)'); jobs.remove(j)
+                if j['b']['engine'] == 're':
+                    lanes -= 1
+                else:
+                    mono_ok = False
         mm = mem_mb()
         for j in jobs:
             j['low'] = min(j['low'], mm)
@@ -393,16 +433,36 @@ def night(hours=8.0):
         mono_todo = [b for b in todo if b['engine'] == 'mono' and b['est_h'] * 3600 <= left]
         n_re = sum(j['b']['engine'] == 're' for j in jobs)
         n_mono = sum(j['b']['engine'] == 'mono' for j in jobs)
-        if not stopped and re_todo and n_mono == 0 and n_re < RE_LANES and mem_mb() > 2600:
-            jobs.append(start(re_todo[0])); time.sleep(90); continue
-        if not stopped and not re_todo and n_re == 0 and n_mono == 0 and mono_todo:
-            jobs.append(start(mono_todo[0])); time.sleep(30); continue
+        nxt = re_todo[0] if (re_todo and lanes > 0) else (mono_todo[0] if (mono_todo and mono_ok) else None)
+        if nxt is not None and not stopped:
+            need = nxt['tend_ms'] * 1.51e-3 * 1.1                                           # GB, C68's 1.51 MB per ms, +10 %
+            if c_free_gb() - need < 10.0:
+                notes.append(f"C: {c_free_gb():.1f} GB free, {nxt['id']} needs about {need:.1f} GB: no beat started (10 GB floor)")
+                stopped = True
+            elif nxt['engine'] == 're' and n_mono == 0 and n_re < lanes and mem_mb() > 2600:
+                jobs.append(start(nxt)); time.sleep(90); continue
+            elif nxt['engine'] == 'mono' and n_re == 0 and n_mono == 0:
+                jobs.append(start(nxt)); time.sleep(30); continue
         if not jobs:
             break
         time.sleep(30)
     left = [b['id'] for b in queue() if not done(b)]
-    labnote(f"- Night chunk ended, PC clock {time.strftime('%d %b %H:%M')}: {len(left)} beats left" + (' (memory guard stopped a beat)' if stopped else '') + '.')
+    labnote(f"- Night chunk ended, PC clock {time.strftime('%d %b %H:%M')}: {len(left)} released beats left; C: {c_free_gb():.1f} GB free"
+            + (' (memory guard stopped a beat)' if stopped else '') + ('; ' + '; '.join(notes) if notes else '') + '.')
     print('night chunk ended;', len(left), 'beats left', flush=True)
+
+
+def test(h, site, eng, tend):
+    """A short beat into <site>/<engine>_test (raw output kept), to check the set-up before the first night."""
+    b = {'id': f'{h}/{site}/{eng}_test', 'heart': h, 'site': site, 'engine': eng, 'tend_ms': float(tend), 'est_h': 0.0, 'test': True,
+         'dir': hdir(h, site, f'{eng}_test')}
+    j = start(b)
+    while j['p'].poll() is None:
+        time.sleep(5); mm = mem_mb(); j['low'] = min(j['low'], mm)
+        if mm < MIN_MB:
+            os.killpg(j['p'].pid, signal.SIGTERM); j['p'].wait(); close(j, f'stopped by memory guard ({mm:.0f} MB available)'); return
+    close(j, 'ok' if j['p'].returncode == 0 else f"failed (exit {j['p'].returncode})")
+    print(json.dumps({k: v for k, v in json.load(open(os.path.join(bdir(b), 'summary.json'))).items() if k != 'command'}, indent=1))
 
 
 def plan():
@@ -473,6 +533,8 @@ if __name__ == '__main__':
         for h in (sys.argv[2:] or HEARTS):
             sys.modules.pop('common', None)
             prep_heart(h)
+    elif a == 'test':
+        test(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
     elif a == 'night':
         night(float(sys.argv[2]) if len(sys.argv) > 2 else 8.0)
     else:
