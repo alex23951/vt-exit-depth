@@ -308,7 +308,7 @@ def command(b):
            '-bidomain', 0, '-dt', 10.0, '-parab_solve', 1, '-tend', b['tend_ms'], '-spacedt', 1.0, '-timedt', 5.0,
            '-num_LATs', 1, '-lats[0].ID', 'LATs', '-lats[0].all', 0, '-lats[0].measurand', 0, '-lats[0].threshold', -10, '-lats[0].method', 1]
     if b['engine'] == 're':
-        cmd += ['-dream.solve', 1, '-dream.fim.tol', 0.001, '-dream.fim.max_iter', 1000000000, '-num_phys_regions', 1,
+        cmd += ['-dream.solve', 1, '-dream.fim.tol', 0.001, '-dream.fim.max_iter', 1000000000, '-output_level', 2, '-num_phys_regions', 1,
                 '-phys_region[0].ptype', 2, '-phys_region[0].num_IDs', len(TAGS)] + sum(([f'-phys_region[0].ID[{i}]', t] for i, t in enumerate(TAGS)), [])
         foot = json.load(open(os.path.join(REPO, 'params', 'v52_re_foot.json')))['hearts'][h]     # D45 / D48 (foot52.py), fixed
         imp += sum(([f'-imp_region[0].dream.Idiff.{k}', foot[k]] for k in ('model', 'A_F', 'tau_F', 'V_th')), [])
@@ -358,6 +358,12 @@ def finish(b, rec):
         if flag.any():                                                                          # addenda 2-3 item 4: counts only
             rec['flagged_vm_above_every_excitable'] = int((c6['vmax_mV'][flag] > c6['vmax_mV'][~flag].max()).sum())
             rec['flagged_driven_again'] = 'not measured (Vm and Idiff are written every 1 ms; the build cannot count it per step)'
+    if b['engine'] == 're':                                                                     # lock note 4 Nov section 2: counts
+        rec['fim_t0_iterations'], rec['fim_t0_active_list_at_exit'] = fim_counts(d)
+    cls = node_classes(h, b['site'], len(flag))
+    rec['check6_by_class'] = {k: {'ead': int((c6['ead'] & ~flag & (cls == i)).sum()),
+                                  'repolarised_in_window': int((np.isfinite(c6['apd90_ms']) & ~flag & (cls == i)).sum()),
+                                  'nodes': int((~flag & (cls == i)).sum())} for i, k in enumerate(CLASSES)}
     rec['ead_flagged_excitable_nodes'] = int(c6['ead'][~flag].sum())
     rec['no_repolarisation_in_window_excitable_nodes'] = int((~np.isfinite(c6['apd90_ms']))[~flag].sum())
     rec['last_activation_ms_from_stimulus'] = round(float(lat[lat >= 0].max() - shift), 2) if (lat >= 0).any() else None
@@ -378,6 +384,44 @@ def finish(b, rec):
             os.remove(os.path.join(d, 'vm.igb')); rec['raw_vm_removed'] = True
     del vm
     return rec
+
+
+CLASSES = ('stimulus_or_junction_exit', 'within_1mm', 'surface', 'other')
+
+
+def node_classes(h, site, n):
+    """Lock note of 4 Nov, section 3: 0 = a node of any stimulus set of the beat (the site set and the junction-exit replay
+    sets), 1 = within 1 mm of one, 2 = on the simulation mesh's surface, 3 = other (first class that applies)."""
+    from scipy.spatial import cKDTree
+    sf = hdir(h, 'mesh', 'surface_nodes.npy')
+    if not os.path.exists(sf):
+        E = np.loadtxt(hdir(h, 'mesh', 'sim52.elem'), skiprows=1, usecols=(1, 2, 3, 4), dtype=np.int64)
+        F = np.sort(np.concatenate([E[:, [0, 1, 2]], E[:, [0, 1, 3]], E[:, [0, 2, 3]], E[:, [1, 2, 3]]]), axis=1)
+        u, c = np.unique(F, axis=0, return_counts=True)
+        np.save(sf, np.unique(u[c == 1]))
+    P = np.loadtxt(hdir(h, 'mesh', 'sim52.pts'), skiprows=1) / 1000.0
+    cfg = json.load(open(hdir(h, site, 'beat_config.json')))
+    st = np.unique(np.concatenate([np.loadtxt(x['vtx'] + '.vtx', skiprows=2, dtype=np.int64, ndmin=1) for x in cfg['stims']]))
+    cls = np.full(n, 3, np.int8)
+    cls[np.load(sf)] = 2
+    near = np.unique(np.concatenate([np.asarray(x, np.int64) for x in cKDTree(P).query_ball_point(P[st], 1.0)] or [np.zeros(0, np.int64)]))
+    cls[near] = 1
+    cls[st] = 0
+    return cls
+
+
+def fim_counts(d):
+    """t = 0 FIM iterations (eik_stats.dat, 'its') and the active-list size at exit (openCARP.log, output_level 2)."""
+    its = act = None
+    f = os.path.join(d, 'eik_stats.dat')
+    if os.path.exists(f):
+        rows = [l.split() for l in open(f) if l.strip() and l.split()[0].replace('.', '', 1).isdigit()]
+        if rows:
+            its = int(rows[0][3])
+    for l in open(os.path.join(d, 'openCARP.log'), errors='replace'):
+        if l.startswith('active list:'):
+            act = int(l.split()[2]); break
+    return its, act
 
 
 def check6(vm, tend, chunk=20000):
@@ -450,6 +494,9 @@ def close(j, status):
             f"({rec['s_per_sim_ms']} s per simulated ms), lowest MemAvailable {rec['min_mem_available_mb']} MB"
             + (f", unactivated nodes {rec.get('unactivated_nodes')}, NaN frames {rec.get('nan_frames')}" if 'nan_frames' in rec else '')
             + (f", EAD-flagged nodes {rec.get('ead_flagged_excitable_nodes')}" if b['engine'] == 're' and 'ead_flagged_excitable_nodes' in rec else '')
+            + (f", t = 0 FIM {rec.get('fim_t0_iterations')} iterations, active list at exit {rec.get('fim_t0_active_list_at_exit')}" if b['engine'] == 're' and 'nan_frames' in rec else '')
+            + (', check 6 by class (EAD / repolarised in window): ' + '; '.join(f"{k} {v['ead']} / {v['repolarised_in_window']}" for k, v in rec['check6_by_class'].items())
+               if 'check6_by_class' in rec else '')
             + (f", flagged nodes {rec['flagged_nodes']} (above every excitable node: {rec.get('flagged_vm_above_every_excitable', 'n/a')}; driven again: not measured)"
                if rec.get('flagged_nodes') else '') + '.')
     return rec['status']
@@ -529,16 +576,21 @@ def check6_kept(eng='mono'):
         if b['engine'] != eng or not done(b) or not os.path.exists(os.path.join(bdir(b), 'vm.igb')):
             continue
         f = os.path.join(bdir(b), 'check6.npz')
-        if os.path.exists(f):
-            continue
         M = np.load(hdir(b['heart'], 'mesh', 'maps.npz'))
         vm = igb(os.path.join(bdir(b), 'vm.igb'))
         flag = np.zeros(vm.shape[1], bool)
         if 'flagged' in M.files:
             flag[M['flagged']] = True
-        c6 = check6(vm, b['tend_ms'])
-        np.savez_compressed(f, flagged=np.where(flag)[0], **{f'c6_{k}': v for k, v in c6.items()})
+        if os.path.exists(f):
+            z = np.load(f); c6 = {k[3:]: z[k] for k in z.files if k.startswith('c6_')}
+        else:
+            c6 = check6(vm, b['tend_ms'])
+            np.savez_compressed(f, flagged=np.where(flag)[0], **{f'c6_{k}': v for k, v in c6.items()})
+        cls = node_classes(b['heart'], b['site'], len(flag))
         out[b['id']] = {'frames': int(vm.shape[0]), 'ead_flagged_excitable_nodes': int(c6['ead'][~flag].sum()),
+                        'by_class': {k: {'ead': int((c6['ead'] & ~flag & (cls == i)).sum()),
+                                         'repolarised_in_window': int((np.isfinite(c6['apd90_ms']) & ~flag & (cls == i)).sum()),
+                                         'nodes': int((~flag & (cls == i)).sum())} for i, k in enumerate(CLASSES)},
                         'no_repolarisation_in_window_excitable_nodes': int((~np.isfinite(c6['apd90_ms']))[~flag].sum()),
                         'excitable_nodes': int((~flag).sum())}
         print(b['id'], out[b['id']], flush=True)
