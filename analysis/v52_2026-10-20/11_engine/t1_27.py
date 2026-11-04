@@ -592,8 +592,17 @@ def night(hours=8.0):
     labnote(f"\n### 2026-11-03_v52_11_t1_27 night chunk (PC clock {time.strftime('%d %b %H:%M')}): {len(q)} released beats left "
             f"({', '.join(ch['release'])}), {hours:g} h, up to {lanes} RE+ lanes, then monodomain on {MONO_NP} processes; C: {c_free_gb():.1f} GB free")
     jobs, stopped, mono_ok, notes = [], False, True, []
+    last = time.time()
     while True:
         now = time.time()
+        gap = now - last
+        if gap > 300:                                     # the chunk was paused (pause.sh) or the PC slept: not a stall
+            t_end += gap
+            for j in jobs:
+                j['resumed'] = now
+            labnote(f"- Chunk resumed, PC clock {time.strftime('%d %b %H:%M')}: paused for about {gap / 60:.0f} min; chunk end moved by that, "
+                    f"stall clocks of the {len(jobs)} running beats restarted (nothing else changes).")
+        last = now
         for j in list(jobs):
             r = j['p'].poll()
             if r is not None:
@@ -603,7 +612,7 @@ def night(hours=8.0):
                         lanes -= 1
                     else:
                         mono_ok = False
-            elif now - max(j['t0'], os.path.getmtime(os.path.join(bdir(j['b']), 'openCARP.log'))) > 1800:
+            elif now - max(j['t0'], j.get('resumed', 0.0), os.path.getmtime(os.path.join(bdir(j['b']), 'openCARP.log'))) > 1800:
                 os.killpg(j['p'].pid, signal.SIGTERM); j['p'].wait(); close(j, 'failed (no progress for 30 min)'); jobs.remove(j)
                 if j['b']['engine'] == 're':
                     lanes -= 1
