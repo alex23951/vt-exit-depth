@@ -14,6 +14,7 @@ Ionic: Tomek52w (blend52.py): nodal wb = the node's APD w (apd52.npz), sGKs / sG
 state per node interpolated in w from blend52's steady-state cells (CL 1000 ms, R1.1 criterion) - my reading, so the
 beat starts where step 4's targets were measured. Tags 1, 2, 25, 28, 29 (all myocardium).
 RE+ (T1): dream.solve 1 (eikonal physics region on all myocardial tags), dream.vel = v5.2 speeds (params/v52_speeds.json),
+foot current FOOT (Idiff.model 0) with A_F 0.91 mV and the fitted tau_F per heart type (params/v52_re_foot.json; D45, D48),
 diffusion on fix 2's sigma (params/v52_conductivities.json; 15.3), dream.fim.tol 0.001, max_iter 1e9 (C68); one process.
 Window R1.6: 100 ms at rest, stimulus at 100 ms, to max(graph activation + target APD90) + 50 ms (+ 20 ms margin).
 Monodomain (gate 9 comparator): tuned sigma (params/v52_mono_conductivities.json, step 6, within 3 %), MONO_NP processes;
@@ -301,6 +302,8 @@ def command(b):
     if b['engine'] == 're':
         cmd += ['-dream.solve', 1, '-dream.fim.tol', 0.001, '-dream.fim.max_iter', 1000000000, '-num_phys_regions', 1,
                 '-phys_region[0].ptype', 2, '-phys_region[0].num_IDs', len(TAGS)] + sum(([f'-phys_region[0].ID[{i}]', t] for i, t in enumerate(TAGS)), [])
+        foot = json.load(open(os.path.join(REPO, 'params', 'v52_re_foot.json')))['hearts'][h]     # D45 / D48 (foot52.py), fixed
+        imp += sum(([f'-imp_region[0].dream.Idiff.{k}', foot[k]] for k in ('model', 'A_F', 'tau_F', 'V_th')), [])
     return [str(c) for c in cmd + imp + ad + so + gid], len(st), len(cfg['stims'])
 
 

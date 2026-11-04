@@ -1,0 +1,27 @@
+{
+ "what": "RE+ foot current (openCARP DREAM Idiff, FOOT model 0) for every v5.2 RE+ beat; fixed before the first of the 27 RE+ beats and never changed after (D45, D48; addendum 3)",
+ "source": "analysis/v52_2026-10-20/11_engine/foot52.json (foot52.py fit; 200 um patch, w = 0.5, per heart type)",
+ "decision": "D48 (Alex \"Fit the time constant only\", 3 Nov 2026 15:21:51 UTC): A_F 0.91 mV kept, tau_F fitted",
+ "written": "2026-11-04 11:17:34 CET",
+ "hearts": {
+  "Y5HYEDL4": {
+   "model": 0,
+   "A_F": 0.91,
+   "tau_F": 0.342451,
+   "V_th": -30.0
+  },
+  "6G8DD8S5": {
+   "model": 0,
+   "A_F": 0.91,
+   "tau_F": 0.344209,
+   "V_th": -30.0
+  },
+  "7D98EVAR": {
+   "model": 0,
+   "A_F": 0.91,
+   "tau_F": 0.344209,
+   "V_th": -30.0
+  }
+ },
+ "foot52_json_sha256": "8b83ab98b20a9dc1eb65251801e092eedd279cac7af7bee47b206640ed85aa36"
+}
