@@ -1,0 +1,208 @@
+{
+ "block": "runs/v52_2026-10-20/06_mono/slab/slab",
+ "source_reading_ffce195": {
+  "Idiff": "acts: with dream.solve 1 (REp) every step runs the ionics, then the foot current A_F / tau_F exp(dT / tau_F) for TA <= t <= TA + 5 ms while Vm < V_th is added as Vm += Idiff dt, then the parabolic solve (electrics_eikonal.cc solve_RD, compute_diffusion_current)",
+  "CVrest": "does not act: solve_RE runs the FIM once at t = 0 and T_R starts at -400 ms and is updated only for DREAM (solve 3), so the restitution factor returns 1 (early exit on T_R + delay == -400); defaults rho / kappa / theta / psi left as openCARP sets them"
+ },
+ "foot": {
+  "control": {
+   "model": 0,
+   "A_F": 0.91,
+   "tau_F": 0.342451,
+   "V_th": -30.0
+  },
+  "HF": {
+   "model": 0,
+   "A_F": 0.91,
+   "tau_F": 0.344209,
+   "V_th": -30.0
+  }
+ },
+ "cells": "built-in Tomek, defaults (step 6 block cells)",
+ "runs": {
+  "control": {
+   "fibre": {
+    "exit": 0,
+    "wall_s": 169.5,
+    "tend_ms": 44.0,
+    "nodes": 46225,
+    "stimulus_nodes": 2150,
+    "dream_vel_m_s": 0.8,
+    "cv_vm_m_s": 0.8000741786813448,
+    "cv_ratio_to_dream_vel": 1.000092723351681,
+    "bins": 18,
+    "unactivated_in_range": 0,
+    "unactivated_block": 2073,
+    "vm_act_minus_eikonal_all": {
+     "n": 44152,
+     "min_ms": 1.26905088482666,
+     "median_ms": 1.392742211830139,
+     "max_ms": 1.547938
+    },
+    "vm_act_minus_eikonal_outside_stimulus": {
+     "n": 42002,
+     "min_ms": 1.26905088482666,
+     "median_ms": 1.3915618206882479,
+     "max_ms": 1.503102489189148
+    },
+    "traced_nodes": 21,
+    "max_upstroke_mV_per_ms": 314.73504531250006,
+    "median_of_node_max_upstroke_mV_per_ms": 307.31192615580005,
+    "s_per_sim_ms": 3.85
+   },
+   "sheet": {
+    "exit": 15,
+    "wall_s": 867.9
+   },
+   "normal": {
+    "exit": 0,
+    "wall_s": 183.4,
+    "tend_ms": 47.0,
+    "nodes": 46225,
+    "stimulus_nodes": 3698,
+    "dream_vel_m_s": 0.48,
+    "cv_vm_m_s": 0.4804002871702982,
+    "cv_ratio_to_dream_vel": 1.000833931604788,
+    "bins": 10,
+    "unactivated_in_range": 0,
+    "unactivated_block": 0,
+    "vm_act_minus_eikonal_all": {
+     "n": 46225,
+     "min_ms": 0.9841883610839872,
+     "median_ms": 1.4165319660644542,
+     "max_ms": 1.552224
+    },
+    "vm_act_minus_eikonal_outside_stimulus": {
+     "n": 42527,
+     "min_ms": 0.9841883610839872,
+     "median_ms": 1.4134413513183581,
+     "max_ms": 1.5010609285507202
+    },
+    "traced_nodes": 13,
+    "max_upstroke_mV_per_ms": 314.77092265450005,
+    "median_of_node_max_upstroke_mV_per_ms": 308.50958309000004,
+    "s_per_sim_ms": 3.9
+   }
+  },
+  "HF": {
+   "fibre": {
+    "exit": 0,
+    "wall_s": 169.9,
+    "tend_ms": 44.0,
+    "nodes": 46225,
+    "stimulus_nodes": 2150,
+    "dream_vel_m_s": 0.8,
+    "cv_vm_m_s": 0.8000006220950641,
+    "cv_ratio_to_dream_vel": 1.00000077761883,
+    "bins": 18,
+    "unactivated_in_range": 0,
+    "unactivated_block": 2100,
+    "vm_act_minus_eikonal_all": {
+     "n": 44125,
+     "min_ms": 1.2708339973602296,
+     "median_ms": 1.401066235839842,
+     "max_ms": 1.555058
+    },
+    "vm_act_minus_eikonal_outside_stimulus": {
+     "n": 41975,
+     "min_ms": 1.2708339973602296,
+     "median_ms": 1.399935402099608,
+     "max_ms": 1.517967581840515
+    },
+    "traced_nodes": 21,
+    "max_upstroke_mV_per_ms": 316.6166595760999,
+    "median_of_node_max_upstroke_mV_per_ms": 307.04463796449994,
+    "s_per_sim_ms": 3.86
+   },
+   "sheet": {
+    "exit": 0,
+    "wall_s": 666.6,
+    "tend_ms": 186.0,
+    "nodes": 46225,
+    "stimulus_nodes": 2150,
+    "dream_vel_m_s": 0.167,
+    "cv_vm_m_s": 0.16719114279414082,
+    "cv_ratio_to_dream_vel": 1.0011445676295858,
+    "bins": 18,
+    "unactivated_in_range": 0,
+    "unactivated_block": 5471,
+    "vm_act_minus_eikonal_all": {
+     "n": 40754,
+     "min_ms": -2.8352865205078146,
+     "median_ms": 1.4123169959716826,
+     "max_ms": 1.6064718632812571
+    },
+    "vm_act_minus_eikonal_outside_stimulus": {
+     "n": 38604,
+     "min_ms": -2.8352865205078146,
+     "median_ms": 1.4060828112792976,
+     "max_ms": 1.6064718632812571
+    },
+    "traced_nodes": 21,
+    "max_upstroke_mV_per_ms": 343.78110379060007,
+    "median_of_node_max_upstroke_mV_per_ms": 312.2927700717,
+    "s_per_sim_ms": 3.58
+   },
+   "normal": {
+    "exit": 0,
+    "wall_s": 250.8,
+    "tend_ms": 65.0,
+    "nodes": 46225,
+    "stimulus_nodes": 3698,
+    "dream_vel_m_s": 0.336,
+    "cv_vm_m_s": 0.33637450572008415,
+    "cv_ratio_to_dream_vel": 1.0011146003573932,
+    "bins": 10,
+    "unactivated_in_range": 0,
+    "unactivated_block": 0,
+    "vm_act_minus_eikonal_all": {
+     "n": 46225,
+     "min_ms": 0.9056832536621116,
+     "median_ms": 1.4339060449218763,
+     "max_ms": 1.557745
+    },
+    "vm_act_minus_eikonal_outside_stimulus": {
+     "n": 42527,
+     "min_ms": 0.9056832536621116,
+     "median_ms": 1.4299806220092766,
+     "max_ms": 1.5394898537597683
+    },
+    "traced_nodes": 13,
+    "max_upstroke_mV_per_ms": 319.39149882790014,
+    "median_of_node_max_upstroke_mV_per_ms": 308.0667893918001,
+    "s_per_sim_ms": 3.86
+   }
+  }
+ },
+ "diagnostic": {
+  "control_sheet_fim_max_iter_1000": {
+   "exit": 0,
+   "wall_s": 438.1,
+   "tend_ms": 136.0,
+   "nodes": 46225,
+   "stimulus_nodes": 2150,
+   "dream_vel_m_s": 0.23,
+   "cv_vm_m_s": 0.23028172070453762,
+   "cv_ratio_to_dream_vel": 1.0012248726284243,
+   "bins": 18,
+   "unactivated_in_range": 0,
+   "unactivated_block": 5375,
+   "vm_act_minus_eikonal_all": {
+    "n": 40850,
+    "min_ms": 0.338570387695313,
+    "median_ms": 1.4129561550292946,
+    "max_ms": 1.5809858603515607
+   },
+   "vm_act_minus_eikonal_outside_stimulus": {
+    "n": 38700,
+    "min_ms": 0.338570387695313,
+    "median_ms": 1.4082175375976576,
+    "max_ms": 1.5809858603515607
+   },
+   "traced_nodes": 21,
+   "max_upstroke_mV_per_ms": 337.24773271899994,
+   "median_of_node_max_upstroke_mV_per_ms": 311.0058994893,
+   "s_per_sim_ms": 3.22
+  }
+ }
+}

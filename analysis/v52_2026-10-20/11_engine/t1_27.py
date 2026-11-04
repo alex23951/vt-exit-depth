@@ -61,7 +61,8 @@ MIN_MB = 900
 SO = os.path.join(RUNS, 'model_fexc_O2_ftz', 'Tomek52w.so')   # Tomek52w + D44 (d)'s nodal factor fexc (sleeve52.py), gcc -O2,
 # subnormals as zero inside the model (ftz52.py, 4 Nov); fexc = 1 traces identical to model_O2_ftz and -O0 (sleeve52_check.json),
 # model_O2_ftz's identical to model_O2 (ftz52_check.json, flat-block frames bitwise identical; blend52_O2check.json)
-RATE = {'re': 67.0 * 1.15, 'mono': 26.25 * 1.1}  # s per simulated ms at 375,190 nodes, Tomek52w -O2: RE+ test 3 Nov (one core, x 1.15 for lanes); monodomain test 3 Nov (4 processes, +10 %)
+RATE = {'re': 25.0 * 1.15, 'mono': 26.25 * 1.1}  # s per simulated ms at 375,190 nodes: RE+ test 4 Nov with model_fexc_O2_ftz (one core, last 5 ms
+# block 24.4 s/ms beside one flat-block run; x 1.15 for lanes); monodomain test 3 Nov on model_O2 (4 processes, +10 %; kept, conservative)
 sys.path.insert(0, HERE)
 import blend52 as B                                                                           # noqa: E402
 
