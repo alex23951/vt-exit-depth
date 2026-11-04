@@ -1,0 +1,298 @@
+{
+ "build": {
+  "source": "runs/v52_2026-10-20/11_engine/model_O2",
+  "source_sha256": {
+   "Tomek52w.cc": "a0ef9889f7a884561c0be1f63297eefadf1a9b49dd34642abc9a1eabf294d4ed",
+   "Tomek52w.h": "b372e1fe95dc828e6f4054a950aa087d81b3f4d7b1971117f3baaefcbe96178a",
+   "Tomek52w_dyn.cc": "a9a3bf6fc12bcdda2a7e5ce4a38d742666c05cd3209d306b88551d25e63a9c6f",
+   "param_compat_types.hpp": "1e12e919d63b1fb03b5c7e354f4f0492bb1b37d29e13ea3221ef2021d03c95c9"
+  },
+  "recipe_cmd": "/usr/bin/gcc -O2 -fPIC -shared -std=c++17 -lm -I\"/usr/local/lib/opencarp/share/openCARP/physics/limpet/src\" -I\"/usr/local/lib/opencarp/share/openCARP/_build\" -I\"/usr/local/lib/opencarp/share/openCARP/_build/physics/limpet\" -I\"/usr/local/lib/opencarp/share/openCARP/_build/simulator\" -I\"/usr/local/lib/opencarp/share/openCARP\" -I\"/usr/local/lib/opencarp/share/openCARP/numerics\" -I\"/usr/local/lib/opencarp/share/openCARP/numerics/petsc\" -I\"/usr/local/lib/opencarp/share/openCARP/parser\" -I\"/usr/local/lib/opencarp/share/openCARP/numerics/ginkgo\" -I\"/usr/local/lib/opencarp/share/openCARP/simulator\" -I\"/usr/local/lib/opencarp/share/openCARP/fem\" -I\"/usr/local/lib/opencarp/share/openCARP/fem/slimfem/src\" -I\"/usr/local/lib/opencarp/share/openCARP/param/include\" -I\"/include\" -I\"//include\" -I\"/usr/local/lib/opencarp/share/openCARP/../../lib/petsc/include\" -I\"/usr/local/lib/opencarp/share/openCARP/../../lib/openmpi/include\" -I/home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_O2_ftz/recipe_check -DTOMEK52W_CPU_GENERATED  -o /home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_O2_ftz/recipe_check/Tomek52w.so /home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_O2_ftz/recipe_check/Tomek52w.cc /home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_O2_ftz/recipe_check/Tomek52w_dyn.cc",
+  "recipe_so_sha256": "a8895c3e2bf6fe69308ed9010de7cd21d525643a090a40569c668593553efc0c",
+  "model_O2_so_sha256": "a8895c3e2bf6fe69308ed9010de7cd21d525643a090a40569c668593553efc0c",
+  "recipe_reproduces_model_O2_bytes": true,
+  "patched_cc_sha256": "13d4df2c6b0151d8303a099561a13e7f95677775a92c35ceb9d145156af352f0",
+  "cmd": "/usr/bin/gcc -O2 -fPIC -shared -std=c++17 -lm -I\"/usr/local/lib/opencarp/share/openCARP/physics/limpet/src\" -I\"/usr/local/lib/opencarp/share/openCARP/_build\" -I\"/usr/local/lib/opencarp/share/openCARP/_build/physics/limpet\" -I\"/usr/local/lib/opencarp/share/openCARP/_build/simulator\" -I\"/usr/local/lib/opencarp/share/openCARP\" -I\"/usr/local/lib/opencarp/share/openCARP/numerics\" -I\"/usr/local/lib/opencarp/share/openCARP/numerics/petsc\" -I\"/usr/local/lib/opencarp/share/openCARP/parser\" -I\"/usr/local/lib/opencarp/share/openCARP/numerics/ginkgo\" -I\"/usr/local/lib/opencarp/share/openCARP/simulator\" -I\"/usr/local/lib/opencarp/share/openCARP/fem\" -I\"/usr/local/lib/opencarp/share/openCARP/fem/slimfem/src\" -I\"/usr/local/lib/opencarp/share/openCARP/param/include\" -I\"/include\" -I\"//include\" -I\"/usr/local/lib/opencarp/share/openCARP/../../lib/petsc/include\" -I\"/usr/local/lib/opencarp/share/openCARP/../../lib/openmpi/include\" -I/home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_O2_ftz -DTOMEK52W_CPU_GENERATED  -o /home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_O2_ftz/Tomek52w.so /home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_O2_ftz/Tomek52w.cc /home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_O2_ftz/Tomek52w_dyn.cc",
+  "so_sha256": "b5e788e32c038e187bb87bf2f6ee66322a4f8353ce670c4222a398e47d2356fe",
+  "diff_vs_model_O2_cc": "0a1\n> #include <xmmintrin.h>   // ftz52.py\n816a818,821\n>   // ftz52.py: inside this compute, subnormal numbers are treated as zero (SSE flush-to-zero and denormals-are-zero);\n>   // the caller's control word is restored on every exit\n>   struct Ftz52Guard { unsigned int saved; Ftz52Guard() : saved(_mm_getcsr()) { _mm_setcsr(saved | 0x8040u); }\n>                       ~Ftz52Guard() { _mm_setcsr(saved); } } ftz52_guard;\n"
+ },
+ "speed_375k_cells_2ms_s": {
+  "ftz": 34.800013,
+  "O2": 117.427812,
+  "O2_d_set_0": 33.222653
+ },
+ "check": {
+  "so_sha256": {
+   "ftz": "b5e788e32c038e187bb87bf2f6ee66322a4f8353ce670c4222a398e47d2356fe",
+   "O2": "a8895c3e2bf6fe69308ed9010de7cd21d525643a090a40569c668593553efc0c",
+   "O0": "5f6458f893bad03e402b1fdf937a8f4fa164724831a685e628d4e0d45f55ca97"
+  },
+  "wall_s": {
+   "control_w0.0_default_ftz": 2.4,
+   "control_w0.0_default_O2": 3.2,
+   "control_w0.0_default_O0": 4.0,
+   "control_w0.0_steady_ftz": 2.4,
+   "control_w0.0_steady_O2": 3.7,
+   "control_w0.5_default_ftz": 2.9,
+   "control_w0.5_default_O2": 3.9,
+   "control_w0.5_default_O0": 4.3,
+   "control_w0.5_steady_ftz": 2.4,
+   "control_w0.5_steady_O2": 3.4,
+   "control_w1.0_default_ftz": 3.0,
+   "control_w1.0_default_O2": 3.8,
+   "control_w1.0_default_O0": 4.5,
+   "control_w1.0_steady_ftz": 2.8,
+   "control_w1.0_steady_O2": 3.4,
+   "HF_w0.0_default_ftz": 2.4,
+   "HF_w0.0_default_O2": 3.7,
+   "HF_w0.0_default_O0": 4.7,
+   "HF_w0.0_steady_ftz": 3.0,
+   "HF_w0.0_steady_O2": 3.7,
+   "HF_w0.5_default_ftz": 2.5,
+   "HF_w0.5_default_O2": 3.7,
+   "HF_w0.5_default_O0": 4.5,
+   "HF_w0.5_steady_ftz": 3.0,
+   "HF_w0.5_steady_O2": 3.8,
+   "HF_w1.0_default_ftz": 2.6,
+   "HF_w1.0_default_O2": 3.1,
+   "HF_w1.0_default_O0": 4.4,
+   "HF_w1.0_steady_ftz": 3.0,
+   "HF_w1.0_steady_O2": 3.8,
+   "identity_builtin_ENDO": 3.8,
+   "identity_ftz_w0": 2.4,
+   "identity_builtin_EPI": 3.2,
+   "identity_ftz_w1": 2.1
+  },
+  "pairs": {
+   "control_w0.0_default: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35059e-306 vs 1.5316e-322"
+    ]
+   },
+   "control_w0.0_default: ftz vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35059e-306 vs 1.5316e-322"
+    ]
+   },
+   "control_w0.0_steady: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.34972e-306 vs 1.5316e-322"
+    ]
+   },
+   "control_w0.5_default: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35284e-306 vs 1.5316e-322"
+    ]
+   },
+   "control_w0.5_default: ftz vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35284e-306 vs 1.5316e-322"
+    ]
+   },
+   "control_w0.5_steady: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.36711e-306 vs 1.5316e-322"
+    ]
+   },
+   "control_w1.0_default: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.34934e-306 vs 1.5316e-322"
+    ]
+   },
+   "control_w1.0_default: ftz vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.34934e-306 vs 1.5316e-322"
+    ]
+   },
+   "control_w1.0_steady: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.36991e-306 vs 1.5316e-322"
+    ]
+   },
+   "HF_w0.0_default: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35146e-306 vs 1.5316e-322"
+    ]
+   },
+   "HF_w0.0_default: ftz vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35146e-306 vs 1.5316e-322"
+    ]
+   },
+   "HF_w0.0_steady: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35347e-306 vs 1.5316e-322"
+    ]
+   },
+   "HF_w0.5_default: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35541e-306 vs 1.5316e-322"
+    ]
+   },
+   "HF_w0.5_default: ftz vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35541e-306 vs 1.5316e-322"
+    ]
+   },
+   "HF_w0.5_steady: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.3491e-306 vs 1.5316e-322"
+    ]
+   },
+   "HF_w1.0_default: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.36849e-306 vs 1.5316e-322"
+    ]
+   },
+   "HF_w1.0_default: ftz vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.36849e-306 vs 1.5316e-322"
+    ]
+   },
+   "HF_w1.0_steady: ftz vs O2": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.34957e-306 vs 1.5316e-322"
+    ]
+   },
+   "identity ENDO: ftz w0 vs built-in": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 2.3100000007048038e-05,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "Iion: -0.00067443 vs -0.000674433",
+     "Tomek52w: Tomek52w vs Tomek",
+     "Cai: 0.074564 vs 0.0745641",
+     "Cass: 6.50506e-05 vs 6.50507e-05",
+     "Jrel_np: 1.29689e-76 vs 1.29688e-76",
+     "Jrel_p: 5.1861e-62 vs 5.18608e-62",
+     "d: 1.35578e-306 vs 1.5316e-322",
+     "nCa_i: 0.000834095 vs 0.000834099",
+     "nCa_ss: 0.000492323 vs 0.000492325",
+     "wb: 0 vs 0.247224",
+     "xs1: 0.247224 vs 0.000175612",
+     "xs2: 0.000175612 vs "
+    ]
+   },
+   "identity EPI: ftz w1 vs built-in": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 4.94000000017536e-05,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "Iion: -0.000440443 vs -0.000440437",
+     "Tomek52w: Tomek52w vs Tomek",
+     "Cai: 0.0669643 vs 0.0669644",
+     "Cass: 5.83926e-05 vs 5.83927e-05",
+     "Jrel_np: 1.84572e-77 vs 1.84575e-77",
+     "Jrel_p: 8.76243e-63 vs 8.76253e-63",
+     "d: 1.34917e-306 vs 1.5316e-322",
+     "nCa_i: 0.000550636 vs 0.000550639",
+     "nCa_ss: 0.000323786 vs 0.000323788",
+     "wb: 1 vs 0.250665",
+     "xs1: 0.250665 vs 0.000174814",
+     "xs2: 0.000174814 vs "
+    ]
+   }
+  },
+  "max_abs_dVm_mV_vs_tissue_builds": 0.0,
+  "max_abs_dAPD90_ms_vs_tissue_builds": 0.0,
+  "identity_max_abs_dVm_mV": {
+   "identity ENDO: ftz w0 vs built-in": 2.3100000007048038e-05,
+   "identity EPI: ftz w1 vs built-in": 4.94000000017536e-05
+  }
+ },
+ "tissue_flat_block": {
+  "O2": {
+   "exit": 0,
+   "wall_s": 188.9,
+   "dir": "runs/v52_2026-10-20/11_engine/speed/slab_O2"
+  },
+  "ftz": {
+   "exit": 0,
+   "wall_s": 188.9,
+   "dir": "runs/v52_2026-10-20/11_engine/speed/slab_ftz"
+  },
+  "frames": [
+   31,
+   31
+  ],
+  "nodes": 46225,
+  "bitwise_identical_vm": true,
+  "max_abs_dVm_mV": 0.0,
+  "frames_differing": 0,
+  "vm_max_mV_last_frame_O2": 23.197385787963867
+ }
+}

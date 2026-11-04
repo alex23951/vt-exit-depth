@@ -54,7 +54,8 @@ PMJ_R_MM, BIN_MS, BASE_MS = 1.0, 0.25, 100.0
 MONO_NP = int(os.environ.get('MONO_NP', '4'))
 RE_LANES = int(os.environ.get('RE_LANES', '3'))
 MIN_MB = 900
-SO = os.path.join(RUNS, 'model_O2', 'Tomek52w.so')   # same .cc as blend52.SO, gcc -O2; single-cell traces identical (blend52_O2check.json)
+SO = os.path.join(RUNS, 'model_O2_ftz', 'Tomek52w.so')   # same .cc as blend52.SO, gcc -O2, subnormals as zero inside the model
+# (ftz52.py, 4 Nov); single-cell traces identical to model_O2 and -O0 (ftz52_check.json, blend52_O2check.json), flat-block frames bitwise identical
 RATE = {'re': 67.0 * 1.15, 'mono': 26.25 * 1.1}  # s per simulated ms at 375,190 nodes, Tomek52w -O2: RE+ test 3 Nov (one core, x 1.15 for lanes); monodomain test 3 Nov (4 processes, +10 %)
 sys.path.insert(0, HERE)
 import blend52 as B                                                                           # noqa: E402
