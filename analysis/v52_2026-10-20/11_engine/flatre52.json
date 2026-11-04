@@ -204,5 +204,70 @@
    "median_of_node_max_upstroke_mV_per_ms": 311.0058994893,
    "s_per_sim_ms": 3.22
   }
+ },
+ "D50": {
+  "control_sheet": {
+   "run": {
+    "exit": 0,
+    "wall_s": 438.1,
+    "tend_ms": 136.0,
+    "nodes": 46225,
+    "stimulus_nodes": 2150,
+    "dream_vel_m_s": 0.23,
+    "cv_vm_m_s": 0.23028172070453762,
+    "cv_ratio_to_dream_vel": 1.0012248726284243,
+    "bins": 18,
+    "unactivated_in_range": 0,
+    "unactivated_block": 5375,
+    "vm_act_minus_eikonal_all": {
+     "n": 40850,
+     "min_ms": 0.338570387695313,
+     "median_ms": 1.4129561550292946,
+     "max_ms": 1.5809858603515607
+    },
+    "vm_act_minus_eikonal_outside_stimulus": {
+     "n": 38700,
+     "min_ms": 0.338570387695313,
+     "median_ms": 1.4082175375976576,
+     "max_ms": 1.5809858603515607
+    },
+    "traced_nodes": 21,
+    "max_upstroke_mV_per_ms": 337.24773271899994,
+    "median_of_node_max_upstroke_mV_per_ms": 311.0058994893,
+    "s_per_sim_ms": 3.22
+   },
+   "reruns": {
+    "1000": {
+     "run": "stopped after the t = 0 solve",
+     "iterations": 1001,
+     "active_list_at_exit": 4,
+     "max_abs_diff_ms": 8.088867190281235e-06,
+     "max_abs_diff_vs_float32_run_ms": 1.52587890625e-05
+    },
+    "1001": {
+     "run": "stopped after the t = 0 solve",
+     "iterations": 1002,
+     "active_list_at_exit": 4,
+     "max_abs_diff_ms": 8.088867190281235e-06,
+     "max_abs_diff_vs_float32_run_ms": 1.52587890625e-05
+    },
+    "1002": {
+     "run": "stopped after the t = 0 solve",
+     "iterations": 1003,
+     "active_list_at_exit": 4,
+     "max_abs_diff_ms": 8.088867190281235e-06,
+     "max_abs_diff_vs_float32_run_ms": 1.52587890625e-05
+    },
+    "1003": {
+     "run": "stopped after the t = 0 solve",
+     "iterations": 1004,
+     "active_list_at_exit": 4,
+     "max_abs_diff_ms": 8.088867190281235e-06,
+     "max_abs_diff_vs_float32_run_ms": 1.52587890625e-05
+    }
+   },
+   "largest_diff_ms": 8.088867190281235e-06,
+   "stands": true
+  }
  }
 }

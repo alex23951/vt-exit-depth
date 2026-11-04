@@ -17,7 +17,7 @@ state per node interpolated in w from blend52's steady-state cells (CL 1000 ms, 
 beat starts where step 4's targets were measured. Tags 1, 2, 25, 28, 29 (all myocardium).
 RE+ (T1): dream.solve 1 (eikonal physics region on all myocardial tags), dream.vel = v5.2 speeds (params/v52_speeds.json),
 foot current FOOT (Idiff.model 0) with A_F 0.91 mV and the fitted tau_F per heart type (params/v52_re_foot.json; D45, D48),
-diffusion on fix 2's sigma (params/v52_conductivities.json; 15.3), dream.fim.tol 0.001, max_iter 1e9 (C68); one process.
+diffusion on fix 2's sigma (params/v52_conductivities.json; 15.3), dream.fim.tol 0.001, max_iter 1000 (D50, 4 Nov; was 1e9, C68) with D50's rerun check; one process.
 Window R1.6: 100 ms at rest, stimulus at 100 ms, to max(graph activation + target APD90) + 50 ms (+ 20 ms margin).
 Monodomain (gate 9 comparator): tuned sigma (params/v52_mono_conductivities.json, step 6, within 3 %), MONO_NP processes;
 window by t1_choices.json: 'qrs' = graph total activation + 30 ms from the stimulus (v5.1's rule), 'r16' = as RE+.
@@ -58,6 +58,8 @@ PMJ_R_MM, BIN_MS, BASE_MS = 1.0, 0.25, 100.0
 MONO_NP = int(os.environ.get('MONO_NP', '4'))
 RE_LANES = int(os.environ.get('RE_LANES', '3'))
 MIN_MB = 900
+FIM_MAX_ITER = 1000                                     # D50 (Alex "Cap at 1000 with a check", 4 Nov 2026 11:47:56 UTC); was 1e9 (C68)
+FIM_CHECK = (1001, 1002, 1003)                          # D50's check when the t = 0 solve ends at the cap with a non-empty list
 SO = os.path.join(RUNS, 'model_fexc_O2_ftz', 'Tomek52w.so')   # Tomek52w + D44 (d)'s nodal factor fexc (sleeve52.py), gcc -O2,
 # subnormals as zero inside the model (ftz52.py, 4 Nov); fexc = 1 traces identical to model_O2_ftz and -O0 (sleeve52_check.json),
 # model_O2_ftz's identical to model_O2 (ftz52_check.json, flat-block frames bitwise identical; blend52_O2check.json)
@@ -308,7 +310,7 @@ def command(b):
            '-bidomain', 0, '-dt', 10.0, '-parab_solve', 1, '-tend', b['tend_ms'], '-spacedt', 1.0, '-timedt', 5.0,
            '-num_LATs', 1, '-lats[0].ID', 'LATs', '-lats[0].all', 0, '-lats[0].measurand', 0, '-lats[0].threshold', -10, '-lats[0].method', 1]
     if b['engine'] == 're':
-        cmd += ['-dream.solve', 1, '-dream.fim.tol', 0.001, '-dream.fim.max_iter', 1000000000, '-output_level', 2, '-num_phys_regions', 1,
+        cmd += ['-dream.solve', 1, '-dream.fim.tol', 0.001, '-dream.fim.max_iter', FIM_MAX_ITER, '-output_level', 2, '-num_phys_regions', 1,
                 '-phys_region[0].ptype', 2, '-phys_region[0].num_IDs', len(TAGS)] + sum(([f'-phys_region[0].ID[{i}]', t] for i, t in enumerate(TAGS)), [])
         foot = json.load(open(os.path.join(REPO, 'params', 'v52_re_foot.json')))['hearts'][h]     # D45 / D48 (foot52.py), fixed
         imp += sum(([f'-imp_region[0].dream.Idiff.{k}', foot[k]] for k in ('model', 'A_F', 'tau_F', 'V_th')), [])
@@ -360,6 +362,11 @@ def finish(b, rec):
             rec['flagged_driven_again'] = 'not measured (Vm and Idiff are written every 1 ms; the build cannot count it per step)'
     if b['engine'] == 're':                                                                     # lock note 4 Nov section 2: counts
         rec['fim_t0_iterations'], rec['fim_t0_active_list_at_exit'] = fim_counts(d)
+        if rec['fim_t0_active_list_at_exit'] is None or rec['fim_t0_active_list_at_exit'] > 0:   # D50: ended at the cap
+            chk = fim_rerun(b, d)
+            rec['fim_check'] = chk
+            rec['fim_check_max_abs_diff_ms'] = max(x['max_abs_diff_ms'] for x in chk.values())
+            rec['fim_check_failed'] = bool(rec['fim_check_max_abs_diff_ms'] > 0.01)
     cls = node_classes(h, b['site'], len(flag))
     rec['check6_by_class'] = {k: {'ead': int((c6['ead'] & ~flag & (cls == i)).sum()),
                                   'repolarised_in_window': int((np.isfinite(c6['apd90_ms']) & ~flag & (cls == i)).sum()),
@@ -410,7 +417,7 @@ def node_classes(h, site, n):
     return cls
 
 
-def fim_counts(d):
+def fim_counts(d, log_name='openCARP.log'):
     """t = 0 FIM iterations (eik_stats.dat, 'its') and the active-list size at exit (openCARP.log, output_level 2)."""
     its = act = None
     f = os.path.join(d, 'eik_stats.dat')
@@ -418,10 +425,74 @@ def fim_counts(d):
         rows = [l.split() for l in open(f) if l.strip() and l.split()[0].replace('.', '', 1).isdigit()]
         if rows:
             its = int(rows[0][3])
-    for l in open(os.path.join(d, 'openCARP.log'), errors='replace'):
+    lf = os.path.join(d, log_name)
+    for l in (open(lf, errors='replace') if os.path.exists(lf) else []):
         if l.startswith('active list:'):
             act = int(l.split()[2]); break
     return its, act
+
+
+def act0(f):
+    """The t = 0 FIM activation times (act.igb frame 0; -1 = not reached)."""
+    return np.asarray(igb(f)[0], np.float64)
+
+
+def fim_diff(a, r):
+    reach = (a >= 0) & (r >= 0)
+    if ((a >= 0) != (r >= 0)).any():
+        return float('inf')
+    return float(np.abs(a[reach] - r[reach]).max()) if reach.any() else 0.0
+
+
+def solve_t0(c, rd, n, log_name='openCARP.log', timeout_s=7200):
+    """Run an openCARP RE command (its own tend and stimuli, so the parser's checks and the FIM's sources are the beat's)
+    only through its t = 0 solve: an eikonal state checkpoint at the first step (-num_tsav 1 -tsav[0] 0.01; written
+    with fclose, unlike the buffered act.igb) gives every node's activation time; then the run is stopped.
+    Returns (state, activation times with -1 for unreached, as act.igb)."""
+    os.makedirs(rd, exist_ok=True)
+    c = list(c) + ['-num_tsav', '1', '-tsav[0]', '0.01', '-write_statef', os.path.join(rd, 'state')]
+    log = open(os.path.join(rd, log_name), 'w')
+    p = subprocess.Popen(c, stdout=log, stderr=subprocess.STDOUT, env=dict(os.environ, OMP_NUM_THREADS='1'), start_new_session=True, cwd=rd)
+    t0, last, st = time.time(), -1, 'timeout'
+    while time.time() - t0 < timeout_s:
+        time.sleep(2)
+        f = [x for x in os.listdir(rd) if x.startswith('state') and x.endswith('.roe.dat')]
+        if f:
+            sz = os.path.getsize(os.path.join(rd, f[0]))
+            if sz == last and sz > 0:
+                st = 'stopped after the t = 0 solve'; break
+            last = sz
+        if p.poll() is not None:
+            st = f'exit {p.returncode}'; break
+    if p.poll() is None:
+        os.killpg(p.pid, signal.SIGTERM); p.wait()
+    log.close()
+    f = [x for x in os.listdir(rd) if x.startswith('state') and x.endswith('.roe.dat')]
+    if not f:
+        return st, None
+    ta = np.loadtxt(os.path.join(rd, f[0]), usecols=3, converters={3: lambda x: float(x)})
+    for x in os.listdir(rd):                                                                  # the ionic state dump is large and not needed
+        if x.startswith('state') and x.endswith('.roe'):
+            os.remove(os.path.join(rd, x))
+    return st, np.where(np.isfinite(ta), ta, -1.0)
+
+
+def fim_rerun(b, d, iters=FIM_CHECK):
+    """D50's check: the beat's own t = 0 solve rerun alone (same command, inputs and thread count, stopped once the t = 0
+    solve is written) at each max_iter; the largest |activation time difference| against the beat's own act.igb (counts)."""
+    cmd, _, _ = command(b)
+    ref = act0(os.path.join(d, 'act.igb'))
+    out = {}
+    for it in iters:
+        rd = os.path.join(d, f'fim_check_{it}')
+        c = list(cmd)
+        for k, v in (('-simID', rd), ('-dream.fim.max_iter', str(it))):
+            c[c.index(k) + 1] = v
+        st, ta = solve_t0(c, rd, len(ref))
+        its, act = fim_counts(rd)
+        out[str(it)] = {'run': st, 'iterations': its, 'active_list_at_exit': act,
+                        'max_abs_diff_ms': fim_diff(ta, ref) if ta is not None and len(ta) == len(ref) else float('inf')}
+    return out
 
 
 def check6(vm, tend, chunk=20000):
@@ -485,6 +556,8 @@ def close(j, status):
             rec = finish(b, rec)
             if rec['nan_frames'] or rec['unactivated_nodes']:
                 rec['status'] = status = 'failed (NaN or unactivated nodes)'
+            elif rec.get('fim_check_failed'):
+                rec['status'] = status = 'failed (t = 0 FIM at the cap moved by more than 0.01 ms at 1001-1003: numerical failure, D50 / D42 (1))'
             elif rec.get('flagged_vm_above_every_excitable'):
                 rec['status'] = status = 'failed (a flagged node above every excitable node: numerical failure, addendum 2 item 4)'
         except Exception as e:                                                            # noqa: BLE001
@@ -495,6 +568,7 @@ def close(j, status):
             + (f", unactivated nodes {rec.get('unactivated_nodes')}, NaN frames {rec.get('nan_frames')}" if 'nan_frames' in rec else '')
             + (f", EAD-flagged nodes {rec.get('ead_flagged_excitable_nodes')}" if b['engine'] == 're' and 'ead_flagged_excitable_nodes' in rec else '')
             + (f", t = 0 FIM {rec.get('fim_t0_iterations')} iterations, active list at exit {rec.get('fim_t0_active_list_at_exit')}" if b['engine'] == 're' and 'nan_frames' in rec else '')
+            + (f" (D50 check at 1001-1003: largest difference {rec['fim_check_max_abs_diff_ms']:.4g} ms)" if 'fim_check_max_abs_diff_ms' in rec else '')
             + (', check 6 by class (EAD / repolarised in window): ' + '; '.join(f"{k} {v['ead']} / {v['repolarised_in_window']}" for k, v in rec['check6_by_class'].items())
                if 'check6_by_class' in rec else '')
             + (f", flagged nodes {rec['flagged_nodes']} (above every excitable node: {rec.get('flagged_vm_above_every_excitable', 'n/a')}; driven again: not measured)"

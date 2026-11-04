@@ -142,7 +142,38 @@ def diagnostic(s, a, max_iter):
     print(json.dumps(r, indent=1))
 
 
+def fimcheck(s, a, cap=1000, iters=(1001, 1002, 1003)):
+    """D50 (Alex "Cap at 1000 with a check", 4 Nov 2026), report only: the axis run at max_iter = cap (the diagnostic of
+    11:55, same inputs) is the beat; its t = 0 solve is rerun alone (its parameters.par, trace entries dropped, stopped
+    once the t = 0 solve is written: t1_27.solve_t0) at cap (for the list size at exit, output_level 2) and at
+    1001-1003; largest |activation time difference| against the run's act.igb."""
+    import t1_27 as T
+    d = os.path.join(RUN, f'{s}_{a}_fim{cap}')
+    base = os.path.join(d, 'base_check.par')
+    with open(base, 'w') as f:
+        for l in open(os.path.join(d, 'parameters.par')):
+            if not l.split('=')[0].strip().startswith(('num_trace', 'trace_node', 'tracedt')):
+                f.write(l)
+    ref = T.act0(os.path.join(d, 'act.igb'))
+    out = {}
+    for it in (cap,) + tuple(iters):
+        rd = os.path.join(d, f'fim_check_{it}')
+        st, x = T.solve_t0(['openCARP', '+F', base, '-simID', rd, '-dream.fim.max_iter', str(it), '-output_level', '2'], rd, len(ref), 'run.log')
+        its, act = T.fim_counts(rd, 'run.log')
+        out[str(it)] = {'run': st, 'iterations': its, 'active_list_at_exit': act, 'max_abs_diff_ms': T.fim_diff(x, ref),
+                        'max_abs_diff_vs_float32_run_ms': T.fim_diff(x.astype(np.float32).astype(np.float64), ref)}
+    chk = [v['max_abs_diff_ms'] for k, v in out.items() if k != str(cap)]
+    rec = json.load(open(OUT))
+    rec.setdefault('D50', {})[f'{s}_{a}'] = {'run': rec['diagnostic'][f'{s}_{a}_fim_max_iter_{cap}'], 'reruns': out,
+                                             'largest_diff_ms': max(chk), 'stands': bool(max(chk) <= 0.01)}
+    json.dump(rec, open(OUT, 'w'), indent=1)
+    print(json.dumps(rec['D50'][f'{s}_{a}']['reruns'], indent=1), 'largest', max(chk))
+
+
 if __name__ == '__main__':
+    if len(sys.argv) > 1 and sys.argv[1] == 'fimcheck':
+        fimcheck(sys.argv[2], sys.argv[3])
+        sys.exit()
     if len(sys.argv) > 1 and sys.argv[1] == 'diagnostic':
         diagnostic(sys.argv[2], sys.argv[3], int(sys.argv[4]))
     else:
