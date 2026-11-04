@@ -1,0 +1,15 @@
+{
+ "heart": "6G8DD8S5",
+ "merged_nodes": 375949,
+ "cut_nodes": 376213,
+ "split_merged_nodes": 264,
+ "sim_nodes": 376213,
+ "max_abs_weight_sum_diff_vs_step5": 8.20959409665329e-13,
+ "max_abs_step5_weight": 2.192471583839506e-05,
+ "equal_copies_ecg_max_abs_diff_mV": 1.314904778809689e-09,
+ "equal_copies_ecg_scale_mV": 0.013255693368268831,
+ "sim_nodes_cover_all_cut_nodes": true,
+ "lf_dir": "/home/alex/vt-exit-depth/runs/v52_2026-10-20/05_conductor/6G8DD8S5/leadfield52_c73_jacobi/POSTPROC_DIR",
+ "c": -1.0,
+ "sigma": "i (fix 2, R2.3)"
+}

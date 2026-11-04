@@ -1,0 +1,317 @@
+{
+ "build": {
+  "model": "runs/v52_2026-10-20/11_engine/model_fexc_O2_ftz/Tomek52w.model",
+  "model_sha256": "c11d0bf7715a4a329f533581e519f697a0dcc051522c90d93fbc569d5b64499d",
+  "edits": [
+   "wb = 0.0; .units(unitless); .param(); .nodal();\n# v5.2 D44 (d) (sleeve52.py): nodal excitability factor on INa, INaL and the L-type channel (PCa), 0 at fibrous-layer nodes\nfexc = 1.0; .units(unitless); .param(); .nodal();",
+   "INa = (fexc*GNa*(V - ENa)*",
+   "INaL = (fexc*GNaL*(V - ENa)*",
+   "PCa = (fexc*(((1.-wb)*PCa_b)+(wb*(PCa_b*1.2))));"
+  ],
+  "gcc": "/usr/bin/gcc -O2 -fPIC -shared -std=c++17 -lm -I\"/usr/local/lib/opencarp/share/openCARP/physics/limpet/src\" -I\"/usr/local/lib/opencarp/share/openCARP/_build\" -I\"/usr/local/lib/opencarp/share/openCARP/_build/physics/limpet\" -I\"/usr/local/lib/opencarp/share/openCARP/_build/simulator\" -I\"/usr/local/lib/opencarp/share/openCARP\" -I\"/usr/local/lib/opencarp/share/openCARP/numerics\" -I\"/usr/local/lib/opencarp/share/openCARP/numerics/petsc\" -I\"/usr/local/lib/opencarp/share/openCARP/parser\" -I\"/usr/local/lib/opencarp/share/openCARP/numerics/ginkgo\" -I\"/usr/local/lib/opencarp/share/openCARP/simulator\" -I\"/usr/local/lib/opencarp/share/openCARP/fem\" -I\"/usr/local/lib/opencarp/share/openCARP/fem/slimfem/src\" -I\"/usr/local/lib/opencarp/share/openCARP/param/include\" -I\"/include\" -I\"//include\" -I\"/usr/local/lib/opencarp/share/openCARP/../../lib/petsc/include\" -I\"/usr/local/lib/opencarp/share/openCARP/../../lib/openmpi/include\" -I/home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_fexc_O2_ftz -DTOMEK52W_CPU_GENERATED  -o /home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_fexc_O2_ftz/Tomek52w.so /home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_fexc_O2_ftz/Tomek52w.cc /home/alex/vt-exit-depth/runs/v52_2026-10-20/11_engine/model_fexc_O2_ftz/Tomek52w_dyn.cc",
+  "so": "runs/v52_2026-10-20/11_engine/model_fexc_O2_ftz/Tomek52w.so",
+  "so_sha256": "b07f865e8159ea354ae950ccba709f5279bf01a0a002e31ded664eb2ab763bc2",
+  "O0_so_sha256": "60334eb1e06e700a8bf46173d8be608be0bbbd8ee96a07d47d11b0ee07b05222",
+  "fexc_uses_in_generated_cc": 12,
+  "diff_model_vs_Tomek52w": "31a32,33\n> # v5.2 D44 (d) (sleeve52.py): nodal excitability factor on INa, INaL and the L-type channel (PCa), 0 at fibrous-layer nodes\n> fexc = 1.0; .units(unitless); .param(); .nodal();\n253c255\n< INa = (GNa*(V - ENa)*(m*m*m)*(((1. - fINap)*h*j)+(fINap*hp*jp))); .units(uA/uF);\n---\n> INa = (fexc*GNa*(V - ENa)*(m*m*m)*(((1. - fINap)*h*j)+(fINap*hp*jp))); .units(uA/uF);\n266c268\n< INaL = (GNaL*(V - ENa)*mL*(((1. - fINaLp)*hL)+(fINaLp*hLp))); .units(uA/uF);\n---\n> INaL = (fexc*GNaL*(V - ENa)*mL*(((1. - fINaLp)*hL)+(fINaLp*hLp))); .units(uA/uF);\n338c340\n< PCa = (((1.-wb)*PCa_b)+(wb*(PCa_b*1.2))); .units(unitless);\n---\n> PCa = (fexc*(((1.-wb)*PCa_b)+(wb*(PCa_b*1.2)))); .units(unitless);\n"
+ },
+ "check1_fexc1": {
+  "pairs": {
+   "control_w0.0_default: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "control_w0.0_default: fexc=1 vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35059e-306 vs 1.5316e-322"
+    ],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "control_w0.0_steady: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "control_w0.5_default: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "control_w0.5_default: fexc=1 vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35284e-306 vs 1.5316e-322"
+    ],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "control_w0.5_steady: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "control_w1.0_default: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "control_w1.0_default: fexc=1 vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.34934e-306 vs 1.5316e-322"
+    ],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "control_w1.0_steady: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "HF_w0.0_default: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "HF_w0.0_default: fexc=1 vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35146e-306 vs 1.5316e-322"
+    ],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "HF_w0.0_steady: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "HF_w0.5_default: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "HF_w0.5_default: fexc=1 vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.35541e-306 vs 1.5316e-322"
+    ],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "HF_w0.5_steady: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "HF_w1.0_default: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "HF_w1.0_default: fexc=1 vs O0": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "d: 1.36849e-306 vs 1.5316e-322"
+    ],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "HF_w1.0_steady: fexc=1 vs ftz": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 0.0,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [],
+    "end_state_only_in_first": [
+     "fexc"
+    ]
+   },
+   "identity ENDO: fexc=1 w0 vs built-in": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 2.3100000007048038e-05,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "Cai: 0.074564 vs 0.0745641",
+     "Cass: 6.50506e-05 vs 6.50507e-05",
+     "Iion: -0.00067443 vs -0.000674433",
+     "Jrel_np: 1.29689e-76 vs 1.29688e-76",
+     "Jrel_p: 5.1861e-62 vs 5.18608e-62",
+     "d: 1.35578e-306 vs 1.5316e-322",
+     "nCa_i: 0.000834095 vs 0.000834099",
+     "nCa_ss: 0.000492323 vs 0.000492325"
+    ],
+    "end_state_only_in_first": [
+     "fexc",
+     "wb"
+    ]
+   },
+   "identity EPI: fexc=1 w1 vs built-in": {
+    "samples": 20001,
+    "max_abs_dVm_mV": 4.94000000017536e-05,
+    "beats": 19,
+    "max_abs_dAPD90_ms": 0.0,
+    "end_state_lines_differing": [
+     "Cai: 0.0669643 vs 0.0669644",
+     "Cass: 5.83926e-05 vs 5.83927e-05",
+     "Iion: -0.000440443 vs -0.000440437",
+     "Jrel_np: 1.84572e-77 vs 1.84575e-77",
+     "Jrel_p: 8.76243e-63 vs 8.76253e-63",
+     "d: 1.34917e-306 vs 1.5316e-322",
+     "nCa_i: 0.000550636 vs 0.000550639",
+     "nCa_ss: 0.000323786 vs 0.000323788"
+    ],
+    "end_state_only_in_first": [
+     "fexc",
+     "wb"
+    ]
+   }
+  },
+  "max_abs_dVm_mV": 0.0,
+  "max_abs_dAPD90_ms": 0.0,
+  "identity_max_abs_dVm_mV": {
+   "identity ENDO: fexc=1 w0 vs built-in": 2.3100000007048038e-05,
+   "identity EPI: fexc=1 w1 vs built-in": 4.94000000017536e-05
+  },
+  "end_state_lines_differing_tissue_pairs": [
+   "d: 1.34934e-306 vs 1.5316e-322",
+   "d: 1.35059e-306 vs 1.5316e-322",
+   "d: 1.35146e-306 vs 1.5316e-322",
+   "d: 1.35284e-306 vs 1.5316e-322",
+   "d: 1.35541e-306 vs 1.5316e-322",
+   "d: 1.36849e-306 vs 1.5316e-322"
+  ]
+ },
+ "check2_fexc0": {
+  "control": {
+   "0.0": {
+    "stim_uA_cm2": 51.474609375,
+    "Vmax_mV": -38.0556128,
+    "t_Vmax_ms": 2.0,
+    "Vm_end_100ms_mV": -88.7687954,
+    "fires": false
+   },
+   "0.5": {
+    "stim_uA_cm2": 52.3095703125,
+    "Vmax_mV": -37.372703,
+    "t_Vmax_ms": 2.0,
+    "Vm_end_100ms_mV": -88.8416317,
+    "fires": false
+   },
+   "1.0": {
+    "stim_uA_cm2": 53.02734375,
+    "Vmax_mV": -36.7726136,
+    "t_Vmax_ms": 2.0,
+    "Vm_end_100ms_mV": -88.8818453,
+    "fires": false
+   }
+  },
+  "HF": {
+   "0.0": {
+    "stim_uA_cm2": 51.474609375,
+    "Vmax_mV": -38.0577122,
+    "t_Vmax_ms": 2.0,
+    "Vm_end_100ms_mV": -88.7724614,
+    "fires": false
+   },
+   "0.5": {
+    "stim_uA_cm2": 52.2998046875,
+    "Vmax_mV": -37.3849003,
+    "t_Vmax_ms": 2.0,
+    "Vm_end_100ms_mV": -88.8472695,
+    "fires": false
+   },
+   "1.0": {
+    "stim_uA_cm2": 52.998046875,
+    "Vmax_mV": -36.795696,
+    "t_Vmax_ms": 2.0,
+    "Vm_end_100ms_mV": -88.8820261,
+    "fires": false
+   }
+  },
+  "any_fires": false
+ }
+}

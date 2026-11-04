@@ -1,0 +1,15 @@
+{
+ "heart": "7D98EVAR",
+ "merged_nodes": 337700,
+ "cut_nodes": 337981,
+ "split_merged_nodes": 281,
+ "sim_nodes": 337981,
+ "max_abs_weight_sum_diff_vs_step5": 8.78017968118476e-13,
+ "max_abs_step5_weight": 2.3286978830583394e-05,
+ "equal_copies_ecg_max_abs_diff_mV": 8.854457965445928e-10,
+ "equal_copies_ecg_scale_mV": 0.014074427720987229,
+ "sim_nodes_cover_all_cut_nodes": true,
+ "lf_dir": "/home/alex/vt-exit-depth/runs/v52_2026-10-20/05_conductor/7D98EVAR/leadfield52_c73_jacobi/POSTPROC_DIR",
+ "c": -1.0,
+ "sigma": "i (fix 2, R2.3)"
+}

@@ -8,8 +8,10 @@ Sites (per heart): the 8 gate-9 sites of v5.1's check that the v5.2 manifest hol
 Graph beat: heart52.Heart52 (v5.2 tissue, network, 4 / 2 ms coupling); junction exit times (network time + 4 ms, where the
 exit is not later than its muscle) are replayed in both engines as timed stimuli (one-way, 11.4 item 5), each widened to
 the nodes within 1.0 mm on the junction's own side of the cut (connected within the ball), in 0.25 ms bins (as v5.1).
-Simulation mesh: biv52cut (split across the infundibulum plane, 8.2: no current crosses) with every element that touches
-a fibrous-layer node removed (8.6 non-excitable; the graph leg drops every edge touching one) and orphan nodes dropped.
+Simulation mesh: biv52cut (split across the infundibulum plane, 8.2: no current crosses), every element kept (D44 (d), 4 Nov;
+the HF preps of 3 Nov removed every element touching a fibrous-layer node and are superseded); the fibrous-layer nodes
+(8.6 non-excitable; the graph leg drops every edge touching one) are made non-excitable by Tomek52w's nodal factor fexc = 0
+on INa, INaL and the L-type channel (sleeve52.py), set by adjustment; they are not counted as unactivated nodes.
 Ionic: Tomek52w (blend52.py): nodal wb = the node's APD w (apd52.npz), sGKs / sGKr per heart (blend52.SETTINGS), initial
 state per node interpolated in w from blend52's steady-state cells (CL 1000 ms, R1.1 criterion) - my reading, so the
 beat starts where step 4's targets were measured. Tags 1, 2, 25, 28, 29 (all myocardium).
@@ -29,6 +31,7 @@ Usage (repo root, venv, PATH with openCARP's mpiexec):
   python -B .../t1_27.py plan               the queue with estimated hours per beat and per night
   python -B .../t1_27.py night [HOURS]      one unattended chunk (default 8 h): RE+ lanes first, then monodomain beats
   python -B .../t1_27.py status             done / left
+  python -B .../t1_27.py check6 [ENGINE]    check 6 from kept raw files of finished beats that predate it (counts only)
   python -B .../t1_27.py analyze            RE+ against monodomain by the gate-9 rule -> t1_results.csv, t1_summary.json
 """
 import json
@@ -55,8 +58,9 @@ PMJ_R_MM, BIN_MS, BASE_MS = 1.0, 0.25, 100.0
 MONO_NP = int(os.environ.get('MONO_NP', '4'))
 RE_LANES = int(os.environ.get('RE_LANES', '3'))
 MIN_MB = 900
-SO = os.path.join(RUNS, 'model_O2_ftz', 'Tomek52w.so')   # same .cc as blend52.SO, gcc -O2, subnormals as zero inside the model
-# (ftz52.py, 4 Nov); single-cell traces identical to model_O2 and -O0 (ftz52_check.json, blend52_O2check.json), flat-block frames bitwise identical
+SO = os.path.join(RUNS, 'model_fexc_O2_ftz', 'Tomek52w.so')   # Tomek52w + D44 (d)'s nodal factor fexc (sleeve52.py), gcc -O2,
+# subnormals as zero inside the model (ftz52.py, 4 Nov); fexc = 1 traces identical to model_O2_ftz and -O0 (sleeve52_check.json),
+# model_O2_ftz's identical to model_O2 (ftz52_check.json, flat-block frames bitwise identical; blend52_O2check.json)
 RATE = {'re': 67.0 * 1.15, 'mono': 26.25 * 1.1}  # s per simulated ms at 375,190 nodes, Tomek52w -O2: RE+ test 3 Nov (one core, x 1.15 for lanes); monodomain test 3 Nov (4 processes, +10 %)
 sys.path.insert(0, HERE)
 import blend52 as B                                                                           # noqa: E402
@@ -144,8 +148,9 @@ def prep_heart(h):
     tags = np.loadtxt(os.path.join(V, 'biv52cut.elem'), skiprows=1, usecols=5, dtype=np.int64)
     lon = np.loadtxt(os.path.join(V, 'biv52cut.lon'), skiprows=1)
     E = Hh.E
-    ke = ~Hh.nonex[E].any(1)
+    ke = np.ones(len(E), bool)                                                                # D44 (d): every element kept
     used = np.unique(E[ke]); keep = used                                                      # sim node -> cut node
+    flag = Hh.nonex[used]                                                                     # fibrous-layer nodes: fexc = 0
     rem = np.full(Hh.N, -1); rem[used] = np.arange(len(used))
     base = hdir(h, 'mesh', 'sim52')
     with open(base + '.pts', 'w') as f:
@@ -157,7 +162,7 @@ def prep_heart(h):
     src = np.load(os.path.join(V, 'cut_dup52.npy'))                                           # cut node -> merged node
     merged = src[keep]
     w = np.load(os.path.join(V, 'apd52.npz'))['w'][merged]
-    np.savez(hdir(h, 'mesh', 'maps.npz'), keep=keep, merged=merged, w=w, Nm=Hh.Nm, Ncut=Hh.N)
+    np.savez(hdir(h, 'mesh', 'maps.npz'), keep=keep, merged=merged, w=w, Nm=Hh.Nm, Ncut=Hh.N, flagged=np.where(flag)[0])
     # adjustments: wb and the initial state, per setting of this heart
     setting = 'control' if h == 'Y5HYEDL4' else 'HF'
     grid = json.load(open(B.OUT))['grid'][setting]
@@ -166,8 +171,9 @@ def prep_heart(h):
     names = states[0][0]
     S = np.array([s[1] for s in states])                                                      # (grid, vars)
     ad = hdir(h, 'adj'); os.makedirs(ad, exist_ok=True)
-    adjs = [('Tomek52w.wb', os.path.join(ad, 'wb.adj'))]
+    adjs = [('Tomek52w.wb', os.path.join(ad, 'wb.adj')), ('Tomek52w.fexc', os.path.join(ad, 'fexc.adj'))]
     adj(adjs[0][1], w)
+    adj(adjs[1][1], np.where(flag, 0.0, 1.0))
     for k, nm in enumerate(names):
         if nm in ('wb', 'Iion'):
             continue
@@ -211,11 +217,12 @@ def prep_heart(h):
         beats.append({'site': s['id'], 'stimuli': len(stims), **win})
         print(h, s['id'], 'stimuli', len(stims), 'unactivated excitable', info['unactivated_excitable_nodes'], flush=True)   # counts only (lock thread)
     rec = {'heart': h, 'setting': setting, 'sim_nodes': int(len(used)), 'sim_elements': int(ke.sum()), 'elements_removed_fibrous': int((~ke).sum()),
+           'flagged_nodes_fexc0': int(flag.sum()), 'flagged_elements_kept': int(Hh.nonex[E].any(1).sum()),
            'cut_nodes': int(Hh.N), 'merged_nodes': int(Hh.Nm), 'adjustments': adjs, 'vm0_range_mV': [float(vm0.min()), float(vm0.max())],
            'heart52_keys': Hh.keys, 'beats': beats, 'wall_s': round(time.time() - t0, 1)}
     json.dump(rec, open(hdir(h, 'prep.json'), 'w'), indent=1, default=str)
     np.save(hdir(h, 'mesh', 'vm0.npy'), vm0.astype(np.float32))
-    print(h, 'prep done', rec['sim_nodes'], 'nodes', rec['elements_removed_fibrous'], 'elements removed', flush=True)
+    print(h, 'prep done', rec['sim_nodes'], 'nodes', rec['elements_removed_fibrous'], 'elements removed', rec['flagged_nodes_fexc0'], 'flagged nodes', flush=True)
 
 
 # ---------------------------------------------------------------- beats
@@ -330,17 +337,36 @@ def finish(b, rec):
     xyz = np.loadtxt(hdir(h, 'mesh', 'sim52.pts'), skiprows=1)[site]
     rec['nan_frames'] = int(np.isnan(vm).any(1).sum())
     lat = np.loadtxt(os.path.join(d, 'init_acts_LATs-thresh.dat'))
-    rec['unactivated_nodes'] = int((lat < 0).sum())
+    flag = np.zeros(vm.shape[1], bool)
+    if 'flagged' in M.files:
+        flag[M['flagged']] = True
+    rec['unactivated_nodes'] = int(((lat < 0) & ~flag).sum())                                   # excitable nodes only (D44 (d))
+    rec['flagged_nodes'] = int(flag.sum())
     shift = BASE_MS if b['engine'] == 're' else 0.0
     if b['engine'] == 'mono':
-        rec['own_last_activation_inside_window'] = bool((lat >= 0).all() and lat.max() < b['tend_ms'])   # check 5 (b), a count
+        ex = lat[~flag]
+        rec['own_last_activation_inside_window'] = bool((ex >= 0).all() and ex.max() < b['tend_ms'])   # check 5 (b), a count
+    c6 = check6(vm, b['tend_ms'])
+    if b['engine'] == 're':
+        f = os.path.join(d, 'act.igb')
+        c6['eikonal_ms'] = np.asarray(igb(f)[0], np.float32) if os.path.exists(f) else np.full(vm.shape[1], np.nan, np.float32)
+        rep_t = c6['repol_ms'][~flag]
+        rec['own_latest_repol_plus_50_inside_window'] = bool(np.isfinite(rep_t).all() and np.nanmax(rep_t) + 50.0 <= b['tend_ms'])   # check 5 (a)
+        rest = np.asarray(vm[:int(BASE_MS) + 1], np.float64)                                    # check 4 (T2 values: kept, not printed)
+        c6['check4'] = np.array([np.abs(rest[-1] - rest[0]).max(), np.sqrt(np.mean((rest[-1] - rest[0]) ** 2)), np.abs(np.diff(rest, axis=0)).max()])
+        if flag.any():                                                                          # addenda 2-3 item 4: counts only
+            rec['flagged_vm_above_every_excitable'] = int((c6['vmax_mV'][flag] > c6['vmax_mV'][~flag].max()).sum())
+            rec['flagged_driven_again'] = 'not measured (Vm and Idiff are written every 1 ms; the build cannot count it per step)'
+    rec['ead_flagged_excitable_nodes'] = int(c6['ead'][~flag].sum())
+    rec['no_repolarisation_in_window_excitable_nodes'] = int((~np.isfinite(c6['apd90_ms']))[~flag].sum())
     rec['last_activation_ms_from_stimulus'] = round(float(lat[lat >= 0].max() - shift), 2) if (lat >= 0).any() else None
     split = np.where(np.bincount(M['merged'], minlength=Nm)[M['merged']] > 1)[0]               # sim nodes whose merged node is split
     np.savez_compressed(os.path.join(d, 'kept.npz'), ecg=ecg.astype(np.float32), leads=np.array(LEADS), lat=lat.astype(np.float32),
                         electrodes=elec.astype(np.float32), electrode_names=np.array(['RA', 'LA', 'LL', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6']),
                         electrode_reference='Wilson central terminal (RA + LA + LL) / 3', site_nodes=site, site_xyz_um=xyz,
                         stim_ms=shift, vm5=vm[::5].astype(np.float16), vm5_dt_ms=5.0, ecg_rule='D43: per copy, element by element on the split mesh',
-                        split_sim_nodes=split, split_merged_nodes=M['merged'][split], vm_split_1ms=np.asarray(vm[:, split], np.float32))
+                        split_sim_nodes=split, split_merged_nodes=M['merged'][split], vm_split_1ms=np.asarray(vm[:, split], np.float32),
+                        check6=np.array(1), flagged=np.where(flag)[0], **{f'c6_{k}': v for k, v in c6.items()})
     rec['split_copies_kept'] = int(len(split))
     rec['ecg_frames'] = int(len(ecg))
     ch = choices()
@@ -351,6 +377,38 @@ def finish(b, rec):
             os.remove(os.path.join(d, 'vm.igb')); rec['raw_vm_removed'] = True
     del vm
     return rec
+
+
+def check6(vm, tend, chunk=20000):
+    """Section 4 check 6, per node from the 1 ms Vm (frame k = k ms of simulated time): the upstroke time at 1 ms (the
+    frame ending the largest 1 ms rise), APD90 by cell52.apd90's rule (90 % of the beat's amplitude, last up-crossing
+    before the peak, first down-crossing after it, linear interpolation; nan if there is none inside the window) with its
+    repolarisation time, the peak Vm, and P7's EAD flag (dV/dt > +0.05 mV/ms for >= 2 ms between the peak + 20 ms and the
+    APD90 crossing while V > -60 mV; cell52_p7.events). Values are kept, never printed (reading hold); counts only."""
+    T, n = vm.shape
+    out = {k: np.full(n, np.nan, np.float32) for k in ('upstroke_1ms_ms', 'apd90_ms', 'repol_ms', 'vmax_mV')}
+    out['ead'] = np.zeros(n, bool)
+    k = np.arange(T - 1)[:, None]
+    for s in range(0, n, chunk):
+        V = np.asarray(vm[:, s:s + chunk], np.float64); c = V.shape[1]; cols = np.arange(c)
+        dV = np.diff(V, axis=0)
+        ip = np.argmax(V, axis=0); vmax = V[ip, cols]
+        vmin = np.where(ip > 0, np.min(np.where(np.arange(T)[:, None] < np.maximum(ip, 1), V, np.inf), axis=0), V[0])
+        thr = vmax - 0.9 * (vmax - vmin)
+        upc = (V[:-1] < thr) & (V[1:] >= thr) & (k < ip)
+        dnc = (V[:-1] > thr) & (V[1:] <= thr) & (k > ip)
+        hu, hd = upc.any(0), dnc.any(0)
+        i = (T - 2) - np.argmax(upc[::-1], axis=0); j = np.argmax(dnc, axis=0)
+        ta = i + (thr - V[i, cols]) / np.where(hu, V[i + 1, cols] - V[i, cols], 1.0)
+        tr = j + (thr - V[j, cols]) / np.where(hd, V[j + 1, cols] - V[j, cols], 1.0)
+        ok = hu & hd
+        up = (k > ip + 20) & (k < np.where(hd, j, -1)) & (V[:-1] > -60.0) & (dV > 0.05)
+        out['ead'][s:s + c] = ok & (up[:-1] & up[1:]).any(0)
+        out['upstroke_1ms_ms'][s:s + c] = np.argmax(dV, axis=0) + 1.0
+        out['apd90_ms'][s:s + c] = np.where(ok, tr - ta, np.nan)
+        out['repol_ms'][s:s + c] = np.where(ok, tr, np.nan)
+        out['vmax_mV'][s:s + c] = vmax
+    return out
 
 
 def start(b):
@@ -382,12 +440,17 @@ def close(j, status):
             rec = finish(b, rec)
             if rec['nan_frames'] or rec['unactivated_nodes']:
                 rec['status'] = status = 'failed (NaN or unactivated nodes)'
+            elif rec.get('flagged_vm_above_every_excitable'):
+                rec['status'] = status = 'failed (a flagged node above every excitable node: numerical failure, addendum 2 item 4)'
         except Exception as e:                                                            # noqa: BLE001
             rec['status'] = status = f'failed in post-processing: {e!r}'
     json.dump(rec, open(os.path.join(bdir(b), 'summary.json'), 'w'), indent=1)
     labnote(f"- Beat ended, PC clock {time.strftime('%d %b %H:%M')}: {b['id']}: {status}; wall {rec['wall_s'] / 3600:.2f} h "
             f"({rec['s_per_sim_ms']} s per simulated ms), lowest MemAvailable {rec['min_mem_available_mb']} MB"
-            + (f", unactivated nodes {rec.get('unactivated_nodes')}, NaN frames {rec.get('nan_frames')}" if 'nan_frames' in rec else '') + '.')
+            + (f", unactivated nodes {rec.get('unactivated_nodes')}, NaN frames {rec.get('nan_frames')}" if 'nan_frames' in rec else '')
+            + (f", EAD-flagged nodes {rec.get('ead_flagged_excitable_nodes')}" if b['engine'] == 're' and 'ead_flagged_excitable_nodes' in rec else '')
+            + (f", flagged nodes {rec['flagged_nodes']} (above every excitable node: {rec.get('flagged_vm_above_every_excitable', 'n/a')}; driven again: not measured)"
+               if rec.get('flagged_nodes') else '') + '.')
     return rec['status']
 
 
@@ -455,6 +518,38 @@ def night(hours=8.0):
     labnote(f"- Night chunk ended, PC clock {time.strftime('%d %b %H:%M')}: {len(left)} released beats left; C: {c_free_gb():.1f} GB free"
             + (' (memory guard stopped a beat)' if stopped else '') + ('; ' + '; '.join(notes) if notes else '') + '.')
     print('night chunk ended;', len(left), 'beats left', flush=True)
+
+
+def check6_kept(eng='mono'):
+    """Check 6 from the kept raw files of finished beats that predate it (the control heart's 9 monodomain beats of 3-4 Nov):
+    per-node values into <beat>/check6.npz; counts only printed and returned."""
+    out = {}
+    for b in [x for h in HEARTS if os.path.exists(hdir(h, 'prep.json')) for x in _all_beats(h)]:
+        if b['engine'] != eng or not done(b) or not os.path.exists(os.path.join(bdir(b), 'vm.igb')):
+            continue
+        f = os.path.join(bdir(b), 'check6.npz')
+        if os.path.exists(f):
+            continue
+        M = np.load(hdir(b['heart'], 'mesh', 'maps.npz'))
+        vm = igb(os.path.join(bdir(b), 'vm.igb'))
+        flag = np.zeros(vm.shape[1], bool)
+        if 'flagged' in M.files:
+            flag[M['flagged']] = True
+        c6 = check6(vm, b['tend_ms'])
+        np.savez_compressed(f, flagged=np.where(flag)[0], **{f'c6_{k}': v for k, v in c6.items()})
+        out[b['id']] = {'frames': int(vm.shape[0]), 'ead_flagged_excitable_nodes': int(c6['ead'][~flag].sum()),
+                        'no_repolarisation_in_window_excitable_nodes': int((~np.isfinite(c6['apd90_ms']))[~flag].sum()),
+                        'excitable_nodes': int((~flag).sum())}
+        print(b['id'], out[b['id']], flush=True)
+        del vm
+    return out
+
+
+def _all_beats(h):
+    P = json.load(open(hdir(h, 'prep.json')))
+    win = choices().get('mono_window', 'qrs')
+    return [{'id': f"{h}/{x['site']}/{eng}", 'heart': h, 'site': x['site'], 'engine': eng,
+             'tend_ms': x['re_tend_ms'] if (eng == 're' or win == 'r16') else x['qrs_tend_ms']} for x in P['beats'] for eng in ('re', 'mono')]
 
 
 def test(h, site, eng, tend):
@@ -540,6 +635,8 @@ if __name__ == '__main__':
             prep_heart(h)
     elif a == 'test':
         test(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+    elif a == 'check6':
+        print(json.dumps(check6_kept(sys.argv[2] if len(sys.argv) > 2 else 'mono'), indent=1))
     elif a == 'night':
         night(float(sys.argv[2]) if len(sys.argv) > 2 else 8.0)
     else:
