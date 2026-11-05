@@ -63,8 +63,9 @@ FIM_CHECK = (1001, 1002, 1003)                          # D50's check when the t
 SO = os.path.join(RUNS, 'model_fexc_O2_ftz', 'Tomek52w.so')   # Tomek52w + D44 (d)'s nodal factor fexc (sleeve52.py), gcc -O2,
 # subnormals as zero inside the model (ftz52.py, 4 Nov); fexc = 1 traces identical to model_O2_ftz and -O0 (sleeve52_check.json),
 # model_O2_ftz's identical to model_O2 (ftz52_check.json, flat-block frames bitwise identical; blend52_O2check.json)
-RATE = {'re': 25.0 * 1.15, 'mono': 26.25 * 1.1}  # s per simulated ms at 375,190 nodes: RE+ test 4 Nov with model_fexc_O2_ftz (one core, last 5 ms
-# block 24.4 s/ms beside one flat-block run; x 1.15 for lanes); monodomain test 3 Nov on model_O2 (4 processes, +10 %; kept, conservative)
+RATE = {'re': 43.0, 'mono': 26.25 * 1.1}  # s per simulated ms at 375,190 nodes: RE+ test 4 Nov with model_fexc_O2_ftz (one core, last 5 ms
+# block 24.4 s/ms beside one flat-block run); RE+ 43.0 measured with 3 lanes on 5 Nov (42.8-42.9 s/ms, first 3 control beats);
+# monodomain test 3 Nov on model_O2 (4 processes, +10 %; kept, conservative)
 sys.path.insert(0, HERE)
 import blend52 as B                                                                           # noqa: E402
 
@@ -338,7 +339,7 @@ def finish(b, rec):
     cfg = json.load(open(hdir(h, b['site'], 'beat_config.json')))
     site = np.loadtxt(cfg['stims'][0]['vtx'] + '.vtx', skiprows=2, dtype=np.int64, ndmin=1)
     xyz = np.loadtxt(hdir(h, 'mesh', 'sim52.pts'), skiprows=1)[site]
-    rec['nan_frames'] = int(np.isnan(vm).any(1).sum())
+    rec['nan_frames'] = int(sum(np.isnan(vm[i:i + 20]).any(1).sum() for i in range(0, len(vm), 20)))   # in blocks (memory)
     lat = np.loadtxt(os.path.join(d, 'init_acts_LATs-thresh.dat'))
     flag = np.zeros(vm.shape[1], bool)
     if 'flagged' in M.files:
@@ -355,6 +356,8 @@ def finish(b, rec):
         c6['eikonal_ms'] = np.asarray(igb(f)[0], np.float32) if os.path.exists(f) else np.full(vm.shape[1], np.nan, np.float32)
         rep_t = c6['repol_ms'][~flag]
         rec['own_latest_repol_plus_50_inside_window'] = bool(np.isfinite(rep_t).all() and np.nanmax(rep_t) + 50.0 <= b['tend_ms'])   # check 5 (a)
+        rec['check5a_nodes_repol_plus_50_after_end'] = int((np.isfinite(rep_t) & (rep_t + 50.0 > b['tend_ms'])).sum())        # as counts
+        rec['check5a_nodes_not_repolarised'] = int((~np.isfinite(rep_t)).sum())
         rest = np.asarray(vm[:int(BASE_MS) + 1], np.float64)                                    # check 4 (T2 values: kept, not printed)
         c6['check4'] = np.array([np.abs(rest[-1] - rest[0]).max(), np.sqrt(np.mean((rest[-1] - rest[0]) ** 2)), np.abs(np.diff(rest, axis=0)).max()])
         if flag.any():                                                                          # addenda 2-3 item 4: counts only
@@ -495,7 +498,7 @@ def fim_rerun(b, d, iters=FIM_CHECK):
     return out
 
 
-def check6(vm, tend, chunk=20000):
+def check6(vm, tend, chunk=5000):
     """Section 4 check 6, per node from the 1 ms Vm (frame k = k ms of simulated time): the upstroke time at 1 ms (the
     frame ending the largest 1 ms rise), APD90 by cell52.apd90's rule (90 % of the beat's amplitude, last up-crossing
     before the peak, first down-crossing after it, linear interpolation; nan if there is none inside the window) with its
